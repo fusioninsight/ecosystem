@@ -1,0 +1,16 @@
+{
+  "title": "FusionInsight生态地图",
+  "author": "Openlab",
+  "language": "zh-hans",
+  "plugins": [
+    "-sharing", "-lunr", "-search", "search-pro", "anchor-navigation-ex", "toggle-chapters", "addcssjs"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false
+    },
+    "addcssjs": {
+      "css": ["custom.css"]
+    }
+  }
+}

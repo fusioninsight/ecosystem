@@ -1,0 +1,11 @@
+.page-inner {
+    max-width: 1000px;
+}
+
+.book-summary > nav > ul > li:nth-child(1) {
+	   display: none !important;
+}
+
+.book-summary > nav > ul > li:nth-child(2) {
+    display: none !important;
+}
