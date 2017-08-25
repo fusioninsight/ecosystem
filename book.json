@@ -3,7 +3,7 @@
   "author": "Openlab",
   "language": "zh-hans",
   "plugins": [
-    "-sharing", "-lunr", "-search", "search-pro", "anchor-navigation-ex", "toggle-chapters", "addcssjs"
+    "-sharing", "-lunr", "-search", "search-pro", "anchor-navigation-ex", "toggle-chapters", "addcssjs", "download-chapter"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
