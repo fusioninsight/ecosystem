@@ -28,7 +28,7 @@
   * [对接Apache Zepplin](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)
   * [对接Jypyter Notebook](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md)
   * [对接DBeaver](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)
-  * DbVisualizer (TBD)
+  * [对接DbVisualizer](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)
   * Squirrel (TBD)
 
 * [SQL引擎](SQL_Analytics_Engine/README.md)

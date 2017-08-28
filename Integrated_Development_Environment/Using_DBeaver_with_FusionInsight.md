@@ -4,9 +4,20 @@
 
 > DBeaver4.0.8  <--> FusionInsight V100R002C60U20
 
+## 说明
+
+SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常用选择，虽然这些工具大多不提供原生Hive、SparkSQL、Phoenix的支持，但是通过它们支持的自定义JDBC的能力，我们可以与FusionInsignt提供的Fiber组件的JDBC接口进行对接，实现这Hive、SparkSQL、Phoenix组件的统一SQL查询。
+
+* Fiber架构图
+
+  ![](assets/Using_DbVisualizer_with_FusionInsight/68e03.png)
+
+本文介绍了DBeaver与FusionInsight的Fiber对接的操作步骤
+
 ## Linux下DBeaver连接Fiber
 
 ### 操作场景
+
 以安全模式为例，使用DBeaver通过Fiber访问Hive、Spark、Phoenix
 
 ### 前提条件
