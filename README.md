@@ -25,7 +25,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 | Oracle GoldenGate        | HDFS、HBase、Kafka、Flume              | C60U10、C60U20 |                             TBD                             |
 | informatica              | HDFS、HBase                            | C50、C60U10    |                             TBD                             |
 | Talend                   | Hive、HBase、Hive                      | C30、C60U10    |                             TBD                             |
-| Kettle                   | HDFS、Hive                             | C60U20、C60U20 | [文档](Data_Integration/Using_Kettle_with_FusionInsight.md) |
+| Kettle                   | HDFS、Hive                             | C60U20、C60U20 | **[文档](Data_Integration/Using_Kettle_with_FusionInsight.md)** |
 | 普元                     | Hive、HBase、Hive                      | C60U20         |                             TBD                             |
 | 杭州合众UTL              | HDFS、HBase、Hive、Kafka               | C50            |                             TBD                             |
 
@@ -33,21 +33,20 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 | 第三方工具       | 对接组件                   | 对接版本    |                                        相关文档                                         |
 |:-----------------|:---------------------------|:------------|:---------------------------------------------------------------------------------------:|
-| RStudio          | Spark、SparkR              | C60U10、C70 |     [文档](Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md)      |
-| Apache Zepplin   | HBase、Hive、Spark、SparkR | C60U20      |   [文档](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)    |
-| Jypyter Notebook | PySpark、SparkR            | C60U10      | [文档](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md) |
-| DBeaver          | Hive、Spark、HBase         | C60U20      |     [文档](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)      |
-| DbVisualizer     | Hive、Spark、HBase         | C60U20      |  [文档](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)    |
-| Squirrel         | Hive、Spark、HBase         | C60U20      |  [文档](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)    |
+| RStudio          | Spark、SparkR              | C60U10、C70 |     **[文档](Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md)**     |
+| Apache Zepplin   | HBase、Hive、Spark、SparkR | C60U20      |   **[文档](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)**   |
+| Jypyter Notebook | PySpark、SparkR            | C60U10      | **[文档](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md)** |
+| DBeaver          | Hive、Spark、HBase         | C60U20      |     **[文档](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)**     |
+| DbVisualizer     | Hive、Spark、HBase         | C60U20      |  **[文档](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)**    |
+| Squirrel         | Hive、Spark、HBase         | C60U20      |  **[文档](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)**   |
 
 ## SQL分析
 
-| 第三方工具   | 对接组件   | 对接版本    | 相关文档 |
-|:-------------|:-----------|:------------|:--------:|
-| Apache Kylin | HBase、Hive | C60U10、C70 |   TBD    |
-| Kyligence    | HBase、Hive | C60U10、C70 |   TBD    |
-| Presto       | Hive       | C60U10、C70 |   TBD    |
-
+| 第三方工具   | 对接组件    | 对接版本 |                            相关文档                            |
+|:-------------|:------------|:---------|:--------------------------------------------------------------:|
+| Apache Kylin | HBase、Hive | C60U20   | **[文档](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)** |
+| Kyligence    | HBase、Hive | C60U10   |                              TBD                               |
+| Presto       | Hive        | C60U10   |                              TBD                               |
 
 ## 数据库
 

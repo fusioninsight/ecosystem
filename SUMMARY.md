@@ -32,7 +32,7 @@
   * [对接Squirrel](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)
 
 * [SQL引擎](SQL_Analytics_Engine/README.md)
-  * Apache Kylin (TBD)
+  * [对接Apache Kylin](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)
   * Kyligence (TBD)
   * Presto (TBD)
 
