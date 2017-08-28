@@ -29,7 +29,7 @@
   * [对接Jypyter Notebook](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md)
   * [对接DBeaver](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)
   * [对接DbVisualizer](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)
-  * Squirrel (TBD)
+  * [对接Squirrel](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)
 
 * [SQL引擎](SQL_Analytics_Engine/README.md)
   * Apache Kylin (TBD)

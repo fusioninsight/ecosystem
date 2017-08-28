@@ -38,7 +38,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 | Jypyter Notebook | PySpark、SparkR            | C60U10      | [文档](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md) |
 | DBeaver          | Hive、Spark、HBase         | C60U20      |     [文档](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)      |
 | DbVisualizer     | Hive、Spark、HBase         | C60U20      |  [文档](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)    |
-| Squirrel         | Hive、Spark、HBase         | C60U20      |                                           TBD                                           |
+| Squirrel         | Hive、Spark、HBase         | C60U20      |  [文档](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)    |
 
 ## SQL分析
 

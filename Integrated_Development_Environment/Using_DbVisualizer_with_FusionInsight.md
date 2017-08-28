@@ -231,13 +231,13 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
   ![](./assets/Using_DbVisualizer_with_FusionInsight/image27.png)
 
-## 查询Spark中的数据
+## 查询SparkSQL中的数据
 
 * 将defaultDriver切换为spark：将 **Properties** 中的defaultDriver值改为spark，点击 **Apply** 。
 
   ![](./assets/Using_DbVisualizer_with_FusionInsight/image28.png)
 
-* 打开Connection面板，点击 **Reconnect** ，连接成功，可以看到Spark中的数据表。
+* 打开Connection面板，点击 **Reconnect** ，连接成功，可以看到SparkSQL中的数据表。
 
   ![](./assets/Using_DbVisualizer_with_FusionInsight/image29.png)
 

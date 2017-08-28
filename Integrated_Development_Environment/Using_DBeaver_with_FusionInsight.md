@@ -10,7 +10,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * Fiber架构图
 
-  ![](assets/Using_DbVisualizer_with_FusionInsight/68e03.png)
+  ![](assets/Using_DBeaver_with_FusionInsight/68e03.png)
 
 本文介绍了DBeaver与FusionInsight的Fiber对接的操作步骤
 

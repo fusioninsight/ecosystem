@@ -14,4 +14,4 @@
 * SQL类开发IDE
   * [对接DBeaver](Using_DBeaver_with_FusionInsight.md)
   * [对接DbVisualizer](Using_DbVisualizer_with_FusionInsight.md)
-  * 对接Squirrel (TBD)
+  * [对接Squirrel](Using_Squirrel_with_FusionInsight.md)
