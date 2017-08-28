@@ -9,3 +9,11 @@
 .book-summary > nav > ul > li:nth-child(2) {
     display: none !important;
 }
+
+.book-summary > nav > ul > li.chapter > ul > li > span {
+    color: #9E9E9E;
+}
+
+.book-summary ul.summary li.active>a {
+    font-weight: bold;
+}

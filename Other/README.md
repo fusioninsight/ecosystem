@@ -1,3 +1,5 @@
+<!-- ex_nonav -->
+
 # 其他
 
 * FUSE (TBD)

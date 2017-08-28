@@ -18,16 +18,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 ## 数据集成
 
-| 第三方工具                         | 对接组件                               | 对接版本       | 相关文档 |
-|:-----------------------------------|:---------------------------------------|:---------------|:--------:|
-| IBM InfoSphere DataStage           | HDFS、HBase、Hive、Spark、Kafka、MPPDB | C60U20         |   TBD    |
-| IBM InfoSphere CDC | HDFS                                   | C50            |   TBD    |
-| Oracle GoldenGate                  | HDFS、HBase、Kafka、Flume              | C60U10、C60U20 |   TBD    |
-| informatica                        | HDFS、HBase                            | C50、C60U10    |   TBD    |
-| Talend                             | Hive、HBase、Hive                      | C30、C60U10    |   TBD    |
-| Kettle                             | HDFS、Hive                             | C60U20、C60U20 |   TBD    |
-| 普元                               | Hive、HBase、Hive                      | C60U20         |   TBD    |
-| 杭州合众UTL                        | HDFS、HBase、Hive、Kafka               | C50            |   TBD    |
+| 第三方工具               | 对接组件                               | 对接版本       |                          相关文档                           |
+|:-------------------------|:---------------------------------------|:---------------|:-----------------------------------------------------------:|
+| IBM InfoSphere DataStage | HDFS、HBase、Hive、Spark、Kafka、MPPDB | C60U20         |                             TBD                             |
+| IBM InfoSphere CDC       | HDFS                                   | C50            |                             TBD                             |
+| Oracle GoldenGate        | HDFS、HBase、Kafka、Flume              | C60U10、C60U20 |                             TBD                             |
+| informatica              | HDFS、HBase                            | C50、C60U10    |                             TBD                             |
+| Talend                   | Hive、HBase、Hive                      | C30、C60U10    |                             TBD                             |
+| Kettle                   | HDFS、Hive                             | C60U20、C60U20 | [文档](Data_Integration/Using_Kettle_with_FusionInsight.md) |
+| 普元                     | Hive、HBase、Hive                      | C60U20         |                             TBD                             |
+| 杭州合众UTL              | HDFS、HBase、Hive、Kafka               | C50            |                             TBD                             |
 
 ## 集成开发环境
 
