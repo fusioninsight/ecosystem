@@ -16,10 +16,10 @@
 * [数据集成](Data_Integration/README.md)
   * IBM InfoSphere DataStage (TBD)
   * IBM InfoSphere CDC (TBD)
-  * Oracle GoldenGate (TBD)
+  * [对接Oracle GoldenGate](Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md)
   * informatica (TBD)
   * Talend (TBD)
-  * [Kettle](Data_Integration/Using_Kettle_with_FusionInsight.md)
+  * [对接Kettle](Data_Integration/Using_Kettle_with_FusionInsight.md)
   * 普元 (TBD)
   * 杭州合众UTL (TBD)
 
