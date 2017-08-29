@@ -8,7 +8,7 @@
   * SAS (TBD)
   * IBM SPSS (TBD)
   * IBM Cognos (TBD)
-  * Tableau (TBD)
+  * [对接Tableau](Business_Intelligence/Using_Tableau_with_FusionInsight.md)
   * QlikView (TBD)
   * Oracle BIEE (TBD)
   * 永洪BI (TBD)
@@ -40,6 +40,6 @@
   * SAP HANA (TBD)
 
 * [其他](Other/README.md)
-  * FUSE (TBD)
-  * gis-tools-for-hadoop (TBD)
+  * [对接FUSE](Other/Using_FUSE_with_FusionInsight.md)
+  * [对接Gis-Tools-For-Hadoop](Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md)
   * IBM WAS (TBD)

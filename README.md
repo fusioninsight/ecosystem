@@ -6,15 +6,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 ## 数据可视化
 
-| 第三方工具  | 对接组件    | 对接版本                 | 相关文档 |
-|:------------|:------------|:-------------------------|:--------:|
-| SAS         | HDFS、Hive  | C60                      |   TBD    |
-| IBM SPSS    |             |                          |   TBD    |
-| IBM Cognos  | Hive、Spark | C60                      |   TBD    |
-| Tableau     | Hive、Spark | C30、C60、C60U10、C60U20 |   TBD    |
-| QlikView    | Hive、Spark | C30、C60U10              |   TBD    |
-| Oracle BIEE | Hive、Spark | C60U20                   |   TBD    |
-| 永洪BI      | Hive、Spark | C60U20                   |   TBD    |
+| 第三方工具  | 对接组件    | 对接版本                 |                             相关文档                              |
+|:------------|:------------|:-------------------------|:-----------------------------------------------------------------:|
+| SAS         | HDFS、Hive  | C60                      |                                TBD                                |
+| IBM SPSS    |             |                          |                                TBD                                |
+| IBM Cognos  | Hive、Spark | C60                      |                                TBD                                |
+| Tableau     | Hive、Spark | C30、C60、C60U10、C60U20 | [文档](Business_Intelligence/Using_Tableau_with_FusionInsight.md) |
+| QlikView    | Hive、Spark | C30、C60U10              |                                TBD                                |
+| Oracle BIEE | Hive、Spark | C60U20                   |                                TBD                                |
+| 永洪BI      | Hive、Spark | C60U20                   |                                TBD                                |
 
 ## 数据集成
 
@@ -56,8 +56,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 ## 其他
 
-| 第三方工具           | 对接组件    | 对接版本            | 相关文档 |
-|:---------------------|:------------|:--------------------|:--------:|
-| FUSE                 | HBase、Hive | C50                 |   TBD    |
-| gis-tools-for-hadoop | Hive        | C50、C60U10、C60U20 |   TBD    |
-| IBM WAS              | HDFS        | C60U20              |   TBD    |
+| 第三方工具           | 对接组件    | 对接版本            |                     相关文档                     |
+|:---------------------|:------------|:--------------------|:------------------------------------------------:|
+| FUSE                 | HBase、Hive | C50                 |   [文档](Other/Using_FUSE_with_FusionInsight.md) |
+| gis-tools-for-hadoop | Hive        | C50、C60U10、C60U20 |   [文档](Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md)|
+| IBM WAS              | HDFS        | C60U20              |                       TBD                        |

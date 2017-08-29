@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> DbVisualizer9.5.7 <-> FusionInsightV100R002C60U20
+> DbVisualizer 9.5.7 <-> FusionInsight HD V100R002C60U20
 
 ## 说明
 

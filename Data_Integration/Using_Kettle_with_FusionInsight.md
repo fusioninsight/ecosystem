@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Kettle6.1  <--> FusionInsight V100R002C60U10
+> Kettle 6.1  <--> FusionInsight HD V100R002C60U10
 
 
 ## 环境准备
