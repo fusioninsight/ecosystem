@@ -2,6 +2,8 @@
 
 ## 适用场景
 
+> Tableau 10.0.0 <-> FusionInsight HD V100R002C60U10
+>
 > Tableau 10.1.4 <-> FusionInsight HD V100R002C60U20
 
 ## 配置Windows的kerberos认证

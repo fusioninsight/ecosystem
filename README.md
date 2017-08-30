@@ -11,9 +11,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 | SAS         | HDFS、Hive  | C60                      |                                TBD                                |
 | IBM SPSS    |             |                          |                                TBD                                |
 | IBM Cognos  | Hive、Spark | C60                      |                                TBD                                |
-| Tableau     | Hive、Spark | C30、C60、C60U10、C60U20 | [文档](Business_Intelligence/Using_Tableau_with_FusionInsight.md) |
+| Tableau     | Hive、Spark | C60U10、C60U20 | [文档](Business_Intelligence/Using_Tableau_with_FusionInsight.md) |
 | QlikView    | Hive、Spark | C30、C60U10              | [文档](Business_Intelligence/Using_QlikView_with_FusionInsight.md) |
-| Oracle BIEE | Hive、Spark | C60U20                   |                                TBD                                |
+| Oracle BIEE | Hive、Spark | C60U20                   | [文档](Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.md) |
 | 永洪BI      | Hive、Spark | C60U20                   |                                TBD                                |
 
 ## 数据集成
