@@ -9,7 +9,7 @@
   * IBM SPSS (TBD)
   * IBM Cognos (TBD)
   * [对接Tableau](Business_Intelligence/Using_Tableau_with_FusionInsight.md)
-  * QlikView (TBD)
+  * [对接QlikView](Business_Intelligence/Using_QlikView_with_FusionInsight.md)
   * Oracle BIEE (TBD)
   * 永洪BI (TBD)
 
