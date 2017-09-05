@@ -147,10 +147,9 @@ Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
 - 选择JDBC，点击 **edit** 编辑，修改default.driver和default.url参数，点击 **save** 保存
   ```
   default.driver：org.apache.hive.jdbc.HiveDriver
-  default.url：jdbc:hive2://162.1.93.103:24002,162.1.93.102:24002,162.1.93.101:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM
+  default.url：jdbc:hive2://162.1.93.103:24002,162.1.93.102:24002,162.1.93.101:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=test;user.keytab=/opt/user.keytab
   ```
-
-  ![](assets/Using_Zeppelin_with_FusionInsight_HD/78b39.png)
+  ![](assets/Using_Zeppelin_with_FusionInsight_HD/a21d2.png)
 
 - 重启zeppelin。
   ```
