@@ -3,7 +3,7 @@
   "author": "Openlab",
   "language": "zh-hans",
   "plugins": [
-    "-fontsettings", "-sharing", "-lunr", "-search", "search-pro", "fi-nav", "toggle-chapters", "addcssjs", "download-chapter", "fancybox"
+    "-fontsettings", "-sharing", "-lunr", "-search", "search-pro", "fi-nav", "toggle-chapters", "addcssjs", "download-chapter", "fancybox", "baidu-wis"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
@@ -17,6 +17,9 @@
         "buttons" : null
       },
       "padding": 0
+    },
+    "baidu": {
+      "token": "480f1db4debb2fddd98e227a2d70de3e"
     }
   }
 }
