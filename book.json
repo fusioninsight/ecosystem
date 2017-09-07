@@ -11,6 +11,12 @@
     },
     "addcssjs": {
       "css": ["custom.css"]
+    },
+    "fancybox": {
+      "helpers" : {
+        "buttons" : null
+      },
+      "padding": 0
     }
   }
 }
