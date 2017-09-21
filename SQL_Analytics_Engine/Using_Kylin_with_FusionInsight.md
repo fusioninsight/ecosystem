@@ -145,7 +145,7 @@ Apache Kylin主要与FusionInsight的Hive和HBase进行对接
 
 * 导入环境变量
   ```
-  source /opt/hadoopclient/bigdata\_env
+  source /opt/hadoopclient/bigdata_env
   ```
 
 * 进行kerberos认证
