@@ -42,11 +42,11 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 ## SQL分析
 
-| 第三方工具   | 对接组件    | 对接版本 |                            相关文档                            |
-|:-------------|:------------|:---------|:--------------------------------------------------------------:|
-| Apache Kylin | HBase、Hive | C60U20   | [文档](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md) |
-| Kyligence    | HBase、Hive | C60U10   |                              TBD                               |
-| Presto       | Hive        | C60U10   |                              TBD                               |
+| 第三方工具   | 对接组件    |   相关文档       |
+|:-------------|:------------|:--------------:|
+| Apache Kylin | HBase、Hive | [Kylin1.6.0 <-> C60U20](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md) |
+| Kyligence    | HBase、Hive |     C60U10        |
+| Presto       | Hive、HDFS      | [Presto0.155 <-> C60U20](SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md) |
 
 ## 数据库
 

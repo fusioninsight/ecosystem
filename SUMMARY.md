@@ -34,7 +34,8 @@
 * [SQL引擎](SQL_Analytics_Engine/README.md)
   * [对接Apache Kylin](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)
   * Kyligence (TBD)
-  * Presto (TBD)
+  * [Presto](SQL_Analytics_Engine/Using_Presto_with_FusionInsight.md)
+    * [Presto0.146 <-> C60U20](SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md)
 
 * [数据库](Database/README.md)
   * SAP HANA (TBD)
