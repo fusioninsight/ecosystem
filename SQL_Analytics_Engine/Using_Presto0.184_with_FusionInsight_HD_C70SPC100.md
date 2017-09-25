@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Presto0.155 <-> FusionInsight HD V100R002C60U20
+> Presto0.184 <-> FusionInsight HD V100R002C70SPC100
 
 ## 说明
 
@@ -18,16 +18,15 @@ Presto主要与FusionInsight的Hive和HDFS进行对接
 Presto集群包括coordinator节点和不限数量的worker节点(coordinator节点也可同时为worker节点)，其中只需要在coordinator节点上配置Hive Connector即可。
 本文档中配置coordinator节点同时也是worker节点。
 
-
 * 从该链接下载presto-server的安装包，并上传到presto coordinator的节点
 
-    <https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.155/presto-server-0.155.tar.gz>
+    <https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.184/presto-server-0.184.tar.gz>
 
-    将该压缩包解压缩后得到目录`/opt/presto-server-0.155`。
+    将该压缩包解压缩后得到目录`/opt/presto-server-0.184`。
 
-* 在presto节点上安装华为FusionInsight HD的客户端，默认安装目录`/opt/hadoopclient`
+* 在presto节点上安装华为FusionInsight HD V100R002C70SPC100的客户端，默认安装目录`/opt/hadoopclient`
 
-* presto该0.155版本要求jdk至少在1.8u60+以上，修改`/etc/profile`文件方式配置系统默认的java为FusionInsight HD客户端的jdk，并source环境变量，命令参考如下
+* presto该0.184版本要求jdk至少在1.8u60+以上，修改`/etc/profile`文件方式配置系统默认的java为FusionInsight HD客户端的jdk，并source环境变量，命令参考如下
 
   在`/etc/profile`中增加以下行
   ```
@@ -63,7 +62,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
   ![](assets/Using_Presto_with_FusionInsight/image8.png)
 
-* 创建目录/opt/presto-server-0.155/etc，在该目录下创建如下文件
+* 创建目录/opt/presto-server-0.184/etc，在该目录下创建如下文件
 
   config.properties参考如下
   ```
@@ -74,10 +73,10 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   query.max-memory-per-node=1GB
   discovery-server.enabled=true
   discovery.uri=http://presto-server:8080
-  http.server.authentication.enabled=true
+  http-server.authentication.type=KERBEROS
   http.server.authentication.krb5.service-name=testuser
   http.server.authentication.krb5.keytab=/opt/presto.keytab
-  http.authentication.krb5.config=/opt/hadoopclient/krb5.conf
+  http.authentication.krb5.config=/opt/hadoopclient/KrbClient/kerberos/var/krb5kdc/krb5.conf
   http-server.https.enabled=true
   http-server.https.port=7778
   http-server.https.keystore.path=/opt/presto.jks
@@ -94,7 +93,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   -XX:+ExplicitGCInvokesConcurrent
   -XX:+HeapDumpOnOutOfMemoryError
   -XX:OnOutOfMemoryError=kill -9 %p
-  -Djava.security.krb5.conf=/opt/hadoopclient/krb5.conf
+  -Djava.security.krb5.conf=/opt/hadoopclient/KrbClient/kerberos/var/krb5kdc/krb5.conf
   ```
 
   node.properties参考如下内容
@@ -109,7 +108,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   com.facebook.presto=INFO
   ```
 
-* 创建目录/opt/presto-server-0.155/etc/catalog，在该目录下创建hive.properties文件
+* 创建目录/opt/presto-server-0.184/etc/catalog，在该目录下创建hive.properties文件
   ```
   connector.name=hive-hadoop2
   hive.metastore.uri=thrift://162.1.93.101:21088,thrift://162.1.93.102:21088
@@ -121,10 +120,24 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   hive.hdfs.impersonation.enabled=false
   hive.hdfs.presto.principal=testuser
   hive.hdfs.presto.keytab=/opt/hadoopclient/testuser.keytab
-  hive.config.resources=/opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml,/opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml
+  hive.config.resources=/opt/presto-server-0.184/etc/catalog/core-site.xml,/opt/presto-server-0.184/etc/catalog/hdfs-site.xml
   ```
 
   > 其中hive.metastore.uri的值从/opt/hadoopclient/Hive/config/hive-site.xml中查找
+
+* 将FusionInsight HD客户端中的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.184/etc/catalog`中
+
+  ```
+  cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.184/etc/catalog/
+  cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml /opt/presto-server-0.184/etc/catalog/
+  ```
+
+* 按照下图修改hdfs-site.xml文件中的dfs.client.failover.proxy.provider.hacluster属性为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
+  ```
+  vi /opt/presto-server-0.184/etc/catalog/hdfs-site.xml
+  ```
+
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/6d7dc.png)
 
 * 修改/etc/hosts文件，将本机的IP与主机名解析以及Huawei FusionInsight HD集群节点的IP与主机名解析添加进去，例如
 
@@ -153,10 +166,10 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   yum install -y git
   ```
 
-* 参考如下命令，下载presto-server-0.155的源码
+* 参考如下命令，下载presto-server-0.184的源码
   ```
   git clone https://github.com/prestodb/presto.git
-  git checkout 0.155
+  git checkout 0.184
   ```
 
 * 修改presto-hive/src/main/java/com/facebook/presto/hive/authentication/KerberosHiveMetastoreAuthentication.java的代码，将代码中"Sasl.QOP=auth"修改为"Sasl.QOP=auth-conf"
@@ -169,17 +182,14 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   mvn clean install -DskipTests
   ```
 
-* 将编译后target目录下的presto-hive-0.155.jar文件替换/opt/presto-server-0.155/plugin/hive-hadoop2/presto-hive-0.155.jar文件
+* 将编译后target目录下的presto-hive-0.184.jar文件替换/opt/presto-server-0.184/plugin/hive-hadoop2/presto-hive-0.184.jar文件
 
 * 启动presto server，跟踪/var/presto/data/var/log/server.log查看启动日志
   ```
-  sh /opt/presto-server-0.155/bin/launcher stop
-  sh /opt/presto-server-0.155/bin/launcher start
+  sh /opt/presto-server-0.184/bin/launcher stop
+  sh /opt/presto-server-0.184/bin/launcher start
   tailf /var/presto/data/var/log/server.log
   ```
-
-* 检查FusionInsight Manager中HDFS服务配置中hadoop.rpc.protection的配置，必须设置为authentacation。
-
 
 ## 通过Presto CLI连接Hive
 
@@ -187,7 +197,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 通过如下链接下载presto cli启动的jar包
 
-  <https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.155/presto-cli-0.155-executable.jar>
+  <https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.184/presto-cli-0.184-executable.jar>
 
 * 并将该jar包上传到可与presto节点网络互通的节点上(也可将presto coordinator节点作为cli使用节点)。
 
@@ -197,9 +207,9 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 从presto节点拷贝presto.jks、presto.keytab、krb5.conf以及连接HDFS所需的core-site.xml和hdfs-site.xml文件到cli节点
 
-* 将presto-cli-0.155-executable.jar包改为可执行文件
+* 将presto-cli-0.184-executable.jar包改为可执行文件
   ```
-  mv presto-cli-0.155-executable.jar presto
+  mv presto-cli-0.184-executable.jar presto
   chmod u+x presto
   ./presto -h
   ```
@@ -221,7 +231,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
   > catalog后面的hive是和presto coordinator节点配置的hive.properties的文件名匹配的，如果hive.properties改名为hivetest.properties，则这里改为hivetest
 
-* 通过cli执行SQL语句，其他SQL语法请参考<https://prestodb.io/docs/0.155/sql.html>
+* 通过cli执行SQL语句，其他SQL语法请参考<https://prestodb.io/docs/0.184/sql.html>
 
   ![](assets/Using_Presto_with_FusionInsight/image12.png)
 
@@ -240,9 +250,9 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 从如下链接下载jdbc的驱动包
 
-  <https://repo1.maven.org/maven2/com/facebook/presto/presto-jdbc/0.155/presto-jdbc-0.155.jar>
+  <https://repo1.maven.org/maven2/com/facebook/presto/presto-jdbc/0.184/presto-jdbc-0.184.jar>
 
-* 参考<https://prestodb.io/docs/0.155/installation/jdbc.html>设置JDBC URL，用户名为任意字符，密码为空，在eclipse中调通的示例如下:
+* 参考<https://prestodb.io/docs/0.184/installation/jdbc.html>设置JDBC URL，用户名为任意字符，密码为空，在eclipse中调通的示例如下:
   ```java
   import java.sql.Connection;
   import java.sql.DriverManager;
@@ -254,19 +264,19 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   	public static void main(String[] args) throws SQLException, ClassNotFoundException {
   		Class.forName("com.facebook.presto.jdbc.PrestoDriver");
   		Connection connection =DriverManager.getConnection
-  				("jdbc:presto://162.1.115.71:8080/hive/default","root",null);
+                  ("jdbc:presto://162.1.115.71:8080/hive/default","root",null);
   		Statement stmt =connection.createStatement();
   		ResultSet rs = stmt.executeQuery("select * from workers_info limit 10");
   		int col = rs.getMetaData().getColumnCount();
   		while(rs.next())
   		{
   			for (int i = 1; i <= col; i++) {
-                  System.out.print(rs.getString(i) + "\t");
-                  if ((i == 2) && (rs.getString(i).length() < 8)) {
-                      System.out.print("\t");
-                  }
-               }
-              System.out.println("");
+          System.out.print(rs.getString(i) + "\t");
+          if ((i == 2) && (rs.getString(i).length() < 8)) {
+            System.out.print("\t");
+          }
+        }
+        System.out.println("");
   		}
   		rs.close();
   		connection.close();

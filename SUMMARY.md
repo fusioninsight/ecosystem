@@ -36,6 +36,7 @@
   * Kyligence (TBD)
   * [Presto](SQL_Analytics_Engine/Using_Presto_with_FusionInsight.md)
     * [Presto0.146 <-> C60U20](SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md)
+    * [Presto0.184 <-> C70SPC100](SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md)
 
 * [数据库](Database/README.md)
   * SAP HANA (TBD)
