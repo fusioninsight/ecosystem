@@ -26,6 +26,8 @@
 * [集成开发环境](Integrated_Development_Environment/README.md)
   * [对接RStudio](Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md)
   * [对接Apache Zepplin](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)
+    * [Zepplin0.7.2 <-> FusionInsight HD V100R002C60U20](Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.md)
+    * [Zepplin0.7.3 <-> FusionInsight HD V100R002C70SPC100](Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.md)
   * [对接Jypyter Notebook](Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md)
   * [对接DBeaver](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)
   * [对接DbVisualizer](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)
