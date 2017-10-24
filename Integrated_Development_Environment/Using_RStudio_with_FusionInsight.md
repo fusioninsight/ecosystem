@@ -379,6 +379,8 @@ sc <- spark_connect(master =  "yarn-client", version = "1.6.1", spark_home = "/h
 Plot total US births recorded from the Social Security Administration.
 
 ```
+babynames_tbl <- copy_to(sc, babynames, "babynames")
+applicants_tbl <- copy_to(sc, applicants, "applicants")
 birthsYearly <- applicants_tbl %>%
   mutate(male = ifelse(sex == "M", n_all, 0), female = ifelse(sex == "F", n_all, 0)) %>%
   group_by(year) %>%
