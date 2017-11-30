@@ -20,7 +20,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 | 第三方工具               | 对接组件                               | 对接版本       |                                相关文档                                |
 |:-------------------------|:---------------------------------------|:---------------|:----------------------------------------------------------------------:|
-| IBM InfoSphere DataStage | HDFS、HBase、Hive、Spark、Kafka、MPPDB | C60U20         |                                  TBD                                   |
+| IBM InfoSphere DataStage | HDFS、HBase、Hive、Spark、Kafka、MPPDB | C60U20         |  [文档](Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.md)                                   |
 | IBM InfoSphere CDC       | HDFS                                   | C50            |                                  TBD                                   |
 | Oracle GoldenGate        | HDFS、HBase、Kafka、Flume              | C60U10、C60U20 | [文档](Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md) |
 | informatica              | HDFS、HBase                            | C50、C60U10    |                                  TBD                                   |

@@ -14,7 +14,7 @@
   * 永洪BI (TBD)
 
 * [数据集成](Data_Integration/README.md)
-  * IBM InfoSphere DataStage (TBD)
+  * [IBM InfoSphere DataStage](Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.md)
   * IBM InfoSphere CDC (TBD)
   * [对接Oracle GoldenGate](Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md)
   * informatica (TBD)

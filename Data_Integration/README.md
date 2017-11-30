@@ -2,7 +2,7 @@
 
 # 数据集成
 
-* IBM InfoSphere DataStage (TBD)
+* [IBM InfoSphere DataStage](Using_IBM_InfoSphere_DataStage_with_FusionInsight.md)
 * IBM InfoSphere CDC (TBD)
 * [对接Oracle GoldenGate](Using_Oracle_GoldenGate_with_FusionInsight.md)
 * informatica (TBD)
