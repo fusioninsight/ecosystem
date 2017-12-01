@@ -2,11 +2,7 @@
     max-width: 800px;
 }
 
-.book-summary > nav > ul > li:nth-child(1) {
-	   display: none !important;
-}
-
-.book-summary > nav > ul > li:nth-child(2) {
+.custom-link {
     display: none !important;
 }
 
