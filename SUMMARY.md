@@ -35,8 +35,10 @@
 
 * [SQL引擎](SQL_Analytics_Engine/README.md)
   * [对接Apache Kylin](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)
-  * Kyligence (TBD)
-  * [Presto](SQL_Analytics_Engine/Using_Presto_with_FusionInsight.md)
+    * [Kylin 1.6.0 <-> C60U20](SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.md)
+    * [Kylin 2.1.0 <-> C70](SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.md)
+  * [对接Kyligence](SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md)
+  * [对接Presto](SQL_Analytics_Engine/Using_Presto_with_FusionInsight.md)
     * [Presto0.146 <-> C60U20](SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md)
     * [Presto0.184 <-> C70SPC100](SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md)
 

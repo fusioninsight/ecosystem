@@ -12,7 +12,7 @@ Presto的设计和编写完全是为了解决像Facebook这样规模的商业数
 
 Presto主要与FusionInsight的Hive和HDFS进行对接
 
-![](assets/Using_Presto_with_FusionInsight/ce7a2.png)
+![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/ce7a2.png)
 
 ## 配置Hive Connector
 Presto集群包括coordinator节点和不限数量的worker节点(coordinator节点也可同时为worker节点)，其中只需要在coordinator节点上配置Hive Connector即可。
@@ -50,17 +50,17 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
   >
   > first and last name必须写成presto节点的主机名
 
-  ![](assets/Using_Presto_with_FusionInsight/image6.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image6.png)
 
 * 通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户testuser，并选择hadoop和hive用户组，下载对应的秘钥文件user.keytab以及krb5.conf文件，并上传到presto节点的`/opt/hadoopclient`目录下，将user.keytab改名为testuser.keytab。
 
 * 参考如下命令在Huawei FusionInsight HD的Kerberos中创建一个新的principal，其名称为“testuser/presto-server”，其中presto-server为presto的coordinator节点的主机名，导出该principal的秘钥文件为`/opt/presto.keytab`。
 
-  ![](assets/Using_Presto_with_FusionInsight/image7.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image7.png)
 
   > 执行kadmin –p kadmin/admin命令时初始密码Admin@123，修改后需严格牢记新密码。
 
-  ![](assets/Using_Presto_with_FusionInsight/image8.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image8.png)
 
 * 创建目录/opt/presto-server-0.184/etc，在该目录下创建如下文件
 
@@ -141,7 +141,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 修改/etc/hosts文件，将本机的IP与主机名解析以及Huawei FusionInsight HD集群节点的IP与主机名解析添加进去，例如
 
-  ![](assets/Using_Presto_with_FusionInsight/image9.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image9.png)
 
 * 安装maven：
   ```
@@ -174,7 +174,7 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 修改presto-hive/src/main/java/com/facebook/presto/hive/authentication/KerberosHiveMetastoreAuthentication.java的代码，将代码中"Sasl.QOP=auth"修改为"Sasl.QOP=auth-conf"
 
-  ![](assets/Using_Presto_with_FusionInsight/image11.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image11.png)
 
 * 重新编译presto
   ```
@@ -233,15 +233,15 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 通过cli执行SQL语句，其他SQL语法请参考<https://prestodb.io/docs/0.184/sql.html>
 
-  ![](assets/Using_Presto_with_FusionInsight/image12.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image12.png)
 
   查询表workers_info中数据：
 
-  ![](assets/Using_Presto_with_FusionInsight/image13.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image13.png)
 
   百万记录数表web_sales查询：
 
-  ![](assets/Using_Presto_with_FusionInsight/image14.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image14.png)
 
 
 ## 通过Presto JDBC连接Hive
@@ -286,8 +286,8 @@ Presto集群包括coordinator节点和不限数量的worker节点(coordinator节
 
 * 测试结果：
 
-  ![](assets/Using_Presto_with_FusionInsight/image15.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image15.png)
 
 * 百万记录数表web_sales查询：
 
-  ![](assets/Using_Presto_with_FusionInsight/image16.png)
+  ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/image16.png)

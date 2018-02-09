@@ -44,8 +44,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 
 | 第三方工具   | 对接组件    |   相关文档       |
 |:-------------|:------------|:--------------:|
-| Apache Kylin | HBase、Hive | [Kylin1.6.0 <-> C60U20](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md) |
-| Kyligence    | HBase、Hive |     C60U10        |
+| Apache Kylin | HBase、Hive | [Apache Kylin 1.6.0 <-> C60U20](SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.md)<BR>[Apache Kylin 2.1.0 <-> C70SPC100](SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.md)<BR>[Apache Kylin 2.1.0 <-> C70SPC200](SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.md)|
+| Kyligence    | HBase、Hive |     [C60U20](http://docs.kyligence.io/v2.5/zh-cn/installation/quick_installation/quick_installation_for_fi.cn.html)       |
 | Presto       | Hive、HDFS      | [Presto0.155 <-> C60U20](SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md)<BR>[Presto0.184 <-> C70SPC100](SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md) |
 
 ## 数据库
