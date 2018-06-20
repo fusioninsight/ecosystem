@@ -60,7 +60,9 @@
     
 
     
-    <link rel="stylesheet" type="text/css" href="../custom.css" />
+    <link rel="stylesheet" type="text/css" href="../resource/css/custom.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/font-awesome.min.css" />
     
 
         
@@ -538,6 +540,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4.1.3" data-path="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                    
+                    Kylin 2.3.1 <-> C80
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -767,6 +782,8 @@
 };</script><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor" onclick="handlerToggle()"></i><ul><li><span class="title-icon "></span><a href="#kettle&#x5BF9;&#x63A5;fusioninsight" onclick="mobileToggle()"><b></b>Kettle&#x5BF9;&#x63A5;FusionInsight</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x51C6;&#x5907;" onclick="mobileToggle()"><b></b>&#x73AF;&#x5883;&#x51C6;&#x5907;</a></li><ul><li><span class="title-icon "></span><a href="#linux&#x5E73;&#x53F0;" onclick="mobileToggle()"><b></b>Linux&#x5E73;&#x53F0;</a></li><li><span class="title-icon "></span><a href="#windows&#x5E73;&#x53F0;" onclick="mobileToggle()"><b></b>Windows&#x5E73;&#x53F0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5E76;&#x542F;&#x52A8;kettle" onclick="mobileToggle()"><b></b>&#x914D;&#x7F6E;&#x5E76;&#x542F;&#x52A8;Kettle</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x63A5;hive" onclick="mobileToggle()"><b></b>&#x5BF9;&#x63A5;Hive</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;hive&#x8FDE;&#x63A5;" onclick="mobileToggle()"><b></b>&#x521B;&#x5EFA;Hive&#x8FDE;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x8BFB;&#x53D6;hive&#x6570;&#x636E;" onclick="mobileToggle()"><b></b>&#x8BFB;&#x53D6;Hive&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x5199;&#x5165;hive&#x6570;&#x636E;" onclick="mobileToggle()"><b></b>&#x5199;&#x5165;Hive&#x6570;&#x636E;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5BF9;&#x63A5;hdfs" onclick="mobileToggle()"><b></b>&#x5BF9;&#x63A5;HDFS</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;hadoop-cluster" onclick="mobileToggle()"><b></b>&#x521B;&#x5EFA;Hadoop Cluster</a></li><li><span class="title-icon "></span><a href="#&#x5BFC;&#x5165;hdfs&#x6587;&#x4EF6;" onclick="mobileToggle()"><b></b>&#x5BFC;&#x5165;HDFS&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x8BFB;&#x53D6;hdfs&#x6587;&#x4EF6;" onclick="mobileToggle()"><b></b>&#x8BFB;&#x53D6;HDFS&#x6587;&#x4EF6;</a></li></ul></ul></ul></div><h1 id="kettle&#x5BF9;&#x63A5;fusioninsight"><a name="kettle&#x5BF9;&#x63A5;fusioninsight" class="anchor-navigation-ex-anchor" href="#kettle&#x5BF9;&#x63A5;fusioninsight"><i class="fa fa-link" aria-hidden="true"></i></a>Kettle&#x5BF9;&#x63A5;FusionInsight</h1>
 <h2 id="&#x9002;&#x7528;&#x573A;&#x666F;"><a name="&#x9002;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
 <blockquote>
+<p>Kettle 6.1  &lt;--&gt; FusionInsight HD V100R002C60U10</p>
+<p>Kettle 6.1  &lt;--&gt; FusionInsight HD V100R002C60U10</p>
 <p>Kettle 6.1  &lt;--&gt; FusionInsight HD V100R002C60U10</p>
 </blockquote>
 <h2 id="&#x73AF;&#x5883;&#x51C6;&#x5907;"><a name="&#x73AF;&#x5883;&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x51C6;&#x5907;</h2>
@@ -1204,7 +1221,7 @@ SERDEPROPERTIES (<span class="hljs-string">&quot;field.delim&quot;</span>=<span 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接Kettle","level":"2.2.6","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.7","depth":2,"ref":"","articles":[]},"previous":{"title":"Talend (TBD)","level":"2.2.5","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"livereload":{},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["custom.css"],"js":[]},"baidu-wis":{"token":"480f1db4debb2fddd98e227a2d70de3e"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Kettle_with_FusionInsight.md","mtime":"2017-08-29T09:50:29.235Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-09T02:09:19.792Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对接Kettle","level":"2.2.6","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.7","depth":2,"ref":"","articles":[]},"previous":{"title":"Talend (TBD)","level":"2.2.5","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"livereload":{},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"480f1db4debb2fddd98e227a2d70de3e"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Kettle_with_FusionInsight.md","mtime":"2018-06-20T09:38:45.543Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T09:43:54.460Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1252,6 +1269,10 @@ SERDEPROPERTIES (<span class="hljs-string">&quot;field.delim&quot;</span>=<span 
     
         
         <script src="../gitbook/gitbook-plugin-baidu-wis/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fixhead/plugin.js"></script>
         
     
         

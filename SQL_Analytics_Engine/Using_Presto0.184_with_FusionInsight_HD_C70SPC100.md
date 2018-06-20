@@ -3,6 +3,8 @@
 ## 适用场景
 
 > Presto0.184 <-> FusionInsight HD V100R002C70SPC100
+>
+> Presto0.196 <-> FusionInsight HD V100R002C80SPC100
 
 ## 说明
 

@@ -2,7 +2,9 @@
 
 ## 适用场景
 
-> IBM InfoSphere DataStage 11.5.0.2  <--> FusionInsight HD V100R002C60U20
+> IBM InfoSphere DataStage 11.3.1.0 <--> FusionInsight HD V100R002C50
+> 
+> IBM InfoSphere DataStage 11.5.0.2 <--> FusionInsight HD V100R002C60U20
 
 ## 前提条件
 

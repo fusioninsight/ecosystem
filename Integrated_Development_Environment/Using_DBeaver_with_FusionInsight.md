@@ -3,6 +3,9 @@
 ## 适用场景
 
 > DBeaver 4.0.8  <--> FusionInsight HD V100R002C60U20
+>
+> DBeaver 4.2.1  <--> FusionInsight HD V100R002C70SPC200
+
 
 ## 说明
 
