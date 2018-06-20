@@ -1,0 +1,32 @@
+.page-inner {
+    max-width: 1000px;
+}
+
+.custom-link {
+    display: none !important;
+}
+
+.book-summary > nav > ul > li.chapter > ul > li > span {
+    color: #9E9E9E;
+}
+
+.book-summary ul.summary li.active>a {
+    font-weight: bold;
+}
+
+.navigation {
+	display: none !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky + tbody {
+  padding-top: 73px;
+}
+
+.tg > tbody > tr> td > a {
+    font-weight: bold;
+}

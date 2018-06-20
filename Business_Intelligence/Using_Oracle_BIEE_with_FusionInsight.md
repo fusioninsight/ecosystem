@@ -2,7 +2,13 @@
 
 ## 适用场景
 
+> Oracle BIEE 11g <-> FusionInsight HD V100R002C60U20
+>
+> Oracle BIEE 11g <-> FusionInsight HD V100R002C70SPC200
+> 
 > Oracle BIEE 12c <-> FusionInsight HD V100R002C60U20
+>
+> Oracle BIEE 12c <-> FusionInsight HD V100R002C70SPC200
 
 ## Linux环境安装OBIEE
 
@@ -530,6 +536,73 @@
   ```
 
   ![](assets/Using_Oracle_BIEE_with_FusionInsight/image101.png)
+
+  重启OBIS
+  ```
+  su oracle
+  cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/bitools/bin
+  ./stop.sh
+  ./start.sh
+  ```
+
+### 服务端分析Spark数据
+
+参考[服务端分析Hive数据](#服务端分析hive数据)
+
+## 对接LibrA/ELK
+
+配置LibrA与ELK的方式没有区别，以下以对接ELK为例进行操作
+
+### 配置客户端系统DSN
+
+* 配置obiee客户端的ODBC驱动
+
+  按照ELK的产品文档的指导安装配置ELK的windows驱动
+
+  配置DSN，测试ODBC连接，保存ODBC连接
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/59b8e.png)
+
+### BI管理工具新建RDP
+
+* 新建obiee-elk.rdp，DSN选择上一步配置的 PostgreSQL35W
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/1e24a.png)
+
+### 上传RDP文件到服务端
+
+* 上传RDP
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/70966.png)
+
+### 配置服务端系统DSN
+
+* 参考LibrA/ELK的产品文档的Linux下配置数据源章节，完成obiee节点下的ODBC驱动的安装
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/e415a.png)
+
+  测试ODBC连接，确保ODBC驱动安装成功
+  ```
+  isql -v PostgreSQL35W
+  ```
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/7c26b.png)
+
+* BI域配置系统ODBC
+  ```
+  cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/config/fmwconfig/bienv/core
+  vi odbc.ini
+  ```
+
+  在ODBC Data Sources部分增加PostgreSQL35W的DSN
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/a1629.png)
+
+  在文件末尾增加PostgreSQL35W的DSN的详细配置
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/959a4.png)
+
+  > PostgreSQL35W的DSN的详细配置最后一行DriverUnicodeType=1需要加上，否则obiee查询的时候会报错[nQSError: 12010] Communication error connecting to remote end point: address = obiee; port = 9514. (HY000)
 
   重启OBIS
   ```

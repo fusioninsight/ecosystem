@@ -3,14 +3,15 @@
   "author": "Openlab",
   "language": "zh-hans",
   "plugins": [
-    "-fontsettings", "-sharing", "-lunr", "-search", "search-pro", "fi-nav", "toggle-chapters", "addcssjs", "download-chapter", "fancybox", "baidu-wis"
+    "-fontsettings", "-sharing", "-lunr", "-search", "search-pro", "fi-nav", "toggle-chapters", "addcssjs", "download-chapter", "fancybox", "baidu-wis", "fixhead"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
       "showLevel": false
     },
     "addcssjs": {
-      "css": ["custom.css"]
+      "css": ["resource/css/custom.css","resource/css/font-awesome.min.css"],
+      "js": []
     },
     "fancybox": {
       "helpers" : {

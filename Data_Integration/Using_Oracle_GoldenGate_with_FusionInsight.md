@@ -3,6 +3,10 @@
 ## 适用场景
 
 > Oracle GoldenGate 12.2 <--> FusionInsight HD V100R002C60U20
+>
+> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C70SPC200
+>
+> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C80SPC100
 
 ## 环境信息
 
