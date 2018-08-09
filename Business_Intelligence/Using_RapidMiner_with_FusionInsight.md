@@ -185,7 +185,7 @@
 
   * 在Manage Radoop Connections 窗口，选中所创建的连接，点击Full test进行完整测试，Test Results显示如下，表明完整测试通过
 
-    ![](assets/Using_RapidMiner_with_FusionInsight/img015.png)
+   ![](assets/Using_RapidMiner_with_FusionInsight/img015.png)
 
 ##Radoop样例运行
   * 在RapidMiner Studio 主页面，Help->Tutorials->User Hadoop->Rapidminer Radoop
