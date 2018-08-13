@@ -25,7 +25,7 @@
 
 * [集成开发环境](Integrated_Development_Environment/README.md)
   * [对接RStudio](Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md)
-  * [对接Apache Zepplin](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)
+  * [对接Apache Zeppelin](Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.md)
     * [Zeppelin0.7.2 <-> FusionInsight HD V100R002C60U20](Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.md)
     * [Zeppelin0.7.3 <-> FusionInsight HD V100R002C70SPC100](Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.md)
     * [Zeppelin0.8.0 <-> FusionInsight HD V100R002C80SPC200](Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.md)

@@ -6,7 +6,7 @@
 >
 > Zeppelin 0.7.3  <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
 
-## 编译Zepplin
+## 编译Zeppelin
 
 * 安装maven：
   ```
@@ -63,7 +63,7 @@
 
   执行`bower -v`
 
-* 获取Zepplin0.7.3的版本
+* 获取Zeppelin0.7.3的版本
   ```
   git clone https://github.com/apache/zeppelin.git
   cd zeppelin
@@ -89,18 +89,18 @@
 
   ![](assets/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100/6fff3.png)
 
-* 编译Zepplin
+* 编译Zeppelin
   ```
   mvn clean package -Pbuild-distr -Pspark-2.1 -Dspark.version=2.1.0 -Dhadoop.version=2.7.2 -Phadoop-2.7 -Pscala-2.11 -Psparkr -DskipTests
   ```
 
 * 编译完成后在`zeppelin-distribution/target`目录下生成`zeppelin-0.7.3.tar.gz`文件
 
-## 安装Zepplin
+## 安装Zeppelin
 
 ### 操作场景
 
-安装Zepplin0.7.3
+安装Zeppelin0.7.3
 
 ### 前提条件
 
@@ -186,7 +186,7 @@
 
 ### 操作场景
 
-Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
+Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。
 
 ### 前提条件
 
@@ -226,7 +226,7 @@ Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
   ```
   > 其中用户为在FusionInsight Manager中创建的test用户，将test的keytab文件user.key放在/opt/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
     ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -319,7 +319,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
   ```
   > 其中用户为在FusionInsight Manager中创建的test用户，将test的keytab文件user.key放在/opt/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
     ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -364,7 +364,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
 
 ### 操作场景
 
-Zepplin中配置Spark解析器
+Zeppelin中配置Spark解析器
 
 ### 前提条件
 
@@ -381,7 +381,7 @@ Zepplin中配置Spark解析器
   export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
   ```
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -437,7 +437,7 @@ Zepplin中配置Spark解析器
 
 ### 操作场景
 
-Zepplin中配置Spark解析器，连接SparkR
+Zeppelin中配置Spark解析器，连接SparkR
 
 ### 前提条件
 

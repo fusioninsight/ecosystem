@@ -4,11 +4,11 @@
 
 > Zeppelin 0.7.2  <--> FusionInsight HD V100R002C60U20
 
-## 安装Zepplin
+## 安装Zeppelin
 
 ### 操作场景
 
-安装Zepplin0.7.2
+安装Zeppelin0.7.2
 
 ### 前提条件
 
@@ -21,7 +21,7 @@
    tar -zxvf zeppelin-0.7.2-bin-all.tgz
   ```
 
-- 启动和停止Zepplin
+- 启动和停止Zeppelin
   ```
   bin/zeppelin-daemon.sh start
   bin/zeppelin-daemon.sh stop
@@ -100,7 +100,7 @@
 
 ### 操作场景
 
-Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
+Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。
 
 ### 前提条件
 
@@ -140,7 +140,7 @@ Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
   ```
   > 其中用户为在FusionInsight Manager中创建的test用户，将test的keytab文件user.key放在/opt/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
     ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -267,7 +267,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
   ```
   > 其中用户为在FusionInsight Manager中创建的test用户，将test的keytab文件user.key放在/opt/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
     ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -312,7 +312,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
 
 ### 操作场景
 
-Zepplin中配置Spark解析器
+Zeppelin中配置Spark解析器
 
 ### 前提条件
 
@@ -368,7 +368,7 @@ Zepplin中配置Spark解析器
   export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
   ```
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_with_FusionInsight_HD/ded9f.png)
 
@@ -420,7 +420,7 @@ Zepplin中配置Spark解析器
 
 ### 操作场景
 
-Zepplin中配置Spark解析器，连接SparkR
+Zeppelin中配置Spark解析器，连接SparkR
 
 ### 前提条件
 
