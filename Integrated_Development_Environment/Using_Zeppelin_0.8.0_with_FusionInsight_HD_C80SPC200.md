@@ -343,10 +343,10 @@ Zeppelin中配置Spark解析器
 sh Anaconda2-4.4.0-Linux-x86_64.sh`
 
   配置环境变量PATH，将python换成安装Anaconda安装目录中的python
-
-  `export PATH=/root/anaconda2/bin/:$PATH`
-  `sh Anaconda2-4.4.0-Linux-x86_64.sh`
-
+```
+  export PATH=/root/anaconda2/bin/:$PATH
+  sh Anaconda2-4.4.0-Linux-x86_64.sh
+```
   在zeppelin的界面中，选择右上角的 Interpreter
 
   选择Spark，点击 **edit** 编辑，将 zeppelin.pyspark.python 参数改为Anaconda安装目录中的python，点击 **save** 保存
