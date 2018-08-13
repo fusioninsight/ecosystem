@@ -4,11 +4,6 @@
 
 FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具进行对接
 
-<style type="text/css"> 
-.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;text-align:center;}
-.tg thead tr:nth-child(1) td{font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;text-align:center;}
-</style>
 <table class="tg">
  <thead>
  <tr>
@@ -28,7 +23,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
  </tr>
 </thead>
  <tr>
-  <td rowspan=14 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i><BR>数据可视化</td>
+  <td rowspan=15 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i><BR>数据可视化</td>
   <td >SAS Access for Hadoop<br>
     SAS HPA<br>
     SAS EP</td>
@@ -74,7 +69,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >10.1.4</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl758533><a
+  <td class=xl753913><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
   <td >　</td>
@@ -84,7 +79,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl758533><a
+  <td class=xl753913><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
  </tr>
@@ -94,7 +89,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl758533><a
+  <td class=xl753913><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
@@ -148,7 +143,18 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >通过</td>
   <td >　</td>
+  <td ><a
+  href="Business_Intelligence/Using_Alteryx_with_FusionInsight.html">通过</a></td>
+ </tr>
+ <tr>
+  <td >RapidMiner</td>
+  <td >8.2.001</td>
   <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
   <td >SmartBI</td>
@@ -292,7 +298,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=12 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
+  <td rowspan=11 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
   <td >RStudio</td>
   <td >1.0.153</td>
   <td >　</td>
@@ -304,7 +310,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=3 >Apache Zepplin</td>
+  <td rowspan=2 >Apache Zepplin</td>
   <td >0.7.2</td>
   <td >　</td>
   <td >　</td>
@@ -322,16 +328,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
   <td ><a
   href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
- </tr>
- <tr>
-  <td >0.8.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a
-  href="Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">通过</a></td>
  </tr>
  <tr>
   <td >Jypyter Notebook</td>
