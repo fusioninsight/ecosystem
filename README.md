@@ -69,7 +69,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >10.1.4</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl753913><a
+  <td class=xl7530251><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
   <td >　</td>
@@ -79,7 +79,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl753913><a
+  <td class=xl7530251><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
  </tr>
@@ -89,7 +89,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl753913><a
+  <td class=xl7530251><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
@@ -298,7 +298,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=11 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
+  <td rowspan=12 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
   <td >RStudio</td>
   <td >1.0.153</td>
   <td >　</td>
@@ -310,7 +310,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=2 >Apache Zepplin</td>
+  <td rowspan=3 >Apache Zeppelin</td>
   <td >0.7.2</td>
   <td >　</td>
   <td >　</td>
@@ -328,6 +328,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
   <td ><a
   href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
+ </tr>
+ <tr>
+  <td >0.8.0</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><u
+  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
+  <td ><a
+  href="Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">通过</a></td>
  </tr>
  <tr>
   <td >Jypyter Notebook</td>
