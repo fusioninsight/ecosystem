@@ -6,11 +6,11 @@
 
 
 
-## 安装Zeppelin
+## 安装Zepplin
 
 ### 操作场景
 
-安装Zeppelin0.8.0
+安装Zepplin0.8.0
 
 ### 前提条件
 
@@ -18,12 +18,12 @@
 
 ### 操作步骤
 
-- 安装Zeppelin 0.8.0,在网址`https://zeppelin.apache.org/download.html`下载安装包，使用WinSCP导入主机并用`tar -zxvf zeppelin-0.8.0-bin-all.tgz`安装生成zeppelin-0.8.0-bin-all目录。
+- 安装Zepplin 0.8.0,在网址`https://zeppelin.apache.org/download.html`下载安装包，使用WinSCP导入主机并用`tar -zxvf zeppelin-0.8.0-bin-all.tgz`安装生成zeppelin-0.8.0-bin-all目录。
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/48125.png)
 
 
-- 启动和停止Zeppelin
+- 启动和停止Zepplin
   ```
   bin/zeppelin-daemon.sh start
   bin/zeppelin-daemon.sh stop
@@ -46,7 +46,7 @@
 
   ```
 
-- 编辑zeppelin-env.sh文件，位置/usr/zeppelin/zeppelin-0.8.0-bin-all/conf
+- 编辑zeppelin-env.sh文件，位置`/usr/zeppelin/zeppelin-0.8.0-bin-all/conf`
   ```
   cd /usr/zeppelin/zeppelin-0.8.0-bin-all/conf/
   cp zeppelin-env.sh.template zeppelin-env.sh
@@ -108,7 +108,7 @@
 ## Zeppelin连接Hive
 ### 操作场景
 
-Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。
+Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
 
 ### 前提条件
 
@@ -146,7 +146,7 @@ Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。
   ```
   > 其中用户为在FusionInsight Manager中创建的developuser用户，将developuser的keytab文件user.key放在/opt/developuser/目录下
 
-- 登陆Zeppelin，选择右上角菜单中的 Interpreter
+- 登陆Zepplin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -242,7 +242,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
   ```
   > 其中用户为在FusionInsight Manager中创建的developuser用户，将developuser的keytab文件user.key放在/opt/developuser/目录下
 
-- 登陆Zeppelin，选择右上角菜单中的 Interpreter
+- 登陆Zepplin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -282,7 +282,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
 
 ### 操作场景
 
-Zeppelin中配置Spark解析器
+Zepplin中配置Spark解析器
 
 ### 前提条件
 
@@ -304,7 +304,7 @@ Zeppelin中配置Spark解析器
   export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
   export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
   ```
-- 登陆Zeppelin，选择右上角菜单中的 Interpreter
+- 登陆Zepplin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -343,10 +343,10 @@ Zeppelin中配置Spark解析器
 sh Anaconda2-4.4.0-Linux-x86_64.sh`
 
   配置环境变量PATH，将python换成安装Anaconda安装目录中的python
-```
-  export PATH=/root/anaconda2/bin/:$PATH
-  sh Anaconda2-4.4.0-Linux-x86_64.sh
-```
+
+  `export PATH=/root/anaconda2/bin/:$PATH`
+  `sh Anaconda2-4.4.0-Linux-x86_64.sh`
+
   在zeppelin的界面中，选择右上角的 Interpreter
 
   选择Spark，点击 **edit** 编辑，将 zeppelin.pyspark.python 参数改为Anaconda安装目录中的python，点击 **save** 保存
@@ -361,7 +361,7 @@ sh Anaconda2-4.4.0-Linux-x86_64.sh`
 
 ### 操作场景
 
-Zeppelin中配置Spark解析器，连接SparkR
+Zepplin中配置Spark解析器，连接SparkR
 
 ### 前提条件
 
@@ -460,3 +460,83 @@ Zeppelin中配置Spark解析器，连接SparkR
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/4b7ce.png)
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/dadf9.png)
+
+## Zeppelin连接Apache Livy
+
+### 操作场景
+
+Zepplin中配置Livy解析器，连接Livy
+
+### 前提条件
+
+- 完成Zeppelin0.8.0的安装；
+- 已完成FusionInsight HD和客户端的安装，包含Spark2x组件。
+- 完成Apache Livy 0.5.0的安装
+
+>可参考《Apache Livy对接FusionInsight》对接文档完成Apache Livy的安装
+
+### 操作步骤
+
+- 用如下命令启动Livy服务
+  ```
+  cd /usr/livy/livy-0.5.0-incubating-bin
+  bin/livy-server start
+  ```
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/4d781.png)
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/1a29f.png)
+
+- 登陆Zepplin，选择右上角菜单中的 Interpreter
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
+
+- 选择livy，点击 **edit** 编辑zeppelin.livy.url的值为`http://172.21.3.43:8998`（可以不更改），点击 **save** 保存
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/28226.png)
+
+- 页面选择Notebook -> Create new note
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/19d9c.png)
+
+- 自定义note名称，例如livy_connection_test
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/11ca6.png)
+
+
+- 在Zeppelin中执行Spark样例代码
+  ```
+  val NUM_SAMPLES = 100000;
+      val count = sc.parallelize(1 to NUM_SAMPLES).map { i =>
+        val x = Math.random();
+        val y = Math.random();
+        if (x*x + y*y < 1) 1 else 0
+      }.reduce(_ + _);
+  println("Pi is roughly " + 4.0 * count / NUM_SAMPLES)
+  ```
+
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/3bfa0.png)
+
+- 在Zeppelin中执行PySpark样例代码  
+  ```
+  %livy.pyspark
+  import random
+  NUM_SAMPLES = 100000
+  def sample(p):
+    x, y = random.random(), random.random()
+    return 1 if x*x + y*y < 1 else 0
+
+  count = sc.parallelize(xrange(0, NUM_SAMPLES)).map(sample).reduce(lambda a, b: a + b)
+  print "Pi is roughly %f" % (4.0 * count / NUM_SAMPLES)
+  ```  
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/dc9e9.png)
+
+- 在Zeppelin中执行SparkR样例代码
+  ```
+  %livy.sparkr
+
+  hello <- function( name ) {
+      sprintf( "Hello, %s", name );
+  }
+  hello("livy")
+  ```
+  ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/0b7fb.png)  
