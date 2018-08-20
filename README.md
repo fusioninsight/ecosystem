@@ -69,7 +69,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >10.1.4</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7530251><a
+  <td class=xl7532510><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
   <td >　</td>
@@ -79,7 +79,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7530251><a
+  <td class=xl7532510><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
  </tr>
@@ -89,7 +89,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7530251><a
+  <td class=xl7532510><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
@@ -310,7 +310,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=3 >Apache Zeppelin</td>
+  <td rowspan=3 >Apache Zepplin</td>
   <td >0.7.2</td>
   <td >　</td>
   <td >　</td>
@@ -556,7 +556,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=5 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i><BR>其他</td>
+  <td rowspan=6 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i><BR>其他</td>
   <td >FUSE</td>
   <td >2.8.3</td>
   <td >　</td>
@@ -586,6 +586,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
+ </tr>
+ <tr>
+  <td >Apache Livy</td>
+  <td >0.5.0</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Other/Using_Livy_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
   <td rowspan=2 >NeoKylin</td>
