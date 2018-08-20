@@ -163,7 +163,6 @@
 
         ![](assets/Using_RapidMiner_with_FusionInsight/img010.png)
 
-
     * 点击OK->Proced Anyway->Save
 
 ##测试连接
@@ -182,15 +181,17 @@
 
   * 在Hive页面，点击Test，Test Results显示如下，表明Hive测试成功
 
+    ![](assets/Using_RapidMiner_with_FusionInsight/img014.png)
+
   * 在Manage Radoop Connections 窗口，选中所创建的连接，点击Full test进行完整测试，Test Results显示如下，表明完整测试通过
 
-    ![](assets/Using_RapidMiner_with_FusionInsight/img014.png)
+    ![](assets/Using_RapidMiner_with_FusionInsight/img015.png)
 
 ##Radoop样例运行
   * 在RapidMiner Studio 主页面，Help->Tutorials->User Hadoop->Rapidminer Radoop
     - 根据Tutorials的指导运行样例，运行结果如下：
 
-      ![](assets/Using_Rapidminer_with_FusionInsight/img015.png)
+      ![](assets/Using_Rapidminer_with_FusionInsight/img016.png)
 
 ##FAQ
   * 测试连接时，提示ICMP port unreachable/Error retrieving Hive object list问题
