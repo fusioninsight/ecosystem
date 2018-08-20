@@ -50,4 +50,5 @@
 * [其他](Other/README.md)
   * [对接FUSE](Other/Using_FUSE_with_FusionInsight.md)
   * [对接Gis-Tools-For-Hadoop](Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md)
+  * [对接Apache Livy](Other/Using_Livy_with_FusionInsight.md)
   * IBM WAS (TBD)
