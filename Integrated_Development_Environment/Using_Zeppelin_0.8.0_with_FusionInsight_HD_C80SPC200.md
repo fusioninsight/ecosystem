@@ -6,11 +6,11 @@
 
 
 
-## 安装Zepplin
+## 安装Zeppelin
 
 ### 操作场景
 
-安装Zepplin0.8.0
+安装Zeppelin0.8.0
 
 ### 前提条件
 
@@ -18,12 +18,12 @@
 
 ### 操作步骤
 
-- 安装Zepplin 0.8.0,在网址`https://zeppelin.apache.org/download.html`下载安装包，使用WinSCP导入主机并用`tar -zxvf zeppelin-0.8.0-bin-all.tgz`安装生成zeppelin-0.8.0-bin-all目录。
+- 安装Zeppelin 0.8.0,在网址`https://zeppelin.apache.org/download.html`下载安装包，使用WinSCP导入主机并用`tar -zxvf zeppelin-0.8.0-bin-all.tgz`安装生成zeppelin-0.8.0-bin-all目录。
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/48125.png)
 
 
-- 启动和停止Zepplin
+- 启动和停止Zeppelin
   ```
   bin/zeppelin-daemon.sh start
   bin/zeppelin-daemon.sh stop
@@ -108,7 +108,7 @@
 ## Zeppelin连接Hive
 ### 操作场景
 
-Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
+Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。
 
 ### 前提条件
 
@@ -146,7 +146,7 @@ Zepplin中配置JDBC解析器，对接Hive的JDBC接口。
   ```
   > 其中用户为在FusionInsight Manager中创建的developuser用户，将developuser的keytab文件user.key放在/opt/developuser/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -242,7 +242,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
   ```
   > 其中用户为在FusionInsight Manager中创建的developuser用户，将developuser的keytab文件user.key放在/opt/developuser/目录下
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -282,7 +282,7 @@ Zeppelin中配置Hbase解析器，对接Hbase
 
 ### 操作场景
 
-Zepplin中配置Spark解析器
+Zeppelin中配置Spark解析器
 
 ### 前提条件
 
@@ -304,7 +304,7 @@ Zepplin中配置Spark解析器
   export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
   export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
   ```
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 
@@ -361,7 +361,7 @@ sh Anaconda2-4.4.0-Linux-x86_64.sh`
 
 ### 操作场景
 
-Zepplin中配置Spark解析器，连接SparkR
+Zeppelin中配置Spark解析器，连接SparkR
 
 ### 前提条件
 
@@ -465,7 +465,7 @@ Zepplin中配置Spark解析器，连接SparkR
 
 ### 操作场景
 
-Zepplin中配置Livy解析器，连接Livy
+Zeppelin中配置Livy解析器，连接Livy
 
 ### 前提条件
 
@@ -487,7 +487,7 @@ Zepplin中配置Livy解析器，连接Livy
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/1a29f.png)
 
-- 登陆Zepplin，选择右上角菜单中的 Interpreter
+- 登陆Zeppelin，选择右上角菜单中的 Interpreter
 
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/750fd.png)
 

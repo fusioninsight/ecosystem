@@ -191,7 +191,7 @@
   * 在RapidMiner Studio 主页面，Help->Tutorials->User Hadoop->Rapidminer Radoop
     - 根据Tutorials的指导运行样例，运行结果如下：
 
-      ![](assets/Using_Rapidminer_with_FusionInsight/img016.png)
+    ![](assets/Using_Rapidminer_with_FusionInsight/img016.png)
 
 ##FAQ
   * 测试连接时，提示ICMP port unreachable/Error retrieving Hive object list问题
