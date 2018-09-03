@@ -69,7 +69,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >10.1.4</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7532510><a
+  <td class=xl7526770><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
   <td >　</td>
@@ -79,7 +79,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7532510><a
+  <td class=xl7526770><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
   <td >　</td>
  </tr>
@@ -89,7 +89,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7532510><a
+  <td class=xl7526770><a
   href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
  </tr>
  <tr>
@@ -175,7 +175,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=13 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
+  <td rowspan=14 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -251,7 +251,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td >Kettle</td>
+  <td rowspan=2 >Kettle</td>
   <td >6.1</td>
   <td >　</td>
   <td >　</td>
@@ -260,7 +260,18 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><a
   href="Data_Integration/Using_Kettle_with_FusionInsight.html">通过</a></td>
   <td ><a
-  href="Data_Integration/Using_Kettle_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">通过</a></td>
+ </tr>
+ <tr>
+  <td >8.0&amp;8.1</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><u
+  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
+  <td ><u
+  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
+  <td ><a
+  href="Data_Integration/Using_Kettle_8.0&amp;8.1_with_FusionInsight_HD_C80SPC200.html">通过</a></td>
  </tr>
  <tr>
   <td rowspan=2 >Pentaho</td>
