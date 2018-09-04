@@ -57,11 +57,11 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td rowspan=4 >Tableau</td>
   <td >10.0.0</td>
   <td ><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -69,8 +69,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >10.1.4</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7526770><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  <td class=xl752294><a
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -79,8 +79,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7526770><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  <td class=xl752294><a
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -89,8 +89,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
-  <td class=xl7526770><a
-  href="Business_Intelligence/Using_Tableau_with_FusionInsight.html">通过</a></td>
+  <td class=xl752294><a
+  href="Business_Intelligence/Using_Tableau_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td >QlikView</td>
@@ -100,11 +100,11 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="Business_Intelligence/Using_QlikView_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_QlikView_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_QlikView_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_QlikView_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_QlikView_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_QlikView_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td >QlikSense</td>
@@ -121,9 +121,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -131,9 +131,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -144,7 +144,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >通过</td>
   <td >　</td>
   <td ><a
-  href="Business_Intelligence/Using_Alteryx_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_Alteryx_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td >RapidMiner</td>
@@ -154,7 +154,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">通过</a></td>
+  href="Business_Intelligence/Using_RapidMiner_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td >SmartBI</td>
@@ -180,7 +180,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >11.3.1.0</td>
   <td >　</td>
   <td ><a
-  href="Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
   <td >　</td>
@@ -190,7 +190,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -209,7 +209,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -219,9 +219,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td >Informatica BDM(native)</td>
@@ -256,11 +256,11 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Data_Integration/Using_Kettle_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Kettle_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Data_Integration/Using_Kettle_with_FusionInsight.html">通过</a></td>
+  href="Data_Integration/Using_Kettle_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">通过</a></td>
+  href="Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.md">通过</a></td>
  </tr>
  <tr>
   <td >8.0&amp;8.1</td>
@@ -271,7 +271,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="Data_Integration/Using_Kettle_8.0&amp;8.1_with_FusionInsight_HD_C80SPC200.html">通过</a></td>
+  href="Data_Integration/Using_Kettle_8.0&amp;8.1_with_FusionInsight_HD_C80SPC200.md">通过</a></td>
  </tr>
  <tr>
   <td rowspan=2 >Pentaho</td>
@@ -315,9 +315,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md">通过</a></td>
   <td ><a
-  href="Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_RStudio_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -326,7 +326,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -336,9 +336,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.md">通过</a></td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.md">通过</a></td>
  </tr>
  <tr>
   <td >0.8.0</td>
@@ -348,7 +348,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.md">通过</a></td>
  </tr>
  <tr>
   <td >Jypyter Notebook</td>
@@ -357,7 +357,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -366,7 +366,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -376,7 +376,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -385,7 +385,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -395,7 +395,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -404,7 +404,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -414,7 +414,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">通过</a></td>
+  href="Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -433,7 +433,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -443,7 +443,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -452,7 +452,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -463,7 +463,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.md">通过</a></td>
  </tr>
  <tr>
   <td rowspan=4 >Kyligence</td>
@@ -471,7 +471,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -480,7 +480,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -490,7 +490,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -499,7 +499,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -508,7 +508,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -518,7 +518,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md">通过</a></td>
   <td >　</td>
  </tr>
  <tr>
@@ -528,7 +528,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">通过</a></td>
+  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md">通过</a></td>
  </tr>
  <tr>
   <td rowspan=4 ><i class="fa fa-database fa-2x" aria-hidden="true"></i><BR>数据库</td>
@@ -574,7 +574,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="Other/Using_FUSE_with_FusionInsight.html">通过</a></td>
+  href="Other/Using_FUSE_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -585,7 +585,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><u
   style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.html">通过</a></td>
+  href="Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md">通过</a></td>
   <td >　</td>
   <td >　</td>
  </tr>
@@ -606,7 +606,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="Other/Using_Livy_with_FusionInsight.html">通过</a></td>
+  href="Other/Using_Livy_with_FusionInsight.md">通过</a></td>
  </tr>
  <tr>
   <td rowspan=2 >NeoKylin</td>
