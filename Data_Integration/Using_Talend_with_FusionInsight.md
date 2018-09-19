@@ -1,6 +1,6 @@
 # Talend对接FusionInsight
 
-## 试用场景
+## 适用场景
 
 >Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase组件)
 >
