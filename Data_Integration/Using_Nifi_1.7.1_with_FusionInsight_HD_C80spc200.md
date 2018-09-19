@@ -1,6 +1,6 @@
 # Apache NiFi对接FusionInsight
 
-## 试用场景
+## 适用场景
 
 >Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200
 
