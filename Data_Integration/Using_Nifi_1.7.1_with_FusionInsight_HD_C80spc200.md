@@ -1,6 +1,6 @@
 # Apache NiFi对接FusionInsight
 
-## 试用场景
+## 适用场景
 
 >Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200
 
@@ -8,7 +8,7 @@
 
 ### 操作场景
 
-安装Zepplin0.8.0
+安装Apache NiFi 1.7.1
 
 ### 前提条件
 
