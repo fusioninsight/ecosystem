@@ -556,7 +556,7 @@ NiFi中配置HBase解析器，对的FI HD HBase接口
     2： KeytabCredentialsService
   ```
 
-  - 点击**闪电**图标点击闪电图标生效并保存`HiveConnectionPool`
+  - 点击**闪电**图标点击闪电图标生效并保存`HBase_1_1_2_ClientService`
 
   ![](assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161345190.png)
 
@@ -864,7 +864,7 @@ NiFi中配置Livy解析器，对的FI HD HBase接口
   2: ${code2}
   ```
 
-- 测试前将代码文件`code1.txt`上传至安装nifi主机的路径`/home/dataset/sparkTest`下：
+- 测试前将代码文件`code2.txt`上传至安装nifi主机的路径`/home/dataset/sparkTest`下：
 
   ![](assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114447497.png)
 
