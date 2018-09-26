@@ -1,31 +1,48 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>FUSE · GitBook</title>
+        <title>FUSE · FusionInsight生态地图</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Openlab">
         
         
     
-    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fi-nav/style/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
         
@@ -44,6 +61,12 @@
         
     
         
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/custom.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/font-awesome.min.css" />
     
 
         
@@ -53,8 +76,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
     <link rel="next" href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" />
@@ -838,14 +861,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="fuse&#x5BF9;&#x63A5;fusioninsight-hdfs">FUSE&#x5BF9;&#x63A5;FusionInsight HDFS</h1>
-<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;">&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+                                <script>function handlerToggle() {
+	var navbar = $("#anchor-navigation-ex-navbar");
+  var navbarul = $("#anchor-navigation-ex-navbar ul");
+	var nw = navbar.width();
+	if (nw > 40) {
+		navbar.stop().animate({
+			width: "40px"
+		}, 200);
+		navbarul.css("display", "none");
+		navbar.css("border-left", "0px")
+    navbar.css("background-color", "rgba(255,255,255,0)")
+	} else {
+		navbar.stop().animate({
+			width: 300
+		}, 200);
+		navbarul.css("display", "block");
+		navbar.css("border-left", "1px solid #e5e5e5");
+    navbar.css("background-color", "rgba(255,255,255,0.98)")
+	};
+};function mobileToggle() {
+  if(document.body.clientWidth<800) {
+    handlerToggle()
+  }
+};</script><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor" onclick="handlerToggle()"></i><ul><li><span class="title-icon "></span><a href="#fuse&#x5BF9;&#x63A5;fusioninsight-hdfs" onclick="mobileToggle()"><b></b>FUSE&#x5BF9;&#x63A5;FusionInsight HDFS</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x8BF4;&#x660E;" onclick="mobileToggle()"><b></b>&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5BF9;&#x63A5;" onclick="mobileToggle()"><b></b>&#x914D;&#x7F6E;&#x5BF9;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;" onclick="mobileToggle()"><b></b>&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;</a></li></ul></ul></div><h1 id="fuse&#x5BF9;&#x63A5;fusioninsight-hdfs"><a name="fuse&#x5BF9;&#x63A5;fusioninsight-hdfs" class="anchor-navigation-ex-anchor" href="#fuse&#x5BF9;&#x63A5;fusioninsight-hdfs"><i class="fa fa-link" aria-hidden="true"></i></a>FUSE&#x5BF9;&#x63A5;FusionInsight HDFS</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;"><a name="&#x9002;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
 <blockquote>
 <p>fuse 2.8.3 &lt;-&gt; FusionInsight HD V100R002C60U20&#xFF08;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF09;</p>
 </blockquote>
-<h2 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h2>
+<h2 id="&#x8BF4;&#x660E;"><a name="&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;</h2>
 <p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;FUSE&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5C06;&#x8FDC;&#x7AEF;&#x7684;HDFS&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;mount&#x5230;&#x672C;&#x7AEF;&#x7684;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#x4F7F;&#x7528;</p>
-<h2 id="&#x914D;&#x7F6E;&#x5BF9;&#x63A5;">&#x914D;&#x7F6E;&#x5BF9;&#x63A5;</h2>
+<h2 id="&#x914D;&#x7F6E;&#x5BF9;&#x63A5;"><a name="&#x914D;&#x7F6E;&#x5BF9;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x5BF9;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x5BF9;&#x63A5;</h2>
 <ul>
 <li><p>&#x5B89;&#x88C5;jdk1.8</p>
 <pre><code>tar -xvf jdk-8u112-linux-x64.tar.gz
@@ -919,33 +965,49 @@ chmod 755 fuse_dfs_wrapper.sh
 </code></pre></li>
 <li><p>&#x6267;&#x884C;&#x6302;&#x8F7D;&#x811A;&#x672C;&#xFF0C;&#x5176;&#x4E2D;162-1-95-196&#x662F;HDFS&#x7684;NameNode(hacluster,&#x4E3B;)&#x7684;&#x4E3B;&#x673A;&#x540D;</p>
 <pre><code>./fuse_dfs_wrapper.sh dfs://162-1-95-196:25000 /mnt/hdfs/
-</code></pre><p><img src="assets/Using_FUSE_with_FusionInsight/image6.png" alt=""></p>
+</code></pre><p>     <a href="assets/Using_FUSE_with_FusionInsight/image6.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image6.png" alt="">
+     </a></p>
 </li>
 <li><p>&#x67E5;&#x770B;/mnt/hdfs&#x76EE;&#x5F55;</p>
-<p><img src="assets/Using_FUSE_with_FusionInsight/image7.png" alt=""></p>
+<p>     <a href="assets/Using_FUSE_with_FusionInsight/image7.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image7.png" alt="">
+     </a></p>
 </li>
 <li><p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5378;&#x8F7D;&#x6302;&#x8F7D;&#x70B9;&#xFF0C;&#x6267;&#x884C;umount /mnt/hdfs&#x5373;&#x53EF;</p>
 </li>
 </ul>
-<h2 id="&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;">&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;</h2>
+<h2 id="&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;"><a name="&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A8C;&#x8BC1;&#x5BF9;&#x63A5;</h2>
 <ul>
 <li><p>hdfsclient&#x5199;</p>
 <pre><code>dd if=/dev/zero bs=4096 count=1024 | hadoop fs -put - /tmp/fuse/hdfsclient-01.dat
-</code></pre><p><img src="assets/Using_FUSE_with_FusionInsight/image8.png" alt=""></p>
-<p><img src="assets/Using_FUSE_with_FusionInsight/image9.png" alt=""></p>
+</code></pre><p>     <a href="assets/Using_FUSE_with_FusionInsight/image8.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image8.png" alt="">
+     </a></p>
+<p>     <a href="assets/Using_FUSE_with_FusionInsight/image9.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image9.png" alt="">
+     </a></p>
 </li>
 <li><p>hdfsclient&#x8BFB;</p>
 <pre><code>hadoop fs -get /tmp/fuse/hdfsclient-01.dat - &gt; /dev/null
-</code></pre><p><img src="assets/Using_FUSE_with_FusionInsight/image10.png" alt=""></p>
+</code></pre><p>     <a href="assets/Using_FUSE_with_FusionInsight/image10.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image10.png" alt="">
+     </a></p>
 </li>
 <li><p>fuse&#x5199;</p>
 <pre><code>dd if=/dev/zero bs=4096 count=1024  of=/mnt/hdfs/tmp/fuse/fuse-01.dat
-</code></pre><p><img src="assets/Using_FUSE_with_FusionInsight/image11.png" alt=""></p>
-<p><img src="assets/Using_FUSE_with_FusionInsight/image12.png" alt=""></p>
+</code></pre><p>     <a href="assets/Using_FUSE_with_FusionInsight/image11.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image11.png" alt="">
+     </a></p>
+<p>     <a href="assets/Using_FUSE_with_FusionInsight/image12.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image12.png" alt="">
+     </a></p>
 </li>
 <li><p>fuse&#x8BFB;</p>
 <pre><code>dd if=/mnt/hdfs/tmp/fuse/fuse-01.dat  bs=4096  of=/dev/null
-</code></pre><p><img src="assets/Using_FUSE_with_FusionInsight/image13.png" alt=""></p>
+</code></pre><p>     <a href="assets/Using_FUSE_with_FusionInsight/image13.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_FUSE_with_FusionInsight/image13.png" alt="">
+     </a></p>
 </li>
 </ul>
 
@@ -991,38 +1053,65 @@ chmod 755 fuse_dfs_wrapper.sh
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FUSE","level":"2.6.1","depth":2,"next":{"title":"Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},"previous":{"title":"Other","level":"2.6","depth":1,"path":"Other/README.md","ref":"Other/README.md","articles":[{"title":"FUSE","level":"2.6.1","depth":2,"path":"Other/Using_FUSE_with_FusionInsight.md","ref":"Other/Using_FUSE_with_FusionInsight.md","articles":[]},{"title":"Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},{"title":"Apache Livy","level":"2.6.3","depth":2,"path":"Other/Using_Livy_with_FusionInsight.md","ref":"Other/Using_Livy_with_FusionInsight.md","articles":[]},{"title":"IBM WAS (TBD)","level":"2.6.4","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Other/Using_FUSE_with_FusionInsight.md","mtime":"2018-09-25T10:07:34.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T07:07:31.068Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"FUSE","level":"2.6.1","depth":2,"next":{"title":"Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},"previous":{"title":"Other","level":"2.6","depth":1,"path":"Other/README.md","ref":"Other/README.md","articles":[{"title":"FUSE","level":"2.6.1","depth":2,"path":"Other/Using_FUSE_with_FusionInsight.md","ref":"Other/Using_FUSE_with_FusionInsight.md","articles":[]},{"title":"Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},{"title":"Apache Livy","level":"2.6.3","depth":2,"path":"Other/Using_Livy_with_FusionInsight.md","ref":"Other/Using_Livy_with_FusionInsight.md","articles":[]},{"title":"IBM WAS (TBD)","level":"2.6.4","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"en","gitbook":"*"},"file":{"path":"Other/Using_FUSE_with_FusionInsight.md","mtime":"2018-09-25T10:07:34.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T07:10:25.560Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
 
         
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../../gitbook/gitbook-plugin-download-chapter/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
         
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-wis/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fixhead/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+
     
 
     </body>
