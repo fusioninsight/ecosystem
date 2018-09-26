@@ -1,48 +1,31 @@
 
 <!DOCTYPE HTML>
-<html lang="en" >
+<html lang="" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Apache NiFi · FusionInsight生态地图</title>
+        <title>Apache NiFi · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Openlab">
+        
         
         
     
-    
-    <link rel="stylesheet" href="../../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fi-nav/style/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -61,12 +44,6 @@
         
     
         
-    
-
-    
-    <link rel="stylesheet" type="text/css" href="../resource/css/custom.css" />
-    
-    <link rel="stylesheet" type="text/css" href="../resource/css/font-awesome.min.css" />
     
 
         
@@ -76,8 +53,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
     
@@ -859,83 +836,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <script>function handlerToggle() {
-	var navbar = $("#anchor-navigation-ex-navbar");
-  var navbarul = $("#anchor-navigation-ex-navbar ul");
-	var nw = navbar.width();
-	if (nw > 40) {
-		navbar.stop().animate({
-			width: "40px"
-		}, 200);
-		navbarul.css("display", "none");
-		navbar.css("border-left", "0px")
-    navbar.css("background-color", "rgba(255,255,255,0)")
-	} else {
-		navbar.stop().animate({
-			width: 300
-		}, 200);
-		navbarul.css("display", "block");
-		navbar.css("border-left", "1px solid #e5e5e5");
-    navbar.css("background-color", "rgba(255,255,255,0.98)")
-	};
-};function mobileToggle() {
-  if(document.body.clientWidth<800) {
-    handlerToggle()
-  }
-};</script><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor" onclick="handlerToggle()"></i><ul><li><span class="title-icon "></span><a href="#connection-instruction-between-apache-nifi-and-fusioninsight" onclick="mobileToggle()"><b></b>Connection Instruction between Apache NiFi and FusionInsight</a></li><ul><li><span class="title-icon "></span><a href="#succeeded-case" onclick="mobileToggle()"><b></b>Succeeded Case</a></li><li><span class="title-icon "></span><a href="#installing-apache-nifi" onclick="mobileToggle()"><b></b>Installing Apache NiFi</a></li><ul><li><span class="title-icon "></span><a href="#purpose" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#procedure" onclick="mobileToggle()"><b></b>Procedure</a></li></ul><li><span class="title-icon "></span><a href="#configuring-kerberos-authentication-within-nifi" onclick="mobileToggle()"><b></b>Configuring Kerberos authentication within NiFi</a></li><ul><li><span class="title-icon "></span><a href="#purpose_1" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_1" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#procedure_1" onclick="mobileToggle()"><b></b>Procedure</a></li></ul><li><span class="title-icon "></span><a href="#connecting-nifi-to-hdfs" onclick="mobileToggle()"><b></b>Connecting NiFi to HDFS</a></li><ul><li><span class="title-icon "></span><a href="#purpose_2" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_2" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#puthdfs-procedure" onclick="mobileToggle()"><b></b>PutHDFS Procedure</a></li><li><span class="title-icon "></span><a href="#gethdfs-procedure" onclick="mobileToggle()"><b></b>GetHDFS Procedure</a></li><li><span class="title-icon "></span><a href="#listhdfs--fetchhdfs-procedure" onclick="mobileToggle()"><b></b>ListHDFS &amp; FetchHDFS Procedure</a></li></ul><li><span class="title-icon "></span><a href="#connecting-nifi-to-hive" onclick="mobileToggle()"><b></b>Connecting NiFi to Hive</a></li><ul><li><span class="title-icon "></span><a href="#purpose_3" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_3" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#hiveconnectionpool-procedure" onclick="mobileToggle()"><b></b>HiveConnectionPool Procedure</a></li><li><span class="title-icon "></span><a href="#selecthiveql-read-hive-table-procedure" onclick="mobileToggle()"><b></b>SelectHiveQL read Hive table Procedure</a></li><li><span class="title-icon "></span><a href="#puthiveql-load-whole-table-procedure" onclick="mobileToggle()"><b></b>PutHiveQL load whole table Procedure</a></li><li><span class="title-icon "></span><a href="#puthiveql-load-the-table-by-rows-procedure" onclick="mobileToggle()"><b></b>PutHiveQL Load the table by rows Procedure</a></li></ul><li><span class="title-icon "></span><a href="#connecting-nifi-to-hbase" onclick="mobileToggle()"><b></b>Connecting NiFi to HBase</a></li><ul><li><span class="title-icon "></span><a href="#purpose_4" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_4" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#hbase112clientservice-procedure" onclick="mobileToggle()"><b></b>HBase_1_1_2_ClientService Procedure</a></li><li><span class="title-icon "></span><a href="#puthbasejson-load-the-table-procedure" onclick="mobileToggle()"><b></b>PutHBaseJSON load the table Procedure</a></li><li><span class="title-icon "></span><a href="#gethbase-procedure" onclick="mobileToggle()"><b></b>GetHbase Procedure</a></li></ul><li><span class="title-icon "></span><a href="#connecting-nifi-to-spark" onclick="mobileToggle()"><b></b>Connecting NiFi to Spark</a></li><ul><li><span class="title-icon "></span><a href="#purpose_5" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_5" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#livysessioncontroller-procedure" onclick="mobileToggle()"><b></b>LivySessionController Procedure</a></li><li><span class="title-icon "></span><a href="#spark-sample-procedure" onclick="mobileToggle()"><b></b>Spark Sample Procedure</a></li><li><span class="title-icon "></span><a href="#pyspark-sample-procedure" onclick="mobileToggle()"><b></b>PySpark Sample Procedure</a></li><li><span class="title-icon "></span><a href="#sparkr-sample-procedure" onclick="mobileToggle()"><b></b>SparkR Sample Procedure</a></li></ul><li><span class="title-icon "></span><a href="#connecting-nifi-to-kafka" onclick="mobileToggle()"><b></b>Connecting NiFi to Kafka</a></li><ul><li><span class="title-icon "></span><a href="#purpose_6" onclick="mobileToggle()"><b></b>Purpose</a></li><li><span class="title-icon "></span><a href="#prerequisites_6" onclick="mobileToggle()"><b></b>Prerequisites</a></li><li><span class="title-icon "></span><a href="#gethttp--putkafka-procedure" onclick="mobileToggle()"><b></b>GetHTTP &amp; PutKafka Procedure</a></li><li><span class="title-icon "></span><a href="#consumekafka011-procedure" onclick="mobileToggle()"><b></b>ConsumeKafka_0_11 Procedure</a></li></ul></ul></ul></div><h1 id="connection-instruction-between-apache-nifi-and-fusioninsight"><a name="connection-instruction-between-apache-nifi-and-fusioninsight" class="anchor-navigation-ex-anchor" href="#connection-instruction-between-apache-nifi-and-fusioninsight"><i class="fa fa-link" aria-hidden="true"></i></a>Connection Instruction between Apache NiFi and FusionInsight</h1>
-<h2 id="succeeded-case"><a name="succeeded-case" class="anchor-navigation-ex-anchor" href="#succeeded-case"><i class="fa fa-link" aria-hidden="true"></i></a>Succeeded Case</h2>
+                                <h1 id="connection-instruction-between-apache-nifi-and-fusioninsight">Connection Instruction between Apache NiFi and FusionInsight</h1>
+<h2 id="succeeded-case">Succeeded Case</h2>
 <blockquote>
 <p>Apache NiFi 1.7.1 &lt;--&gt; FusionInsight HD V100R002C80SPC200</p>
 </blockquote>
-<h2 id="installing-apache-nifi"><a name="installing-apache-nifi" class="anchor-navigation-ex-anchor" href="#installing-apache-nifi"><i class="fa fa-link" aria-hidden="true"></i></a>Installing Apache NiFi</h2>
-<h3 id="purpose"><a name="purpose" class="anchor-navigation-ex-anchor" href="#purpose"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="installing-apache-nifi">Installing Apache NiFi</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Installing Apache NiFi 1.7.1</p>
-<h3 id="prerequisites"><a name="prerequisites" class="anchor-navigation-ex-anchor" href="#prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li>Installing FusionInsight HD cluster and its client completed</li>
 </ul>
-<h3 id="procedure"><a name="procedure" class="anchor-navigation-ex-anchor" href="#procedure"><i class="fa fa-link" aria-hidden="true"></i></a>Procedure</h3>
+<h3 id="procedure">Procedure</h3>
 <ul>
 <li>Get JAVA_HOME configuration by execute <strong>source</strong> command on client side<pre><code>source /opt/hadoopclient/bigdata_env
 echo $JAVA_HOME
-</code></pre>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912165818271.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912165818271.png" alt="">
-     </a></li>
+</code></pre><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912165818271.png" alt=""></li>
 </ul>
 <ul>
 <li><p>Download NiFi installation file from <code>https://nifi.apache.org/download.html</code>, move the file to client side by using tool <strong>WinSCP</strong> , execute command <code>unzip nifi-1.7.1-bin.zip</code> to unzip the installation file to the following directory <code>/usr/nifi/nifi-1.7.1</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912160728825.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912160728825.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912160728825.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Configure NiFi server IP address and port by execute following command <code>vi /usr/nifi/nifi-1.7.1/conf/nifi.properties</code> and adjust the propeties within the <strong>nifi.properties</strong> file</p>
 <pre><code>nifi.web.http.host=172.16.52.190
 nifi.web.http.port=8085
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912163428506.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912163428506.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912163428506.png" alt=""></p>
 </li>
 <li><p>Start and Stop NiFi server</p>
 <pre><code>cd /usr/nifi/nifi-1.7.1
 bin/nifi.sh start
 bin/nifi.sh stop
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091216532553.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091216532553.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091216532553.png" alt=""></p>
 </li>
 <li><p>Start NiFi Server</p>
 <p><code>bin/nifi.sh start</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912170131362.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912170131362.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912170131362.png" alt=""></p>
 </li>
 </ul>
-<h2 id="configuring-kerberos-authentication-within-nifi"><a name="configuring-kerberos-authentication-within-nifi" class="anchor-navigation-ex-anchor" href="#configuring-kerberos-authentication-within-nifi"><i class="fa fa-link" aria-hidden="true"></i></a>Configuring Kerberos authentication within NiFi</h2>
-<h3 id="purpose_1"><a name="purpose_1" class="anchor-navigation-ex-anchor" href="#purpose_1"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="configuring-kerberos-authentication-within-nifi">Configuring Kerberos authentication within NiFi</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring Kerberos authentication within NiFi server for the later connection usage</p>
-<h3 id="prerequisites_1"><a name="prerequisites_1" class="anchor-navigation-ex-anchor" href="#prerequisites_1"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing Apache NiFi completed</p>
 </li>
@@ -944,7 +888,7 @@ bin/nifi.sh stop
 <li><p>Create a developuser for connection</p>
 </li>
 </ul>
-<h3 id="procedure_1"><a name="procedure_1" class="anchor-navigation-ex-anchor" href="#procedure_1"><i class="fa fa-link" aria-hidden="true"></i></a>Procedure</h3>
+<h3 id="procedure">Procedure</h3>
 <ul>
 <li>Download the required Kerberos authentication files <code>user.keytab</code> and <code>krb5.conf</code> from FusionInsight HD Manager site, save the files into the following directory <code>/opt/developuser</code></li>
 </ul>
@@ -954,49 +898,31 @@ bin/nifi.sh stop
 nifi.kerberos.krb5.file=/opt/developuser/krb5.conf
 nifi.kerberos.service.principal=developuser
 nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912171916975.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912171916975.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912171916975.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Enter NiFi Web UI site, right click on canvas and click on <strong>Configure</strong> icon</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt=""></p>
 <p>Click on <strong>plus</strong> icon to add the service</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" alt=""></p>
 <p>Find <code>KeytabCredentialsService</code> and click <strong>ADD</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217444348.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217444348.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217444348.png" alt=""></p>
 <p>Click on <strong>gear</strong> icon to configure</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174747644.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174747644.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217482271.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217482271.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174747644.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091217482271.png" alt=""></p>
 <p>Click on <strong>lightning</strong> icon to enable and save the KeytabCredentialsService</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174904147.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174904147.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175037790.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175037790.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174904147.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175037790.png" alt=""></p>
 </li>
 <li><p>Completed
-     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175122322.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175122322.png" alt="">
-     </a></p>
+<img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175122322.png" alt=""></p>
 </li>
 </ul>
-<h2 id="connecting-nifi-to-hdfs"><a name="connecting-nifi-to-hdfs" class="anchor-navigation-ex-anchor" href="#connecting-nifi-to-hdfs"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting NiFi to HDFS</h2>
-<h3 id="purpose_2"><a name="purpose_2" class="anchor-navigation-ex-anchor" href="#purpose_2"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="connecting-nifi-to-hdfs">Connecting NiFi to HDFS</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring NiFi related HDFS processor to connect FusionInsight HD HDFS</p>
-<h3 id="prerequisites_2"><a name="prerequisites_2" class="anchor-navigation-ex-anchor" href="#prerequisites_2"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing NiFi 1.7.1 completed</p>
 </li>
@@ -1005,7 +931,7 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 <li><p>Configuring Kerberos authentication within NiFi completed</p>
 </li>
 </ul>
-<h3 id="puthdfs-procedure"><a name="puthdfs-procedure" class="anchor-navigation-ex-anchor" href="#puthdfs-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>PutHDFS Procedure</h3>
+<h3 id="puthdfs-procedure">PutHDFS Procedure</h3>
 <ul>
 <li>Find and Copy the <code>hdfs-site.xml</code>&#xFF0C;<code>core-site.xml</code> files which located in FusionInsight HD client to the following directory <code>/usr/nifi/nifi-1.7.1/conf</code></li>
 </ul>
@@ -1025,26 +951,18 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172755668.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172755668.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172755668.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172954559.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172954559.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912172954559.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset
 </code></pre></li>
 <li><p>The configuration of processor <strong>PutHDFS</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181011524.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181011524.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175441819.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175441819.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181011524.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912175441819.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2: Choose KeytabCredentialsService which was completed in previous section
@@ -1053,16 +971,12 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The configuration of the connection between two former processors</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181110245.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181110245.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181110245.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Move the file <code>nifiHDFS.csv</code> into the following directory <code>/home/dataset</code> before test start</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091218142008.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091218142008.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091218142008.png" alt=""></p>
 <p>Content of <code>nifiHDFS.csv</code>&#xFF1A;</p>
 <pre><code>1;EcitQU
 2;Hyy6RC
@@ -1071,29 +985,21 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 5;EU2mVq
 </code></pre></li>
 <li><p>Test completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181628255.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181628255.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181628255.png" alt=""></p>
 <p>Log into FusionInsight HDFS to check the test outcome by using the following command</p>
 <p><code>hdfs dfs -cat /tmp/nifitest/nifiHDFS.csv</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181828621.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181828621.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912181828621.png" alt=""></p>
 </li>
 </ul>
-<h3 id="gethdfs-procedure"><a name="gethdfs-procedure" class="anchor-navigation-ex-anchor" href="#gethdfs-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>GetHDFS Procedure</h3>
+<h3 id="gethdfs-procedure">GetHDFS Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092152648.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092152648.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092152648.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>GetHDFS</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093359126.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093359126.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093359126.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2: Choose KeytabCredentialsService which was completed in previous section
@@ -1102,48 +1008,34 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092500227.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092500227.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092500227.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset/HDFS
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092557712.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092557712.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913092557712.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Move the file <code>nifiHDFS.csv</code> into HDFS directory <code>/tmp/nifitest/HDFS</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093946472.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093946472.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913093946472.png" alt=""></p>
 </li>
 <li><p>Test completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094130431.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094130431.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094130431.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Log into the FusionInsight HD client side to check the outcome with the directory <code>/home/dataset/HDFS</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094327358.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094327358.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913094327358.png" alt=""></p>
 </li>
 </ul>
-<h3 id="listhdfs--fetchhdfs-procedure"><a name="listhdfs--fetchhdfs-procedure" class="anchor-navigation-ex-anchor" href="#listhdfs--fetchhdfs-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>ListHDFS &amp; FetchHDFS Procedure</h3>
+<h3 id="listhdfs--fetchhdfs-procedure">ListHDFS &amp; FetchHDFS Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913101752826.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913101752826.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913101752826.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>ListHDFS</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913102631618.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913102631618.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913102631618.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1. /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2. KeytabCredentialsService
@@ -1152,9 +1044,7 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>RouteOnAttribute</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091310313577.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091310313577.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091310313577.png" alt=""></p>
 <p>Note: Add one customized property <code>requiredfilenames</code> with the value <code>${filename:matches(&apos;sanguo.*&apos;)}</code> by clicking on <strong>plus</strong> icon</p>
 <pre><code>In detail&#xFF1A;
 1. Route to Property name
@@ -1164,21 +1054,15 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The relationship configuration between processor <strong>RouteOnAttribute</strong> and upper processor <strong>FetchHDFS</strong> shown as the following pic</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103920309.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103920309.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103920309.png" alt=""></p>
 </li>
 <li><p>The relationship configuration between processor <strong>RouteOnAttribute</strong> and lower processor <strong>FetchHDFS</strong> shown as the following pic</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103937690.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103937690.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913103937690.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>FetchHDFS</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104044399.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104044399.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104044399.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1. /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2. KeytabCredentialsService
@@ -1186,36 +1070,26 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 </ul>
 <ul>
 <li><p>The configuration of upper processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104357511.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104357511.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104357511.png" alt=""></p>
 </li>
 <li><p>The configuration of lower processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104436582.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104436582.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913104436582.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Check the files on FusionInsight HDFS by executing command <code>hdfs dfs -ls /tmp/nifitest</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105052385.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105052385.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105052385.png" alt=""></p>
 </li>
 <li><p>Test completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105440238.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105440238.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105440238.png" alt=""></p>
 <p>Log into FusionInsight HD client side to check the outcomes separately</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105716184.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105716184.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913105716184.png" alt=""></p>
 </li>
 </ul>
-<h2 id="connecting-nifi-to-hive"><a name="connecting-nifi-to-hive" class="anchor-navigation-ex-anchor" href="#connecting-nifi-to-hive"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting NiFi to Hive</h2>
-<h3 id="purpose_3"><a name="purpose_3" class="anchor-navigation-ex-anchor" href="#purpose_3"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="connecting-nifi-to-hive">Connecting NiFi to Hive</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring NiFi Hive processor to connect FusionInsight HD Hive</p>
-<h3 id="prerequisites_3"><a name="prerequisites_3" class="anchor-navigation-ex-anchor" href="#prerequisites_3"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing NiFi 1.7.1 completed</p>
 </li>
@@ -1224,52 +1098,36 @@ nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
 <li><p>Configuring Kerberos authentication within NiFi completed</p>
 </li>
 </ul>
-<h3 id="hiveconnectionpool-procedure"><a name="hiveconnectionpool-procedure" class="anchor-navigation-ex-anchor" href="#hiveconnectionpool-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>HiveConnectionPool Procedure</h3>
+<h3 id="hiveconnectionpool-procedure">HiveConnectionPool Procedure</h3>
 <ul>
 <li><p>Enter NiFi Web UI site, right click on canvas and click on <strong>Configure</strong> icon</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Click on <strong>plus</strong> icon to add the service</p>
-<p>       <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" alt="">
-     </a></p>
+<p>  <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174226784.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Find <code>HiveConnectionPool</code> and click <strong>ADD</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111208294.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111208294.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111208294.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Click on <strong>gear</strong> icon to configure</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111250616.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111250616.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111431623.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111431623.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111250616.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111431623.png" alt=""></p>
 <pre><code>In detail
 1: jdbc:hive2://172.21.3.103:24002,172.21.3.101:24002,172.21.3.102:24002/;serviceDiscoveryMode=zooKeeper;principal=hive/hadoop.hadoop.com@HADOOP.COM
 2: KeytabCredentialsService
 </code></pre></li>
 <li><p>Click on <strong>lightning</strong> icon to enable and save the HiveConnectionPool</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111645264.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111645264.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111723364.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111723364.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111645264.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111723364.png" alt=""></p>
 </li>
 <li><p>Completed
-     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111757929.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111757929.png" alt="">
-     </a></p>
+<img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913111757929.png" alt=""></p>
 </li>
 </ul>
 <ul>
@@ -1287,18 +1145,14 @@ debug=true;
 </ul>
 <ul>
 <li><p>Make an adjustment to the <code>bootstrap.conf</code> file by executing following command <code>vi /usr/nifi/nifi-1.7.1/conf/bootstrap.conf</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913114735353.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913114735353.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913114735353.png" alt=""></p>
 <pre><code>java.arg.17=-Djava.security.auth.login.config=/usr/nifi/nifi-1.7.1/conf/jaas.conf
 java.arg.18=-Dsun.security.krb5.debug=true
 </code></pre></li>
 </ul>
 <ul>
 <li><p>Make an adjustment to the <code>nifi.properties</code> file by executing following command <code>vi /usr/nifi/nifi-1.7.1/conf/nifi.properties</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913115135676.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913115135676.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913115135676.png" alt=""></p>
 <pre><code>nifi.zookeeper.auth.type=sasl
 nifi.zookeeper.kerberos.removeHostFromPrincipal=true
 nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
@@ -1308,27 +1162,19 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 <li><p>Execute the following command to come into the directory of  NiFi Hive related library
 <code>cd /usr/nifi/nifi-1.7.1/work/nar/extensions/nifi-hive-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code></p>
 <p>Substitute <code>zookeeper-3.5.1.jar</code> which is from FusionInsight HD client side for the original <code>zookeeper-3.4.6.jar</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312062027.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312062027.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312062027.png" alt=""></p>
 </li>
 </ul>
-<h3 id="selecthiveql-read-hive-table-procedure"><a name="selecthiveql-read-hive-table-procedure" class="anchor-navigation-ex-anchor" href="#selecthiveql-read-hive-table-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>SelectHiveQL read Hive table Procedure</h3>
+<h3 id="selecthiveql-read-hive-table-procedure">SelectHiveQL read Hive table Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312072896.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312072896.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312072896.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>SelectHiveQL</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913120825568.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913120825568.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121003311.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121003311.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913120825568.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121003311.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: HiveConnectionPool
 2: select * from default.t2
@@ -1337,40 +1183,28 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121155239.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121155239.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121155239.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Log into FusionInsight cluster to check table <strong>t2</strong> on hive</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312133394.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312133394.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091312133394.png" alt=""></p>
 </li>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121452543.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121452543.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121452543.png" alt=""></p>
 <p>Check the outcome by log into the following directory <code>/home/dataset/HIVE</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121747276.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121747276.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913121747276.png" alt=""></p>
 </li>
 </ul>
-<h3 id="puthiveql-load-whole-table-procedure"><a name="puthiveql-load-whole-table-procedure" class="anchor-navigation-ex-anchor" href="#puthiveql-load-whole-table-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>PutHiveQL load whole table Procedure</h3>
+<h3 id="puthiveql-load-whole-table-procedure">PutHiveQL load whole table Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144112926.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144112926.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144112926.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145536626.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145536626.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145536626.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1&#xFF1A; /home/dataset/
 2: iris.txt
@@ -1389,9 +1223,7 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>PutHDFS</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145851111.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145851111.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145851111.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1&#xFF1A; /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2&#xFF1A; KeytabCredentialsService
@@ -1400,51 +1232,37 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>ReplaceText</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150058238.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150058238.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150058238.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: CREATE TABLE IF NOT EXISTS iris_createdBy_NiFi ( ID string, sepallength FLOAT, sepalwidth FLOAT, petallength FLOAT, petalwidth FLOAT, species string ) ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;,&apos; STORED AS TEXTFILE;LOAD DATA INPATH &quot;hdfs:///tmp/nifitest/loadhive/iris.txt&quot; into table iris_createdBy_NiFi;
 </code></pre></li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>PutHiveQL</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150303396.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150303396.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150303396.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Move the data file <code>iris.txt</code> into the following directory <code>/home/dataset/</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150605645.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150605645.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913150605645.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Completed:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144501255.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144501255.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913144501255.png" alt=""></p>
 <p>Login the HIVE to check the test outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145436548.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145436548.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913145436548.png" alt=""></p>
 </li>
 </ul>
-<h3 id="puthiveql-load-the-table-by-rows-procedure"><a name="puthiveql-load-the-table-by-rows-procedure" class="anchor-navigation-ex-anchor" href="#puthiveql-load-the-table-by-rows-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>PutHiveQL Load the table by rows Procedure</h3>
+<h3 id="puthiveql-load-the-table-by-rows-procedure">PutHiveQL Load the table by rows Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152255705.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152255705.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152255705.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154003755.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154003755.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154003755.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1&#xFF1A; /home/dataset/
 2&#xFF1A; iris_add.txt
@@ -1458,9 +1276,7 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>SplitText</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154219909.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154219909.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154219909.png" alt=""></p>
 </li>
 </ul>
 <ul>
@@ -1468,38 +1284,28 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>ReplaceText</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154421612.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154421612.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154421612.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>PutHiveQL</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154500461.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154500461.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913154500461.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Move the data file <code>iris_add.txt</code> into the following directory <code>/home/dataset/</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152411341.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152411341.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913152411341.png" alt=""></p>
 </li>
 <li><p>Completed&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091315371178.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091315371178.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091315371178.png" alt=""></p>
 <p>Login the HIVE to check the test outcome&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913153858212.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913153858212.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913153858212.png" alt=""></p>
 </li>
 </ul>
-<h2 id="connecting-nifi-to-hbase"><a name="connecting-nifi-to-hbase" class="anchor-navigation-ex-anchor" href="#connecting-nifi-to-hbase"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting NiFi to HBase</h2>
-<h3 id="purpose_4"><a name="purpose_4" class="anchor-navigation-ex-anchor" href="#purpose_4"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="connecting-nifi-to-hbase">Connecting NiFi to HBase</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring NiFi HBase processor to connect FusionInsight HD HBase</p>
-<h3 id="prerequisites_4"><a name="prerequisites_4" class="anchor-navigation-ex-anchor" href="#prerequisites_4"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing NiFi 1.7.1 completed</p>
 </li>
@@ -1508,7 +1314,7 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 <li><p>Configuring Kerberos authentication within NiFi completed</p>
 </li>
 </ul>
-<h3 id="hbase112clientservice-procedure"><a name="hbase112clientservice-procedure" class="anchor-navigation-ex-anchor" href="#hbase112clientservice-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>HBase_1_1_2_ClientService Procedure</h3>
+<h3 id="hbase112clientservice-procedure">HBase_1_1_2_ClientService Procedure</h3>
 <ul>
 <li>Move the hbase related configuration file <code>hbase-site.xml</code> which is within the FusionInsight HD client side into the following directory <code>/usr/nifi/nifi-1.7.1/conf</code></li>
 </ul>
@@ -1516,69 +1322,47 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 <li><p>Execute the following command to come into the directory of  NiFi HBase related library
 <code>cd /usr/nifi/nifi-1.7.1/work/nar/extensions/nifi-hbase_1_1_2-client-service-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code></p>
 <p>Substitute <code>zookeeper-3.5.1.jar</code> which is from FusionInsight HD client side for the original <code>zookeeper-3.4.6.jar</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171320336.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171320336.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171320336.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Enter NiFi Web UI site, right click on canvas and click on <strong>Configure</strong> icon</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Click on <strong>plus</strong> icon to add the service</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160637627.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160637627.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160637627.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Find <code>HBase_1_1_2_ClientService</code> and click <strong>ADD</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160755948.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160755948.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160755948.png" alt=""></p>
 </li>
 <li><p>Click on <strong>gear</strong> icon to configure</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160901190.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160901190.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161005377.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161005377.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913160901190.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161005377.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1&#xFF1A; /usr/nifi/nifi-1.7.1/conf/hbase-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
 2&#xFF1A; KeytabCredentialsService
 </code></pre></li>
 <li><p>Click on <strong>lightining</strong> icon to enable and save the <code>HBase_1_1_2_ClientService</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161345190.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161345190.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161410495.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161410495.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161345190.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161410495.png" alt=""></p>
 </li>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161431790.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161431790.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913161431790.png" alt=""></p>
 </li>
 </ul>
-<h3 id="puthbasejson-load-the-table-procedure"><a name="puthbasejson-load-the-table-procedure" class="anchor-navigation-ex-anchor" href="#puthbasejson-load-the-table-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>PutHBaseJSON load the table Procedure</h3>
+<h3 id="puthbasejson-load-the-table-procedure">PutHBaseJSON load the table Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913170925283.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913170925283.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913170925283.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171543197.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171543197.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171543197.png" alt=""></p>
 <p>Content of <code>hbase_test.csv</code>&#xFF1A;</p>
 <pre><code>1,5.1,3.5,setosa
 2,6.1,3.6,versicolor
@@ -1587,9 +1371,7 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of processor <strong>InverAvroSchema</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171824677.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171824677.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913171824677.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: flowfile-attribute
 2: csv
@@ -1599,30 +1381,22 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>ConvertCSVToAvro</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172037547.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172037547.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172037547.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>ConvertAvroToJSON</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172201962.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172201962.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172201962.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>SplitJson</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172242678.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172242678.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172242678.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>PutHBaseJSON</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172428386.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172428386.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913172428386.png" alt=""></p>
 <pre><code>In detail:
 1: HBase_1_1_2_ClientService
 2: hbase_test
@@ -1632,68 +1406,48 @@ nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
 </ul>
 <ul>
 <li><p>Move the data file <code>hbase_test.csv</code> into the following directory <code>/home/dataset/HBASE</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173017728.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173017728.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173017728.png" alt=""></p>
 <p>In addition, execute following command to create a HBase table</p>
 <pre><code>hbase shell
 create &apos;HBase_test&apos;,&apos;data&apos;
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173220335.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173220335.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173220335.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Completed&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173552752.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173552752.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173552752.png" alt=""></p>
 <p>Login into the FusionInsight HD cluster to check the outcome:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173626203.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173626203.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913173626203.png" alt=""></p>
 </li>
 </ul>
-<h3 id="gethbase-procedure"><a name="gethbase-procedure" class="anchor-navigation-ex-anchor" href="#gethbase-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>GetHbase Procedure</h3>
+<h3 id="gethbase-procedure">GetHbase Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913174304746.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913174304746.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913174304746.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>GetHBase</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913190606193.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913190606193.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913190606193.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191235986.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191235986.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191235986.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913184243562.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913184243562.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913184243562.png" alt=""></p>
 <p>Login into the following directory <code>/home/dataset/GetHBase_test</code> to check the test outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191317245.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191317245.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091319144054.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091319144054.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180913191317245.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091319144054.png" alt=""></p>
 </li>
 </ul>
-<h2 id="connecting-nifi-to-spark"><a name="connecting-nifi-to-spark" class="anchor-navigation-ex-anchor" href="#connecting-nifi-to-spark"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting NiFi to Spark</h2>
-<h3 id="purpose_5"><a name="purpose_5" class="anchor-navigation-ex-anchor" href="#purpose_5"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="connecting-nifi-to-spark">Connecting NiFi to Spark</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring NiFi Livy Session processor to connect FusionInsight HD Spark</p>
-<h3 id="prerequisites_5"><a name="prerequisites_5" class="anchor-navigation-ex-anchor" href="#prerequisites_5"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing NiFi 1.7.1 completed</p>
 </li>
@@ -1707,36 +1461,26 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </blockquote>
 </li>
 </ul>
-<h3 id="livysessioncontroller-procedure"><a name="livysessioncontroller-procedure" class="anchor-navigation-ex-anchor" href="#livysessioncontroller-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>LivySessionController Procedure</h3>
+<h3 id="livysessioncontroller-procedure">LivySessionController Procedure</h3>
 <ul>
 <li><p>Enter NiFi Web UI site, right click on canvas and click on <strong>Configure</strong> icon</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180912174115953.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Click on <strong>plus</strong> icon to add the service</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104314385.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104314385.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104314385.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Find <code>LivySessionController</code> and click <strong>ADD</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104402554.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104402554.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104402554.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>Click on <strong>gear</strong> icon to configure</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104516173.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104516173.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104844258.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104844258.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104516173.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914104844258.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: 172.21.3.43 (host ip for Apache Livy)
 2: 8998 (Livy default port, can be changed)
@@ -1746,25 +1490,17 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </ul>
 <ul>
 <li><p>Click on <strong>plus</strong> icon to add the service</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105344782.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105344782.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105344782.png" alt=""></p>
 </li>
 <li><p>Find <code>LivySessionController</code> and click <strong>ADD</strong></p>
 </li>
 <li><p>Click on <strong>gear</strong> icon to configure</p>
 </li>
 </ul>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105516219.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105516219.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105516219.png" alt=""></p>
 <p>  Change the name of Controller as LivySessionController_PySpark</p>
-<p>       <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105554293.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105554293.png" alt="">
-     </a></p>
-<p>       <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105725237.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105725237.png" alt="">
-     </a></p>
+<p>  <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105554293.png" alt=""></p>
+<p>  <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914105725237.png" alt=""></p>
 <pre><code>  In detail&#xFF1A;
   1: 172.21.3.43 (host ip for Apache Livy)
   2: 8998 (Livy default port, can be changed)
@@ -1778,16 +1514,10 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </ul>
 <ul>
 <li><p>Click on <strong>gear</strong> icon to configure</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110218855.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110218855.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110218855.png" alt=""></p>
 <p>Change the name of Controller as LivySessionController_SparkR</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110258706.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110258706.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411040356.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411040356.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110258706.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411040356.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: 172.21.3.43 (host ip for Apache Livy)
 2: 8998 (Livy default port, can be changed)
@@ -1797,29 +1527,21 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </ul>
 <ul>
 <li><p>Click on <strong>lightining</strong> icon to enable and save the <code>LivySessionController</code>,<code>LivySessionController_PySpark</code>,<code>LivySessionController_SparkR</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110556918.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110556918.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110556918.png" alt=""></p>
 </li>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110811125.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110811125.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914110811125.png" alt=""></p>
 </li>
 </ul>
-<h3 id="spark-sample-procedure"><a name="spark-sample-procedure" class="anchor-navigation-ex-anchor" href="#spark-sample-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>Spark Sample Procedure</h3>
+<h3 id="spark-sample-procedure">Spark Sample Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111127853.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111127853.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111127853.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset/sparkTest
 2: code1.txt
@@ -1828,14 +1550,10 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </code></pre></li>
 <li><p>The configuration of  processor <strong>ExtractText</strong></p>
 <p>Click <strong>plus</strong> icon to add a Property <code>code1</code> with its Value as <code>$</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111426277.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111426277.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914111426277.png" alt=""></p>
 </li>
 <li><p>The configuration of  processor <strong>ExecuteSparkInteractive</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112305396.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112305396.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112305396.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: LivySessionController
 2: ${code1}
@@ -1843,43 +1561,27 @@ create &apos;HBase_test&apos;,&apos;data&apos;
 </ul>
 <ul>
 <li><p>Move the code file <code>code1.txt</code> into the following directory <code>/home/dataset/sparkTest</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112519376.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112519376.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112519376.png" alt=""></p>
 <p>Start the Livy server</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112716361.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112716361.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112911901.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112911901.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112716361.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914112911901.png" alt=""></p>
 </li>
 <li><p>Completed&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113055754.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113055754.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113055754.png" alt=""></p>
 <p>Log into the Livy server to check the outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411321312.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411321312.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113341172.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113341172.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411321312.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113341172.png" alt=""></p>
 </li>
 </ul>
-<h3 id="pyspark-sample-procedure"><a name="pyspark-sample-procedure" class="anchor-navigation-ex-anchor" href="#pyspark-sample-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>PySpark Sample Procedure</h3>
+<h3 id="pyspark-sample-procedure">PySpark Sample Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091411101510.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113725733.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113725733.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914113725733.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset/sparkTest
 2: code2.txt
@@ -1895,53 +1597,37 @@ print &quot;Pi is roughly %f&quot; % (4.0 * count / NUM_SAMPLES)
 </code></pre></li>
 <li><p>The configuration of  processor <strong>ExtractText</strong></p>
 <p>Click <strong>plus</strong> icon to add a Property <code>code2</code> with its Value as <code>$</code></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114234899.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114234899.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114234899.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>ExecuteSparkInteractive</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114342416.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114342416.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114342416.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: LivySessionController_PySpark
 2: ${code2}
 </code></pre></li>
 <li><p>Move the code file <code>code2.txt</code> into the following directory <code>/home/dataset/sparkTest</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114447497.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114447497.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114447497.png" alt=""></p>
 <p>Start the Livy server</p>
 </li>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114625750.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114625750.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114625750.png" alt=""></p>
 <p>Log into the Livy server to check the outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114724621.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114724621.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114751933.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114751933.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114724621.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914114751933.png" alt=""></p>
 </li>
 </ul>
-<h3 id="sparkr-sample-procedure"><a name="sparkr-sample-procedure" class="anchor-navigation-ex-anchor" href="#sparkr-sample-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>SparkR Sample Procedure</h3>
+<h3 id="sparkr-sample-procedure">SparkR Sample Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914141610219.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914141610219.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914141610219.png" alt=""></p>
 <p>Note: It&apos;s different by comparing to example of former Spark and PySpark</p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>GetFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115049131.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115049131.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115049131.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset/sparkTest
 2: code3.txt
@@ -1959,9 +1645,7 @@ cat(&quot;Pi is roughly &quot;,piR(1000000) )
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>ExecuteSparkInteractive</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091414274959.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091414274959.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-2018091414274959.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: /home/dataset/sparkTest
 2: code content of code3.txt
@@ -1969,30 +1653,22 @@ cat(&quot;Pi is roughly &quot;,piR(1000000) )
 </ul>
 <ul>
 <li><p>Move the code file <code>code3.txt</code> into the following directory <code>/home/dataset/sparkTest</code> before test</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115356781.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115356781.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115356781.png" alt=""></p>
 <p>Start the Livy server</p>
 </li>
 </ul>
 <ul>
 <li><p>Completed</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914142925868.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914142925868.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914142925868.png" alt=""></p>
 <p>Log into the Livy server to check the outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115708776.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115708776.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143029264.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143029264.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914115708776.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143029264.png" alt=""></p>
 </li>
 </ul>
-<h2 id="connecting-nifi-to-kafka"><a name="connecting-nifi-to-kafka" class="anchor-navigation-ex-anchor" href="#connecting-nifi-to-kafka"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting NiFi to Kafka</h2>
-<h3 id="purpose_6"><a name="purpose_6" class="anchor-navigation-ex-anchor" href="#purpose_6"><i class="fa fa-link" aria-hidden="true"></i></a>Purpose</h3>
+<h2 id="connecting-nifi-to-kafka">Connecting NiFi to Kafka</h2>
+<h3 id="purpose">Purpose</h3>
 <p>Configuring NiFi Kafka processor to connect FusionInsight HD Kafka</p>
-<h3 id="prerequisites_6"><a name="prerequisites_6" class="anchor-navigation-ex-anchor" href="#prerequisites_6"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li><p>Installing NiFi 1.7.1 completed</p>
 </li>
@@ -2001,25 +1677,19 @@ cat(&quot;Pi is roughly &quot;,piR(1000000) )
 <li><p>Configuring Kerberos authentication within NiFi completed</p>
 </li>
 </ul>
-<h3 id="gethttp--putkafka-procedure"><a name="gethttp--putkafka-procedure" class="anchor-navigation-ex-anchor" href="#gethttp--putkafka-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>GetHTTP &amp; PutKafka Procedure</h3>
+<h3 id="gethttp--putkafka-procedure">GetHTTP &amp; PutKafka Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143620412.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143620412.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143620412.png" alt=""></p>
 </li>
 <li><p>The configuration of  processor <strong>GetHTTP</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143715990.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143715990.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143715990.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1: http://vincentarelbundock.github.io/Rdatasets/csv/datasets/iris.csv
 2: iris.csv
 </code></pre></li>
 <li><p>The configuration of  processor <strong>PutKafka</strong>
-     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143959710.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143959710.png" alt="">
-     </a></p>
+<img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914143959710.png" alt=""></p>
 <pre><code>In detail&#xFF1A;
 1&#xFF1A; 172.21.3.102:21005,172.21.3.101:21005,172.21.3.103:21005
 2&#xFF1A; nifi-kafka-test-demo
@@ -2031,38 +1701,26 @@ cat(&quot;Pi is roughly &quot;,piR(1000000) )
 <p>Log into the Kafka component within FusionInsightHD client side and create a Topic <strong>nifi-kafka-test-demo</strong></p>
 <pre><code>cd /opt/hadoopclient/Kafka/kafka/bin
 kafka-topics.sh --create --topic nifi-kafka-test-demo --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.21.3.103:24002/kafka --partitions 1 --replication-factor 1
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144534988.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144534988.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144534988.png" alt=""></p>
 </li>
 <li><p>Completed&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144743959.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144743959.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144743959.png" alt=""></p>
 <p>Log into the kafka component within FusionInsightHD client side to check the outcome</p>
 <pre><code>cd /opt/hadoopclient/Kafka/kafka/bin
 kafka-console-consumer.sh --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.21.3.103:24002/kafka --topic nifi-kafka-test-demo --from-beginning
-</code></pre><p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144952375.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144952375.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145017685.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145017685.png" alt="">
-     </a></p>
+</code></pre><p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914144952375.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145017685.png" alt=""></p>
 </li>
 </ul>
-<h3 id="consumekafka011-procedure"><a name="consumekafka011-procedure" class="anchor-navigation-ex-anchor" href="#consumekafka011-procedure"><i class="fa fa-link" aria-hidden="true"></i></a>ConsumeKafka_0_11 Procedure</h3>
+<h3 id="consumekafka011-procedure">ConsumeKafka_0_11 Procedure</h3>
 <ul>
 <li><p>The whole process shown as the following pic:</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150029910.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150029910.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150029910.png" alt=""></p>
 </li>
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>ConsumeKafka_0_11</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145920740.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145920740.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914145920740.png" alt=""></p>
 <pre><code>1: 172.21.3.101:21005,172.21.3.102:21005,172.21.3.103:21005
 2: PLAINTEXT
 3: KeytabCredentialsService
@@ -2073,28 +1731,18 @@ kafka-console-consumer.sh --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.
 </ul>
 <ul>
 <li><p>The configuration of  processor <strong>PutFile</strong></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150709577.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150709577.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914150709577.png" alt=""></p>
 </li>
 <li><p>Before test&#xFF1A;</p>
 <p>Open the <code>kafka-examples</code> which provided by FusionInsightHD client in eclipse, configure the <code>kafka-examples</code> so that it can be successfully ran and produce messages to kafka</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151040410.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151040410.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151040410.png" alt=""></p>
 <p>Note: There must be a producer when testing the NiFi ConsumeKafka_0_11 processor, run <code>NewProducer.java</code> within <code>kafka-examples</code> at first and then start to test NiFi ConsumeKafka_0_11</p>
 </li>
 <li><p>Completed&#xFF1A;</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151449716.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151449716.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151449716.png" alt=""></p>
 <p>Log into the follow directory <code>/home/dataset/Kafka</code> to check the test outcome</p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151628975.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151628975.png" alt="">
-     </a></p>
-<p>     <a href="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151713272.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151713272.png" alt="">
-     </a></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151628975.png" alt=""></p>
+<p><img src="assets/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200/markdown-img-paste-20180914151713272.png" alt=""></p>
 </li>
 </ul>
 
@@ -2136,65 +1784,38 @@ kafka-console-consumer.sh --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Apache NiFi","level":"2.2.7","depth":2,"next":{"title":"Primeton MetaCube (TBD)","level":"2.2.8","depth":2,"ref":"","articles":[]},"previous":{"title":"Kettle8.0&8.1 <-> FusionInsight HD V100R002C70SPC100","level":"2.2.6.2","depth":3,"path":"Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"en","gitbook":"*"},"file":{"path":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","mtime":"2018-09-26T06:58:35.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T07:02:33.825Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Apache NiFi","level":"2.2.7","depth":2,"next":{"title":"Primeton MetaCube (TBD)","level":"2.2.8","depth":2,"ref":"","articles":[]},"previous":{"title":"Kettle8.0&8.1 <-> FusionInsight HD V100R002C70SPC100","level":"2.2.6.2","depth":3,"path":"Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","mtime":"2018-09-26T06:58:35.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T07:07:31.068Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
-    <script src="../../gitbook/gitbook.js"></script>
-    <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-download-chapter/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
-    
-        
-        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-baidu-wis/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-fixhead/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
-        
-    
-
     
 
     </body>
