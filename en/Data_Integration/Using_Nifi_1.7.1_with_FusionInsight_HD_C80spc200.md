@@ -8,7 +8,7 @@
 
 ### Purpose
 
-Installing Zepplin0.8.0
+Installing Apache NiFi 1.7.1
 
 ### Prerequisites
 
