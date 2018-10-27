@@ -6,7 +6,7 @@
 >
 >Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200(hive组件)
 >
->注：因为Talend 7.0.1版本bug，HIve组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
+>注：因为Talend 7.0.1版本bug，Hive组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
 
 ## 安装Talend
 
