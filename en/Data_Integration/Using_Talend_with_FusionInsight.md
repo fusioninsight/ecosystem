@@ -1,78 +1,89 @@
-# Talend对接FusionInsight
 
-## 适用场景
+# Connection Instruction between Talend and FusionInsight
 
->Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase组件)
+
+## Succeeded Case
+>Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase Component)
 >
->Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200(hive组件)
+>Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase,Hive)
 >
->注：因为Talend 7.0.1版本bug，HIve组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
+>Note: Because of the version bug of Talend 7.0.1, Hive cannot be successfully connected. Using Talend 6.4.1 for substitution.
 
-## 安装Talend
+## Installing Talend
 
-### 操作场景
-安装Talend 7.0.1
+### Purpose
+Installing Talend 7.0.1
 
 
-### 前提条件
-- 已完成FusionInsight HD客户端的安装(可参考产品文档->应用开发指南->安全模式->配置客户端文件)
+### Prerequisites
 
-### 操作步骤
+- Installing FusionInsight HD cluster and its client completed
 
-- 配置环境变量JAVA_HOME,Path
+### Procedure
+
+
+
+- Configure the JAVA_HOME into Path Environment Variables
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091019055025.png)
 
-- 配置Kerberos认证
-向FusionInsight HD集群管理员获取集群Kerberos的krb5.conf文件,把相应的krb5.conf文件重命名为
-krb5.ini,并放到`C:\ProgramData\Kerberos`目录中，同时将krb5.ini文件放到`C:\Windows`目录下（Talend默认从此目录下查找）
+- Configure Kerberos
+
+  Get kerberos related userkeytab and krb5.conf files by login into the FusionInsight HD manager web UI and put them into the following directory `C:\ProgramData\Kerberos`. In addition, create a new file named krb5.ini with the same content of krb5.conf, put the krb5.ini file into the following directory `C:\Windows`
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910191911976.png)
 
-- 下载TOS并修改TOS启动参数
-在`https://www.talend.com/products/big-data/big-data-open-studio/`下载TOS，创建连接zookeeper的jaas配置文件（如`C:\developuser\jaas.conf`），内容格式如下：
-```
-Client {
-com.sun.security.auth.module.Krb5LoginModule required
-useKeyTab=true
-keyTab="c:/developuser/user.keytab"
-principal="developuser@HADOOP.COM"
-useTicketCache=false
-storeKey=true
-debug=true;
-};
-```
-- 启动TOS_BD，运行TOS_BD-win-x86_64.exe
-  ![](assets/Using_Talend_with_FusionInsight/54f00.png)
-
-  安装必需的第三方库
-
-  ![](assets/Using_Talend_with_FusionInsight/353ca.png)
-
-  ![](assets/Using_Talend_with_FusionInsight/fac07.png)
 
 
-## Talend连接HDFS
+- Download TOS from the following web pages `https://www.talend.com/products/big-data/big-data-open-studio/` , create the jaas.conf file for zookeeper connection with its content shown as follows
 
-### 操作场景
-
-Talend中配置HDFS解析器，对的FI HD HDFS接口
-
-### 前提条件
-
-  - 已经完成Talend 7.0.1的安装
-
-  - 已完成FusionInsight HD和客户端的安装，包含HDFS组件
-
-### HDFS Connection 操作步骤
-
-  - 添加tHDFSConnection组件，配置如下:
-
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910215644294.png)
-
-  具体配置：
   ```
-  1: 选择Cloudera，版本为Cloudera CDH 5.8(YARN mode)
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  keyTab="c:/developuser/user.keytab"
+  principal="developuser@HADOOP.COM"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+- Sart TOS_BD by clicking `TOS_BD-win-x86_64.exe`
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027103716507.png)
+
+  Installing additional Talend Packages
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027103930508.png)
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027104029626.png)
+
+
+
+## Connecting Talend to HDFS
+
+### Purpose
+
+Configuring Talend related HDFS processor to connect FusionInsight HD HDFS
+
+### Prerequisites
+
+  - Installing Talend 7.0.1 completed
+
+  - Installing FusionInsight HD cluster and its client completed
+
+
+### HDFS Connection Procedure
+
+
+  - Add the tHDFSConnection component with its configuration shown as follows:
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027111926482.png)
+
+  In detail：
+  ```
+  1: Cloudera CDH 5.8(YARN mode)
   2: "hdfs://172.21.3.103:25000"
   3: "hdfs/hadoop.hadoop.com@HADOOP.COM"
   4: "developuser"
@@ -80,46 +91,53 @@ Talend中配置HDFS解析器，对的FI HD HDFS接口
   6: "hadoop.security.authentication" ->  "kerberos"
        "hadoop.rpc.protection"          ->  "privacy"
   ```
-  - 测试结果：
+  - Test completed：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910220104867.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027112247960.png)
 
-### HDFS Get 操作步骤  
-  - 整个流程如图所示:
+
+
+### HDFS Get Procedure  
+  - The whole process shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910220302703.png)
 
-  - tHDFSConnection组件配置不变
+  - The configuration of **tHDFSConnection** component does not change
 
-  - tHDFSGet组件配置如下：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091022073497.png)
+  - The configuration of **tHDFSGet** component shown as follows
 
-  注意：测试前在集群HDFS文件系统上 `/tmp/talend_test`路径下已经传入文件`out.csv`，`C:/SOFT`为本地输出文件路径
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027112848678.png)
+
+
+  Note: Put the `out.csv` into the HDFS filesystem with the following directory `/tmp/talend_test`, `C:/SOFT` is the local folder for file output
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910220900887.png)
 
-  - 测试结果：
+  - TEST completed：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910221016973.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027113549569.png)
 
-  到本地路径`C:/SOFT`下查看测试结果
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910221132790.png)
+  Check the test outcome by coming into the local directory `C:/SOFT`
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027113744223.png)
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910221157828.png)
 
-### HDFS Put 操作步骤
+### HDFS Put Procedure
 
-  - 整个流程如图所示:
+  - The whole process shown as the following pic:
 
-  - tHDFSConnection组件配置不变
+  - The configuration of **tHDFSConnection** component does not change
 
-  - tHDFSPut组件配置如下
+  - The configuration of **tHDFSPut** component shown as follows
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091022171376.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027114148747.png)
 
-  注意：测试前在本地目录`C:/SOFT`下创建文件`HDFSPut.txt`, 内容如下：
+
+
+  Note: Before test starts, create `HDFSPut.txt` located at the directory `C:/SOFT` with its content shown as follows
 
   ```
   It is create on local PC.
@@ -127,11 +145,12 @@ Talend中配置HDFS解析器，对的FI HD HDFS接口
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910221936544.png)
 
-  - 测试结果：
+  - Test Completed：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910222014906.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018102711460775.png)
 
-  登录到集群查看测试结果：
+
+  Login into the cluster to check the test outcome:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910222146338.png)
 
@@ -141,29 +160,38 @@ Talend中配置HDFS解析器，对的FI HD HDFS接口
 
 
 
-## Talend连接Hive
 
-### 操作场景
+## Connecting Talend to Hive
 
-Talend中配置JDBC解析器，对的FI HD Hive接口
+### Purpose
 
-### 前提条件
+Configuring Talend related Hive processor to connect FusionInsight HD Hive
 
-- 已经完成Talend 6.4.1的安装
 
-- 已完成FusionInsight HD和客户端的安装，包含Hive组件
+### Prerequisites
 
-### Hive Connection 操作步骤
-  - 对接Hive组件Talend版本需要6.4.1
+- Installing Talend 6.4.1 completed
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910205919526.png)
+- Installing FusionInsight HD cluster and its client completed
 
-  - 整个流程如图所示:
+
+### Hive Connection Procedure
+
+  - The Talend version for Hive connection is 6.4.1
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027141810509.png)
+
+
+  - The whole process shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910210133159.png)
 
-  - tHiveConnection组件配置如下
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910210432946.png)
+
+  - The configuration of **tHiveConnection** component shown as follows
+
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027142536795.png)
+
   ```
   1: Custom-Unsuported
   2: Hive2
@@ -173,34 +201,45 @@ Talend中配置JDBC解析器，对的FI HD Hive接口
   6: "developuser"
   7: ";serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=C:/SOFT/cfg/user.keytab"
   ```
-  注意：需要点击Distritution旁边的按钮来导入FusionInsight HD客户端Hive样例代码中的所有jar包，如果还有缺失的jar包，可用Talend自带的类库进行自动补全，或者也可以手动导入
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091021135320.png)
 
-  - 测试结果：
+  Note: Need to click the button which besides the **Distribution** to import the required jar files of FusionInsight HD. If there still need to add extra jar files, you can complete this step either by Talend itself or manully add these jar files.
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910211537856.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027143157715.png)
 
-### Hive Create Table & Load 操作步骤
-  - tHiveConnection组件配置保持不变
 
-  - tHiveCreateTable组件配置如下
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212248165.png)
+  - Test Completed：
 
-  注意：需要点击编辑架构旁边的按钮来配置需要导入hive表的结构
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027143538549.png)
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212352556.png)
+### Hive Create Table & Load Procedure
 
-  - tHiveCreateTable组件配置如下：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212551764.png)
+  - The configuration of **tHiveConnection** component does not change
 
-  注意：提前需要向hdfs文件存储系统`/tmp/talend_test/`路径下传入文件`out.csv`
+  - The configuration of **tHiveCreateTable** component shown as follows
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027144138537.png)
+
+
+  Note: It is required to **Edit schema** of the table
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018102714423808.png)
+
+
+  - The configuration of **tHiveLoad** component shown as follows
+
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027144612401.png)
+
+
+  Note: Before test starts, the file `out.csv` need to be uploaded into the hdfs filesystem directory `/tmp/talend_test/`
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212755601.png)
 
-  `out.csv`文件内容如下：
+  The content of `out.csv` shown as follows
+  ：
   ```
   1;EcitQU
   2;Hyy6RC
@@ -211,84 +250,102 @@ Talend中配置JDBC解析器，对的FI HD Hive接口
 
 
 
-  - tHiveClose组件配置如下:
+  - The configuration of **tHiveClose** component shown as follows
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212946615.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027144750903.png)
 
-  - 测试结果：
+  - Test Completed：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910213034312.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027144955115.png)
 
-  在集群上检查传入的表`createdTableTalend`
+
+  Check the table `createdTableTalend` by login into the cluster
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910213430414.png)
 
 
-### Hive Input 操作步骤
-  - 整个流程如图所示:
+### Hive Input Procedure
+
+
+  - The whole process shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910213731636.png)
 
-  - tHiveConnection组件配置保持不变
+  - The configuration of **tHiveConnection** component does not change
 
-  - tHiveInput组件配置如下：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910213852739.png)
+  - The configuration of **tHiveInput** component shown as follows
 
-  注意：需要点击编辑架构旁边的按钮来配置hive表的结构
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027145453118.png)
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091021394894.png)
 
-  - tLogRow组件使用默认配置
 
-  - tHiveClose组件配置如下
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910214111930.png)
+  Note: It is required to **Edit schema** of the hive talbe
 
-  - 测试结果：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910214209444.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027145630808.png)
 
-### Hive Row 操作步骤
 
-  - 整个流程如图所示:
+  - The configuration of **tLogRow** keeps by default
+
+  - The configuration of **tHiveClose** component shown as follows
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027145824481.png)
+
+  - Test Completed：
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027150004526.png)
+
+### Hive Row Procedure
+
+  - The whole process shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091021431317.png)
 
-  - tHiveConnection组件配置保持不变
 
-  - tHiveRow组件配置如下
+  - The configuration of **tHiveConnection** component does not change
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910214413779.png)
 
-  注意：需要点击编辑架构旁边的按钮来配置hive表的结构
+  - The configuration of **tHiveRow** component shown as follows
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091021452584.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027150354934.png)
 
-  - 测试结果：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910214636560.png)
+  Note: It is required to **Edit schema** of hive table
 
-  连接到集群查看测试结果
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027150458443.png)
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910214724875.png)
 
-## Talend连接HBase
+  - Test Completed：
 
-### 操作场景
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027150645583.png)
 
-Talend中配置HBase解析器，对的FI HD HBase接口
 
-### 前提条件
+  Check the cluster outcome by login into the FusionInsight Cluster
 
-- 已经完成Talend 7.0.1的安装
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027150815520.png)
 
-- 已完成FusionInsight HD和客户端的安装，包含HBase组件
+## Connecting Talend to HBase
 
-### HBase Connection 操作步骤
-  - 整个流程如图所示:
+### Purpose
+
+Configuring Talend related HBase processor to connect FusionInsight HD HBase
+
+### Prerequisites
+
+- Installing Talend 7.0.1 completed
+
+- Installing FusionInsight HD cluster and its client completed
+
+### HBase Connection Procedure
+
+  - The whole process shown as the following pic:
+
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091210512971.png)
-  - 用eclipse导出FusionInsight HD客户端中Hbase样例代码中的LoginUtil类（样例代码路径如`C:\FusionInsightHD\FusionInsight_Services_ClientConfig\HBase\hbase-example`）
+
+
+  - Using **eclipse** to export the **LoginUtil** which from HBase sample project code of FusionInsight HD client (Sample project code in this time can be found by following directory `C:\FusionInsightHD\FusionInsight_Services_ClientConfig\HBase\hbase-example`)
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091019371235.png)
 
@@ -296,33 +353,42 @@ Talend中配置HBase解析器，对的FI HD HBase接口
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910194042337.png)
 
-  - 在Talend里插入tHbaseConnection组件，点击组件进行设置
+
+  - Find the **tHbaseConnection** component by Palette
 
     ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910194309989.png)
 
-  - 首先点击tHBaseConnection图标下面的组件按钮，选择版本为`Custom - Unsupported`和`Hadoop 2`，再点击版本旁边的按钮导入jar包，需要导入的是上一步导出的hbase_loginUtil.jar以及FusionInsight HD客户端中Hbase样例代码`hbase-example`中引用的所有jar包，如果还有缺失的jar包，可用Talend自带的类库进行自动补全，或者也可以手动导入
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910195417607.png)
 
-  `hbase-example`样例代码中lib目录下所有的jar包如下：
+  - The configuration of **tHbaseConnection** shown as folloing pic:
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910195736840.png)
+  Note: It is required to import the jar files of HBase sample project and the exported  **hbase_loginUtil.jar**
 
-  - 使用tLibraryLoad组件导入hbase_loginUtil.jar
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910200204792.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027155307109.png)
 
-  点击 `Advanced settings`在Import中增加`import com.huawei.hadoop.security.LoginUtil;`
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027155451471.png)
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091020034718.png)
+  `hbase-example` required jar faile can be located by the following directory `C:\FusionInsight_Services_ClientConfig\HBase\FusionInsight-HBase-1.0.2.tar.gz\hbase\lib`
 
-  - tHBaseConnection配置如下:
-    ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910201017467.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027153644203.png)
 
-  - 引入tJava组件用定制代码替代Connection组件
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910201240407.png)
 
-  代码内容如下：
-```
+  - The configuration of **tLibraryLoad** shown as folloing pic:
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027154254960.png)
+
+
+  Click on `Advanced settings` and add the java code `import com.huawei.hadoop.security.LoginUtil;` shown as follows:
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027155002101.png)
+
+
+  - Use **tJava** component to customize the **tHBaseConnection** component
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018102716005417.png)
+
+  The content of the Java code shown as follows：
+  ```
   org.apache.hadoop.conf.Configuration conf = org.apache.hadoop.hbase.HBaseConfiguration.create();
 
   System.setProperty("java.security.krb5.conf", "C:\\developuser\\krb5.conf");
@@ -343,25 +409,27 @@ Talend中配置HBase解析器，对的FI HD HBase接口
   LoginUtil.login("developuser", "C:/developuser/user.keytab", "C:/developuser/krb5.conf", conf);
 
   globalMap.put("conn_tHbaseConnection_1", conf);
-```
-  - 测试结果
+  ```
+  - Test Completed
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910201800687.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027160217311.png)
 
-### HBase Input Output 操作步骤
-  - 整个流程如图所示:
+### HBase Input Output Procedure
+  - The content of the Java code shown as follows：
 
     ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910202047622.png)
 
-  - tLibraryLoad，tHBaseConnection，tJava配置不变
+  - The configuration of **tLibraryLoad**，**tHBaseConnection**，**tJava**, **tHBaseClose** do not change
 
-  - 加入tFileInputDelimited组件配置如下：
 
-    注意需要点击编辑架构旁边的按钮，根据需要存入文件(out.csv)的格式定义列和类型
 
-    ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910202521764.png)
+  - The configuration of **tFileInputDelimited** shown as folloing pic:
 
-    `out.csv`测试数据如下：
+    Note: It is required to **Edit schema** of `out.csv`
+
+    ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027161437375.png)
+
+    The content of `out.csv` shown as follows:
     ```
     1;EcitQU
     2;Hyy6RC
@@ -369,26 +437,37 @@ Talend中配置HBase解析器，对的FI HD HBase接口
     4;R9fex9
     5;EU2mVq
     ```
-  - 加入tHBaseOutput组件配置如下：
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203656130.png)
+  - The configuration of **tHBaseOutput** shown as folloing pic:
 
-  注意需要点击编辑架构旁边的按钮编辑表的架构：
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027161745118.png)
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203133199.png)
 
-  - tHBaseInput组件配置如下，需要注意的是同样需要点击编辑架构旁边的按钮配置表的结构
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203818161.png)
 
-  - tLogRow组件使用默认配置
 
-  - 测试结果
+  Note: It is required to **Edit Schema** of table:
 
-  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910204213486.png)
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027162050223.png)
 
-  检查集群创建的HBase表`hbaseInputOutputTest`
 
-  在集群上使用代码
+
+
+  - The configuration of **tHBaseInput** shown as folloing pic:
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027162342379.png)
+
+
+
+  - The configuration of **tLogRow** keeps by default
+
+  - Test Completed:
+
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027163025959.png)
+
+
+
+  Login into the FusinInsight HD cluster and check the HBase table `hbaseInputOutputTest` by using following comands:
+
   ```
   hbase shell
   scan 'hbaseInputOutputTest'
