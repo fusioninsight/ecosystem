@@ -29,7 +29,7 @@ Installing Talend 7.0.1
 
 - Configure Kerberos
 
-  Get kerberos related userkeytab and krb5.conf files by login into the FusionInsight HD manager web UI and put them into the following directory `C:\ProgramData\Kerberos`. In addition, create a new file named krb5.ini with the same content of krb5.conf, put the krb5.ini file into the following directory `C:\Windows`
+  Get Kerberos related userkeytab and krb5.conf files by login into the FusionInsight HD manager web UI and put them into the following directory `C:\ProgramData\Kerberos`. In addition, create a new file named krb5.ini with the same content of krb5.conf, put the krb5.ini file into the following directory `C:\Windows`
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910191911976.png)
 
@@ -203,7 +203,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
   ```
 
 
-  Note: Need to click the button which besides the **Distribution** to import the required jar files of FusionInsight HD. If there still need to add extra jar files, you can complete this step either by Talend itself or manully add these jar files.
+  Note: Need to click the button which besides the **Distribution** to import the required jar files of FusionInsight HD. If there still need to add extra jar files, you can complete this step either by Talend itself or manually add these jar files.
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027143157715.png)
 
@@ -281,7 +281,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
 
 
 
-  Note: It is required to **Edit schema** of the hive talbe
+  Note: It is required to **Edit schema** of the hive table
 
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027145630808.png)
@@ -360,7 +360,7 @@ Configuring Talend related HBase processor to connect FusionInsight HD HBase
 
 
 
-  - The configuration of **tHbaseConnection** shown as folloing pic:
+  - The configuration of **tHbaseConnection** shown as following pic:
 
   Note: It is required to import the jar files of HBase sample project and the exported  **hbase_loginUtil.jar**
 
@@ -423,7 +423,7 @@ Configuring Talend related HBase processor to connect FusionInsight HD HBase
 
 
 
-  - The configuration of **tFileInputDelimited** shown as folloing pic:
+  - The configuration of **tFileInputDelimited** shown as following pic:
 
     Note: It is required to **Edit schema** of `out.csv`
 
