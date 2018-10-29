@@ -98,7 +98,7 @@ Configuring Talend related HDFS processor to connect FusionInsight HD HDFS
 
 
 ### HDFS Get Procedure  
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910220302703.png)
 
@@ -127,7 +127,7 @@ Configuring Talend related HDFS processor to connect FusionInsight HD HDFS
 
 ### HDFS Put Procedure
 
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   - The configuration of **tHDFSConnection** component does not change
 
@@ -137,10 +137,10 @@ Configuring Talend related HDFS processor to connect FusionInsight HD HDFS
 
 
 
-  Note: Before test starts, create `HDFSPut.txt` located at the directory `C:/SOFT` with its content shown as follows
+  Note: Before the test starts, create `HDFSPut.txt` located at the directory `C:/SOFT` with its content shown as follows
 
   ```
-  It is create on local PC.
+  It is created on a local PC.
   ```
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910221936544.png)
@@ -182,7 +182,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027141810509.png)
 
 
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910210133159.png)
 
@@ -234,7 +234,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027144612401.png)
 
 
-  Note: Before test starts, the file `out.csv` need to be uploaded into the hdfs filesystem directory `/tmp/talend_test/`
+  Note: Before the test starts, the file `out.csv` need to be uploaded into the hdfs filesystem directory `/tmp/talend_test/`
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212755601.png)
 
@@ -267,7 +267,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
 ### Hive Input Procedure
 
 
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910213731636.png)
 
@@ -299,7 +299,7 @@ Configuring Talend related Hive processor to connect FusionInsight HD Hive
 
 ### Hive Row Procedure
 
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091021431317.png)
 
@@ -340,7 +340,7 @@ Configuring Talend related HBase processor to connect FusionInsight HD HBase
 
 ### HBase Connection Procedure
 
-  - The whole process shown as the following pic:
+  - The whole process is shown as the following pic:
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-2018091210512971.png)
 
@@ -360,7 +360,7 @@ Configuring Talend related HBase processor to connect FusionInsight HD HBase
 
 
 
-  - The configuration of **tHbaseConnection** shown as following pic:
+  - The configuration of **tHbaseConnection** shown as the following pic:
 
   Note: It is required to import the jar files of HBase sample project and the exported  **hbase_loginUtil.jar**
 
