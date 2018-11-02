@@ -439,7 +439,13 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td >　</td>
   <td >　</td>
+<<<<<<< HEAD
   <td >kafka</td>
+=======
+  <td ><a
+  href="Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-kafka ">kafka</span></a></td>
+>>>>>>> 5507f7311476e8adb75767f0517f368010353d51
  </tr>
  <tr>
   <td >普元元数据管理</td>
@@ -756,15 +762,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td >0.196</td>
+  <td >0.210</td>
   <td >　</td>
   <td >　</td>
   <td >　</td>
   <td ><u style='visibility:hidden;mso-ignore:visibility'>　</u></td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md"><span
+  href="SQL_Analytics_Engine/Using_Presto0.210_with_FusionInsight_HD_C80SPC200.md"><span
   class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
+  class="label label-Hive ">Hive</span></br><span
+  class="label label-ES ">ES</span></a></td>
  </tr>
  <tr>
   <td >0.210</td>
