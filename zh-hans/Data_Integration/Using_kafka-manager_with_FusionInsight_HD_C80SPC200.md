@@ -108,6 +108,7 @@
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/007.png)
 
  * 在Topic->Create菜单栏可以创建新的topic
+ 
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/008.png)
 
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/009.png)
