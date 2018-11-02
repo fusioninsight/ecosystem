@@ -442,7 +442,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><a
   href="Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md"><span
   class="label label-kafka ">kafka</span></a></td>
->>>>>>> 5507f7311476e8adb75767f0517f368010353d51
  </tr>
  <tr>
   <td >普元元数据管理</td>
