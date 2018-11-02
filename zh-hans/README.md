@@ -232,7 +232,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=17 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
+  <td rowspan=18 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -431,6 +431,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
     Hive</td>
   <td >　</td>
   <td >　</td>
+ </tr>
+ <tr>
+  <td >kafka-manager</td>
+  <td >1.3.3.21</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >kafka</td>
  </tr>
  <tr>
   <td >普元元数据管理</td>
