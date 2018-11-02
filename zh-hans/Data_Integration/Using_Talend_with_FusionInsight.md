@@ -6,7 +6,7 @@
 >
 >Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200(hive组件)
 >
->注：因为Talend 7.0.1版本bug，HIve组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
+>注：因为Talend 7.0.1版本bug，Hive组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
 
 ## 安装Talend
 
@@ -192,7 +192,7 @@ Talend中配置JDBC解析器，对的FI HD Hive接口
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212352556.png)
 
-  - tHiveCreateTable组件配置如下：
+  - tHiveLoad组件配置如下：
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910212551764.png)
 
@@ -309,6 +309,7 @@ Talend中配置HBase解析器，对的FI HD HBase接口
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910195736840.png)
 
   - 使用tLibraryLoad组件导入hbase_loginUtil.jar
+
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910200204792.png)
 
   点击 `Advanced settings`在Import中增加`import com.huawei.hadoop.security.LoginUtil;`
@@ -319,6 +320,7 @@ Talend中配置HBase解析器，对的FI HD HBase接口
     ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910201017467.png)
 
   - 引入tJava组件用定制代码替代Connection组件
+
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910201240407.png)
 
   代码内容如下：
@@ -373,11 +375,14 @@ Talend中配置HBase解析器，对的FI HD HBase接口
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203656130.png)
 
+  ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20181027161852484.png)
+
   注意需要点击编辑架构旁边的按钮编辑表的架构：
 
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203133199.png)
 
   - tHBaseInput组件配置如下，需要注意的是同样需要点击编辑架构旁边的按钮配置表的结构
+
   ![](assets/Using_Talend_with_FusionInsight/markdown-img-paste-20180910203818161.png)
 
   - tLogRow组件使用默认配置
