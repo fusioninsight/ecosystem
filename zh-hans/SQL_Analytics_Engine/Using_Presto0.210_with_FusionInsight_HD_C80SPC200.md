@@ -14,11 +14,7 @@
 
   ![](assets/Using_Presto0.184_with_FusionInsight_HD_C70SPC100/ce7a2.png)
 
-<<<<<<< HEAD
 ## 获取并配置presto server
-=======
-## 配置Hive Connector
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
   Presto集群包括coordinator节点和不限数量的worker节点(coordinator节点也可同时为worker节点)，其中只需要在coordinator节点上配置Hive Connector即可。
   本文档中配置coordinator节点同时也是worker节点。
 
@@ -30,11 +26,7 @@
 
   * 在presto节点上安装华为FusionInsight HD V100R002C80SPC200的客户端，默认安装目录`/opt/hadoopclient`
 
-<<<<<<< HEAD
   * presto-0.210版本要求jdk至少在1.8u60+以上，修改`/etc/profile`文件方式配置系统默认的java为FusionInsight HD客户端的jdk，并source环境变量，命令参考如下
-=======
-  * presto该0.210版本要求jdk至少在1.8u60+以上，修改`/etc/profile`文件方式配置系统默认的java为FusionInsight HD客户端的jdk，并source环境变量，命令参考如下
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 
     在`/etc/profile`中增加以下行
     ```
@@ -51,11 +43,7 @@
   * 创建Java keystore File for TLS，(后续步骤默认都在presto节点上执行)参考如下命令
     ```
     source /opt/hadoopclient/bigdata_env
-<<<<<<< HEAD
     keytool -genkeypair -alias testuser -keyalg RSA –keystore /opt/presto.jks
-=======
-    keytool –genkeypair –alias testuser –keyalg RSA –keystore /opt/presto.jks
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
     ```
 
     > alias后的值必须要跟后面创建的用户名称一致
@@ -64,11 +52,7 @@
 
     ![](assets/Using_Presto0.210_with_FusionInsight_HD_C80SPC200/image001.png)
 
-<<<<<<< HEAD
   * 通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户testuser，并根据业务需求选择用户组(hadoop和hive组)，下载对应的秘钥文件user.keytab以及krb5.conf文件，并上传到presto节点的`/opt/hadoopclient`目录下，将user.keytab改名为testuser.keytab。
-=======
-  * 通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户testuser，并选择hadoop和hive用户组，下载对应的秘钥文件user.keytab以及krb5.conf文件，并上传到presto节点的`/opt/hadoopclient`目录下，将user.keytab改名为testuser.keytab。
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 
   * 参考如下命令在Huawei FusionInsight HD的Kerberos中创建一个新的principal，其名称为“testuser/presto-server”，其中presto-server为presto的coordinator节点的主机名，导出该principal的秘钥文件为`/opt/presto.keytab`。
 
@@ -122,29 +106,8 @@
     com.facebook.presto=INFO
     ```
 
-<<<<<<< HEAD
 
   * 创建目录/opt/presto-server-0.210/etc/catalog,将FusionInsight HD客户端中的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.210/etc/catalog`中
-=======
-  * 创建目录/opt/presto-server-0.210/etc/catalog，在该目录下创建hive.properties文件
-    ```
-    connector.name=hive-hadoop2
-    hive.metastore.uri=thrift://172.21.3.115:21088,thrift://172.21.3.116:21088
-    hive.metastore.service.principal=hive/hadoop.hadoop.com@HADOOP.COM
-    hive.metastore.authentication.type=KERBEROS
-    hive.metastore.client.principal=testuser/presto-server
-    hive.metastore.client.keytab=/opt/presto.keytab
-    hive.hdfs.authentication.type=KERBEROS
-    hive.hdfs.impersonation.enabled=false
-    hive.hdfs.presto.principal=testuser
-    hive.hdfs.presto.keytab=/opt/hadoopclient/testuser.keytab
-    hive.config.resources=/opt/presto-server-0.210/etc/catalog/core-site.xml,/opt/presto-server-0.210/etc/catalog/hdfs-site.xml
-    ```
-
-    > 其中hive.metastore.uri的值从/opt/hadoopclient/Hive/config/hive-site.xml中查找
-
-  * 将FusionInsight HD客户端中的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.210/etc/catalog`中
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 
     ```
     cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.210/etc/catalog/
@@ -190,7 +153,6 @@
     git checkout 0.210
     ```
 
-<<<<<<< HEAD
     ## 获取Presto CLI启动包
 
         使用Presto CLI连接Huawei FusionInsight HD的Hive，使用presto自带的命令行工具执行SQL语句。
@@ -233,8 +195,6 @@
 
   > 其中hive.metastore.uri的值从/opt/hadoopclient/Hive/config/hive-site.xml中查找
 
-=======
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
   * 修改presto-hive/src/main/java/com/facebook/presto/hive/authentication/KerberosHiveMetastoreAuthentication.java的代码，将代码中"Sasl.QOP"的值修改为固定的"auth-conf"
 
     ![](assets/Using_Presto0.210_with_FusionInsight_HD_C80SPC200/image005.png)
@@ -255,7 +215,6 @@
 
 ## 通过Presto CLI连接Hive
 
-<<<<<<< HEAD
   * 进入Presto CLI启动包所在目录，例如/opt，创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
   ```
   ./presto210 \
@@ -270,43 +229,6 @@
   --schema default \
   --;
   ```
-=======
-  使用Presto CLI连接Huawei FusionInsight HD的Hive，使用presto自带的命令行工具执行SQL语句。
-
-  * 通过如下链接下载presto cli启动的jar包
-
-    <https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.210/presto-cli-0.210-executable.jar>
-
-  * 并将该jar包上传到可与presto节点网络互通的节点上(也可将presto coordinator节点作为cli使用节点)。
-
-  * 配置cli节点的jdk为1.8u60+以上版本
-
-  * 配置cli节点的/etc/hosts文件，将FI集群和presto coordinator节点的IP与主机名关系配置到cli节点
-
-  * 从presto节点拷贝presto.jks、presto.keytab、krb5.conf以及连接HDFS所需的core-site.xml和hdfs-site.xml文件到cli节点
-
-  * 将presto-cli-0.210-executable.jar包改为可执行文件
-    ```
-    mv presto-cli-0.184-executable.jar presto
-    chmod u+x presto
-    ./presto -h
-    ```
-
-  * 创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
-    ```
-    ./presto \
-    --server https://presto-server:7778 \
-    --enable-authentication \
-    --krb5-config-path /opt/hadoopclient/krb5.conf \
-    --krb5-principal testuser/presto-server \
-    --krb5-keytab-path /opt/presto.keytab \
-    --krb5-remote-service-name testuser \
-    --keystore-path /opt/presto.jks \
-    --keystore-password Huawei@123 \
-    --catalog hive \
-    --schema default \
-    ```
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 
     > catalog后面的hive是和presto coordinator节点配置的hive.properties的文件名匹配的，如果hive.properties改名为hivetest.properties，则这里改为hivetest
 
@@ -460,7 +382,6 @@
     其中'elasticsearch.cluster.name'是刚才获取的ES集群的名字，'elasticsearch.transport.hosts'为EsNode节点IP，端口为'TRANSPORT_TCP_PORT'
 
   * 重启presto-server
-<<<<<<< HEAD
   ```
   sh /opt/presto-server-0.210/bin/launcher restart
   ```
@@ -486,30 +407,6 @@
     > catalog后面的es是和presto coordinator节点配置的es.properties的文件名匹配
 
   * 通过cli执行SQL语句查询ES中的索引信息
-=======
-  *
-
-## 通过Presto CLI连接ElasticSearch
-
-* 创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
-  ```
-  ./presto \
-  --server https://presto-server:7778 \
-  --enable-authentication \
-  --krb5-config-path /opt/hadoopclient/krb5.conf \
-  --krb5-principal testuser/presto-server \
-  --krb5-keytab-path /opt/presto.keytab \
-  --krb5-remote-service-name testuser \
-  --keystore-path /opt/presto.jks \
-  --keystore-password Huawei@123 \
-  --catalog es \
-  --schema default \
-  ```
-
-  > catalog后面的es是和presto coordinator节点配置的es.properties的文件名匹配
-
-* 通过cli执行SQL语句查询ES中的索引信息
->>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 
     ![](assets/Using_Presto0.210_with_FusionInsight_HD_C80SPC200/image010.png)
 
