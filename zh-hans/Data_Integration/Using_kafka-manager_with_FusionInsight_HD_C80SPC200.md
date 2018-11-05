@@ -42,15 +42,13 @@
     ```
       kafka-manager.zkhosts="172.21.3.115:24002"
     ```
-    - 新建conf/jaas.conf文件，配置如下,其中：
-      - keyTab为kafka用户的keytab文件路径;
-      - principal为kafka用户的principal
-      ```
+    - 新建conf/jaas.conf文件，配置如下：
+    ```
       Client {
       com.sun.security.auth.module.Krb5LoginModule required
       useKeyTab=true
-      keyTab="/opt/hadoopclient/kafkauser.keytab"
-      principal="kafkauser/hadoop.hadoop.com@HADOOP.COM"
+      keyTab="/opt/hadoopclient/kafka.keytab"
+      principal="kafka/hadoop.hadoop.com@HADOOP.COM"
       storeKey=true
       useTicketCache=false;
       };
@@ -58,12 +56,12 @@
       KafkaClient {
       com.sun.security.auth.module.Krb5LoginModule required
       useKeyTab=true
-      keyTab="/opt/hadoopclient/kafkauser.keytab"
-      principal="kafkauser/hadoop.hadoop.com@HADOOP.COM"
+      keyTab="/opt/hadoopclient/kafka.keytab"
+      principal="kafka/hadoop.hadoop.com@HADOOP.COM"
       storeKey=true
       useTicketCache=false;
       };
-      ```
+    ```
 
   * 将kafka-manager的lib库中zookeeper的jar包替换为FusionInsight客户端中zookeeper的jar包,并重命名
     ```
@@ -108,7 +106,7 @@
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/007.png)
 
  * 在Topic->Create菜单栏可以创建新的topic
- 
+
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/008.png)
 
     ![](assets/Using_kafka-manager_with_FusionInsight_HD_C80SPC200/009.png)

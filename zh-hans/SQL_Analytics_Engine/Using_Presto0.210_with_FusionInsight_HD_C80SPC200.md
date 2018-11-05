@@ -377,7 +377,9 @@
     其中'elasticsearch.cluster.name'是刚才获取的ES集群的名字，'elasticsearch.transport.hosts'为EsNode节点IP，端口为'TRANSPORT_TCP_PORT'
 
   * 重启presto-server
-  *
+  ```
+  sh /opt/presto-server-0.210/bin/launcher restart
+  ```
 
 ## 通过Presto CLI连接ElasticSearch
 
