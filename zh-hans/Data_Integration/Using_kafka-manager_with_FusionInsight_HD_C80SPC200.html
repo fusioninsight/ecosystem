@@ -950,6 +950,7 @@
 <ul>
 <li>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;conf/application.conf,&apos;kafka-manager.zkhosts&apos;&#x4FEE;&#x6539;&#x4E3A;zookeeper&#x96C6;&#x7FA4;&#x8282;&#x70B9;IP:&#x7AEF;&#x53E3;,FI&#x96C6;&#x7FA4;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;24002<pre><code>kafka-manager.zkhosts=&quot;172.21.3.115:24002&quot;
 </code></pre></li>
+<<<<<<< HEAD
 <li><p>&#x65B0;&#x5EFA;conf/jaas.conf&#x6587;&#x4EF6;&#xFF0C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>Client {
 com.sun.security.auth.module.Krb5LoginModule required
@@ -969,6 +970,32 @@ storeKey=true
 useTicketCache=false;
 };
 </code></pre></li>
+=======
+<li><p>&#x65B0;&#x5EFA;conf/jaas.conf&#x6587;&#x4EF6;&#xFF0C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;,&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>keyTab&#x4E3A;kafka&#x7528;&#x6237;&#x7684;keytab&#x6587;&#x4EF6;&#x8DEF;&#x5F84;;</li>
+<li>principal&#x4E3A;kafka&#x7528;&#x6237;&#x7684;principal
+```
+Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/hadoopclient/kafkauser.keytab&quot;
+principal=&quot;kafkauser/hadoop.hadoop.com@HADOOP.COM&quot;
+storeKey=true
+useTicketCache=false;
+};</li>
+</ul>
+<p>KafkaClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/hadoopclient/kafkauser.keytab&quot;
+principal=&quot;kafkauser/hadoop.hadoop.com@HADOOP.COM&quot;
+storeKey=true
+useTicketCache=false;
+};
+```</p>
+</li>
+>>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
 </ul>
 </li>
 <li><p>&#x5C06;kafka-manager&#x7684;lib&#x5E93;&#x4E2D;zookeeper&#x7684;jar&#x5305;&#x66FF;&#x6362;&#x4E3A;FusionInsight&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;zookeeper&#x7684;jar&#x5305;,&#x5E76;&#x91CD;&#x547D;&#x540D;</p>
@@ -1076,7 +1103,11 @@ nohup bin/kafka-manager -Dconfig.file=conf/application.conf -Djava.security.auth
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
+<<<<<<< HEAD
             gitbook.page.hasChanged({"page":{"title":"对接Kafka-manager","level":"2.2.8","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.9","depth":2,"ref":"","articles":[]},"previous":{"title":"对接Apache NiFi","level":"2.2.7","depth":2,"path":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","ref":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","mtime":"2018-11-05T08:46:34.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-05T08:49:56.260Z"},"basePath":"..","book":{"language":"zh-hans"}});
+=======
+            gitbook.page.hasChanged({"page":{"title":"对接Kafka-manager","level":"2.2.8","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.9","depth":2,"ref":"","articles":[]},"previous":{"title":"对接Apache NiFi","level":"2.2.7","depth":2,"path":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","ref":"Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","mtime":"2018-11-02T08:52:56.842Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T09:06:39.719Z"},"basePath":"..","book":{"language":"zh-hans"}});
+>>>>>>> 90051fdb395e29e3a933d5bcd4847578fb60eda3
         });
     </script>
 </div>
