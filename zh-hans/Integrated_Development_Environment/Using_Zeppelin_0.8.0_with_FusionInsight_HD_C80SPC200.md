@@ -540,3 +540,156 @@ Zeppelin中配置Livy解析器，连接Livy
   hello("livy")
   ```
   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/0b7fb.png)  
+
+## Zeppelin连接FusionInsight Elk
+### 操作场景
+Zeppelin中配置JDBC解析器，连接FusionInsight Elk
+
+### 前提条件
+
+- 完成Zeppelin0.8.0的安装；
+- 已完成FusionInsight HD和客户端的安装，包含Elk组件。
+
+### 操作步骤
+- 第一步： 后台登录FusionInsight Elk, 创建登录用户， 分配用户权限， 创建数据库， 测试数据表
+  -  以omm用户身份登录CN所在服务器（172.21.3.101 集群主节点），执行`source /opt/huawei/Bigdata/mppdb/.mppdbgs_profile`命令启动环境变量
+
+  - 使用`gsql -d postgres -p 25108`连接数据库
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105114606967.png)
+
+  - 创建数据库用户**joe**, 密码为**Bigdata@123**
+
+    `CREATE USER joe WITH PASSWORD "Bigdata@123";`
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105143658974.png)
+
+    用下面这个命令将系统权限授权给用户或者角色
+
+    `GRANT ALL PRIVILEGES TO joe;`
+
+  - 创建HDFS表空间。
+
+    `CREATE TABLESPACE hdfs_tablespace LOCATION '/srv/BigData/hadoop/hdfs_tablespace' WITH (filesystem = 'HDFS', cfgpath = '/opt/huawei/Bigdata/mppdb/conf', storepath = '/user/elk/tablespace/ hdfs_tablespace');`
+
+    当结果显示为如下信息，则表示创建成功。
+
+    CREATE TABLESPACE
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105144349204.png)
+
+  -  创建数据库。
+
+    `CREATE DATABASE db_tpcds;`
+
+    当结果显示为如下信息，则表示创建成功。
+
+    CREATE DATABASE
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105144745847.png)
+
+    创建完db_tpcds数据库后，就可以按如下方法退出postgres数据库，使用新用户连接到此数据库执行接下来的创建表等操作。当然，也可以选择继续在默认的postgres数据库 下做后续的体验。
+
+    ```
+    \q
+    gsql -d db_tpcds -p 25108 -U joe -W Bigdata@123
+    ```
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105144905590.png)
+
+  - 创建一个名称为“hdfs_001”的表。
+
+    `CREATE TABLE hdfs_001(id int,name varchar2(20) ) WITH (orientation=orc,version=0.12,compression=no) TABLESPACE hdfs_tablespace;`
+
+  -	使用INSERT命令插入数据。
+
+    插入一行数据：
+
+    `INSERT INTO hdfs_001 (id,name ) VALUES (1, 'Administration');`
+
+    插入多行数据：
+
+    `INSERT INTO hdfs_001 (id,name ) VALUES (1, 'Administration'),(2, 'Marketing'), (2, 'Purchasing');`
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105145115936.png)
+
+  - 检查结果
+
+    `Select * from hdfs_001`
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105145157948.png)
+
+- 第二步： 配置集群Elk远程连接
+
+  - 以omm用户身份登录CN所在服务器（172.21.3.101 集群主节点），执行`source /opt/huawei/Bigdata/mppdb/.mppdbgs_profile`命令启动环境变量
+
+  - 配置客户端认证方式，允许客户端以 **joe** 用户连接到本机，此处远程连接禁止使用 **omm** 用户。 例如，下面示例中配置允许IP地址为 **172.16.52.190** 的客户端访问集群本机。
+
+    ` gs_guc set -Z coordinator -N all -I all -h "host all joe 172.16.52.190/32 sha256" `
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105164039323.png)
+
+    使用“joe”用户前，需先本地连接数据库，并在数据库中使用如下语句建立“joe”用户。
+    -Z coordinator表示实例类型为coordinator。
+    -N all表示集群的所有主机。
+    -I all表示主机的所有实例。
+    -h 表示指定需要在“pg_hba.conf”增加的语句。
+    all表示允许客户端连接到任意的数据库。
+    joe 表示连接数据库的用户。
+    172.16.52.190/32表示只允许IP地址为10.10.0.30的主机连接。在使用过程中，请根据用户的网络
+进行配置修改。
+    sha256表示连接时jack用户的密码使用sha256算法加密。
+
+  - 配置listen_addresses
+
+    使用命令 ` gs_guc set -N all -I all -Z coordinator -c "listen_addresses = '*'" `
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105154923385.png)
+
+  - 执行如下命令重启集群。
+
+    `gs_om -t stop && gs_om -t start`
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105155009713.png)
+
+- 第三步： 配置zeppelin JDBC 接口对接 FusionInsight elk
+
+  - 在FusionInsight HD客户端中找到Elk的jdbc驱动：
+
+    驱动程序：Gauss200-OLAP-V100R007C10-REDHAT-64bit-Jdbc.tar.gz
+
+    驱动类：org.postgresql.Driver
+
+    具体位置为：C:\FusionInsightHD\FusionInsight_Services_ClientConfig\Elk
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-2018110516063081.png)
+
+    驱动jar包的名字叫 **gsjdbc4.jar**
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105160655990.png)
+
+  - 将找到的这个 **gsjdbc4.jar** 驱动文件使用WinSCP工具拷贝到 `/usr/zepplein/zeppelin-0.8.0-bin-all/interpreter/jdbc`路径下， 并且使用 下面命令更改驱动权限。
+
+   ```
+   chown 502:wheel gsjdbc4.jar
+
+    chmod 755 gsjdbc4.jar
+   ```
+
+   ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105161157567.png)
+
+  - 启动Zeppelin, 配置 JDBC interpreter如下:
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105161514215.png)
+
+    ```
+    1: default.driver = org.postgresql.Driver
+    2: default.password = Bigdata@123
+    3: default.url = jdbc:postgresql://172.21.3.101:25108/db_tpcds
+    4: default.user = joe
+
+    ```
+
+  - 检查结果：
+
+    ![](assets/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200/markdown-img-paste-20181105161758413.png)
