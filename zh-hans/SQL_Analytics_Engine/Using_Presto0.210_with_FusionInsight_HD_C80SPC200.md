@@ -48,7 +48,7 @@
 
     > alias后的值必须要跟后面创建的用户名称一致
     >
-    > first and last name必须写成presto节点的主机名
+    > first and last name必须写成presto节点的主机名,并且要忽略大小写，统一使用小写字母
 
     ![](assets/Using_Presto0.210_with_FusionInsight_HD_C80SPC200/image001.png)
 
@@ -153,28 +153,28 @@
     git checkout 0.210
     ```
 
-    ## 获取Presto CLI启动包
+## 获取Presto CLI启动包
 
-        使用Presto CLI连接Huawei FusionInsight HD的Hive，使用presto自带的命令行工具执行SQL语句。
+  使用Presto CLI连接Huawei FusionInsight HD的Hive，使用presto自带的命令行工具执行SQL语句。
 
-        * 通过如下链接下载presto cli启动的jar包
+  * 通过如下链接下载presto cli启动的jar包
 
-          <https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.210/presto-cli-0.210-executable.jar>
+    <https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.210/presto-cli-0.210-executable.jar>
 
-        * 并将该jar包上传到可与presto节点网络互通的节点上(也可将presto coordinator节点作为cli使用节点)。
+  * 并将该jar包上传到可与presto节点网络互通的节点上(也可将presto coordinator节点作为cli使用节点)。
 
-        * 配置cli节点的jdk为1.8u60+以上版本
+  * 配置cli节点的jdk为1.8u60+以上版本
 
-        * 配置cli节点的/etc/hosts文件，将FI集群和presto coordinator节点的IP与主机名关系配置到cli节点
+  * 配置cli节点的/etc/hosts文件，将FI集群和presto coordinator节点的IP与主机名关系配置到cli节点
 
-        * 从presto节点拷贝presto.jks、presto.keytab、krb5.conf以及连接HDFS所需的core-site.xml和hdfs-site.xml文件到cli节点
+  * 从presto节点拷贝presto.jks、presto.keytab、krb5.conf以及连接HDFS所需的core-site.xml和hdfs-site.xml文件到cli节点
 
-        * 将presto-cli-0.210-executable.jar包改为可执行文件
-          ```
-          mv presto-cli-0.184-executable.jar presto
-          chmod u+x presto
-          ./presto -h
-          ```
+  * 将presto-cli-0.210-executable.jar包改为可执行文件
+    ```
+    mv presto-cli-0.184-executable.jar presto
+    chmod u+x presto
+    ./presto -h
+    ```
 
 ## 配置Hive Connector
 
@@ -215,13 +215,14 @@
 
 ## 通过Presto CLI连接Hive
 
-  * 进入Presto CLI启动包所在目录，例如/opt，创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
+  * 进入Presto CLI启动包所在目录，例如/opt；
+  * 创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
   ```
-  ./presto210 \
+  ./presto \
   --server https://presto-server:7778 \
   --krb5-config-path /opt/hadoopclient/krb5.conf \
   --krb5-principal testuser/presto-server \
-  --krb5-keytab-path /opt/testuser.keytab \
+  --krb5-keytab-path /opt/presto.keytab \
   --krb5-remote-service-name testuser \
   --keystore-path /opt/presto.jks \
   --keystore-password Huawei@123 \
@@ -286,7 +287,7 @@
 
 ## 配置ElasticSearch Connector
 
-  presto和ES官方都没有给出适配的文档介绍，这里我们采用开源的适配包进行适配。在https://github.com/harbby/presto-connectors下载适配包源码，上传至服务器，解压。
+  presto和ES官方都没有给出适配的文档介绍，这里我们采用开源的适配包进行适配。在https://github.com/harbby/presto-connectors 下载适配包源码，上传至服务器，解压。
 
   * 修改presto-elasticsearch-connectors源码以及配置
 

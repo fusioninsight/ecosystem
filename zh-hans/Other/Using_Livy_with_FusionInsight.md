@@ -70,7 +70,7 @@
   livy.server.session.timeout = 1h
   livy.impersonation.enabled = true
   livy.repl.enable-hive-context = true
-  livy.server.auty.type=kerberos
+  #livy.server.auth.type=kerberos
   livy.server.auth.kerberos.keytab=/opt/developuser/user.keytab
   livy.server.auth.kerberos.principal=developuser@HADOOP.COM
   livy.server.launch.kerberos.keytab=/opt/developuser/user.keytab
