@@ -235,13 +235,13 @@
     ln -s spark-job-server-xxx ${LINKNAME}
     chown -R spark-job-server:spark-job-server ${LINKNAME} spark-job-server-xxx/
     ```
-    - 若操作系统为`On RHEL 6.x/CentOS 6.x`，执行：
+    - 对于`RHEL 6.x/CentOS 6.x`操作系统，执行：
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
       chkconfig --levels 2345 ${LINKNAME} on
       ```
 
-    - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
+  <!--  - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
       systemctl daemon-reload
@@ -252,7 +252,7 @@
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d-ubuntu-sysv /etc/init.d/${LINKNAME}
       update-rc.d ${LINKNAME} start 20 2 3 4 5 . stop 20 0 1 6 .
-      ```
+      ```-->
   * 修改`environment.conf`文件,设置 `master = yarn-client `，以yarn-client模式运行spark.
 
   * 修改`settings.sh`文件，设置`SPARK_HOME=/opt/hadoopclient/Spark2x/spark`
