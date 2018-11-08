@@ -25,6 +25,7 @@
     * [Kettle6.1 <-> FusionInsight HD V100R002C60U20](Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.md)
     * [Kettle8.0&8.1 <-> FusionInsight HD V100R002C70SPC100](Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md)
   * [对接Apache NiFi](Data_Integration\Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md)
+  * [对接Knime](Data_Integration\Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md)
   * [对接Kafka-manager](Data_Integration\Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md)
   * 普元 (TBD)
   * 杭州合众UTL (TBD)
