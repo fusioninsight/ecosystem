@@ -232,7 +232,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=18 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
+  <td rowspan=19 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -431,6 +431,19 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
     Hive</td>
   <td >　</td>
   <td >　</td>
+ </tr>
+ <tr>
+  <td >Knime</td>
+  <td >3.6.1</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Data_Integration/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-HDFS ">HDFS</span></br><span
+  class="label label-Hive ">Hive</span></br><span
+  class="label label-Spark ">Spark</span></a></td>
  </tr>
  <tr>
   <td >kafka-manager</td>
