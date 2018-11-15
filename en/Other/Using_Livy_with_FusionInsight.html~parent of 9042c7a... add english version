@@ -1,0 +1,1252 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Apache Livy · FusionInsight生态地图</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Openlab">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fi-nav/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/custom.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/font-awesome.min.css" />
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    FusionInsight Ecosystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Business_Intelligence/">
+            
+                <a href="../Business_Intelligence/">
+            
+                    
+                    Data Analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    SAS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    IBM SPSS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" >
+            
+                <span>
+            
+                    
+                    IBM Cognos (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Business_Intelligence/Using_Alteryx_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Alteryx_with_FusionInsight.html">
+            
+                    
+                    Alteryx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Business_Intelligence/Using_Tableau_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Tableau_with_FusionInsight.html">
+            
+                    
+                    Tableau
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Business_Intelligence/Using_QlikView_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_QlikView_with_FusionInsight.html">
+            
+                    
+                    QlikView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">
+            
+                    
+                    Oracle BIEE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">
+            
+                    
+                    RapidMiner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" >
+            
+                <span>
+            
+                    
+                    Yonghong BI (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Data_Integration/">
+            
+                <a href="../Data_Integration/">
+            
+                    
+                    Data Integration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">
+            
+                    
+                    IBM InfoSphere DataStage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    IBM InfoSphere CDC (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">
+            
+                    
+                    Oracle GoldenGate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" >
+            
+                <span>
+            
+                    
+                    informatica (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Data_Integration/Using_Talend_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Talend_with_FusionInsight.html">
+            
+                    
+                    Talend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Data_Integration/Using_Kettle_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Kettle_with_FusionInsight.html">
+            
+                    
+                    Kettle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.6.1" data-path="../Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">
+            
+                <a href="../Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">
+            
+                    
+                    Kettle6.1 <-> FusionInsight HD V100R002C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6.2" data-path="../Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    Kettle8.0&8.1 <-> FusionInsight HD V100R002C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.html">
+            
+                <a href="../Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.html">
+            
+                    
+                    Apache NiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" >
+            
+                <span>
+            
+                    
+                    Primeton MetaCube (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" >
+            
+                <span>
+            
+                    
+                    Unimas UTL (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Integrated_Development_Environment/">
+            
+                <a href="../Integrated_Development_Environment/">
+            
+                    
+                    Integrated Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">
+            
+                    
+                    RStudio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.html">
+            
+                    
+                    Apache Zeppelin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Zeppelin0.7.2 <-> FusionInsight HD V100R002C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">
+            
+                    
+                    Zeppelin0.7.3 <-> FusionInsight HD V100R002C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    Zeppelin0.8.0 <-> FusionInsight HD V100R002C80SPC200
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.html">
+            
+                    
+                    Jypyter Notebook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">
+            
+                    
+                    DBeaver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">
+            
+                    
+                    DbVisualizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">
+            
+                    
+                    Squirrel
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../SQL_Analytics_Engine/">
+            
+                <a href="../SQL_Analytics_Engine/">
+            
+                    
+                    SQL Analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.html">
+            
+                    
+                    Apache Kylin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1.1" data-path="../SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Kylin 1.6.0 <-> C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.2" data-path="../SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">
+            
+                    
+                    Kylin 2.1.0 <-> C70
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.3" data-path="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                    
+                    Kylin 2.3.1 <-> C80
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">
+            
+                    
+                    Kyligence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../SQL_Analytics_Engine/Using_Presto_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto_with_FusionInsight.html">
+            
+                    
+                    Presto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1" data-path="../SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Presto0.146 <-> C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.2" data-path="../SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">
+            
+                    
+                    Presto0.184 <-> C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                    Database
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" >
+            
+                <span>
+            
+                    
+                    SAP HANA (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="Using_FUSE_with_FusionInsight.html">
+            
+                <a href="Using_FUSE_with_FusionInsight.html">
+            
+                    
+                    FUSE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html">
+            
+                <a href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html">
+            
+                    
+                    Gis-Tools-For-Hadoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.3" data-path="Using_Livy_with_FusionInsight.html">
+            
+                <a href="Using_Livy_with_FusionInsight.html">
+            
+                    
+                    Apache Livy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" >
+            
+                <span>
+            
+                    
+                    IBM WAS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Apache Livy</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script>function handlerToggle() {
+	var navbar = $("#anchor-navigation-ex-navbar");
+  var navbarul = $("#anchor-navigation-ex-navbar ul");
+	var nw = navbar.width();
+	if (nw > 40) {
+		navbar.stop().animate({
+			width: "40px"
+		}, 200);
+		navbarul.css("display", "none");
+		navbar.css("border-left", "0px")
+    navbar.css("background-color", "rgba(255,255,255,0)")
+	} else {
+		navbar.stop().animate({
+			width: 300
+		}, 200);
+		navbarul.css("display", "block");
+		navbar.css("border-left", "1px solid #e5e5e5");
+    navbar.css("background-color", "rgba(255,255,255,0.98)")
+	};
+};function mobileToggle() {
+  if(document.body.clientWidth<800) {
+    handlerToggle()
+  }
+};</script><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor" onclick="handlerToggle()"></i><ul><li><span class="title-icon "></span><a href="#apache-livy&#x5BF9;&#x63A5;fusioninsight" onclick="mobileToggle()"><b></b>Apache Livy&#x5BF9;&#x63A5;FusionInsight</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;livy" onclick="mobileToggle()"><b></b>&#x5B89;&#x88C5;Livy</a></li><ul><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x573A;&#x666F;" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;" onclick="mobileToggle()"><b></b>&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;Livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x573A;&#x666F;_1" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_1" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x884C;spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" onclick="mobileToggle()"><b></b>&#x8FD0;&#x884C;Spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x884C;pyspark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" onclick="mobileToggle()"><b></b>&#x8FD0;&#x884C;PySpark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x884C;sparkr&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" onclick="mobileToggle()"><b></b>&#x8FD0;&#x884C;SparkR&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul></ul></ul></div><h1 id="apache-livy&#x5BF9;&#x63A5;fusioninsight"><a name="apache-livy&#x5BF9;&#x63A5;fusioninsight" class="anchor-navigation-ex-anchor" href="#apache-livy&#x5BF9;&#x63A5;fusioninsight"><i class="fa fa-link" aria-hidden="true"></i></a>Apache Livy&#x5BF9;&#x63A5;FusionInsight</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;"><a name="&#x9002;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<blockquote>
+<p>Apache Livy 0.5.0-incubating &lt;--&gt; FusionInsight HD V100R002C80SPC200 (Spark2.x)</p>
+</blockquote>
+<h2 id="&#x5B89;&#x88C5;livy"><a name="&#x5B89;&#x88C5;livy" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;livy"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;Livy</h2>
+<h3 id="&#x64CD;&#x4F5C;&#x573A;&#x666F;"><a name="&#x64CD;&#x4F5C;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x573A;&#x666F;</h3>
+<p>&#x5B89;&#x88C5; Apache Livy 0.5.0</p>
+<h3 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h3>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+</ul>
+<h3 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li><p>&#x5B89;&#x88C5;Apache Livy 0.5.0-incubating&#xFF0C;&#x5728;&#x7F51;&#x5740;<code>https://livy.incubator.apache.org/download/</code>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x4F7F;&#x7528;WinSCP&#x5BFC;&#x5165;&#x4E3B;&#x673A;&#x5E76;&#x7528;<code>unzip livy-0.5.0-incubating-bin.zip</code>&#x89E3;&#x538B;&#x751F;&#x6210;livy-0.5.0-incubating-bin&#x76EE;&#x5F55;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/daa97.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/daa97.png" alt="">
+     </a></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x6267;&#x884C;source&#x547D;&#x4EE4;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x83B7;&#x53D6;java&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
+<pre><code>source /opt/hadoopclient/bigdata_env
+echo $JAVA_HOME
+</code></pre><p>     <a href="assets/Using_Livy_with_FusionInsight/b83c9.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/b83c9.png" alt="">
+     </a></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x6839;&#x636E;&#x4EA7;&#x54C1;&#x6587;&#x6863;&#x521B;&#x5EFA;&#x7528;&#x6237;developuser&#xFF0C;&#x5E76;&#x8D4B;&#x4E88;&#x8DB3;&#x591F;&#x6743;&#x9650;&#xFF0C;&#x4E0B;&#x8F7D;&#x7528;&#x6237;developuser&#x7684;keytab&#x6587;&#x4EF6;user.keytab&#xFF0C;&#x4E0A;&#x4F20;&#x81F3;<code>/opt/developuser</code>&#x76EE;&#x5F55;&#x4E0B;</p>
+</li>
+<li><p>&#x5728;<code>/usr/livy/livy-0.5.0-incubating-bin/conf</code>&#x8DEF;&#x5F84;&#x4E0B;&#x65B0;&#x5EFA;livy&#x7684;&#x8BA4;&#x8BC1;&#x6587;&#x4EF6;jaas.conf&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/developuser/user.keytab&quot;
+principal=&quot;developuser&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</code></pre><blockquote>
+<p>&#x5176;&#x4E2D;&#x7528;&#x6237;&#x4E3A;&#x5728;FusionInsight Manager&#x4E2D;&#x521B;&#x5EFA;&#x7684;developuser&#x7528;&#x6237;&#xFF0C;&#x5C06;developuser&#x7684;keytab&#x6587;&#x4EF6;user.key&#x653E;&#x5728;/opt/developuser/&#x76EE;&#x5F55;&#x4E0B;</p>
+</blockquote>
+</li>
+<li><p>&#x914D;&#x7F6E;Livy&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5728;profile&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x53D8;&#x91CF;</p>
+<pre><code>vi /etc/profile
+export LIVY_HOME=/usr/livy/livy-0.5.0-incubating-bin
+export PATH=$LIVY_HOME/bin:$PATH
+</code></pre></li>
+<li><p>&#x7F16;&#x8F91;livy.conf&#x6587;&#x4EF6;&#xFF0C;&#x4F4D;&#x7F6E;<code>/usr/livy/livy-0.5.0-incubating-bin/conf</code></p>
+<pre><code>cd /usr/livy/livy-0.5.0-incubating-bin/conf
+cp livy.conf.template livy.conf
+vi livy.conf
+</code></pre><p>&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>livy.spark.master = yarn
+livy.spark.deploy-mode = client
+livy.server.session.timeout = 1h
+livy.impersonation.enabled = true
+livy.repl.enable-hive-context = true
+livy.server.auty.type=kerberos
+livy.server.auth.kerberos.keytab=/opt/developuser/user.keytab
+livy.server.auth.kerberos.principal=developuser@HADOOP.COM
+livy.server.launch.kerberos.keytab=/opt/developuser/user.keytab
+livy.server.launch.kerberos.principal=developuser@HADOOP.COM
+</code></pre></li>
+<li><p>&#x7F16;&#x8F91;livy-client.conf&#x6587;&#x4EF6;&#xFF0C;&#x4F4D;&#x7F6E;<code>/usr/livy/livy-0.5.0-incubating-bin/conf</code></p>
+<pre><code>cd /usr/livy/livy-0.5.0-incubating-bin/conf
+cp livy-client.conf.template livy-client.conf
+vi livy-client.conf
+</code></pre><p>&#x52A0;&#x5165;&#x5982;&#x672C;&#x673A;ip&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code>livy.rsc.rpc.server.address =172.16.52.190
+</code></pre></li>
+<li><p>&#x7F16;&#x8F91;livy-env.sh&#x6587;&#x4EF6;&#xFF0C;&#x4F4D;&#x7F6E;<code>/usr/livy/livy-0.5.0-incubating-bin/conf</code></p>
+<pre><code>cd /usr/livy/livy-0.5.0-incubating-bin/conf
+cp livy-env.sh.template livy-env.sh
+vi livy-env.sh
+</code></pre><p>&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>export JAVA_HOME=/opt/hadoopclient/JDK/jdk1.8.0_162
+export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
+export SPARK_CONF_DIR=/opt/hadoopclient/Spark2x/spark/conf
+export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
+export LIVY_SERVER_JAVA_OPTS=&quot;-Djava.security.krb5.conf=/opt/developuser/krb5.conf -Djava.security.auth.login.config=/usr/livy/livy-0.5.0-incubating-bin/conf/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=12000&quot;
+export SPARK_LOCAL_IP=172.16.52.190
+</code></pre></li>
+<li><p>&#x7F16;&#x8F91;spark-blacklist.conf&#x6587;&#x4EF6;&#xFF0C;&#x4F4D;&#x7F6E;<code>/usr/livy/livy-0.5.0-incubating-bin/conf</code></p>
+<pre><code>cd /usr/livy/livy-0.5.0-incubating-bin/conf
+cp spark-blacklist.conf.template spark-blacklist.conf
+vi spark-blacklist.conf
+</code></pre><p>&#x6CE8;&#x9500;&#x6389;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>spark.master
+spark.submit.deployMode
+</code></pre><p>     <a href="assets/Using_Livy_with_FusionInsight/0b38d.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/0b38d.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;Livy&#xFF0C;&#x5728;&#x8DEF;&#x5F84;<code>/usr/livy/livy-0.5.0-incubating-bin</code>&#x4E0B;</p>
+<pre><code>bin/livy-server start
+</code></pre><p>     <a href="assets/Using_Livy_with_FusionInsight/22154.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/22154.png" alt="">
+     </a></p>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x540E;&#x53EF;&#x4EE5;&#x5728;<a href="http://172.16.52.190:8998&#x8BBF;&#x95EE;&#x5230;Livy&#x670D;&#x52A1;&#x5668;&#xFF1A;" target="_blank">http://172.16.52.190:8998&#x8BBF;&#x95EE;&#x5230;Livy&#x670D;&#x52A1;&#x5668;&#xFF1A;</a></p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/d70fd.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/d70fd.png" alt="">
+     </a></p>
+</li>
+</ul>
+<h2 id="&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;"><a name="&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;Livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;</h2>
+<h3 id="&#x64CD;&#x4F5C;&#x573A;&#x666F;_1"><a name="&#x64CD;&#x4F5C;&#x573A;&#x666F;_1" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x573A;&#x666F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x573A;&#x666F;</h3>
+<p>&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;Livy&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;Spark Shell&#xFF0C;PySpark&#xFF0C;SparkR</p>
+<p>&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x53C2;&#x8003;&#x7F51;&#x5740;<code>https://livy.incubator.apache.org/examples/</code></p>
+<h3 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;_1"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;_1" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h3>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+<li>&#x5DF2;&#x5B8C;&#x6210;Anaconda&#x548C;R&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x82E5;&#x6CA1;&#x6709;&#x5B89;&#x88C5;Anaconda&#x548C;R&#xFF0C;&#x8BF7;&#x53C2;&#x8003;Zeppelin0.8.0&#x5BF9;&#x63A5;FusionInsight HD V100R002C80SPC200 (Spark2.x)&#x6307;&#x5BFC;&#x6587;&#x6863;&#x4E2D;&#x8FDE;&#x63A5;Spark&#x548C;SparkR&#x90E8;&#x5206;&#x76F8;&#x5173;&#x5185;&#x5BB9;</p>
+</blockquote>
+<h3 id="&#x8FD0;&#x884C;spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><a name="&#x8FD0;&#x884C;spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x884C;spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;Spark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li><p>&#x8F93;&#x5165;&#x547D;&#x4EE4;<code>python</code>&#x542F;&#x52A8;Anaconda</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/3e977.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/3e977.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x8F93;&#x5165;&#x5982;&#x4E0B;python&#x4EE3;&#x7801;&#x542F;&#x52A8;&#x4E00;&#x4E2A;Livy session</p>
+<pre><code>import json, pprint, requests, textwrap
+host = &apos;http://172.16.52.190:8998&apos;
+data = {&apos;kind&apos;: &apos;spark&apos;}
+headers = {&apos;Content-Type&apos;: &apos;application/json&apos;}
+r = requests.post(host + &apos;/sessions&apos;, data=json.dumps(data), headers=headers)
+</code></pre><p>     <a href="assets/Using_Livy_with_FusionInsight/8a598.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/8a598.png" alt="">
+     </a></p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/f5500.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/f5500.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5F53;&#x4E00;&#x4E2A;session&#x5B8C;&#x6210;&#x542F;&#x52A8;&#x540E;&#xFF0C; &#x5B83;&#x5C06;&#x4F1A;&#x53D8;&#x4E3A;&#x95F2;&#x7F6E;&#x72B6;&#x6001;</p>
+<pre><code>session_url = host + r.headers[&apos;location&apos;]
+r = requests.get(session_url, headers=headers)
+r.json()
+</code></pre><p>     <a href="assets/Using_Livy_with_FusionInsight/e42f1.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/e42f1.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7B80;&#x5355;JSON&#x547D;&#x4EE4;&#x884C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6267;&#x884C;Scala</p>
+<pre><code>statements_url = session_url + &apos;/statements&apos;
+data = {&apos;code&apos;: &apos;1 + 1&apos;}
+r = requests.post(statements_url, data=json.dumps(data), headers=headers)
+r.json()
+statement_url = host + r.headers[&apos;location&apos;]
+r = requests.get(statement_url, headers=headers)
+pprint.pprint(r.json())
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session0&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/05800.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/05800.png" alt="">
+     </a></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x770B;&#x5230;&#x4EE5;JSON&#x683C;&#x5F0F;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/4ad5a.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/4ad5a.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x66F4;&#x65B0;Scala&#x518D;&#x6B21;&#x8FD0;&#x884C;</p>
+<pre><code>data = {
+  &apos;code&apos;: textwrap.dedent(&quot;&quot;&quot;
+    val NUM_SAMPLES = 100000;
+    val count = sc.parallelize(1 to NUM_SAMPLES).map { i =&gt;
+      val x = Math.random();
+      val y = Math.random();
+      if (x*x + y*y &lt; 1) 1 else 0
+    }.reduce(_ + _);
+    println(\&quot;Pi is roughly \&quot; + 4.0 * count / NUM_SAMPLES)
+    &quot;&quot;&quot;)
+}
+
+r = requests.post(statements_url, data=json.dumps(data), headers=headers)
+pprint.pprint(r.json())
+
+statement_url = host + r.headers[&apos;location&apos;]
+r = requests.get(statement_url, headers=headers)
+pprint.pprint(r.json())
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session0&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/19359.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/19359.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5173;&#x95ED;session0</p>
+<pre><code>session_url = &apos;http://172.16.52.190:8998/sessions/0&apos;
+requests.delete(session_url, headers=headers)
+</code></pre></li>
+</ul>
+<h3 id="&#x8FD0;&#x884C;pyspark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><a name="&#x8FD0;&#x884C;pyspark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x884C;pyspark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;PySpark&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li><p>&#x7EE7;&#x7EED;&#x63A5;&#x7740;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x66F4;&#x6539;&#x7C7B;&#x578B;&#x4E3A;pyspark</p>
+<pre><code>data = {&apos;kind&apos;: &apos;pyspark&apos;}
+r = requests.post(host + &apos;/sessions&apos;, data=json.dumps(data), headers=headers)
+r.json()
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x65B0;&#x542F;&#x52A8;&#x7684;Session1</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/e68c8.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/e68c8.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x4F20;&#x9012;JSON&#x547D;&#x4EE4;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;Python&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x6CE8;&#x610F;&#x8981;&#x66F4;&#x6539;statements_url</p>
+<pre><code>data = {
+  &apos;code&apos;: textwrap.dedent(&quot;&quot;&quot;
+    import random
+    NUM_SAMPLES = 100000
+    def sample(p):
+      x, y = random.random(), random.random()
+      return 1 if x*x + y*y &lt; 1 else 0
+
+    count = sc.parallelize(xrange(0, NUM_SAMPLES)).map(sample).reduce(lambda a, b: a + b)
+    print &quot;Pi is roughly %f&quot; % (4.0 * count / NUM_SAMPLES)
+    &quot;&quot;&quot;)
+}
+statements_url = &apos;http://172.16.52.190:8998/sessions/1/statements&apos;
+r = requests.post(statements_url, data=json.dumps(data), headers=headers)
+pprint.pprint(r.json())
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session1&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/4c959.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/4c959.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5173;&#x95ED;session1</p>
+<pre><code>session_url = &apos;http://172.16.52.190:8998/sessions/1&apos;
+requests.delete(session_url, headers=headers)
+</code></pre></li>
+</ul>
+<h3 id="&#x8FD0;&#x884C;sparkr&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><a name="&#x8FD0;&#x884C;sparkr&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x884C;sparkr&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;SparkR&#x6837;&#x4F8B;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li><p>&#x7EE7;&#x7EED;&#x63A5;&#x7740;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x66F4;&#x6539;&#x7C7B;&#x578B;&#x4E3A;sparkr</p>
+<pre><code>data = {&apos;kind&apos;: &apos;sparkr&apos;}
+r = requests.post(host + &apos;/sessions&apos;, data=json.dumps(data), headers=headers)
+r.json()
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x65B0;&#x542F;&#x52A8;&#x7684;Session2</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/fe0c4.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/fe0c4.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x4F20;&#x9012;JSON&#x547D;&#x4EE4;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;R&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x6CE8;&#x610F;&#x8981;&#x66F4;&#x6539;statements_url</p>
+<pre><code>data = {
+  &apos;code&apos;: textwrap.dedent(&quot;&quot;&quot;
+    hello &lt;- function( name ) {
+    sprintf( &quot;Hello, %s&quot;, name );
+    }
+    hello(&quot;livy&quot;)
+
+    &quot;&quot;&quot;)
+}
+statements_url = &apos;http://172.16.52.190:8998/sessions/2/statements&apos;
+r = requests.post(statements_url, data=json.dumps(data), headers=headers)
+pprint.pprint(r.json())
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;Session2&#x72B6;&#x6001;&#x680F;&#x770B;&#x5230;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Using_Livy_with_FusionInsight/98e5f.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Livy_with_FusionInsight/98e5f.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5173;&#x95ED;session2</p>
+<pre><code>session_url = &apos;http://172.16.52.190:8998/sessions/2&apos;
+requests.delete(session_url, headers=headers)
+</code></pre></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Gis-Tools-For-Hadoop">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Apache Livy","level":"2.6.3","depth":2,"next":{"title":"IBM WAS (TBD)","level":"2.6.4","depth":2,"ref":"","articles":[]},"previous":{"title":"Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"en","gitbook":"*"},"file":{"path":"Other/Using_Livy_with_FusionInsight.md","mtime":"2018-11-02T08:52:55.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-08T06:58:30.875Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-download-chapter/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-wis/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fixhead/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+
