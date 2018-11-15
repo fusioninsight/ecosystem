@@ -23,7 +23,7 @@
 
   * 在Knime官网`https://www.knime.com/downloads/download-knime`选择合适的安装包进行下载.
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/57dfa.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image001.png)
 
 <!-- ## 配置Windows的kerberos认证
 
@@ -67,11 +67,11 @@
 
   * 在菜单栏选择`File->Preference->KNIME->Big Data->Hadoop`，在`Hadoop Configuration`中填入本地保存的HDFS的`hdfs-site.xml`和`core-site.xml`文件,点击`Apply and Close`保存配置。
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/dd236.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image002.png)
 
   * 在菜单栏选择`File->Preference->KNIME->Big Data->Kerberos`，填入kerberos认证用户名和本地keytab文件的路径，并选择`Enable Kerberos Logging`,点击`Apply and Close`保存配置。
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/a8410.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image003.png)
 
 ## Knime连接HDFS
 
@@ -87,67 +87,67 @@
 
   * 在Knime菜单栏中选择`File->New->New KNIME Workflow`,命名后保存。
 
-  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/34f79.png)
+  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image004.png)
 
-  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/84882.png)
+  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image005.png)
 
   * 在工作区中拖入一个`HDFS Connection` 节点
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/5bd21.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image006.png)
 
   * 双击`HDFS Connection` 节点，填写如下配置：
     - Host: HDFS主节点
     - Port: 25000
     - Authentication: Kerberos
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/0921c.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image007.png)
 
     - 点击`Test connection`,显示如下，表示连接成功
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/b953b.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image008.png)
     - 点击`Apply`，保存配置
 
 ### 读取HDFS文件
 
    * 在工作区中拖入`Download` 节点，将其与`HDFS Connection`相连
 
-     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/3abb2.png)
+     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image009.png)
 
    * 双击`Download` 节点，选择要从HDFS文件系统下载的文件以及文件的本地保存路径
 
-     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/9f7e4.png)
+     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image010.png)
 
    * 点击`Apply`，保存配置
 
    * 点击菜单栏中的
-     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/8ec05.png)执行任务
+     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image011.png)执行任务
 
    * 查看本地文件
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/173c6.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image012.png)
 
 ### 上传文件至HDFS
   * 将要上传的文件放在本地的一个文件夹中，例如`C:\KnimeData`
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/245a3.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image013.png)
 
   * 在工作区中拖入`List Files`,`String to URI` 以及`Upload` 节点，将其进行如下连接
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/60ab6.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image014.png)
 
   * 双击`List Files` 节点，选择要上传文件的本地路径，点击`Apply`，保存配置
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/95b76.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image015.png)
 
   * 双击`Upload` 节点，选择在HDFS中文件保存的路径，点击`Apply`，保存配置
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/95bc8.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image016.png)
 
   * 点击菜单栏中的
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/8ec05.png)执行任务
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image011.png)执行任务
 
   * 在服务器上查看HDFS文件系统中所上传的文件
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/3bdda.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image017.png)
 
 
 
@@ -165,11 +165,11 @@
 
   * 在Knime菜单栏中选择`File->New->New KNIME Workflow`,命名后保存。
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/5b7fd.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image018.png)
 
   * 在工作区中拖入一个`Hive Connector` 节点
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/805e1.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image019.png)
 
   * 双击`Hive Connector` 节点，填写如下配置：
     - Hostname: HIve主节点
@@ -177,34 +177,34 @@
     - Parameter: `principal=hive/hadoop.hadoop.com@HADOOP.COM;saslQop=auth-conf;auth=KERBEROS;`
     - Authentication: Use Kerberos
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/d7e8f.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image020.png)
 
     - 点击`Apply`，保存配置
 
 ### 写入Hive表
   * 在工作区中拖入以下几个节点，并进行如下连接
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/4cff2.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image021.png)
 
     - 其中`HDFS Connection` 节点配置参考上节中建立HDFS连接，点击`Apply`保存配置
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/578bc.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image022.png)
 
     - `File Reader`节点中选择本地将要上传的文件，点击`Apply`保存配置
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/81c55.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image023.png)
 
     - `Hive Loader`节点中选择文件要上传至服务器的路径以及表名，点击`Apply`保存配置
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/1a140.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image024.png)
 
   * 点击菜单栏中的
-        ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/8ec05.png)执行任务
+        ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image011.png)执行任务
 
   * 在服务器上查看导入Hive中的表
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/48134.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image025.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/9f0b8.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image026.png)
 
 
 
@@ -290,7 +290,7 @@
     hadoop.proxyuser.spark-job-server.groups = *
     ```
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/5a102.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image027.png)
 
     保存配置，重启相关服务。
 
@@ -315,22 +315,22 @@
       - Spark version:集群中使用的Spark版本
       - Context name：建立的Spark Context 名字
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/00636.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image028.png)
 
     - 在Connection Settings页面
       - Jobserver URL:http://ip:8090/
       - Authentication: None
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/2d0d3.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image029.png)
 
     - 点击`Apply`，保存配置
-    - 可点击菜单栏![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/f10d5.png)按钮，测试连接是否有错，若显示如下，表明节点配置无误。
+    - 可点击菜单栏![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image030.png)按钮，测试连接是否有错，若显示如下，表明节点配置无误。
 
-      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/77a0e.png)
+      ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image031.png)
 
     - 在浏览器中打开Jobserver URL中配置的地址，可以进入Spark Job Server UI界面，可以看到刚才建立的Spark Context，显示如下：
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/a5839.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image032.png)
 
 ## Spark应用实例
 
@@ -339,23 +339,23 @@
 ### Hive to Spark to Hive
   * 下载完成打开应用实例，配置`HDFS Connection`，`File Reader`，`Hive Connector`，`Hive Loader`，`Create Spark Context`和`Spark to Hive` 节点，具体配置如下：
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/da93d.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image033.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/28c14.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image034.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/67e8c.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image035.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/f356c.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image036.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/6c6b2.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image028.png)
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/a6bf1.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image038.png)
 
   * 点击菜单栏中的
-        ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/8ec05.png)执行任务
+        ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image011.png)执行任务
 
   * 登录节点，执行`beeline`进入Hive界面，执行`show tables;`查看导入的表.
 
-    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/5a6a5.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image039.png)
 
     可以看到，通过`Hive Loader`节点导入的表`contactdata`以及`Spark to Hive`节点导入的表`sparktohivetable`均已导入Hive。
