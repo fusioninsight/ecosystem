@@ -99,11 +99,15 @@
 
 .label-Flume {
     background-color: #36b6dcc2;
-} 
+}
 
 .label-Yarn {
     background-color: #468dbd;
-} 
+}
+
+.label-ElasticSearch {
+    background-color: #7D26CD;
+}
 
 .label-LibrA , .label-ELK{
     background-color: #336791;
