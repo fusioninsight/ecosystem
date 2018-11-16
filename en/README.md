@@ -1,8 +1,8 @@
 ﻿<!-- ex_nonav -->
 
-# FusionInsight Ecosystem
+# FusionInsight Ecosystom Map
 
-FusionInsight is compatible with the open source Hadoop interface, it can be integrated with the following tools
+FusionInsight supports the standard open-source Hadoop interface, it can connect with the following third-party softwares.
 
 <table class="tg">
  <thead>
@@ -22,7 +22,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
  </tr>
 </thead>
  <tr>
-  <td rowspan=15 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i><BR>Data Analysis</td>
+  <td rowspan=15 >Data Analysis</td>
   <td >SAS Access for Hadoop<br>
     SAS HPA<br>
     SAS EP</td>
@@ -232,7 +232,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=17 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>Data Integration</td>
+  <td rowspan=19 >Data Integration</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -433,6 +433,30 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
+  <td >Knime</td>
+  <td >3.6.1</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Data_Integration/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-HDFS ">HDFS</span></br><span
+  class="label label-Hive ">Hive</span></br><span
+  class="label label-Spark ">Spark</span></a></td>
+ </tr>
+ <tr>
+  <td >kafka-manager</td>
+  <td >1.3.3.21</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-Kafka ">Kafka</span></a></td>
+ </tr>
+ <tr>
   <td >Primeton MetaCube</td>
   <td >6.1</td>
   <td >　</td>
@@ -456,7 +480,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=12 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>Integrated Development</td>
+  <td rowspan=12 >Integrated Development</td>
   <td >RStudio</td>
   <td >1.0.153</td>
   <td >　</td>
@@ -620,7 +644,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=12 ><i class="fa fa-search fa-2x" aria-hidden="true"></i><BR>SQL Analysis</td>
+  <td rowspan=12 >SQL Analysis</td>
   <td rowspan=4 >Apache Kylin</td>
   <td >1.6.0</td>
   <td >　</td>
@@ -720,7 +744,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td ><a
   href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md"><span
   class="label label-Hive ">Hive</span></br><span
-  class="label label-Hbase ">Hbase</span></br><span
+  class="label label-HBase ">HBase</span></br><span
   class="label label-Yarn ">Yarn</span></a></td>
  </tr>
  <tr>
@@ -747,18 +771,19 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
-  <td >0.196</td>
+  <td >0.210</td>
   <td >　</td>
   <td >　</td>
   <td >　</td>
   <td >　</td>
   <td ><a
-  href="SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.md"><span
+  href="SQL_Analytics_Engine/Using_Presto0.210_with_FusionInsight_HD_C80SPC200.md"><span
   class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
+  class="label label-Hive ">Hive</span></br><span
+  class="label label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
-  <td rowspan=4 ><i class="fa fa-database fa-2x" aria-hidden="true"></i><BR>Database</td>
+  <td rowspan=4 >Database</td>
   <td >SAP HANA</td>
   <td >100_120_0-10009569</td>
   <td >　</td>
@@ -798,7 +823,7 @@ FusionInsight is compatible with the open source Hadoop interface, it can be int
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=6 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i><BR>Other</td>
+  <td rowspan=6 >Other</td>
   <td >FUSE</td>
   <td >2.8.3</td>
   <td >　</td>

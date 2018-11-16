@@ -744,7 +744,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td ><a
   href="SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.md"><span
   class="label label-Hive ">Hive</span></br><span
-  class="label label-Hbase ">Hbase</span></br><span
+  class="label label-HBase ">HBase</span></br><span
   class="label label-Yarn ">Yarn</span></a></td>
  </tr>
  <tr>
@@ -780,7 +780,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   href="SQL_Analytics_Engine/Using_Presto0.210_with_FusionInsight_HD_C80SPC200.md"><span
   class="label label-HDFS ">HDFS</span></br><span
   class="label label-Hive ">Hive</span></br><span
-  class="label label-ES ">ES</span></a></td>
+  class="label label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
   <td rowspan=4 ><i class="fa fa-database fa-2x" aria-hidden="true"></i><BR>数据库</td>
