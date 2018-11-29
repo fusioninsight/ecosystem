@@ -1,0 +1,1437 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对接Logstash · FusionInsight生态地图</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Openlab">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fi-nav/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/custom.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../resource/css/font-awesome.min.css" />
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Elasticsearch_related.html" />
+    
+    
+    <link rel="prev" href="Using_Livy_with_FusionInsight.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    FusionInsight生态地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Business_Intelligence/">
+            
+                <a href="../Business_Intelligence/">
+            
+                    
+                    数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    SAS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    IBM SPSS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" >
+            
+                <span>
+            
+                    
+                    IBM Cognos (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Business_Intelligence/Using_Alteryx_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Alteryx_with_FusionInsight.html">
+            
+                    
+                    对接Alteryx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Business_Intelligence/Using_Tableau_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Tableau_with_FusionInsight.html">
+            
+                    
+                    对接Tableau
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Business_Intelligence/Using_QlikView_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_QlikView_with_FusionInsight.html">
+            
+                    
+                    对接QlikView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_Oracle_BIEE_with_FusionInsight.html">
+            
+                    
+                    对接Oracle BIEE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">
+            
+                <a href="../Business_Intelligence/Using_RapidMiner_with_FusionInsight.html">
+            
+                    
+                    对接RapidMiner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" >
+            
+                <span>
+            
+                    
+                    永洪BI (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Data_Integration/">
+            
+                <a href="../Data_Integration/">
+            
+                    
+                    数据集成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_IBM_InfoSphere_DataStage_with_FusionInsight.html">
+            
+                    
+                    IBM InfoSphere DataStage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    IBM InfoSphere CDC (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Oracle_GoldenGate_with_FusionInsight.html">
+            
+                    
+                    对接Oracle GoldenGate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" >
+            
+                <span>
+            
+                    
+                    informatica (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Data_Integration/Using_Talend_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Talend_with_FusionInsight.html">
+            
+                    
+                    对接Talend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Data_Integration/Using_Kettle_with_FusionInsight.html">
+            
+                <a href="../Data_Integration/Using_Kettle_with_FusionInsight.html">
+            
+                    
+                    对接Kettle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.6.1" data-path="../Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">
+            
+                <a href="../Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.html">
+            
+                    
+                    Kettle6.1 <-> FusionInsight HD V100R002C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6.2" data-path="../Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    Kettle8.0&8.1 <-> FusionInsight HD V100R002C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.html">
+            
+                <a href="../Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.html">
+            
+                    
+                    对接Apache NiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Data_Integration/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Data_Integration/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    对接Knime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    对接Kafka-manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" >
+            
+                <span>
+            
+                    
+                    普元 (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" >
+            
+                <span>
+            
+                    
+                    杭州合众UTL (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Integrated_Development_Environment/">
+            
+                <a href="../Integrated_Development_Environment/">
+            
+                    
+                    集成开发环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_RStudio_with_FusionInsight.html">
+            
+                    
+                    对接RStudio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_with_FusionInsight_HD.html">
+            
+                    
+                    对接Apache Zeppelin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.7.2_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Zeppelin0.7.2 <-> FusionInsight HD V100R002C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.7.3_with_FusionInsight_HD_C70SPC100.html">
+            
+                    
+                    Zeppelin0.7.3 <-> FusionInsight HD V100R002C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Zeppelin_0.8.0_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    Zeppelin0.8.0 <-> FusionInsight HD V100R002C80SPC200
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Jupyter_Notebook_with_FusionInsight.html">
+            
+                    
+                    对接Jypyter Notebook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.html">
+            
+                    
+                    对接DBeaver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.html">
+            
+                    
+                    对接DbVisualizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">
+            
+                <a href="../Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.html">
+            
+                    
+                    对接Squirrel
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../SQL_Analytics_Engine/">
+            
+                <a href="../SQL_Analytics_Engine/">
+            
+                    
+                    SQL引擎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.html">
+            
+                    
+                    对接Apache Kylin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1.1" data-path="../SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin1.6.0_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Kylin 1.6.0 <-> C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.2" data-path="../SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin2.1.0_with_FusionInsight_HD_C70.html">
+            
+                    
+                    Kylin 2.1.0 <-> C70
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.3" data-path="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kylin2.3.1_with_FusionInsight_HD_C80.html">
+            
+                    
+                    Kylin 2.3.1 <-> C80
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Kyligence_with_FusionInsight.html">
+            
+                    
+                    对接Kyligence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../SQL_Analytics_Engine/Using_Presto_with_FusionInsight.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto_with_FusionInsight.html">
+            
+                    
+                    对接Presto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1" data-path="../SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto0.155_with_FusionInsight_HD_C60U20.html">
+            
+                    
+                    Presto0.146 <-> C60U20
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.2" data-path="../SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto0.184_with_FusionInsight_HD_C70SPC100.html">
+            
+                    
+                    Presto0.184 <-> C70SPC100
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.3" data-path="../SQL_Analytics_Engine/Using_Presto0.210_with_FusionInsight_HD_C80SPC200.html">
+            
+                <a href="../SQL_Analytics_Engine/Using_Presto0.210_with_FusionInsight_HD_C80SPC200.html">
+            
+                    
+                    Presto0.210 <-> C80SPC200
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" >
+            
+                <span>
+            
+                    
+                    SAP HANA (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="Using_FUSE_with_FusionInsight.html">
+            
+                <a href="Using_FUSE_with_FusionInsight.html">
+            
+                    
+                    对接FUSE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html">
+            
+                <a href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html">
+            
+                    
+                    对接Gis-Tools-For-Hadoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="Using_Livy_with_FusionInsight.html">
+            
+                <a href="Using_Livy_with_FusionInsight.html">
+            
+                    
+                    对接Apache Livy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.4" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接Logstash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.5" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接Kibana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.6" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接elasticsearch-head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.7" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接beats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.8" >
+            
+                <span>
+            
+                    
+                    IBM WAS (TBD)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >对接Logstash</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script>function handlerToggle() {
+	var navbar = $("#anchor-navigation-ex-navbar");
+  var navbarul = $("#anchor-navigation-ex-navbar ul");
+	var nw = navbar.width();
+	if (nw > 40) {
+		navbar.stop().animate({
+			width: "40px"
+		}, 200);
+		navbarul.css("display", "none");
+		navbar.css("border-left", "0px")
+    navbar.css("background-color", "rgba(255,255,255,0)")
+	} else {
+		navbar.stop().animate({
+			width: 300
+		}, 200);
+		navbarul.css("display", "block");
+		navbar.css("border-left", "1px solid #e5e5e5");
+    navbar.css("background-color", "rgba(255,255,255,0.98)")
+	};
+};function mobileToggle() {
+  if(document.body.clientWidth<800) {
+    handlerToggle()
+  }
+};</script><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor" onclick="handlerToggle()"></i><ul><li><span class="title-icon "></span><a href="#fusioninsight-hd-es&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;" onclick="mobileToggle()"><b></b>FusionInsight HD ES&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x6001;&#x7B80;&#x4ECB;" onclick="mobileToggle()"><b></b>&#x751F;&#x6001;&#x7B80;&#x4ECB;</a></li></ul><li><span class="title-icon "></span><a href="#logstash&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" onclick="mobileToggle()"><b></b>Logstash&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul><li><span class="title-icon "></span><a href="#kibana&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" onclick="mobileToggle()"><b></b>Kibana&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;_1" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_1" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_1" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul><li><span class="title-icon "></span><a href="#elasticsearch-head&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" onclick="mobileToggle()"><b></b>elasticsearch-head&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;_2" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_2" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_2" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5728;fi-hd&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats" onclick="mobileToggle()"><b></b>&#x5728;FI HD&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats</a></li><ul><li><span class="title-icon "></span><a href="#&#x9002;&#x7528;&#x573A;&#x666F;_3" onclick="mobileToggle()"><b></b>&#x9002;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_3" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_3" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;" onclick="mobileToggle()"><b></b>&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x573A;&#x666F;&#x7B80;&#x4ECB;" onclick="mobileToggle()"><b></b>&#x573A;&#x666F;&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_4" onclick="mobileToggle()"><b></b>&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_4" onclick="mobileToggle()"><b></b>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</a></li></ul></ul></div><h1 id="fusioninsight-hd-es&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;"><a name="fusioninsight-hd-es&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;" class="anchor-navigation-ex-anchor" href="#fusioninsight-hd-es&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>FusionInsight HD ES&#x7EC4;&#x4EF6;&#x4E0E;&#x5468;&#x8FB9;&#x751F;&#x6001;&#x5BF9;&#x63A5;</h1>
+<h2 id="&#x751F;&#x6001;&#x7B80;&#x4ECB;"><a name="&#x751F;&#x6001;&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6001;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6001;&#x7B80;&#x4ECB;</h2>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129095649331.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129095649331.png" alt="">
+     </a></p>
+<p>Kibana: &#x53EF;&#x6269;&#x5C55;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF0C;&#x80FD;&#x591F;&#x7BA1;&#x7406;&#x6574;&#x4E2A;&#x751F;&#x6001;&#x7EC4;&#x4EF6;&#xFF08;elasticsearch, logstash, beats&#xFF09;&#x4EE5;&#x53CA;&#x6570;&#x636E;</p>
+<p>Elasticsearch: &#x517C;&#x6709;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x548C;NoSQL&#x6570;&#x636E;&#x5E93;&#x529F;&#x80FD;&#x7684;&#x5F00;&#x6E90;&#x7CFB;&#x7EDF;&#xFF0C;&#x57FA;&#x4E8E;JAVA/Lucene&#x6784;&#x5EFA;&#xFF0C;&#x5F00;&#x6E90;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x652F;&#x6301;RESTful&#x8BF7;&#x6C42;</p>
+<p>Logstash: &#x5F00;&#x6E90;&#x7684;&#x6570;&#x636E;&#x6536;&#x96C6;&#x7BA1;&#x9053;&#xFF0C;&#x80FD;&#x591F;&#x540C;&#x65F6;&#x4ECE;&#x591A;&#x4E2A;&#x6E90;&#x5934;&#x6536;&#x96C6;&#x6570;&#x636E;&#xFF0C;&#x4F20;&#x5230;Elasticsearch&#xFF0C;&#x80FD;&#x591F;&#x548C;Elasticsearch&#x4EA7;&#x751F;&#x534F;&#x540C;&#x6548;&#x5E94;</p>
+<p>beats: &#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x642C;&#x8FD0;&#x5DE5;&#xFF0C;&#x80FD;&#x591F;&#x90E8;&#x7F72;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5230;Logstash&#x6216;&#x8005;Elasticsearch</p>
+<p>elasticsearch-head: &#x7528;&#x6237;&#x754C;&#x9762;&#xFF0C;&#x80FD;&#x591F;&#x67E5;&#x8BE2;Elasticsearch&#x4E2D;&#x7684;&#x6570;&#x636E;</p>
+<blockquote>
+<p>&#x6CE8;&#xFF1A; FusionInsight HD&#x7684;Elasticsearch&#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x76F8;&#x5173;&#x7684;&#x5468;&#x8FB9;&#x751F;&#x6001;Kibana&#xFF0C;Logstash&#xFF0C;beats&#xFF0C; elasticseach-head&#x4E3A;&#x5F00;&#x6E90;&#xFF0C;&#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x652F;&#x6301;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x6545;&#x91C7;&#x7528;&#x5B89;&#x5168;FI HD&#x96C6;&#x7FA4;&#x7684;&#x975E;&#x5B89;&#x5168;ES&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x5BF9;&#x63A5;</p>
+</blockquote>
+<h1 id="logstash&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><a name="logstash&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#logstash&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>Logstash&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;"><a name="&#x9002;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<blockquote>
+<p>Logstash 6.4.2 &lt;--&gt; FusionInsight HD V100R002C80SPC200 (ElasticSearch&#x7EC4;&#x4EF6;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;)</p>
+</blockquote>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+<li>FusionInsight HD&#x5305;&#x542B;ElasticSearch&#x7EC4;&#x4EF6;</li>
+</ul>
+<h2 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li><p>&#x767B;&#x5F55;FusionInsight Manager&#x7F51;&#x9875;&#xFF0C;&#x68C0;&#x67E5;ES&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x4E3A;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4F7F;&#x5176;&#x4E3A;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x91CD;&#x542F;elasticsearch&#x670D;&#x52A1;&#xFF1A;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4E0B;&#x8F7D;logstash 6.4.2, &#x7F51;&#x5740;&#x4E3A;&#xFF1A;<a href="https://www.elastic.co/downloads/past-releases" target="_blank">https://www.elastic.co/downloads/past-releases</a></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115175339258.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115175339258.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5C06;&#x4E0B;&#x8F7D;&#x540E;&#x7684;<strong>logstash-6.4.2.zip</strong>&#x4F7F;&#x7528;WinSCP&#x5BFC;&#x5165;&#x4E3B;&#x673A;&#x7684;<code>/opt/logstash</code>&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;<code>unzip logstash-6.4.2.zip</code>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115175958121.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115175958121.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5230;&#x8DEF;&#x5F84;<code>/opt/logstash/logstash-6.4.2/config</code>&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>logstash-Simple.conf</code>,&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+</li>
+</ul>
+<pre><code>  # Sample Logstash configuration for creating a simple
+  # Beats -&gt; Logstash -&gt; Elasticsearch pipeline.
+  input{ stdin{ } }
+
+
+  output {
+
+    stdout{
+      codec =&gt; dots {}
+    }
+    elasticsearch {
+      hosts =&gt; [&quot;http://172.21.3.101:24100&quot;]
+      index =&gt; &quot;hellow_world&quot;
+      #user =&gt; &quot;elastic&quot;
+      #password =&gt; &quot;changeme&quot;
+    }
+  }
+</code></pre><ul>
+<li>&#x5230;&#x8DEF;&#x5F84;<code>/opt/logstash/logstash-6.4.2</code>&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>bin/logstash -f config/logstash-Simple.conf</code>&#x6839;&#x636E;&#x4E4B;&#x524D;&#x7684;<code>logstash-Simple.conf</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x6765;&#x542F;&#x52A8;logstash, &#x7136;&#x540E;&#x5728;&#x7EC8;&#x7AEF;&#x624B;&#x52A8;&#x8F93;&#x5165;&#x6570;&#x5B57;1&#x5230;6&#xFF1A;</li>
+</ul>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115181701631.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115181701631.png" alt="">
+     </a></p>
+<ul>
+<li><p>&#x767B;&#x5F55;elasticsearch-head&#x670D;&#x52A1;&#x5668;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#xFF08;&#x5BF9;&#x63A5;&#x6B65;&#x9AA4;&#x53C2;&#x89C1;&#x540E;&#x6587;&#xFF09;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115183039111.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115183039111.png" alt="">
+     </a></p>
+</li>
+</ul>
+<h1 id="kibana&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><a name="kibana&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#kibana&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>Kibana&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;_1"><a name="&#x9002;&#x7528;&#x573A;&#x666F;_1" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<blockquote>
+<p>Kibana 6.1.3 &lt;--&gt; FusionInsight HD V100R002C80SPC200 (ElasticSearch&#x7EC4;&#x4EF6;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;)</p>
+</blockquote>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;_1"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;_1" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+<li>FusionInsight HD&#x5305;&#x542B;ElasticSearch&#x7EC4;&#x4EF6;</li>
+</ul>
+<h2 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_1"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_1" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li><p>&#x767B;&#x5F55;FusionInsight Manager&#x7F51;&#x9875;&#xFF0C;&#x68C0;&#x67E5;ES&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x4E3A;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4F7F;&#x5176;&#x4E3A;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x91CD;&#x542F;elasticsearch&#x670D;&#x52A1;&#xFF1A;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4E0B;&#x8F7D;Kibana 6.1.3, &#x4E0B;&#x8F7D;&#x7F51;&#x5740;&#x4E3A;&#xFF1A;<a href="https://www.elastic.co/downloads/past-releases" target="_blank">https://www.elastic.co/downloads/past-releases</a></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116101430780.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116101430780.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5C06;&#x4E0B;&#x8F7D;&#x540E;&#x7684;<strong>Kibana 6.1.3</strong>&#x4F7F;&#x7528;WinSCP&#x5BFC;&#x5165;&#x4E3B;&#x673A;&#x7684;<code>/opt</code>&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;<code>tar -xzf kibana-6.1.3-linux-x86_64.tar.gz</code>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116110006717.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116110006717.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4F7F;&#x7528;<code>vi /opt/kibana-6.1.3-linux-x86_64/config/kibana.yml</code>&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#x9009;&#x9879;:</p>
+<pre><code>server.port: 5601
+server.host: &quot;172.16.52.190&quot;
+server.name: &quot;LinuxTest&quot;
+elasticsearch.url: &quot;http://172.21.3.101:24100&quot;
+</code></pre><p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116110230773.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116110230773.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4F7F;&#x7528;<code>bin/kibana</code>&#x542F;&#x52A8;kibana</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116110635370.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116110635370.png" alt="">
+     </a></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x8BBF;&#x95EE;kibana&#x767B;&#x5F55;&#x754C;&#x9762;&#xFF0C;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x4E3A;<a href="http://Kibana&#x670D;&#x52A1;IP&#x5730;&#x5740;:5601" target="_blank">http://Kibana&#x670D;&#x52A1;IP&#x5730;&#x5740;:5601</a></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116110818458.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116110818458.png" alt="">
+     </a></p>
+<p>&#x9009;&#x62E9;<strong>Dev Tools</strong></p>
+<p>&#x4F7F;&#x7528;<code>GET _cat/indices</code>&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x96C6;&#x7FA4;ES&#x4E2D;&#x7684;indices</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116111117754.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116111117754.png" alt="">
+     </a></p>
+<p>&#x4F7F;&#x7528;<code>GET hellow_world/_search</code>&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116111209445.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116111209445.png" alt="">
+     </a></p>
+</li>
+</ul>
+<h1 id="elasticsearch-head&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><a name="elasticsearch-head&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#elasticsearch-head&#x5BF9;&#x63A5;fusioninsight-hd-es&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>elasticsearch-head&#x5BF9;&#x63A5;FusionInsight HD ES&#x7EC4;&#x4EF6;</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;_2"><a name="&#x9002;&#x7528;&#x573A;&#x666F;_2" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<blockquote>
+<p>elasticsearch-head &lt;--&gt; FusionInsight HD V100R002C80SPC200 (ElasticSearch&#x7EC4;&#x4EF6;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;)</p>
+</blockquote>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;_2"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;_2" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;</li>
+<li>FusionInsight HD&#x5305;&#x542B;ElasticSearch&#x7EC4;&#x4EF6;</li>
+</ul>
+<h2 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_2"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_2" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li><p>&#x767B;&#x5F55;FusionInsight Manager&#x7F51;&#x9875;&#xFF0C;&#x68C0;&#x67E5;ES&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x4E3A;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4F7F;&#x5176;&#x4E3A;&#x975E;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x91CD;&#x542F;elasticsearch&#x670D;&#x52A1;&#xFF1A;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181115174917852.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5728;FusionInsight Manager&#xFF0C;&#x9009;&#x62E9;&#x670D;&#x52A1;&#x7BA1;&#x7406;-&gt;Elasticsearch&#x670D;&#x52A1;&#x914D;&#x7F6E;-&gt;&#x670D;&#x52A1;&#x914D;&#x7F6E;(&#x9009;&#x62E9;&#x5168;&#x90E8;&#x914D;&#x7F6E;)-&gt;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x5728;elasticsearch.yml&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x91CD;&#x542F;elasticsearch&#x670D;&#x52A1;</p>
+<pre><code>http.cors.enabled = true
+http.cors.allow-origin = &quot;*&quot;
+</code></pre><p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116113332837.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116113332837.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x5E76;&#x4E14;&#x5B89;&#x88C5;<strong>elasticsearch-head</strong>&#x5230;&#x4E3B;&#x673A;&#x4E0A;,&#x5E76;&#x4E14;&#x542F;&#x52A8;<strong>elasticsearch-head</strong>&#x670D;&#x52A1;</p>
+<pre><code>git clone git://github.com/mobz/elasticsearch-head.git
+cd elasticsearch-head
+npm install
+npm run start
+</code></pre><p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116113541295.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116113541295.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x8BBF;&#x95EE;elasticsearch-head&#x754C;&#x9762;&#xFF0C;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x4E3A;<a href="http://elasticsearch-head&#x670D;&#x52A1;IP&#x5730;&#x5740;:9100" target="_blank">http://elasticsearch-head&#x670D;&#x52A1;IP&#x5730;&#x5740;:9100</a>, &#x8F93;&#x5165;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#x4E3A;<code>http://172.21.3.101:24100/</code>,&#x70B9;&#x51FB;&#x8FDE;&#x63A5;:</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-2018111611373686.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-2018111611373686.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x67E5;&#x770B;&#x7ED3;&#x679C;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181116113832137.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181116113832137.png" alt="">
+     </a></p>
+</li>
+</ul>
+<h1 id="&#x5728;fi-hd&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats"><a name="&#x5728;fi-hd&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats" class="anchor-navigation-ex-anchor" href="#&#x5728;fi-hd&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;FI HD&#x96C6;&#x7FA4;&#x4E0A;&#x90E8;&#x7F72;beats</h1>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;_3"><a name="&#x9002;&#x7528;&#x573A;&#x666F;_3" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x7528;&#x573A;&#x666F;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<blockquote>
+<p>filebeat-6.5.1 &lt;--&gt; FusionInsight HD V100R002C80SPC200</p>
+</blockquote>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;_3"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;_3" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;&#x3002;</li>
+</ul>
+<h2 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_3"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_3" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li><p>&#x4E0B;&#x8F7D;Filebeat 6.5.1, &#x4E0B;&#x8F7D;&#x7F51;&#x5740;&#x4E3A;&#xFF1A;<a href="https://www.elastic.co/downloads/past-releases" target="_blank">https://www.elastic.co/downloads/past-releases</a></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129113303259.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129113303259.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5C06;&#x4E0B;&#x8F7D;&#x540E;&#x7684;<strong>Filebeat 6.5.1</strong>&#x4F7F;&#x7528;WinSCP&#x5BFC;&#x5165;FI HD&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#xFF08;172.21.3.103&#xFF09;&#x7684;<code>/opt</code>&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;<code>tar -xzf filebeat-6.5.1-linux-x86_64.tar.gz</code>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129113559319.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129113559319.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4F7F;&#x7528;<code>cd /opt/filebeat-6.5.1-linux-x86_64</code>&#x8FDB;&#x5165;filebeat&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>filebeat_new.yml</code>,&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/Bigdata/zookeeper/quorumpeer/zookeeper-omm-server-host3.log
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5046&quot;]
+</code></pre><p>&#x6CE8;&#xFF1A;&#x7AEF;&#x53E3;5046&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x6307;&#x5B9A;&#xFF0C;&#x4E0D;&#x51B2;&#x7A81;&#x5373;&#x53EF;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>./filebeat -e -c filebeat_new.yml</code>&#x542F;&#x52A8;filebeat</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129115030211.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129115030211.png" alt="">
+     </a></p>
+</li>
+</ul>
+<h1 id="&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;"><a name="&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;</h1>
+<h2 id="&#x573A;&#x666F;&#x7B80;&#x4ECB;"><a name="&#x573A;&#x666F;&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x573A;&#x666F;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x573A;&#x666F;&#x7B80;&#x4ECB;</h2>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129165527204.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129165527204.png" alt="">
+     </a></p>
+<p>&#x5206;&#x522B;&#x5728;FI HD&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x90E8;&#x7F72;filebeat&#x5B9E;&#x65F6;&#x83B7;&#x53D6;&#x4E24;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF08;/var/log/ipmitool.fi.log&#xFF09;&#xFF0C;&#x901A;&#x8FC7;logstash&#x7BA1;&#x9053;&#x83B7;&#x53D6;&#x5E76;&#x8FC7;&#x6EE4;&#x5143;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4E3A;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x4F20;&#x5230;FI HD Elasticsearch&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;Kibana&#x6765;&#x67E5;&#x770B;&#x83B7;&#x53D6;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</p>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;_4"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;_4" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x5DF2;&#x5B8C;&#x6210;FusionInsight HD&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B89;&#x88C5;</li>
+<li>FusionInsight HD&#x5305;&#x542B;ElasticSearch&#x7EC4;&#x4EF6;</li>
+<li>&#x5DF2;&#x4E86;&#x89E3;&#x548C;&#x5B8C;&#x6210;Kibana&#x7684;&#x5B89;&#x88C5;</li>
+<li>&#x5DF2;&#x4E86;&#x89E3;&#x548C;&#x5B8C;&#x6210;logstash&#x7684;&#x5B89;&#x88C5;</li>
+<li>&#x5DF2;&#x4E86;&#x89E3;&#x548C;&#x5B8C;&#x6210;filebeat&#x7684;&#x5B89;&#x88C5;</li>
+</ul>
+<h2 id="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_4"><a name="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_4" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li>&#x9996;&#x5148;&#x767B;&#x9646;FusionInsight HD&#x96C6;&#x7FA4;&#x8282;&#x70B9;172.21.3.102&#x548C;172.21.3.103&#x4E0A;</li>
+</ul>
+<ul>
+<li><p>&#x53C2;&#x8003;&#x4E4B;&#x524D;&#x7684;&#x6B65;&#x9AA4;&#x5206;&#x522B;&#x90E8;&#x7F72;filebeat&#x5230;172.21.3.102&#x548C;172.21.3.103&#x4E0A;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x5E94;&#x7684;&#x521B;&#x5EFA;filebeat&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>filebeat_new_host2.yml</code>&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/ipmitool*
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5045&quot;]
+</code></pre><p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>filebeat_new_host3.yml</code>&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/ipmitool*
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5047&quot;]
+</code></pre></li>
+<li><p>&#x767B;&#x9646;&#x5B89;&#x88C5;logstash&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;<code>logstash-beats-ipmitool.conf</code>&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code># Sample Logstash configuration for creating a simple
+# Beats -&gt; Logstash -&gt; Elasticsearch pipeline.
+
+input{
+    beats{
+       port =&gt; &quot;5045&quot;
+    }
+    beats{
+       port =&gt; &quot;5047&quot;
+    }
+ }
+
+filter{
+   grok{
+     match =&gt;{&quot;message&quot; =&gt; &quot;(?&lt;object&gt;[A-Za-z0-9$.+!*&apos;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;object2&gt;[A-Za-z0-9$.+!*&apos;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;status&gt;[A-Za-z0-9$.+!*&apos;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;number&gt;[A-Za-z0-9$.+!*&apos;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|%{GREEDYDATA:additional_info}&quot;}
+   }
+}
+
+output{
+  stdout{
+    codec =&gt; dots {}
+  }
+  elasticsearch {
+    hosts =&gt; [&quot;http://172.21.3.101:24100&quot;]
+    index =&gt; &quot;ipmitool_log&quot;
+  }
+}
+</code></pre></li>
+<li><p>&#x542F;&#x52A8;kibana</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129144449144.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129144449144.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>bin/logstash -f config/logstash-beats-ipmitool.conf</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x6765;&#x542F;&#x52A8;logstash</p>
+</li>
+<li><p>&#x5206;&#x522B;&#x542F;&#x52A8;172.21.3.102&#x548C;172.21.3.103&#x4E0A;&#x7684;filebeat&#x6765;&#x83B7;&#x53D6;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x767B;&#x9646;kibana&#x7F51;&#x9875;&#x754C;&#x9762;&#xFF0C;&#x9009;&#x62E9;<strong>Management</strong>&#x4E0B;&#x9762;&#x7684;<strong>Index Patterns</strong></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129170250839.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129170250839.png" alt="">
+     </a></p>
+<p>&#x5728;<strong>Create index pattern</strong>&#x4E0B;&#x9009;&#x62E9;&#x521A;&#x521A;&#x7531;logstash&#x4F20;&#x8F93;&#x521B;&#x5EFA;&#x7684;index <strong>ipmitool_log</strong>&#xFF0C; &#x70B9;&#x51FB; Next step</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129170439225.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129170439225.png" alt="">
+     </a></p>
+<p>&#x5728;step 2&#x4E2D;&#x9009;&#x62E9;<strong>@timestamp</strong>, &#x70B9;&#x51FB;<strong>Create index pattern</strong></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129171746223.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129171746223.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5728; <strong>Discover</strong> &#x90E8;&#x5206;&#x9009;&#x62E9;&#x521A;&#x521A;&#x751F;&#x6210;&#x7684;index pattern <strong>ipmitool_log</strong> &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6574;&#x4E2A;&#x65E5;&#x5FD7;&#x7684;&#x60C5;&#x51B5;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129171952121.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129171952121.png" alt="">
+     </a></p>
+<p>&#x53EF;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#x60C5;&#x51B5;&#x6765;&#x6574;&#x4F53;&#x4E86;&#x89E3;&#x65E5;&#x5FD7;&#x60C5;&#x51B5;</p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129172157541.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129172157541.png" alt="">
+     </a></p>
+<p>     <a href="assets/Elasticsearch_related/markdown-img-paste-20181129172257358.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Elasticsearch_related/markdown-img-paste-20181129172257358.png" alt="">
+     </a></p>
+</li>
+<li><p>&#x5B8C;&#x6210;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Using_Livy_with_FusionInsight.html" class="navigation navigation-prev " aria-label="Previous page: 对接Apache Livy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Elasticsearch_related.html" class="navigation navigation-next " aria-label="Next page: 对接Kibana">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对接Logstash","level":"2.6.4","depth":2,"next":{"title":"对接Kibana","level":"2.6.5","depth":2,"path":"Other/Elasticsearch_related.md","ref":"Other/Elasticsearch_related.md","articles":[]},"previous":{"title":"对接Apache Livy","level":"2.6.3","depth":2,"path":"Other/Using_Livy_with_FusionInsight.md","ref":"Other/Using_Livy_with_FusionInsight.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Other/Elasticsearch_related.md","mtime":"2018-11-29T09:56:07.310Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T09:56:38.606Z"},"basePath":"..","book":{"language":"zh-hans"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-download-chapter/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-wis/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fixhead/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

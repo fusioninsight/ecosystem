@@ -80,6 +80,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Elasticsearch_related.html" />
+    
     
     <link rel="prev" href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" />
     
@@ -835,7 +837,59 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6.4" >
+        <li class="chapter " data-level="2.6.4" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接Logstash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.5" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接Kibana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.6" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接elasticsearch-head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.7" data-path="Elasticsearch_related.html">
+            
+                <a href="Elasticsearch_related.html">
+            
+                    
+                    对接beats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.8" >
             
                 <span>
             
@@ -1213,10 +1267,14 @@ requests.delete(session_url, headers=headers)
 
             
                 
-                <a href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 对接Gis-Tools-For-Hadoop">
+                <a href="Using_GIS_Tools_for_Hadoop_with_FusionInsight.html" class="navigation navigation-prev " aria-label="Previous page: 对接Gis-Tools-For-Hadoop">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Elasticsearch_related.html" class="navigation navigation-next " aria-label="Next page: 对接Logstash">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1225,7 +1283,7 @@ requests.delete(session_url, headers=headers)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接Apache Livy","level":"2.6.3","depth":2,"next":{"title":"IBM WAS (TBD)","level":"2.6.4","depth":2,"ref":"","articles":[]},"previous":{"title":"对接Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Other/Using_Livy_with_FusionInsight.md","mtime":"2018-11-08T06:56:11.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T07:26:36.763Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"对接Apache Livy","level":"2.6.3","depth":2,"next":{"title":"对接Logstash","level":"2.6.4","depth":2,"path":"Other/Elasticsearch_related.md","ref":"Other/Elasticsearch_related.md","articles":[]},"previous":{"title":"对接Gis-Tools-For-Hadoop","level":"2.6.2","depth":2,"path":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","ref":"Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Other/Using_Livy_with_FusionInsight.md","mtime":"2018-11-07T08:42:16.929Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T09:56:38.606Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
