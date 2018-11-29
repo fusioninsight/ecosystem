@@ -876,7 +876,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td > </td>
   <td ><a
   href="Other/Elasticsearch_related.md"><span class="label
-  label-Elasticsearch ">Elasticsearch</span></a></td>
+  label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
   <td >Kibana</td>
@@ -887,7 +887,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td > </td>
   <td ><a
   href="Other/Elasticsearch_related.md"><span class="label
-  label-Elasticsearch ">Elasticsearch</span></a></td>
+  label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
   <td >elasticsearch-head</td>
@@ -898,7 +898,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td > </td>
   <td ><a
   href="Other/Elasticsearch_related.md"><span class="label
-  label-Elasticsearch ">Elasticsearch</span></a></td>
+  label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
   <td >beats</td>
@@ -909,7 +909,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td > </td>
   <td ><a
   href="Other/Elasticsearch_related.md"><span class="label
-  label-Elasticsearch ">Elasticsearch</span></a></td>
+  label-ElasticSearch ">ElasticSearch</span></a></td>
  </tr>
  <tr>
   <td rowspan=2 >NeoKylin</td>
