@@ -59,4 +59,8 @@
   * [对接FUSE](Other/Using_FUSE_with_FusionInsight.md)
   * [对接Gis-Tools-For-Hadoop](Other/Using_GIS_Tools_for_Hadoop_with_FusionInsight.md)
   * [对接Apache Livy](Other/Using_Livy_with_FusionInsight.md)
+  * [对接Logstash](Other/Elasticsearch_related.md)
+  * [对接Kibana](Other/Elasticsearch_related.md)
+  * [对接elasticsearch-head](Other/Elasticsearch_related.md)
+  * [对接beats](Other/Elasticsearch_related.md)
   * IBM WAS (TBD)
