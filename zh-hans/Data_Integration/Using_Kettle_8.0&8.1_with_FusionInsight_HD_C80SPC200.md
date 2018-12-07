@@ -4,7 +4,7 @@
 
 > Pentaho8.0.0  <--> FusionInsight HD V100R002C80SPC200
 >
-> Pentaho8.1.0  <--> FusionInsight HD V100R002C80SPC200
+>仅限POC使用 Pentaho8.1.0  <--> FusionInsight HD V100R002C80SPC200
 
 ## Windows平台
 
@@ -39,7 +39,7 @@
   * 解压得到pdi-ce-8.0.0.0-28;
   * 获取Fi28的适配包，放入入`\data-integration\plugins\pentaho-big-data-plugin\hadoop-configurations` 目录下;
 
-    >该适配包请联系华为FusionInsight Openlab小组获取
+
 
 * 获取FusionInsightHD客户端配置文件
 
