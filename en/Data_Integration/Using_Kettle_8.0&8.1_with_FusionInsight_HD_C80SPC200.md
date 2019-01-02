@@ -37,9 +37,12 @@
   ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/image02.png)
 
   * 解压得到pdi-ce-8.0.0.0-28;
-  * 获取Fi28的适配包，放入入`\data-integration\plugins\pentaho-big-data-plugin\hadoop-configurations` 目录下;
+  * 获取FusionInsight的适配包文件`pentaho-hadoop-shims-hdp26-8.1.0.0-SNAPSHOT.jar`和`pentaho-hadoop-shims-hdp26-hbase-comparators-8.1.0.0-SNAPSHOT.jar`,替换目录 `\data-integration\plugins\pentaho-big-data-plugin\hadoop-configurations\hdp26\` 下的原有文件;
+  * 替换hdp26\lib目录下Hive相关的jar包以及hdp26\lib\client目录下hdfs相关的jar包
 
+  ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/f2c7a.png)
 
+  ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/62015.png)
 
 * 获取FusionInsightHD客户端配置文件
 
@@ -68,10 +71,7 @@
 
   * Windows平台
 
-    双击data-integration目录下的Spoon.bat,进入界面后，在上方菜单栏选择工具->Hadoop Distribution,选择`FusionInsight HD C80 200`
-
-    ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/image04.png)
-
+    双击data-integration目录下的Spoon.bat,进入界面后，在上方菜单栏选择工具->Hadoop Distribution,选择`HortonWorks HDP 2.6.x`
 
 ### 对接Hive
 
