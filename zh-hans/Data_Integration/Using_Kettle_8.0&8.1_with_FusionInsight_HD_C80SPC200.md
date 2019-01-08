@@ -27,7 +27,7 @@
 
   * 解压后得到Kerberos配置文件krb5.conf和用户密钥文件user.keytab
 
-* 将krb5.conf文件复制到本地某目录下，例如`C:`
+* 将krb5.conf文件后缀名修改为ini,将krb5.ini文件复制到`C:\Windows`目录下.
 
 ## 配置并启动Kettle
 
@@ -44,6 +44,8 @@
 
   ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/62015.png)
 
+  并添加以下两个包
+  ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/674e5.png)
 
 * 获取FusionInsightHD客户端配置文件
 
