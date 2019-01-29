@@ -7,6 +7,10 @@
 ##准备工作
 
   * 下载安装RapidMiner Studio, 当前最新版本为8.2.001,下载地址 <https://rapidminer.com/>
+  * 安装完成后在主界面顶部菜单栏选择`Extensions->Marketplace`,搜索`radoop`,安装后重启rapidminer
+
+    ![](assets/Using_RapidMiner_with_FusionInsight/ea841.png)
+
   * 修改本地host文件，路径为C:\Windows\System32\drivers\etc，加入集群各个节点IP与主机名对应关系，保存文件。
   * 设置Kerberos的配置文件
 
@@ -22,28 +26,23 @@
 
       ![](assets/Using_Rapidminer_with_FusionInsight/img002.png)
 
-      打开hdfs-site.xml文件，将以下属性以及对应的value删除：
-         ```
-         dfs.client.failover.proxy.provider.hacluster
-         ```
-      打开core-site.xml文件，修改以下属性的value
-         ```
-         fs.defaultFS         
-         ```
-      修改为 namenodeIP:dfs.namenode.rpc.port的形式，例如
-         ```
-         172.21.3.116:25000
-         ```
-    * （可选）进入Spark组件的Jar包目录“\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.1.0.tar.gz\spark\jars”，将所有jar包复制出来，保存在jars文件夹里。
+     - 打开`yarn-site.xml`,删除以下参数配置
+     ```
+     <property>
+     <name>audit.service.name</name>
+     <value>Yarn</value>
+     </property>
+     ```
+    * 进入Spark组件的Jar包目录“\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.1.0.tar.gz\spark\jars”，将所有jar包复制出来，保存在本机某目录下，例如`C:/jars`。
 
 ##集群配置
 
   * 配置UDP端口绑定
 
     - 下载安装UDP端口绑定工具uredir，下载地址<https://github.com/troglobit/uredir>
-    - 编译安装完成后，分别上传至KDC服务所在的主备节点，进入uredir执行文件所在目录，执行以下命令进行端口绑定,其中IP为所在节点IP
+    - 编译安装完成后，分别上传至KDC服务所在的主备节点(可在krb5.conf文件中查看)，进入uredir执行文件所在目录，执行以下命令进行端口绑定,其中IP为所在节点IP
       ```
-      ./uredir IP 88 IP 21732
+      ./uredir IP:88 IP:21732
       ```
 
   * 配置Radoop依赖jar包
@@ -53,9 +52,30 @@
 
     - 将jar包上传至集群每个节点相同的路径下，例如/usr/local/lib/radoop/
 
-    - 在集群主节点和备节点，分别上传Radoop的jar包至以下路径
+    - 在集群HiveServer所在节点，分别上传Radoop的jar包至以下路径，并修改所有者和执行权限
       - Hive服务端的lib路径"/opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib"，
       - Mapreduce服务端的lib路径："/opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib"
+
+     ```
+      cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib
+      chown omm:wheel radoop_hive-v4.jar
+      chown omm:wheel rapidminer_libs-9.1.0.jar
+      chmod 700 radoop_hive-v4.jar
+      chmod 700 rapidminer_libs-9.1.0.jar
+
+      cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib
+      chown omm:ficommon radoop_hive-v4.jar
+      chown omm:ficommon rapidminer_libs-9.1.0.jar
+      chmod 750 radoop_hive-v4.jar
+      chmod 750 rapidminer_libs-9.1.0.jar
+     ```
+  * 在FusionInsight Manager 界面添加Hive白名单配置
+      ![](assets/Using_RapidMiner_with_FusionInsight/ba4b4.png)
+      ```
+      radoop\.operation\.id|mapred\.job\.name|hive\.warehouse\.subdir\.inherit\.perms|hive\.exec\.max\.dynamic\.partitions|hive\.exec\.max\.dynamic\.partitions\.pernode|spark\.app\.name
+      ```
+      需要以`|`分割
+   * 保存配置后，重启HiveServer
 
   * 创建Radoop UDF函数
 
@@ -161,7 +181,7 @@
       - Database Name： 在Hive中创建的Radoop Function所在的数据库名称
       - Customer database for UDFs: 同Database Name
 
-        ![](assets/Using_RapidMiner_with_FusionInsight/img010.png)
+      ![](assets/Using_RapidMiner_with_FusionInsight/img010.png)
 
     * 点击OK->Proced Anyway->Save
 
