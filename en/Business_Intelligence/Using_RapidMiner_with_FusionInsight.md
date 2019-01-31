@@ -1,76 +1,94 @@
-# RapidMiner对接FusionInsight
+# Connection between RapidMiner with FusionInsightHD
 
-## 适用场景
+##  Succeeded Case
 
 > Rapidminer Studio 8.2.001 <-> FusionInsight HD V100R002C80SPC200
 
-##准备工作
+##preparation
 
-  * 下载安装RapidMiner Studio, 当前最新版本为8.2.001,下载地址 <https://rapidminer.com/>
-  * 修改本地host文件，路径为C:\Windows\System32\drivers\etc，加入集群各个节点IP与主机名对应关系，保存文件。
-  * 设置Kerberos的配置文件
+  * Download and install RapidMiner Studio, download site <https://rapidminer.com/>
+  * Start rapidminer, on the top of the main menu, choose `Extensions->Marketplace`,type `radoop`,install it and restart rapidminer
 
-    在FusionInsight Manager创建一个角色与“人机”用户，具体请参见《FusionInsight HD 管理员指南》的创建用户章节。角色根据业务需要授予Spark，Hive，HDFS的访问权限，并将用户加入角色。例如，创建用户“developuser”并下载对应的keytab文件user.keytab以及krb5.conf文件。
+    ![](assets/Using_RapidMiner_with_FusionInsight/ea841.png)
 
-  * 准备FusionInsight客户端配置文件以及jar包
+  * Configure the local host file，file path is `C:\Windows\System32\drivers\etc`，add the cluster node ip and host name and save the file.
+  * Configure Kerberos file
 
-    * 在集群的Manager中，选择服务->下载客户端->完整客户端
+    Created a user with "Human-Machine" as its type( For detail, take product documentation as a reference ), grant the Hive, Spark,HDFS privileges to this user. For example, create a user named **developuser**, download the **user.keytab** and **krb5.conf** of the user and save them in your computer.
+
+  * Prepare the FusionInsight client configuration filesystem and jar files
+
+    * In the Manager GUI，choose `Service->Download Client->Only Configuration File`
 
       ![](assets/Using_Rapidminer_with_FusionInsight/img001.png)
 
-    * 解压后，进入HDFS，Hive，Yarn组件的config目录，找到如下的配置文件，复制到一个文件夹里，例如命名为config。
+    * Unzip the file,find the following files,copy them into a directory,like `../config`.
 
       ![](assets/Using_Rapidminer_with_FusionInsight/img002.png)
 
-      打开hdfs-site.xml文件，将以下属性以及对应的value删除：
-         ```
-         dfs.client.failover.proxy.provider.hacluster
-         ```
-      打开core-site.xml文件，修改以下属性的value
-         ```
-         fs.defaultFS         
-         ```
-      修改为 namenodeIP:dfs.namenode.rpc.port的形式，例如
-         ```
-         172.21.3.116:25000
-         ```
-    * （可选）进入Spark组件的Jar包目录“\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.1.0.tar.gz\spark\jars”，将所有jar包复制出来，保存在jars文件夹里。
+     - Open `yarn-site.xml`,delete the following property:
+     ```
+     <property>
+     <name>audit.service.name</name>
+     <value>Yarn</value>
+     </property>
+     ```
+    * Login to one of the cluster nodes, go to the following path`\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.1.0.tar.gz\spark\jars`,download the file directory `/jars`,save it in your computer,like`C:/jars`。
 
-##集群配置
+##Configure the cluster
 
-  * 配置UDP端口绑定
+  * Bind the UDP port
 
-    - 下载安装UDP端口绑定工具uredir，下载地址<https://github.com/troglobit/uredir>
-    - 编译安装完成后，分别上传至KDC服务所在的主备节点，进入uredir执行文件所在目录，执行以下命令进行端口绑定,其中IP为所在节点IP
+    - Download the UDP port bind tool `uredir`,website is <https://github.com/troglobit/uredir>
+    - After building and installing, we get the executing file `uredir`,upload it to the KDC server nodes in the cluster,and run the following command,here IP refers to the node ip.
       ```
-      ./uredir IP 88 IP 21732
+      ./uredir IP:88 IP:21732
       ```
 
-  * 配置Radoop依赖jar包
-    - 在Radoop文档中心，下载Radoop依赖jar包，下载地址<https://docs.rapidminer.com/latest/radoop/installation/operation-and-maintenance.html>,下载与安装的RapidMiner版本对应的jar包。
+  * Configure Radoop Jars
+    - Download Radoop jars in this address<https://docs.rapidminer.com/latest/radoop/installation/operation-and-maintenance.html>,get the correct version。
 
       ![](assets/Using_Rapidminer_with_FusionInsight/img003.png)
 
-    - 将jar包上传至集群每个节点相同的路径下，例如/usr/local/lib/radoop/
+    - Upload the jar files to each node of the cluster,eg,`/usr/local/lib/radoop/`
 
-    - 在集群主节点和备节点，分别上传Radoop的jar包至以下路径
-      - Hive服务端的lib路径"/opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib"，
-      - Mapreduce服务端的lib路径："/opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib"
+    - In the HiveServer node of the cluster,uplaod the Radoop jar files to the following path and change their owner and execution authority
+      ```
+      cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib
+      chown omm:wheel radoop_hive-v4.jar
+      chown omm:wheel rapidminer_libs-9.1.0.jar
+      chmod 700 radoop_hive-v4.jar
+      chmod 700 rapidminer_libs-9.1.0.jar
 
-  * 创建Radoop UDF函数
+      cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib
+      chown omm:ficommon radoop_hive-v4.jar
+      chown omm:ficommon rapidminer_libs-9.1.0.jar
+      chmod 750 radoop_hive-v4.jar
+      chmod 750 rapidminer_libs-9.1.0.jar
+     ```
+  * In the FusionInsight Manager GUI, choose `Service->Hive->Service Configuration`add the following configuration
 
-    - 在主节点执行如下命令：
+    ```
+    radoop\.operation\.id|mapred\.job\.name|hive\.warehouse\.subdir\.inherit\.perms|hive\.exec\.max\.dynamic\.partitions|hive\.exec\.max\.dynamic\.partitions\.pernode|spark\.app\.name
+    ```
+    ![](assets/Using_RapidMiner_with_FusionInsight/6d05f.png)
+    - Notice that there should be a `|` as seperater
+
+   * Save the configuration，restart HiveServer
+
+  * Create Radoop UDF functions
+
+    - Run the following command in the client node, login to the Hive database
         ```
-        #cd /opt/hadoopclient
-        #source bigdata_env
-        #kinit developuser
+        source /opt/hadoopclient、bigdata_env
+        kinit developuser
+        beeline
         ```
-        输入developuser用户密码，执行beeline，进入Hive
 
-    -   Hive中创建数据库，例如创建数据库rapidminer,执行以下命令：
+    -   create a database in Hive, for example `rapidminer`, and create functions,run the following commands in beeline mode
         ```
-        create database rapidminer；
-        use rapidminer；
+        create database rapidminer;
+        use rapidminer;
         DROP FUNCTION IF EXISTS r3_add_file;
         DROP FUNCTION IF EXISTS r3_apply_model;
         DROP FUNCTION IF EXISTS r3_correlation_matrix;
@@ -113,92 +131,85 @@
         CREATE FUNCTION r3_sleep AS 'eu.radoop.datahandler.hive.udf.GenericUDFSleep';
         ```
 
-##RapidMiner配置
+##RapidMiner Configuration
 
-  * 在RapidMiner中，菜单选择Connections->Manage Radoop Connections
-  * 在弹出的对话框中选择New Connections->Import Hadoop Configuration Files，选择配置文件所在文件夹，点击Import Configuration
+  * In RapidMiner sStadio，choose `Connections->Manage Radoop Connections` in the top menu.
+  * choose `New Connections->Import Hadoop Configuration Files`,choose the configuration files downloaded from the cluster,click `Import Configuration`
 
     ![](assets/Using_Rapidminer_with_FusionInsight/img004.png)
 
-  * 导入成功后点击Next，进入连接配置窗口，根据左侧菜单栏，进行如下填写：
+  * After the import, click `Next`, go to the Connection settings window,configure ad following:
 
     * Global：
       - Hadoop Version：Other（Hadoop 2X line）
-      - Additional Libraries Directory：Spark组件的jars包
-      - Client Principal： Kerberos用户名@HADOOP.com
-      - Keytab File: 从Manager下载的keytab文件
-      - KDC Address： 集群KDC所在服务器IP
-      - REALM： HADOOP.COM
-      - Kerberos Config File: 从Manager下载的krb5配置文件
+      - Additional Libraries Directory: Spark jar files downloaded from the cluster
+      - Client Principal: `Kerberos user name`@HADOOP.com
+      - Keytab File: the keytab file downloaded from manager
+      - KDC Address: the KDC server IP(see the krb5.conf file)
+      - REALM: HADOOP.COM
+      - Kerberos Config File: the krb5 file downloaded from manager
 
       ![](assets/Using_Rapidminer_with_FusionInsight/img005.png)
 
     * Hadoop：
-      - 在左上角搜索框中搜索split，在搜索结果中取消勾选mapreduce.input.fileinputformat.split.maxsize参数
+      - At the filter in upper right corner, search `split` , uncheck `mapreduce.input.fileinputformat.split.maxsize`
 
         ![](assets/Using_Rapidminer_with_FusionInsight/img006.png)
 
-      - 搜索classpath，在搜索结果中取消勾选mapreduce.application.classpath参数
+      - Search `classpath`,uncheck`mapreduce.application.classpath`
 
         ![](assets/Using_Rapidminer_with_FusionInsight/img007.png)
 
     * Spark：
       - Spark Version：Spark2.1
-      - Spark Archive（or libs）Path: local:///opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/install/FusionInsight-Spark2x-2.1.0/spark/jars
+      - Spark Archive(or libs)Path: local:///opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/install/FusionInsight-Spark2x-2.1.0/spark/jars
       - Spark Resource Allocation Policy：Static，Default Configuration
-      - Advanced Spark Parameters：添加spark.driver.extraJavaOptions和spark.executor.extraJavaOptions两个参数
+      - Advanced Spark Parameters：add the following two parameters for spark:`park.driver.extraJavaOptions` and `spark.executor.extraJavaOptions`
 
         ![](assets/Using_Rapidminer_with_FusionInsight/img008.png)
 
-      - 参数value在Manager，Services->Spark2X Configuration->所有配置，搜索extraJavaOptions，选择Spark2x->SparkResource2x中的这两个参数值，将其中使用的所有“./”相对路径替换为服务端Spark配置文件所在的绝对路径，例如“/opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/1_21_SparkResource2x/etc”
-
+      - The value can be found in manager GUI, choose `Services->Spark2X Configuration->type all`，search `extraJavaOptions` in the search bar, choose the parameters in `Spark2x->SparkResource2x`
         ![](assets/Using_Rapidminer_with_FusionInsight/img009.png)
 
-    * Hive：
-      - Hive Version：Hive Server2
-      - Hive Server Address：Hive 服务所在节点IP
-      - Hive Port： 21066
-      - Database Name： 在Hive中创建的Radoop Function所在的数据库名称
-      - Customer database for UDFs: 同Database Name
+      - Copy the values into a text file, replace the relative path `./`in the value with absolute path in the cluster, like `/opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/1_21_SparkResource2x/etc`, then copy the values into rapidminer spark configuration
 
-        ![](assets/Using_RapidMiner_with_FusionInsight/img010.png)
+        ![](assets/Using_RapidMiner_with_FusionInsight/74e57.png)
 
-    * 点击OK->Proced Anyway->Save
+    * Hive:
+      - Hive Version: Hive Server2
+      - Hive Server Address：Hive Server IP
+      - Hive Port: 21066
+      - Database Name: the database name created in Hive,here is rapidminer
+      - Customer database for UDFs: same as before
 
-##测试连接
+      ![](assets/Using_RapidMiner_with_FusionInsight/img010.png)
 
-  * 点击Configure,在Global页面，点击Test，Test Results显示如下，表明Global测试成功
+    * click `OK->Proced Anyway->Save`
+
+##Test the Connection
+
+  * Click Configure, in Global tab, click Test，Test Results show as following:
 
     ![](assets/Using_Rapidminer_with_FusionInsight/img011.png)
 
-  * 在Hadoop页面，点击Test，Test Results显示如下，表明Hadoop测试成功
+  * In Hadoop tab，click Test,Test Results show as following:
 
     ![](assets/Using_Rapidminer_with_FusionInsight/img012.png)
 
-  * 在Spark页面，点击Test，Test Results显示如下，表明Spark测试成功
+  * In Spark tab,click Test,Test Results show as following:
 
     ![](assets/Using_Rapidminer_with_FusionInsight/img013.png)
 
-  * 在Hive页面，点击Test，Test Results显示如下，表明Hive测试成功
+  * In Hive tab, click Test, Test Results show as following:
 
     ![](assets/Using_RapidMiner_with_FusionInsight/img014.png)
 
-  * 在Manage Radoop Connections 窗口，选中所创建的连接，点击Full test进行完整测试，Test Results显示如下，表明完整测试通过
+  * Click Full test,Test Results show as following:
 
     ![](assets/Using_RapidMiner_with_FusionInsight/img015.png)
 
-##Radoop样例运行
-  * 在RapidMiner Studio 主页面，Help->Tutorials->User Hadoop->Rapidminer Radoop
-    - 根据Tutorials的指导运行样例，运行结果如下：
+##Radoop Demo
+  * In RapidMiner Studio main menu,choose `Help->Tutorials->User Hadoop->Rapidminer Radoop`
+    - Run the demo accordding to the Tutorials, get the follwing results
 
     ![](assets/Using_Rapidminer_with_FusionInsight/img016.png)
-
-##FAQ
-  * 测试连接时，提示ICMP port unreachable/Error retrieving Hive object list问题
-    - 检查集群中端口绑定程序是否正常运行，绑定的端口是否正确。RapidMiner在测试时，会与集群的88端口连接进行Kerberos认证，而FusionInsight平台对端口进行了规划，Kerberos认证使用的端口是21732。
-
-  * 测试Spark时，提示GSS initiate failed
-    - 检查本地host文件是否添加了集群IP与主机名的对应关系。
-
-  * 测试Spark时，将各种版本都测试了一遍，最后提示Spark test failed
-    - 检查添加的两个Advanced Parameters是否填写正确，其value值中的绝对路径对于每个集群是不一样的，当集群重装后需要修改该值。
