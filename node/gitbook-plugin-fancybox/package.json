@@ -1,0 +1,119 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-fancybox",
+        "raw": "gitbook-plugin-fancybox@3.0.1",
+        "rawSpec": "3.0.1",
+        "scope": null,
+        "spec": "3.0.1",
+        "type": "version"
+      },
+      "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem"
+    ]
+  ],
+  "_from": "gitbook-plugin-fancybox@3.0.1",
+  "_id": "gitbook-plugin-fancybox@3.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-fancybox",
+  "_nodeVersion": "4.4.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/gitbook-plugin-fancybox-3.0.1.tgz_1489045064410_0.18435997911728919"
+  },
+  "_npmUser": {
+    "email": "lingyucoder@gmail.com",
+    "name": "skyinlayer"
+  },
+  "_npmVersion": "3.8.9",
+  "_phantomChildren": {
+    "boolbase": "1.0.0",
+    "core-util-is": "1.0.2",
+    "dom-serializer": "0.1.0",
+    "domelementtype": "1.2.1",
+    "entities": "1.1.2",
+    "inherits": "2.0.3",
+    "isarray": "0.0.1",
+    "lodash": "3.10.1",
+    "nth-check": "1.0.2"
+  },
+  "_requested": {
+    "name": "gitbook-plugin-fancybox",
+    "raw": "gitbook-plugin-fancybox@3.0.1",
+    "rawSpec": "3.0.1",
+    "scope": null,
+    "spec": "3.0.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-fancybox/-/gitbook-plugin-fancybox-3.0.1.tgz",
+  "_shasum": "70ebc226f508bc357ab3ac0c000554bbb4910445",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-fancybox@3.0.1",
+  "_where": "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem",
+  "author": {
+    "name": "LingyuCoder"
+  },
+  "bugs": {
+    "url": "https://github.com/ly-tools/gitbook-plugin-fancybox/issues"
+  },
+  "dependencies": {
+    "cheerio": "~0.19.0",
+    "multiline": "~1.0.2",
+    "underscore": "~1.8.3"
+  },
+  "description": "A gitbook plugin to show image by graceful jQuery fancy box",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "70ebc226f508bc357ab3ac0c000554bbb4910445",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-fancybox/-/gitbook-plugin-fancybox-3.0.1.tgz"
+  },
+  "engines": {
+    "gitbook": ">=3.0.0-pre.0"
+  },
+  "gitHead": "03b7425cade1398171a3efa99c7757fec92dd5f1",
+  "gitbook": {
+    "properties": {
+      "helpers": {
+        "default": {
+          "buttons": {}
+        },
+        "type": "object"
+      }
+    }
+  },
+  "homepage": "https://github.com/ly-tools/gitbook-plugin-fancybox",
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "fancybox",
+    "image",
+    "jquery"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "lingyucoder@gmail.com",
+      "name": "skyinlayer"
+    }
+  ],
+  "name": "gitbook-plugin-fancybox",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ly-tools/gitbook-plugin-fancybox.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "version": "3.0.1"
+}

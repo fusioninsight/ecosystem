@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-fixhead",
+        "raw": "gitbook-plugin-fixhead@0.0.1",
+        "rawSpec": "0.0.1",
+        "scope": null,
+        "spec": "0.0.1",
+        "type": "version"
+      },
+      "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem"
+    ]
+  ],
+  "_from": "gitbook-plugin-fixhead@0.0.1",
+  "_id": "gitbook-plugin-fixhead@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-fixhead",
+  "_nodeVersion": "4.3.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/gitbook-plugin-fixhead_0.0.1_1528482172794_0.7943325680283133"
+  },
+  "_npmUser": {
+    "email": "fengyunyx@gmail.com",
+    "name": "fengyunyx"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gitbook-plugin-fixhead",
+    "raw": "gitbook-plugin-fixhead@0.0.1",
+    "rawSpec": "0.0.1",
+    "scope": null,
+    "spec": "0.0.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-fixhead/-/gitbook-plugin-fixhead-0.0.1.tgz",
+  "_shasum": "f62dc8915961318ce660e164c2867731d269b91e",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-fixhead@0.0.1",
+  "_where": "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem",
+  "dependencies": {},
+  "description": "fixhead",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "fileCount": 5,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbGsl9CRA9TVsSAnZWagAAeHUP/jC2Al3jnN4ghpNuAq7V\n1deMBqUbJe2iwx8QE2tWtporRXVBFGj0FRrFhMRHBA9rfFhOSv3ats/zUmoY\nZmJQw5/uSfJY7Ct491a1dkUgVk5Fm8uz56M+LW5yjsrHuU/BlB3s96CQmN/y\nNSXhy+Gp6Uk8BgquCNAGNeDBc/KV8Zk/FhI+H7A7G529jVltVrGejTQaa1q0\n309/9tXUXOBwsigNXVv81Fkknv87Px2pXEg2ihIxe5JaqEseaeY74A9FJbff\nrETL7JaBGX3EQwMDDkdCoIMsbr5my7s1XTr04S3x4p44/41W33bWGbrDkpJ7\nizkNe3rnaKhuLJG+r9Il+s8guExg/d9trFhh4GPfUSOQTmOVqZLtWZMxbzLT\n22PMUF+9FfEsTkowqTCug0RFTmHueVZXaKVHapIp2m+Yk2sk3vl4sMH1kAFq\nc4U8VLtHG5l5lzv7AiMtKk32RYr1PfORhjrX+L/liKXOG2UvkbM7+7uSCobs\ngmmf8f7UUzbe+SsPo1nU9vsA2fhWhnYviKY/3uf1UA6T/LbnsXC6XzHmW8Kq\na8Thm3B2lXN1o+sa1joVzhQJA5VDlzMrSTET78Zh1vZsDrkCOjDIP0/OVOvn\nANPC8rvhn7jdziPOZ8oiM1jOGc2wuvWparQK4DfEa04S6dxlStl+51nXput2\nrC8M\r\n=iekt\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "f62dc8915961318ce660e164c2867731d269b91e",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-fixhead/-/gitbook-plugin-fixhead-0.0.1.tgz",
+    "unpackedSize": 1608
+  },
+  "engines": {
+    "gitbook": ">3.0.0"
+  },
+  "maintainers": [
+    {
+      "email": "fengyunyx@gmail.com",
+      "name": "fengyunyx"
+    }
+  ],
+  "name": "gitbook-plugin-fixhead",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.0.1"
+}

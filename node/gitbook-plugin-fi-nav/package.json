@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-fi-nav",
+        "raw": "gitbook-plugin-fi-nav@0.0.4",
+        "rawSpec": "0.0.4",
+        "scope": null,
+        "spec": "0.0.4",
+        "type": "version"
+      },
+      "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem"
+    ]
+  ],
+  "_from": "gitbook-plugin-fi-nav@0.0.4",
+  "_id": "gitbook-plugin-fi-nav@0.0.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-fi-nav",
+  "_nodeVersion": "4.3.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/gitbook-plugin-fi-nav-0.0.4.tgz_1504774417816_0.35629625245928764"
+  },
+  "_npmUser": {
+    "email": "fengyunyx@gmail.com",
+    "name": "fengyunyx"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gitbook-plugin-fi-nav",
+    "raw": "gitbook-plugin-fi-nav@0.0.4",
+    "rawSpec": "0.0.4",
+    "scope": null,
+    "spec": "0.0.4",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-fi-nav/-/gitbook-plugin-fi-nav-0.0.4.tgz",
+  "_shasum": "5dcf5530b8e4d84b1b8e1a284c2f48dd1d02a271",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-fi-nav@0.0.4",
+  "_where": "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem",
+  "author": {
+    "name": "openlab"
+  },
+  "dependencies": {
+    "cheerio": "*",
+    "colors": "^1.1.2",
+    "github-slugid": "1.0.1"
+  },
+  "description": "navigation",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "5dcf5530b8e4d84b1b8e1a284c2f48dd1d02a271",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-fi-nav/-/gitbook-plugin-fi-nav-0.0.4.tgz"
+  },
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "gitHead": "53f326eada02fe506e7fdfb5b647c79ecb0e8be9",
+  "maintainers": [
+    {
+      "email": "fengyunyx@gmail.com",
+      "name": "fengyunyx"
+    }
+  ],
+  "name": "gitbook-plugin-fi-nav",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.0.4"
+}

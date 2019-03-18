@@ -59,15 +59,15 @@
      ```
       cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib
       chown omm:wheel radoop_hive-v4.jar
-      chown omm:wheel rapidminer_libs-9.1.0.jar
+      chown omm:wheel rapidminer_libs-8.2.0.jar
       chmod 700 radoop_hive-v4.jar
-      chmod 700 rapidminer_libs-9.1.0.jar
+      chmod 700 rapidminer_libs-8.2.0.jar
 
       cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib
       chown omm:ficommon radoop_hive-v4.jar
-      chown omm:ficommon rapidminer_libs-9.1.0.jar
+      chown omm:ficommon rapidminer_libs-8.2.0.jar
       chmod 750 radoop_hive-v4.jar
-      chmod 750 rapidminer_libs-9.1.0.jar
+      chmod 750 rapidminer_libs-8.2.0.jar
      ```
   * 在FusionInsight Manager 界面添加Hive白名单配置
       ![](assets/Using_RapidMiner_with_FusionInsight/ba4b4.png)
