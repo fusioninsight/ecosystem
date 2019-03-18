@@ -384,7 +384,7 @@ FusionInsight supports the standard open-source Hadoop interface, it can connect
   class="label label-Kafka ">Kafka</span></a></td>
  </tr>
  <tr>
-  <td rowspan=2 >Kettle</td>
+  <td >Kettle</td>
   <td >6.1</td>
   <td >　</td>
   <td >　</td>
@@ -397,20 +397,6 @@ FusionInsight supports the standard open-source Hadoop interface, it can connect
   <td ><a
   href="Data_Integration/Using_Kettle_6.1_with_FusionInsight_HD_C60U10.md"><span
   class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
- </tr>
- <tr>
-  <td >8.0&8.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a
-  href="Data_Integration/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200.md"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-HBase ">HBase</span></br><span
   class="label label-Hive ">Hive</span></a></td>
  </tr>
  <tr>

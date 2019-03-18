@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-download-chapter",
+        "raw": "gitbook-plugin-download-chapter@0.0.6",
+        "rawSpec": "0.0.6",
+        "scope": null,
+        "spec": "0.0.6",
+        "type": "version"
+      },
+      "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem"
+    ]
+  ],
+  "_from": "gitbook-plugin-download-chapter@0.0.6",
+  "_id": "gitbook-plugin-download-chapter@0.0.6",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-download-chapter",
+  "_nodeVersion": "4.3.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/gitbook-plugin-download-chapter-0.0.6.tgz_1503911734894_0.22133628791198134"
+  },
+  "_npmUser": {
+    "email": "fengyunyx@gmail.com",
+    "name": "fengyunyx"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gitbook-plugin-download-chapter",
+    "raw": "gitbook-plugin-download-chapter@0.0.6",
+    "rawSpec": "0.0.6",
+    "scope": null,
+    "spec": "0.0.6",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-download-chapter/-/gitbook-plugin-download-chapter-0.0.6.tgz",
+  "_shasum": "8ab258ae19cc017787ebee2d6eb351d4c521eee1",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-download-chapter@0.0.6",
+  "_where": "C:\\Users\\wangna\\Documents\\GitHub\\ecosystem",
+  "dependencies": {},
+  "description": "download chapter pdf",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8ab258ae19cc017787ebee2d6eb351d4c521eee1",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-download-chapter/-/gitbook-plugin-download-chapter-0.0.6.tgz"
+  },
+  "engines": {
+    "gitbook": ">3.0.0"
+  },
+  "gitHead": "451d7e93a5b9183340d5b05247b5e2f946d8259f",
+  "maintainers": [
+    {
+      "email": "fengyunyx@gmail.com",
+      "name": "fengyunyx"
+    }
+  ],
+  "name": "gitbook-plugin-download-chapter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.0.6"
+}
