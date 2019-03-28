@@ -1,8 +1,8 @@
 ﻿<!-- ex_nonav -->
 
-# FusionInsight Ecosystom Map
+# FusionInsight生态地图
 
-FusionInsight supports the standard open-source Hadoop interface, it can connect with the following third-party softwares.
+FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具进行对接
 
 <table class="tg">
  <thead>
@@ -232,7 +232,7 @@ FusionInsight supports the standard open-source Hadoop interface, it can connect
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=19 >Data Integration</td>
+  <td rowspan=18 >Data Integration</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -466,7 +466,7 @@ FusionInsight supports the standard open-source Hadoop interface, it can connect
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=12 >Integrated Development</td>
+  <td rowspan=13 >Integrated Development</td>
   <td >RStudio</td>
   <td >1.0.153</td>
   <td >　</td>
@@ -616,6 +616,18 @@ FusionInsight supports the standard open-source Hadoop interface, it can connect
   label-Hive ">Hive</span></br><span class="label
   label-SparkSQL ">SparkSQL</span></a></td>
   <td >　</td>
+ </tr>
+ <tr>
+  <td >Splunk</td>
+  <td >7.2.4</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><u style='visibility:hidden;mso-ignore:visibility'>　</u></td>
+  <td ><a
+  href="Integrated_Development_Environment/Using_splunk7.2.4_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-HDFS ">HDFS</span></br><span
+  class="label label-Hive ">Hive</span></a></td>
  </tr>
  <tr>
   <td >HUE</td>

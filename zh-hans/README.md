@@ -466,7 +466,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=12 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
+  <td rowspan=13 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
   <td >RStudio</td>
   <td >1.0.153</td>
   <td >　</td>
@@ -616,6 +616,18 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   label-Hive ">Hive</span></br><span class="label
   label-SparkSQL ">SparkSQL</span></a></td>
   <td >　</td>
+ </tr>
+ <tr>
+  <td >Splunk</td>
+  <td >7.2.4</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><u style='visibility:hidden;mso-ignore:visibility'>　</u></td>
+  <td ><a
+  href="Integrated_Development_Environment/Using_splunk7.2.4_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-HDFS ">HDFS</span></br><span
+  class="label label-Hive ">Hive</span></a></td>
  </tr>
  <tr>
   <td >HUE</td>

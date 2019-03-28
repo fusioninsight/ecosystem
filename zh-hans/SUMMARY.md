@@ -40,6 +40,7 @@
   * [对接DBeaver](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)
   * [对接DbVisualizer](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)
   * [对接Squirrel](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)
+  * [对接Splunk](Integrated_Development_Environment/Using_splunk7.2.4_with_FusionInsight_HD_C80SPC200.md)
 
 * [SQL引擎](SQL_Analytics_Engine/README.md)
   * [对接Apache Kylin](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)

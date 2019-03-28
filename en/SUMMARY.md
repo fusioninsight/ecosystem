@@ -40,6 +40,7 @@
   * [DBeaver](Integrated_Development_Environment/Using_DBeaver_with_FusionInsight.md)
   * [DbVisualizer](Integrated_Development_Environment/Using_DbVisualizer_with_FusionInsight.md)
   * [Squirrel](Integrated_Development_Environment/Using_Squirrel_with_FusionInsight.md)
+* [Splunk](Integrated_Development_Environment/Using_splunk7.2.4_with_FusionInsight_HD_C80SPC200.md)
 
 * [SQL Analysis](SQL_Analytics_Engine/README.md)
   * [Apache Kylin](SQL_Analytics_Engine/Using_Kylin_with_FusionInsight.md)
