@@ -434,26 +434,25 @@ Clusters** 右键选择 **New Cluster**
 
   ![](assets/Using_Kettle_8.0&8.1_with_FusionInsight_HD_C80SPC200/image52.png)
 
-  * 将hive.ktr转换文件上传至Linux系统下Kettle的`data-integration`文件夹下，
+  * 将hive.ktr转换文件上传至Linux系统下Kettle的`data-integration`文件夹下，执行以下脚本清除cache（参见FAQ1）
+
+    ```
+    sed -i "s/^org.pentaho\.clean\.karaf\.cache=false/org\.pentaho\.clean\.karaf\.cache=true/g" /opt/data-integration/system/karaf/etc/custom.properties
+    ```
+    >可将其保存为脚本文件，每次执行命令前先执行该脚本
 
   * 根据Kettle版本执行以下命令
     ```
     cd /opt/data-integration/
     ```
 
-    对于Kettle-8.0版本,执行以下脚本清除cache（参见FAQ1）
-      ```
-      sed -i "s/^org.pentaho\.clean\.karaf\.cache=false/org\.pentaho\.clean\.karaf\.cache=true/g" /opt/data-integration/system/karaf/etc/custom.properties
-      ```
-      >可将其保存为脚本文件，每次执行命令前先执行该脚本
+    对于Kettle-8.0版本,执行
 
-      然后执行以下命令，运行程序
       ```
       ./kitchen.sh -file=hive.ktr
       ```
+      对于Kettle-8.1版本,执行
 
-      对于Kettle-8.1版本,手动删除`/data-integration/system/karaf/caches/pan/data-1`目录下的cache文件
-      然后执行以下命令，运行程序
       ```
       ./pan.sh -file=hive.ktr
       ```
