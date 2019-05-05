@@ -1,6 +1,6 @@
-# QlikView对接FusionInsight
+# QlikView and FusionInsight Instruction
 
-## 适用场景
+## Case
 
 > QlikView 12 <-> FusionInsight HD V100R002C60U20
 >
@@ -8,215 +8,221 @@
 >
 > QlikView 12 <-> FusionInsight HD V100R002C80SPC100
 
-## 配置Windows的kerberos认证
+## Configuring kerberos authentication for Windows
 
-* 下载并安装MIT Kerberos，地址：<http://web.mit.edu/kerberos/dist/#kfw-4.0>
+* Download and install MIT Kerberos at: <http://web.mit.edu/kerberos/dist/#kfw-4.0>
 
-* 版本与操作系统位数保持一致，本文版本kfw-4.1-amd64.msi。
+* The version is consistent with the number of operating system bits. This article is version kfw-4.1-amd64.msi.
 
-* 确认客户端机器的时间与FusionInsight HD集群的时间一致，时间差要小于5分钟
+* Verify that the time of the client machine is the same as that of the FusionInsight HD cluster. The time difference is less than 5 minutes.
 
-* 设置Kerberos的配置文件
+* Set the Kerberos configuration file
 
-  在FusionInsight Manager创建一个角色与“机机”用户，具体请参见《FusionInsight HD管理员指南》的**创建用户**章节。角色需要根据业务需要授予Hive的访问权限，并将用户加入角色。例如，创建用户“sparkdemo”并下载对应的keytab文件user.keytab以及krb5.conf文件，把krb5.conf文件重命名为krb5.ini，并放到C:\ProgramData\MIT\Kerberos5目录中。
+  Create a role and machine user on the FusionInsight Manager. For details, see the chapter "Creating Users" in the FusionInsight HD Administrator Guide. The role needs to grant Hive access rights based on business needs and add users to the role. For example, create the user "sparkdemo" and download the corresponding keytab file user.keytab and krb5.conf file, rename the krb5.conf file to krb5.ini, and put it in the C:\ProgramData\MIT\Kerberos5 directory.
 
-* 设置Kerberos票据的缓存文件
+* Set the cache file for the Kerberos ticket
 
-  * 创建存放票据的目录，例如`C:\temp`。
+  * Create a directory to store the tickets, such as `C:\temp`.
 
-  * 设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为`C:\temp\krb5cache`
+  * Set the system environment variable of Windows, the variable name is "KRB5CCNAME", and the variable value is `C:\temp\krb5cache`
 
     ![](assets/Using_QlikView_with_FusionInsight/image4.png)
 
-  * 重启机器。
+  * Restart the machine.
 
-* 在Windows上进行认证
+* Authenticate on Windows
 
-  * 使用命令行进入到MIT Kerberos安装路径，找到可执行文件kinit.exe，例如本文路径为：`C:\Program Files\MIT\Kerberos\bin`
+  * Use the command line to go to the MIT Kerberos installation path and find the executable kinit.exe. For example, the path to this article is: `C:\Program Files\MIT\Kerberos\bin`
 
-  * 执行如下命令：
+  * Execute the following command:
     ```
     kinit -k -t /path_to_userkeytab/user.keytab UserName
     ```
 
-    其中path_to_userkeytab为存放用户keytab文件的路径，user.keytab为用户的keytab，UserName为用户名。
+
+Path_to_userkeytab is the path where the user keytab file is stored, user.keytab is the user's keytab, and UserName is the user name.
 
 
-## 配置Hive数据源
+## Configuring a Hive data source
 
-QlikView中配置Hive数据源，对接Hive的ODBC接口
+Hive data source in QlikView, docking Hive's ODBC interface
 
-### 下载安装Hive ODBC驱动
+### Download and install the Hive ODBC driver
 
-  从以下地址下载驱动根据操作系统类型选择对应的ODBC版本，下载并安装： [下载地址](http://www.cloudera.com/content/cloudera/en/downloads/connectors/hive/odbc/hive-odbc-v2-5-15.html)
+  Download the driver from the following address and select the corresponding ODBC version according to the operating system type, download and install: [address](http://www.cloudera.com/content/cloudera/en/downloads/connectors/hive/odbc/hive-odbc-v2-5-15.html)
 
-### 配置用户DSN
+### Configuring user DSN
 
-* 在OBDC数据源管理器页面的用户DSN标签页中，点击添加，配置用户数据源。
+*
+On the User DSN tab of the OBDC Data Source Manager page, click Add to configure the user data source.
 
   ![](assets/Using_QlikView_with_FusionInsight/image5.png)
 
-* 在 **创建数据源** 页面，找到 **Cloudera ODBC Driver for Apache Hive**，选中后点击 **完成**。
+* On the **Create Data Source** page, find the **Cloudera ODBC Driver for Apache Hive**, select it and click **Finish**.
 
   ![](assets/Using_QlikView_with_FusionInsight/image6.png)
 
-* 配置Hive数据源。
+* Configure the Hive data source.
 
-    * Data Source Name：为自定义参数
-    * Host(s)： HiveServer的业务ip
-    * Port： Hive Service端口，21066
-    * Mechanism： Kerberos
-    * Host FQDN： hadoop.hadoop.com
-    * Service Name： hive
-    * Realm： 留空
+    * Data Source Name: is a custom parameter
+    * Host(s): HiveServer business ip
+    * Port: Hive Service port, 21066
+    * Mechanism: Kerberos
+    * Host FQDN: hadoop.hadoop.com
+    * Service Name: hive
+    * Realm: Leave blank
+
 
     ![](assets/Using_QlikView_with_FusionInsight/image7.png)
 
-* 点击 **Test** 连接成功则表示配置成功，点击 **OK**
+* Click **Test** If the connection is successful, the configuration is successful. Click **OK**
 
     ![](assets/Using_QlikView_with_FusionInsight/image8.png)
 
-### 连接Hive数据源
+### Connect to the Hive data source
 
-* 打开QlikView 12，**新建** 一个文档
+* Open QlikView 12, **New** a document
 
   ![](assets/Using_QlikView_with_FusionInsight/image9.png)
 
-* 关闭弹出的入门向导
+* Close the pop-up wizard
 
   ![](assets/Using_QlikView_with_FusionInsight/image10.png)
 
-* 在工具栏中打开 **编辑脚本** 按钮
+* Open the **Edit Script** button in the toolbar
 
   ![](assets/Using_QlikView_with_FusionInsight/image11.png)
 
-* 在弹出的 **编辑脚本** 页面下方，点击 **数据** 标签页，在 **数据库** 的下拉栏中找到 **OCBC**，点击 **连接**；
+*
+In the pop-up **Edit Script** page, click the **Data** tab, find **OCBC** in the drop-down bar of **Database**, click **Connect**;
 
   ![](assets/Using_QlikView_with_FusionInsight/image12.png)
 
-* 在**连接到数据源**页面，选择上面配置的数据源hive_odbc，然后点击**确定**；
+* On the **Connect to Data Source** page, select the data source hive_odbc configured above, then click **OK**;
 
   ![](assets/Using_QlikView_with_FusionInsight/image13.png)
 
-* 在 **编辑脚本** 页面的 **数据** 标签页中，点击 **选择** 按钮
+* On the **Data** tab of the **Edit Script** page, click the **Select** button
 
   ![](assets/Using_QlikView_with_FusionInsight/image14.png)
 
-* 在 **创建Select语句** 页面中，选择想要导入的 **数据库表格**，在 **字段** 中选择*，则导入完整表格，其余选项则导入其对应的表格，然后点击 **确定**（示例中选择*）；
+*
+In the **Create Select statement** page, select the **Database table** you want to import, select * in the ** field**, import the full table, import the corresponding table into the corresponding table, and click * *OK** (select * in the example);
 
   ![](assets/Using_QlikView_with_FusionInsight/image15.png)
 
-* 回到 **编辑脚本** 页面，点击 **确定**
+* Go back to the **Edit Script** page and click **OK**
 
   ![](assets/Using_QlikView_with_FusionInsight/image16.png)
 
-* 回到QlikView工作表页面，点击 **重新加载**，则可以将数据库表格导入到QlikView中。
+* Go back to the QlikView worksheet page and click **Reload** to import the database table into QlikView.
 
   ![](assets/Using_QlikView_with_FusionInsight/image17.png)
 
-* 然后可以对数据进行制图制表分析等处理，具体步骤可以参考QlikView官网的使用指南。
+* The data can then be processed by cartographic tabulation analysis. For specific steps, please refer to the QlikView official website.
 
   ![](assets/Using_QlikView_with_FusionInsight/image18.png)
 
 
-## 配置Spark数据源
+## Configuring a Spark data source
 
-QlivView中配置Spark数据源，对接SparkSQL的thrift接口。
+Configure the Spark data source in QlivView and connect to the thrift interface of SparkSQL.
 
-### 下载安装Spark的ODBC驱动
+### Download and install Spark's ODBC driver
 
-* 在Simba官网下载Spark ODBC驱动，根据用户自身操作系统选择32bit或64bit，Data Source选择Spark
-    SQL，地址：<http://www.tableau.com/support/drivers>
+* Download the Spark ODBC driver on Simba's official website, select 32bit or 64bit according to the user's own operating system, and select Spark for Data Source.
+    SQL, address: <http://www.tableau.com/support/drivers>
 
-* 根据安装客户端提示安装客户端。
+*
+Install the client as prompted by the install client.
 
-### 配置用户DSN
+### Configuring user DSN
 
-* 在 **OBDC数据源管理器** 页面的 **用户DSN** 标签页中，点击 **添加**，配置用户数据源。
+* On the **OBDC Data Source Manager** page, on the **User DSN** tab, click **Add** to configure the user data source.
 
   ![](assets/Using_QlikView_with_FusionInsight/image19.png)
 
-* 在 **创建数据源** 页面，找到 **Simba Spark ODBC Driver**，选中后点击 **完成**。
+* On the **Create Data Source** page, find **Simba Spark ODBC Driver**, select it and click **Finish**.
 
   ![](assets/Using_QlikView_with_FusionInsight/image20.png)
 
-* 在 **Simba Spark ODBC Driver DSN Setup** 页面中配置Spark数据源。
+* Configure the Spark data source on the **Simba Spark ODBC Driver DSN Setup** page.
 
-    * Data Source Name： 自定义
+    * Data Source Name： Custom
     * Mechanism： Kerberos
     * Host FQDN： hadoop.hadoop.com
     * Service Name： spark
-    * Realm： 留空，
-    * Host(s)： JDBCServer(主)的业务ip，
-    * Port： SparkThriftServer客户端端口号23040。
+    * Realm：  Leave blank,
+    * Host(s)： JDBCServer (main) service ip,
+    * Port： SparkThriftServer client port number 23040.
 
     ![](assets/Using_QlikView_with_FusionInsight/image21.png)
 
-* 设置完毕后点击 **Advanced Options**，在弹出的 **Advanced Options** 页面中，勾选 **Use Native Query** 和 **Get Tables With Query**，然后点击 **OK**
+* After setting, click **Advanced Options**, in the pop-up **Advanced Options** page, check **Use Native Query** and **Get Tables With Query**, then click **OK**
 
     ![](assets/Using_QlikView_with_FusionInsight/image22.png)
 
-* 回到 **Simba Spark ODBC Driver DSN Setup**，点击 **Test** 连接成功，点击 **OK** 退出页面，否则将弹出失败对话框。
+* Go back to the **Simba Spark ODBC Driver DSN Setup**, click **Test** to connect successfully, click **OK** to exit the page, otherwise a failure dialog will pop up.
 
   ![](assets/Using_QlikView_with_FusionInsight/image23.png)
 
-* 回到 **Simba Spark ODBC Driver DSN Setup** 页面，点击 **OK**，回到 **ODBC数据源管理器** 页面，点击 **确定** 完成并退出配置。
+* Go back to the **Simba Spark ODBC Driver DSN Setup** page, click **OK**, go back to the **ODBC Data Source Manager** page, click **OK** to complete and exit the configuration.
 
   ![](assets/Using_QlikView_with_FusionInsight/image24.png)
 
-### 连接Spark数据源
+### Connect to a Spark data source
 
-* 打开QlikView 12，**新建** 一个文档
+* Open QlikView 12, **New** a document
 
   ![](assets/Using_QlikView_with_FusionInsight/image9.png)
 
-* 关闭弹出的入门向导
+* Close the pop-up wizard
 
   ![](assets/Using_QlikView_with_FusionInsight/image10.png)
 
-* 在工具栏中打开 **编辑脚本** 按钮
+* Open the **Edit Script** button in the toolbar
 
   ![](assets/Using_QlikView_with_FusionInsight/image11.png)
 
-* 在弹出的 **编辑脚本** 页面下方，点击 **数据** 标签页，在 **数据库** 的下拉栏中找到 **OCBC**，点击 **连接**；
+* In the pop-up **Edit Script** page, click the **Data** tab, find **OCBC** in the drop-down bar of **Database**, click **Connect**;
 
   ![](assets/Using_QlikView_with_FusionInsight/image12.png)
 
-* 在 **连接到数据源** 页面，选择上面配置的数据源spark_odbc，然后点击 **确定**；
+* On the **Connect to Data Sources** page, select the data source spark_odbc configured above, then click **OK**;
 
   ![](assets/Using_QlikView_with_FusionInsight/image25.png)
 
-* 在 **编辑脚本** 页面的 **数据** 标签页中，点击 **选择** 按钮
+* On the **Data** tab of the **Edit Script** page, click the **Select** button
 
   ![](assets/Using_QlikView_with_FusionInsight/image26.png)
 
-* 在 **创建Select语句** 页面中，选择想要导入的 **数据库表格**，在 **字段** 中选择*，则导入完整表格，其余选项则导入其对应的表格，然后点击 **确定** （示例中选择*）；
+* In the **Create Select statement** page, select the **Database table** you want to import, select * in the ** field**, import the full table, import the corresponding table into the corresponding table, and click * *OK** (select * in the example);
 
   ![](assets/Using_QlikView_with_FusionInsight/image27.png)
 
-* 回到 **编辑脚本** 页面，点击 **确定**
+* Go back to the **Edit Script** page and click **OK**
 
   ![](assets/Using_QlikView_with_FusionInsight/image28.png)
 
-* 回到QlikView工作表页面，点击 **重新加载**，则可以将数据库表格导入到QlikView中。
+* Go back to the QlikView worksheet page and click **Reload** to import the database table into QlikView.
 
   ![](assets/Using_QlikView_with_FusionInsight/image29.png)
 
-* 然后可以对数据进行制图制表分析等处理，具体步骤可以参考QlikView官网的使用指南。
+* The data can then be processed by cartographic tabulation analysis. For specific steps, please refer to the QlikView official website.
 
   ![](assets/Using_QlikView_with_FusionInsight/image18.png)
 
 
 ## FAQ
 
-* 找不到C:\ProgramData\MIT\Kerberos5文件夹
+* Cannot find C:\ProgramData\MIT\Kerberos5 folder
 
-  C:\ProgramData一般属于隐藏文件夹，设置文件夹隐藏可见或者使用搜索功能即可解决问题。
+  C:\ProgramData is generally a hidden folder, setting the folder to be hidden or using the search function to solve the problem.
 
-* 连接成功无数据库权限
+* Connection succeeded without database permissions
 
-  连接所使用的用户需要有数据库的权限，否则将导致ODBC连接成功却无法读取数据库内容。
+  The user used for the connection needs to have the permissions of the database, otherwise the ODBC connection will succeed but the database content cannot be read.
 
-* ODBC连接失败
+* ODBC connection failed
 
-  常见情况是 **Host(s)** 、 **Port** 、 **Host FQDN** 的输入数据有误，请根据实际情况进行录入
+  The common situation is that the input data of **Host(s)**, **Port**, **Host FQDN** is incorrect. Please enter according to the actual situation.
