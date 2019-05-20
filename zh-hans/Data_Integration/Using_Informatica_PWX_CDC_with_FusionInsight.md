@@ -258,14 +258,28 @@
       ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/66942.png)
       ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/5143d.png)
    * 修改安装路径bin目录下的PwxCDCPublisher.sh启动脚本文件,在以下位置加入一行`RUN="$RUN -Djava.security.auth.login.config=/opt/hadoopclient/Kafka/kafka/config/jaas.conf"`
-  ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/feeb7.png)
+   ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/feeb7.png)
    * 启动pwx CDC Publisher,在bin目录下执行`sh PwxCDCPublisher.sh`
    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/48ce1.png)
 
 ### 启动kafka consumer，查看消费到的数据
+  * 在oracle数据源中执行insert操作,在kafka中可以看到数据捕获如下
 
-  ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/8b77c.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png)
 
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png)
+
+  * 在oracle数据源中执行update操作,在kafka中可以看到数据捕获如下
+
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png)
+
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png)
+
+  * 在oracle数据源中执行delete操作,在kafka中可以看到数据捕获如下
+
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png)
+
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png)
 
 ### Q&A
 1.若启动pwxccl报错如下
