@@ -252,7 +252,7 @@
       chkconfig --levels 2345 ${LINKNAME} on
       ```
 
-  <!--  - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
+ - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
       systemctl daemon-reload
@@ -263,7 +263,7 @@
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d-ubuntu-sysv /etc/init.d/${LINKNAME}
       update-rc.d ${LINKNAME} start 20 2 3 4 5 . stop 20 0 1 6 .
-      ```-->
+      ```
   * 修改`environment.conf`文件,设置 `master = yarn-client `，以yarn-client模式运行spark.
 
   * 修改`settings.sh`文件，设置`SPARK_HOME=/opt/hadoopclient/Spark2x/spark`
@@ -289,7 +289,7 @@
     }
     ```
 
-  * 在`setting.sh`文件中，编辑以下几行
+  * 在`setting.sh`文件中，编辑以下几行，配置对应的keytab文件路径以及用户principal
     ```
     export JOBSERVER_KEYTAB=/path/to/keytab
     export JOBSERVER_PRINCIPAL=user/host@REALM
@@ -312,6 +312,8 @@
     cd /etc/init.d
     ./spark2-job-server start
     ```
+  * 启动后在浏览器中输入http://ip:8090,可以看到以下界面
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/3f6c0.png)
 
   * 停止Spark-job-server
     ```
@@ -328,7 +330,7 @@
 
       ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image028.png)
 
-    - 在Connection Settings页面
+    - 在Connection Settings页面，IP为spark job server 所在节点IP
       - Jobserver URL:http://ip:8090/
       - Authentication: None
 
