@@ -232,7 +232,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
  </tr>
  <tr>
-  <td rowspan=18 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
+  <td rowspan=19 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
   <td rowspan=2 >IBM InfoSphere DataStage</td>
   <td >11.3.1.0</td>
   <td >　</td>
@@ -440,6 +440,18 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >　</td>
   <td ><a
   href="Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md"><span
+  class="label label-Kafka ">Kafka</span></a></td>
+ </tr>
+ <tr>
+  <td >Informatica
+  PWX CDC</td>
+  <td >10.2.0</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md"><span
   class="label label-Kafka ">Kafka</span></a></td>
  </tr>
  <tr>
