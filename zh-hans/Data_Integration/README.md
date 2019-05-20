@@ -11,5 +11,6 @@
 * [对接Kettle](Using_Kettle_6.1_with_FusionInsight_HD_C60U10.md)
 * [对接Knime](Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md)
 * [对接Kafka-manager](Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md)
+* [对接Informatica PWX CDC](Using_Informatica_PWX_CDC_with_FusionInsight.md)
 * 普元 (TBD)
 * 杭州合众UTL (TBD)
