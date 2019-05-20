@@ -56,6 +56,15 @@
 
       ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/00465.png)
 -->
+## 下载Knime extension
+  * 在菜单栏`File->Install Knime extensions`
+  * 搜索`big data`,在结果中选择`KNIME Big data Extensions`,然后`next`
+![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/5e20e.png)
+  * `accept licence`,点击`finish`开始安装.
+![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/00685.png)
+  * 在右下角可以看到安装进度
+  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/99aa6.png)
+  * 安装完成后重启Knime
 ## 配置Knime
   * 获取集群的`hdfs-site.xml`和`core-site.xml`文件，保存在本地.
 
@@ -87,16 +96,18 @@
 
   * 在Knime菜单栏中选择`File->New->New KNIME Workflow`,命名后保存。
 
-  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image004.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image004.png)
 
-  ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image005.png)
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image005.png)
+  * 在Node Repository中搜索`HDFS`
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/68186.png)
 
-  * 在工作区中拖入一个`HDFS Connection` 节点
+  * 将`HDFS Connection` 节点拖入工作区
 
     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image006.png)
 
   * 双击`HDFS Connection` 节点，填写如下配置：
-    - Host: HDFS主节点
+    - Host: NameNode主节点
     - Port: 25000
     - Authentication: Kerberos
     ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image007.png)
@@ -241,7 +252,7 @@
       chkconfig --levels 2345 ${LINKNAME} on
       ```
 
-  <!--  - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
+ - 若操作系统为`RHEL 7.x/CentOS 7.x`，执行：
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
       systemctl daemon-reload
@@ -252,7 +263,7 @@
       ```
       ln -s /opt/${LINKNAME}/spark-job-server-init.d-ubuntu-sysv /etc/init.d/${LINKNAME}
       update-rc.d ${LINKNAME} start 20 2 3 4 5 . stop 20 0 1 6 .
-      ```-->
+      ```
   * 修改`environment.conf`文件,设置 `master = yarn-client `，以yarn-client模式运行spark.
 
   * 修改`settings.sh`文件，设置`SPARK_HOME=/opt/hadoopclient/Spark2x/spark`
@@ -278,7 +289,7 @@
     }
     ```
 
-  * 在`setting.sh`文件中，编辑以下几行
+  * 在`setting.sh`文件中，编辑以下几行，配置对应的keytab文件路径以及用户principal
     ```
     export JOBSERVER_KEYTAB=/path/to/keytab
     export JOBSERVER_PRINCIPAL=user/host@REALM
@@ -301,6 +312,8 @@
     cd /etc/init.d
     ./spark2-job-server start
     ```
+  * 启动后在浏览器中输入http://ip:8090,可以看到以下界面
+    ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200/3f6c0.png)
 
   * 停止Spark-job-server
     ```
@@ -317,7 +330,7 @@
 
       ![](assets/Using_Knime_3.6.1_with_FusionInsight_HD_C80spc200/image028.png)
 
-    - 在Connection Settings页面
+    - 在Connection Settings页面，IP为spark job server 所在节点IP
       - Jobserver URL:http://ip:8090/
       - Authentication: None
 

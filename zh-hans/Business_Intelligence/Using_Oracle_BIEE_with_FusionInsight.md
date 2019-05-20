@@ -5,10 +5,12 @@
 > Oracle BIEE 11g <-> FusionInsight HD V100R002C60U20
 >
 > Oracle BIEE 11g <-> FusionInsight HD V100R002C70SPC200
-> 
+>
 > Oracle BIEE 12c <-> FusionInsight HD V100R002C60U20
 >
 > Oracle BIEE 12c <-> FusionInsight HD V100R002C70SPC200
+>
+> Oracle BIEE 12c <-> FusionInsight HD V100R002C80SPC200
 
 ## Linux环境安装OBIEE
 
@@ -615,3 +617,9 @@
 ### 服务端分析Spark数据
 
 参考[服务端分析Hive数据](#服务端分析hive数据)
+
+Q&A
+1.在服务端执行isql可以正常连接至数据库，在web界面上显示无法加载驱动
+
+  ![](assets/Using_Oracle_BIEE_with_FusionInsight/e45af.png)
+  A:

@@ -222,3 +222,5 @@
 
   * 测试Spark时，将各种版本都测试了一遍，最后提示Spark test failed
     - 检查添加的两个Advanced Parameters是否填写正确，其value值中的绝对路径对于每个集群是不一样的，当集群重装后需要修改该值。
+
+  * ![](assets/Using_RapidMiner_with_FusionInsight/dcfb1.png)
