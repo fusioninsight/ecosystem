@@ -25,6 +25,7 @@
   * [Apache NiFi](Data_Integration/Using_Nifi_1.7.1_with_FusionInsight_HD_C80spc200.md)
   * [Knime](Data_Integration/Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md)
   * [Kafka-manager](Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md)
+  * [Informatica PWX CDC](Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md)
   * Primeton MetaCube (TBD)
   * Unimas UTL (TBD)
 
