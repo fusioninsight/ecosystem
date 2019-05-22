@@ -1047,23 +1047,24 @@ archive log list;
 <li>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;&#x4E4B;&#x540E;&#xFF0C;&#x6267;&#x884C;<code>./install.sh</code>&#xFF0C;&#x6839;&#x636E;&#x63D0;&#x793A;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x5373;&#x53EF;,&#x8FD9;&#x91CC;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E3A;<code>/opt/PowerExchange/10.2.0</code>.</li>
 </ul>
 <h2 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
-<pre><code>* ```
-  vi ~/.bash_profile
-  ```
-  &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;
-
-  ```
-    export PWX_CONFIG=/opt/PowerExchange10.2.0/dbmover.cfg
+<ul>
+<li><p>&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code>  vi ~/.bash_profile
+</code></pre><p>  &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;</p>
+<pre><code>    export PWX_CONFIG=/opt/PowerExchange10.2.0/dbmover.cfg
     export PWX_HOME=/opt/PowerExchange10.2.0
     PATH=$PATH:$HOME/bin:/usr/lib/oracle/12.1/client64/bin:/opt/PowerExchange10.2.0
     export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/opt/PowerExchange10.2.0
     export  NLS_LANG=AMERICAN_AMERICA.ZHS16GBK
-  ```
-* &#x6267;&#x884C;`source ~/.bash_profile`,source&#x73AF;&#x5883;&#x53D8;&#x91CF;
-* &#x6267;&#x884C;`dtlinfo`,&#x68C0;&#x67E5;&#x5B89;&#x88C5;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x662F;&#x5426;&#x6210;&#x529F;
-</code></pre><p>       <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/ef395.png" rel="grouped" title="" target="_self" class="fancybox">
+</code></pre><ul>
+<li>&#x6267;&#x884C;<code>source ~/.bash_profile</code>,source&#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+<li>&#x6267;&#x884C;<code>dtlinfo</code>,&#x68C0;&#x67E5;&#x5B89;&#x88C5;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x662F;&#x5426;&#x6210;&#x529F;
+     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/ef395.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/ef395.png" alt="">
-     </a></p>
+     </a></li>
+</ul>
+</li>
+</ul>
 <h2 id="&#x914D;&#x7F6E;dbmovercfg&#x4E0E;pwxcclcfg&#x6587;&#x4EF6;"><a name="&#x914D;&#x7F6E;dbmovercfg&#x4E0E;pwxcclcfg&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;dbmovercfg&#x4E0E;pwxcclcfg&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;dbmover.cfg&#x4E0E;pwxccl.cfg&#x6587;&#x4EF6;</h2>
 <ul>
 <li><p>&#x4FEE;&#x6539;PWX&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7684;dbmover.cfg&#x6587;&#x4EF6;&#x5982;&#x4E0B;</p>
@@ -1374,7 +1375,7 @@ A:&#x68C0;&#x67E5;&#x5728;oracle&#x4E2D;&#x662F;&#x5426;&#x6267;&#x884C;&#x8FC7;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.11","depth":2,"ref":"","articles":[]},"previous":{"title":"对接Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-20T11:30:14.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-20T11:31:47.837Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"对接Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"普元 (TBD)","level":"2.2.11","depth":2,"ref":"","articles":[]},"previous":{"title":"对接Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-22T01:37:05.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T04:48:55.296Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>

@@ -11,5 +11,6 @@
 * [Kettle](Using_Kettle_6.1_with_FusionInsight_HD_C60U10.md)
 * [Knime](Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md)
 * [Kafka-manager](Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md)
+* [Informatica PWX CDC](Using_Informatica_PWX_CDC_with_FusionInsight.md)
 * Primeton MetaCube (TBD)
 * Unimas UTL (TBD)
