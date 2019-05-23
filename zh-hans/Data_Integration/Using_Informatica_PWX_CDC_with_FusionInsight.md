@@ -7,7 +7,7 @@
 ## 环境信息
 
 * Informatica PowerExchange CDC 10.2.0 Linux & Windows版本
-* Informatica PowerExchange Publisher 10.2.0
+* Informatica PowerExchange Publisher 1.2.0
 * Oracle database 11g
 * jdk-7u71-linux-x64.rpm
 * FusionInsight HD Kafka客户端
