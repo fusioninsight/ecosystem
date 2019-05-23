@@ -7,7 +7,7 @@
 ## Environment Information
 
 * Informatica PowerExchange CDC 10.2.0 Linux & Windows version
-* Informatica PowerExchange Publisher 10.2.0
+* Informatica PowerExchange Publisher 1.2.0
 * Oracle database 11g
 * jdk-7u71-linux-x64.rpm
 * FusionInsight HD Kafka client
@@ -246,7 +246,7 @@
       * Extract.pwxExtractionMapSchemaName is the schema name in pwx extraction, here is `u8orcl`
       * Extract.pwxNodeLocation is pwx node name
       * Extract.pwxNodeUserId/Extract.pwxNodePwd and Extract.pwxXmapUserId/Extract.pwxXmappassword is database user name and pasword
-      
+
       ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/48c5b.png)
       ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/0e7c8.png)
       ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/66942.png)
