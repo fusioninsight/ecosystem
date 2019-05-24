@@ -455,15 +455,17 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   class="label label-Kafka ">Kafka</span></a></td>
  </tr>
  <tr>
-  <td >普元元数据管理</td>
-  <td >6.1</td>
-  <td >　</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive</td>
+  <td >Informatica
+  PowerCenter</td>
+  <td >10.2.0</td>
   <td >　</td>
   <td >　</td>
   <td >　</td>
+  <td >　</td>
+  <td ><a
+  href="Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md"><span
+  class="label label-HDFS ">HDFS</span></br><span
+  class="label label-Hive ">Hive</span></a></td>
  </tr>
  <tr>
   <td >杭州合众UTL</td>

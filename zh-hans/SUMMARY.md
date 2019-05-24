@@ -26,6 +26,7 @@
   * [对接Knime](Data_Integration\Using_Knime_3.6.1_with_FusionInsight_HD_C80SPC200.md)
   * [对接Kafka-manager](Data_Integration\Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md)
   * [对接Informatica PWX CDC](Data_Integration\Using_Informatica_PWX_CDC_with_FusionInsight.md)
+  * [对接Informatica PowerCenter](Data_Integration\Using_Informatica_PowerCenter_with_FusionInsight.md)
   * 普元 (TBD)
   * 杭州合众UTL (TBD)
 
