@@ -19,7 +19,7 @@
 
   * 获取kafka用户的认证文件,登录FusionInsight集群节点,将/opt/huawei/Bigdata/om-server_V100R002C80SPC200/apache-tomcat-8.5.28/conf/security/kafka.keytab文件下载到本地，并上传至客户端节点/opt/hadoopclient/目录下
 
-    通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户kafkauser，并选择kafka和kafkaadmin用户组，下载对应的秘钥文件,将krb5.conf文件上传到客户端节点的`/opt/hadoopclient/`目录下
+  * 通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户kafkauser，并选择kafka和kafkaadmin用户组，下载对应的秘钥文件,将krb5.conf文件上传到客户端节点的`/opt/hadoopclient/`目录下
 
 ## kafka-manager编译及配置
 
