@@ -19,7 +19,7 @@
 ### 安装FusionInsight HD客户端
   * 安装FusionInsight客户端，安装目录为/opt/hadoopclient
 
-  * 通过FusionInsight HD的管理页面创建一个“人机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户developuser，并赋予HDFS,Hive所有权限，下载对应的秘钥文件,将krb5.conf文件上传到客户端节点的`/opt/`目录下
+  * 通过FusionInsight HD的管理页面创建一个“人机”用户，具体请参见《FusionInsight HD管理员指南》的 **创建用户** 章节。例如，创建用户developuser，并赋予HDFS,Hive所有权限，下载对应的秘钥文件,将krb5.confh和user.keytab文件上传到客户端节点的`/opt/`目录下
 
 ### 在Linux上安装Oracle database 以及 Informatica Server
 
@@ -73,6 +73,7 @@
       ![](assets/Using_Informatica_PowerCenter_with_FusionInsight/d9266.png)
 
   * 在infa Server 进行Hadoop配置
+    - 将`/opt`目录下的krb5.conf文件复制至`/etc`目录下以及informatica安装目录`${INFA_HOME}java/jre/lib/security/`下，并赋予infa用户改文件的读取权限.
     - 以infa用户登录节点，创建配置文件目录，例如`/opt/pwx-hadoop/conf`
     - 在FusionInsight HD客户端中获取以下配置文件,放至`/opt/pwx-hadoop/conf`目录中，并修改文件权限至775
 
