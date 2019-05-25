@@ -78,6 +78,7 @@
       ![](assets/Using_Informatica_PowerCenter_with_FusionInsight/d9266.png)
 
   * Infa Server configuration for Hadoop
+    - Copy `krb5.conf` file in `/opt` to `/etc` and `${INFA_HOME}java/jre/lib/security/`, and give the read right to user infa.
     - Login to node as user infa, create a directory for the configuration file, such as`/opt/pwx-hadoop/conf`
     - Get the follwoing configuration fie from FusionInsight HD client, put them into `/opt/pwx-hadoop/conf` and change the file right to 775
 
