@@ -264,23 +264,33 @@
    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/48ce1.png)
 
 ### 启动kafka consumer，查看消费到的数据
+
+  * 在FusionInsight HD Kafka 客户端,执行以下命令，启动consumer
+    ```
+    source /opt/hadoopclient/bigdata_env
+    kinit developuser
+    cd /opt/hadoopclient/Kafka/kafka/bin
+    ./kafka-console-consumer.sh --bootstrapserver 172.16.4.21:21007,172.16.4.22:21007,172.16.4.23:21007 --topic pwxtopic --new-consumer --consumer.config ../config/consumer.properties
+    ```
   * 在oracle数据源中执行insert操作,在kafka中可以看到数据捕获如下
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png)
 
   * 在oracle数据源中执行update操作,在kafka中可以看到数据捕获如下
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png)
+
 
   * 在oracle数据源中执行delete操作,在kafka中可以看到数据捕获如下
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png)
+
 
 ### Q&A
 1.若启动pwxccl报错如下

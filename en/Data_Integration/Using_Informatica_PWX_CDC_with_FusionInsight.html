@@ -1252,28 +1252,33 @@ kinit developuser
 </ul>
 <h3 id="start-kafka-consumer"><a name="start-kafka-consumer" class="anchor-navigation-ex-anchor" href="#start-kafka-consumer"><i class="fa fa-link" aria-hidden="true"></i></a>Start kafka consumer</h3>
 <ul>
+<li>In FusionInsight HD Kafka client, run the following command to start consumer<pre><code>source /opt/hadoopclient/bigdata_env
+kinit developuser
+cd /opt/hadoopclient/Kafka/kafka/bin
+./kafka-console-consumer.sh --bootstrapserver 172.16.4.21:21007,172.16.4.22:21007,172.16.4.23:21007 --topic pwxtopic --new-consumer --consumer.config ../config/consumer.properties
+</code></pre></li>
 <li><p>Insert data in oracle, the captured data in kafka is the following</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png" alt="">
      </a></p>
 </li>
 <li><p>Update data in oracle, the captured data in kafka is the following</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png" alt="">
      </a></p>
 </li>
 <li><p>Delete data in oracle, the captured data in kafka is the following</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png" alt="">
      </a></p>
 </li>
 </ul>
@@ -1329,7 +1334,7 @@ A:Run the following script in oracle</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"Informatica PowerCenter","level":"2.2.11","depth":2,"path":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","ref":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","articles":[]},"previous":{"title":"Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"en","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-23T08:21:45.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-25T08:14:09.138Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"Informatica PowerCenter","level":"2.2.11","depth":2,"path":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","ref":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","articles":[]},"previous":{"title":"Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"en","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-27T01:43:01.983Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T01:43:24.945Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

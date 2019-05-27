@@ -1317,28 +1317,35 @@ kinit developuser
 </ul>
 <h3 id="&#x542F;&#x52A8;kafka-consumer&#xFF0C;&#x67E5;&#x770B;&#x6D88;&#x8D39;&#x5230;&#x7684;&#x6570;&#x636E;"><a name="&#x542F;&#x52A8;kafka-consumer&#xFF0C;&#x67E5;&#x770B;&#x6D88;&#x8D39;&#x5230;&#x7684;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;kafka-consumer&#xFF0C;&#x67E5;&#x770B;&#x6D88;&#x8D39;&#x5230;&#x7684;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;kafka consumer&#xFF0C;&#x67E5;&#x770B;&#x6D88;&#x8D39;&#x5230;&#x7684;&#x6570;&#x636E;</h3>
 <ul>
+<li>&#x5728;FusionInsight HD Kafka &#x5BA2;&#x6237;&#x7AEF;,&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x542F;&#x52A8;consumer<pre><code>source /opt/hadoopclient/bigdata_env
+kinit developuser
+cd /opt/hadoopclient/Kafka/kafka/bin
+./kafka-console-consumer.sh --bootstrapserver 172.16.4.21:21007,172.16.4.22:21007,172.16.4.23:21007 --topic pwxtopic --new-consumer --consumer.config ../config/consumer.properties
+</code></pre></li>
 <li><p>&#x5728;oracle&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x6267;&#x884C;insert&#x64CD;&#x4F5C;,&#x5728;kafka&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6570;&#x636E;&#x6355;&#x83B7;&#x5982;&#x4E0B;</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png" alt="">
      </a></p>
 </li>
 <li><p>&#x5728;oracle&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x6267;&#x884C;update&#x64CD;&#x4F5C;,&#x5728;kafka&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6570;&#x636E;&#x6355;&#x83B7;&#x5982;&#x4E0B;</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png" alt="">
      </a></p>
 </li>
+</ul>
+<ul>
 <li><p>&#x5728;oracle&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x6267;&#x884C;delete&#x64CD;&#x4F5C;,&#x5728;kafka&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6570;&#x636E;&#x6355;&#x83B7;&#x5982;&#x4E0B;</p>
 <p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png" alt="">
      </a></p>
-<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png" alt="">
+<p>     <a href="assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png" alt="">
      </a></p>
 </li>
 </ul>
@@ -1394,7 +1401,7 @@ A:&#x68C0;&#x67E5;&#x5728;oracle&#x4E2D;&#x662F;&#x5426;&#x6267;&#x884C;&#x8FC7;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"对接Informatica PowerCenter","level":"2.2.11","depth":2,"path":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","ref":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","articles":[]},"previous":{"title":"对接Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-23T08:21:57.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-25T08:14:09.138Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"对接Informatica PWX CDC","level":"2.2.10","depth":2,"next":{"title":"对接Informatica PowerCenter","level":"2.2.11","depth":2,"path":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","ref":"Data_Integration/Using_Informatica_PowerCenter_with_FusionInsight.md","articles":[]},"previous":{"title":"对接Kafka-manager","level":"2.2.9","depth":2,"path":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","ref":"Data_Integration/Using_kafka-manager_with_FusionInsight_HD_C80SPC200.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","-lunr","-search","search-pro","fi-nav","toggle-chapters","addcssjs","download-chapter","fancybox","baidu-wis","fixhead","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fancybox":{"helpers":{"buttons":null},"padding":0},"language-picker":{"grid-columns":3},"download-chapter":{},"search-pro":{},"addcssjs":{"css":["resource/css/custom.css","resource/css/font-awesome.min.css"],"js":[]},"baidu-wis":{"token":"4a116571a16f57f837e98770d8aebc70"},"highlight":{},"anchor-navigation-ex":{"showLevel":false},"fixhead":{},"fi-nav":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Openlab","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FusionInsight生态地图","language":"zh-hans","gitbook":"*"},"file":{"path":"Data_Integration/Using_Informatica_PWX_CDC_with_FusionInsight.md","mtime":"2019-05-27T01:32:58.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T01:43:24.945Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
