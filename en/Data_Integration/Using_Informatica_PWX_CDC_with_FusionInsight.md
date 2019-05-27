@@ -261,23 +261,30 @@
    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/48ce1.png)
 
 ### Start kafka consumer
+  * In FusionInsight HD Kafka client, run the following command to start consumer
+    ```
+    source /opt/hadoopclient/bigdata_env
+    kinit developuser
+    cd /opt/hadoopclient/Kafka/kafka/bin
+    ./kafka-console-consumer.sh --bootstrapserver 172.16.4.21:21007,172.16.4.22:21007,172.16.4.23:21007 --topic pwxtopic --new-consumer --consumer.config ../config/consumer.properties
+    ```
   * Insert data in oracle, the captured data in kafka is the following
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/b90f5.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d4b09.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6bbb.png)
 
   * Update data in oracle, the captured data in kafka is the following
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/d6aec.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/003c0.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/e670d.png)
 
   * Delete data in oracle, the captured data in kafka is the following
 
     ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/bc8ee.png)
 
-    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/7f5b7.png)
+    ![](assets/Using_Informatica_PWX_CDC_with_FusionInsight/eb5af.png)
 
 ### Q&A
 1.Failed to start pwxccl
