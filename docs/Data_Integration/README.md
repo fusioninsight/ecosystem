@@ -8,7 +8,6 @@
 * [对接Informatica PWX CDC](Informatica_PWX_CDC.md)
 * [对接Apache NiFi](Apache_NiFi.md)
 * [对接Kettle 6.1](Kettle_6.1.md)
-* [对接Kettle 8.x](Kettle_8.x.md)
 * [对接Talend](Talend.md)
 * [对接Knime](Knime.md)
 * [对接Denodo](Denodo.md)
