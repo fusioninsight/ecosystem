@@ -1,0 +1,69 @@
+site_name: FusionData Ecosystem
+repo_name: 'fusioninsight/ecosystem'
+repo_url: 'https://github.com/fusioninsight/ecosystem/tree/en'
+
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'Indigo'
+    accent: 'Indigo'
+  feature:
+    tabs: false
+
+nav:
+- Business Intelligence:
+  - Tableau: Business_Intelligence/Tableau.md
+  - QlikView: Business_Intelligence/QlikView.md
+- Data Analysis:
+  - RapidMiner: Data_Analysis/RapidMiner.md
+- Data Integration:
+  - Informatica PowerCenter: Data_Integration/Informatica_PowerCenter.md
+  - Informatica PWX CDC: Data_Integration/Informatica_PWX_CDC.md
+  - Talend: Data_Integration/Talend.md
+  - Apache NiFi: Data_Integration/Apache_NiFi.md
+
+extra:
+  social:
+    - type: github
+      link: https://github.com/fusioninsight
+  search:
+    language: 'jp'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+      #emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      #emoji_generator: !!python/name:pymdownx.emoji.to_png_sprite
+      #emoji_generator: !!python/name:pymdownx.emoji.to_svg_sprite
+      #emoji_generator: !!python/name:pymdownx.emoji.to_awesome
+      #emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+extra_javascript:
+  - 'js/jq.js'
+  - 'js/extra.js'
+
+extra_css:
+  - 'css/extra.css'
