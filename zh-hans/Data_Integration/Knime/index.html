@@ -1,0 +1,1930 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Knime - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#knime-fusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Knime
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Knime
+      </label>
+    
+    <a href="./" title="对接Knime" class="md-nav__link md-nav__link--active">
+      对接Knime
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime" title="环境准备以及Knime下载" class="md-nav__link">
+    环境准备以及Knime下载
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knime_1" title="下载Knime" class="md-nav__link">
+    下载Knime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime-extension" title="下载Knime extension" class="md-nav__link">
+    下载Knime extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime_2" title="配置Knime" class="md-nav__link">
+    配置Knime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimehdfs" title="Knime连接HDFS" class="md-nav__link">
+    Knime连接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs" title="建立HDFS连接" class="md-nav__link">
+    建立HDFS连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" title="读取HDFS文件" class="md-nav__link">
+    读取HDFS文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_2" title="上传文件至HDFS" class="md-nav__link">
+    上传文件至HDFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimehive" title="Knime连接Hive" class="md-nav__link">
+    Knime连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive" title="建立Hive连接" class="md-nav__link">
+    建立Hive连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="写入Hive表" class="md-nav__link">
+    写入Hive表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimespark" title="Knime连接Spark" class="md-nav__link">
+    Knime连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark-job-server" title="安装spark-job-server" class="md-nav__link">
+    安装spark-job-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" title="配置Kerberos安全认证" class="md-nav__link">
+    配置Kerberos安全认证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark-job-server_1" title="启动和停止Spark-job-server" class="md-nav__link">
+    启动和停止Spark-job-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="建立Spark连接" class="md-nav__link">
+    建立Spark连接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark_1" title="Spark应用实例" class="md-nav__link">
+    Spark应用实例
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hive-to-spark-to-hive" title="Hive to Spark to Hive" class="md-nav__link">
+    Hive to Spark to Hive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime" title="环境准备以及Knime下载" class="md-nav__link">
+    环境准备以及Knime下载
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knime_1" title="下载Knime" class="md-nav__link">
+    下载Knime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime-extension" title="下载Knime extension" class="md-nav__link">
+    下载Knime extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime_2" title="配置Knime" class="md-nav__link">
+    配置Knime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimehdfs" title="Knime连接HDFS" class="md-nav__link">
+    Knime连接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs" title="建立HDFS连接" class="md-nav__link">
+    建立HDFS连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" title="读取HDFS文件" class="md-nav__link">
+    读取HDFS文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_2" title="上传文件至HDFS" class="md-nav__link">
+    上传文件至HDFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimehive" title="Knime连接Hive" class="md-nav__link">
+    Knime连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive" title="建立Hive连接" class="md-nav__link">
+    建立Hive连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="写入Hive表" class="md-nav__link">
+    写入Hive表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knimespark" title="Knime连接Spark" class="md-nav__link">
+    Knime连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark-job-server" title="安装spark-job-server" class="md-nav__link">
+    安装spark-job-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" title="配置Kerberos安全认证" class="md-nav__link">
+    配置Kerberos安全认证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark-job-server_1" title="启动和停止Spark-job-server" class="md-nav__link">
+    启动和停止Spark-job-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="建立Spark连接" class="md-nav__link">
+    建立Spark连接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark_1" title="Spark应用实例" class="md-nav__link">
+    Spark应用实例
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hive-to-spark-to-hive" title="Hive to Spark to Hive" class="md-nav__link">
+    Hive to Spark to Hive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Integration/Knime.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="knime-fusioninsight">Knime 对接FusionInsight<a class="headerlink" href="#knime-fusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Knime 3.6.1 &harr; FusionInsight HD V100R002C80SPC200</p>
+<p>Knime 3.6.1 &harr; FusionInsight HD 6.5.0</p>
+</blockquote>
+<h2 id="knime">环境准备以及Knime下载<a class="headerlink" href="#knime" title="Permanent link">&para;</a></h2>
+<h3 id="_2">环境准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>安装JDK8</p>
+<p><img alt="" src="../assets/Knime/image1.png" /></p>
+</li>
+<li>
+<p>配置系统环境变量
+    <div class="codehilite"><pre><span></span>JAVA_HOME= C:\\Program Files\\Java\\jdk1.8.0_112
+</pre></div></p>
+</li>
+<li>
+<p>在PATH环境变量添加 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></p>
+</li>
+</ul>
+<h3 id="knime_1">下载Knime<a class="headerlink" href="#knime_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在Knime官网<code>https://www.knime.com/downloads/download-knime</code>选择合适的安装包进行下载.</p>
+<p><img alt="" src="../assets/Knime/image001.png" /></p>
+</li>
+</ul>
+<!-- ## 配置Windows的kerberos认证
+
+  * 下载并安装MIT Kerberos
+
+      下载网址：<http://web.mit.edu/kerberos/dist/#kfw-4.0>
+
+      版本与操作系统位数保持一致，本文版本kfw-4.1-amd64.msi。
+
+    * 确认客户端机器的时间与FusionInsight HD集群的时间一致，时间差要小于5分钟
+
+    * 设置Kerberos的配置文件
+
+      在FusionInsight Manager创建一个角色与“人机”用户，具体请参见《FusionInsight HD 管理员指南》的创建用户章节。角色需要根据业务需要授予Spark，Hive，HDFS的访问权限，并将用户加入角色。下载该用户对应的Kerberos认证文件，包括user.keytab以及krb5.conf文件，保存在本地。
+
+    * 设置Kerberos票据的缓存文件
+
+      * 创建存放票据的目录，例如“C:\temp”。
+      * 设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cc_tmp”。
+
+        ![](assets/Knime/fb1a2.png)
+
+    * 重启机器
+
+  * 在Windows上进行认证
+
+      * 使用Kerbers认证的用户名密码登录，用户名的格式为：用户名@Kerberos域名。
+
+      * 打开MIT Kerberos，单击“get Ticket”，在弹出的“MIT Kerberos: Get Ticket”窗口中，“Pricipal”输入用户名，“Password”输入密码，单击“OK”,获得票据。
+
+      ![](assets/Knime/00465.png)
+-->
+
+<h2 id="knime-extension">下载Knime extension<a class="headerlink" href="#knime-extension" title="Permanent link">&para;</a></h2>
+<ul>
+<li>在菜单栏<code>File-&gt;Install Knime extensions</code></li>
+<li>搜索<code>big data</code>,在结果中选择<code>KNIME Big data Extensions</code>,然后<code>next</code>
+<img alt="" src="../assets/Knime/5e20e.png" /></li>
+<li><code>accept licence</code>,点击<code>finish</code>开始安装.
+<img alt="" src="../assets/Knime/00685.png" /></li>
+<li>在右下角可以看到安装进度
+  <img alt="" src="../assets/Knime/99aa6.png" /></li>
+<li>安装完成后重启Knime</li>
+</ul>
+<h2 id="knime_2">配置Knime<a class="headerlink" href="#knime_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>获取集群的<code>hdfs-site.xml</code>和<code>core-site.xml</code>文件，保存在本地.</p>
+</li>
+<li>
+<p>在Knime的安装目录中，修改配置文件“knime.ini”,在末尾添加一行</p>
+<div class="codehilite"><pre><span></span>`Djava.security.krb5.conf=path\to\krb5.conf`
+</pre></div>
+
+
+</li>
+<li>
+<p>双击<code>Knime.exe</code>，启动Knime</p>
+</li>
+<li>
+<p>在菜单栏选择<code>File-&gt;Preference-&gt;KNIME-&gt;Big Data-&gt;Hadoop</code>，在<code>Hadoop Configuration</code>中填入本地保存的HDFS的<code>hdfs-site.xml</code>和<code>core-site.xml</code>文件,点击<code>Apply and Close</code>保存配置。</p>
+<p><img alt="" src="../assets/Knime/image002.png" /></p>
+</li>
+<li>
+<p>在菜单栏选择<code>File-&gt;Preference-&gt;KNIME-&gt;Big Data-&gt;Kerberos</code>，填入kerberos认证用户名和本地keytab文件的路径，并选择<code>Enable Kerberos Logging</code>,点击<code>Apply and Close</code>保存配置。</p>
+<p><img alt="" src="../assets/Knime/image003.png" /></p>
+</li>
+</ul>
+<h2 id="knimehdfs">Knime连接HDFS<a class="headerlink" href="#knimehdfs" title="Permanent link">&para;</a></h2>
+<h3 id="_3">前提条件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成Knime 3.6.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含HDFS组件</p>
+</li>
+<li>
+<p>已完成本机的Kerberos认证</p>
+</li>
+</ul>
+<h3 id="hdfs">建立HDFS连接<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在Knime菜单栏中选择<code>File-&gt;New-&gt;New KNIME Workflow</code>,命名后保存。</p>
+<p><img alt="" src="../assets/Knime/image004.png" /></p>
+<p><img alt="" src="../assets/Knime/image005.png" />
+  * 在Node Repository中搜索<code>HDFS</code>
+<img alt="" src="../assets/Knime/68186.png" /></p>
+</li>
+<li>
+<p>将<code>HDFS Connection</code> 节点拖入工作区</p>
+<p><img alt="" src="../assets/Knime/image006.png" /></p>
+</li>
+<li>
+<p>双击<code>HDFS Connection</code> 节点，填写如下配置：</p>
+<ul>
+<li>Host: NameNode主节点</li>
+<li>Port: 25000</li>
+<li>
+<p>Authentication: Kerberos
+<img alt="" src="../assets/Knime/image007.png" /></p>
+</li>
+<li>
+<p>点击<code>Test connection</code>,显示如下，表示连接成功</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image008.png" />
+- 点击<code>Apply</code>，保存配置</p>
+</li>
+</ul>
+<h3 id="hdfs_1">读取HDFS文件<a class="headerlink" href="#hdfs_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在工作区中拖入<code>Download</code> 节点，将其与<code>HDFS Connection</code>相连</p>
+<p><img alt="" src="../assets/Knime/image009.png" /></p>
+</li>
+<li>
+<p>双击<code>Download</code> 节点，选择要从HDFS文件系统下载的文件以及文件的本地保存路径</p>
+<p><img alt="" src="../assets/Knime/image010.png" /></p>
+</li>
+<li>
+<p>点击<code>Apply</code>，保存配置</p>
+</li>
+<li>
+<p>点击菜单栏中的
+     <img alt="" src="../assets/Knime/image011.png" />执行任务</p>
+</li>
+<li>
+<p>查看本地文件</p>
+<p><img alt="" src="../assets/Knime/image012.png" /></p>
+</li>
+</ul>
+<h3 id="hdfs_2">上传文件至HDFS<a class="headerlink" href="#hdfs_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>将要上传的文件放在本地的一个文件夹中，例如<code>C:\KnimeData</code></p>
+<p><img alt="" src="../assets/Knime/image013.png" /></p>
+</li>
+<li>
+<p>在工作区中拖入<code>List Files</code>,<code>String to URI</code> 以及<code>Upload</code> 节点，将其进行如下连接</p>
+<p><img alt="" src="../assets/Knime/image014.png" /></p>
+</li>
+<li>
+<p>双击<code>List Files</code> 节点，选择要上传文件的本地路径，点击<code>Apply</code>，保存配置</p>
+<p><img alt="" src="../assets/Knime/image015.png" /></p>
+</li>
+<li>
+<p>双击<code>Upload</code> 节点，选择在HDFS中文件保存的路径，点击<code>Apply</code>，保存配置</p>
+<p><img alt="" src="../assets/Knime/image016.png" /></p>
+</li>
+<li>
+<p>点击菜单栏中的
+    <img alt="" src="../assets/Knime/image011.png" />执行任务</p>
+</li>
+<li>
+<p>在服务器上查看HDFS文件系统中所上传的文件</p>
+<p><img alt="" src="../assets/Knime/image017.png" /></p>
+</li>
+</ul>
+<h2 id="knimehive">Knime连接Hive<a class="headerlink" href="#knimehive" title="Permanent link">&para;</a></h2>
+<h3 id="_4">前提条件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成Knime 3.6.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含Hive组件</p>
+</li>
+<li>
+<p>已完成本机的Kerberos认证</p>
+</li>
+</ul>
+<h3 id="hive">建立Hive连接<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在Knime菜单栏中选择<code>File-&gt;New-&gt;New KNIME Workflow</code>,命名后保存。</p>
+<p><img alt="" src="../assets/Knime/image018.png" /></p>
+</li>
+<li>
+<p>在工作区中拖入一个<code>Hive Connector</code> 节点</p>
+<p><img alt="" src="../assets/Knime/image019.png" /></p>
+</li>
+<li>
+<p>双击<code>Hive Connector</code> 节点，填写如下配置：</p>
+<ul>
+<li>Hostname: HIve主节点</li>
+<li>Port: 21066</li>
+<li>Parameter: <code>principal=hive/hadoop.hadoop.com@HADOOP.COM;saslQop=auth-conf;auth=KERBEROS;</code></li>
+<li>Authentication: Use Kerberos</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image020.png" /></p>
+<ul>
+<li>点击<code>Apply</code>，保存配置</li>
+</ul>
+</li>
+</ul>
+<h3 id="hive_1">写入Hive表<a class="headerlink" href="#hive_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在工作区中拖入以下几个节点，并进行如下连接
+    <img alt="" src="../assets/Knime/image021.png" /></p>
+<ul>
+<li>其中<code>HDFS Connection</code> 节点配置参考上节中建立HDFS连接，点击<code>Apply</code>保存配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image022.png" /></p>
+<ul>
+<li><code>File Reader</code>节点中选择本地将要上传的文件，点击<code>Apply</code>保存配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image023.png" /></p>
+<ul>
+<li><code>Hive Loader</code>节点中选择文件要上传至服务器的路径以及表名，点击<code>Apply</code>保存配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image024.png" /></p>
+</li>
+<li>
+<p>点击菜单栏中的
+        <img alt="" src="../assets/Knime/image011.png" />执行任务</p>
+</li>
+<li>
+<p>在服务器上查看导入Hive中的表</p>
+<p><img alt="" src="../assets/Knime/image025.png" /></p>
+<p><img alt="" src="../assets/Knime/image026.png" /></p>
+</li>
+</ul>
+<h2 id="knimespark">Knime连接Spark<a class="headerlink" href="#knimespark" title="Permanent link">&para;</a></h2>
+<h3 id="_5">前提条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成Knime 3.6.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含Spark2x组件</p>
+</li>
+<li>
+<p>已完成本机的Kerberos认证</p>
+</li>
+</ul>
+<h3 id="spark-job-server">安装spark-job-server<a class="headerlink" href="#spark-job-server" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>此部分可参考KNIME官方文档<a href="https://download.knime.org/store/3.6/knime_extension_for_apache_spark_2.3.0.pdf">https://download.knime.org/store/3.6/knime_extension_for_apache_spark_2.3.0.pdf</a></p>
+</blockquote>
+<ul>
+<li>
+<p>打开<code>https://www.knime.com/knime-extension-for-apache-spark</code>，根据集群以及操作系统版本获取对应的<code>spark-job-server</code>安装包，上传至服务器节点，例如<code>/opt</code>目录下。</p>
+<blockquote>
+<p>对于FusionInsight集群，spark版本为1.5和2.1，根据要使用的spark版本选择对应的spark-job-server进行安装，这里以spark2.1为例</p>
+</blockquote>
+</li>
+<li>
+<p>对于使用spark2x的集群，执行以下命令进行安装配置
+    <div class="codehilite"><pre><span></span>LINKNAME=spark2-job-server
+useradd -d /opt/${LINKNAME}/ -M -r -s /bin/false spark-job-server
+su -l -c &quot;hdfs dfs -mkdir -p /user/spark-job-server ; hdfs dfs -chown -R spark-job-server /user/spark-job-server&quot; hdfs
+cp /path/to/spark-job-server-xxx.tar.gz /opt
+cd /opt
+tar xzf spark-job-server-xxx.tar.gz
+ln -s spark-job-server-xxx ${LINKNAME}
+chown -R spark-job-server:spark-job-server ${LINKNAME} spark-job-server-xxx/
+</pre></div></p>
+<ul>
+<li>对于<code>RHEL 6.x/CentOS 6.x</code>操作系统，执行：
+  <div class="codehilite"><pre><span></span>ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
+chkconfig --levels 2345 ${LINKNAME} on
+</pre></div></li>
+</ul>
+</li>
+<li>
+<p>若操作系统为<code>RHEL 7.x/CentOS 7.x</code>，执行：
+      <div class="codehilite"><pre><span></span>ln -s /opt/${LINKNAME}/spark-job-server-init.d /etc/init.d/${LINKNAME}
+systemctl daemon-reload
+systemctl enable ${LINKNAME}
+</pre></div></p>
+<ul>
+<li>若操作系统为<code>Ubuntu 14.x</code>，执行：
+  <div class="codehilite"><pre><span></span>ln -s /opt/${LINKNAME}/spark-job-server-init.d-ubuntu-sysv /etc/init.d/${LINKNAME}
+update-rc.d ${LINKNAME} start 20 2 3 4 5 . stop 20 0 1 6 .
+</pre></div></li>
+<li>修改<code>environment.conf</code>文件,设置 <code>master = yarn-client</code>，以yarn-client模式运行spark.</li>
+</ul>
+</li>
+<li>
+<p>修改<code>settings.sh</code>文件，设置<code>SPARK_HOME=/opt/hadoopclient/Spark2x/spark</code></p>
+</li>
+</ul>
+<h3 id="kerberos">配置Kerberos安全认证<a class="headerlink" href="#kerberos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>将Kerberos用户的配置文件上传至服务器节点，并执行一下命令
+    <div class="codehilite"><pre><span></span>chown spark-job-server:spark-job-server /path/to/keytab
+chmod go= /path/to/keytab
+</pre></div></p>
+</li>
+<li>
+<p>在<code>environment.conf</code>文件中，进行如下设置
+    <div class="codehilite"><pre><span></span>spark {
+  jobserver {
+  context-per-jvm = true
+  }
+}
+shiro {
+  authentication = on
+  config.path = &quot;shiro.ini&quot;
+  use-as-proxy-user = on
+}
+</pre></div></p>
+</li>
+<li>
+<p>在<code>setting.sh</code>文件中，编辑以下几行，配置对应的keytab文件路径以及用户principal
+    <div class="codehilite"><pre><span></span>export JOBSERVER_KEYTAB=/path/to/keytab
+export JOBSERVER_PRINCIPAL=user/host@REALM
+</pre></div></p>
+</li>
+<li>
+<p>在FusionInsight的manager管理页面，修改HDFS的core-site.xml文件配置，主页面选择<code>服务管理-&gt;HDFS-&gt;服务配置</code>,参数配置选择<code>全部服务</code>，在左侧选择<code>HDFS-&gt;自定义</code>,添加以下两个参数
+    <div class="codehilite"><pre><span></span>hadoop.proxyuser.spark-job-server.hosts = *
+hadoop.proxyuser.spark-job-server.groups = *
+</pre></div></p>
+<p><img alt="" src="../assets/Knime/image027.png" /></p>
+<p>保存配置，重启相关服务。</p>
+</li>
+</ul>
+<h3 id="spark-job-server_1">启动和停止Spark-job-server<a class="headerlink" href="#spark-job-server_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>启动Spark-job-server
+    <div class="codehilite"><pre><span></span>cd /etc/init.d
+./spark2-job-server start
+</pre></div></li>
+<li>
+<p>启动后在浏览器中输入http://ip:8090,可以看到以下界面
+    <img alt="" src="../assets/Knime/3f6c0.png" /></p>
+</li>
+<li>
+<p>停止Spark-job-server
+    <div class="codehilite"><pre><span></span>cd /etc/init.d
+./spark2-job-server stop
+</pre></div></p>
+</li>
+</ul>
+<h3 id="spark">建立Spark连接<a class="headerlink" href="#spark" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在Knime菜单栏中选择<code>File-&gt;New-&gt;New KNIME Workflow</code>,命名后保存,在工作区中拖入一个<code>Create Spark Context</code> 节点，双击后进行如下配置</p>
+<ul>
+<li>在Context Settings页面</li>
+<li>Spark version:集群中使用的Spark版本</li>
+<li>Context name：建立的Spark Context 名字</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image028.png" /></p>
+<ul>
+<li>在Connection Settings页面，IP为spark job server 所在节点IP</li>
+<li>Jobserver URL:http://ip:8090/</li>
+<li>Authentication: None</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image029.png" /></p>
+<ul>
+<li>点击<code>Apply</code>，保存配置</li>
+<li>可点击菜单栏<img alt="" src="../assets/Knime/image030.png" />按钮，测试连接是否有错，若显示如下，表明节点配置无误。</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image031.png" /></p>
+<ul>
+<li>在浏览器中打开Jobserver URL中配置的地址，可以进入Spark Job Server UI界面，可以看到刚才建立的Spark Context，显示如下：</li>
+</ul>
+<p><img alt="" src="../assets/Knime/image032.png" /></p>
+</li>
+</ul>
+<h2 id="spark_1">Spark应用实例<a class="headerlink" href="#spark_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spark应用实例下载地址<a href="https://www.knime.com/nodeguide/big-data/spark-executor">https://www.knime.com/nodeguide/big-data/spark-executor</a></li>
+</ul>
+<h3 id="hive-to-spark-to-hive">Hive to Spark to Hive<a class="headerlink" href="#hive-to-spark-to-hive" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>下载完成打开应用实例，配置<code>HDFS Connection</code>，<code>File Reader</code>，<code>Hive Connector</code>，<code>Hive Loader</code>，<code>Create Spark Context</code>和<code>Spark to Hive</code> 节点，具体配置如下：</p>
+<p><img alt="" src="../assets/Knime/image033.png" /></p>
+<p><img alt="" src="../assets/Knime/image034.png" /></p>
+<p><img alt="" src="../assets/Knime/image035.png" /></p>
+<p><img alt="" src="../assets/Knime/image036.png" /></p>
+<p><img alt="" src="../assets/Knime/image028.png" /></p>
+<p><img alt="" src="../assets/Knime/image038.png" /></p>
+</li>
+<li>
+<p>点击菜单栏中的
+        <img alt="" src="../assets/Knime/image011.png" />执行任务</p>
+</li>
+<li>
+<p>登录节点，执行<code>beeline</code>进入Hive界面，执行<code>show tables;</code>查看导入的表.</p>
+<p><img alt="" src="../assets/Knime/image039.png" /></p>
+<p>可以看到，通过<code>Hive Loader</code>节点导入的表<code>contactdata</code>以及<code>Spark to Hive</code>节点导入的表<code>sparktohivetable</code>均已导入Hive。</p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接TIBCO BW
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Kafka_Manager/" title="对接Kafka-manager" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接Kafka-manager
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

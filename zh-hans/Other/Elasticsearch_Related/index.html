@@ -1,0 +1,1455 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接beats - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#fusioninsight-hd-es" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接beats
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接beats
+      </label>
+    
+    <a href="./" title="对接beats" class="md-nav__link md-nav__link--active">
+      对接beats
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="生态简介" class="md-nav__link">
+    生态简介
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="生态简介" class="md-nav__link">
+    生态简介
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Other/Elasticsearch_Related.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="fusioninsight-hd-es">FusionInsight HD ES组件与周边生态对接<a class="headerlink" href="#fusioninsight-hd-es" title="Permanent link">&para;</a></h1>
+<h2 id="_1">生态简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129095649331.png" /></p>
+<p>Kibana: 可扩展的用户界面，能够管理整个生态组件（elasticsearch, logstash, beats）以及数据</p>
+<p>Elasticsearch: 兼有搜索引擎和NoSQL数据库功能的开源系统，基于JAVA/Lucene构建，开源、分布式、支持RESTful请求</p>
+<p>Logstash: 开源的数据收集管道，能够同时从多个源头收集数据，传到Elasticsearch，能够和Elasticsearch产生协同效应</p>
+<p>beats: 轻量级的数据搬运工，能够部署在服务器上将数据传输到Logstash或者Elasticsearch</p>
+<p>elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据</p>
+<blockquote>
+<p>注： FusionInsight HD的Elasticsearch组件支持安全模式，但是相关的周边生态Kibana，Logstash，beats， elasticseach-head为开源，暂时无法支持安全模式，故采用安全FI HD集群的非安全ES组件进行对接</p>
+</blockquote>
+<h1 id="logstashfusioninsight-hd-es">Logstash对接FusionInsight HD ES组件<a class="headerlink" href="#logstashfusioninsight-hd-es" title="Permanent link">&para;</a></h1>
+<h2 id="_2">适用场景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Logstash 6.4.2 &harr; FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)</p>
+</blockquote>
+<h2 id="_3">前提条件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装。</li>
+<li>FusionInsight HD包含ElasticSearch组件</li>
+</ul>
+<h2 id="_4">操作步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115174917852.png" /></p>
+<ul>
+<li>下载logstash 6.4.2, 网址为：<a href="https://www.elastic.co/downloads/past-releases">https://www.elastic.co/downloads/past-releases</a></li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115175339258.png" /></p>
+<ul>
+<li>将下载后的**logstash-6.4.2.zip**使用WinSCP导入主机的<code>/opt/logstash</code>路径下，使用<code>unzip logstash-6.4.2.zip</code>解压安装包</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115175958121.png" /></p>
+<ul>
+<li>到路径<code>/opt/logstash/logstash-6.4.2/config</code>下创建一个新的配置文件<code>logstash-Simple.conf</code>,内容如下：</li>
+</ul>
+<div class="codehilite"><pre><span></span>  # Sample Logstash configuration for creating a simple
+  # Beats -&gt; Logstash -&gt; Elasticsearch pipeline.
+  input{ stdin{ } }
+
+
+  output {
+
+    stdout{
+      codec =&gt; dots {}
+    }
+    elasticsearch {
+      hosts =&gt; [&quot;http://172.21.3.101:24100&quot;]
+      index =&gt; &quot;hellow_world&quot;
+      #user =&gt; &quot;elastic&quot;
+      #password =&gt; &quot;changeme&quot;
+    }
+  }
+</pre></div>
+
+<ul>
+<li>到路径<code>/opt/logstash/logstash-6.4.2</code>下，执行命令<code>bin/logstash -f config/logstash-Simple.conf</code>根据之前的<code>logstash-Simple.conf</code>配置文件的内容来启动logstash, 然后在终端手动输入数字1到6：</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115181701631.png" /></p>
+<ul>
+<li>登录elasticsearch-head服务器查看结果（对接步骤参见后文）</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115183039111.png" /></p>
+<h1 id="kibanafusioninsight-hd-es">Kibana对接FusionInsight HD ES组件<a class="headerlink" href="#kibanafusioninsight-hd-es" title="Permanent link">&para;</a></h1>
+<h2 id="_5">适用场景<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Kibana 6.1.3 &harr; FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)</p>
+</blockquote>
+<h2 id="_6">前提条件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装。</li>
+<li>FusionInsight HD包含ElasticSearch组件</li>
+</ul>
+<h2 id="_7">操作步骤<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115174917852.png" /></p>
+<ul>
+<li>下载Kibana 6.1.3, 下载网址为：<a href="https://www.elastic.co/downloads/past-releases">https://www.elastic.co/downloads/past-releases</a></li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116101430780.png" /></p>
+<ul>
+<li>将下载后的**Kibana 6.1.3**使用WinSCP导入主机的<code>/opt</code>路径下，使用<code>tar -xzf kibana-6.1.3-linux-x86_64.tar.gz</code>解压安装包</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116110006717.png" /></p>
+<ul>
+<li>使用<code>vi /opt/kibana-6.1.3-linux-x86_64/config/kibana.yml</code>添加如下配置选项:</li>
+</ul>
+<div class="codehilite"><pre><span></span>server.port: 5601
+server.host: &quot;172.16.52.190&quot;
+server.name: &quot;LinuxTest&quot;
+elasticsearch.url: &quot;http://172.21.3.101:24100&quot;
+</pre></div>
+
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116110230773.png" /></p>
+<ul>
+<li>使用<code>bin/kibana</code>启动kibana</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116110635370.png" /></p>
+<ul>
+<li>访问kibana登录界面，访问地址格式为http://Kibana服务IP地址:5601</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116110818458.png" /></p>
+<p>选择**Dev Tools**</p>
+<p>使用<code>GET _cat/indices</code>命令查看集群ES中的indices</p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116111117754.png" /></p>
+<p>使用<code>GET hellow_world/_search</code>命令查看结果</p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116111209445.png" /></p>
+<h1 id="elasticsearch-headfusioninsight-hd-es">elasticsearch-head对接FusionInsight HD ES组件<a class="headerlink" href="#elasticsearch-headfusioninsight-hd-es" title="Permanent link">&para;</a></h1>
+<h2 id="_8">适用场景<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>elasticsearch-head &harr; FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)</p>
+</blockquote>
+<h2 id="_9">前提条件<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装</li>
+<li>FusionInsight HD包含ElasticSearch组件</li>
+</ul>
+<h2 id="_10">操作步骤<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181115174917852.png" /></p>
+<ul>
+<li>在FusionInsight Manager，选择服务管理-&gt;Elasticsearch服务配置-&gt;服务配置(选择全部配置)-&gt;自定义，在elasticsearch.yml文件中添加下面两个配置项，完成后点击保存配置重启elasticsearch服务</li>
+</ul>
+<div class="codehilite"><pre><span></span>http.cors.enabled = true
+http.cors.allow-origin = &quot;*&quot;
+</pre></div>
+
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116113332837.png" /></p>
+<ul>
+<li>使用如下命令下载并且安装**elasticsearch-head**到主机上,并且启动**elasticsearch-head**服务</li>
+</ul>
+<div class="codehilite"><pre><span></span>git clone git://github.com/mobz/elasticsearch-head.git
+cd elasticsearch-head
+npm install
+npm run start
+</pre></div>
+
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116113541295.png" /></p>
+<ul>
+<li>访问elasticsearch-head界面，访问地址为http://elasticsearch-head服务IP地址:9100, 输入连接信息为<code>http://172.21.3.101:24100/</code>,点击连接:</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-2018111611373686.png" /></p>
+<ul>
+<li>查看结果</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116113832137.png" /></p>
+<h1 id="fi-hdbeats">在FI HD集群上部署beats<a class="headerlink" href="#fi-hdbeats" title="Permanent link">&para;</a></h1>
+<h2 id="_11">适用场景<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>filebeat-6.5.1 &harr; FusionInsight HD V100R002C80SPC200</p>
+</blockquote>
+<h2 id="_12">前提条件<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装。</li>
+</ul>
+<h2 id="_13">操作步骤<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>下载Filebeat 6.5.1, 下载网址为：<a href="https://www.elastic.co/downloads/past-releases">https://www.elastic.co/downloads/past-releases</a></li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129113303259.png" /></p>
+<ul>
+<li>将下载后的**Filebeat 6.5.1**使用WinSCP导入FI HD集群节点（172.21.3.103）的<code>/opt</code>路径下，使用<code>tar -xzf filebeat-6.5.1-linux-x86_64.tar.gz</code>解压安装包</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129113559319.png" /></p>
+<ul>
+<li>使用<code>cd /opt/filebeat-6.5.1-linux-x86_64</code>进入filebeat安装路径，新建一个配置文件<code>filebeat_new.yml</code>,内容如下：</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/Bigdata/zookeeper/quorumpeer/zookeeper-omm-server-host3.log
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5046&quot;]
+</pre></div>
+  注：端口5046可以自己指定，不冲突即可</p>
+<ul>
+<li>使用命令<code>./filebeat -e -c filebeat_new.yml</code>启动filebeat</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129115030211.png" /></p>
+<h1 id="_14">应用场景举例说明<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
+<h2 id="_15">场景简介<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129165527204.png" /></p>
+<p>分别在FI HD两个节点上部署filebeat实时获取两台服务器的的日志文件（/var/log/ipmitool.fi.log），通过logstash管道获取并过滤元日志文件为多个字段，并传到FI HD Elasticsearch组件上，最后通过Kibana来查看获取的日志文件</p>
+<h2 id="_16">前提条件<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装</li>
+<li>FusionInsight HD包含ElasticSearch组件</li>
+<li>已了解和完成Kibana的安装</li>
+<li>已了解和完成logstash的安装</li>
+<li>已了解和完成filebeat的安装</li>
+</ul>
+<h2 id="_17">操作步骤<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>首先登陆FusionInsight HD集群节点172.21.3.102和172.21.3.103上</p>
+</li>
+<li>
+<p>参考之前的步骤分别部署filebeat到172.21.3.102和172.21.3.103上，并且对应的创建filebeat配置文件<code>filebeat_new_host2.yml</code>内容如下：</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/ipmitool*
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5045&quot;]
+</pre></div>
+
+<p>配置文件<code>filebeat_new_host3.yml</code>内容如下：</p>
+<div class="codehilite"><pre><span></span>filebeat.prospectors:
+- type: log
+
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/log/ipmitool*
+
+path.home: /opt/filebeat-6.5.1-linux-x86_64
+path.config: ${path.home}
+
+setup.kibana:
+  host: &quot;172.16.52.190:5601&quot;
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+output.logstash:
+  hosts: [&quot;172.16.52.190:5047&quot;]
+</pre></div>
+
+<ul>
+<li>登陆安装logstash的主机，配置一个新的启动文件<code>logstash-beats-ipmitool.conf</code>内容如下：</li>
+</ul>
+<div class="codehilite"><pre><span></span># Sample Logstash configuration for creating a simple
+# Beats -&gt; Logstash -&gt; Elasticsearch pipeline.
+
+input{
+    beats{
+       port =&gt; &quot;5045&quot;
+    }
+    beats{
+       port =&gt; &quot;5047&quot;
+    }
+ }
+
+filter{
+   grok{
+     match =&gt;{&quot;message&quot; =&gt; &quot;(?&lt;object&gt;[A-Za-z0-9$.+!*&#39;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;object2&gt;[A-Za-z0-9$.+!*&#39;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;status&gt;[A-Za-z0-9$.+!*&#39;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|(?&lt;number&gt;[A-Za-z0-9$.+!*&#39;(){},~@#%&amp;/=:;_?\-\[\]&lt;&gt; ]+)\|%{GREEDYDATA:additional_info}&quot;}
+   }
+}
+
+output{
+  stdout{
+    codec =&gt; dots {}
+  }
+  elasticsearch {
+    hosts =&gt; [&quot;http://172.21.3.101:24100&quot;]
+    index =&gt; &quot;ipmitool_log&quot;
+  }
+}
+</pre></div>
+
+<ul>
+<li>启动kibana</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129144449144.png" /></p>
+<ul>
+<li>
+<p>使用命令<code>bin/logstash -f config/logstash-beats-ipmitool.conf</code>配置文件的内容来启动logstash</p>
+</li>
+<li>
+<p>分别启动172.21.3.102和172.21.3.103上的filebeat来获取日志文件</p>
+</li>
+<li>
+<p>登陆kibana网页界面，选择**Management**下面的**Index Patterns**</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129170250839.png" /></p>
+<p>在**Create index pattern**下选择刚刚由logstash传输创建的index <strong>ipmitool_log</strong>， 点击 Next step</p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129170439225.png" /></p>
+<p>在step 2中选择**@timestamp**, 点击**Create index pattern**</p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129171746223.png" /></p>
+<ul>
+<li>在 <strong>Discover</strong> 部分选择刚刚生成的index pattern <strong>ipmitool_log</strong> 可以看到整个日志的情况</li>
+</ul>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129171952121.png" /></p>
+<p>可根据不同的字段情况来整体了解日志情况</p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129172157541.png" /></p>
+<p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181129172257358.png" /></p>
+<ul>
+<li>完成</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="./" title="对接elasticsearch-head" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接elasticsearch-head
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

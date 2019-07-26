@@ -1,0 +1,1737 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Kettle - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#kettlefusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Kettle
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Kettle
+      </label>
+    
+    <a href="./" title="对接Kettle" class="md-nav__link md-nav__link--active">
+      对接Kettle
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux平台" class="md-nav__link">
+    Linux平台
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows平台" class="md-nav__link">
+    Windows平台
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kettle" title="配置并启动Kettle" class="md-nav__link">
+    配置并启动Kettle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="对接Hive" class="md-nav__link">
+    对接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="创建Hive连接" class="md-nav__link">
+    创建Hive连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_2" title="读取Hive数据" class="md-nav__link">
+    读取Hive数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_3" title="写入Hive数据" class="md-nav__link">
+    写入Hive数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="对接HDFS" class="md-nav__link">
+    对接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-cluster" title="创建Hadoop Cluster" class="md-nav__link">
+    创建Hadoop Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" title="导入HDFS文件" class="md-nav__link">
+    导入HDFS文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_2" title="读取HDFS文件" class="md-nav__link">
+    读取HDFS文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux平台" class="md-nav__link">
+    Linux平台
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows平台" class="md-nav__link">
+    Windows平台
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kettle" title="配置并启动Kettle" class="md-nav__link">
+    配置并启动Kettle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="对接Hive" class="md-nav__link">
+    对接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="创建Hive连接" class="md-nav__link">
+    创建Hive连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_2" title="读取Hive数据" class="md-nav__link">
+    读取Hive数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_3" title="写入Hive数据" class="md-nav__link">
+    写入Hive数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="对接HDFS" class="md-nav__link">
+    对接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-cluster" title="创建Hadoop Cluster" class="md-nav__link">
+    创建Hadoop Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" title="导入HDFS文件" class="md-nav__link">
+    导入HDFS文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_2" title="读取HDFS文件" class="md-nav__link">
+    读取HDFS文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Integration/Kettle_6.1.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="kettlefusioninsight">Kettle对接FusionInsight<a class="headerlink" href="#kettlefusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Kettle 6.1  &harr; FusionInsight HD V100R002C60U10</p>
+<p>Kettle 6.1  &harr; FusionInsight HD V100R002C60U10</p>
+<p>Kettle 6.1  &harr; FusionInsight HD V100R002C60U10</p>
+</blockquote>
+<h2 id="_2">环境准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="linux">Linux平台<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>安装操作系统</p>
+</li>
+<li>
+<p>安装CentOS6.5 Desktop</p>
+</li>
+<li>
+<p>禁用防火墙，SELinux</p>
+</li>
+<li>
+<p>添加本地主机名解析</p>
+</li>
+<li>
+<p>使用<code>vi /etc/hosts</code>添加本地主机名解析
+    <div class="codehilite"><pre><span></span>162.1.115.89 kettle
+</pre></div></p>
+</li>
+<li>
+<p>安装FusionInsight HD客户端</p>
+</li>
+<li>
+<p>下载完整客户端，安装至目录<code>/opt/hadoopclient</code></p>
+</li>
+<li>
+<p>使用<code>vi /etc/profile</code>编辑以下内容插入到文件末尾
+    <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+</pre></div></p>
+</li>
+<li>
+<p>将krb5.conf放在/etc目录下
+    <div class="codehilite"><pre><span></span>cp /opt/hadoopclient/KrbClient/kerberos/var/krb5kdc/krb5.conf /etc/
+</pre></div></p>
+</li>
+</ul>
+<h3 id="windows">Windows平台<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>安装JDK8</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image1.png" /></p>
+<ul>
+<li>
+<p>配置系统环境变量
+  <div class="codehilite"><pre><span></span>JAVA_HOME= C:\\Program Files\\Java\\jdk1.8.0_112
+</pre></div></p>
+</li>
+<li>
+<p>在PATH环境变量添加 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></p>
+</li>
+<li>
+<p>获取Kerberos配置文件</p>
+</li>
+</ul>
+<p>在FI管理界面下载用户的认证凭据</p>
+<p><img alt="" src="../assets/Kettle_6.1/image2.png" />解压后得到Kerberos配置文件krb5.conf和用户密钥文件user.keytab</p>
+<ul>
+<li>
+<p>将krb5.conf文件复制<code>C:\Windows</code>目录下，重命名为krb5.ini</p>
+</li>
+<li>
+<p>添加系统环境变量KRB5_CONFIG（可选步骤）
+  <div class="codehilite"><pre><span></span>KRB5_CONFIG=C:\Windows
+</pre></div></p>
+</li>
+</ul>
+<h2 id="kettle">配置并启动Kettle<a class="headerlink" href="#kettle" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>从以下地址  <a href="https://sourceforge.net/projects/pentaho/files/Data%20Integration/">https://sourceforge.net/projects/pentaho/files/Data%20Integration/</a> 下载Kettle6.1版本</p>
+</li>
+<li>
+<p>解压得到data-integration目录</p>
+</li>
+<li>
+<p>替换pentaho-big-data-plugin下的配置文件</p>
+</li>
+<li>
+<p>下载FusionInsightHD客户端并解压</p>
+</li>
+<li>
+<p>用解压目录下<code>Hive/jdbc-examples/conf/core-site.xml</code>文件</p>
+</li>
+<li>
+<p>替换<code>data-integration/plugins/pentaho-big-data-plugin/hadoop-configurations/hdp23</code>目录下的core-site.xml文件</p>
+</li>
+<li>
+<p>替换Hive相关jar包</p>
+</li>
+</ul>
+<p>将<code>data-integration/plugins/pentaho-big-data-plugin/hadoop-configurations/hdp23/lib</code>下的hive相关的jar包</p>
+<p><img alt="" src="../assets/Kettle_6.1/image3.png" /></p>
+<p>替换成Hive客户端下jdbc-examples/lib目录下的以下jar包</p>
+<p><img alt="" src="../assets/Kettle_6.1/image4.png" /></p>
+<ul>
+<li>
+<p>获取用户keytab文件</p>
+</li>
+<li>
+<p>在FI管理界面下载用户的keytab文件到本地</p>
+</li>
+<li>
+<p>Kerberos认证（可选步骤）</p>
+</li>
+</ul>
+<p>在对接Hive时，可以使用本地缓存的认证票据，或者在jdbc URL中指定principal和keytab文件进行认证（对接HDFS时，只能使用本地缓存的票据）</p>
+<p>如果使用本地缓存的票据，需要在启动kettle前先完成认证。</p>
+<p><img alt="" src="../assets/Kettle_6.1/image5.png" /></p>
+<blockquote>
+<p>使用本地缓存票据存在以下问题：kettle只在启动时读取一次票据，而不是连接时实时读取当前票据信息，所以当kettle启动时获取的票据过期以后，连接Hive会失败，必须重启kettle。</p>
+</blockquote>
+<ul>
+<li>
+<p>启动kettle</p>
+</li>
+<li>
+<p>Linux平台</p>
+<p>VNC登录CentOS桌面，打开Terminal
+<div class="codehilite"><pre><span></span>cd /opt/data-integration/
+./spoon.sh
+</pre></div></p>
+</li>
+<li>
+<p>Windows平台</p>
+<p>双击data-integration目录下的Spoon.bat</p>
+</li>
+</ul>
+<h2 id="hive">对接Hive<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h2>
+<h3 id="hive_1">创建Hive连接<a class="headerlink" href="#hive_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>选择 <strong>文件</strong> -&gt; <strong>新建</strong> -&gt; <strong>转换</strong></p>
+</li>
+<li>
+<p>点击 <strong>主对象树</strong> 页签，在页签中选择 <strong>转换</strong> -&gt; <strong>DB连接</strong>，右键选择 <strong>新建</strong></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image6.png" /></p>
+<ul>
+<li>连接类型选择Hive 2，填写主机名、端口号、数据库名</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image7.png" /></p>
+<ul>
+<li>点击左侧 <strong>选项</strong>，如果使用本地缓存票据，填写以下参数：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image8.png" /></p>
+<ul>
+<li>如果要在连接Hive时使用keytab文件认证，增加user.principal和user.keytab两个参数：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image9.png" /></p>
+<ul>
+<li>测试连接时，Hadoop版本选用HDP2.3</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image10.png" /></p>
+<p><img alt="" src="../assets/Kettle_6.1/image11.png" /></p>
+<ul>
+<li>连接测试成功后，点击 <strong>确认</strong> 保存连接</li>
+</ul>
+<h3 id="hive_2">读取Hive数据<a class="headerlink" href="#hive_2" title="Permanent link">&para;</a></h3>
+<p>以hive -&gt; postgresql为例</p>
+<ul>
+<li>
+<p>将上面创建的转换保存为hive2postgres.ktr</p>
+</li>
+<li>
+<p>创建postgresql连接</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image12.png" /></p>
+<ul>
+<li>添加转换步骤</li>
+</ul>
+<p>在 <strong>核心对象</strong> 页签下，拖动 <strong>输入</strong> -&gt; <strong>表输入</strong>，和 <strong>输出</strong> -&gt; <strong>表输出</strong> 两个步骤到工作区，并连接这两个步骤。</p>
+<p><img alt="" src="../assets/Kettle_6.1/image13.png" /></p>
+<ul>
+<li>修改Hive表输入配置</li>
+</ul>
+<p>双击 <strong>表输入</strong> 步骤， <strong>数据库连接</strong> 选择前面创建的hive连接，点击 <strong>获取SQL查询语句</strong> ，选择需要导入的hive表</p>
+<p><img alt="" src="../assets/Kettle_6.1/image14.png" /></p>
+<ul>
+<li>修改postgresql表输出配置</li>
+</ul>
+<p>双击 <strong>表输出</strong> 步骤，<strong>数据库连接中</strong> 选择前面创建的postgresql连接，点击 <strong>获取目标表配置</strong> 如下（需要先在postgresql数据库创建目标表）</p>
+<p><img alt="" src="../assets/Kettle_6.1/image15.png" /></p>
+<ul>
+<li>
+<p>运行转换</p>
+</li>
+<li>
+<p>保存配置，点击 <strong>执行</strong> 按钮，选择 <strong>本地执行</strong></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image16.png" /></p>
+<p>执行结果：</p>
+<p><img alt="" src="../assets/Kettle_6.1/image17.png" /></p>
+<p>postgresql数据库查看：</p>
+<p><img alt="" src="../assets/Kettle_6.1/image18.png" /></p>
+<h3 id="hive_3">写入Hive数据<a class="headerlink" href="#hive_3" title="Permanent link">&para;</a></h3>
+<p>以oracle -&gt; hive为例</p>
+<ul>
+<li>添加Oracle JDBC Driver</li>
+</ul>
+<p>从<a href="http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html">http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html</a>
+  下载对应版本的jdbc Driver，放到<code>data-integration/lib</code>目录下，重启kettle</p>
+<ul>
+<li>
+<p>新建转换，保存为oracle2hive.ktr</p>
+</li>
+<li>
+<p>创建Oracle连接</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image19.png" /></p>
+<ul>
+<li>
+<p>参考上面章节创建hive连接</p>
+</li>
+<li>
+<p>创建待导入的Hive表
+  <div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">kettle_export</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">name</span> <span class="n">string</span>
+<span class="p">);</span>
+</pre></div></p>
+</li>
+<li>
+<p>添加转换步骤</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image20.png" /></p>
+<ul>
+<li>
+<p>修改步骤配置</p>
+</li>
+<li>
+<p>Oracle表输入配置</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image21.png" /></p>
+<ul>
+<li>Hive表输出配置</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image22.png" /></p>
+<p><img alt="" src="../assets/Kettle_6.1/image23.png" /></p>
+<ul>
+<li>运行转换</li>
+</ul>
+<p>保存配置，点击 <strong>执行</strong> 按钮，选择 <strong>本地执行</strong></p>
+<p>执行结果：向Hive表写入13条数据，用时4min+</p>
+<p><img alt="" src="../assets/Kettle_6.1/image24.png" /></p>
+<p>查看Hive表数据：</p>
+<p><img alt="" src="../assets/Kettle_6.1/image25.png" /></p>
+<p><img alt="" src="../assets/Kettle_6.1/image26.png" /></p>
+<blockquote>
+<p>说明：向Hive表中写入数据，每插入一条数据会起一个MR任务，所以效率特别低，不推荐用这种方式，可以将数据写入HDFS文件</p>
+</blockquote>
+<h2 id="hdfs">对接HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
+<h3 id="hadoop-cluster">创建Hadoop Cluster<a class="headerlink" href="#hadoop-cluster" title="Permanent link">&para;</a></h3>
+<ul>
+<li>选择 <strong>文件</strong> -&gt; <strong>新建</strong> -&gt; <strong>转换</strong>，点击 <strong>主对象树</strong> 页签，在 <strong>Hadoop
+Clusters</strong> 右键选择 <strong>New Cluster</strong></li>
+</ul>
+<p>HDFS的Hostname填写NameNode主节点的IP，端口号是25000，如果NaneNode发生主备切换，需要修改IP</p>
+<p>JobTracker的Hostname 填写 Yarn ResourceManager主节点的IP，端口号是26004，如果ResourceManager发生主备切换，需要修改IP。</p>
+<p><img alt="" src="../assets/Kettle_6.1/image27.png" /></p>
+<p>点击 <strong>测试</strong></p>
+<p><img alt="" src="../assets/Kettle_6.1/image28.png" /></p>
+<blockquote>
+<p>kettle6.1不支持HDFS NameNode和Yarn ResourceManager的HA配置</p>
+</blockquote>
+<h3 id="hdfs_1">导入HDFS文件<a class="headerlink" href="#hdfs_1" title="Permanent link">&para;</a></h3>
+<p>以postgresql -&gt; HDFS为例</p>
+<ul>
+<li>
+<p>将上面创建的转换保存为postgres2hdfs.ktr</p>
+</li>
+<li>
+<p>参考前面章节创建postgresql连接</p>
+</li>
+<li>
+<p>添加转换步骤</p>
+</li>
+</ul>
+<p>在 核心对象 页签下，拖动 <strong>输入</strong> -&gt; <strong>表输入</strong> ，和 <strong>Big Data</strong> -&gt; <strong>Hadoop File Output</strong> 两个步骤到工作区，并连接这两个步骤。</p>
+<p><img alt="" src="../assets/Kettle_6.1/image32.png" /></p>
+<ul>
+<li>创建待导入的Hive表
+  <div class="codehilite"><pre><span></span>  <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">sample_kettle_hdfs_test</span> <span class="p">(</span>
+  <span class="n">code</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">description</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">total_emp</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">salary</span> <span class="nb">int</span>
+<span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">SERDE</span>
+<span class="s1">&#39;org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe&#39;</span> <span class="k">WITH</span>
+<span class="n">SERDEPROPERTIES</span> <span class="p">(</span><span class="ss">&quot;field.delim&quot;</span><span class="o">=</span><span class="ss">&quot;[,]&quot;</span><span class="p">)</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span><span class="p">;</span>
+</pre></div></li>
+</ul>
+<blockquote>
+<p>如果数据中含有”,”，列分隔符不可以使用默认的”,”，本样例使用多字节分隔符”[,]”</p>
+</blockquote>
+<ul>
+<li>修改postgresql表输入配置</li>
+</ul>
+<p>双击 <strong>表输入</strong> 步骤，<strong>数据库连接</strong> 选择前面创建的postgresql连接，点击 <strong>获取SQL查询语句</strong>，选择需要导入的表</p>
+<p><img alt="" src="../assets/Kettle_6.1/image33.png" /></p>
+<ul>
+<li>修改Hadoop File Output配置</li>
+</ul>
+<p>双击 <strong>Hadoop File Output</strong> 步骤，在 <strong>文件</strong> 页签下，<strong>Hadoop Cluster</strong> 选择前面创建的集群，<strong>Folder/File</strong> 选择到hive表对应的hdfs目录，文件名可以任意指定</p>
+<p><img alt="" src="../assets/Kettle_6.1/image34.png" /></p>
+<ul>
+<li>点击 <strong>内容</strong> 页签，分隔符设置与前面创建的Hive表相同，勾选 <strong>快速数据存储（无格式）</strong>（否则保存的文件中会按字段长度填充空格）</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image35.png" /></p>
+<ul>
+<li>点击 <strong>字段</strong> 页签，获取字段</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image36.png" /></p>
+<ul>
+<li>运行转换</li>
+</ul>
+<p>保存配置，点击 <strong>执行</strong> 按钮，选择 <strong>本地执行</strong> 。</p>
+<ul>
+<li>执行结果：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image37.png" /></p>
+<ul>
+<li>查看导入的HDFS文件：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image38.png" /></p>
+<ul>
+<li>查看Hive表数据：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image39.png" /></p>
+<h3 id="hdfs_2">读取HDFS文件<a class="headerlink" href="#hdfs_2" title="Permanent link">&para;</a></h3>
+<p>以HDFS -&gt; Excel为例</p>
+<ul>
+<li>
+<p>新建转换，保存为hdfs2excel.ktr</p>
+</li>
+<li>
+<p>添加转换步骤</p>
+</li>
+</ul>
+<p>在 <strong>核心对象</strong> 页签下，拖动 <strong>Big Data</strong> -&gt; <strong>Hadoop File Input</strong>
+  和 <strong>输出</strong> -&gt; <strong>Microsoft Excel 输出</strong>，两个步骤到工作区，并连接这两个步骤。</p>
+<p><img alt="" src="../assets/Kettle_6.1/image40.png" /></p>
+<ul>
+<li>修改 Hadoop File Input配置</li>
+</ul>
+<p>双击 <strong>Hadoop File Input</strong> 步骤，<strong>文件</strong> 页签，选择待导出的文件，文件类型支持CSV（txt也可以）和Fixed（固定列宽）</p>
+<p><img alt="" src="../assets/Kettle_6.1/image41.png" /></p>
+<p>点击 <strong>内容</strong> 页签，选择文件类型、分隔符、编码方式等</p>
+<p><img alt="" src="../assets/Kettle_6.1/image42.png" /></p>
+<p>点击 <strong>字段</strong> 页签，获取字段</p>
+<p><img alt="" src="../assets/Kettle_6.1/image43.png" /></p>
+<p>kettle会自动扫描文件中的字段类型和长度</p>
+<p><img alt="" src="../assets/Kettle_6.1/image44.png" /></p>
+<p>可以手动修改字段名称和长度</p>
+<p><img alt="" src="../assets/Kettle_6.1/image45.png" /></p>
+<p>点击 <strong>确定</strong> 按钮，保存配置</p>
+<ul>
+<li>修改Microsoft Excel输出配置</li>
+</ul>
+<p>双击 <strong>Microsoft Excel 输出</strong> 步骤，选择文件保存位置和文件名</p>
+<p><img alt="" src="../assets/Kettle_6.1/image46.png" /></p>
+<p>点击 <strong>内容</strong> 页签，获取字段</p>
+<p><img alt="" src="../assets/Kettle_6.1/image47.png" /></p>
+<ul>
+<li>运行转换</li>
+</ul>
+<p>保存配置，点击 <strong>执行</strong> 按钮，选择 <strong>本地执行</strong></p>
+<ul>
+<li>执行结果</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image48.png" /></p>
+<ul>
+<li>查看导出的excel文件</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/image49.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../H2O.ai/" title="对接H2O.ai" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接H2O.ai
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Apache_NiFi/" title="对接Apache NiFi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接Apache NiFi
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

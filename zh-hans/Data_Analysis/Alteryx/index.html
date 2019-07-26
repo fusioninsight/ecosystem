@@ -1,0 +1,1461 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Alteryx - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#alteryxfusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Alteryx
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Alteryx
+      </label>
+    
+    <a href="./" title="对接Alteryx" class="md-nav__link md-nav__link--active">
+      对接Alteryx
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowskerberos" title="配置Windows的kerberos认证" class="md-nav__link">
+    配置Windows的kerberos认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark-odbc" title="配置Spark ODBC 连接" class="md-nav__link">
+    配置Spark ODBC 连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive-odbc" title="配置Hive ODBC数据源" class="md-nav__link">
+    配置Hive ODBC数据源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="配置HDFS数据源" class="md-nav__link">
+    配置HDFS数据源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowskerberos" title="配置Windows的kerberos认证" class="md-nav__link">
+    配置Windows的kerberos认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark-odbc" title="配置Spark ODBC 连接" class="md-nav__link">
+    配置Spark ODBC 连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive-odbc" title="配置Hive ODBC数据源" class="md-nav__link">
+    配置Hive ODBC数据源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="配置HDFS数据源" class="md-nav__link">
+    配置HDFS数据源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Analysis/Alteryx.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="alteryxfusioninsight">Alteryx对接FusionInsight<a class="headerlink" href="#alteryxfusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Alteryx 2018.2.5.48994 &lt;-&gt; FusionInsight HD V100R002C80SPC200
+Alteryx 2018.2.5.48994 &lt;-&gt; FusionInsight HD 6.5.0</p>
+</blockquote>
+<h2 id="windowskerberos">配置Windows的kerberos认证<a class="headerlink" href="#windowskerberos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>下载并安装MIT Kerberos</li>
+</ul>
+<p>下载网址：<a href="http://web.mit.edu/kerberos/dist/#kfw-4.0">http://web.mit.edu/kerberos/dist/#kfw-4.0</a></p>
+<p>版本与操作系统位数保持一致，本文版本kfw-4.1-amd64.msi。</p>
+<ul>
+<li>
+<p>确认客户端机器的时间与FusionInsight HD集群的时间一致，时间差要小于5分钟</p>
+</li>
+<li>
+<p>设置Kerberos的配置文件</p>
+</li>
+</ul>
+<p>在FusionInsight Manager创建一个角色与“人机”用户，具体请参见《FusionInsight HD 管理员指南》的创建用户章节。角色需要根据业务需要授予Spark，Hive，HDFS的访问权限，并将用户加入角色。例如，创建用户“developuser”并下载对应的keytab文件user.keytab以及krb5.conf文件，把krb5.conf文件重命名为krb5.ini，并放到<code>C:\ProgramData\MIT\Kerberos5</code>目录中。</p>
+<ul>
+<li>
+<p>设置Kerberos票据的缓存文件</p>
+</li>
+<li>
+<p>创建存放票据的目录，例如“C:\temp”。</p>
+</li>
+<li>
+<p>设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cache”。</p>
+<p><img alt="" src="../assets/Alteryx/001.png" /></p>
+</li>
+<li>
+<p>重启机器。</p>
+</li>
+<li>
+<p>在Windows上进行认证</p>
+</li>
+<li>
+<p>使用Kerbers认证的用户名密码登录，用户名的格式为：用户名@Kerberos域名。</p>
+</li>
+<li>
+<p>打开MIT Kerberos，单击“get Ticket”，在弹出的“MIT Kerberos: Get Ticket”窗口中，“Pricipal”输入用户名，“Password”输入密码，单击“OK”。</p>
+<p><img alt="" src="../assets/Alteryx/002.png" /></p>
+</li>
+</ul>
+<h2 id="spark-odbc">配置Spark ODBC 连接<a class="headerlink" href="#spark-odbc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>在操作系统中配置Spark ODBC驱动</p>
+</li>
+<li>
+<p>下载并安装ODBC驱动：<a href="https://www.tableau.com/support/drivers">https://www.tableau.com/support/drivers</a></p>
+<p>根据操作系统类型选择对应的ODBC版本，下载并安装。</p>
+</li>
+<li>
+<p>创建DSN(Data Source Name)：选择 <strong>开始</strong> -&gt; <strong>Simba Spark ODBC Driver</strong> -&gt; <strong>ODBC Administrator</strong>。</p>
+</li>
+<li>
+<p>选择 <strong>System DSN</strong> -&gt; <strong>Add</strong> -&gt; <strong>Simba Spark ODBC Driver</strong> -&gt; <strong>Finish</strong></p>
+<p>按实际配置相应的变量，</p>
+<ul>
+<li>Mechanism：Kerberos</li>
+<li>Host FQDN：hadoop.hadoop.com</li>
+<li>Service Name：spark2x</li>
+<li>Realm：留空</li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/003.png" />    </p>
+<ul>
+<li>点击“Advanced Options”，勾选如下选项：    </li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/004.png" /></p>
+<ul>
+<li>
+<p>点击OK，保存配置。</p>
+</li>
+<li>
+<p>点击Test进行测试连接，如果出现下图，则表示Spark ODBC连接成功。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/005.png" /></p>
+</li>
+<li>
+<p>在Alteryx使用Spark数据源</p>
+</li>
+<li>
+<p>Alteryx启动后选择Options-&gt;Advanced Options-&gt;Manage In-DB Connections</p>
+</li>
+<li>
+<p>在弹出的界面中填写配置：    </p>
+<ul>
+<li>DataSource：Apache Spark ODBC</li>
+<li>COnnection Type：System</li>
+<li>Connections: 首次使用选new</li>
+<li>Connection Name: 自定义</li>
+<li>Read-&gt;Driver：Apache Spark ODBC</li>
+<li>Write-&gt;Driver: 默认</li>
+<li>Connection String：New database connection，选择Spark DSN填写用户名密码</li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/006.png" /></p>
+<p><img alt="" src="../assets/Alteryx/007.png" /></p>
+</li>
+<li>
+<p>新建一个workflow，拖入Input Data工具，在左侧Connect a file or database 中点击下拉菜单，选择Other Databases-&gt;ODBC-&gt;Simba Spark</p>
+<p><img alt="" src="../assets/Alteryx/008.png" /></p>
+</li>
+<li>
+<p>Data Source Name 选择在配置ODBC驱动时新建的Spark DSN：Simba Spark （System），填入用户名密码：</p>
+<p><img alt="" src="../assets/Alteryx/009.png" /></p>
+</li>
+<li>
+<p>点击OK，Alteryx会连接至集群,在弹出的对话框中显示的是集群中Spark中的数据表，选择一个数据表作为输入，例如Customer</p>
+<p><img alt="" src="../assets/Alteryx/010.png" /></p>
+</li>
+<li>
+<p>导入成功后显示如下,Refresh之后在左侧可以看到数据预览：</p>
+<p><img alt="" src="../assets/Alteryx/011.png" /></p>
+</li>
+<li>
+<p>再添加一个数据源，执行join操作，成功后结果如下：</p>
+<p><img alt="" src="../assets/Alteryx/012.png" /></p>
+</li>
+</ul>
+<h2 id="hive-odbc">配置Hive ODBC数据源<a class="headerlink" href="#hive-odbc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>下载并安装Hive的ODBC驱动
+  ODBC驱动下载地址：<a href="http://www.cloudera.com/content/cloudera/en/downloads/connectors/hive/odbc/hive-odbc-v2-5-15.html">下载地址</a></p>
+</li>
+<li>
+<p>创建DSN(Data Source Name)：选择 <strong>开始</strong> -&gt; <strong>Simba Spark ODBC Driver</strong> -&gt; <strong>ODBC Administrator</strong>。</p>
+</li>
+<li>
+<p>选择 <strong>System DSN</strong> -&gt; <strong>Add</strong> -&gt; <strong>Cloudera ODBC Driver for Apache Hive</strong> -&gt; <strong>Finish</strong></p>
+</li>
+<li>
+<p>按实际配置相应的变量</p>
+</li>
+<li>
+<p>Host(s): Hive Service主节点</p>
+</li>
+<li>Port：Hive Service端口21066</li>
+<li>Mechanism：Kerberos</li>
+<li>Host FQDN：hadoop.hadoop.com</li>
+<li>Service Name：hive</li>
+<li>Realm：留空</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="" src="../assets/Alteryx/013.png" /></p>
+<blockquote>
+<p>Advanced Options不需要进行配置默认的参数即可连接成功。</p>
+</blockquote>
+<ul>
+<li>
+<p>点击Test进行测试连接，如果出现下图，则表示ODBC连接Hive成功。</p>
+<p><img alt="" src="../assets/Alteryx/014.png" /></p>
+</li>
+<li>
+<p>Alteryx使用Hive数据源</p>
+</li>
+<li>
+<p>Alteryx启动后选择Options-&gt;Advanced Options-&gt;Manage In-DB Connections</p>
+</li>
+<li>
+<p>在弹出的界面中填写配置：    </p>
+<ul>
+<li>DataSource：Hive</li>
+<li>Connection Type：System</li>
+<li>Connections: 首次使用选new</li>
+<li>Connection Name: 自定义</li>
+<li>Read-&gt;Driver：Hive ODBC</li>
+<li>Write-&gt;Driver: Hive ODBC</li>
+<li>Connection String：New database connection，选择Hive DSN，填写用户名密码</li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/015.png" /></p>
+<p><img alt="" src="../assets/Alteryx/016.png" /></p>
+</li>
+<li>
+<p>在主界面新建一个workflow，拖入Input Data工具，在左侧Connect a file or database 中点击下拉菜单，选择Other Databases-&gt;ODBC</p>
+<p><img alt="" src="../assets/Alteryx/008.png" /></p>
+</li>
+<li>
+<p>Data Source Name 选择在配置ODBC驱动时新建的Hive DSN：Sample Cloudera Hive DSN(System)，填入用户名密码：</p>
+<p><img alt="" src="../assets/Alteryx/017.png" /></p>
+</li>
+<li>
+<p>点击OK，Alteryx会连接至集群,在弹出的对话框中显示的是集群中Hive中的数据表，选择一个数据表作为输入，例如Customer：</p>
+<p><img alt="" src="../assets/Alteryx/018.png" /></p>
+</li>
+<li>
+<p>导入成功后显示如下,Refresh之后在左侧可以看到数据预览：</p>
+<p><img alt="" src="../assets/Alteryx/019.png" /></p>
+</li>
+<li>
+<p>再添加一个数据源，执行join操作，成功后结果如下：</p>
+<p><img alt="" src="../assets/Alteryx/020.png" /></p>
+</li>
+</ul>
+<h2 id="hdfs">配置HDFS数据源<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>HDFS是通过WebHDFS连接，前提条件是获取MIT Kerberos Ticket，并在Manager中修改HDFS的配置：
+    dfs.http.policy 修改为HTTP_AND_HTTPS，重启HDFS。</p>
+</li>
+<li>
+<p>在Alteryx主界面新建一个workflow，拖入Input Data工具，在左侧Connect a file or database 中点击下拉菜单，选择Hadoop</p>
+</li>
+<li>
+<p>在弹出的界面中填写配置：    </p>
+<ul>
+<li>Server：WebHDFS</li>
+<li>Host： HDFS所在服务器IP</li>
+<li>Port: 配置文件中dfs.namenode.http.port对应端口</li>
+<li>User Name &amp; Password： Kerberos 认证用户名及密码</li>
+<li>Kerberos: Kerberos MIT</li>
+</ul>
+<p><img alt="" src="../assets/Alteryx/021.png" /></p>
+</li>
+<li>
+<p>点击Test，出现Connection successful 表明连接成功。</p>
+<p><img alt="" src="../assets/Alteryx/022.png" /></p>
+</li>
+<li>
+<p>弹出集群中的HDFS文件系统内容，目前支持Avro和CSV格式的文件，需上传至HDFS文件系统中。</p>
+<p><img alt="" src="../assets/Alteryx/023.png" /></p>
+</li>
+<li>
+<p>选择相应文件，连接成功，Refresh之后左侧菜单显示文件内容预览：</p>
+<p><img alt="" src="../assets/Alteryx/024.png" /></p>
+</li>
+<li>
+<p>Join 操作成功后显示如下:</p>
+<p><img alt="" src="../assets/Alteryx/025.png" /></p>
+</li>
+</ul>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<ul>
+<li>找不到C:\ProgramData\MIT\Kerberos5文件夹</li>
+</ul>
+<p>C:\ProgramData一般属于隐藏文件夹，设置文件夹隐藏可见或者使用搜索功能即可解决问题。</p>
+<ul>
+<li>连接成功无数据库权限</li>
+</ul>
+<p>连接所使用的用户需要有数据库的权限，否则将导致ODBC连接成功却无法读取数据库内容。</p>
+<ul>
+<li>测试连接时出现Default Kerberos ticket is expired</li>
+</ul>
+<p>Kerberos MIT ticket 过期，需要重新获得，获取一次有效期为10h.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接Oracle BIEE
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../RapidMiner/" title="对接RapidMiner" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接RapidMiner
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

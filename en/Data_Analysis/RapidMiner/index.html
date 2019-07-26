@@ -1,0 +1,885 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>RapidMiner - FusionData Ecosystem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#connection-between-rapidminer-with-fusioninsighthd" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="FusionData Ecosystem" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              FusionData Ecosystem
+            </span>
+            <span class="md-header-nav__topic">
+              RapidMiner
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="FusionData Ecosystem" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FusionData Ecosystem
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Business Intelligence
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Business Intelligence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="Tableau" class="md-nav__link">
+      Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="QlikView" class="md-nav__link">
+      QlikView
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RapidMiner
+      </label>
+    
+    <a href="./" title="RapidMiner" class="md-nav__link md-nav__link--active">
+      RapidMiner
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" title="Succeeded Case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" title="preparation" class="md-nav__link">
+    preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-cluster" title="Configure the cluster" class="md-nav__link">
+    Configure the cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rapidminer-configuration" title="RapidMiner Configuration" class="md-nav__link">
+    RapidMiner Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-connection" title="Test the Connection" class="md-nav__link">
+    Test the Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radoop-demo" title="Radoop Demo" class="md-nav__link">
+    Radoop Demo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Data Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="Informatica PowerCenter" class="md-nav__link">
+      Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="Informatica PWX CDC" class="md-nav__link">
+      Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="Talend" class="md-nav__link">
+      Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="Apache NiFi" class="md-nav__link">
+      Apache NiFi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" title="Succeeded Case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" title="preparation" class="md-nav__link">
+    preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-cluster" title="Configure the cluster" class="md-nav__link">
+    Configure the cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rapidminer-configuration" title="RapidMiner Configuration" class="md-nav__link">
+    RapidMiner Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-connection" title="Test the Connection" class="md-nav__link">
+    Test the Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radoop-demo" title="Radoop Demo" class="md-nav__link">
+    Radoop Demo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/en/edit/master/docs/Data_Analysis/RapidMiner.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="connection-between-rapidminer-with-fusioninsighthd">Connection between RapidMiner with FusionInsightHD<a class="headerlink" href="#connection-between-rapidminer-with-fusioninsighthd" title="Permanent link">&para;</a></h1>
+<h2 id="succeeded-case">Succeeded Case<a class="headerlink" href="#succeeded-case" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Rapidminer Studio 8.2.001 &lt;-&gt; FusionInsight HD V100R002C80SPC200</p>
+</blockquote>
+<h2 id="preparation">preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Download and install RapidMiner Studio, download site <a href="https://rapidminer.com/">https://rapidminer.com/</a></li>
+<li>Start rapidminer, on the top of the main menu, choose <code>Extensions-&gt;Marketplace</code>,type <code>radoop</code>,install it and restart rapidminer</li>
+<li>Configure the local host file，file path is <code>C:\Windows\System32\drivers\etc</code>，add the cluster node ip and host name and save the file.</li>
+<li>
+<p>Configure Kerberos file</p>
+<p>Created a user with "Human-Machine" as its type( For detail, take product documentation as a reference ), grant the Hive, Spark,HDFS privileges to this user. For example, create a user named <strong>developuser</strong>, download the <strong>user.keytab</strong> and <strong>krb5.conf</strong> of the user and save them in your computer.</p>
+</li>
+<li>
+<p>Prepare the FusionInsight client configuration filesystem and jar files</p>
+<ul>
+<li>In the Manager GUI，choose <code>Service-&gt;Download Client-&gt;Only Configuration File</code></li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img001.png" /></p>
+<ul>
+<li>Unzip the file,find the following files,copy them into a directory,like <code>../config</code>.</li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img002.png" /></p>
+<ul>
+<li>Open <code>yarn-site.xml</code>,delete the following property:
+ <div class="codehilite"><pre><span></span>&lt;property&gt;
+&lt;name&gt;audit.service.name&lt;/name&gt;
+&lt;value&gt;Yarn&lt;/value&gt;
+&lt;/property&gt;
+</pre></div></li>
+<li>Login to one of the cluster nodes, go to the following path<code>\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.1.0.tar.gz\spark\jars</code>,download the file directory <code>/jars</code>,save it in your computer,like<code>C:/jars</code>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="configure-the-cluster">Configure the cluster<a class="headerlink" href="#configure-the-cluster" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Bind the UDP port</p>
+<ul>
+<li>Download the UDP port bind tool <code>uredir</code>,website is <a href="https://github.com/troglobit/uredir">https://github.com/troglobit/uredir</a></li>
+<li>After building and installing, we get the executing file <code>uredir</code>,upload it to the KDC server nodes in the cluster,and run the following command,here IP refers to the node ip.
+  <div class="codehilite"><pre><span></span>./uredir IP:88 IP:21732
+</pre></div></li>
+</ul>
+</li>
+<li>
+<p>Configure Radoop Jars</p>
+<ul>
+<li>Download Radoop jars in this address<a href="https://docs.rapidminer.com/latest/radoop/installation/operation-and-maintenance.html">https://docs.rapidminer.com/latest/radoop/installation/operation-and-maintenance.html</a>,get the correct version。</li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img003.png" /></p>
+<ul>
+<li>
+<p>Upload the jar files to each node of the cluster,eg,<code>/usr/local/lib/radoop/</code></p>
+</li>
+<li>
+<p>In the HiveServer node of the cluster,uplaod the Radoop jar files to the following path and change their owner and execution authority
+  ```
+  cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hive-1.3.0/hive-1.3.0/lib
+  chown omm:wheel radoop_hive-v4.jar
+  chown omm:wheel rapidminer_libs-8.2.0.jar
+  chmod 700 radoop_hive-v4.jar
+  chmod 700 rapidminer_libs-8.2.0.jar</p>
+</li>
+</ul>
+<p>cd /opt/huawei/Bigdata/FusionInsight_HD_V100R002C80SPC200/install/FusionInsight-Hadoop-2.7.2/hadoop/share/hadoop/mapreduce/lib
+  chown omm:ficommon radoop_hive-v4.jar
+  chown omm:ficommon rapidminer_libs-8.2.0.jar
+  chmod 750 radoop_hive-v4.jar
+  chmod 750 rapidminer_libs-8.2.0.jar
+ <code>``
+  * In the FusionInsight Manager GUI, choose</code>Service-&gt;Hive-&gt;Service Configuration`add the following configuration</p>
+<p><div class="codehilite"><pre><span></span>radoop\.operation\.id|mapred\.job\.name|hive\.warehouse\.subdir\.inherit\.perms|hive\.exec\.max\.dynamic\.partitions|hive\.exec\.max\.dynamic\.partitions\.pernode|spark\.app\.name
+</pre></div>
+<img alt="" src="../assets/RapidMiner/6d05f.png" />
+- Notice that there should be a <code>|</code> as seperater</p>
+</li>
+<li>
+<p>Save the configuration，restart HiveServer</p>
+</li>
+<li>
+<p>Create Radoop UDF functions</p>
+<ul>
+<li>
+<p>Run the following command in the client node, login to the Hive database
+    <div class="codehilite"><pre><span></span>source /opt/hadoopclient、bigdata_env
+kinit developuser
+beeline
+</pre></div></p>
+</li>
+<li>
+<p>create a database in Hive, for example <code>rapidminer</code>, and create functions,run the following commands in beeline mode
+    <div class="codehilite"><pre><span></span>create database rapidminer;
+use rapidminer;
+DROP FUNCTION IF EXISTS r3_add_file;
+DROP FUNCTION IF EXISTS r3_apply_model;
+DROP FUNCTION IF EXISTS r3_correlation_matrix;
+DROP FUNCTION IF EXISTS r3_esc;
+DROP FUNCTION IF EXISTS r3_gaussian_rand;
+DROP FUNCTION IF EXISTS r3_greatest;
+DROP FUNCTION IF EXISTS r3_is_eq;
+DROP FUNCTION IF EXISTS r3_least;
+DROP FUNCTION IF EXISTS r3_max_index;
+DROP FUNCTION IF EXISTS r3_nth;
+DROP FUNCTION IF EXISTS r3_pivot_collect_avg;
+DROP FUNCTION IF EXISTS r3_pivot_collect_count;
+DROP FUNCTION IF EXISTS r3_pivot_collect_max;
+DROP FUNCTION IF EXISTS r3_pivot_collect_min;
+DROP FUNCTION IF EXISTS r3_pivot_collect_sum;
+DROP FUNCTION IF EXISTS r3_pivot_createtable;
+DROP FUNCTION IF EXISTS r3_score_naive_bayes;
+DROP FUNCTION IF EXISTS r3_sum_collect;
+DROP FUNCTION IF EXISTS r3_which;
+DROP FUNCTION IF EXISTS r3_sleep;
+CREATE FUNCTION r3_add_file AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFAddFile&#39;;
+CREATE FUNCTION r3_apply_model AS &#39;eu.radoop.datahandler.hive.udf.GenericUDTFApplyModel&#39;;
+CREATE FUNCTION r3_correlation_matrix AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFCorrelationMatrix&#39;;
+CREATE FUNCTION r3_esc AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFEscapeChars&#39;;
+CREATE FUNCTION r3_gaussian_rand AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFGaussianRandom&#39;;
+CREATE FUNCTION r3_greatest AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFGreatest&#39;;
+CREATE FUNCTION r3_is_eq AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFIsEqual&#39;;
+CREATE FUNCTION r3_least AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFLeast&#39;;
+CREATE FUNCTION r3_max_index AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFMaxIndex&#39;;
+CREATE FUNCTION r3_nth AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFNth&#39;;
+CREATE FUNCTION r3_pivot_collect_avg AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFPivotAvg&#39;;
+CREATE FUNCTION r3_pivot_collect_count AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFPivotCount&#39;;
+CREATE FUNCTION r3_pivot_collect_max AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFPivotMax&#39;;
+CREATE FUNCTION r3_pivot_collect_min AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFPivotMin&#39;;
+CREATE FUNCTION r3_pivot_collect_sum AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFPivotSum&#39;;
+CREATE FUNCTION r3_pivot_createtable AS &#39;eu.radoop.datahandler.hive.udf.GenericUDTFCreatePivotTable&#39;;
+CREATE FUNCTION r3_score_naive_bayes AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFScoreNaiveBayes&#39;;
+CREATE FUNCTION r3_sum_collect AS &#39;eu.radoop.datahandler.hive.udf.GenericUDAFSumCollect&#39;;
+CREATE FUNCTION r3_which AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFWhich&#39;;
+CREATE FUNCTION r3_sleep AS &#39;eu.radoop.datahandler.hive.udf.GenericUDFSleep&#39;;
+</pre></div></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="rapidminer-configuration">RapidMiner Configuration<a class="headerlink" href="#rapidminer-configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>In RapidMiner sStadio，choose <code>Connections-&gt;Manage Radoop Connections</code> in the top menu.</li>
+<li>
+<p>choose <code>New Connections-&gt;Import Hadoop Configuration Files</code>,choose the configuration files downloaded from the cluster,click <code>Import Configuration</code></p>
+<p><img alt="" src="../assets/RapidMiner/img004.png" /></p>
+</li>
+<li>
+<p>After the import, click <code>Next</code>, go to the Connection settings window,configure ad following:</p>
+<ul>
+<li>Global：</li>
+<li>Hadoop Version：Other（Hadoop 2X line）</li>
+<li>Additional Libraries Directory: Spark jar files downloaded from the cluster</li>
+<li>Client Principal: <code>Kerberos user name</code>@HADOOP.com</li>
+<li>Keytab File: the keytab file downloaded from manager</li>
+<li>KDC Address: the KDC server IP(see the krb5.conf file)</li>
+<li>REALM: HADOOP.COM</li>
+<li>Kerberos Config File: the krb5 file downloaded from manager</li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img005.png" /></p>
+<ul>
+<li>Hadoop：</li>
+<li>
+<p>At the filter in upper right corner, search <code>split</code> , uncheck <code>mapreduce.input.fileinputformat.split.maxsize</code></p>
+<p><img alt="" src="../assets/RapidMiner/img006.png" /></p>
+</li>
+<li>
+<p>Search <code>classpath</code>,uncheck<code>mapreduce.application.classpath</code></p>
+<p><img alt="" src="../assets/RapidMiner/img007.png" /></p>
+</li>
+<li>
+<p>Spark：</p>
+</li>
+<li>Spark Version：Spark2.1</li>
+<li>Spark Archive(or libs)Path: local:///opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/install/FusionInsight-Spark2x-2.1.0/spark/jars</li>
+<li>Spark Resource Allocation Policy：Static，Default Configuration</li>
+<li>
+<p>Advanced Spark Parameters：add the following two parameters for spark:<code>park.driver.extraJavaOptions</code> and <code>spark.executor.extraJavaOptions</code></p>
+<p><img alt="" src="../assets/RapidMiner/img008.png" /></p>
+</li>
+<li>
+<p>The value can be found in manager GUI, choose <code>Services-&gt;Spark2X Configuration-&gt;type all</code>，search <code>extraJavaOptions</code> in the search bar, choose the parameters in <code>Spark2x-&gt;SparkResource2x</code>
+    <img alt="" src="../assets/RapidMiner/img009.png" /></p>
+</li>
+<li>
+<p>Copy the values into a text file, replace the relative path <code>./</code>in the value with absolute path in the cluster, like <code>/opt/huawei/Bigdata/FusionInsight_Spark2x_V100R002C80SPC200/1_21_SparkResource2x/etc</code>, then copy the values into rapidminer spark configuration</p>
+<p><img alt="" src="../assets/RapidMiner/74e57.png" /></p>
+</li>
+<li>
+<p>Hive:</p>
+</li>
+<li>Hive Version: Hive Server2</li>
+<li>Hive Server Address：Hive Server IP</li>
+<li>Hive Port: 21066</li>
+<li>Database Name: the database name created in Hive,here is rapidminer</li>
+<li>Customer database for UDFs: same as before</li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img010.png" /></p>
+<ul>
+<li>click <code>OK-&gt;Proced Anyway-&gt;Save</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="test-the-connection">Test the Connection<a class="headerlink" href="#test-the-connection" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Click Configure, in Global tab, click Test，Test Results show as following:</p>
+<p><img alt="" src="../assets/RapidMiner/img011.png" /></p>
+</li>
+<li>
+<p>In Hadoop tab，click Test,Test Results show as following:</p>
+<p><img alt="" src="../assets/RapidMiner/img012.png" /></p>
+</li>
+<li>
+<p>In Spark tab,click Test,Test Results show as following:</p>
+<p><img alt="" src="../assets/RapidMiner/img013.png" /></p>
+</li>
+<li>
+<p>In Hive tab, click Test, Test Results show as following:</p>
+<p><img alt="" src="../assets/RapidMiner/img014.png" /></p>
+</li>
+<li>
+<p>Click Full test,Test Results show as following:</p>
+<p><img alt="" src="../assets/RapidMiner/img015.png" /></p>
+</li>
+</ul>
+<h2 id="radoop-demo">Radoop Demo<a class="headerlink" href="#radoop-demo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>In RapidMiner Studio main menu,choose <code>Help-&gt;Tutorials-&gt;User Hadoop-&gt;Rapidminer Radoop</code></p>
+<ul>
+<li>Run the demo accordding to the Tutorials, get the follwing results</li>
+</ul>
+<p><img alt="" src="../assets/RapidMiner/img016.png" /></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Business_Intelligence/QlikView/" title="QlikView" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                QlikView
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Data_Integration/Informatica_PowerCenter/" title="Informatica PowerCenter" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Informatica PowerCenter
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

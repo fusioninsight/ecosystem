@@ -1,0 +1,2379 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Oracle GoldenGate - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#oracle-goldengatefusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Oracle GoldenGate
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Oracle GoldenGate
+      </label>
+    
+    <a href="./" title="对接Oracle GoldenGate" class="md-nav__link md-nav__link--active">
+      对接Oracle GoldenGate
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="环境信息" class="md-nav__link">
+    环境信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="软件信息" class="md-nav__link">
+    软件信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="硬件信息" class="md-nav__link">
+    硬件信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="拓朴结构" class="md-nav__link">
+    拓朴结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="测试表" class="md-nav__link">
+    测试表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ogg-for-oracle" title="OGG for Oracle安装" class="md-nav__link">
+    OGG for Oracle安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ogg-for-oracle_1" title="下载并安装OGG for Oracle" class="md-nav__link">
+    下载并安装OGG for Oracle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="配置环境变量" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="打开数据库归档及开启最小附加日志" class="md-nav__link">
+    打开数据库归档及开启最小附加日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ogg" title="在数据库中创建ogg用户并赋予权限" class="md-nav__link">
+    在数据库中创建ogg用户并赋予权限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate" title="配置GoldenGate 登陆数据库的别名" class="md-nav__link">
+    配置GoldenGate 登陆数据库的别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testtest1" title="创建test用户和test1表" class="md-nav__link">
+    创建test用户和test1表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_1" title="配置GoldenGate捕获进程" class="md-nav__link">
+    配置GoldenGate捕获进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatephdfs" title="配置GoldenGate传输进程phdfs" class="md-nav__link">
+    配置GoldenGate传输进程phdfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatephbase" title="配置GoldenGate传输进程phbase" class="md-nav__link">
+    配置GoldenGate传输进程phbase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatepflume" title="配置GoldenGate传输进程pflume" class="md-nav__link">
+    配置GoldenGate传输进程pflume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatepkafka" title="配置GoldenGate传输进程pkafka" class="md-nav__link">
+    配置GoldenGate传输进程pkafka
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_2" title="查看GoldenGate进程运行状态" class="md-nav__link">
+    查看GoldenGate进程运行状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ogg-for-bigdata" title="OGG for Bigdata安装" class="md-nav__link">
+    OGG for Bigdata安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_3" title="配置GoldenGate管理进程" class="md-nav__link">
+    配置GoldenGate管理进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-hdfs" title="配置GoldenGate HDFS 复制进程" class="md-nav__link">
+    配置GoldenGate HDFS 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-hbase" title="配置GoldenGate HBase 复制进程" class="md-nav__link">
+    配置GoldenGate HBase 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-kafka" title="配置GoldenGate Kafka 复制进程" class="md-nav__link">
+    配置GoldenGate Kafka 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-flume" title="配置GoldenGate Flume 复制进程" class="md-nav__link">
+    配置GoldenGate Flume 复制进程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="测试结果" class="md-nav__link">
+    测试结果
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oracle" title="Oracle端启动所有的传输进程" class="md-nav__link">
+    Oracle端启动所有的传输进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracleinsert" title="在Oracle数据库源端做Insert操作" class="md-nav__link">
+    在Oracle数据库源端做Insert操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracleupdate" title="在Oracle数据库源端做Update操作" class="md-nav__link">
+    在Oracle数据库源端做Update操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracledelete" title="在Oracle数据库源端做Delete操作" class="md-nav__link">
+    在Oracle数据库源端做Delete操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="环境信息" class="md-nav__link">
+    环境信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="软件信息" class="md-nav__link">
+    软件信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="硬件信息" class="md-nav__link">
+    硬件信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="拓朴结构" class="md-nav__link">
+    拓朴结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="测试表" class="md-nav__link">
+    测试表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ogg-for-oracle" title="OGG for Oracle安装" class="md-nav__link">
+    OGG for Oracle安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ogg-for-oracle_1" title="下载并安装OGG for Oracle" class="md-nav__link">
+    下载并安装OGG for Oracle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="配置环境变量" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="打开数据库归档及开启最小附加日志" class="md-nav__link">
+    打开数据库归档及开启最小附加日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ogg" title="在数据库中创建ogg用户并赋予权限" class="md-nav__link">
+    在数据库中创建ogg用户并赋予权限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate" title="配置GoldenGate 登陆数据库的别名" class="md-nav__link">
+    配置GoldenGate 登陆数据库的别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testtest1" title="创建test用户和test1表" class="md-nav__link">
+    创建test用户和test1表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_1" title="配置GoldenGate捕获进程" class="md-nav__link">
+    配置GoldenGate捕获进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatephdfs" title="配置GoldenGate传输进程phdfs" class="md-nav__link">
+    配置GoldenGate传输进程phdfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatephbase" title="配置GoldenGate传输进程phbase" class="md-nav__link">
+    配置GoldenGate传输进程phbase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatepflume" title="配置GoldenGate传输进程pflume" class="md-nav__link">
+    配置GoldenGate传输进程pflume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengatepkafka" title="配置GoldenGate传输进程pkafka" class="md-nav__link">
+    配置GoldenGate传输进程pkafka
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_2" title="查看GoldenGate进程运行状态" class="md-nav__link">
+    查看GoldenGate进程运行状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ogg-for-bigdata" title="OGG for Bigdata安装" class="md-nav__link">
+    OGG for Bigdata安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="环境准备" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate_3" title="配置GoldenGate管理进程" class="md-nav__link">
+    配置GoldenGate管理进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-hdfs" title="配置GoldenGate HDFS 复制进程" class="md-nav__link">
+    配置GoldenGate HDFS 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-hbase" title="配置GoldenGate HBase 复制进程" class="md-nav__link">
+    配置GoldenGate HBase 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-kafka" title="配置GoldenGate Kafka 复制进程" class="md-nav__link">
+    配置GoldenGate Kafka 复制进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goldengate-flume" title="配置GoldenGate Flume 复制进程" class="md-nav__link">
+    配置GoldenGate Flume 复制进程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="测试结果" class="md-nav__link">
+    测试结果
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oracle" title="Oracle端启动所有的传输进程" class="md-nav__link">
+    Oracle端启动所有的传输进程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracleinsert" title="在Oracle数据库源端做Insert操作" class="md-nav__link">
+    在Oracle数据库源端做Insert操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracleupdate" title="在Oracle数据库源端做Update操作" class="md-nav__link">
+    在Oracle数据库源端做Update操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracledelete" title="在Oracle数据库源端做Delete操作" class="md-nav__link">
+    在Oracle数据库源端做Delete操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Integration/Oracle_GoldenGate.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="oracle-goldengatefusioninsight">Oracle GoldenGate对接FusionInsight<a class="headerlink" href="#oracle-goldengatefusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Oracle GoldenGate 12.2 &harr; FusionInsight HD V100R002C60U20</p>
+<p>Oracle GoldenGate 12.3 &harr; FusionInsight HD V100R002C70SPC200</p>
+<p>Oracle GoldenGate 12.3 &harr; FusionInsight HD V100R002C80SPC100</p>
+<p>Oracle GoldenGate 12.2 &harr; FusionInsight HD 6.5.0</p>
+</blockquote>
+<h2 id="_2">环境信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">软件信息<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Oracle GoldenGate 12.2.0.1.1 for Oracle database</li>
+<li>Oracle GoldenGate 12.2.0.1.1 for BigData</li>
+<li>Oracle database 12.1.0.2.0</li>
+<li>jdk-7u71-linux-x64.rpm</li>
+<li>FusionInsight V100R002C60U20</li>
+</ul>
+<h3 id="_4">硬件信息<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>源端OGG VM: 162.1.115.68  Redhat6.5 （包含Oracle DB12c的数据库）</li>
+<li>目标端OGG VM: 162.1.115.69 Redhat6.5（包含Hadoop的客户端）</li>
+</ul>
+<h3 id="_5">拓朴结构<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>测试拓朴结构如下图所示：
+<img alt="" src="../assets/Oracle_GoldenGate/image1.png" /></p>
+<h3 id="_6">测试表<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>源端测试表：</p>
+<p>在源端Oracle的PDBORCL数据库的test用户下创建test1表，其中ID为主键</p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image2.png" /></p>
+<h2 id="ogg-for-oracle">OGG for Oracle安装<a class="headerlink" href="#ogg-for-oracle" title="Permanent link">&para;</a></h2>
+<p>前置条件：完成oracle12c数据库的安装（IP：162.1.115.68）</p>
+<p>软件版本：linuxamd64_12102_database_1of2.zip, linuxamd64_12102_database_1of2.zip</p>
+<h3 id="ogg-for-oracle_1">下载并安装OGG for Oracle<a class="headerlink" href="#ogg-for-oracle_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>将fbo_ggs_Linux_x64_shiphome.zip上传至oracle客户端（ip：162.1.115.68）<code>/home/oracle</code>目录下，切换至oracle用户，解压生成bo_ggs_Linux_x64_shiphome目录。</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image3.png" /></p>
+<ul>
+<li>在<code>/home/oracle/fbo_ggs_Linux_x64_shiphome/Disk1</code>目录下，运行<code>./runInstaller</code></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image4.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image5.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image6.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image7.png" /></p>
+<ul>
+<li>安装成功，/home/orcle/OGG/是OGG for Oracle的安装目录。</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image8.png" /></p>
+<h3 id="_7">配置环境变量<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>切换到oracle用户</li>
+</ul>
+<div class="codehilite"><pre><span></span>su - oracle
+vi .bash_profile
+</pre></div>
+
+<ul>
+<li>文件.bash_profile内容如下：
+  ```shell
+  # .bash_profile
+  # Get the aliases and functions
+  if [ -f ~/.bashrc ]; then
+          . ~/.bashrc
+  fi</li>
+</ul>
+<p># User specific environment and startup programs</p>
+<p>PATH=<span><span class="MathJax_Preview">PATH:</span><script type="math/tex">PATH:</script></span>HOME/bin</p>
+<p>export PATH</p>
+<p>PATH=<span><span class="MathJax_Preview">PATH:</span><script type="math/tex">PATH:</script></span>HOME/bin:/u01/app/oracle/product/12.1.0/db_1/bin
+  export PATH
+  umask 022
+  export ORACLE_BASE=/u01/app/oracle
+  export ORACLE_HOME=/u01/app/oracle/product/12.1.0/db_1
+  export ORACLE_SID=orcl</p>
+<p>export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+    ```</p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image9.png" /></p>
+<ul>
+<li>运行OGG</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image10.png" /></p>
+<h3 id="_8">打开数据库归档及开启最小附加日志<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使用Sqlplus / as sysdba登陆Oracle源端数据库后打开Archive Log:
+  <div class="codehilite"><pre><span></span><span class="n">shutdown</span> <span class="k">immediate</span><span class="p">;</span>
+<span class="n">startup</span> <span class="n">mount</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">database</span> <span class="n">archivelog</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">database</span> <span class="k">open</span><span class="p">;</span>
+<span class="n">archive</span> <span class="n">log</span> <span class="n">list</span><span class="p">;</span>
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image11.png" /></p>
+<ul>
+<li>
+<p>源端数据库打开数据库级最小附加日志及force logging：
+  <div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">supplemental_log_data_min</span><span class="p">,</span> <span class="n">force_logging</span> <span class="k">FROM</span> <span class="n">v$database</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">database</span> <span class="k">add</span> <span class="n">supplemental</span> <span class="n">log</span> <span class="k">data</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">database</span> <span class="k">force</span> <span class="n">logging</span><span class="p">;</span>
+</pre></div></p>
+</li>
+<li>
+<p>切换日志以使附加日志生效：
+  <div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">SYSTEM</span> <span class="n">switch</span> <span class="n">logfile</span><span class="p">;</span>
+</pre></div></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image12.png" /></p>
+<ul>
+<li>Enabling Oracle GoldenGate in the Database:
+  <div class="codehilite"><pre><span></span><span class="k">show</span> <span class="k">parameter</span> <span class="n">enable_goldengate_replication</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">system</span> <span class="k">set</span> <span class="n">enable_goldengate_replication</span> <span class="o">=</span> <span class="k">true</span> <span class="k">scope</span><span class="o">=</span><span class="k">both</span><span class="p">;</span>
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image13.png" /></p>
+<ul>
+<li>配置DB12c PDB的tnsname信息<code>vi $ORACLE_HOME/network/admin/tnsnames.ora</code>：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image14.png" /></p>
+<h3 id="ogg">在数据库中创建ogg用户并赋予权限<a class="headerlink" href="#ogg" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使用<code>sqlplus / as sysdba</code>登陆数据库后创建ogg用户并赋予权限
+  <div class="codehilite"><pre><span></span><span class="k">create</span> <span class="k">user</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">identified</span> <span class="k">by</span> <span class="n">welcome1</span><span class="p">;</span>
+<span class="k">grant</span> <span class="n">dba</span> <span class="k">to</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">container</span><span class="o">=</span><span class="k">all</span><span class="p">;</span>
+<span class="k">grant</span> <span class="k">create</span> <span class="k">session</span><span class="p">,</span> <span class="k">connect</span><span class="p">,</span> <span class="n">resource</span> <span class="k">to</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">container</span><span class="o">=</span><span class="k">all</span><span class="p">;</span>
+<span class="k">grant</span> <span class="k">alter</span> <span class="k">any</span> <span class="k">table</span> <span class="k">to</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">container</span><span class="o">=</span><span class="k">all</span><span class="p">;</span>
+<span class="k">grant</span> <span class="k">alter</span> <span class="k">system</span> <span class="k">to</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">container</span><span class="o">=</span><span class="k">all</span><span class="p">;</span>
+<span class="k">exec</span> <span class="n">dbms_goldengate_auth</span><span class="p">.</span><span class="n">grant_admin_privilege</span><span class="p">(</span><span class="s1">&#39;c##ogg&#39;</span><span class="p">,</span><span class="n">container</span><span class="o">=&gt;</span><span class="s1">&#39;all&#39;</span><span class="p">);</span>
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image15.png" /></p>
+<h3 id="goldengate">配置GoldenGate 登陆数据库的别名<a class="headerlink" href="#goldengate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在GoldenGate中创建用户别名，用于登录Oracle数据库读取数据库日志：
+  <div class="codehilite"><pre><span></span><span class="k">add</span> <span class="n">credentialstore</span>
+<span class="k">ALTER</span> <span class="n">CREDENTIALSTORE</span> <span class="k">ADD</span> <span class="k">USER</span> <span class="k">c</span><span class="o">##</span><span class="n">ogg</span> <span class="n">PASSWORD</span> <span class="n">welcome1</span> <span class="k">ALIAS</span> <span class="n">ogg_src</span>
+</pre></div></p>
+</li>
+<li>
+<p>这样就可以用别名ogg_src登陆数据库了：
+  <div class="codehilite"><pre><span></span><span class="n">dblogin</span> <span class="n">useridalias</span> <span class="n">ogg_src</span>
+</pre></div></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image16.png" /></p>
+<ul>
+<li>C##ogg是Oracle DB12c的普通用户，可以访问多个数据库实例。</li>
+</ul>
+<h3 id="testtest1">创建test用户和test1表<a class="headerlink" href="#testtest1" title="Permanent link">&para;</a></h3>
+<p>test用户是基于pdborcl数据库实例的：</p>
+<ul>
+<li>
+<p>登陆数据库
+  <div class="codehilite"><pre><span></span>Sqlplus / as sysdba
+</pre></div></p>
+</li>
+<li>
+<p>创建用户
+  <div class="codehilite"><pre><span></span><span class="k">alter</span> <span class="k">session</span> <span class="k">set</span> <span class="n">container</span><span class="o">=</span><span class="n">pdborcl</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">database</span> <span class="k">open</span><span class="p">;</span>
+<span class="k">create</span> <span class="k">user</span> <span class="n">test</span> <span class="n">identified</span> <span class="k">by</span> <span class="n">welcome1</span><span class="p">;</span>
+<span class="k">grant</span> <span class="n">resource</span><span class="p">,</span> <span class="k">connect</span> <span class="k">to</span> <span class="n">test</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="n">TABLESPACE</span> <span class="n">test</span> <span class="n">DATAFILE</span> <span class="s1">&#39;/u01/app/oracle/oradata/orcl/pdborcl/test01.dbf&#39;</span> <span class="k">SIZE</span> <span class="mi">500</span><span class="n">M</span> <span class="n">UNIFORM</span> <span class="k">SIZE</span> <span class="mi">128</span><span class="n">k</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">user</span> <span class="n">test</span> <span class="n">quota</span> <span class="n">unlimited</span> <span class="k">on</span> <span class="n">test</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">user</span> <span class="n">test</span> <span class="n">quota</span> <span class="n">unlimited</span> <span class="k">on</span> <span class="n">users</span><span class="p">;</span>
+</pre></div></p>
+</li>
+<li>
+<p>创建测试表
+  <div class="codehilite"><pre><span></span><span class="n">conn</span> <span class="n">test</span><span class="o">/</span><span class="n">welcome1</span><span class="o">@</span><span class="n">pdborcl</span><span class="p">;</span>
+<span class="k">create</span> <span class="k">table</span> <span class="n">test1</span><span class="p">(</span><span class="n">id</span> <span class="nb">number</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span> <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span>
+</pre></div></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image17.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image18.png" /></p>
+<h3 id="goldengate_1">配置GoldenGate捕获进程<a class="headerlink" href="#goldengate_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>编辑eora.prm，在GGSCI命令行下运行edit param eora命令：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param eora
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image19.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param mgr
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image20.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param phdfs
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image21.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param phbase
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image22.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param pkafka
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image23.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param pflume
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image24.png" /></p>
+<ul>
+<li>
+<p>编辑<code>diroby/eora.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/eora.oby</code>命令：(shell之后接操作系统命令)</p>
+</li>
+<li>
+<p>使用oracle用户创建diroby目录：</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>cd /home/oracle/OGG/
+mkdir diroby
+</pre></div>
+
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi diroby/eora.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image25.png" /></p>
+<blockquote>
+<p><strong>注意进程名eora和数据文件dirdat/eo的对应关系</strong></p>
+</blockquote>
+<ul>
+<li>在GGSCI命令行下运行obey diroby/eora.oby命令，把捕获进程eora加入到管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; obey diroby/eora.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image26.png" /></p>
+<ul>
+<li>把捕获进程eora注册到pdborcl数据库中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; dblogin useridalias ogg_src
+GGSCI&gt; register extract eora database container(pdborcl)
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image27.png" /></p>
+<ul>
+<li>为pdborcl.test下的所有表添加表级附加日志：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; add schematrandata pdborcl.test allcols
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image28.png" /></p>
+<ul>
+<li>启动GoldenGate捕获进程eora:</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; start eora
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image29.png" /></p>
+<h3 id="goldengatephdfs">配置GoldenGate传输进程phdfs<a class="headerlink" href="#goldengatephdfs" title="Permanent link">&para;</a></h3>
+<p>配置GoldenGate传输进程phdfs，将OGG生成的数据文件传递给目标端GoldenGate
+HDFS处理。</p>
+<ul>
+<li>编辑phdfs.prm，在GGSCI命令行下运行<code>edit param phdfs</code>命令：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image21.png" /></p>
+<ul>
+<li>编辑<code>diroby/phdfs.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/phdfs.oby</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi diroby/phdfs.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image30.png" /></p>
+<blockquote>
+<p><strong>注意进程名**phdfs**和数据文件dirdat/rs的对应关系</strong></p>
+</blockquote>
+<ul>
+<li>在GGSCI命令行下运行<code>obey diroby/phdfs.oby</code>命令，把捕获进程phdfs加入到管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; obey diroby/phdfs.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image31.png" /></p>
+<ul>
+<li>启动GoldenGate捕获进程phdfs:</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; start phdfs
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image32.png" /></p>
+<h3 id="goldengatephbase">配置GoldenGate传输进程phbase<a class="headerlink" href="#goldengatephbase" title="Permanent link">&para;</a></h3>
+<p>配置GoldenGate传输进程phbase，将OGG生成的数据文件传递给目标端GoldenGate
+HBASE处理。</p>
+<ul>
+<li>编辑phbase.prm，在GGSCI命令行下运行<code>edit param phbase</code>命令：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image22.png" /></p>
+<p>编辑<code>diroby/phbase.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/phbase.oby</code>命令：(shell之后接操作系统命令)</p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi diroby/phbase.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image33.png" /></p>
+<blockquote>
+<p><strong>注意进程名**phbase**和数据文件dirdat/se的对应关系</strong></p>
+</blockquote>
+<ul>
+<li>在GGSCI命令行下运行<code>obey diroby/phbase.oby</code>命令，把捕获进程phbase加入到管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; obey diroby/phbase.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image34.png" /></p>
+<ul>
+<li>启动GoldenGate捕获进程phbase:</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; start phbase
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image35.png" /></p>
+<h3 id="goldengatepflume">配置GoldenGate传输进程pflume<a class="headerlink" href="#goldengatepflume" title="Permanent link">&para;</a></h3>
+<p>配置GoldenGate传输进程pflume，将OGG生成的数据文件传递给目标端GoldenGate
+FLUME处理。</p>
+<ul>
+<li>编辑pflume.prm，在GGSCI命令行下运行<code>edit param pflume</code>命令：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image24.png" /></p>
+<ul>
+<li>编辑<code>diroby/pflume.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/pflume.oby</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi diroby/pflume.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image36.png" /></p>
+<blockquote>
+<p><strong>注意进程名**pflume**和数据文件dirdat/rf的对应关系</strong></p>
+</blockquote>
+<ul>
+<li>在GGSCI命令行下运行<code>obey diroby/pflume.oby</code>命令，把捕获进程pflume加入到管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; obey diroby/pflume.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image37.png" /></p>
+<ul>
+<li>启动GoldenGate捕获进程pflume:</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; start pflume
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image38.png" /></p>
+<h3 id="goldengatepkafka">配置GoldenGate传输进程pkafka<a class="headerlink" href="#goldengatepkafka" title="Permanent link">&para;</a></h3>
+<p>配置GoldenGate传输进程pkafka，将OGG生成的数据文件传递给目标端GoldenGate
+Kafka处理。</p>
+<ul>
+<li>编辑pkafka.prm，在GGSCI命令行下运行<code>edit param pkafka</code>命令：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image23.png" /></p>
+<ul>
+<li>编辑<code>diroby/pkafka.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/pkafka.oby</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi diroby/pkafka.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image39.png" /></p>
+<blockquote>
+<p><strong>注意进程名**pkafka**和数据文件dirdat/rk的对应关系</strong></p>
+</blockquote>
+<ul>
+<li>在GGSCI命令行下运行<code>obey diroby/pkafka.oby</code>命令，把捕获进程pkafka加入到管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; obey diroby/ pkafka.oby
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image40.png" /></p>
+<ul>
+<li>启动GoldenGate捕获进程pkafka:</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; start pkafka
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image41.png" /></p>
+<h3 id="goldengate_2">查看GoldenGate进程运行状态<a class="headerlink" href="#goldengate_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>查看GoldenGate进程状态：(EORCL是与ELK对接的进程)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image42.png" /></p>
+<ul>
+<li>查看某个进程的详细信息：
+  <div class="codehilite"><pre><span></span>GGSCI&gt; info eora detail
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image43.png" /></p>
+<ul>
+<li>查看GoldenGate的统计信息：
+  <div class="codehilite"><pre><span></span>GGSCI&gt; stats eora, latest
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image44.png" /></p>
+<ul>
+<li>查看GoldenGate进程报告，用于定位问题：
+  <div class="codehilite"><pre><span></span>GGSCI&gt; view report eora
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image45.png" /></p>
+<h2 id="ogg-for-bigdata">OGG for Bigdata安装<a class="headerlink" href="#ogg-for-bigdata" title="Permanent link">&para;</a></h2>
+<h3 id="_9">环境准备<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>下载安装FusionInsight客户端</p>
+</li>
+<li>
+<p>在Bigdata客户端机器上（ip：162.1.115.69）按照FusionInsight产品文档安装FusionInsight客户端。将客户端JDK替换成1.7版本。</p>
+</li>
+<li>
+<p>下载并安装oracle JDK1.7</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image46.png" /></p>
+<p>将krb5.conf放在/etc/目录下</p>
+<ul>
+<li>下载并安装OGG for Bigdata</li>
+</ul>
+<p>将122011_ggs_Adapters_Linux_x64.zip上传至客户端/opt目录下：</p>
+<div class="codehilite"><pre><span></span>unzip 122011_ggs_Adapters_Linux_x64.zip
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image47.png" /></p>
+<p>将解压后的ggs_Adapters_Linux_x64.tar解压到/opt/OGG_HADOOP目录下：</p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image48.png" /></p>
+<ul>
+<li>配置环境变量</li>
+</ul>
+<p>更改环境变量，编辑根目录下<code>vi .bash_profile</code>
+  <div class="codehilite"><pre><span></span><span class="c1"># .bash_profile</span>
+
+<span class="c1"># Get the aliases and functions</span>
+<span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        . ~/.bashrc
+<span class="k">fi</span>
+
+<span class="c1"># User specific environment and startup programs</span>
+<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/java/jdk1.7.0_40
+<span class="c1">#export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre</span>
+<span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$JAVA_HOME</span>/lib:<span class="nv">$JAVA_HOME</span>/jre/lib
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
+
+<span class="nb">export</span> PATH
+
+<span class="c1">#export LD_LIBRARY_PATH=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/amd64/server/libjvm.so:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/amd64/server:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/amd64/libjsig.so:/root/OGG_PostgreSQL/lib:$LD_LIBRARY_PATH</span>
+
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/java/jdk1.7.0_40/jre/lib/amd64/server/libjvm.so:/usr/java/jdk1.7.0_40/jre/lib/amd64/server:/usr/java/jdk1.7.0_40/jre/lib/amd64/libjsig.so:/root/OGG_PostgreSQL/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image49.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image50.png" /></p>
+<p>Source环境变量，<code>source .bash_profile</code>.</p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image51.png" /></p>
+<p>将<code>/opt/OGG_HADOOP/AdapterExamples/big-data</code>下的四个目录下的所有文件拷贝到<code>/opt/OGG_HADOOP/dirprm</code>目录下。</p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image52.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image53.png" /></p>
+<h3 id="goldengate_3">配置GoldenGate管理进程<a class="headerlink" href="#goldengate_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>编辑mgr.prm
+  <div class="codehilite"><pre><span></span>GGSCI&gt; edit param mgr
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image54.png" />
+  <div class="codehilite"><pre><span></span>GGSCI&gt;start mgr
+GGSCI&gt;info all
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image55.png" /></p>
+<h3 id="goldengate-hdfs">配置GoldenGate HDFS 复制进程<a class="headerlink" href="#goldengate-hdfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>编辑rhdfs.prm，在GGSCI命令行下运行<code>edit param rhdfs</code>命令：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param rhdfs
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image56.png" /></p>
+<ul>
+<li>编辑hdfs.props, 在GGSCI命令行下运行<code>shell vi dirprm/hdfs.props</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/hdfs.props
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image57.png" /></p>
+<ul>
+<li>
+<p>需要在HDFS中创建/ogg1目录。</p>
+</li>
+<li>
+<p>将hdfs.keytab文件拷贝到/opt/OGG_HADOOP/dirprm目录中：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image58.png" /></p>
+<ul>
+<li>把GoldenGate复制进程rhdfs加入到GoldenGate管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; add replicat rhdfs, exttrail dirdat/rs
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image59.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image55.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;start rhdfs
+GGSCI&gt;info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image60.png" /></p>
+<h3 id="goldengate-hbase">配置GoldenGate HBase 复制进程<a class="headerlink" href="#goldengate-hbase" title="Permanent link">&para;</a></h3>
+<ul>
+<li>编辑rhbase.prm，在GGSCI命令行下运行<code>edit param rhbase</code>命令：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param rhbase
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image61.png" /></p>
+<ul>
+<li>编辑hbase.props, 在GGSCI命令行下运行<code>shell vi dirprm/hbase.props</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/hbase.props
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image62.png" /></p>
+<ul>
+<li>拷贝hbase.keytab和jaas.conf到<code>/opt/OGG_HADOOP/dirprm/</code>下：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image63.png" /></p>
+<ul>
+<li>jaas.conf 文件</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image64.png" /></p>
+<ul>
+<li>把GoldenGate复制进程rhbase加入到GoldenGate管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; add replicat rhbase, exttrail dirdat/se
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image65.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;start rhbase
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image66.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image67.png" /></p>
+<h3 id="goldengate-kafka">配置GoldenGate Kafka 复制进程<a class="headerlink" href="#goldengate-kafka" title="Permanent link">&para;</a></h3>
+<ul>
+<li>创建kafka消息，进入FusionInsight客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image68.png" /></p>
+<p>Kafka创建消息：
+  <div class="codehilite"><pre><span></span>./kafka-topics.sh --create --zookeeper 162.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --replication-factor 1 --partitions 1 --topic test
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image69.png" /></p>
+<p>Kafka查看消息：
+  <div class="codehilite"><pre><span></span>./kafka-topics.sh --list --zookeeper  162.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic test
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image70.png" /></p>
+<p>Kafka给消息授权：
+  <div class="codehilite"><pre><span></span>./kafka-acls.sh --authorizer-properties zookeeper.connect=162.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --add --operation All --allow-principal User:* --cluster --topic test
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image71.png" /></p>
+<ul>
+<li>编辑rkafka.prm，在GGSCI命令行下运行<code>edit param rkafka</code>命令：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param rkafka
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image72.png" /></p>
+<ul>
+<li>编辑kafka.props, 在GGSCI命令行下运行<code>shell vi dirprm/kafka.props</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/kafka.props
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image73.png" /></p>
+<ul>
+<li>其中 <strong>gg.handler.kafkahandler.BlockingSend</strong> 属性控制同步和异步，默认false，异步。</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/custom_kafka_producer.properties
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image74.png" /></p>
+<ul>
+<li>修改Kafka里的配置，将如下选项修改为True</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image75.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image76.png" /></p>
+<ul>
+<li>把GoldenGate复制进程rkafka加入到GoldenGate管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; add replicat rkafka, exttrail dirdat/rk
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image77.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;start rkafka
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image78.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image79.png" /></p>
+<h3 id="goldengate-flume">配置GoldenGate Flume 复制进程<a class="headerlink" href="#goldengate-flume" title="Permanent link">&para;</a></h3>
+<ul>
+<li>安装Flume客户端，配置非加密传输</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image80.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image81.png" /></p>
+<ul>
+<li>配置Server的配置文件properties.properties</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image82.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image83.png" /></p>
+<ul>
+<li>导出的properties.properties文件，增加如下配置：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image84.png" /></p>
+<ul>
+<li>
+<p>可以在HDFS中增加/ogg/flume目录</p>
+</li>
+<li>
+<p>将此properties.properties文件上传至FusionInsight。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image85.png" /></p>
+<ul>
+<li>编辑rflume.prm，在GGSCI命令行下运行<code>edit param rflume</code>命令：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; edit param rflume
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image86.png" /></p>
+<ul>
+<li>编辑flume.props, 在GGSCI命令行下运行<code>shell vi dirprm/flume.props</code>命令：(shell之后接操作系统命令)</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/flume.props
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image87.png" /></p>
+<p>gg.handler.flumehandler.PropagateSchema=false 控制DDL</p>
+<p>gg.handler.flumehandler.format.WrapMessageInGenericAvroMessage=false  相同SCHAME打包</p>
+<div class="codehilite"><pre><span></span>GGSCI&gt; shell vi dirprm/custom-flume-rpc.properties
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image88.png" /></p>
+<ul>
+<li>拷贝flume.keytab文件到<code>/opt/OGG_HADOOP/dirprm/</code>目录下</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image89.png" /></p>
+<ul>
+<li>把GoldenGate复制进程rflume加入到GoldenGate管理者进程中：</li>
+</ul>
+<div class="codehilite"><pre><span></span>GGSCI&gt; add replicat rflume, exttrail dirdat/rf
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image90.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;start rflume
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image91.png" /></p>
+<div class="codehilite"><pre><span></span>GGSCI&gt;info all
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image92.png" /></p>
+<h2 id="_10">测试结果<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="oracle">Oracle端启动所有的传输进程<a class="headerlink" href="#oracle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>确保所有传输进程均已经正常启动</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image93.png" /></p>
+<h3 id="oracleinsert">在Oracle数据库源端做Insert操作<a class="headerlink" href="#oracleinsert" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>su – oracle
+<span class="nb">source</span> .bash_profile
+sqlplus test/welcome1@pdborcl
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image94.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image95.png" /></p>
+<ul>
+<li>查看HDFS同步情况，<code>hadoop fs –ls /ogg1</code></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image96.png" /></p>
+<ul>
+<li>查看HBase同步情况</li>
+</ul>
+<div class="codehilite"><pre><span></span>hbase shell
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image97.png" /></p>
+<ul>
+<li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
+</ul>
+<p>执行以下命令：</p>
+<div class="codehilite"><pre><span></span>./kafka-console-consumer.sh --zookeeper <span class="m">162</span>.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic <span class="nb">test</span> --from-beginning
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image98.png" /></p>
+<ul>
+<li>在HDFS中查看flume运行结果：查看/ogg/flume/下数据文件：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image99.png" /></p>
+<h3 id="oracleupdate">在Oracle数据库源端做Update操作<a class="headerlink" href="#oracleupdate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>执行以下命令
+  <div class="codehilite"><pre><span></span>su – oracle
+<span class="nb">source</span> .bash_profile
+sqlplus test/welcome1@pdborcl
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image100.png" /></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image101.png" /></p>
+<ul>
+<li>查看HDFS同步情况，<code>hadoop fs –ls /ogg1</code></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image102.png" /></p>
+<ul>
+<li>查看HBase同步情况</li>
+</ul>
+<div class="codehilite"><pre><span></span>hbase shell
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image103.png" /></p>
+<ul>
+<li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
+</ul>
+<p>执行以下命令：</p>
+<div class="codehilite"><pre><span></span>./kafka-console-consumer.sh --zookeeper <span class="m">162</span>.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic <span class="nb">test</span> --from-beginning
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image104.png" /></p>
+<ul>
+<li>在HDFS中查看flume运行结果：查看/ogg/flume/下数据文件：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image105.png" /></p>
+<h3 id="oracledelete">在Oracle数据库源端做Delete操作<a class="headerlink" href="#oracledelete" title="Permanent link">&para;</a></h3>
+<ul>
+<li>执行以下命令
+  <div class="codehilite"><pre><span></span>su – oracle
+<span class="nb">source</span> .bash_profile
+sqlplus test/welcome1@pdborcl
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image106.png" /></p>
+<ul>
+<li>查看HDFS同步情况，hadoop fs –ls /ogg1</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image107.png" /></p>
+<ul>
+<li>查看HBase同步情况</li>
+</ul>
+<div class="codehilite"><pre><span></span>hbase shell
+</pre></div>
+
+<p><img alt="" src="../assets/Oracle_GoldenGate/image108.png" /></p>
+<ul>
+<li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
+</ul>
+<p>执行以下命令：
+  <div class="codehilite"><pre><span></span>./kafka-console-consumer.sh --zookeeper <span class="m">162</span>.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic <span class="nb">test</span> --from-beginning
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image109.png" /></p>
+<ul>
+<li>在HDFS中查看flume运行结果：查看/ogg/flume/下数据文件：</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_GoldenGate/image110.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接Informatica PWX CDC
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Talend/" title="对接Talend" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接Talend
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

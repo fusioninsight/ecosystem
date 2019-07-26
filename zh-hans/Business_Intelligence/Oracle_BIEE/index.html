@@ -1,0 +1,2031 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Oracle BIEE - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#oracle-bieefusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Oracle BIEE
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Oracle BIEE
+      </label>
+    
+    <a href="./" title="对接Oracle BIEE" class="md-nav__link md-nav__link--active">
+      对接Oracle BIEE
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linuxobiee" title="Linux环境安装OBIEE" class="md-nav__link">
+    Linux环境安装OBIEE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os" title="安装OS" class="md-nav__link">
+    安装OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jdk8" title="安装jdk8" class="md-nav__link">
+    安装jdk8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weblogic" title="安装Weblogic" class="md-nav__link">
+    安装Weblogic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server" title="安装BI Server" class="md-nav__link">
+    安装BI Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-database-12c" title="安装Oracle Database 12c" class="md-nav__link">
+    安装Oracle Database 12c
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rcuschema" title="使用RCU创建Schema" class="md-nav__link">
+    使用RCU创建Schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server_1" title="配置BI Server" class="md-nav__link">
+    配置BI Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-client" title="安装BI Client" class="md-nav__link">
+    安装BI Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="对接Hive" class="md-nav__link">
+    对接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-rdp" title="BI 管理工具新建RDP" class="md-nav__link">
+    BI 管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server_2" title="禁用BI Server高速缓存" class="md-nav__link">
+    禁用BI Server高速缓存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpd" title="上传RPD文件到服务端" class="md-nav__link">
+    上传RPD文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_1" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="服务端分析Hive数据" class="md-nav__link">
+    服务端分析Hive数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark-sql" title="对接Spark SQL" class="md-nav__link">
+    对接Spark SQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn_2" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#birdp" title="BI管理工具新建RDP" class="md-nav__link">
+    BI管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdp" title="上传RDP文件到服务端" class="md-nav__link">
+    上传RDP文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_3" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="服务端分析Spark数据" class="md-nav__link">
+    服务端分析Spark数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraelk" title="对接LibrA/ELK" class="md-nav__link">
+    对接LibrA/ELK
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn_4" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#birdp_1" title="BI管理工具新建RDP" class="md-nav__link">
+    BI管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdp_1" title="上传RDP文件到服务端" class="md-nav__link">
+    上传RDP文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_5" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark_1" title="服务端分析Spark数据" class="md-nav__link">
+    服务端分析Spark数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linuxobiee" title="Linux环境安装OBIEE" class="md-nav__link">
+    Linux环境安装OBIEE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os" title="安装OS" class="md-nav__link">
+    安装OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jdk8" title="安装jdk8" class="md-nav__link">
+    安装jdk8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weblogic" title="安装Weblogic" class="md-nav__link">
+    安装Weblogic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server" title="安装BI Server" class="md-nav__link">
+    安装BI Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-database-12c" title="安装Oracle Database 12c" class="md-nav__link">
+    安装Oracle Database 12c
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rcuschema" title="使用RCU创建Schema" class="md-nav__link">
+    使用RCU创建Schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server_1" title="配置BI Server" class="md-nav__link">
+    配置BI Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-client" title="安装BI Client" class="md-nav__link">
+    安装BI Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="对接Hive" class="md-nav__link">
+    对接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-rdp" title="BI 管理工具新建RDP" class="md-nav__link">
+    BI 管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-server_2" title="禁用BI Server高速缓存" class="md-nav__link">
+    禁用BI Server高速缓存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpd" title="上传RPD文件到服务端" class="md-nav__link">
+    上传RPD文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_1" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive_1" title="服务端分析Hive数据" class="md-nav__link">
+    服务端分析Hive数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark-sql" title="对接Spark SQL" class="md-nav__link">
+    对接Spark SQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn_2" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#birdp" title="BI管理工具新建RDP" class="md-nav__link">
+    BI管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdp" title="上传RDP文件到服务端" class="md-nav__link">
+    上传RDP文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_3" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="服务端分析Spark数据" class="md-nav__link">
+    服务端分析Spark数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraelk" title="对接LibrA/ELK" class="md-nav__link">
+    对接LibrA/ELK
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsn_4" title="配置客户端系统DSN" class="md-nav__link">
+    配置客户端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#birdp_1" title="BI管理工具新建RDP" class="md-nav__link">
+    BI管理工具新建RDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdp_1" title="上传RDP文件到服务端" class="md-nav__link">
+    上传RDP文件到服务端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsn_5" title="配置服务端系统DSN" class="md-nav__link">
+    配置服务端系统DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark_1" title="服务端分析Spark数据" class="md-nav__link">
+    服务端分析Spark数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Business_Intelligence/Oracle_BIEE.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="oracle-bieefusioninsight">Oracle BIEE对接FusionInsight<a class="headerlink" href="#oracle-bieefusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Oracle BIEE 11g &lt;-&gt; FusionInsight HD V100R002C60U20</p>
+<p>Oracle BIEE 11g &lt;-&gt; FusionInsight HD V100R002C70SPC200</p>
+<p>Oracle BIEE 12c &lt;-&gt; FusionInsight HD V100R002C60U20</p>
+<p>Oracle BIEE 12c &lt;-&gt; FusionInsight HD V100R002C70SPC200</p>
+<p>Oracle BIEE 12c &lt;-&gt; FusionInsight HD V100R002C80SPC200</p>
+<p>Oracle BIEE 12c &lt;-&gt; FusionInsight HD 6.5.0</p>
+</blockquote>
+<h2 id="linuxobiee">Linux环境安装OBIEE<a class="headerlink" href="#linuxobiee" title="Permanent link">&para;</a></h2>
+<h3 id="os">安装OS<a class="headerlink" href="#os" title="Permanent link">&para;</a></h3>
+<ul>
+<li>安装RedHat6.5操作系统，desktop版</li>
+<li>创建用户oracle</li>
+</ul>
+<h3 id="jdk8">安装jdk8<a class="headerlink" href="#jdk8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>获取jdk8安装包，执行安装</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image1.png" /></p>
+<h3 id="weblogic">安装Weblogic<a class="headerlink" href="#weblogic" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>创建oracle home目录：
+  <div class="codehilite"><pre><span></span><span class="nb">umask</span> <span class="m">027</span>
+mkdir -p /Oracle/Middleware/Oracle_Home
+chown -R oracle:oracle /Oracle/
+</pre></div></p>
+</li>
+<li>
+<p>上传weblogic安装包，解压</p>
+</li>
+<li>
+<p>以oracle用户登录图形界面</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image2.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image3.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image4.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image5.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image6.png" /></p>
+<h3 id="bi-server">安装BI Server<a class="headerlink" href="#bi-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>上传OBIEE安装包，解压
+  <div class="codehilite"><pre><span></span>chmod <span class="m">755</span> bi_platform-12.2.1.2.0_linux64.bin
+</pre></div></p>
+</li>
+<li>
+<p>以oracle用户登录图形界面
+  <div class="codehilite"><pre><span></span>./bi_platform-12.2.1.2.0_linux64.bin
+</pre></div></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image7.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image8.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image9.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image10.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image11.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image12.png" /></p>
+<ul>
+<li>
+<p>补齐lib包
+  <div class="codehilite"><pre><span></span>yum install -y compat-libcap1 compat-libstdc++-33 libstdc++-devel gcc gcc-c++ libaio-devel
+</pre></div></p>
+</li>
+<li>
+<p>取消当前安装，重新运行安装程序</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image13.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image14.png" /></p>
+<h3 id="oracle-database-12c">安装Oracle Database 12c<a class="headerlink" href="#oracle-database-12c" title="Permanent link">&para;</a></h3>
+<ul>
+<li>安装数据库软件</li>
+</ul>
+<p>创建数据库安装目录
+  <div class="codehilite"><pre><span></span>mkdir -p /Oracle/database
+chown -R oracle:oracle /Oracle
+</pre></div></p>
+<p>下载Oracle Database 12c安装包，解压得到database文件夹
+  <div class="codehilite"><pre><span></span>chmod -R <span class="m">755</span> database/
+<span class="nb">cd</span> database/
+su oracle
+./runInstaller
+</pre></div></p>
+<p>只安装单实例数据库软件</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image15.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image16.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image17.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image18.png" /></p>
+<ul>
+<li>创建数据库实例
+  <div class="codehilite"><pre><span></span><span class="nb">cd</span> /Oracle/database/product/12.1.0/dbhome_1/bin/
+./dbca
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image19.png" /></p>
+<p>字符集选择AL32UTF8，不勾选“create as container database”</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image20.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image21.png" /></p>
+<ul>
+<li>配置环境变量<code>vi ~/.bash_profile</code>
+  <div class="codehilite"><pre><span></span><span class="nv">ORACLE_BASE</span><span class="o">=</span>/Oracle/database
+<span class="nv">ORACLE_HOME</span><span class="o">=</span><span class="nv">$ORACLE_BASE</span>/product/12.1.0/dbhome_1
+<span class="nv">ORACLE_SID</span><span class="o">=</span>orcl
+<span class="nv">ORACLE_TERM</span><span class="o">=</span>xterm
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ORACLE_HOME</span>/bin
+<span class="nb">export</span> ORACLE_BASE
+<span class="nb">export</span> ORACLE_HOME
+<span class="nb">export</span> ORACLE_SID
+<span class="nb">export</span> ORACLE_TERM
+<span class="nb">export</span> PATH
+</pre></div></li>
+</ul>
+<p>导入环境变量
+  <div class="codehilite"><pre><span></span>source ~/.bash_profile
+</pre></div></p>
+<ul>
+<li>配置监听程序和网络服务名
+  <div class="codehilite"><pre><span></span>netca
+</pre></div></li>
+</ul>
+<p>Listener端口设为默认值1521</p>
+<p>网络服务名配置为 ORCL</p>
+<ul>
+<li>启动数据库和监听程序</li>
+</ul>
+<p>主机重启后，需要重新执行以下命令启动数据库和监听程序
+  <div class="codehilite"><pre><span></span>su oracle
+<span class="nb">source</span> ~/.bash_profile
+lsnrctl start
+sqlplus / as sysdba
+</pre></div></p>
+<p>sqlplus界面执行<code>startup</code></p>
+<h3 id="rcuschema">使用RCU创建Schema<a class="headerlink" href="#rcuschema" title="Permanent link">&para;</a></h3>
+<ul>
+<li>启动rcu
+  <div class="codehilite"><pre><span></span>cd /Oracle/Middleware/Oracle_Home/oracle_common/bin/
+./rcu
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image22.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image23.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image24.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image25.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image26.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image27.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image28.png" /></p>
+<h3 id="bi-server_1">配置BI Server<a class="headerlink" href="#bi-server_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>执行配置
+  <div class="codehilite"><pre><span></span>cd /Oracle/Middleware/Oracle_Home/bi/bin
+./config.sh
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image29.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image30.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image31.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image32.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image33.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image34.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image35.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image36.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image37.png" /></p>
+<h3 id="bi-client">安装BI Client<a class="headerlink" href="#bi-client" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在Win7(64 bit)系统上安装BI Client</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image38.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image39.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image40.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image41.png" /></p>
+<h2 id="hive">对接Hive<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h2>
+<h3 id="dsn">配置客户端系统DSN<a class="headerlink" href="#dsn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>配置Kerberos认证</li>
+</ul>
+<p>从<a href="http://web.mit.edu/kerberos/">http://web.mit.edu/kerberos/</a>下载安装kfw-4.1</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image42.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image43.png" /></p>
+<ul>
+<li>安装配置Hive ODBC Driver</li>
+</ul>
+<p>下载安装Hive ODBC Driver（Windows版本），<a href="https://www.cloudera.com/downloads/connectors/hive/odbc/2-5-5.html">下载地址</a></p>
+<p>在BI客户端所在的Windows机器上配置系统DSN</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image44.png" /></p>
+<p>测试ODBC连接</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image45.png" /></p>
+<h3 id="bi-rdp">BI 管理工具新建RDP<a class="headerlink" href="#bi-rdp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Client端打开Oracle BI 管理工具</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image46.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image47.png" /></p>
+<ul>
+<li>选择上一步配置的DSN，用户名口令任意输入，但不能为空</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image48.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image49.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image50.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image51.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image52.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image53.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image54.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image55.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image56.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image57.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image58.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image59.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image60.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image61.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image62.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image63.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image64.png" /></p>
+<h3 id="bi-server_2">禁用BI Server高速缓存<a class="headerlink" href="#bi-server_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>登录Weblogic域管理界面<a href="http://162.1.115.81:9500/em">http://162.1.115.81:9500/em</a></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image65.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image66.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image67.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image68.png" /></p>
+<ul>
+<li>配置中禁用高速缓存</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image69.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image70.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image71.png" /></p>
+<h3 id="rpd">上传RPD文件到服务端<a class="headerlink" href="#rpd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>客户端 cmd 切换到<code>E:\Oracle\Middleware\Oracle_Home\bi\bitools\bin</code>目录</li>
+<li>执行命令上传RPD
+  <div class="codehilite"><pre><span></span>datamodel.cmd uploadrpd -U weblogic -P Huawei123 -I E:\Oracle\Middleware\Oracle_Home\bi\bifoundation\server\obiee-hive.rpd -W Huawei@123 -S 162.1.115.81 -N 9502 -SI ssi
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image72.png" /></p>
+<h3 id="dsn_1">配置服务端系统DSN<a class="headerlink" href="#dsn_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>配置Kerberos认证</li>
+</ul>
+<div class="codehilite"><pre><span></span>mv /etc/krb5.conf /etc/krb5.conf.bak
+</pre></div>
+
+<p>将FusionInsight集群的krb5.conf上传到/etc目录下</p>
+<p>kerberos认证
+  <div class="codehilite"><pre><span></span>su oracle
+kinit test_cn
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image73.png" /></p>
+<ul>
+<li>安装配置Cloudera Hive ODBC Driver</li>
+</ul>
+<div class="codehilite"><pre><span></span>yum install -y unixODBC
+</pre></div>
+
+<p>下载Hive ODBC Driver（Linux版本）<a href="https://www.cloudera.com/downloads/connectors/hive/odbc/2-5-5.html">下载地址</a></p>
+<p>安装Hive ODBC Driver
+  <div class="codehilite"><pre><span></span>rpm -Uvh ClouderaHiveODBC-2.5.5.1006-1.el6.x86_64.rpm
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image74.png" /></p>
+<p>修改DSN配置，与Client端生成的RPD文件的DSN名称和配置保持一致
+  <div class="codehilite"><pre><span></span>mv /etc/odbc.ini /etc/odbc.ini.bak
+cp /opt/cloudera/hiveodbc/Setup/odbc.ini /etc/
+vi /etc/odbc.ini
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image75.png" /></p>
+<p>修改odbc配置文件
+  <div class="codehilite"><pre><span></span>vi /opt/cloudera/hiveodbc/Setup/cloudera.hiveodbc.ini
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image76.png" /></p>
+<div class="codehilite"><pre><span></span>mv /etc/odbcinst.ini /etc/odbcinst.ini.bak
+cp /opt/cloudera/hiveodbc/Setup/odbcinst.ini /etc/
+</pre></div>
+
+<p>配置环境变量<code>vi /etc/profile</code>
+  <div class="codehilite"><pre><span></span>export LD_LIBRARY_PATH=/usr/lib64:/opt/cloudera/hiveodbc/lib/64
+export ODBCINI=/etc/odbc.ini
+export ODBCSYSINI=/etc
+export SIMBAINI=/opt/cloudera/hiveodbc/Setup/cloudera.hiveodbc.ini
+</pre></div></p>
+<p>导入环境变量<code>source /etc/profile</code></p>
+<p>测试ODBC连接
+  <div class="codehilite"><pre><span></span>su oracle
+isql -v &#39;Sample Cloudera Hive DSN&#39;
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image77.png" /></p>
+<ul>
+<li>BI域配置系统ODBC
+  <div class="codehilite"><pre><span></span>cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/config/fmwconfig/bienv/core
+cp odbc.ini odbc.ini.bak
+vi odbc.ini
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image78.png" /></p>
+<p>重启OBIS
+  <div class="codehilite"><pre><span></span>su oracle
+cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/bitools/bin
+./stop.sh
+./start.sh
+</pre></div></p>
+<h3 id="hive_1">服务端分析Hive数据<a class="headerlink" href="#hive_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>打开BI Analytics界面<a href="http://162.1.115.81:9502/analytics">http://162.1.115.81:9502/analytics</a></p>
+</li>
+<li>
+<p>创建分析</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image79.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image80.png" /></p>
+<p>选择待分析的列拖到右侧区域</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image81.png" /></p>
+<p>点击“结果”页签，检索所选列数据</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image82.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image83.png" /></p>
+<p>点击右上角的保存按钮，保存查询结果</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image84.png" /></p>
+<ul>
+<li>创建可视分析器项目</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image85.png" /></p>
+<p>添加数据源</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image86.png" /></p>
+<p>选取数据显示形式</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image87.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image88.png" /></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image89.png" /></p>
+<p>添加计算</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image90.png" /></p>
+<h2 id="spark-sql">对接Spark SQL<a class="headerlink" href="#spark-sql" title="Permanent link">&para;</a></h2>
+<h3 id="dsn_2">配置客户端系统DSN<a class="headerlink" href="#dsn_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kerberos认证</li>
+</ul>
+<p>Kerberos获取认证票据</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image43.png" /></p>
+<ul>
+<li>安装配置Simba Spark ODBC Driver</li>
+</ul>
+<p>下载安装 Simba Spark ODBC Driver：<a href="https://downloads.tableausoftware.com/drivers/simba/SimbaSparkODBC64.msi">下载地址</a></p>
+<p>配置DSN：</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image91.png" /></p>
+<p>测试ODBC连接：</p>
+<p><img alt="" src="../assets/Oracle_BIEE/image92.png" /></p>
+<h3 id="birdp">BI管理工具新建RDP<a class="headerlink" href="#birdp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>新建obiee-spark.rdp，DSN选择上一步配置的 Sample Simba Spark DSN</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image93.png" /></p>
+<h3 id="rdp">上传RDP文件到服务端<a class="headerlink" href="#rdp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>上传RDP</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image95.png" /></p>
+<h3 id="dsn_3">配置服务端系统DSN<a class="headerlink" href="#dsn_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kerberos认证
+  <div class="codehilite"><pre><span></span>su oracle
+kinit test_cn
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image73.png" /></p>
+<ul>
+<li>安装配置Simba Spark ODBC Driver</li>
+</ul>
+<p>下载Simba Spark ODBC Driver：<a href="https://databricks.com/spark/odbc-driver-download">下载地址</a>
+  <div class="codehilite"><pre><span></span>rpm -Uvh SimbaSparkODBC-1.2.2.1002-1.el6.x86_64.rpm
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image96.png" /></p>
+<p>修改DSN配置，增加Sample Simba Spark DSN，与Client端配置相同 <code>vi /etc/odbc.ini</code></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image97.png" /></p>
+<p>修改odbcinst.ini，<code>vi /etc/odbcinist.ini</code></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image98.png" /></p>
+<p>配置环境变量 <code>vi /etc/profile</code></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image99.png" /></p>
+<p>导入环境变量 <code>source /etc/profile</code></p>
+<p>测试ODBC连接
+  <div class="codehilite"><pre><span></span>su oracle
+isql -v &#39;Sample Simba Spark DSN&#39;
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/image100.png" /></p>
+<ul>
+<li>BI域配置系统ODBC
+  <div class="codehilite"><pre><span></span>cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/config/fmwconfig/bienv/core
+vi odbc.ini
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/image101.png" /></p>
+<p>重启OBIS
+  <div class="codehilite"><pre><span></span>su oracle
+cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/bitools/bin
+./stop.sh
+./start.sh
+</pre></div></p>
+<h3 id="spark">服务端分析Spark数据<a class="headerlink" href="#spark" title="Permanent link">&para;</a></h3>
+<p>参考<a href="#服务端分析hive数据">服务端分析Hive数据</a></p>
+<h2 id="libraelk">对接LibrA/ELK<a class="headerlink" href="#libraelk" title="Permanent link">&para;</a></h2>
+<p>配置LibrA与ELK的方式没有区别，以下以对接ELK为例进行操作</p>
+<h3 id="dsn_4">配置客户端系统DSN<a class="headerlink" href="#dsn_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>配置obiee客户端的ODBC驱动</li>
+</ul>
+<p>按照ELK的产品文档的指导安装配置ELK的windows驱动</p>
+<p>配置DSN，测试ODBC连接，保存ODBC连接</p>
+<p><img alt="" src="../assets/Oracle_BIEE/59b8e.png" /></p>
+<h3 id="birdp_1">BI管理工具新建RDP<a class="headerlink" href="#birdp_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>新建obiee-elk.rdp，DSN选择上一步配置的 PostgreSQL35W</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/1e24a.png" /></p>
+<h3 id="rdp_1">上传RDP文件到服务端<a class="headerlink" href="#rdp_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>上传RDP</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/70966.png" /></p>
+<h3 id="dsn_5">配置服务端系统DSN<a class="headerlink" href="#dsn_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>参考LibrA/ELK的产品文档的Linux下配置数据源章节，完成obiee节点下的ODBC驱动的安装</li>
+</ul>
+<p><img alt="" src="../assets/Oracle_BIEE/e415a.png" /></p>
+<p>测试ODBC连接，确保ODBC驱动安装成功
+  <div class="codehilite"><pre><span></span>isql -v PostgreSQL35W
+</pre></div></p>
+<p><img alt="" src="../assets/Oracle_BIEE/7c26b.png" /></p>
+<ul>
+<li>BI域配置系统ODBC
+  <div class="codehilite"><pre><span></span>cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/config/fmwconfig/bienv/core
+vi odbc.ini
+</pre></div></li>
+</ul>
+<p>在ODBC Data Sources部分增加PostgreSQL35W的DSN</p>
+<p><img alt="" src="../assets/Oracle_BIEE/a1629.png" /></p>
+<p>在文件末尾增加PostgreSQL35W的DSN的详细配置</p>
+<p><img alt="" src="../assets/Oracle_BIEE/959a4.png" /></p>
+<blockquote>
+<p>PostgreSQL35W的DSN的详细配置最后一行DriverUnicodeType=1需要加上，否则obiee查询的时候会报错[nQSError: 12010] Communication error connecting to remote end point: address = obiee; port = 9514. (HY000)</p>
+</blockquote>
+<p>重启OBIS
+  <div class="codehilite"><pre><span></span>su oracle
+cd /Oracle/Middleware/Oracle_Home/user_projects/domains/bi/bitools/bin
+./stop.sh
+./start.sh
+</pre></div></p>
+<h3 id="spark_1">服务端分析Spark数据<a class="headerlink" href="#spark_1" title="Permanent link">&para;</a></h3>
+<p>参考<a href="#服务端分析hive数据">服务端分析Hive数据</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../QlikView/" title="对接QlikView" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接QlikView
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接Alteryx
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

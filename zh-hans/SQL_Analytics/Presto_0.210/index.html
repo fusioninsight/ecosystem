@@ -1,0 +1,1661 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>Presto0.210 <--> C80 - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apache-prestofusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              Presto0.210 <--> C80
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="对接Apache NiFi" class="md-nav__link">
+      对接Apache NiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Presto0.210 <--> C80
+      </label>
+    
+    <a href="./" title="Presto0.210 C80" class="md-nav__link md-nav__link--active">
+      Presto0.210 <--> C80
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="说明" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-server" title="获取并配置presto server" class="md-nav__link">
+    获取并配置presto server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-cli" title="获取Presto CLI启动包" class="md-nav__link">
+    获取Presto CLI启动包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive-connector" title="配置Hive Connector" class="md-nav__link">
+    配置Hive Connector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-clihive" title="通过Presto CLI连接Hive" class="md-nav__link">
+    通过Presto CLI连接Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-jdbchive" title="通过Presto JDBC连接Hive" class="md-nav__link">
+    通过Presto JDBC连接Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-connector" title="配置ElasticSearch Connector" class="md-nav__link">
+    配置ElasticSearch Connector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-clielasticsearch" title="通过Presto CLI连接ElasticSearch" class="md-nav__link">
+    通过Presto CLI连接ElasticSearch
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="说明" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-server" title="获取并配置presto server" class="md-nav__link">
+    获取并配置presto server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-cli" title="获取Presto CLI启动包" class="md-nav__link">
+    获取Presto CLI启动包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive-connector" title="配置Hive Connector" class="md-nav__link">
+    配置Hive Connector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-clihive" title="通过Presto CLI连接Hive" class="md-nav__link">
+    通过Presto CLI连接Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-jdbchive" title="通过Presto JDBC连接Hive" class="md-nav__link">
+    通过Presto JDBC连接Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-connector" title="配置ElasticSearch Connector" class="md-nav__link">
+    配置ElasticSearch Connector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presto-clielasticsearch" title="通过Presto CLI连接ElasticSearch" class="md-nav__link">
+    通过Presto CLI连接ElasticSearch
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/SQL_Analytics/Presto_0.210.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="apache-prestofusioninsight">Apache Presto对接FusionInsight<a class="headerlink" href="#apache-prestofusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Presto0.210 &lt;-&gt; FusionInsight HD V100R002C80SPC200</p>
+<p>Presto0.210 &lt;-&gt; FusionInsight HD 6.5.0</p>
+</blockquote>
+<h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Presto是一个开源的分布式SQL查询引擎，适用于交互式分析查询，数据量支持GB到PB字节。</p>
+<p>Presto的设计和编写完全是为了解决像Facebook这样规模的商业数据仓库的交互式分析和处理速度的问题</p>
+<p>Presto主要与FusionInsight的Hive进行对接,在Presto0.210版本中支持与FusionInsight的ES进行对接。</p>
+<p><img alt="" src="../assets/Presto_0.210/ce7a2.png" /></p>
+<h2 id="presto-server">获取并配置presto server<a class="headerlink" href="#presto-server" title="Permanent link">&para;</a></h2>
+<p>Presto集群包括coordinator节点和不限数量的worker节点(coordinator节点也可同时为worker节点)，其中只需要在coordinator节点上配置Hive Connector即可。
+  本文档中配置coordinator节点同时也是worker节点。</p>
+<ul>
+<li>
+<p>从该链接下载presto-server的安装包，并上传到presto coordinator的节点</p>
+<p><a href="https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.210/presto-server-0.210.tar.gz">https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.210/presto-server-0.210.tar.gz</a></p>
+<p>将该压缩包解压缩后得到目录<code>/opt/presto-server-0.210</code>。</p>
+</li>
+<li>
+<p>在presto节点上安装华为FusionInsight HD V100R002C80SPC200的客户端，默认安装目录<code>/opt/hadoopclient</code></p>
+</li>
+<li>
+<p>presto-0.210版本要求jdk至少在1.8u60+以上，修改<code>/etc/profile</code>文件方式配置系统默认的java为FusionInsight HD客户端的jdk，并source环境变量，命令参考如下</p>
+<p>在<code>/etc/profile</code>中增加以下行
+<div class="codehilite"><pre><span></span>export JAVA_HOME=/opt/hadoopclient/JDK/jdk
+export JREHOME=/opt/hadoopclient/JDK/jdk/jre
+export PATH=$JAVA_HOME/bin:$PATH
+</pre></div></p>
+<p>source 环境变量
+<div class="codehilite"><pre><span></span>source /etc/profile
+</pre></div></p>
+</li>
+<li>
+<p>创建Java keystore File for TLS，(后续步骤默认都在presto节点上执行)参考如下命令
+    <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+keytool -genkeypair -alias testuser -keyalg RSA –keystore /opt/presto.jks
+</pre></div></p>
+<blockquote>
+<p>alias后的值必须要跟后面创建的用户名称一致</p>
+<p>first and last name必须写成presto节点的主机名,并且要忽略大小写，统一使用小写字母</p>
+</blockquote>
+<p><img alt="" src="../assets/Presto_0.210/image001.png" /></p>
+</li>
+<li>
+<p>通过FusionInsight HD的管理页面创建一个“机机”用户，具体请参见《FusionInsight HD管理员指南》的 <strong>创建用户</strong> 章节。例如，创建用户testuser，并根据业务需求选择用户组(hadoop和hive组)，下载对应的秘钥文件user.keytab以及krb5.conf文件，并上传到presto节点的<code>/opt/hadoopclient</code>目录下，将user.keytab改名为testuser.keytab。</p>
+</li>
+<li>
+<p>参考如下命令在Huawei FusionInsight HD的Kerberos中创建一个新的principal，其名称为“testuser/presto-server”，其中presto-server为presto的coordinator节点的主机名，导出该principal的秘钥文件为<code>/opt/presto.keytab</code>。</p>
+<p><img alt="" src="../assets/Presto_0.210/image002.png" /></p>
+<blockquote>
+<p>执行kadmin –p kadmin/admin命令时初始密码Admin@123，修改后需严格牢记新密码。</p>
+</blockquote>
+</li>
+<li>
+<p>创建目录/opt/presto-server-0.210/etc，在该目录下创建如下文件</p>
+<p>config.properties参考如下
+<div class="codehilite"><pre><span></span>coordinator=true
+node-scheduler.include-coordinator=true
+http-server.http.port=8080
+query.max-memory=50GB
+query.max-memory-per-node=1GB
+discovery-server.enabled=true
+discovery.uri=http://presto-server:8080
+http-server.authentication.type=KERBEROS
+http.server.authentication.krb5.service-name=testuser
+http.server.authentication.krb5.keytab=/opt/presto.keytab
+http.authentication.krb5.config=/opt/hadoopclient/KrbClient/kerberos/var/krb5kdc/krb5.conf
+http-server.https.enabled=true
+http-server.https.port=7778
+http-server.https.keystore.path=/opt/presto.jks
+http-server.https.keystore.key=Huawei@123
+</pre></div></p>
+<p>jvm.config参考如下内容
+<div class="codehilite"><pre><span></span>-server
+-Xmx16G
+-XX:+UseG1GC
+-XX:G1HeapRegionSize=32M
+-XX:+UseGCOverheadLimit
+-XX:+ExplicitGCInvokesConcurrent
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:OnOutOfMemoryError=kill -9 %p
+-Djava.security.krb5.conf=/opt/hadoopclient/KrbClient/kerberos/var/krb5kdc/krb5.conf
+</pre></div></p>
+<p>node.properties参考如下内容
+<div class="codehilite"><pre><span></span>node.environment=production
+node.id=ffffffff-ffff-ffff-ffff-ffffffffffff
+node.data-dir=/var/presto/data
+</pre></div></p>
+<p>log.properties参考如下内容
+<div class="codehilite"><pre><span></span>com.facebook.presto=INFO
+</pre></div></p>
+</li>
+<li>
+<p>创建目录/opt/presto-server-0.210/etc/catalog,将FusionInsight HD客户端中的core-site.xml和hdfs-site.xml复制到<code>/opt/presto-server-0.210/etc/catalog</code>中</p>
+<div class="codehilite"><pre><span></span>cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.210/etc/catalog/
+cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml /opt/presto-server-0.210/etc/catalog/
+</pre></div>
+
+</li>
+<li>
+<p>将hdfs-site.xml文件中的dfs.client.failover.proxy.provider.hacluster属性修改为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
+    <div class="codehilite"><pre><span></span>vi /opt/presto-server-0.210/etc/catalog/hdfs-site.xml
+</pre></div>
+    <img alt="" src="../assets/Presto_0.210/image003.png" /></p>
+</li>
+<li>
+<p>修改/etc/hosts文件，将本机的IP与主机名解析以及Huawei FusionInsight HD集群节点的IP与主机名解析添加进去，例如</p>
+<p><img alt="" src="../assets/Presto_0.210/image004.png" /></p>
+</li>
+<li>
+<p>安装maven：
+    <div class="codehilite"><pre><span></span>wget http://apache.osuosl.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+tar -xzvf apache-maven-3.3.9-bin.tar.gz -C /opt/
+</pre></div></p>
+<p>修改profile文件<code>vi /etc/profile</code>,增加以下配置
+<div class="codehilite"><pre><span></span>export PATH=$PATH:/opt/apache-maven-3.3.9/bin
+</pre></div></p>
+<p>导入环境变量
+<div class="codehilite"><pre><span></span>source /etc/profile
+</pre></div></p>
+<p>执行<code>mvn -v</code>可以正确输出mvn版本</p>
+</li>
+<li>
+<p>安装git
+    <div class="codehilite"><pre><span></span>yum install -y git
+</pre></div></p>
+</li>
+<li>
+<p>参考如下命令，下载presto-server-0.210的源码
+    <div class="codehilite"><pre><span></span>git clone https://github.com/prestodb/presto.git
+git checkout 0.210
+</pre></div></p>
+</li>
+</ul>
+<h2 id="presto-cli">获取Presto CLI启动包<a class="headerlink" href="#presto-cli" title="Permanent link">&para;</a></h2>
+<p>使用Presto CLI连接Huawei FusionInsight HD的Hive，使用presto自带的命令行工具执行SQL语句。</p>
+<ul>
+<li>
+<p>通过如下链接下载presto cli启动的jar包</p>
+<p><a href="https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.210/presto-cli-0.210-executable.jar">https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.210/presto-cli-0.210-executable.jar</a></p>
+</li>
+<li>
+<p>并将该jar包上传到可与presto节点网络互通的节点上(也可将presto coordinator节点作为cli使用节点)。</p>
+</li>
+<li>
+<p>配置cli节点的jdk为1.8u60+以上版本</p>
+</li>
+<li>
+<p>配置cli节点的/etc/hosts文件，将FI集群和presto coordinator节点的IP与主机名关系配置到cli节点</p>
+</li>
+<li>
+<p>从presto节点拷贝presto.jks、presto.keytab、krb5.conf以及连接HDFS所需的core-site.xml和hdfs-site.xml文件到cli节点</p>
+</li>
+<li>
+<p>将presto-cli-0.210-executable.jar包改为可执行文件
+    <div class="codehilite"><pre><span></span>mv presto-cli-0.184-executable.jar presto
+chmod u+x presto
+./presto -h
+</pre></div></p>
+</li>
+</ul>
+<h2 id="hive-connector">配置Hive Connector<a class="headerlink" href="#hive-connector" title="Permanent link">&para;</a></h2>
+<ul>
+<li>进入目录/opt/presto-server-0.210/etc/catalog,在该目录下创建hive.properties文件
+  <div class="codehilite"><pre><span></span>connector.name=hive-hadoop2
+hive.metastore.uri=thrift://172.21.3.115:21088,thrift://172.21.3.116:21088
+hive.metastore.service.principal=hive/hadoop.hadoop.com@HADOOP.COM
+hive.metastore.authentication.type=KERBEROS
+hive.metastore.client.principal=testuser/presto-server
+hive.metastore.client.keytab=/opt/presto.keytab
+hive.hdfs.authentication.type=KERBEROS
+hive.hdfs.impersonation.enabled=false
+hive.hdfs.presto.principal=testuser
+hive.hdfs.presto.keytab=/opt/hadoopclient/testuser.keytab
+hive.config.resources=/opt/presto-server-0.210/etc/catalog/core-site.xml,/opt/presto-server-0.210/etc/catalog/hdfs-site.xml
+</pre></div></li>
+</ul>
+<blockquote>
+<p>其中hive.metastore.uri的值从/opt/hadoopclient/Hive/config/hive-site.xml中查找</p>
+</blockquote>
+<ul>
+<li>
+<p>修改presto-hive/src/main/java/com/facebook/presto/hive/authentication/KerberosHiveMetastoreAuthentication.java的代码，将代码中"Sasl.QOP"的值修改为固定的"auth-conf"</p>
+<p><img alt="" src="../assets/Presto_0.210/image005.png" /></p>
+</li>
+<li>
+<p>重新编译presto
+    <div class="codehilite"><pre><span></span>cd presto-hive
+mvn clean install -DskipTests
+</pre></div></p>
+</li>
+<li>
+<p>将编译后target目录下的presto-hive-0.210.jar文件替换/opt/presto-server-0.210/plugin/hive-hadoop2/presto-hive-0.210.jar文件</p>
+</li>
+<li>
+<p>启动presto server，跟踪/var/presto/data/var/log/server.log查看启动日志
+  <div class="codehilite"><pre><span></span>sh /opt/presto-server-0.210/bin/launcher start
+tailf /var/presto/data/var/log/server.log
+</pre></div></p>
+</li>
+</ul>
+<h2 id="presto-clihive">通过Presto CLI连接Hive<a class="headerlink" href="#presto-clihive" title="Permanent link">&para;</a></h2>
+<ul>
+<li>进入Presto CLI启动包所在目录，例如/opt；</li>
+<li>
+<p>创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
+  <div class="codehilite"><pre><span></span>./presto \
+--server https://presto-server:7778 \
+--krb5-config-path /opt/hadoopclient/krb5.conf \
+--krb5-principal testuser/presto-server \
+--krb5-keytab-path /opt/presto.keytab \
+--krb5-remote-service-name testuser \
+--keystore-path /opt/presto.jks \
+--keystore-password Huawei@123 \
+--catalog hive \
+--schema default \
+--;
+</pre></div></p>
+<blockquote>
+<p>catalog后面的hive是和presto coordinator节点配置的hive.properties的文件名匹配的，如果hive.properties改名为hivetest.properties，则这里改为hivetest</p>
+</blockquote>
+</li>
+<li>
+<p>通过cli执行SQL语句，其他SQL语法请参考<a href="https://prestodb.io/docs/0.210/sql.html">https://prestodb.io/docs/0.210/sql.html</a></p>
+<p><img alt="" src="../assets/Presto_0.210/image006.png" /></p>
+<p>查询表workers_info中数据：</p>
+<p><img alt="" src="../assets/Presto_0.210/image007.png" /></p>
+</li>
+</ul>
+<h2 id="presto-jdbchive">通过Presto JDBC连接Hive<a class="headerlink" href="#presto-jdbchive" title="Permanent link">&para;</a></h2>
+<p>使用Presto JDBC接口连接Huawei FusionInsight HD Hive</p>
+<ul>
+<li>
+<p>从如下链接下载jdbc的驱动包</p>
+<p><a href="https://repo1.maven.org/maven2/com/facebook/presto/presto-jdbc/0.210/presto-jdbc-0.210.jar">https://repo1.maven.org/maven2/com/facebook/presto/presto-jdbc/0.210/presto-jdbc-0.210.jar</a></p>
+</li>
+<li>
+<p>参考<a href="https://prestodb.io/docs/0.210/installation/jdbc.html">https://prestodb.io/docs/0.210/installation/jdbc.html</a>设置JDBC URL，用户名为任意字符，密码为空，在eclipse中调通的示例如下:
+    <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.DriverManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.ResultSet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.SQLException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Statement</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrestoTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SQLException</span><span class="o">,</span> <span class="n">ClassNotFoundException</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&quot;com.facebook.presto.jdbc.PrestoDriver&quot;</span><span class="o">);</span>
+        <span class="n">Connection</span> <span class="n">connection</span> <span class="o">=</span><span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span>
+                <span class="o">(</span><span class="s">&quot;jdbc:presto://172.21.3.48:8080/hive/default&quot;</span><span class="o">,</span><span class="s">&quot;root&quot;</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="na">createStatement</span><span class="o">();</span>
+        <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span><span class="s">&quot;select * from adult limit 10&quot;</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="na">getMetaData</span><span class="o">().</span><span class="na">getColumnCount</span><span class="o">();</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">())</span>
+        <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">col</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">((</span><span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">length</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="o">))</span> <span class="o">{</span>
+          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;\t&quot;</span><span class="o">);</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">rs</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">connection</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>测试结果：</p>
+<p><img alt="" src="../assets/Presto_0.210/image008.png" /></p>
+</li>
+</ul>
+<h2 id="elasticsearch-connector">配置ElasticSearch Connector<a class="headerlink" href="#elasticsearch-connector" title="Permanent link">&para;</a></h2>
+<p>presto和ES官方都没有给出适配的文档介绍，这里我们采用开源的适配包进行适配。在https://github.com/harbby/presto-connectors 下载适配包源码，上传至服务器，解压。</p>
+<ul>
+<li>
+<p>修改presto-elasticsearch-connectors源码以及配置</p>
+<ul>
+<li>进入/opt/presto-connectors-master/presto-elasticsearch6/src/main/java/com/facebook/presto/elasticsearch6/functions目录，参考下图，修改MatchQueryFunction.java文件，添加构造函数，将函数声明为public</li>
+</ul>
+<p><img alt="" src="../assets/Presto_0.210/image012.png" /></p>
+<ul>
+<li>进入presto-connectors-master目录，修改pom.xml文件
+  <div class="codehilite"><pre><span></span> cd presto-connectors-master
+ vi pom.xml
+</pre></div>
+  在最后的'</project>'之前，添加以下plugin依赖
+  <div class="codehilite"><pre><span></span>&lt;build&gt;
+      &lt;pluginManagement&gt;
+          &lt;plugins&gt;
+              &lt;plugin&gt;
+                  &lt;groupId&gt;pl.project13.maven&lt;/groupId&gt;
+                  &lt;artifactId&gt;git-commit-id-plugin&lt;/artifactId&gt;
+                  &lt;configuration&gt;
+                      &lt;skip&gt;true&lt;/skip&gt;
+                  &lt;/configuration&gt;
+              &lt;/plugin&gt;
+          &lt;/plugins&gt;
+      &lt;/pluginManagement&gt;
+  &lt;/build&gt;
+</pre></div></li>
+<li>
+<p>（可选操作）在modules中，去掉除presto-base-elasticsearch和presto-elasticsearch6以外的module，其他的module这里并不需要，可以减少编译时间</p>
+</li>
+<li>
+<p>进入presto-elasticsearch6目录，修改pom.xml文件
+  <div class="codehilite"><pre><span></span> cd presto-elasticsearch6
+ vi pom.xml
+</pre></div>
+  将'elasticsearch.version'修改为6.1.3</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Presto_0.210/image013.png" /></p>
+<p>将'elasticsearch-x-content'和'elasticsearch-core'的依赖注释掉</p>
+<p><img alt="" src="../assets/Presto_0.210/image014.png" /></p>
+</li>
+<li>
+<p>回到presto-connectors-master目录，编译presto-connectors
+    <div class="codehilite"><pre><span></span>  mvn clean install -DskipTests
+</pre></div>
+    编译成功后，显示如下：</p>
+<p><img alt="" src="../assets/Presto_0.210/5c613.png" /></p>
+</li>
+<li>
+<p>获取'presto-connectors-master/presto-elasticsearch6/target'目录下的'presto-elasticsearch6-0.210'文件夹，将其复制到presto-server的plugin目录下
+  <div class="codehilite"><pre><span></span>  cp -r /opt/presto-connectors-master/presto-elasticsearch6/target/presto-elasticsearch6-0.210 /opt/presto-server-0.210/plugin
+</pre></div></p>
+</li>
+<li>
+<p>登录集群manager管理页面，在'服务管理-&gt;Elasticsearch 服务配置'页面，选择全部配置，搜索'port'关键词,查看'SERVER_PORT'配置为24100，'TRANSPORT_TCP_PORT'配置为24101</p>
+<p><img alt="" src="../assets/Presto_0.210/image009.png" /></p>
+</li>
+<li>
+<p>在集群客户端节点执行如下命令
+    <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_evn
+curl -XGET http://172.21.3.115:24100/_cluster/health?pretty
+</pre></div>
+    其中172.21.3.115是elasticsearch集群节点，24100为SERVER_PORT，看到返回如下结果
+    <div class="codehilite"><pre><span></span>  {
+    &quot;cluster_name&quot; : &quot;elasticsearch_cluster&quot;,
+    &quot;status&quot; : &quot;green&quot;,
+    &quot;timed_out&quot; : false,
+    &quot;number_of_nodes&quot; : 6,
+    &quot;number_of_data_nodes&quot; : 3,
+    &quot;active_primary_shards&quot; : 33,
+    &quot;active_shards&quot; : 66,
+    &quot;relocating_shards&quot; : 0,
+    &quot;initializing_shards&quot; : 0,
+    &quot;unassigned_shards&quot; : 0,
+    &quot;delayed_unassigned_shards&quot; : 0,
+    &quot;number_of_pending_tasks&quot; : 0,
+    &quot;number_of_in_flight_fetch&quot; : 0,
+    &quot;task_max_waiting_in_queue_millis&quot; : 0,
+    &quot;active_shards_percent_as_number&quot; : 100.0
+  }
+</pre></div></p>
+</li>
+<li>
+<p>在/opt/presto-server-0.210/etc/catalog目录下创建es.properties文件
+    <div class="codehilite"><pre><span></span>  connector.name=elasticsearch6
+  elasticsearch.cluster.name=elasticsearch_cluster
+  elasticsearch.transport.hosts=172.21.3.115:24101
+</pre></div>
+    其中'elasticsearch.cluster.name'是刚才获取的ES集群的名字，'elasticsearch.transport.hosts'为EsNode节点IP，端口为'TRANSPORT_TCP_PORT'</p>
+</li>
+<li>
+<p>重启presto-server
+  <div class="codehilite"><pre><span></span>sh /opt/presto-server-0.210/bin/launcher restart
+</pre></div></p>
+</li>
+</ul>
+<h2 id="presto-clielasticsearch">通过Presto CLI连接ElasticSearch<a class="headerlink" href="#presto-clielasticsearch" title="Permanent link">&para;</a></h2>
+<ul>
+<li>进入Presto CLI启动包所在目录,例如/opt</li>
+<li>
+<p>创建presto cli启动脚本，类似如下，注意将相关文件的路径按实际位置替换
+    <div class="codehilite"><pre><span></span>./presto \
+--server https://presto-server:7778 \
+--krb5-config-path /opt/hadoopclient/krb5.conf \
+--krb5-principal testuser/presto-server \
+--krb5-keytab-path /opt/presto.keytab \
+--krb5-remote-service-name testuser \
+--keystore-path /opt/presto.jks \
+--keystore-password Huawei@123 \
+--catalog es \
+--schema default \
+--;
+</pre></div></p>
+<blockquote>
+<p>catalog后面的es是和presto coordinator节点配置的es.properties的文件名匹配</p>
+</blockquote>
+</li>
+<li>
+<p>通过cli执行SQL语句查询ES中的索引信息</p>
+<p><img alt="" src="../assets/Presto_0.210/image010.png" /></p>
+<p><img alt="" src="../assets/Presto_0.210/image011.png" /></p>
+</li>
+</ul>
+<blockquote>
+<p>当前connector支持show,create,select,insert,drop操作，暂不支持delete,update,alter等操作</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Presto_0.184/" title="Presto0.184 <--> C70" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Presto0.184 <--> C70
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Other/FUSE/" title="对接FUSE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接FUSE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

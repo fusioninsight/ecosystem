@@ -1,0 +1,1302 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>Talend - FusionData Ecosystem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#connection-instruction-between-talend-and-fusioninsight" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="FusionData Ecosystem" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              FusionData Ecosystem
+            </span>
+            <span class="md-header-nav__topic">
+              Talend
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="FusionData Ecosystem" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FusionData Ecosystem
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Business Intelligence
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Business Intelligence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="Tableau" class="md-nav__link">
+      Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="QlikView" class="md-nav__link">
+      QlikView
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="RapidMiner" class="md-nav__link">
+      RapidMiner
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Data Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="Informatica PowerCenter" class="md-nav__link">
+      Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="Informatica PWX CDC" class="md-nav__link">
+      Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Talend
+      </label>
+    
+    <a href="./" title="Talend" class="md-nav__link md-nav__link--active">
+      Talend
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" title="Succeeded Case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-talend" title="Installing Talend" class="md-nav__link">
+    Installing Talend
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hdfs" title="Connecting Talend to HDFS" class="md-nav__link">
+    Connecting Talend to HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-connection-procedure" title="HDFS Connection Procedure" class="md-nav__link">
+    HDFS Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-get-procedure" title="HDFS Get Procedure" class="md-nav__link">
+    HDFS Get Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-put-procedure" title="HDFS Put Procedure" class="md-nav__link">
+    HDFS Put Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hive" title="Connecting Talend to Hive" class="md-nav__link">
+    Connecting Talend to Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_2" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-connection-procedure" title="Hive Connection Procedure" class="md-nav__link">
+    Hive Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-create-table-load-procedure" title="Hive Create Table &amp; Load Procedure" class="md-nav__link">
+    Hive Create Table &amp; Load Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-input-procedure" title="Hive Input Procedure" class="md-nav__link">
+    Hive Input Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-row-procedure" title="Hive Row Procedure" class="md-nav__link">
+    Hive Row Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hbase" title="Connecting Talend to HBase" class="md-nav__link">
+    Connecting Talend to HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_3" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-connection-procedure" title="HBase Connection Procedure" class="md-nav__link">
+    HBase Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-input-output-procedure" title="HBase Input Output Procedure" class="md-nav__link">
+    HBase Input Output Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="Apache NiFi" class="md-nav__link">
+      Apache NiFi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" title="Succeeded Case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-talend" title="Installing Talend" class="md-nav__link">
+    Installing Talend
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hdfs" title="Connecting Talend to HDFS" class="md-nav__link">
+    Connecting Talend to HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-connection-procedure" title="HDFS Connection Procedure" class="md-nav__link">
+    HDFS Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-get-procedure" title="HDFS Get Procedure" class="md-nav__link">
+    HDFS Get Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-put-procedure" title="HDFS Put Procedure" class="md-nav__link">
+    HDFS Put Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hive" title="Connecting Talend to Hive" class="md-nav__link">
+    Connecting Talend to Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_2" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-connection-procedure" title="Hive Connection Procedure" class="md-nav__link">
+    Hive Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-create-table-load-procedure" title="Hive Create Table &amp; Load Procedure" class="md-nav__link">
+    Hive Create Table &amp; Load Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-input-procedure" title="Hive Input Procedure" class="md-nav__link">
+    Hive Input Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-row-procedure" title="Hive Row Procedure" class="md-nav__link">
+    Hive Row Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-talend-to-hbase" title="Connecting Talend to HBase" class="md-nav__link">
+    Connecting Talend to HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" title="Purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_3" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-connection-procedure" title="HBase Connection Procedure" class="md-nav__link">
+    HBase Connection Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-input-output-procedure" title="HBase Input Output Procedure" class="md-nav__link">
+    HBase Input Output Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/en/edit/master/docs/Data_Integration/Talend.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="connection-instruction-between-talend-and-fusioninsight">Connection Instruction between Talend and FusionInsight<a class="headerlink" href="#connection-instruction-between-talend-and-fusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="succeeded-case">Succeeded Case<a class="headerlink" href="#succeeded-case" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Talend 7.0.1 &harr; FusionInsight HD V100R002C80SPC200(HDFS,HBase Component)</p>
+<p>Talend 6.4.1 &harr; FusionInsight HD V100R002C80SPC200(HDFS,HBase,Hive)</p>
+<p>Note: Because of the version bug of Talend 7.0.1, Hive cannot be successfully connected. Using Talend 6.4.1 for substitution.</p>
+</blockquote>
+<h2 id="installing-talend">Installing Talend<a class="headerlink" href="#installing-talend" title="Permanent link">&para;</a></h2>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Installing Talend 7.0.1</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Installing FusionInsight HD cluster and its client completed</li>
+</ul>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Configure the JAVA_HOME into Path Environment Variables</p>
+</li>
+<li>
+<p>Configure Kerberos</p>
+</li>
+</ul>
+<p>Get Kerberos related userkeytab and krb5.conf files by login into the FusionInsight HD manager web UI and put them into the following directory <code>C:\ProgramData\Kerberos</code>. In addition, create a new file named krb5.ini with the same content of krb5.conf, put the krb5.ini file into the following directory <code>C:\Windows</code></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910191911976.png" /></p>
+<ul>
+<li>Download TOS from the following web pages <code>https://www.talend.com/products/big-data/big-data-open-studio/</code> , create the jaas.conf file for zookeeper connection with its content shown as follows</li>
+</ul>
+<div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;c:/developuser/user.keytab&quot;
+principal=&quot;developuser@HADOOP.COM&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div>
+
+<ul>
+<li>Sart TOS_BD by clicking <code>TOS_BD-win-x86_64.exe</code></li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027103716507.png" /></p>
+<p>Installing additional Talend Packages</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027103930508.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027104029626.png" /></p>
+<h2 id="connecting-talend-to-hdfs">Connecting Talend to HDFS<a class="headerlink" href="#connecting-talend-to-hdfs" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_1">Purpose<a class="headerlink" href="#purpose_1" title="Permanent link">&para;</a></h3>
+<p>Configuring Talend related HDFS processor to connect FusionInsight HD HDFS</p>
+<h3 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installing Talend 7.0.1 completed</p>
+</li>
+<li>
+<p>Installing FusionInsight HD cluster and its client completed</p>
+</li>
+</ul>
+<h3 id="hdfs-connection-procedure">HDFS Connection Procedure<a class="headerlink" href="#hdfs-connection-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add the tHDFSConnection component with its configuration shown as follows:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027111926482.png" /></p>
+<p>In detail：
+  <div class="codehilite"><pre><span></span>1: Cloudera CDH 5.8(YARN mode)
+2: &quot;hdfs://172.21.3.103:25000&quot;
+3: &quot;hdfs/hadoop.hadoop.com@HADOOP.COM&quot;
+4: &quot;developuser&quot;
+5: &quot;C:/developuser/user.keytab&quot;
+6: &quot;hadoop.security.authentication&quot; -&gt;  &quot;kerberos&quot;
+     &quot;hadoop.rpc.protection&quot;          -&gt;  &quot;privacy&quot;
+</pre></div>
+  - Test completed：</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027112247960.png" /></p>
+<h3 id="hdfs-get-procedure">HDFS Get Procedure<a class="headerlink" href="#hdfs-get-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The whole process is shown as the following pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910220302703.png" /></p>
+<ul>
+<li>
+<p>The configuration of <strong>tHDFSConnection</strong> component does not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tHDFSGet</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027112848678.png" /></p>
+<p>Note: Put the <code>out.csv</code> into the HDFS filesystem with the following directory <code>/tmp/talend_test</code>, <code>C:/SOFT</code> is the local folder for file output</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910220900887.png" /></p>
+<ul>
+<li>TEST completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027113549569.png" /></p>
+<p>Check the test outcome by coming into the local directory <code>C:/SOFT</code></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027113744223.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910221157828.png" /></p>
+<h3 id="hdfs-put-procedure">HDFS Put Procedure<a class="headerlink" href="#hdfs-put-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The whole process is shown as the following pic:</p>
+</li>
+<li>
+<p>The configuration of <strong>tHDFSConnection</strong> component does not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tHDFSPut</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027114148747.png" /></p>
+<p>Note: Before the test starts, create <code>HDFSPut.txt</code> located at the directory <code>C:/SOFT</code> with its content shown as follows</p>
+<div class="codehilite"><pre><span></span>It is created on a local PC.
+</pre></div>
+
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910221936544.png" /></p>
+<ul>
+<li>Test Completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018102711460775.png" /></p>
+<p>Login into the cluster to check the test outcome:</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910222146338.png" /></p>
+<h2 id="connecting-talend-to-hive">Connecting Talend to Hive<a class="headerlink" href="#connecting-talend-to-hive" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_2">Purpose<a class="headerlink" href="#purpose_2" title="Permanent link">&para;</a></h3>
+<p>Configuring Talend related Hive processor to connect FusionInsight HD Hive</p>
+<h3 id="prerequisites_2">Prerequisites<a class="headerlink" href="#prerequisites_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installing Talend 6.4.1 completed</p>
+</li>
+<li>
+<p>Installing FusionInsight HD cluster and its client completed</p>
+</li>
+</ul>
+<h3 id="hive-connection-procedure">Hive Connection Procedure<a class="headerlink" href="#hive-connection-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The Talend version for Hive connection is 6.4.1</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027141810509.png" /></p>
+<ul>
+<li>The whole process is shown as the following pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910210133159.png" /></p>
+<ul>
+<li>The configuration of <strong>tHiveConnection</strong> component shown as follows</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027142536795.png" /></p>
+<div class="codehilite"><pre><span></span>1: Custom-Unsuported
+2: Hive2
+3: &quot;172.21.3.103:24002,172.21.3.101:24002,172.21.3.102&quot;
+4: &quot;24002&quot;
+5: &quot;default&quot;
+6: &quot;developuser&quot;
+7: &quot;;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=C:/SOFT/cfg/user.keytab&quot;
+</pre></div>
+
+<p>Note: Need to click the button which besides the <strong>Distribution</strong> to import the required jar files of FusionInsight HD. If there still need to add extra jar files, you can complete this step either by Talend itself or manually add these jar files.</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027143157715.png" /></p>
+<ul>
+<li>Test Completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027143538549.png" /></p>
+<h3 id="hive-create-table-load-procedure">Hive Create Table &amp; Load Procedure<a class="headerlink" href="#hive-create-table-load-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The configuration of <strong>tHiveConnection</strong> component does not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tHiveCreateTable</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027144138537.png" /></p>
+<p>Note: It is required to <strong>Edit schema</strong> of the table</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018102714423808.png" /></p>
+<ul>
+<li>The configuration of <strong>tHiveLoad</strong> component shown as follows</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027144612401.png" /></p>
+<p>Note: Before the test starts, the file <code>out.csv</code> need to be uploaded into the hdfs filesystem directory <code>/tmp/talend_test/</code></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910212755601.png" /></p>
+<p>The content of <code>out.csv</code> shown as follows
+  ：
+  <div class="codehilite"><pre><span></span>1;EcitQU
+2;Hyy6RC
+3;zju1jR
+4;R9fex9
+5;EU2mVq
+</pre></div></p>
+<ul>
+<li>The configuration of <strong>tHiveClose</strong> component shown as follows</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027144750903.png" /></p>
+<ul>
+<li>Test Completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027144955115.png" /></p>
+<p>Check the table <code>createdTableTalend</code> by login into the cluster</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910213430414.png" /></p>
+<h3 id="hive-input-procedure">Hive Input Procedure<a class="headerlink" href="#hive-input-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The whole process is shown as the following pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910213731636.png" /></p>
+<ul>
+<li>
+<p>The configuration of <strong>tHiveConnection</strong> component does not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tHiveInput</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027145453118.png" /></p>
+<p>Note: It is required to <strong>Edit schema</strong> of the hive table</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027145630808.png" /></p>
+<ul>
+<li>
+<p>The configuration of <strong>tLogRow</strong> keeps by default</p>
+</li>
+<li>
+<p>The configuration of <strong>tHiveClose</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027145824481.png" /></p>
+<ul>
+<li>Test Completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027150004526.png" /></p>
+<h3 id="hive-row-procedure">Hive Row Procedure<a class="headerlink" href="#hive-row-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The whole process is shown as the following pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018091021431317.png" /></p>
+<ul>
+<li>
+<p>The configuration of <strong>tHiveConnection</strong> component does not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tHiveRow</strong> component shown as follows</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027150354934.png" /></p>
+<p>Note: It is required to <strong>Edit schema</strong> of hive table</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027150458443.png" /></p>
+<ul>
+<li>Test Completed：</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027150645583.png" /></p>
+<p>Check the cluster outcome by login into the FusionInsight Cluster</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027150815520.png" /></p>
+<h2 id="connecting-talend-to-hbase">Connecting Talend to HBase<a class="headerlink" href="#connecting-talend-to-hbase" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_3">Purpose<a class="headerlink" href="#purpose_3" title="Permanent link">&para;</a></h3>
+<p>Configuring Talend related HBase processor to connect FusionInsight HD HBase</p>
+<h3 id="prerequisites_3">Prerequisites<a class="headerlink" href="#prerequisites_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installing Talend 7.0.1 completed</p>
+</li>
+<li>
+<p>Installing FusionInsight HD cluster and its client completed</p>
+</li>
+</ul>
+<h3 id="hbase-connection-procedure">HBase Connection Procedure<a class="headerlink" href="#hbase-connection-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The whole process is shown as the following pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018091210512971.png" /></p>
+<ul>
+<li>Using <strong>eclipse</strong> to export the <strong>LoginUtil</strong> which from HBase sample project code of FusionInsight HD client (Sample project code in this time can be found by following directory <code>C:\FusionInsightHD\FusionInsight_Services_ClientConfig\HBase\hbase-example</code>)</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018091019371235.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910193823624.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910194042337.png" /></p>
+<ul>
+<li>
+<p>Find the <strong>tHbaseConnection</strong> component by Palette</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910194309989.png" /></p>
+</li>
+<li>
+<p>The configuration of <strong>tHbaseConnection</strong> shown as the following pic:</p>
+</li>
+</ul>
+<p>Note: It is required to import the jar files of HBase sample project and the exported  <strong>hbase_loginUtil.jar</strong></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027155307109.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027155451471.png" /></p>
+<p><code>hbase-example</code> required jar faile can be located by the following directory <code>C:\FusionInsight_Services_ClientConfig\HBase\FusionInsight-HBase-1.0.2.tar.gz\hbase\lib</code></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027153644203.png" /></p>
+<ul>
+<li>The configuration of <strong>tLibraryLoad</strong> shown as folloing pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027154254960.png" /></p>
+<p>Click on <code>Advanced settings</code> and add the java code <code>import com.huawei.hadoop.security.LoginUtil;</code> shown as follows:</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027155002101.png" /></p>
+<ul>
+<li>Use <strong>tJava</strong> component to customize the <strong>tHBaseConnection</strong> component</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-2018102716005417.png" /></p>
+<p>The content of the Java code shown as follows：
+  <div class="codehilite"><pre><span></span>org.apache.hadoop.conf.Configuration conf = org.apache.hadoop.hbase.HBaseConfiguration.create();
+
+System.setProperty(&quot;java.security.krb5.conf&quot;, &quot;C:\\developuser\\krb5.conf&quot;);
+conf.set(&quot;hadoop.security.authentication&quot;,&quot;Kerberos&quot;);
+
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/SOFT/cfg/core-site.xml&quot;));
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/SOFT/cfg/hdfs-site.xml&quot;));
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/SOFT/cfg/hbase-site.xml&quot;));
+
+System.out.println(&quot;=====&quot;);
+System.out.println(org.apache.hadoop.hbase.security.User.isHBaseSecurityEnabled(conf));
+
+System.setProperty(&quot;java.security.auth.login.config&quot;, &quot;C:/developuser/jaas.conf&quot;);
+
+LoginUtil.setJaasConf(&quot;developuser&quot;, &quot;developuser&quot;, &quot;C:\\developuser\\krb5.conf&quot;);
+LoginUtil.setZookeeperServerPrincipal(&quot;zookeeper.server.principal&quot;, &quot;zookeeper/hadoop.hadoop.com&quot;);
+
+LoginUtil.login(&quot;developuser&quot;, &quot;C:/developuser/user.keytab&quot;, &quot;C:/developuser/krb5.conf&quot;, conf);
+
+globalMap.put(&quot;conn_tHbaseConnection_1&quot;, conf);
+</pre></div>
+  - Test Completed</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027160217311.png" /></p>
+<h3 id="hbase-input-output-procedure">HBase Input Output Procedure<a class="headerlink" href="#hbase-input-output-procedure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The content of the Java code shown as follows：</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910202047622.png" /></p>
+</li>
+<li>
+<p>The configuration of <strong>tLibraryLoad</strong>，<strong>tHBaseConnection</strong>，<strong>tJava</strong>, <strong>tHBaseClose</strong> do not change</p>
+</li>
+<li>
+<p>The configuration of <strong>tFileInputDelimited</strong> shown as following pic:</p>
+<p>Note: It is required to <strong>Edit schema</strong> of <code>out.csv</code></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027161437375.png" /></p>
+<p>The content of <code>out.csv</code> shown as follows:
+<div class="codehilite"><pre><span></span>1;EcitQU
+2;Hyy6RC
+3;zju1jR
+4;R9fex9
+5;EU2mVq
+</pre></div></p>
+</li>
+<li>
+<p>The configuration of <strong>tHBaseOutput</strong> shown as folloing pic:</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027161745118.png" /></p>
+<p>Note: It is required to <strong>Edit Schema</strong> of table:</p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027162050223.png" /></p>
+<ul>
+<li>The configuration of <strong>tHBaseInput</strong> shown as folloing pic:</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027162342379.png" /></p>
+<ul>
+<li>
+<p>The configuration of <strong>tLogRow</strong> keeps by default</p>
+</li>
+<li>
+<p>Test Completed:</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20181027163025959.png" /></p>
+<p>Login into the FusinInsight HD cluster and check the HBase table <code>hbaseInputOutputTest</code> by using following comands:</p>
+<div class="codehilite"><pre><span></span>hbase shell
+scan &#39;hbaseInputOutputTest&#39;
+</pre></div>
+
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910204722570.png" /></p>
+<p><img alt="" src="../assets/Talend/markdown-img-paste-20180910204755477.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Informatica_PWX_CDC/" title="Informatica PWX CDC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Informatica PWX CDC
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Apache_NiFi/" title="Apache NiFi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Apache NiFi
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

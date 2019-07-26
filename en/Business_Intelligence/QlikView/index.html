@@ -1,0 +1,962 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>QlikView - FusionData Ecosystem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qlikview-and-fusioninsight-instruction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="FusionData Ecosystem" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              FusionData Ecosystem
+            </span>
+            <span class="md-header-nav__topic">
+              QlikView
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="FusionData Ecosystem" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FusionData Ecosystem
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Business Intelligence
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Business Intelligence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tableau/" title="Tableau" class="md-nav__link">
+      Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        QlikView
+      </label>
+    
+    <a href="./" title="QlikView" class="md-nav__link md-nav__link--active">
+      QlikView
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case" title="Case" class="md-nav__link">
+    Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-kerberos-authentication-for-windows" title="Configuring kerberos authentication for Windows" class="md-nav__link">
+    Configuring kerberos authentication for Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-a-hive-data-source" title="Configuring a Hive data source" class="md-nav__link">
+    Configuring a Hive data source
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-the-hive-odbc-driver" title="Download and install the Hive ODBC driver" class="md-nav__link">
+    Download and install the Hive ODBC driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-user-dsn" title="Configuring user DSN" class="md-nav__link">
+    Configuring user DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-hive-data-source" title="Connect to the Hive data source" class="md-nav__link">
+    Connect to the Hive data source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-a-spark-data-source" title="Configuring a Spark data source" class="md-nav__link">
+    Configuring a Spark data source
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-sparks-odbc-driver" title="Download and install Spark's ODBC driver" class="md-nav__link">
+    Download and install Spark's ODBC driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-user-dsn_1" title="Configuring user DSN" class="md-nav__link">
+    Configuring user DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-a-spark-data-source" title="Connect to a Spark data source" class="md-nav__link">
+    Connect to a Spark data source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="RapidMiner" class="md-nav__link">
+      RapidMiner
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Data Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="Informatica PowerCenter" class="md-nav__link">
+      Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="Informatica PWX CDC" class="md-nav__link">
+      Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="Talend" class="md-nav__link">
+      Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="Apache NiFi" class="md-nav__link">
+      Apache NiFi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case" title="Case" class="md-nav__link">
+    Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-kerberos-authentication-for-windows" title="Configuring kerberos authentication for Windows" class="md-nav__link">
+    Configuring kerberos authentication for Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-a-hive-data-source" title="Configuring a Hive data source" class="md-nav__link">
+    Configuring a Hive data source
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-the-hive-odbc-driver" title="Download and install the Hive ODBC driver" class="md-nav__link">
+    Download and install the Hive ODBC driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-user-dsn" title="Configuring user DSN" class="md-nav__link">
+    Configuring user DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-hive-data-source" title="Connect to the Hive data source" class="md-nav__link">
+    Connect to the Hive data source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-a-spark-data-source" title="Configuring a Spark data source" class="md-nav__link">
+    Configuring a Spark data source
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-sparks-odbc-driver" title="Download and install Spark's ODBC driver" class="md-nav__link">
+    Download and install Spark's ODBC driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-user-dsn_1" title="Configuring user DSN" class="md-nav__link">
+    Configuring user DSN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-a-spark-data-source" title="Connect to a Spark data source" class="md-nav__link">
+    Connect to a Spark data source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/en/edit/master/docs/Business_Intelligence/QlikView.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="qlikview-and-fusioninsight-instruction">QlikView and FusionInsight Instruction<a class="headerlink" href="#qlikview-and-fusioninsight-instruction" title="Permanent link">&para;</a></h1>
+<h2 id="case">Case<a class="headerlink" href="#case" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>QlikView 12 &lt;-&gt; FusionInsight HD V100R002C60U20</p>
+<p>QlikView 12 &lt;-&gt; FusionInsight HD V100R002C70SPC200</p>
+<p>QlikView 12 &lt;-&gt; FusionInsight HD V100R002C80SPC100</p>
+</blockquote>
+<h2 id="configuring-kerberos-authentication-for-windows">Configuring kerberos authentication for Windows<a class="headerlink" href="#configuring-kerberos-authentication-for-windows" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Download and install MIT Kerberos at: <a href="http://web.mit.edu/kerberos/dist/#kfw-4.0">http://web.mit.edu/kerberos/dist/#kfw-4.0</a></p>
+</li>
+<li>
+<p>The version is consistent with the number of operating system bits. This article is version kfw-4.1-amd64.msi.</p>
+</li>
+<li>
+<p>Verify that the time of the client machine is the same as that of the FusionInsight HD cluster. The time difference is less than 5 minutes.</p>
+</li>
+<li>
+<p>Set the Kerberos configuration file</p>
+</li>
+</ul>
+<p>Create a role and machine user on the FusionInsight Manager. For details, see the chapter "Creating Users" in the FusionInsight HD Administrator Guide. The role needs to grant Hive access rights based on business needs and add users to the role. For example, create the user "sparkdemo" and download the corresponding keytab file user.keytab and krb5.conf file, rename the krb5.conf file to krb5.ini, and put it in the C:\ProgramData\MIT\Kerberos5 directory.</p>
+<ul>
+<li>
+<p>Set the cache file for the Kerberos ticket</p>
+</li>
+<li>
+<p>Create a directory to store the tickets, such as <code>C:\temp</code>.</p>
+</li>
+<li>
+<p>Set the system environment variable of Windows, the variable name is "KRB5CCNAME", and the variable value is <code>C:\temp\krb5cache</code></p>
+<p><img alt="" src="../assets/QlikView/image4.png" /></p>
+</li>
+<li>
+<p>Restart the machine.</p>
+</li>
+<li>
+<p>Authenticate on Windows</p>
+</li>
+<li>
+<p>Use the command line to go to the MIT Kerberos installation path and find the executable kinit.exe. For example, the path to this article is: <code>C:\Program Files\MIT\Kerberos\bin</code></p>
+</li>
+<li>
+<p>Execute the following command:
+    <div class="codehilite"><pre><span></span>kinit -k -t /path_to_userkeytab/user.keytab UserName
+</pre></div></p>
+</li>
+</ul>
+<p>Path_to_userkeytab is the path where the user keytab file is stored, user.keytab is the user's keytab, and UserName is the user name.</p>
+<h2 id="configuring-a-hive-data-source">Configuring a Hive data source<a class="headerlink" href="#configuring-a-hive-data-source" title="Permanent link">&para;</a></h2>
+<p>Hive data source in QlikView, docking Hive's ODBC interface</p>
+<h3 id="download-and-install-the-hive-odbc-driver">Download and install the Hive ODBC driver<a class="headerlink" href="#download-and-install-the-hive-odbc-driver" title="Permanent link">&para;</a></h3>
+<p>Download the driver from the following address and select the corresponding ODBC version according to the operating system type, download and install: <a href="http://www.cloudera.com/content/cloudera/en/downloads/connectors/hive/odbc/hive-odbc-v2-5-15.html">address</a></p>
+<h3 id="configuring-user-dsn">Configuring user DSN<a class="headerlink" href="#configuring-user-dsn" title="Permanent link">&para;</a></h3>
+<p>*
+On the User DSN tab of the OBDC Data Source Manager page, click Add to configure the user data source.</p>
+<p><img alt="" src="../assets/QlikView/image5.png" /></p>
+<ul>
+<li>On the <strong>Create Data Source</strong> page, find the <strong>Cloudera ODBC Driver for Apache Hive</strong>, select it and click <strong>Finish</strong>.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image6.png" /></p>
+<ul>
+<li>
+<p>Configure the Hive data source.</p>
+<ul>
+<li>Data Source Name: is a custom parameter</li>
+<li>Host(s): HiveServer business ip</li>
+<li>Port: Hive Service port, 21066</li>
+<li>Mechanism: Kerberos</li>
+<li>Host FQDN: hadoop.hadoop.com</li>
+<li>Service Name: hive</li>
+<li>Realm: Leave blank</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image7.png" /></p>
+</li>
+<li>
+<p>Click <strong>Test</strong> If the connection is successful, the configuration is successful. Click <strong>OK</strong></p>
+<p><img alt="" src="../assets/QlikView/image8.png" /></p>
+</li>
+</ul>
+<h3 id="connect-to-the-hive-data-source">Connect to the Hive data source<a class="headerlink" href="#connect-to-the-hive-data-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open QlikView 12, <strong>New</strong> a document</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image9.png" /></p>
+<ul>
+<li>Close the pop-up wizard</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image10.png" /></p>
+<ul>
+<li>Open the <strong>Edit Script</strong> button in the toolbar</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image11.png" /></p>
+<p>*
+In the pop-up <strong>Edit Script</strong> page, click the <strong>Data</strong> tab, find <strong>OCBC</strong> in the drop-down bar of <strong>Database</strong>, click <strong>Connect</strong>;</p>
+<p><img alt="" src="../assets/QlikView/image12.png" /></p>
+<ul>
+<li>On the <strong>Connect to Data Source</strong> page, select the data source hive_odbc configured above, then click <strong>OK</strong>;</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image13.png" /></p>
+<ul>
+<li>On the <strong>Data</strong> tab of the <strong>Edit Script</strong> page, click the <strong>Select</strong> button</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image14.png" /></p>
+<p>*
+In the <strong>Create Select statement</strong> page, select the <strong>Database table</strong> you want to import, select * in the ** field**, import the full table, import the corresponding table into the corresponding table, and click * <em>OK*</em> (select * in the example);</p>
+<p><img alt="" src="../assets/QlikView/image15.png" /></p>
+<ul>
+<li>Go back to the <strong>Edit Script</strong> page and click <strong>OK</strong></li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image16.png" /></p>
+<ul>
+<li>Go back to the QlikView worksheet page and click <strong>Reload</strong> to import the database table into QlikView.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image17.png" /></p>
+<ul>
+<li>The data can then be processed by cartographic tabulation analysis. For specific steps, please refer to the QlikView official website.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image18.png" /></p>
+<h2 id="configuring-a-spark-data-source">Configuring a Spark data source<a class="headerlink" href="#configuring-a-spark-data-source" title="Permanent link">&para;</a></h2>
+<p>Configure the Spark data source in QlivView and connect to the thrift interface of SparkSQL.</p>
+<h3 id="download-and-install-sparks-odbc-driver">Download and install Spark's ODBC driver<a class="headerlink" href="#download-and-install-sparks-odbc-driver" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Download the Spark ODBC driver on Simba's official website, select 32bit or 64bit according to the user's own operating system, and select Spark for Data Source.
+    SQL, address: <a href="http://www.tableau.com/support/drivers">http://www.tableau.com/support/drivers</a></li>
+</ul>
+<p>*
+Install the client as prompted by the install client.</p>
+<h3 id="configuring-user-dsn_1">Configuring user DSN<a class="headerlink" href="#configuring-user-dsn_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>On the <strong>OBDC Data Source Manager</strong> page, on the <strong>User DSN</strong> tab, click <strong>Add</strong> to configure the user data source.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image19.png" /></p>
+<ul>
+<li>On the <strong>Create Data Source</strong> page, find <strong>Simba Spark ODBC Driver</strong>, select it and click <strong>Finish</strong>.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image20.png" /></p>
+<ul>
+<li>
+<p>Configure the Spark data source on the <strong>Simba Spark ODBC Driver DSN Setup</strong> page.</p>
+<ul>
+<li>Data Source Name： Custom</li>
+<li>Mechanism： Kerberos</li>
+<li>Host FQDN： hadoop.hadoop.com</li>
+<li>Service Name： spark</li>
+<li>Realm：  Leave blank,</li>
+<li>Host(s)： JDBCServer (main) service ip,</li>
+<li>Port： SparkThriftServer client port number 23040.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image21.png" /></p>
+</li>
+<li>
+<p>After setting, click <strong>Advanced Options</strong>, in the pop-up <strong>Advanced Options</strong> page, check <strong>Use Native Query</strong> and <strong>Get Tables With Query</strong>, then click <strong>OK</strong></p>
+<p><img alt="" src="../assets/QlikView/image22.png" /></p>
+</li>
+<li>
+<p>Go back to the <strong>Simba Spark ODBC Driver DSN Setup</strong>, click <strong>Test</strong> to connect successfully, click <strong>OK</strong> to exit the page, otherwise a failure dialog will pop up.</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image23.png" /></p>
+<ul>
+<li>Go back to the <strong>Simba Spark ODBC Driver DSN Setup</strong> page, click <strong>OK</strong>, go back to the <strong>ODBC Data Source Manager</strong> page, click <strong>OK</strong> to complete and exit the configuration.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image24.png" /></p>
+<h3 id="connect-to-a-spark-data-source">Connect to a Spark data source<a class="headerlink" href="#connect-to-a-spark-data-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open QlikView 12, <strong>New</strong> a document</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image9.png" /></p>
+<ul>
+<li>Close the pop-up wizard</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image10.png" /></p>
+<ul>
+<li>Open the <strong>Edit Script</strong> button in the toolbar</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image11.png" /></p>
+<ul>
+<li>In the pop-up <strong>Edit Script</strong> page, click the <strong>Data</strong> tab, find <strong>OCBC</strong> in the drop-down bar of <strong>Database</strong>, click <strong>Connect</strong>;</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image12.png" /></p>
+<ul>
+<li>On the <strong>Connect to Data Sources</strong> page, select the data source spark_odbc configured above, then click <strong>OK</strong>;</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image25.png" /></p>
+<ul>
+<li>On the <strong>Data</strong> tab of the <strong>Edit Script</strong> page, click the <strong>Select</strong> button</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image26.png" /></p>
+<ul>
+<li>In the <strong>Create Select statement</strong> page, select the <strong>Database table</strong> you want to import, select * in the ** field**, import the full table, import the corresponding table into the corresponding table, and click * <em>OK*</em> (select * in the example);</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image27.png" /></p>
+<ul>
+<li>Go back to the <strong>Edit Script</strong> page and click <strong>OK</strong></li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image28.png" /></p>
+<ul>
+<li>Go back to the QlikView worksheet page and click <strong>Reload</strong> to import the database table into QlikView.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image29.png" /></p>
+<ul>
+<li>The data can then be processed by cartographic tabulation analysis. For specific steps, please refer to the QlikView official website.</li>
+</ul>
+<p><img alt="" src="../assets/QlikView/image18.png" /></p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cannot find C:\ProgramData\MIT\Kerberos5 folder</li>
+</ul>
+<p>C:\ProgramData is generally a hidden folder, setting the folder to be hidden or using the search function to solve the problem.</p>
+<ul>
+<li>Connection succeeded without database permissions</li>
+</ul>
+<p>The user used for the connection needs to have the permissions of the database, otherwise the ODBC connection will succeed but the database content cannot be read.</p>
+<ul>
+<li>ODBC connection failed</li>
+</ul>
+<p>The common situation is that the input data of <strong>Host(s)</strong>, <strong>Port</strong>, <strong>Host FQDN</strong> is incorrect. Please enter according to the actual situation.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Tableau/" title="Tableau" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tableau
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Data_Analysis/RapidMiner/" title="RapidMiner" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RapidMiner
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

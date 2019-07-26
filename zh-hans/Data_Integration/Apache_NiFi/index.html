@@ -1,0 +1,2718 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>对接Apache NiFi - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apache-nififusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              对接Apache NiFi
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="对接Tableau" class="md-nav__link">
+      对接Tableau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="对接QlikView" class="md-nav__link">
+      对接QlikView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="对接Oracle BIEE" class="md-nav__link">
+      对接Oracle BIEE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="对接Alteryx" class="md-nav__link">
+      对接Alteryx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="对接RapidMiner" class="md-nav__link">
+      对接RapidMiner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="对接Splunk" class="md-nav__link">
+      对接Splunk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="对接IBM InfoSphere DataStage" class="md-nav__link">
+      对接IBM InfoSphere DataStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="对接Informatica PowerCenter" class="md-nav__link">
+      对接Informatica PowerCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="对接Informatica PWX CDC" class="md-nav__link">
+      对接Informatica PWX CDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="对接Oracle GoldenGate" class="md-nav__link">
+      对接Oracle GoldenGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="对接Talend" class="md-nav__link">
+      对接Talend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H2O.ai/" title="对接H2O.ai" class="md-nav__link">
+      对接H2O.ai
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="对接Kettle" class="md-nav__link">
+      对接Kettle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        对接Apache NiFi
+      </label>
+    
+    <a href="./" title="对接Apache NiFi" class="md-nav__link md-nav__link--active">
+      对接Apache NiFi
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-nifi" title="安装Apache NiFi" class="md-nav__link">
+    安装Apache NiFi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifikerberos" title="NiFi配置Kerberos认证" class="md-nav__link">
+    NiFi配置Kerberos认证
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihdfs" title="NiFi连接HDFS" class="md-nav__link">
+    NiFi连接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthdfs" title="PutHDFS 操作步骤" class="md-nav__link">
+    PutHDFS 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethdfs" title="GetHDFS 操作步骤" class="md-nav__link">
+    GetHDFS 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listhdfs-fetchhdfs" title="ListHDFS &amp; FetchHDFS 操作步骤" class="md-nav__link">
+    ListHDFS &amp; FetchHDFS 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihive" title="NiFi连接Hive" class="md-nav__link">
+    NiFi连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hiveconnectionpool" title="HiveConnectionPool 配置操作步骤" class="md-nav__link">
+    HiveConnectionPool 配置操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecthiveql-hive" title="SelectHiveQL 读取Hive表 操作步骤" class="md-nav__link">
+    SelectHiveQL 读取Hive表 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthiveql" title="PutHiveQL 整表导入 操作步骤" class="md-nav__link">
+    PutHiveQL 整表导入 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthiveql_1" title="PutHiveQL 单行导入 操作步骤" class="md-nav__link">
+    PutHiveQL 单行导入 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihbase" title="NiFi连接HBase" class="md-nav__link">
+    NiFi连接HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_1_1_2_clientservice" title="HBase_1_1_2_ClientService 配置操作步骤" class="md-nav__link">
+    HBase_1_1_2_ClientService 配置操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthbasejson-hbase" title="PutHBaseJSON 向HBase导入表" class="md-nav__link">
+    PutHBaseJSON 向HBase导入表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethbase" title="GetHbase 操作步骤" class="md-nav__link">
+    GetHbase 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifispark" title="NiFi连接Spark" class="md-nav__link">
+    NiFi连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livysessioncontroller" title="配置LivySessionController操作步骤" class="md-nav__link">
+    配置LivySessionController操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="运行Spark样例操作步骤" class="md-nav__link">
+    运行Spark样例操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyspark" title="运行PySpark样例操作步骤" class="md-nav__link">
+    运行PySpark样例操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparkr" title="运行SparkR样例操作步骤" class="md-nav__link">
+    运行SparkR样例操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifikafka" title="NiFi连接Kafka" class="md-nav__link">
+    NiFi连接Kafka
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethttp-putkafka" title="GetHTTP &amp; PutKafka 操作步骤" class="md-nav__link">
+    GetHTTP &amp; PutKafka 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumekafka_0_11" title="ConsumeKafka_0_11 操作步骤" class="md-nav__link">
+    ConsumeKafka_0_11 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="对接Denodo" class="md-nav__link">
+      对接Denodo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TIBCO_BusinessWorks/" title="对接TIBCO BW" class="md-nav__link">
+      对接TIBCO BW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Knime/" title="对接Knime" class="md-nav__link">
+      对接Knime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kafka_Manager/" title="对接Kafka-manager" class="md-nav__link">
+      对接Kafka-manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="对接RStudio" class="md-nav__link">
+      对接RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      对接Apache Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        对接Apache Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="Zeppelin0.7.2 C60" class="md-nav__link">
+      Zeppelin0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="Zeppelin0.7.3 C70" class="md-nav__link">
+      Zeppelin0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="Zeppelin0.8.0 C80" class="md-nav__link">
+      Zeppelin0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="对接Jypyter Notebook" class="md-nav__link">
+      对接Jypyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver/" title="对接DBeaver" class="md-nav__link">
+      对接DBeaver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer/" title="对接DbVisualizer" class="md-nav__link">
+      对接DbVisualizer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel/" title="对接Squirrel" class="md-nav__link">
+      对接Squirrel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      SQL引擎
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        SQL引擎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      对接Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        对接Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="Kylin 1.6.0 C60" class="md-nav__link">
+      Kylin 1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="Kylin 2.1.0 C70" class="md-nav__link">
+      Kylin 2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="Kylin 2.3.1 C80" class="md-nav__link">
+      Kylin 2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="Kylin 2.6.1 6.5" class="md-nav__link">
+      Kylin 2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="对接Kyligence" class="md-nav__link">
+      对接Kyligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      对接Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        对接Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="Presto0.146 C60" class="md-nav__link">
+      Presto0.146 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="Presto0.184 C70" class="md-nav__link">
+      Presto0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="Presto0.210 C80" class="md-nav__link">
+      Presto0.210 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/#" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/FUSE/" title="对接FUSE" class="md-nav__link">
+      对接FUSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="对接Gis-Tools-For-Hadoop" class="md-nav__link">
+      对接Gis-Tools-For-Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy/" title="对接Apache Livy" class="md-nav__link">
+      对接Apache Livy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Logstash" class="md-nav__link">
+      对接Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接Kibana" class="md-nav__link">
+      对接Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接elasticsearch-head" class="md-nav__link">
+      对接elasticsearch-head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="对接beats" class="md-nav__link">
+      对接beats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-nifi" title="安装Apache NiFi" class="md-nav__link">
+    安装Apache NiFi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifikerberos" title="NiFi配置Kerberos认证" class="md-nav__link">
+    NiFi配置Kerberos认证
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihdfs" title="NiFi连接HDFS" class="md-nav__link">
+    NiFi连接HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthdfs" title="PutHDFS 操作步骤" class="md-nav__link">
+    PutHDFS 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethdfs" title="GetHDFS 操作步骤" class="md-nav__link">
+    GetHDFS 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listhdfs-fetchhdfs" title="ListHDFS &amp; FetchHDFS 操作步骤" class="md-nav__link">
+    ListHDFS &amp; FetchHDFS 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihive" title="NiFi连接Hive" class="md-nav__link">
+    NiFi连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hiveconnectionpool" title="HiveConnectionPool 配置操作步骤" class="md-nav__link">
+    HiveConnectionPool 配置操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecthiveql-hive" title="SelectHiveQL 读取Hive表 操作步骤" class="md-nav__link">
+    SelectHiveQL 读取Hive表 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthiveql" title="PutHiveQL 整表导入 操作步骤" class="md-nav__link">
+    PutHiveQL 整表导入 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthiveql_1" title="PutHiveQL 单行导入 操作步骤" class="md-nav__link">
+    PutHiveQL 单行导入 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifihbase" title="NiFi连接HBase" class="md-nav__link">
+    NiFi连接HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_1_1_2_clientservice" title="HBase_1_1_2_ClientService 配置操作步骤" class="md-nav__link">
+    HBase_1_1_2_ClientService 配置操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puthbasejson-hbase" title="PutHBaseJSON 向HBase导入表" class="md-nav__link">
+    PutHBaseJSON 向HBase导入表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethbase" title="GetHbase 操作步骤" class="md-nav__link">
+    GetHbase 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifispark" title="NiFi连接Spark" class="md-nav__link">
+    NiFi连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livysessioncontroller" title="配置LivySessionController操作步骤" class="md-nav__link">
+    配置LivySessionController操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spark" title="运行Spark样例操作步骤" class="md-nav__link">
+    运行Spark样例操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyspark" title="运行PySpark样例操作步骤" class="md-nav__link">
+    运行PySpark样例操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparkr" title="运行SparkR样例操作步骤" class="md-nav__link">
+    运行SparkR样例操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifikafka" title="NiFi连接Kafka" class="md-nav__link">
+    NiFi连接Kafka
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethttp-putkafka" title="GetHTTP &amp; PutKafka 操作步骤" class="md-nav__link">
+    GetHTTP &amp; PutKafka 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumekafka_0_11" title="ConsumeKafka_0_11 操作步骤" class="md-nav__link">
+    ConsumeKafka_0_11 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Integration/Apache_NiFi.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="apache-nififusioninsight">Apache NiFi对接FusionInsight<a class="headerlink" href="#apache-nififusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Apache NiFi 1.7.1 &harr; FusionInsight HD V100R002C80SPC200</p>
+</blockquote>
+<h2 id="apache-nifi">安装Apache NiFi<a class="headerlink" href="#apache-nifi" title="Permanent link">&para;</a></h2>
+<h3 id="_2">操作场景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>安装Apache NiFi 1.7.1</p>
+<h3 id="_3">前提条件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装。</li>
+</ul>
+<h3 id="_4">操作步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>执行source命令到客户端，获取java配置信息
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+echo $JAVA_HOME
+</pre></div>
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912165818271.png" /></p>
+</li>
+<li>
+<p>安装NiFi，在网址<code>https://nifi.apache.org/download.html</code>下载安装包，使用WinSCP导入主机并用命令<code>unzip nifi-1.7.1-bin.zip</code>解压安装生成nifi-1.7.1目录，安装目录为<code>/usr/nifi/nifi-1.7.1</code></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912160728825.png" /></p>
+<ul>
+<li>
+<p>执行<code>vi /usr/nifi/nifi-1.7.1/conf/nifi.properties</code>配置NiFi服务器ip和端口如下：
+    <div class="codehilite"><pre><span></span>nifi.web.http.host=172.16.52.190
+nifi.web.http.port=8085
+</pre></div>
+    <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912163428506.png" /></p>
+</li>
+<li>
+<p>启动和停止NiFi
+    <div class="codehilite"><pre><span></span>cd /usr/nifi/nifi-1.7.1
+bin/nifi.sh start
+bin/nifi.sh stop
+</pre></div>
+    <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091216532553.png" /></p>
+</li>
+<li>
+<p>运行NiFi</p>
+<p><code>bin/nifi.sh start</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912170131362.png" /></p>
+</li>
+</ul>
+<h2 id="nifikerberos">NiFi配置Kerberos认证<a class="headerlink" href="#nifikerberos" title="Permanent link">&para;</a></h2>
+<h3 id="_5">操作场景<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>NiFi配置并保存Kerberos认证信息，供以后使用</p>
+<h3 id="_6">前提条件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成Nifi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装并创建测试用户developuser (参考产品文档-&gt;应用开发指南-&gt;安全模式-&gt;安全认证)</p>
+</li>
+</ul>
+<h3 id="_7">操作步骤<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>在FusionInsight HD Manager上下载认证用户的配置文件<code>user.keytab</code>，<code>krb5.conf</code>，并一起存入路径<code>/opt/developuser</code></p>
+</li>
+<li>
+<p>执行命令<code>vi /usr/nifi/nifi-1.7.1/conf/nifi.properties</code>配置Kerberos认证
+    <div class="codehilite"><pre><span></span>具体配置：
+nifi.kerberos.krb5.file=/opt/developuser/krb5.conf
+nifi.kerberos.service.principal=developuser
+nifi.kerberos.service.keytab.location=/opt/developuser/user.keytab
+</pre></div></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912171916975.png" /></p>
+</li>
+<li>
+<p>登录NiFi网页界面，右键选择**Configure**
+    <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174115953.png" /></p>
+<p>点击**加号**按钮添加服务
+<img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174226784.png" /></p>
+<p>选择<code>KeytabCredentialsService</code>，点击**ADD**添加</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091217444348.png" /></p>
+<p>点击**齿轮**图标进行配置</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174747644.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091217482271.png" /></p>
+<p>点击**闪电**图标生效并保存KeytabCredentialsService</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174904147.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912175037790.png" /></p>
+</li>
+<li>
+<p>完成
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912175122322.png" /></p>
+</li>
+</ul>
+<h2 id="nifihdfs">NiFi连接HDFS<a class="headerlink" href="#nifihdfs" title="Permanent link">&para;</a></h2>
+<h3 id="_8">操作场景<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>NiFi中配置HDFS相关处理器，对接HDFS</p>
+<h3 id="_9">前提条件<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成NiFi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含HDFS组件</p>
+</li>
+<li>
+<p>已完成 NiFi Kerberos认证配置</p>
+</li>
+</ul>
+<h3 id="puthdfs">PutHDFS 操作步骤<a class="headerlink" href="#puthdfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>将FusionInsight HD客户端中关于HDFS的配置文件<code>hdfs-site.xml</code>，<code>core-site.xml</code>导入路径<code>/usr/nifi/nifi-1.7.1/conf</code></p>
+</li>
+<li>
+<p>修改<code>hdfs-site.xml</code>内容，删除如下配置项
+    <div class="codehilite"><pre><span></span>&lt;property&gt;
+&lt;name&gt;dfs.client.failover.proxy.provider.hacluster&lt;/name&gt;
+&lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.BlackListingFailoverProxyProvider&lt;/value&gt;
+&lt;/property&gt;
+</pre></div></p>
+</li>
+<li>
+<p>修改<code>core-site.xml</code>内容，修改如下配置项中hacluster改为节点ip加端口号
+    <div class="codehilite"><pre><span></span>&lt;property&gt;
+&lt;name&gt;fs.defaultFS&lt;/name&gt;
+&lt;value&gt;hdfs://172.21.3.102:25000&lt;/value&gt;
+&lt;/property&gt;
+</pre></div></p>
+</li>
+<li>
+<p>整个过程的流程图所示：
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912172755668.png" /></p>
+</li>
+<li>
+<p>处理器GetFile的配置如下：
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912172954559.png" />
+  <div class="codehilite"><pre><span></span>具体配置：
+1: /home/dataset
+</pre></div></p>
+</li>
+<li>处理器PutHDFS配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912181011524.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912175441819.png" />
+  <div class="codehilite"><pre><span></span>具体配置：
+1: /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+2: 选择NiFi配置Kerberos认证这一节中创建的 KeytabCredentialsService
+3: /tmp/nifitest
+</pre></div></p>
+<ul>
+<li>两个处理器的连接配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912181110245.png" /></p>
+<ul>
+<li>测试前将测试文件<code>nifiHDFS.csv</code>放入路径<code>/home/dataset</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091218142008.png" /></p>
+<p>文件内容如下：
+  <div class="codehilite"><pre><span></span>1;EcitQU
+2;Hyy6RC
+3;zju1jR
+4;R9fex9
+5;EU2mVq
+</pre></div>
+  - 测试后</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912181628255.png" /></p>
+<p>登录集群HDFS文件系统查看测试结果</p>
+<p><code>hdfs dfs -cat /tmp/nifitest/nifiHDFS.csv</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912181828621.png" /></p>
+<h3 id="gethdfs">GetHDFS 操作步骤<a class="headerlink" href="#gethdfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913092152648.png" /></p>
+<ul>
+<li>处理器GetHDFS配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913093359126.png" /></p>
+<p><div class="codehilite"><pre><span></span>具体配置：
+1: /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+2: 选择NiFi配置Kerberos认证这一节中创建的 KeytabCredentialsService
+3: /tmp/nifitest/HDFS
+</pre></div>
+  - 处理器PutFile配置如下</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913092500227.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置：
+1: /home/dataset/HDFS
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913092557712.png" /></p>
+<ul>
+<li>测试前将测试文件<code>nifiHDFS.csv</code>放到HDFS文件系统的<code>/tmp/nifitest/HDFS</code>路径下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913093946472.png" /></p>
+<ul>
+<li>测试后</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913094130431.png" /></p>
+<p>登录安装 FusionInsight HD客户端主机路径<code>/home/dataset/HDFS</code>查看结果</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913094327358.png" /></p>
+<h3 id="listhdfs-fetchhdfs">ListHDFS &amp; FetchHDFS 操作步骤<a class="headerlink" href="#listhdfs-fetchhdfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>整个过程的流程如图所示：
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913101752826.png" /></p>
+</li>
+<li>
+<p>处理器ListHDFS配置如下：
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913102631618.png" />
+  <div class="codehilite"><pre><span></span>  具体配置为：
+  1. /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+  2. KeytabCredentialsService
+  3. /tmp/nifitest
+</pre></div></p>
+</li>
+<li>
+<p>处理器RouteOnAttribute具体配置如下：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091310313577.png" /></p>
+<p>注意：需要点击**加号**图标增加一条配置，<strong>Property</strong> 配置为<code>requiredfilenames</code>，<strong>Value</strong> 配置为<code>${filename:matches('sanguo.*')}</code></p>
+<p><div class="codehilite"><pre><span></span>  具体配置为：
+  1. Route to Property name
+  2. requiredfilenames
+  3. ${filename:matches(&#39;sanguo.*&#39;)}
+</pre></div>
+  - 处理器RouteOnAttribute和上、下处理器FetchHDFS的连接配置分别对应为<code>requiredfilenames</code>和<code>unmatched</code>，如图：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913103920309.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913103937690.png" /></p>
+<ul>
+<li>两个处理器FetchHDFS的配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913104044399.png" />
+  <div class="codehilite"><pre><span></span>  具体配置为：
+  1. /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+  2. KeytabCredentialsService
+</pre></div></p>
+<ul>
+<li>上、下处理器PutFile配置分别如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913104357511.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913104436582.png" /></p>
+<ul>
+<li>测试前，执行命令<code>hdfs dfs -ls /tmp/nifitest</code>登录集群HDFS文件系统<code>/tmp/nifitest</code>查看文件</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913105052385.png" /></p>
+<ul>
+<li>测试后</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913105440238.png" /></p>
+<p>登录FusionInsight HD客户端主机路径<code>/home/dataset/HDFS/matchedFiles</code>和<code>/home/dataset/HDFS/unmatchedFiles</code>分别查看结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913105716184.png" /></p>
+<h2 id="nifihive">NiFi连接Hive<a class="headerlink" href="#nifihive" title="Permanent link">&para;</a></h2>
+<h3 id="_10">操作场景<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>NiFi中配置JDBC解析器，对的FI HD Hive接口</p>
+<h3 id="_11">前提条件<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成NiFi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含Hive组件</p>
+</li>
+<li>
+<p>已完成 NiFi Kerberos认证配置</p>
+</li>
+</ul>
+<h3 id="hiveconnectionpool">HiveConnectionPool 配置操作步骤<a class="headerlink" href="#hiveconnectionpool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>登录NiFi网页界面，右键选择**Configure**
+<img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174115953.png" /></p>
+</li>
+<li>
+<p>点击**加号**按钮添加服务
+    <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174226784.png" /></p>
+</li>
+<li>
+<p>选择<code>HiveConnectionPool</code>，点击**ADD**添加</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111208294.png" /></p>
+<ul>
+<li>点击**齿轮**图标进行配置</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111250616.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111431623.png" /></p>
+<p><div class="codehilite"><pre><span></span>具体配置为
+1: jdbc:hive2://172.21.3.103:24002,172.21.3.101:24002,172.21.3.102:24002/;serviceDiscoveryMode=zooKeeper;principal=hive/hadoop.hadoop.com@HADOOP.COM
+2: KeytabCredentialsService
+</pre></div>
+- 点击**闪电**图标点击闪电图标生效并保存<code>HiveConnectionPool</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111645264.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111723364.png" /></p>
+<ul>
+<li>
+<p>完成
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913111757929.png" /></p>
+</li>
+<li>
+<p>在路径<code>/usr/nifi/nifi-1.7.1/conf</code>下创建<code>jaas.conf</code>文件内容如下：
+  <div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/developuser/user.keytab&quot;
+principal=&quot;developuser&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div></p>
+</li>
+<li>
+<p>执行命令<code>vi /usr/nifi/nifi-1.7.1/conf/bootstrap.conf</code>配置<code>bootstrap.conf</code>文件如下:
+<img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913114735353.png" />
+<div class="codehilite"><pre><span></span>java.arg.17=-Djava.security.auth.login.config=/usr/nifi/nifi-1.7.1/conf/jaas.conf
+java.arg.18=-Dsun.security.krb5.debug=true
+</pre></div></p>
+</li>
+<li>
+<p>执行命令<code>vi /usr/nifi/nifi-1.7.1/conf/nifi.properties</code>配置<code>nifi.properties</code>文件如下：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913115135676.png" /></p>
+<p><div class="codehilite"><pre><span></span>nifi.zookeeper.auth.type=sasl
+nifi.zookeeper.kerberos.removeHostFromPrincipal=true
+nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
+</pre></div>
+- 执行命令<code>cd /usr/nifi/nifi-1.7.1/work/nar/extensions/nifi-hive-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code>到NiFi Hive类库中，将原有的<code>zookeeper-3.4.6.jar</code>替换为FusionInsight HD客户端中的<code>zookeeper-3.5.1.jar</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091312062027.png" /></p>
+<h3 id="selecthiveql-hive">SelectHiveQL 读取Hive表 操作步骤<a class="headerlink" href="#selecthiveql-hive" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>整个过程的流程如图所示：
+ <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091312072896.png" /></p>
+</li>
+<li>
+<p>处理器SelectHiveQL配置如下：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913120825568.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913121003311.png" /></p>
+<div class="codehilite"><pre><span></span> 具体配置如下：
+ 1: HiveConnectionPool
+ 2: select * from default.t2
+ 3. CSV
+</pre></div>
+
+<ul>
+<li>处理器PutFile配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913121155239.png" /></p>
+<ul>
+<li>运行前登录集群查看hive表t2:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091312133394.png" /></p>
+<ul>
+<li>运行后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913121452543.png" /></p>
+<p>登录路径<code>/home/dataset/HIVE</code>查看结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913121747276.png" /></p>
+<h3 id="puthiveql">PutHiveQL 整表导入 操作步骤<a class="headerlink" href="#puthiveql" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913144112926.png" /></p>
+<ul>
+<li>处理器GetFile的配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913145536626.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1： /home/dataset/
+  2: iris.txt
+</pre></div>
+
+<p>数据文件<code>iris.txt</code>的内容如下:
+  <div class="codehilite"><pre><span></span>1,5.1,3.5,1.4,0.2,setosa
+2,4.9,3,1.4,0.2,setosa
+3,4.7,3.2,1.3,0.2,setosa
+4,4.6,3.1,1.5,0.2,setosa
+5,5,3.6,1.4,0.2,setosa
+6,5.4,3.9,1.7,0.4,setosa
+7,4.6,3.4,1.4,0.3,setosa
+8,5,3.4,1.5,0.2,setosa
+9,4.4,2.9,1.4,0.2,setosa
+10,4.9,3.1,1.5,0.1,setosa
+</pre></div></p>
+<ul>
+<li>处理器PutHDFS的配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913145851111.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1： /usr/nifi/nifi-1.7.1/conf/hdfs-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+  2： KeytabCredentialsService
+  3: /tmp/nifitest/loadhive
+</pre></div>
+
+<ul>
+<li>处理器ReplaceText配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913150058238.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1: CREATE TABLE IF NOT EXISTS iris_createdBy_NiFi ( ID string, sepallength FLOAT, sepalwidth FLOAT, petallength FLOAT, petalwidth FLOAT, species string ) ROW FORMAT DELIMITED FIELDS TERMINATED BY &#39;,&#39; STORED AS TEXTFILE;LOAD DATA INPATH &quot;hdfs:///tmp/nifitest/loadhive/iris.txt&quot; into table iris_createdBy_NiFi;
+</pre></div>
+
+<ul>
+<li>处理器PutHiveQL配置如下</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913150303396.png" /></p>
+<ul>
+<li>运行前将数据文件<code>iris.txt</code>导入路径<code>/home/dataset/</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913150605645.png" /></p>
+<ul>
+<li>运行后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913144501255.png" /></p>
+<p>登录HIVE查看测试结果:</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913145436548.png" /></p>
+<h3 id="puthiveql_1">PutHiveQL 单行导入 操作步骤<a class="headerlink" href="#puthiveql_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913152255705.png" /></p>
+<ul>
+<li>处理器GetFile的配置如下:
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913154003755.png" /></li>
+</ul>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1： /home/dataset/
+  2： iris_add.txt
+</pre></div>
+
+<p>数据文件<code>iris_add.txt</code>的内容如下:
+  <div class="codehilite"><pre><span></span>&quot;11&quot;,5.8,2.8,5.1,2.4,&quot;virginica&quot;
+&quot;12&quot;,6.4,3.2,5.3,2.3,&quot;virginica&quot;
+&quot;13&quot;,6.5,3,5.5,1.8,&quot;virginica&quot;
+&quot;14&quot;,5.7,3,4.2,1.2,&quot;versicolor&quot;
+&quot;15&quot;,5.7,2.9,4.2,1.3,&quot;versicolor&quot;
+</pre></div></p>
+<ul>
+<li>处理器SplitText配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913154219909.png" /></p>
+<ul>
+<li>
+<p>处理器ExtractText配置保持默认配置</p>
+</li>
+<li>
+<p>处理器ReplaceText配置如下:</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913154421612.png" /></p>
+<ul>
+<li>处理器PutHiveQL配置如下:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913154500461.png" /></p>
+<ul>
+<li>运行前将数据文件<code>iris_add.txt</code>导入路径<code>/home/dataset/</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913152411341.png" /></p>
+<ul>
+<li>运行后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091315371178.png" /></p>
+<p>登录HIVE查看测试结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913153858212.png" /></p>
+<h2 id="nifihbase">NiFi连接HBase<a class="headerlink" href="#nifihbase" title="Permanent link">&para;</a></h2>
+<h3 id="_12">操作场景<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>NiFi中配置HBase解析器，对的FI HD HBase接口</p>
+<h3 id="_13">前提条件<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成NiFi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含HBase组件</p>
+</li>
+<li>
+<p>已完成 NiFi Kerberos认证配置</p>
+</li>
+</ul>
+<h3 id="hbase_1_1_2_clientservice">HBase_1_1_2_ClientService 配置操作步骤<a class="headerlink" href="#hbase_1_1_2_clientservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>将FusionInsight HD客户端中关于HBase的配置文件<code>hbase-site.xml</code>导入路径<code>/usr/nifi/nifi-1.7.1/conf</code></p>
+</li>
+<li>
+<p>更换路径<code>/usr/nifi/nifi-1.7.1/work/nar/extensions/nifi-hbase_1_1_2-client-service-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code>下面的<code>zookeeper-3.4.6.jar</code>为FusionInsight HD客户端自带的<code>zookeeper-3.5.1.jar</code></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913171320336.png" /></p>
+<ul>
+<li>
+<p>登录NiFi网页界面，右键选择**Configure**
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174115953.png" /></p>
+</li>
+<li>
+<p>点击**加号**按钮添加服务</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913160637627.png" /></p>
+<ul>
+<li>选择<code>HBase_1_1_2_ClientService</code>，点击**ADD**添加</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913160755948.png" /></p>
+<ul>
+<li>点击**齿轮**图标进行配置</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913160901190.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913161005377.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1： /usr/nifi/nifi-1.7.1/conf/hbase-site.xml,/usr/nifi/nifi-1.7.1/conf/core-site.xml
+  2： KeytabCredentialsService
+</pre></div>
+
+<ul>
+<li>点击**闪电**图标点击闪电图标生效并保存<code>HBase_1_1_2_ClientService</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913161345190.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913161410495.png" /></p>
+<ul>
+<li>完成</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913161431790.png" /></p>
+<h3 id="puthbasejson-hbase">PutHBaseJSON 向HBase导入表<a class="headerlink" href="#puthbasejson-hbase" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913170925283.png" /></p>
+<ul>
+<li>处理器GetFile的配置如下:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913171543197.png" /></p>
+<p>数据文件<code>hbase_test.csv</code>的内容如下:
+  <div class="codehilite"><pre><span></span>1,5.1,3.5,setosa
+2,6.1,3.6,versicolor
+3,7.1,3.7,virginica
+</pre></div></p>
+<ul>
+<li>处理器InverAvroSchema配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913171824677.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下：
+  1: flowfile-attribute
+  2: csv
+  3: false
+  4: hbase_test_data
+</pre></div>
+
+<ul>
+<li>处理器ConvertCSVToAvro配置如下:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913172037547.png" /></p>
+<ul>
+<li>处理器ConvertAvroToJSON配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913172201962.png" /></p>
+<ul>
+<li>处理器SplitJson配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913172242678.png" /></p>
+<ul>
+<li>处理器PutHBaseJSON配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913172428386.png" /></p>
+<div class="codehilite"><pre><span></span>  具体配置如下:
+  1: HBase_1_1_2_ClientService
+  2: hbase_test
+  3: ${UUID()}
+  4: data
+</pre></div>
+
+<ul>
+<li>测试前需要将数据文件<code>hbase_test.csv</code>导入路径<code>/home/dataset/HBASE</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913173017728.png" /></p>
+<p>并且需要在集群里面建一个hbase表，执行命令</p>
+<div class="codehilite"><pre><span></span>hbase shell
+create &#39;HBase_test&#39;,&#39;data&#39;
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913173220335.png" /></p>
+<ul>
+<li>运行后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913173552752.png" /></p>
+<p>登录集群查看结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913173626203.png" /></p>
+<h3 id="gethbase">GetHbase 操作步骤<a class="headerlink" href="#gethbase" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913174304746.png" /></p>
+<ul>
+<li>驱动器GetHBase的配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913190606193.png" /></p>
+<ul>
+<li>驱动器PutFile的配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913191235986.png" /></p>
+<ul>
+<li>测试后</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913184243562.png" /></p>
+<p>登录到路径<code>/home/dataset/GetHBase_test</code>查看结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180913191317245.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091319144054.png" /></p>
+<h2 id="nifispark">NiFi连接Spark<a class="headerlink" href="#nifispark" title="Permanent link">&para;</a></h2>
+<h3 id="_14">操作场景<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>NiFi中配置Livy解析器，对的FI HD HBase接口</p>
+<h3 id="_15">前提条件<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成NiFi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含Spark2x组件</p>
+</li>
+<li>
+<p>已完成 NiFi Kerberos认证配置</p>
+</li>
+<li>
+<p>已完成Apache Livy 0.5.0的安装 （Livy可安装在FI HD客户端主机，也可以安装在其他主机但是需要保证安装Livy主机能够和FI HD客户端主机以及集群网络互通）</p>
+</li>
+</ul>
+<blockquote>
+<p>可参考《Apache Livy对接FusionInsight》对接文档完成Apache Livy的安装</p>
+</blockquote>
+<h3 id="livysessioncontroller">配置LivySessionController操作步骤<a class="headerlink" href="#livysessioncontroller" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>登录NiFi网页界面，右键选择**Configure**
+<img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180912174115953.png" /></p>
+</li>
+<li>
+<p>点击**加号**按钮添加服务</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914104314385.png" /></p>
+<ul>
+<li>选择<code>LivySessionController</code>，点击**ADD**添加</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914104402554.png" /></p>
+<ul>
+<li>点击**齿轮**图标进行配置</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914104516173.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914104844258.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: 172.21.3.43 (已安装Apache Livy的主机ip)
+2: 8998 (Livy默认端口，可更改)
+3: spark
+4：KeytabCredentialsService
+</pre></div>
+
+<ul>
+<li>继续点击**加号**按钮添加服务</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914105344782.png" /></p>
+<ul>
+<li>
+<p>选择<code>LivySessionController</code>，点击**ADD**添加</p>
+</li>
+<li>
+<p>点击**齿轮**图标进行配置</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914105516219.png" /></p>
+<p>更改Controller名字为 LivySessionController_PySpark</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914105554293.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914105725237.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: 172.21.3.43 (已安装Apache Livy的主机ip)
+2: 8998 (Livy默认端口，可更改)
+3: pysaprk
+4：KeytabCredentialsService
+</pre></div>
+
+<ul>
+<li>
+<p>继续点击**加号**按钮添加服务</p>
+</li>
+<li>
+<p>选择<code>LivySessionController</code>，点击**ADD**添加</p>
+</li>
+<li>
+<p>点击**齿轮**图标进行配置</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914110218855.png" /></p>
+<p>更改Controller名字为 LivySessionController_SparkR</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914110258706.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091411040356.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: 172.21.3.43 (已安装Apache Livy的主机ip)
+2: 8998 (Livy默认端口，可更改)
+3: sparkr
+4：KeytabCredentialsService
+</pre></div>
+
+<ul>
+<li>点击**闪电**图标选择<code>Service and referencing components</code>生效并保存<code>LivySessionController</code>,<code>LivySessionController_PySpark</code>,<code>LivySessionController_SparkR</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914110556918.png" /></p>
+<ul>
+<li>完成</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914110811125.png" /></p>
+<h3 id="spark">运行Spark样例操作步骤<a class="headerlink" href="#spark" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091411101510.png" /></p>
+<ul>
+<li>处理器GetFile配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914111127853.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: /home/dataset/sparkTest
+2: code1.txt
+</pre></div>
+
+<p>代码内容文件<code>code1.txt</code>的内容如下：
+  <div class="codehilite"><pre><span></span>1+2
+</pre></div></p>
+<ul>
+<li>处理器ExtractText配置如下：</li>
+</ul>
+<p>需要点击**加号**按钮，Property项命名为<code>code1</code>，Value项赋值为<code>$</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914111426277.png" /></p>
+<ul>
+<li>处理器ExecuteSparkInteractive配置为：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914112305396.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: LivySessionController
+2: ${code1}
+</pre></div>
+
+<ul>
+<li>测试前将代码文件<code>code1.txt</code>上传至安装nifi主机的路径<code>/home/dataset/sparkTest</code>下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914112519376.png" /></p>
+<p>在已安装Livy的主机上启动Livy：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914112716361.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914112911901.png" /></p>
+<ul>
+<li>测试后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914113055754.png" /></p>
+<p>登录Livy sever查看测试结果</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091411321312.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914113341172.png" /></p>
+<h3 id="pyspark">运行PySpark样例操作步骤<a class="headerlink" href="#pyspark" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091411101510.png" /></p>
+<ul>
+<li>处理器GetFile配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914113725733.png" />
+  <div class="codehilite"><pre><span></span>具体配置如下：
+1: /home/dataset/sparkTest
+2: code2.txt
+</pre></div></p>
+<p>代码内容文件<code>code2.txt</code>的内容如下：
+  <div class="codehilite"><pre><span></span>import random
+NUM_SAMPLES = 100000
+def sample(p):
+  x, y = random.random(), random.random()
+  return 1 if x*x + y*y &lt; 1 else 0
+
+count = sc.parallelize(xrange(0, NUM_SAMPLES)).map(sample).reduce(lambda a, b: a + b)
+print &quot;Pi is roughly %f&quot; % (4.0 * count / NUM_SAMPLES)
+</pre></div></p>
+<ul>
+<li>处理器ExtractText配置如下：</li>
+</ul>
+<p>需要点击**加号**按钮，Property项命名为<code>code2</code>，Value项赋值为<code>$</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114234899.png" /></p>
+<ul>
+<li>处理器ExecuteSparkInteractive配置为：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114342416.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: LivySessionController_PySpark
+2: ${code2}
+</pre></div>
+
+<ul>
+<li>测试前将代码文件<code>code2.txt</code>上传至安装nifi主机的路径<code>/home/dataset/sparkTest</code>下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114447497.png" /></p>
+<p>在已安装Livy的主机上启动Livy</p>
+<ul>
+<li>测试后</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114625750.png" /></p>
+<p>登录Livy sever查看测试结果</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114724621.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914114751933.png" /></p>
+<h3 id="sparkr">运行SparkR样例操作步骤<a class="headerlink" href="#sparkr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914141610219.png" /></p>
+<p>注意：在测试过程中如果与Spark，PySpark样例不完全一样</p>
+<ul>
+<li>
+<p>处理器GetFile配置如下：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914115049131.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1: /home/dataset/sparkTest
+2: code3.txt
+</pre></div>
+
+<p>代码内容文件<code>code3.txt</code>的内容如下：
+<div class="codehilite"><pre><span></span>piR &lt;- function(N) {
+    x &lt;- runif(N)
+    y &lt;- runif(N)
+    d &lt;- sqrt(x^2 + y^2)
+    return(4 * sum(d &lt; 1.0) / N)
+}
+
+set.seed(5)
+cat(&quot;Pi is roughly &quot;,piR(1000000) )
+</pre></div></p>
+</li>
+<li>
+<p>处理器ExecuteSparkInteractive配置为：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2018091414274959.png" />
+  <div class="codehilite"><pre><span></span>具体配置如下：
+1: /home/dataset/sparkTest
+2: code3.txt里的代码内容
+</pre></div></p>
+</li>
+<li>
+<p>测试前将代码文件<code>code3.txt</code>上传至安装nifi主机的路径<code>/home/dataset/sparkTest</code>下：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914115356781.png" /></p>
+<p>在已安装Livy的主机上启动Livy</p>
+</li>
+<li>
+<p>测试后</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914142925868.png" /></p>
+<p>登录Livy sever查看测试结果</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914115708776.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914143029264.png" /></p>
+<h2 id="nifikafka">NiFi连接Kafka<a class="headerlink" href="#nifikafka" title="Permanent link">&para;</a></h2>
+<h3 id="_16">操作场景<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>NiFi中配置kafka解析器，对的FI HD kafka接口</p>
+<h3 id="_17">前提条件<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成NiFi 1.7.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含kafka组件</p>
+</li>
+<li>
+<p>已完成 NiFi Kerberos认证配置</p>
+</li>
+</ul>
+<h3 id="gethttp-putkafka">GetHTTP &amp; PutKafka 操作步骤<a class="headerlink" href="#gethttp-putkafka" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整个过程的流程如图所示：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914143620412.png" /></p>
+<ul>
+<li>驱动器GetHTTP的配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914143715990.png" /></p>
+<p><div class="codehilite"><pre><span></span>具体配置如下：
+1: http://vincentarelbundock.github.io/Rdatasets/csv/datasets/iris.csv
+2: iris.csv
+</pre></div>
+ - 驱动器PutKafka配置如下：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914143959710.png" /></p>
+<div class="codehilite"><pre><span></span>具体配置如下：
+1： 172.21.3.102:21005,172.21.3.101:21005,172.21.3.103:21005
+2： nifi-kafka-test-demo
+3： nifi
+</pre></div>
+
+<ul>
+<li>测试前：</li>
+</ul>
+<p>登录FI客户端kafak组件，创建Topic <strong>nifi-kafka-test-demo</strong>
+  <div class="codehilite"><pre><span></span>  cd /opt/hadoopclient/Kafka/kafka/bin
+  kafka-topics.sh --create --topic nifi-kafka-test-demo --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.21.3.103:24002/kafka --partitions 1 --replication-factor 1
+</pre></div></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914144534988.png" /></p>
+<ul>
+<li>测试后：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914144743959.png" /></p>
+<p>登录FI客户端kafak组件，查看结果：
+  <div class="codehilite"><pre><span></span>cd /opt/hadoopclient/Kafka/kafka/bin
+kafka-console-consumer.sh --zookeeper 172.21.3.101:24002,172.21.3.102:24002,172.21.3.103:24002/kafka --topic nifi-kafka-test-demo --from-beginning
+</pre></div></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914144952375.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914145017685.png" /></p>
+<h3 id="consumekafka_0_11">ConsumeKafka_0_11 操作步骤<a class="headerlink" href="#consumekafka_0_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>整个过程的流程如图所示：
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914150029910.png" /></p>
+</li>
+<li>
+<p>处理器ConsumeKafka_0_11配置如下：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914145920740.png" /></p>
+<div class="codehilite"><pre><span></span>1: 172.21.3.101:21005,172.21.3.102:21005,172.21.3.103:21005
+2: PLAINTEXT
+3: KeytabCredentialsService
+4: Kafka
+5: example-metric1
+6: DemoConsumer
+</pre></div>
+
+<ul>
+<li>处理器PutFile配置如下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914150709577.png" /></p>
+<ul>
+<li>
+<p>测试前：</p>
+<p>用eclipse打开客户端自带的kafka样例代码<code>kafka-examples</code>，调试使得样例代码能够正常运行<code>NewProducer.java</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914151040410.png" /></p>
+<p>由于ConsumeKafka是实时获取日志信息的，所以在测试的时候需要先运行<code>NewProducer.java</code>往Kafka上传日志文件，再同时开启nifi的驱动器ConsumeKafka_0_11进行读取日志的测试</p>
+</li>
+<li>
+<p>测试后：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914151449716.png" /></p>
+<p>登录路径<code>/home/dataset/Kafka</code>查看测试结果：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914151628975.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20180914151713272.png" /></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Kettle_6.1/" title="对接Kettle" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                对接Kettle
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Denodo/" title="对接Denodo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                对接Denodo
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>
