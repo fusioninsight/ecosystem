@@ -1,6 +1,6 @@
 site_name: 智能数据生态地图
 repo_name: 'fusioninsight/ecosystem'
-repo_url: 'https://github.com/fusioninsight/ecosystem/tree/zh_cn'
+repo_url: 'https://github.com/fusioninsight/ecosystem/tree/zh-hans'
 
 theme:
   name: 'material'
