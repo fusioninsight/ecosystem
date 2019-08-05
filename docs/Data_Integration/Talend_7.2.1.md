@@ -27,6 +27,8 @@
   };
   ```
 
+* 本地`C:\Windows\System32\drivers\etc\hosts`已添加FusionInsight集群节点的IP与hostname的映射。
+
 * 本地已安装Hadoop服务（可从<https://hadoop.apache.org/releases.html>下载Hadoop二进制），该项可选。如果本地没安装Hadoop服务，talend在运行过程中会出现与Hadoop相关的错误日志，但不影响实际运行结果。
 
 ## 安装Talend
