@@ -15,17 +15,17 @@
 * 已完成FusionInsight HD客户端安装，具体请参见FusionInsight HD产品文档的`应用开发指南->安全模式->安全认证->配置客户端文件`章节。FusionInsight HD客户端解压于本地`C:\talend\FusionInsight_Cluster_1_Services_ClientConfig`
 
 * Zookeeper的Kerberos认证需要指定jaas配置文件。创建连接zookeeper的jaas配置文件，如`C:\developuser\jaas.conf`，内容格式如下：
-```
-Client {
-com.sun.security.auth.module.Krb5LoginModule required
-useKeyTab=true
-keyTab="c:/developuser/user.keytab"
-principal="developuser@HADOOP.COM"
-useTicketCache=false
-storeKey=true
-debug=true;
-};
-```
+  ```
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  keyTab="c:/developuser/user.keytab"
+  principal="developuser@HADOOP.COM"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
 
 * 本地已安装Hadoop服务（可从<https://hadoop.apache.org/releases.html>下载Hadoop二进制），该项可选。如果本地没安装Hadoop服务，talend在运行过程中会出现与Hadoop相关的错误日志，但不影响实际运行结果。
 
@@ -388,27 +388,27 @@ Talend中配置JDBC解析器，对接FusionInsight Hive接口，进行建表、�
 
   * 点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择`存储库`，点击右边的![](assets/Talend_7.2.1/3b81bf5e.png)按钮选择`FusionInsight_HIVE`。
 
-  ![](assets/Talend_7.2.1/27b523d1.png)
+    ![](assets/Talend_7.2.1/27b523d1.png)
 
   * 点击选中“tHiveCreateTable_1”，勾选`使用一个现有连接`，“组件列表”选择`tHiveConnection_1`，点击“编辑schema”右边的按钮设计表结构为两列，列名分别id和name，“表名称”输入`talendHiveCreate`，“表操作”选择`如果表不存在则创建表`，“格式”选择`文本文件`，其余选项为默认。
 
-  ![](assets/Talend_7.2.1/41b2259e.png)
+    ![](assets/Talend_7.2.1/41b2259e.png)
 
   * 点击选中“tHiveLoad_1”，勾选`使用一个现有连接`，“组件列表”选择`tHiveConnection_1`，“加载操作”选择`加载`，“文件路径”输入`/tmp/putToHdfs.csv`，“表名称”输入`talendHiveCreate`，其余选项默认。
 
-  ![](assets/Talend_7.2.1/bbb0d7d5.png)
+    ![](assets/Talend_7.2.1/bbb0d7d5.png)
 
   * 点击选中“tHiveClose_1”，“组件列表”选择`tHiveConnection_1`。
 
-  ![](assets/Talend_7.2.1/6db833bc.png)
+    ![](assets/Talend_7.2.1/6db833bc.png)
 
   * 切换至“运行（作业hiveCreateTable）”，点击`运行`按钮。返回结果如下图所示，则表示Talend使用Hive创建表talendHiveCreate，并将putToHdfs.csv的数据输入到表talendHiveCreate成功。
 
-  ![](assets/Talend_7.2.1/200797f6.png)
+    ![](assets/Talend_7.2.1/200797f6.png)
 
   * 登录FusionInsight集群客户端，使用beeline执行`select * from talendHiveCreate;`命令查询表`createdTableTalend`。
 
-  ![](assets/Talend_7.2.1/e3626990.png)
+    ![](assets/Talend_7.2.1/e3626990.png)
 
 ### Hive Input 操作步骤
 
@@ -416,11 +416,11 @@ Talend中配置JDBC解析器，对接FusionInsight Hive接口，进行建表、�
 
   * 确认已存在表talendHiveCreate。登录FusionInsight集群客户端，使用beeline执行`select * from talendHiveCreate;`命令查询表`createdTableTalend`，返回数据如下。
 
-  ![](assets/Talend_7.2.1/e3626990.png)
+    ![](assets/Talend_7.2.1/e3626990.png)
 
   * 创建作业“hiveInput”，加入tHiveConnection、tHiveInput、tHiveClose、tLogRow组件，上一个组件的子作业正常时执行下一个组件。
 
-  ![](assets/Talend_7.2.1/ce6ec8a5.png)
+    ![](assets/Talend_7.2.1/ce6ec8a5.png)
 
   * 点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择`存储库`，点击右边的![](assets/Talend_7.2.1/3b81bf5e.png)按钮选择`FusionInsight_HIVE`。
 
@@ -630,25 +630,25 @@ Talend通过FusionInsight HBase接口对接成功后，创建表talendHbaseCreat
 
     ![](assets/Talend_7.2.1/21bd3c7e.png)
 
-  * 点击选中“tHBaseInput_1”，勾选`使用一个现有连接`，“组件列表”选择`tHBaseConnection_1`，“表名称”输入`talendHbaseCreate`，输入id和name对应的“族名称”，“族名称”必须要用双引号包括，点击“编辑schema”右边的![](assets/Talend_7.2.1/3b81bf5e.png)按钮增加两列，列名分别id和name。
+* 点击选中“tHBaseInput_1”，勾选`使用一个现有连接`，“组件列表”选择`tHBaseConnection_1`，“表名称”输入`talendHbaseCreate`，输入id和name对应的“族名称”，“族名称”必须要用双引号包括，点击“编辑schema”右边的![](assets/Talend_7.2.1/3b81bf5e.png)按钮增加两列，列名分别id和name。
 
-    ![](assets/Talend_7.2.1/72adff66.png)
+  ![](assets/Talend_7.2.1/72adff66.png)
 
-  * 切换至“运行（作业hbaseInputOutput）”，点击`运行`按钮。返回结果如下图所示，则表示Talend对接FusionInsight HBase成功，且创建表talendHbaseCreate并将本地文件数据输入表talendHbaseCreate，并且从表talendHbaseCreate查询返回数据。
+* 切换至“运行（作业hbaseInputOutput）”，点击`运行`按钮。返回结果如下图所示，则表示Talend对接FusionInsight HBase成功，且创建表talendHbaseCreate并将本地文件数据输入表talendHbaseCreate，并且从表talendHbaseCreate查询返回数据。
 
-    ![](assets/Talend_7.2.1/4682db29.png)
+  ![](assets/Talend_7.2.1/4682db29.png)
 
-  * 登录FusionInsight集群客户端，执行以下命令检查HBase表“talendHbaseCreate”。
+* 登录FusionInsight集群客户端，执行以下命令检查HBase表“talendHbaseCreate”。
 
-    ```
-    hbase shell
-    scan 'hbaseInputOutputTest'
-    ```
-    ![](assets/Talend_7.2.1/ec1417d9.png)
+  ```
+  hbase shell
+  scan 'hbaseInputOutputTest'
+  ```
+  ![](assets/Talend_7.2.1/ec1417d9.png)
 
 ## FAQ
 
-* 向FusionInsight HDFS文件系统上传或者下载文件时，返回Client cannot authenticate via:[TOKEN, KERBEROS]
+* **向FusionInsight HDFS文件系统上传或者下载文件时，返回Client cannot authenticate via:[TOKEN, KERBEROS]**
 
   **【问题描述】**
 
@@ -672,7 +672,7 @@ Talend通过FusionInsight HBase接口对接成功后，创建表talendHbaseCreat
 
       ![](assets/Talend_7.2.1/9e6ea1d7.png)
 
-* 对接FusionInsight Hive接口创建表的时候返回Cannot modify dfs.client.use.datanode.hostname at runtime。
+* **对接FusionInsight Hive接口创建表的时候返回Cannot modify dfs.client.use.datanode.hostname at runtime。**
 
   **【问题描述】**
 
