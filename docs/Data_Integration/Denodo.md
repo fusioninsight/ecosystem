@@ -5,6 +5,8 @@
 > Denodo Platform 7.0 <-> FusionInsight HD V100R002C80SPC100
 >
 > Denodo Platform 7.0 <-> FusionInsight HD 6.5.0
+>
+> Denodo Platform 7.0 <-> FusionInsight HD 6.5.1
 
 ## 准备工作
 
@@ -14,7 +16,7 @@
 
     ![](assets/Denodo/03746.png)
 
-  - 从<https://community.denodo.com/express/download>下载Denodo Platform 7.0的**Denodo Express Installer**和**Denodo Express License**。下载选择版本与操作系统位数保持一致，本文版本是Windows 64 bits。
+  - 从<https://community.denodo.com/express/download>下载Denodo Platform 7.0的“Denodo Express Installer”和“Denodo Express License”。下载选择版本与操作系统位数保持一致，本文版本是Windows 64 bits。
 
     ![](assets/Denodo/05223.png)
 
@@ -24,7 +26,7 @@
 
   - 登录FusionInsight Manager创建一个“人机”用户，例如：developuser，具体请参见《FusionInsight HD 管理员指南》的`系统设置->权限设置->用户管理->创建用户`章节。给developuser用户授予Hive和Spark2x的所有访问权限。
 
-  - 登录FusionInsight Manager的`系统->用户->更多（developuser）->下载认证凭证`，下载developuser对应的认证凭证。解压后，将**user.keytab**放在`C:\developuser\`目录下(developuser文件夹不存在则创建)，**将krb5.conf文件重命名为krb5.ini**，并放在`C:\Windows\`目录下。
+  - 登录FusionInsight Manager的`系统->用户->更多（developuser）->下载认证凭证`，下载developuser对应的认证凭证。解压后，将user.keytab放在`C:\developuser\`目录下(developuser文件夹不存在则创建)，将krb5.conf文件重命名为krb5.ini，并放在`C:\Windows\`目录下。
 
     ![](assets/Denodo/190f6.png)
 
@@ -40,7 +42,7 @@
 
       将解压后的客户端`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\jdbc\`目录下所有jar包拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`，如果spark2x文件夹不存在则创建。
 
-      如果是**FusionInsight HD 6.5.0**版本，还需要将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`。如果是FusionInsight HD V100R002C80SPC100版本，则不需要。
+      如果是FusionInsight HD 6.5.X版本，还需要将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`。如果是FusionInsight HD V100R002C80SPC100版本，则不需要。
 
 * 准备数据
 
@@ -48,7 +50,28 @@
 
     ![](assets/Denodo/54980.png)
 
-  - 创建与student.class_id相关的数据存放于excel表中。例如创建`C:\developuser\Class.xlsx`，sheet命名为**Class**，包含两列，分别是**id**和**name**，id列的取值必须存在于student.class_id中。
+    **示例如下：**
+
+    ```
+    CREATE TABLE IF NOT EXISTS student(id INT, name STRING, class_id INT);
+    INSERT INTO student VALUES (1,'Tom',1);
+    INSERT INTO student VALUES (2,'Sandy',2);
+    INSERT INTO student VALUES (3,'Benny',3);
+    INSERT INTO student VALUES (4,'Tina',1);
+    INSERT INTO student VALUES (5,'Vina',2);
+    INSERT INTO student VALUES (6,'Manson',3);
+    INSERT INTO student VALUES (7,'Summy',1);
+    INSERT INTO student VALUES (8,'Peter',2);
+    INSERT INTO student VALUES (9,'Wendy',3);
+    INSERT INTO student VALUES (10,'Andy',1);
+    INSERT INTO student VALUES (11,'Miki',2);
+    INSERT INTO student VALUES (12,'Aurora',3);
+    INSERT INTO student VALUES (13,'Carina',1);
+    INSERT INTO student VALUES (14,'Hely',1);
+    INSERT INTO student VALUES (15,'Tracy',2);
+    ```
+
+  - 创建与student.class_id相关的数据存放于excel表中。例如创建`C:\developuser\Class.xlsx`，sheet命名为“Class”，包含两列，分别是id和name，id列的取值必须存在于student.class_id中。
 
     ![](assets/Denodo/1ceea.png)
 
@@ -90,7 +113,7 @@
 
 * 启动Virtual DataPort Administration Tool。
 
-  - Virtual DataPort Server启动成功后状态显示为**Running**，点击`LAUNCH`启动Virtual DataPort Administration Tool。
+  - Virtual DataPort Server启动成功后状态显示为Running，点击`LAUNCH`启动Virtual DataPort Administration Tool。
 
     ![](assets/Denodo/f84ff.png)
 
@@ -192,7 +215,7 @@
 
   ![](assets/Denodo/d7729.png)
 
-* 选择导入已准备好存放于`C:\developuser\`的**Class.xlsx**。点击![](assets/Denodo/609bf.png)保存。
+* 选择导入已准备好存放于`C:\developuser\`的`Class.xlsx`。点击![](assets/Denodo/609bf.png)保存。
 
   **具体输入信息如下：**
   ```
@@ -237,7 +260,7 @@
 
   ![](assets/Denodo/768cb.png)
 
-* 移至`Output`将View name设置为**student_class**，将student的class_id和class的id删除。
+* 移至`Output`将View name设置为“student_class”，将student的class_id和class的id删除。
 
   ![](assets/Denodo/e4119.png)
 
@@ -326,7 +349,7 @@
 
     ![](assets/Denodo/efbe6.png)
 
-  - 移至`Output`将Association name设置为**student_class**，End point 'student'为**Principal**且Role name为**class**，End point 'class'为**Dependent**且Role name为**belongs_to_student**。点击![](assets/Denodo/609bf.png)保存。
+  - 移至`Output`将“Association name”设置为`student_class`，“End point 'student'”为`Principal`且“Role name”为`class`，“End point 'class'”为`Dependent`且“Role name”为`belongs_to_student`。点击![](assets/Denodo/609bf.png)保存。
 
     ![](assets/Denodo/c7355.png)
 
@@ -358,7 +381,7 @@
 
   ![](assets/Denodo/e1d54.png)
 
-* 状态显示为**Running**，Data Catalog服务启动成功。
+* 状态显示为Running，Data Catalog服务启动成功。
 
   ![](assets/Denodo/3c71f.png)
 
@@ -378,7 +401,7 @@
 
   ![](assets/Denodo/52895.png)
 
-* 输入Name=**id**，Expression=**id**，点击`Save`。
+* 输入Name=`id`，Expression=`id`，点击`Save`。
 
   ![](assets/Denodo/165b8.png)
 
@@ -386,7 +409,7 @@
 
   ![](assets/Denodo/92d4a.png)
 
-* 采用同样的操作，点击Output columns的`Add->New Field`添加其他输出列，例如**name**。
+* 采用同样的操作，点击Output columns的`Add->New Field`添加其他输出列，例如name。
 
   ![](assets/Denodo/bed7b.png)
 
@@ -410,7 +433,7 @@
 
     **解决办法：**
 
-    检查是否已经将**woodstox-core-5.0.3.jar**包拷贝至**Drive class path对应的目录**，例如将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`，再点击`Test connection`重试。
+    检查是否已经将`woodstox-core-5.0.3.jar`包拷贝至`Drive class path`对应的目录，例如将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`，再点击`Test connection`重试。
 
   * 对接Spark2x时，点击`Test connection`返回错误Unable to establish connection: java.sql.SQLException: org.apache.hive.jdbc.ZooKeeperHiveClientException: Unable to read HiveServer2 uri from ZooKeeper
 
