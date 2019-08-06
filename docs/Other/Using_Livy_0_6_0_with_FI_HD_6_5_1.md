@@ -30,11 +30,11 @@
 
 - 登录FI HD manager创建测试中需要用到的用户developuser, livy。 并且将用户livy的认证信息下载下来（user.keytab, krb5.conf）
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190802175641110.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190802175641110.png)
 
 - 使用FI HD客户端登录kadmin，创建一个新的principal用于FI HD对Livy HTTP服务的Kerberos认证,其名称为“HTTP/host-172-16-2-118”,其中host-172-16-2-118为Apache Livy部署的节点的主机名。
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806114250120.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806114250120.png)
 
   执行kadmin –p kadmin/admin命令时初始密码Admin@123，修改后需严格牢记新密码。
 
@@ -42,13 +42,13 @@
 
   `kinit -kt /opt/http2.keytab HTTP/host-172-16-2-118@HADOOP.COM`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806114756630.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806114756630.png)
 
   完成后使用命令kdestroy清除缓存的票据
 
 - 登录需要对接集群，点击服务管理 -> Yarn -> 服务配置 -> 选择全部配置 -> 自定义， 在对应参数文件为core-site.xml下增加如下配置：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805101744110.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805101744110.png)
 
   ```
   hadoop.proxyuser.livy.hosts = *
@@ -57,15 +57,15 @@
 
 - 参照上面的同样方法对hdfs服务， hive服务的 core-site.xml 文件增加相同的配置：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805103227718.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805103227718.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805103310859.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805103310859.png)
 
 ### 客户端相关检查
 
 - 使用curl -V命令检查客户端curl命令是否支持Kerberos Spnego
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805103921157.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805103921157.png)
 
 - 安装对接FI HD集群客户端
 
@@ -79,7 +79,7 @@
 
 - 检查livy.conf文件配置
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806115225643.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806115225643.png)
 
   需要特别注意的是：
 
@@ -91,15 +91,15 @@
 
 - 检查livy-client.conf文件配置
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080511062850.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080511062850.png)
 
 - 检查livy-env.sh文件配置
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805110815683.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805110815683.png)
 
 - 检查spark-blacklist.conf文件配置
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805110944567.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805110944567.png)
 
 - 在log4j.properties配置文件中增加如下一条来调整日志级别（可选）
 
@@ -113,49 +113,49 @@ livy session方式对应spark console交互方式，通过提交具体的代码�
 
 - 登录livy服务端使用`bin/livy-server start`启动livy服务
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112111902.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805112111902.png)
 
   打开Livy端livy-root-server.out日志查看livy是否启动成功
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112159413.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805112159413.png)
 
 - 登录客户端(172.16.2.119)使用 `kinit developuser` 输入密码获取票据
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112312259.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805112312259.png)
 
 
 - 使用如下命令在livy中起一个pyspark的session
 
   `curl --negotiate -k -v -u developuser : -X POST --data '{"kind": "pyspark"}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/sessions`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141351861.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806141351861.png)
 
 
 - 使用如下命令为session/0提交一段代码
 
   `curl --negotiate -k -v -u developuser : -X POST -H 'Content-Type: application/json' -d '{"code":"1 + 1"}' http://host-172-16-2-118:8998/sessions/0/statements`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141624866.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806141624866.png)
 
 - 使用如下命令查看结果：
 
   `curl --negotiate -k -v -u : http://host-172-16-2-118:8998/sessions/0/statements | python -m json.tool`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141719681.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806141719681.png)
 
 - 使用如下命令关闭session
 
   `curl --negotiate -k -v -u : http://host-172-16-2-118:8998/sessions/0 -X DELETE`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141829801.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806141829801.png)
 
 - 登录对接集群的yarn查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142026694.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806142026694.png)
 
 - 另外在客户端(172.16.2.119)完成curl命令提交任务之后可以使用klist查看票据信息：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805150847928.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805150847928.png)
 
   可以看到会更新票据认证票据HTTP/172.16.2.118@HADOOP.COM
 
@@ -169,21 +169,21 @@ Livy batch方式对应spark-submit交互方式，通过提交一个编译好的j
 
 - 在FI HD客户端中找到测试jar包spark-examples_2.11-2.1.0.jar并传到livy服务端/opt/路径下
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805115748160.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805115748160.png)
 
 - 在客户端(172.16.2.119)使用如下命令提交spark任务
 
   `curl --negotiate -k -v -u developuser : -X POST --data '{"file": "file:/opt/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches`
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614231861.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080614231861.png)
 
 - 打开Livy端livy-root-server.out日志查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142412857.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806142412857.png)
 
 - 登录对接集群的yarn查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142447984.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806142447984.png)
 
 ### 使用Livy batch方式提交任务样例2
 
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     spark.stop()
 ```
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805122730950.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805122730950.png)
 
 - 在客户端(172.16.2.119)使用如下命令提交spark任务
 
@@ -232,15 +232,15 @@ if __name__ == "__main__":
   `curl --negotiate -k -v -u developuser : -X POST --data '{"file": "file:/opt/pi2.py" }' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches`
 
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142550152.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806142550152.png)
 
 - 打开Livy端livy-root-server.out日志查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614262941.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080614262941.png)
 
 - 登录对接集群的yarn查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614265792.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080614265792.png)
 
 ### 使用Livy batch方式提交任务样例3
 
@@ -250,11 +250,11 @@ if __name__ == "__main__":
 
 - 修改livy.conf文件配置为：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142834644.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806142834644.png)
 
 - 在对接FI HD集群hdfs的/tmp路径下上传jar包
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805141930586.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805141930586.png)
 
 - 重启Livy
 
@@ -264,17 +264,17 @@ if __name__ == "__main__":
   `curl --negotiate -k -v -u developuser : -X POST --data '{"file": "/tmp/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches`
 
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143100296.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143100296.png)
 
 - 打开Livy端livy-root-server.out日志查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143129614.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143129614.png)
 
 - 登录对接集群的yarn查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143210274.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143210274.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143247373.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143247373.png)
 
 ### 使用Livy batch方式提交任务样例4
 
@@ -284,11 +284,11 @@ if __name__ == "__main__":
 
 - 因为使用yarn cluster本地提交jar包模式，事先并不知道worker在哪个集群节点，所以将jar包spark-examples_2.11-2.1.0.jar分别放到各集群节点的/home路径下：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805143623305.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805143623305.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080514364033.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080514364033.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805143653616.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190805143653616.png)
 
 - 在客户端(172.16.2.119)使用如下命令提交spark任务
 
@@ -296,17 +296,17 @@ if __name__ == "__main__":
   `curl --negotiate -k -v -u developuser : -X POST --data '{"file": "local:/home/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches`
 
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143404351.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143404351.png)
 
 - 打开Livy端livy-root-server.out日志查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143436711.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143436711.png)
 
 - 登录对接集群的yarn查看结果：
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143513482.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143513482.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143541228.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806143541228.png)
 
 ### Windows跳板机配置Kerberos Spnego访问livy web ui
 
@@ -314,13 +314,13 @@ Windows跳板机（172.16.2.111）访问Livy web ui的认证原理同上文客�
 
 - 参考产品文档 -> 应用开发指南 -> 安全模式 -> Spark2x开发指南 -> 环境准备 -> 准备HiveODBC开发环境 -> Windows环境 -> 操作步骤第1到第4步 完成MIT Kerberos的安装配置
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145222142.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806145222142.png)
 
 - 配置JCE
 
   到java官网上下载Java Cryptography Extension (JCE)，然后解压到%JAVA_HOME%/jre/lib/security中替换相应的文件。
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145516277.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806145516277.png)
 
 - 检查livy服务端主机名是否加入hosts文件：
 
@@ -333,24 +333,24 @@ Windows跳板机（172.16.2.111）访问Livy web ui的认证原理同上文客�
 
   2. network.auth.use-sspi 关闭sspi验证协议
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145819801.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806145819801.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145845785.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806145845785.png)
 
 - 使用MIT Kerberos完成认证
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150006300.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806150006300.png)
 
 - 登录Livy的web ui地址为http://host-172-16-2-118:8998/ui
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150130275.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806150130275.png)
 
 - 使用之前一个样例提交任务并在Livy web ui检查
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080615064401.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080615064401.png)
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150717610.png)
+  ![](assets/Apache_Livy/markdown-img-paste-20190806150717610.png)
 
 - 检查MIT Kerberos生成的服务票据
 
-  ![](assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080615091446.png)
+  ![](assets/Apache_Livy/markdown-img-paste-2019080615091446.png)
