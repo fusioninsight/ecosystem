@@ -18,7 +18,7 @@
 
 - 安装Apache Livy 0.5.0-incubating，在网址`https://livy.incubator.apache.org/download/`下载安装包，使用WinSCP导入主机并用`unzip livy-0.5.0-incubating-bin.zip`解压生成livy-0.5.0-incubating-bin目录
 
-  ![](assets/Apache_Livy/daa97.png)
+  ![](assets/Apache_Livy_0_5_0/daa97.png)
 
 
 - 执行source命令到客户端，获取java配置信息
@@ -27,7 +27,7 @@
   echo $JAVA_HOME
   ```
 
-  ![](assets/Apache_Livy/b83c9.png)
+  ![](assets/Apache_Livy_0_5_0/b83c9.png)
 
 
 - 根据产品文档创建用户developuser，并赋予足够权限，下载用户developuser的keytab文件user.keytab，上传至`/opt/developuser`目录下
@@ -37,8 +37,8 @@
   Client {
   com.sun.security.auth.module.Krb5LoginModule required
   useKeyTab=true
-  keyTab="/opt/developuser/user.keytab"
-  principal="developuser"
+  keyTab="/opt/user.keytab"
+  principal="livy"
   useTicketCache=false
   storeKey=true
   debug=true;
@@ -70,11 +70,8 @@
   livy.server.session.timeout = 1h
   livy.impersonation.enabled = true
   livy.repl.enable-hive-context = true
-  #livy.server.auth.type=kerberos
-  livy.server.auth.kerberos.keytab=/opt/developuser/user.keytab
-  livy.server.auth.kerberos.principal=developuser@HADOOP.COM
-  livy.server.launch.kerberos.keytab=/opt/developuser/user.keytab
-  livy.server.launch.kerberos.principal=developuser@HADOOP.COM
+  livy.server.launch.kerberos.keytab=/opt/user.keytab
+  livy.server.launch.kerberos.principal=livy@HADOOP.COM
 
   ```
 
@@ -105,7 +102,7 @@
   export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
   export SPARK_CONF_DIR=/opt/hadoopclient/Spark2x/spark/conf
   export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
-  export LIVY_SERVER_JAVA_OPTS="-Djava.security.krb5.conf=/opt/developuser/krb5.conf -Djava.security.auth.login.config=/usr/livy/livy-0.5.0-incubating-bin/conf/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=12000"
+  export LIVY_SERVER_JAVA_OPTS="-Djava.security.krb5.conf=/opt/krb5.conf -Djava.security.auth.login.config=/usr/livy/livy-0.5.0-incubating-bin/conf/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=12000"
   export SPARK_LOCAL_IP=172.16.52.190
   ```
 
@@ -122,7 +119,7 @@
   spark.submit.deployMode
   ```
 
-  ![](assets/Apache_Livy/0b38d.png)
+  ![](assets/Apache_Livy_0_5_0/0b38d.png)
 
 - 启动和停止Livy，在路径`/usr/livy/livy-0.5.0-incubating-bin`下
 
@@ -131,11 +128,11 @@
 
   ```
 
-  ![](assets/Apache_Livy/22154.png)
+  ![](assets/Apache_Livy_0_5_0/22154.png)
 
   启动成功后可以在http://172.16.52.190:8998访问到Livy服务器：
 
-  ![](assets/Apache_Livy/d70fd.png)
+  ![](assets/Apache_Livy_0_5_0/d70fd.png)
 
 
 ## 测试运行Livy样例代码
@@ -156,7 +153,7 @@
 ### 运行Spark样例操作步骤
 - 输入命令`python`启动Anaconda
 
-  ![](assets/Apache_Livy/3e977.png)
+  ![](assets/Apache_Livy_0_5_0/3e977.png)
 
 - 输入如下python代码启动一个Livy session
   ```
@@ -167,9 +164,9 @@
   r = requests.post(host + '/sessions', data=json.dumps(data), headers=headers)
   ```
 
-  ![](assets/Apache_Livy/8a598.png)
+  ![](assets/Apache_Livy_0_5_0/8a598.png)
 
-  ![](assets/Apache_Livy/f5500.png)
+  ![](assets/Apache_Livy_0_5_0/f5500.png)
 
 - 当一个session完成启动后， 它将会变为闲置状态
   ```
@@ -178,7 +175,7 @@
   r.json()
   ```
 
-  ![](assets/Apache_Livy/e42f1.png)
+  ![](assets/Apache_Livy_0_5_0/e42f1.png)
 
 - 下面通过传递一个简单JSON命令行的方式来执行Scala
   ```
@@ -193,11 +190,11 @@
 
   可以在Session0状态栏看到之前运行的样例代码以及结果
 
-  ![](assets/Apache_Livy/05800.png)
+  ![](assets/Apache_Livy_0_5_0/05800.png)
 
   也可以在终端看到以JSON格式返回的结果
 
-  ![](assets/Apache_Livy/4ad5a.png)
+  ![](assets/Apache_Livy_0_5_0/4ad5a.png)
 
 - 更新Scala再次运行
   ```
@@ -223,7 +220,7 @@
 
   可以在Session0状态栏看到之前运行的样例代码以及结果
 
-  ![](assets/Apache_Livy/19359.png)
+  ![](assets/Apache_Livy_0_5_0/19359.png)
 
 - 关闭session0
   ```
@@ -241,7 +238,7 @@
   ```
   可以在Session状态栏看到新启动的Session1
 
-  ![](assets/Apache_Livy/e68c8.png)
+  ![](assets/Apache_Livy_0_5_0/e68c8.png)
 
 - 通过传递JSON命令的方式执行Python样例代码，注意要更改statements_url
   ```
@@ -264,7 +261,7 @@
 
   可以在Session1状态栏看到之前运行的样例代码以及结果
 
-  ![](assets/Apache_Livy/4c959.png)
+  ![](assets/Apache_Livy_0_5_0/4c959.png)
 
 - 关闭session1
   ```
@@ -283,7 +280,7 @@
 
   可以在Session状态栏看到新启动的Session2
 
-  ![](assets/Apache_Livy/fe0c4.png)
+  ![](assets/Apache_Livy_0_5_0/fe0c4.png)
 
 - 通过传递JSON命令的方式执行R样例代码，注意要更改statements_url
   ```
@@ -303,7 +300,7 @@
 
   可以在Session2状态栏看到之前运行的样例代码以及结果
 
-  ![](assets/Apache_Livy/98e5f.png)
+  ![](assets/Apache_Livy_0_5_0/98e5f.png)
 
 - 关闭session2
   ```
