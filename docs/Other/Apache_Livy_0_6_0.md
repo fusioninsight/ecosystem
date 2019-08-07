@@ -159,7 +159,7 @@ livy session方式对应spark console交互方式，通过提交具体的代码�
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190806181720594.png)
 
-  可以看到会更新票据认证票据HTTP/host-172-16-2-118@HADOOP.COM
+  可以看到会增加认证票据HTTP/host-172-16-2-118@HADOOP.COM
 
 ### 使用Livy batch方式提交任务样例1
 
