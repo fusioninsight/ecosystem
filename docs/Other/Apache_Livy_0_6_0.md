@@ -326,7 +326,7 @@ Windows跳板机（172.16.2.111）访问Livy web ui的认证原理同上文客�
 
 - 检查livy服务端主机名是否加入hosts文件：
 
-  ![](assets/markdown-img-paste-20190806160858384.png)
+  ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190806160858384.png)
 
 - 配置Firefox
   windows下Firefox需要通过访问about:config 页面调整以下参数：
