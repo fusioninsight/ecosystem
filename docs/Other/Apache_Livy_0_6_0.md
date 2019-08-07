@@ -60,6 +60,8 @@
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190805103227718.png)
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190805103310859.png)
+  
+  完成后重启相关服务
 
 ### 客户端相关检查
 
