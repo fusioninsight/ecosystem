@@ -13,7 +13,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * Fiber架构图
 
-  ![](assets/DBeaver/68e03.png)
+  ![](assets/DBeaver_4.2.1/68e03.png)
 
 本文介绍了DBeaver与FusionInsight的Fiber对接的操作步骤
 
@@ -158,7 +158,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 - 打开DBeaver，进入DBeaver的安装目录执行`./dbeaver`，启动dbeaver
 - 进入DBeaver界面，菜单选择 **Database** -> **新建DriverManager**，在弹出的对话框中点击 **New**
 
-  ![](assets/DBeaver/1d39a.png)
+  ![](assets/DBeaver_4.2.1/1d39a.png)
 
 -	填写如下信息，点击 **OK**
   - Driver Name：`Fiber（自定义）`
@@ -180,62 +180,62 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   - slf4j-log4j12-1.7.10.jar
   - super-csv-2.2.0.jar
 
-  ![](assets/DBeaver/a93c2.png)
+  ![](assets/DBeaver_4.2.1/a93c2.png)
 
 - 在Connection Properties中加入以下属性：
 
-  ![](assets/DBeaver/f3af8.png)
+  ![](assets/DBeaver_4.2.1/f3af8.png)
 
 - 菜单栏选择 **File** -> **New** -> **Database Connection**, 类型选择Fiber
 
-  ![](assets/DBeaver/49ee0.png)
+  ![](assets/DBeaver_4.2.1/49ee0.png)
 
-  ![](assets/DBeaver/92aa3.png)
+  ![](assets/DBeaver_4.2.1/92aa3.png)
 
   User name和Password可不填写
 
-  ![](assets/DBeaver/2e066.png)
+  ![](assets/DBeaver_4.2.1/2e066.png)
 
   配置Driver properties里面的defaultDirver，可按需求填写hive或spark或phoenix，点击next
 
-  ![](assets/DBeaver/d5b60.png)
+  ![](assets/DBeaver_4.2.1/d5b60.png)
 
   Network页面保持默认，点击 **next**
 
-  ![](assets/DBeaver/bc602.png)
+  ![](assets/DBeaver_4.2.1/bc602.png)
 
   输入自定义Connection name后，点击 **finish**, 连接建立完成
 
-  ![](assets/DBeaver/f5cf2.png)
+  ![](assets/DBeaver_4.2.1/f5cf2.png)
 
 - 测试hive链接
 
-  ![](assets/DBeaver/67df0.png)
+  ![](assets/DBeaver_4.2.1/67df0.png)
 
   查看Hive表中数据
 
-  ![](assets/DBeaver/1743e.png)
+  ![](assets/DBeaver_4.2.1/1743e.png)
 
 
 - 测试spark链接, 把driver切换为spark，连接右键选择 **Edit Connection**
 
-  ![](assets/DBeaver/53fca.png)
+  ![](assets/DBeaver_4.2.1/53fca.png)
 
-  ![](assets/DBeaver/d21c4.png)
+  ![](assets/DBeaver_4.2.1/d21c4.png)
 
-  ![](assets/DBeaver/672a2.png)
+  ![](assets/DBeaver_4.2.1/672a2.png)
 
   使用spark driver查看表中数据
 
-  ![](assets/DBeaver/506d7.png)
+  ![](assets/DBeaver_4.2.1/506d7.png)
 
 - 测试phoenix连接，把driver切换为phoenix，连接右键选择 **Edit Connection**
 
-  ![](assets/DBeaver/87bcf.png)
+  ![](assets/DBeaver_4.2.1/87bcf.png)
 
   查看phoenix表中数据
 
-  ![](assets/DBeaver/ff954.png)
+  ![](assets/DBeaver_4.2.1/ff954.png)
 
 ## Windows下DBeaver连接Fiber
 
@@ -269,13 +269,13 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
   创建存放票据的目录，例如`C:\temp`
   设置Windows的系统环境变量，变量名为`KRB5CCNAME`，变量值为`C:\temp\krb5cache`
 
-  ![](assets/DBeaver/ec50f.png)
+  ![](assets/DBeaver_4.2.1/ec50f.png)
 
 - 在Windows上进行认证
 
   打开MIT Kerberos，单击 **get Ticket** ，在弹出的MIT Kerberos: Get Ticket窗口中，**Pricipal** 输入用户名(如：test@HADOOP.COM)，**Password** 输入密码，单击 **OK**
 
-  ![](assets/DBeaver/5fc1e.png)
+  ![](assets/DBeaver_4.2.1/5fc1e.png)
 
 - 在本地PC机上新建一个目录，将FusionInsight客户端下的fiber客户端文件夹Fiber拷贝至本地，例如`C:\Fiber`
 - 将FusionInsight客户端下`jaas.conf`文件和`krb5.conf`拷贝到`C:\Fiber\conf`目录下，文档内容如下
@@ -380,7 +380,7 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
 
 - DBeaver连接前确认kerberos认证有效
 
-  ![](assets/DBeaver/68b7f.png)
+  ![](assets/DBeaver_4.2.1/68b7f.png)
 
 #### 使用keytab认证方式配置
 
@@ -501,11 +501,11 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
 #### DBeaver连接Fiber
 - 将Hive、Spark、Phoenix的JDBC配置中classPath中的文件拷贝至Fiber文件夹中
 
-  ![](assets/DBeaver/17b93.png)
+  ![](assets/DBeaver_4.2.1/17b93.png)
 
 - 进入DBeaver界面，菜单选择 **Database** -> **新建DriverManager**，在弹出的对话框中点击 **New**
 
-  ![](assets/DBeaver/fca33.png)
+  ![](assets/DBeaver_4.2.1/fca33.png)
 
 - 填写如下信息，点击 **OK**
   - Driver Name：`Fiber（自定义）`
@@ -516,69 +516,69 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
 
 - 点击 **Add File** 按钮，将Fiber客户端（`/opt/hadoopclient/Fiber/lib/`）下的jar包添加进来
 
-  ![](assets/DBeaver/82da9.png)
+  ![](assets/DBeaver_4.2.1/82da9.png)
 
-  ![](assets/DBeaver/1f484.png)
+  ![](assets/DBeaver_4.2.1/1f484.png)
 
 - 在Connection Properties中加入以下属性
 
-  ![](assets/DBeaver/a580b.png)
+  ![](assets/DBeaver_4.2.1/a580b.png)
 
 - 菜单栏选择 **File** -> **New** -> **Database Connection**
 
-  ![](assets/DBeaver/e92d3.png)
+  ![](assets/DBeaver_4.2.1/e92d3.png)
 
-  ![](assets/DBeaver/bc71a.png)
+  ![](assets/DBeaver_4.2.1/bc71a.png)
 
   User name和Password可不填写
 
-  ![](assets/DBeaver/75702.png)
+  ![](assets/DBeaver_4.2.1/75702.png)
 
   确认defaultDirver，可按需求填写hive或spark或phoenix。
 
-  ![](assets/DBeaver/3633e.png)
+  ![](assets/DBeaver_4.2.1/3633e.png)
 
   Network保持默认，点击 **next**
 
-  ![](assets/DBeaver/a91e2.png)
+  ![](assets/DBeaver_4.2.1/a91e2.png)
 
   自定义Connection name，点击finish
 
-  ![](assets/DBeaver/4c6c9.png)
+  ![](assets/DBeaver_4.2.1/4c6c9.png)
 
   连接建立完成
 
-  ![](assets/DBeaver/9b1bf.png)
+  ![](assets/DBeaver_4.2.1/9b1bf.png)
 
 - 测试hive连接
 
-  ![](assets/DBeaver/ff0aa.png)
+  ![](assets/DBeaver_4.2.1/ff0aa.png)
 
   查看Hive表中数据
 
-  ![](assets/DBeaver/52ec6.png)
+  ![](assets/DBeaver_4.2.1/52ec6.png)
 
 - 测试spark连接, 把driver切换为spark，连接右键选择 **Edit Connection**
 
-  ![](assets/DBeaver/98e38.png)
+  ![](assets/DBeaver_4.2.1/98e38.png)
 
-  ![](assets/DBeaver/f7408.png)
+  ![](assets/DBeaver_4.2.1/f7408.png)
 
-  ![](assets/DBeaver/cc593.png)
+  ![](assets/DBeaver_4.2.1/cc593.png)
 
-  ![](assets/DBeaver/bd130.png)
+  ![](assets/DBeaver_4.2.1/bd130.png)
 
   使用spark driver查看表中数据
 
-  ![](assets/DBeaver/86c2d.png)
+  ![](assets/DBeaver_4.2.1/86c2d.png)
 
 - 测试phoenix连接，把driver切换为phoenix，连接右键选择 **Edit Connection**
 
-  ![](assets/DBeaver/e9526.png)
+  ![](assets/DBeaver_4.2.1/e9526.png)
 
   查看phoenix表中数据
 
-  ![](assets/DBeaver/fff19.png)
+  ![](assets/DBeaver_4.2.1/fff19.png)
 
 ## DBeaver对接Fiber功能验证
 
@@ -589,21 +589,21 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
   SELECT * FROM workers_info
   ```
 
-  ![](assets/DBeaver/ed181.png)
+  ![](assets/DBeaver_4.2.1/ed181.png)
 
 - Hive增加数据：
 
   编辑数据文件`data_input.txt`，上传至集群的hdfs目录中，例如`/tmp/`下，文本内容如下：
 
-  ![](assets/DBeaver/560d4.png)
+  ![](assets/DBeaver_4.2.1/560d4.png)
 
   编辑脚本，点击左上角执行按钮。
 
-  ![](assets/DBeaver/4652a.png)
+  ![](assets/DBeaver_4.2.1/4652a.png)
 
   查看更新后数据：
 
-  ![](assets/DBeaver/042e3.png)
+  ![](assets/DBeaver_4.2.1/042e3.png)
 
 ### Spark增加查看数据
 - 将JDBC 的defaultDriver切换至Spark
@@ -612,28 +612,28 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
   SELECT * FROM workers_info
   ```
 
-  ![](assets/DBeaver/01979.png)
+  ![](assets/DBeaver_4.2.1/01979.png)
 
 - Spark增加数据：
 
   编辑数据文件data_input.txt，上传至Spark的JDBCServer(主)实例所在的节点的/opt/目录下
 
-  ![](assets/DBeaver/7914e.png)
+  ![](assets/DBeaver_4.2.1/7914e.png)
 
   文本内容如下：
 
-  ![](assets/DBeaver/cb6d7.png)
+  ![](assets/DBeaver_4.2.1/cb6d7.png)
 
   编辑脚本，点击左上角执行按钮。
   ```
   LOAD DATA LOCAL INPATH '/opt/data_input.txt' OVERWRITE INTO TABLE workers_info
   ```
 
-  ![](assets/DBeaver/a45d7.png)
+  ![](assets/DBeaver_4.2.1/a45d7.png)
 
   查看结果：
 
-  ![](assets/DBeaver/bdf5c.png)
+  ![](assets/DBeaver_4.2.1/bdf5c.png)
 
 ### Phoenix增删改查数据
 - 将JDBC 的defaultDrive切换至Phoenix
@@ -644,43 +644,43 @@ Fiber的安全认证可以用kinit和keytab两种方式，具体参数配置说�
   UPSERT INTO TB_PHOENIX(Id, Name,Company) values (104,'phoenix_user4','company4')
   ```
 
-  ![](assets/DBeaver/1664f.png)
+  ![](assets/DBeaver_4.2.1/1664f.png)
 
   查看增加的数据：
 
-  ![](assets/DBeaver/b3e63.png)
+  ![](assets/DBeaver_4.2.1/b3e63.png)
 
 - Phoenix删除数据
 
   页面上删除：选择待删除的列，然后点击下方 **删除** 按钮，然后点击 **save** 按钮：
 
-  ![](assets/DBeaver/b8c0e.png)
+  ![](assets/DBeaver_4.2.1/b8c0e.png)
 
   脚本删除：编辑脚本，点击左上方 **执行** 按钮
   ```
   delete from TB_PHOENIX where ID=104;
   ```
 
-  ![](assets/DBeaver/2228b.png)
+  ![](assets/DBeaver_4.2.1/2228b.png)
 
   查看输出后的数据
 
-  ![](assets/DBeaver/030c8.png)
+  ![](assets/DBeaver_4.2.1/030c8.png)
 
 - Phoenix更新数据, 编辑更新脚本，点击左上方 **执行** 按钮
   ```
   UPSERT INTO TB_PHOENIX(Id, Name,Company) values (103,'phoenix_user3_up','company3_up')
   ```
 
-  ![](assets/DBeaver/548b2.png)
+  ![](assets/DBeaver_4.2.1/548b2.png)
 
   查看更新后的数据：
 
-  ![](assets/DBeaver/83e7d.png)
+  ![](assets/DBeaver_4.2.1/83e7d.png)
 
 - 查看数据：编辑查询脚本，点击左上方 **执行** 按钮。
   ```
   SELECT * FROM TB_PHOENIX
   ```
 
-  ![](assets/DBeaver/6ccca.png)
+  ![](assets/DBeaver_4.2.1/6ccca.png)

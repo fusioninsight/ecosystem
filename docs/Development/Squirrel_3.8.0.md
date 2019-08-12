@@ -12,7 +12,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * Fiber架构图
 
-  ![](assets/Squirrel/68e03.png)
+  ![](assets/Squirrel_3.8.0/68e03.png)
 
 本文介绍了Squirrel与FusionInsight的Fiber对接的操作步骤
 
@@ -24,7 +24,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 修改`C:\Windows\System32\drivers\etc\hosts`文件，加入FusionInsight集群信息。
 
-  ![](assets/Squirrel/image4.png)
+  ![](assets/Squirrel_3.8.0/image4.png)
 
 * 在本地PC机上新建一个目录，将FusionInsight客户端下的fiber客户端文件夹Fiber拷贝至本地，例如`C:\Fiber`。
 
@@ -144,27 +144,27 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 将Hive、Spark、Phoenix的JDBC配置中classPath中的文件拷贝至Fiber文件夹中。
 
-  ![](assets/Squirrel/image5.png)
+  ![](assets/Squirrel_3.8.0/image5.png)
 
 * 下载Squirrel，地址：<http://www.squirrelsql.org/#installation>，选择Install jar of SQuirreL 3.7.1 for Windows/Linux/others，下载软件squirrel-sql-3.7.1-standard.jar
 
 * 双击squirrel-sql-3.7.1-standard.jar安装
 
-  ![](assets/Squirrel/image6.png)
+  ![](assets/Squirrel_3.8.0/image6.png)
 
-  ![](assets/Squirrel/image7.png)
+  ![](assets/Squirrel_3.8.0/image7.png)
 
-  ![](assets/Squirrel/image8.png)
+  ![](assets/Squirrel_3.8.0/image8.png)
 
 * 在这里可以选择要安装哪些环境，使用的数据库插件，语言包。
 
-  ![](assets/Squirrel/image9.png)
+  ![](assets/Squirrel_3.8.0/image9.png)
 
-  ![](assets/Squirrel/image10.png)
+  ![](assets/Squirrel_3.8.0/image10.png)
 
-  ![](assets/Squirrel/image11.png)
+  ![](assets/Squirrel_3.8.0/image11.png)
 
-  ![](assets/Squirrel/image12.png)
+  ![](assets/Squirrel_3.8.0/image12.png)
 
 ## Squirrel连接Fiber
 
@@ -172,7 +172,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 打开SQuirreL SQL Client，选择Drivers，点击 **+**。
 
-  ![](assets/Squirrel/image13.png)
+  ![](assets/Squirrel_3.8.0/image13.png)
 
 * 填写Driver信息，点击 **OK**。
   * Name：Fiber（自定义）
@@ -180,17 +180,17 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   * Extra Class Path：将Fiber/lib下的jar包都添加进来
   * ClassName：com.huawei.fiber.FiberDriver
 
-  ![](assets/Squirrel/image14.png)
+  ![](assets/Squirrel_3.8.0/image14.png)
 
 * 可以看到添加完成的Driver Fiber。
 
-  ![](assets/Squirrel/image15.png)
+  ![](assets/Squirrel_3.8.0/image15.png)
 
 ## 对接Hive
 
 * 点击 **Aliases**，点击 **+**
 
-  ![](assets/Squirrel/image16.png)
+  ![](assets/Squirrel_3.8.0/image16.png)
 
 * 在弹出框中填写信息
   * Name：Fiber（自定义）
@@ -198,33 +198,33 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   * User Name：test
   * Password：密码
 
-  ![](assets/Squirrel/image17.png)
+  ![](assets/Squirrel_3.8.0/image17.png)
 
 * 点击 **Connect**
 
-  ![](assets/Squirrel/image18.png)
+  ![](assets/Squirrel_3.8.0/image18.png)
 
 * 连接成功，点击 **OK**
 
-  ![](assets/Squirrel/image19.png)
+  ![](assets/Squirrel_3.8.0/image19.png)
 
 * 点击 **Connect**
 
-  ![](assets/Squirrel/image20.png)
+  ![](assets/Squirrel_3.8.0/image20.png)
 
 * 查看hive中数据表
 
-  ![](assets/Squirrel/image21.png)
+  ![](assets/Squirrel_3.8.0/image21.png)
 
   点击 **SQL面板**，编辑SQL语句，点击 **执行** 按钮，在下方可以看到查询结果。
 
-  ![](assets/Squirrel/image22.png)
+  ![](assets/Squirrel_3.8.0/image22.png)
 
 * Hive增加数据：
 
   编辑数据文件data_input.txt，上传至集群的hdfs目录中，例如`/tmp/`下，文本内容如下：
 
-  ![](assets/Squirrel/image23.png)
+  ![](assets/Squirrel_3.8.0/image23.png)
 
   编辑脚本，点击 **执行** 按钮：
 
@@ -233,43 +233,43 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   workers_info
   ```
 
-  ![](assets/Squirrel/image24.png)
+  ![](assets/Squirrel_3.8.0/image24.png)
 
   查看结果：
 
-  ![](assets/Squirrel/image25.png)
+  ![](assets/Squirrel_3.8.0/image25.png)
 
 ## 对接SparkSQL
 
 * 将defaultDriver切换为spark，点击 **Test**
 
-    ![](assets/Squirrel/image26.png)
+    ![](assets/Squirrel_3.8.0/image26.png)
 
 * 点击 **Connect**
 
-    ![](assets/Squirrel/image27.png)
+    ![](assets/Squirrel_3.8.0/image27.png)
 
 * 连接成功，点击 **OK**
 
-    ![](assets/Squirrel/image28.png)
+    ![](assets/Squirrel_3.8.0/image28.png)
 
 * 双击Fiber，点击 **Connet**，将driver切换为spark
 
-    ![](assets/Squirrel/image29.png)
+    ![](assets/Squirrel_3.8.0/image29.png)
 
 * 可以看到数据表
 
-    ![](assets/Squirrel/image30.png)
+    ![](assets/Squirrel_3.8.0/image30.png)
 
 * 点击 **SQL面板**，编辑SQL语句，点击 **执行** 按钮，在下方可以看到查询结果。
 
-    ![](assets/Squirrel/image31.png)
+    ![](assets/Squirrel_3.8.0/image31.png)
 
 * Spark增加数据
 
   编辑数据文件data_input.txt，上传至集群的hdfs目录中，例如`/tmp/`下，文本内容如下：
 
-  ![](assets/Squirrel/image32.png)
+  ![](assets/Squirrel_3.8.0/image32.png)
 
   编辑脚本，点击 **执行** 按钮：
 
@@ -278,33 +278,33 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   workers_info
   ```
 
-  ![](assets/Squirrel/image33.png)
+  ![](assets/Squirrel_3.8.0/image33.png)
 
   查看结果：
 
-  ![](assets/Squirrel/image34.png)
+  ![](assets/Squirrel_3.8.0/image34.png)
 
 ## 对接Phoenix
 
 * 将defaultDriver切换为phoenix，点击 **Test**
 
-  ![](assets/Squirrel/image35.png)
+  ![](assets/Squirrel_3.8.0/image35.png)
 
 * 点击 **Connect**
 
-  ![](assets/Squirrel/image36.png)
+  ![](assets/Squirrel_3.8.0/image36.png)
 
 * 连接成功，点击 **OK**
 
-  ![](assets/Squirrel/image37.png)
+  ![](assets/Squirrel_3.8.0/image37.png)
 
 * 双击 **Fiber**，点击 **Connect**，将driver切换为phoenix
 
-  ![](assets/Squirrel/image38.png)
+  ![](assets/Squirrel_3.8.0/image38.png)
 
 * 可以看到数据phoenix表
 
-  ![](assets/Squirrel/image39.png)
+  ![](assets/Squirrel_3.8.0/image39.png)
 
 * 点击 **SQL面板** ，编辑SQL语句，点击 **执行** 按钮，在下方可以看到查询结果。
 
@@ -312,43 +312,43 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   select * from tb_phoenix
   ```
 
-  ![](assets/Squirrel/image40.png)
+  ![](assets/Squirrel_3.8.0/image40.png)
 
 * 点击 **SQL面板**，编辑SQL语句，向phoenix表中增加一条数据，点击 **执行** 按钮。
   ```
   UPSERT INTO TB_PHOENIX(Id, Name,Company) values (108,'phoenix_user8','company8')
   ```
 
-  ![](assets/Squirrel/image41.png)
+  ![](assets/Squirrel_3.8.0/image41.png)
 
 * 查询结果：
   ```
   select * from tb_phoenix
   ```
 
-  ![](assets/Squirrel/image42.png)
+  ![](assets/Squirrel_3.8.0/image42.png)
 
 * 点击 **SQL面板**，编辑SQL语句，删除一条数据，点击 **执行** 按钮。
   ```
   delete from TB_PHOENIX where ID=109;
   ```
 
-  ![](assets/Squirrel/image43.png)
+  ![](assets/Squirrel_3.8.0/image43.png)
 
 * 查看结果：
   ```
   select * from tb_phoenix
   ```
 
-  ![](assets/Squirrel/image44.png)
+  ![](assets/Squirrel_3.8.0/image44.png)
 
 * 点击 **SQL面板**，编辑SQL语句，更新一条数据，点击 **执行** 按钮。
   ```
   UPSERT INTO TB_PHOENIX(Id, Name,Company) values (108,'phoenix_user8_up','company8_up')
   ```
 
-  ![](assets/Squirrel/image45.png)
+  ![](assets/Squirrel_3.8.0/image45.png)
 
 * 查看结果
 
-  ![](assets/Squirrel/image46.png)
+  ![](assets/Squirrel_3.8.0/image46.png)

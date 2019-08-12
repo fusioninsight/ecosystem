@@ -12,7 +12,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * Fiber架构图
 
-  ![](assets/DbVisualizer/68e03.png)
+  ![](./assets/DbVisualizer_10.0.1/68e03.png)
 
 本文介绍了DbVisualizer与FusionInsight的Fiber对接的操作步骤
 
@@ -24,7 +24,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 修改C:\Windows\System32\drivers\etc\hosts文件，加入FusionInsight集群信息
 
-  ![](./assets/DbVisualizer/image4.png)
+  ![](./assets/DbVisualizer_10.0.1/image4.png)
 
 * 在本地PC机上新建一个目录，将FusionInsight客户端下的fiber客户端文件夹Fiber拷贝至本地，例如C:\Fiber。
 
@@ -145,31 +145,31 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 将Hive、Spark、Phoenix的JDBC配置中classPath中的文件拷贝至Fiber文件夹中。
 
-  ![](./assets/DbVisualizer/image5.png)
+  ![](./assets/DbVisualizer_10.0.1/image5.png)
 
 * 下载DbVisualizer，地址：<http://www.dbvis.com/download/>，下载软件dbvis_windows-x64_9_5_7_jre.exe
 
-  ![](./assets/DbVisualizer/image6.png)
+  ![](./assets/DbVisualizer_10.0.1/image6.png)
 
 * 双击dbvis_windows-x64_9_5_7_jre.exe安装
 
-  ![](./assets/DbVisualizer/image7.png)
+  ![](./assets/DbVisualizer_10.0.1/image7.png)
 
-  ![](./assets/DbVisualizer/image8.png)
+  ![](./assets/DbVisualizer_10.0.1/image8.png)
 
-  ![](./assets/DbVisualizer/image9.png)
+  ![](./assets/DbVisualizer_10.0.1/image9.png)
 
-  ![](./assets/DbVisualizer/image10.png)
+  ![](./assets/DbVisualizer_10.0.1/image10.png)
 
-  ![](./assets/DbVisualizer/image11.png)
+  ![](./assets/DbVisualizer_10.0.1/image11.png)
 
-  ![](./assets/DbVisualizer/image12.png)
+  ![](./assets/DbVisualizer_10.0.1/image12.png)
 
-  ![](./assets/DbVisualizer/image13.png)
+  ![](./assets/DbVisualizer_10.0.1/image13.png)
 
-  ![](./assets/DbVisualizer/image14.png)
+  ![](./assets/DbVisualizer_10.0.1/image14.png)
 
-  ![](./assets/DbVisualizer/image15.png)
+  ![](./assets/DbVisualizer_10.0.1/image15.png)
 
 ## DbVisualizer连接Fiber
 
@@ -177,11 +177,11 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
 * 打开DbVisualizer9.5.7，点击 **Cancel**
 
-  ![](./assets/DbVisualizer/image16.png)
+  ![](./assets/DbVisualizer_10.0.1/image16.png)
 
 * 菜单栏选择 **ToolsDriver Manager**
 
-  ![](./assets/DbVisualizer/image17.png)
+  ![](./assets/DbVisualizer_10.0.1/image17.png)
 
 * 新建driver
 
@@ -193,77 +193,77 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
 
   * Driver Class：加入jar包后选择com.huawei.fiber.FiberDriver
 
-  ![](./assets/DbVisualizer/image18.png)
+  ![](./assets/DbVisualizer_10.0.1/image18.png)
 
   菜单栏 **Database** -> **Create Database Connection**
 
-  ![](./assets/DbVisualizer/image19.png)
+  ![](./assets/DbVisualizer_10.0.1/image19.png)
 
   选择 **Use Wizard**
 
-  ![](./assets/DbVisualizer/image20.png){width="4.2in" height="1.4in"}
+  ![](./assets/DbVisualizer_10.0.1/image20.png){width="4.2in" height="1.4in"}
 
   自定义连接名称，例如Fiber
 
-  ![](./assets/DbVisualizer/image21.png)
+  ![](./assets/DbVisualizer_10.0.1/image21.png)
 
   选择Driver Fiber
 
-  ![](./assets/DbVisualizer/image22.png)
+  ![](./assets/DbVisualizer_10.0.1/image22.png)
 
   填写URL：jdbc:fiber://
 
-  ![](./assets/DbVisualizer/image23.png)
+  ![](./assets/DbVisualizer_10.0.1/image23.png)
 
   点击 **Finish**
 
-  ![](./assets/DbVisualizer/image24.png)
+  ![](./assets/DbVisualizer_10.0.1/image24.png)
 
 ## 查询Hive表数据
 
 * 打开 **Properties** 面板，填写defaultDriver和fiberconfig属性，点击 **Apply** 。
 
-  ![](./assets/DbVisualizer/image25.png)
+  ![](./assets/DbVisualizer_10.0.1/image25.png)
 
 * 打开 **Connection** 面板，点击 **Connect** 按钮，可以在左侧看到hive数据表。
 
-  ![](./assets/DbVisualizer/image26.png)
+  ![](./assets/DbVisualizer_10.0.1/image26.png)
 
 * 菜单栏选择 **File** -> **New SQL Commander** ，编辑SQL，点击 **执行** 按钮，查看查询结果。
 
-  ![](./assets/DbVisualizer/image27.png)
+  ![](./assets/DbVisualizer_10.0.1/image27.png)
 
 ## 查询SparkSQL中的数据
 
 * 将defaultDriver切换为spark：将 **Properties** 中的defaultDriver值改为spark，点击 **Apply** 。
 
-  ![](./assets/DbVisualizer/image28.png)
+  ![](./assets/DbVisualizer_10.0.1/image28.png)
 
 * 打开Connection面板，点击 **Reconnect** ，连接成功，可以看到SparkSQL中的数据表。
 
-  ![](./assets/DbVisualizer/image29.png)
+  ![](./assets/DbVisualizer_10.0.1/image29.png)
 
 * 菜单栏选择 **File** -> **New SQL Commander**，编辑SQL，点击 **执行** 按钮，查看查询结果。
 
-  ![](./assets/DbVisualizer/image30.png)
+  ![](./assets/DbVisualizer_10.0.1/image30.png)
 
 ## 查询Phoenix中的数据
 
 * 将defaultDriver切换为phoenix，将 **Properties** 中的defaultDriver值改为phoenix，点击 **Apply** 。
 
-  ![](./assets/DbVisualizer/image31.png)
+  ![](./assets/DbVisualizer_10.0.1/image31.png)
 
 * 打开 **Connection** 面板，点击 **Reconnect**，连接成功，可以看到phoenix数据表
 
-  ![](./assets/DbVisualizer/image32.png)
+  ![](./assets/DbVisualizer_10.0.1/image32.png)
 
 * 查看phoenix表TB_PHOENIX中的数据。
 
-  ![](./assets/DbVisualizer/image33.png)
+  ![](./assets/DbVisualizer_10.0.1/image33.png)
 
 * 菜单栏选择 **File** -> **New SQL Commander**，编辑SQL，点击 **执行** 按钮，查看查询结果。
 
-  ![](./assets/DbVisualizer/image34.png)
+  ![](./assets/DbVisualizer_10.0.1/image34.png)
 
 ## Phoenix的增加删除更新数据
 
@@ -277,7 +277,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   </property>
   ```
 
-  ![](./assets/DbVisualizer/image35.png)
+  ![](./assets/DbVisualizer_10.0.1/image35.png)
 
 * Phoenix表增加数据
   ```
@@ -285,7 +285,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   select * from tb_phoenix;
   ```
 
-  ![](./assets/DbVisualizer/image36.png)
+  ![](./assets/DbVisualizer_10.0.1/image36.png)
 
 * Phoenix表删除数据
   ```
@@ -293,7 +293,7 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   select * from tb_phoenix;
   ```
 
-  ![](./assets/DbVisualizer/image37.png)
+  ![](./assets/DbVisualizer_10.0.1/image37.png)
 
 * Phoenix表更新数据
   ```
@@ -301,4 +301,4 @@ SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常�
   select * from tb_phoenix;
   ```
 
-  ![](./assets/DbVisualizer/image38.png)
+  ![](./assets/DbVisualizer_10.0.1/image38.png)
