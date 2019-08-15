@@ -45,7 +45,7 @@
 
   在适当位置添加KAFKA_OPTS的启动JVM参数
 
-  ![](assets/Confluent_4_1_0/markdown-img-paste-20190809105723591.png)
+  ![](assets/Confluent_4_1_0/markdown-img-paste-20190815152939108.png)
 
   具体内容为：
 
