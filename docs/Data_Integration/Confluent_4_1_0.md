@@ -2,8 +2,9 @@
 
 ## 使用场景
 
-> Confluent 4.1.0 <--> FusionInsight_HD_V100R002C80SPC200
-
+> Confluent 4.1.0 <--> FusionInsight HD V100R002C80SPC200
+>
+> Confluent 4.1.0 <--> FusionInsight HD 6.5.1
 ## 安装Confluent
 
 ### 操作步骤
@@ -44,7 +45,7 @@
 
   在适当位置添加KAFKA_OPTS的启动JVM参数
 
-  ![](assets/Confluent_4_1_0/markdown-img-paste-20190809105723591.png)
+  ![](assets/Confluent_4_1_0/markdown-img-paste-20190815152939108.png)
 
   具体内容为：
 
@@ -144,6 +145,10 @@
     ```
 
     ![](assets/Confluent_4_1_0/markdown-img-paste-20190809112623309.png)
+
+- 修改/opt/confluent/confluent-4.1.0/bin/ksql-run-class文件如下，目的是在起ksql-server服务的时候能够在classpath里加载到之前导入的华为kafka jar包：
+
+  ![](assets/Confluent_4_1_0/markdown-img-paste-20190815151253529.png)
 
 - 修改/opt/confluent/confluent-4.1.0/etc/ksql/ksql-server.properties配置文件
 
