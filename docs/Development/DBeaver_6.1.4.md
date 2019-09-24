@@ -289,7 +289,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
         <value>C:\\ecotesting\\Fiber\\conf\\jaas.conf</value>
       </property>
       <property>
-        <name>hbase.master.keytab.file</name>
+        <name>hbase.myclient.keytab.file</name>
         <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
       </property>
   	<property>
