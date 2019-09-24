@@ -344,7 +344,7 @@ Informatica用于管理大数据工程的工具主要有Informatica Administrato
   ./infaservice.sh startup
   ```
 
- >说明:如果新建ORACLE连接后未重启过Informatica Server，在客户端Big Data Developer运行ORACLE关系型数据对象时，返回类似以下的错误：
+  >说明:如果新建ORACLE连接后未重启过Informatica Server，在客户端Big Data Developer运行ORACLE关系型数据对象时，返回类似以下的错误：
   >
   >[LDTMCMN_0029] 由于以下错误，LDTM 无法完成请求: com.informatica.sdk.dtm.ExecutionException: [EdtmExec_00007] CMN_1022 Database driver error...
   >
@@ -418,24 +418,24 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
     * **本地**
 
-    登录Informatica Server安装节点，在`/tmp`目录下创建文件 **user_local_to_hdfs.csv**，操作命令如下。并且将 **user_local_to_hdfs.csv** 拷贝至安装Big Data Developer客户端的window系统，例如`C:\`目录下。
+      登录Informatica Server安装节点，在`/tmp`目录下创建文件 **user_local_to_hdfs.csv**，操作命令如下。并且将 **user_local_to_hdfs.csv** 拷贝至安装Big Data Developer客户端的window系统，例如`C:\`目录下。
 
-    ```
-    su - infa
-    cd /tmp
-    vi user_local_to_hdfs.csv
-    ```
+      ```
+      su - infa
+      cd /tmp
+      vi user_local_to_hdfs.csv
+      ```
 
-    ![](assets/Informatica_BDM_10.2.2/af50b1df.png)
+      ![](assets/Informatica_BDM_10.2.2/af50b1df.png)
 
-     **user_local_to_hdfs.csv文件内容如下所示：**
+       **user_local_to_hdfs.csv文件内容如下所示：**
 
-    ```
-    id,name
-    10,Andy-in-local
-    11,Benny-in-local
-    12,Tom-in-local
-    ```
+      ```
+      id,name
+      10,Andy-in-local
+      11,Benny-in-local
+      12,Tom-in-local
+      ```
 
   * **HDFS文件系统**
 
@@ -633,7 +633,7 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
 * 右键mapping的空白处，选择 **运行映射**。
 
- ![](assets/Informatica_BDM_10.2.2/3f55f48f.png)
+  ![](assets/Informatica_BDM_10.2.2/3f55f48f.png)
 
 * mapping运行成功之后，登录FusionInsight集群客户端，执行 `hdfs dfs -cat /tmp/user_hdfs_from_local.csv`查看mapping产生的文件“user_hdfs_from_local.csv”。
 
@@ -979,7 +979,7 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   * 配置HIVE连接以下两个属性的值：“HDFS上的Hive暂存目录”设置为 **/user/hive/warehouse**，“Hive暂存数据库名称”设置为 **default**。
 
-   ![](assets/Informatica_BDM_10.2.2/ef5d48e9.png)
+    ![](assets/Informatica_BDM_10.2.2/ef5d48e9.png)
 
   * 将集成配置的 **hdfs_site_xml** 的 **dfs.client.failover.proxy.provider.hacluster** 的值修改为 **org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider**。
 
