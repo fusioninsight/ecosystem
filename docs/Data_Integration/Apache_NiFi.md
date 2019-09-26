@@ -2,8 +2,9 @@
 
 ## 适用场景
 
->Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200
->Apache NiFi 1.9.2 <--> FusionInsight HD 6.5.1
+> Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka)
+>
+> Apache NiFi 1.9.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka)
 
 ## 安装Apache NiFi
 
