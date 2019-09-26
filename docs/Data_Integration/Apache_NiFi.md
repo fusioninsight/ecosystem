@@ -2,7 +2,8 @@
 
 ## 适用场景
 
->Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka)
+>Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200
+>Apache NiFi 1.9.2 <--> FusionInsight HD 6.5.1
 
 ## 安装Apache NiFi
 
@@ -937,11 +938,11 @@ NiFi中配置Livy解析器，对的FI HD HBase接口
 
   ![](assets/Apache_NiFi/markdown-img-paste-20180914143029264.png)
 
-## NiFi连接Kafka
+## NiFi连接Kafka普通模式
 
 ### 操作场景
 
-NiFi中配置kafka解析器，对的FI HD kafka接口
+NiFi中配置kafka解析器，对的FI HD kafka 21005端口
 
 ### 前提条件
 
@@ -1002,6 +1003,38 @@ NiFi中配置kafka解析器，对的FI HD kafka接口
 
   ![](assets/Apache_NiFi/markdown-img-paste-20180914145017685.png)
 
+### PublishKafka_0_11样例操作步骤
+- 整个工作流为：
+
+  ![](assets/Apache_NiFi/2019-09-26_143830.png)
+
+- 驱动器GetHTTP的配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20180914143715990.png)
+
+  ```
+  具体配置如下：
+  1: http://vincentarelbundock.github.io/Rdatasets/csv/datasets/iris.csv
+  2: iris.csv
+  ```
+- 驱动器PublishKafka_0_11的配置如下：
+
+  ![](assets/Apache_NiFi/2019-09-26_155832.png)
+
+  ```
+  1: 172.16.6.10:21005,172.16.6.11:21005,172.16.6.12:21005
+  2: SASL_PLAINTEXT
+  3: wikipedia21005
+  6: Guarantee Replicated Delivery
+  ```
+
+- 启动整个工作流:
+
+  ![](assets/Apache_NiFi/2019-09-26_151826.png)
+
+- 登陆FI HD kafka客户端检查结果：
+
+  ![](assets/Apache_NiFi/2019-09-26_160237.png)
 
 ### ConsumeKafka_0_11 操作步骤
 
@@ -1042,3 +1075,133 @@ NiFi中配置kafka解析器，对的FI HD kafka接口
     ![](assets/Apache_NiFi/markdown-img-paste-20180914151628975.png)
 
     ![](assets/Apache_NiFi/markdown-img-paste-20180914151713272.png)
+
+
+## NiFi连接Kafka安全模式
+
+### 操作场景
+
+NiFi中配置kafka解析器，对的FI HD kafka 21007端口
+
+### 前提条件
+
+- 已经完成NiFi 1.7.1的安装
+
+- 已完成FusionInsight HD和客户端的安装，包含kafka组件
+
+- 已完成 NiFi Kerberos认证配置
+
+- nifi主机ip: 172.16.2.119, FI HD三节点ip: 172.16.6.10-12
+
+### 认证相关操作步骤
+
+- 在nifi主机/opt路径下新建jaas.conf文件，内容为：
+  ```
+  KafkaClient {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="developuser@HADOOP.COM"
+  keyTab="/opt/user_keytabs/101keytab/user.keytab"
+  useTicketCache=false
+  serviceName="kafka"
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+  ![](assets/Apache_NiFi/2019-09-26_141743.png)
+
+- 使用命令bin/nifi.sh stop停止nifi
+
+- 在FI HD的kafka客户端中找到对应的kafka client jar包，比如/opt/hadoopclient/Kafka/kafka/libs/kafka-clients-0.11.0.1.jar
+
+  ![](assets/Apache_NiFi/2019-09-26_142133.png)
+
+- 将nifi主机下`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-0-11-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies`路径中原来的kafka client jar包kafka-clients-0.11.0.1.jar 使用重命名命令命名为 kafka-clients-0.11.0.1.jar.org 并且把上一步在 FI HD kafka客户端中找到的kafka-clients-0.11.0.1.jar复制到此路径下：
+
+  ![](assets/Apache_NiFi/2019-09-26_142836.png)
+
+  注意：华为kafka客户端中的kafka-clients-0.11.0.1.jar更大
+
+- 登陆nifi主机，先试用`source /opt/hadoopclient/bigdata_env`加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:`export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"`
+
+  其中/etc/krb5.conf为对应对接集群的认证krb5.conf文件
+
+  完成上述步骤后可以使用命令`java -version`检查jvm参数是否加载成功：
+
+  ![](assets/Apache_NiFi/2019-09-26_143425.png)
+
+- 使用命令bin/nifi.sh start启动nifi:
+
+  ![](assets/Apache_NiFi/2019-09-26_143552.png)
+
+### PublishKafka_0_11样例操作步骤
+
+- 整个工作流为：
+
+  ![](assets/Apache_NiFi/2019-09-26_143830.png)
+
+- 驱动器GetHTTP的配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20180914143715990.png)
+
+  ```
+  具体配置如下：
+  1: http://vincentarelbundock.github.io/Rdatasets/csv/datasets/iris.csv
+  2: iris.csv
+  ```
+- 驱动器PublishKafka_0_11的配置如下：
+
+  ![](assets/Apache_NiFi/2019-09-26_144216.png)
+
+  ```
+  1: 172.16.6.10:21007,172.16.6.11:21007,172.16.6.12:21007
+  2: SASL_PLAINTEXT
+  3: KeytabCredentialsService
+  4: Kafka
+  5: testtopic_01
+  6: Guarantee Replicated Delivery
+  ```
+
+- 运行整个工作流：  
+
+  ![](assets/Apache_NiFi/2019-09-26_151826.png)
+
+- 去集群kafka客户端检查：
+
+  ![](assets/Apache_NiFi/2019-09-26_151936.png)
+
+### ConsumeKafka_0_11样例操作步骤
+
+- 整个工作流为：
+
+  ![](assets/Apache_NiFi/2019-09-26_154306.png)
+
+- 驱动器ConsumeKafka_0_11的配置如下：
+
+  ![](assets/Apache_NiFi/2019-09-26_154452.png)
+
+  ```
+  1: 172.16.6.10:21007,172.16.6.11:21007,172.16.6.12:21007
+  2: SASL_PLAINTEXT
+  3: KeytabCredentialsService
+  4: Kafka
+  5: testtopic_01
+  6: Demo
+  ```
+
+- 驱动器PutFile配置如下：
+
+  ![](assets/Apache_NiFi/2019-09-26_154859.png)
+
+- 启动整个工作流
+
+  ![](assets/Apache_NiFi/2019-09-26_155056.png)
+
+- 使用FI HD样例代码使用producer传数据：
+
+  ![](assets/Apache_NiFi/2019-09-26_155308.png)
+
+- 登陆druid主机/opt/nifikafka21007路径检查结果
+
+  ![](assets/Apache_NiFi/2019-09-26_155521.png)
