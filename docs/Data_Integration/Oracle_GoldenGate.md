@@ -2,13 +2,13 @@
 
 ## 适用场景
 
-> Oracle GoldenGate 12.2 <--> FusionInsight HD V100R002C60U20
+> Oracle GoldenGate 12.2 <--> FusionInsight HD V100R002C60U20 (HDFS/HBase/Flume/Kafka)
 >
-> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C70SPC200
+> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C70SPC200 (HDFS/HBase/Flume/Kafka)
 >
-> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C80SPC100
+> Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C80SPC100 (HDFS/HBase/Flume/Kafka)
 >
-> Oracle GoldenGate 12.2 <--> FusionInsight HD 6.5.0
+> Oracle GoldenGate 12.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Flume/Kafka)
 
 ## 环境信息
 

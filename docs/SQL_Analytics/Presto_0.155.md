@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Presto0.155 <-> FusionInsight HD V100R002C60U20
+> Presto 0.155 <--> FusionInsight HD V100R002C60U20 (HDFS/Hive)
 
 ## 说明
 

@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Squirrel 3.7.1 <-> FusionInsight HD V100R002C60U20
+> Squirrel 3.7.1 <--> FusionInsight HD V100R002C60U20 (Hive/Phoenix/SparkSQL)
 >
-> Squirrel 3.8.0 <-> FusionInsight HD V100R002C70SPC200
+> Squirrel 3.8.0 <--> FusionInsight HD V100R002C70SPC200 (Hive/Phoenix/SparkSQL)
 
 ## 说明
 

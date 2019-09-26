@@ -2,13 +2,13 @@
 
 ## 适用场景
 
-> QlikView 12 <-> FusionInsight HD V100R002C60U20
+> QlikView 12 <--> FusionInsight HD V100R002C60U20 (Hive/SparkSQL)
 >
-> QlikView 12 <-> FusionInsight HD V100R002C70SPC200
+> QlikView 12 <--> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL)
 >
-> QlikView 12 <-> FusionInsight HD V100R002C80SPC100
+> QlikView 12 <--> FusionInsight HD V100R002C80SPC100 (Hive/SparkSQL)
 >
-> QlikView 12 <-> FusionInsight HD 6.5.0
+> QlikView 12 <--> FusionInsight HD 6.5 (Hive/SparkSQL)
 
 ## 配置Windows的kerberos认证
 

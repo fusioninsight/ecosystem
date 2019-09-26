@@ -2,13 +2,13 @@
 
 ## 适用场景
 
-> Apache Livy 0.5.0-incubating <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
+> Apache Livy 0.5.0 <--> FusionInsight HD V100R002C80SPC200 (Spark2x)
 
 ## 安装Livy
 
 ### 操作场景
 
-安装 Apache Livy 0.5.0
+安装 Apache Livy 0.5.0-incubating。
 
 ### 前提条件
 

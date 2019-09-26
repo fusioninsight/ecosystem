@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Informatica PowerexChange CDC 10.2.0 <--> FusionInsight HD 6.5
+> Informatica PowerexChange CDC 10.2.0 <--> FusionInsight HD V100R002C80SPC200 (Kafka)
 
 ## 环境信息
 

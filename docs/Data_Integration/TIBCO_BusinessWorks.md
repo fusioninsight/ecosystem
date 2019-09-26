@@ -1,8 +1,8 @@
-# TIBCO Business Works(BW) 5.13 对接GaussDB200
+# TIBCO Business Works(BW) 5.13对接FusionInsight HD
 
 ## 适用场景
 
->Tibco BW5.13 <--> GaussDB200
+> Tibco BW5.13 <--> FusionInsight HD 6.5 (GuassDB)
 
 ## 环境准备
 

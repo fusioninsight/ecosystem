@@ -2,13 +2,14 @@
 
 ## 适用场景
 
-> IBM InfoSphere DataStage 11.3.1.0 <--> FusionInsight HD V100R002C50
+> IBM InfoSphere DataStage 11.3.1.0 <--> FusionInsight HD V100R002C50 (HDFS/Hive/SparkSQL)
 >
-> IBM InfoSphere DataStage 11.5.0.2 <--> FusionInsight HD V100R002C60U20
+> IBM InfoSphere DataStage 11.5.0.2 <--> FusionInsight HD V100R002C60U20 (HDFS/Hive/Phoenix/SparkSQL/Kafka/GaussDB)
 
 ## 前提条件
 
 * 已完成IBM InfoSphere DataStage 11.5.0.2的安装部署（本文部署在Centos7.2上）
+
 * 已完成FusionInsight集群的部署，版本FusionInsight HD V100R002C60U20
 
 ## 准备工作

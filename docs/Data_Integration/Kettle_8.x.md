@@ -1,10 +1,13 @@
+<!-- ignore -->
 # Kettle对接FusionInsight
 
 ## 适用场景
 
-> Pentaho8.0.0  <--> FusionInsight HD V100R002C80SPC200
+> Kettle 8.0.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive)
 >
->仅限POC使用 Pentaho8.1.0  <--> FusionInsight HD V100R002C80SPC200
+> Kettle 8.1.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive)
+>
+> 说明：Kettle 8.1.0仅限POC使用
 
 ## Windows平台
 

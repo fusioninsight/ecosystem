@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Presto0.184 <-> FusionInsight HD V100R002C70SPC100
+> Presto 0.184 <--> FusionInsight HD V100R002C70SPC100 (HDFS/Hive)
 >
-> Presto0.196 <-> FusionInsight HD V100R002C80SPC100
+> Presto 0.196 <--> FusionInsight HD V100R002C80SPC100 (HDFS/Hive)
 
 ## 说明
 

@@ -2,8 +2,9 @@
 
 ## 适用场景
 
-> Alteryx 2018.2.5.48994 <-> FusionInsight HD V100R002C80SPC200
-> Alteryx 2018.2.5.48994 <-> FusionInsight HD 6.5.0
+> Alteryx 2018.2.5.48994 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/SparkSQL)
+>
+> Alteryx 2018.2.5.48994 <--> FusionInsight HD 6.5 (HDFS/Hive/SparkSQL)
 
 ## 配置Windows的kerberos认证
 

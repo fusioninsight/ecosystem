@@ -1,5 +1,8 @@
 # FusionInsight HD ES组件与周边生态对接
 
+## 适用场景
+
+> Logstash 6.4.2 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
 
 ## 生态简介
 
@@ -18,10 +21,6 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 >注： FusionInsight HD的Elasticsearch组件支持安全模式，但是相关的周边生态Kibana，Logstash，beats， elasticseach-head为开源，暂时无法支持安全模式，故采用安全FI HD集群的非安全ES组件进行对接
 
 # Logstash对接FusionInsight HD ES组件
-
-## 适用场景
-
-> Logstash 6.4.2 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)
 
 ## 前提条件
 

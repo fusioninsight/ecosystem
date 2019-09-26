@@ -2,7 +2,7 @@
 
 ## 适用场景
 
->Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200
+>Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka)
 
 ## 安装Apache NiFi
 
@@ -22,7 +22,7 @@
   ```
   ![](assets/Apache_NiFi/markdown-img-paste-20180912165818271.png)
 
-  - 安装NiFi，在网址`https://nifi.apache.org/download.html`下载安装包，使用WinSCP导入主机并用命令`unzip nifi-1.7.1-bin.zip`解压安装生成nifi-1.7.1目录，安装目录为`/usr/nifi/nifi-1.7.1`
+  - 安装NiFi，在网址<https://nifi.apache.org/download.html>下载安装包，使用WinSCP导入主机并用命令`unzip nifi-1.7.1-bin.zip`解压安装生成nifi-1.7.1目录，安装目录为`/usr/nifi/nifi-1.7.1`
 
   ![](assets/Apache_NiFi/markdown-img-paste-20180912160728825.png)
 

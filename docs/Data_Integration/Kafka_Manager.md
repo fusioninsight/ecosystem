@@ -1,8 +1,8 @@
-# Kafka Manager 对接FusionInsight
+# Kafka Manager对接FusionInsight
 
 ## 适用场景
 
->/kafka-manager-1.3.3.21 <--> FusionInsight HD V100R002C80SPC200
+> Kafka Manager 1.3.3.21 <--> FusionInsight HD V100R002C80SPC200 (Kafka)
 
 ## 环境准备
   * 安装JDK1.8及以上版本

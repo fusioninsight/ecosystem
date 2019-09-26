@@ -2,11 +2,9 @@
 
 ## 适用场景
 
-> Denodo Platform 7.0 <-> FusionInsight HD V100R002C80SPC100
+> Denodo Platform 7.0 <--> FusionInsight HD V100R002C80SPC100 (Hive/Spark2x)
 >
-> Denodo Platform 7.0 <-> FusionInsight HD 6.5.0
->
-> Denodo Platform 7.0 <-> FusionInsight HD 6.5.1
+> Denodo Platform 7.0 <--> FusionInsight HD 6.5 (Hive/Spark2x)
 
 ## 准备工作
 

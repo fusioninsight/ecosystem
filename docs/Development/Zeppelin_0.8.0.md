@@ -2,9 +2,7 @@
 
 ## 适用场景
 
-> Zeppelin 0.8.0  <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
-
-
+> Zeppelin 0.8.0 <--> FusionInsight HD V100R002C80SPC200 (HBase/Hive/Spark/SparkR)
 
 ## 安装Zeppelin
 

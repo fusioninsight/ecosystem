@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Zeppelin 0.7.3  <--> FusionInsight HD V100R002C70SPC100 (Spark2.x)
+> Zeppelin 0.7.3 <--> FusionInsight HD V100R002C70SPC100  (HBase/Hive/Spark/SparkR)
 >
-> Zeppelin 0.7.3  <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
+> Zeppelin 0.7.3 <--> FusionInsight HD V100R002C80SPC200  (HBase/Hive/Spark/SparkR)
 
 ## 编译Zeppelin
 

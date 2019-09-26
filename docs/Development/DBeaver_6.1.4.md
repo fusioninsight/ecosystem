@@ -2,9 +2,7 @@
 
 ## 适用场景
 
-> DBeaver 6.1.4  <--> FusionInsight HD 6.5.0
->
-> DBeaver 6.1.4  <--> FusionInsight HD 6.5.1
+> DBeaver 6.1.4 <--> FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL)
 
 ## 简介
 

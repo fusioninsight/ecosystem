@@ -1,5 +1,9 @@
 # Jupyter_Notebook对接FusionInsight
 
+## 适用场景
+
+> Jupyter Notebook 2.4.4.0 <--> FusionInsight HD V100R002C70SPC200 (pySpark)
+
 ## 安装Jupyter notebook
 
 Jupyter notebook的安装依赖于Python，且涉及到许多工具的依赖包，相互之间还存在版本依赖关系，比较麻烦，通常可以直接安装Anaconda包，里面包含了Python、Jupyter Notebook，以及众多的科学工具包，这里我们直接安装Anaconda

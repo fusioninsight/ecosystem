@@ -1,8 +1,8 @@
-# Informatica 对接FusionInsight
+# Informatica BDM对接FusionInsight
 
 ## 适用场景
 
-> Informatica 10.2.2  <--> FusionInsight HD 6.5.1
+> Informatica 10.2.2  <--> FusionInsight HD 6.5 (HDFS/Hive)
 
 ## 简介
 

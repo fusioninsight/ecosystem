@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Zeppelin 0.7.2  <--> FusionInsight HD V100R002C60U20
+> Zeppelin 0.7.2 <--> FusionInsight HD V100R002C60U20 (HBase/Hive/Spark/SparkR)
 
 ## 安装Zeppelin
 

@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> DBeaver 4.0.8  <--> FusionInsight HD V100R002C60U20
+> DBeaver 4.0.8 <--> FusionInsight HD V100R002C60U20 (Hive/Phoenix/SparkSQL)
 >
-> DBeaver 4.2.1  <--> FusionInsight HD V100R002C70SPC200
+> DBeaver 4.2.1 <--> FusionInsight HD V100R002C70SPC200 (Hive/Phoenix/SparkSQL)
 
 
 ## 说明

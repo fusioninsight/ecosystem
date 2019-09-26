@@ -2,14 +2,15 @@
 
 ## 使用场景
 
-> Confluent 4.1.0 <--> FusionInsight HD V100R002C80SPC200
+> Confluent 4.1.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Kafka)
 >
-> Confluent 4.1.0 <--> FusionInsight HD 6.5.1
+> Confluent 4.1.0 <--> FusionInsight HD 6.5 (HDFS/Kafka)
+
 ## 安装Confluent
 
 ### 操作步骤
 
-- 登录Confluent官方网站下载页面：https://www.confluent.io/previous-versions/?_ga=2.102961223.611794173.1561088831-1783953529.1561088831
+- 登录Confluent官方网站下载页面：<https://www.confluent.io/previous-versions/?_ga=2.102961223.611794173.1561088831-1783953529.1561088831>
 
   找到相应的版本下载
 

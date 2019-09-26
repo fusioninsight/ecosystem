@@ -2,9 +2,7 @@
 
 ## 适用场景
 
-> Apache Livy 0.6.0-incubating <--> FusionInsight HD 6.5.1 (Spark2.x)
->
-> Apache Livy 0.5.0-incubating <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
+> Apache Livy 0.6.0 <--> FusionInsight HD 6.5 (Spark2x)
 
 ## 部署对外验证的livy服务并使用session，batch方式提交任务
 
@@ -60,7 +58,7 @@
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190805103227718.png)
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190805103310859.png)
-  
+
   完成后重启相关服务
 
 ### 客户端相关检查

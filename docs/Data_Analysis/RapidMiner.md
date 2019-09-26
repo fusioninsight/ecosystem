@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Rapidminer Studio 8.2.001 <-> FusionInsight HD V100R002C80SPC200
+> Rapidminer Studio 8.2.001 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/MapReduce/Spark)
 
-##准备工作
+## 准备工作
 
   * 下载安装RapidMiner Studio, 当前最新版本为8.2.001,下载地址 <https://rapidminer.com/>
   * 安装完成后在主界面顶部菜单栏选择`Extensions->Marketplace`,搜索`radoop`,安装后重启rapidminer

@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> GIS Tools for Hadoop <-> FusionInsight HD V100R002C60U20
+> GIS Tools for Hadoop 1.0 <--> FusionInsight HD V100R002C60U20 (Hive/MapReduce)
 
 ## aggregation-hive
 

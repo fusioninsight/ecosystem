@@ -1,8 +1,10 @@
-# Informatica PowerCenter 对接FusionInsight HD
+# Informatica PowerCenter对接FusionInsight HD
 
 ## 适用场景
 
-> Informatica PowerCenter 10.2.0 <--> FusionInsight HD 6.5
+> Informatica PowerCenter 10.2.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive)
+>
+> Informatica PowerCenter 10.2.0 <--> FusionInsight HD 6.5 (HDFS/Hive)
 
 ## 环境信息
 

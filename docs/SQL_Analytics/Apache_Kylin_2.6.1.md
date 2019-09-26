@@ -1,10 +1,8 @@
-# Apache Kylin2.6.1对接FusionInsight_HD_C80
+# Apache Kylin2.6.1对接FusionInsight HD
 
 ## 适用场景
 
-> Apache Kylin 2.6.1 <-> FusionInsight HD 6.5.0
->
-> Apache Kylin 2.6.3 <-> FusionInsight HD 6.5.1
+> Apache Kylin 2.6.1 <--> FusionInsight HD 6.5 (HBase/Hive)
 
 ## 说明
 

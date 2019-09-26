@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> R-3.4.1  <--> FusionInsight HD V100R002C60U10
+> RStudio 3.4.1 <--> FusionInsight HD V100R002C60U10 (SparkR)
 >
-> R-3.4.1  <--> FusionInsight HD V100R002C70SPC100
+> RStudio 3.4.1 <--> FusionInsight HD V100R002C70SPC100 (SparkR)
 
 ## 对接方式
 RStudio与Spark集成有两种方式：

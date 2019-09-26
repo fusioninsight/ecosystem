@@ -2,12 +2,11 @@
 
 ## 适用场景
 
-> Kettle 6.1  <--> FusionInsight HD V100R002C60U10
+> Kettle 6.1 <--> FusionInsight HD V100R002C60U10 (HDFS/Hive)
 >
-> Kettle 6.1  <--> FusionInsight HD V100R002C60U10
+> Kettle 6.1 <--> FusionInsight HD V100R002C70U10 (HDFS/Hive)
 >
-> Kettle 6.1  <--> FusionInsight HD V100R002C60U10
-
+> Kettle 6.1 <--> FusionInsight HD V100R002C80U10 (HDFS/Hive)
 
 ## 环境准备
 

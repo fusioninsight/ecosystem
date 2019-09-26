@@ -1,8 +1,8 @@
-# Apache Kylin2.3.1对接FusionInsight_HD_C80
+# Apache Kylin2.3.1对接FusionInsight HD
 
 ## 适用场景
 
-> Apache Kylin 2.3.1 <-> FusionInsight HD V100R002C80SPC100
+> Apache Kylin 2.3.1 <--> FusionInsight HD V100R002C80SPC100 (HBase/Hive)
 
 ## 说明
 

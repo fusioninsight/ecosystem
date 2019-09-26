@@ -2,17 +2,15 @@
 
 ## 适用场景
 
-> Oracle BIEE 11g <-> FusionInsight HD V100R002C60U20
+> Oracle BIEE 11g <--> FusionInsight HD V100R002C60U20 (Hive/SparkSQL)
 >
-> Oracle BIEE 11g <-> FusionInsight HD V100R002C70SPC200
+> Oracle BIEE 11g <--> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL/ELK/GaussDB)
 >
-> Oracle BIEE 12c <-> FusionInsight HD V100R002C60U20
+> Oracle BIEE 12c <--> FusionInsight HD V100R002C60U20 (Hive/SparkSQL)
 >
-> Oracle BIEE 12c <-> FusionInsight HD V100R002C70SPC200
+> Oracle BIEE 12c <--> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL/ELK/GaussDB)
 >
-> Oracle BIEE 12c <-> FusionInsight HD V100R002C80SPC200
->
-> Oracle BIEE 12c <-> FusionInsight HD 6.5.0
+> Oracle BIEE 12c <--> FusionInsight HD 6.5 (Hive/SparkSQL/ELK/GaussDB)
 
 ## Linux环境安装OBIEE
 

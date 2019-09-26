@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Presto0.210 <-> FusionInsight HD V100R002C80SPC200
+> Presto 0.210 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/ElasticSearch)
 >
-> Presto0.210 <-> FusionInsight HD 6.5.0
+> Presto 0.210 <--> FusionInsight HD 6.5 (HDFS/Hive)
 
 ## 说明
 

@@ -2,7 +2,7 @@
 
 ## 适用场景
 
->H2O.ai 3.24.0.2 <--> FusionInsight HD 6.5
+> H2O.ai 3.24.0.2 <--> FusionInsight HD 6.5 (HDFS/GuassDB)
 
 ## 环境准备
 

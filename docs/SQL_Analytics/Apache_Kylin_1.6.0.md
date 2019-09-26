@@ -1,8 +1,8 @@
-# Apache Kylin对接FusionInsight
+# Apache Kylin对接FusionInsight HD
 
 ## 适用场景
 
-> Apache Kylin 1.6.0 (基于HBase1.0.2的分支版本：yang21-hbase102)  <-> FusionInsight HD V100R002C60U20
+> Apache Kylin 1.6.0 <--> FusionInsight HD V100R002C60U20 (HBase/Hive)
 
 ## 说明
 

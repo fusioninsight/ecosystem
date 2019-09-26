@@ -2,9 +2,7 @@
 
 ## 适用场景
 
->Talend 7.2.1 <--> FusionInsight HD 6.5.0
->
->Talend 7.2.1 <--> FusionInsight HD 6.5.1
+> Talend 7.2.1 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive)
 
 ## 准备工作
 

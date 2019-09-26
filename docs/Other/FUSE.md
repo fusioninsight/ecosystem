@@ -2,11 +2,11 @@
 
 ## 适用场景
 
-> fuse 2.8.3 <-> FusionInsight HD V100R002C60U20（非安全模式）
+> FUSE 2.8.3 <--> FusionInsight HD V100R002C60U20（HDFS）
 
 ## 说明
 
-通过使用FUSE组件，可以使用将远端的HDFS文件系统mount到本端的Linux系统中使用
+通过使用FUSE组件，可以使用将远端的HDFS文件系统mount到本端的Linux系统中使用。FusionInsight HD为非安全模式。
 
 ## 配置对接
 
