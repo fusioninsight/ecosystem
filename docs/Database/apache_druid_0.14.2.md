@@ -2,9 +2,7 @@
 
 ## 适用场景
 
-> Aapache Druid 0.14.2 <--> FusionInsight HD 2.8
->
-> Aapache Druid 0.15.1 <--> FusionInsight HD 2.8
+> Aapache Druid 0.14.2 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Kafka)
 
 ## 前提条件
 

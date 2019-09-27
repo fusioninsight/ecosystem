@@ -2,4 +2,4 @@
 
 ## 适用场景
 
-> 杭州合众UDB 6.1 <--> FusionInsight HD 6.5 (GaussDB)
+> 杭州合众UDB 6.1 <--> FusionInsight HD V100R002C50 (GaussDB)

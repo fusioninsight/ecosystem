@@ -2,4 +2,4 @@
 
 ## 适用场景
 
-> IBM WAS 8.5.5.9 <--> FusionInsight HD 6.5 (IBM_JDK)
+> IBM WAS 8.5.5.9 <--> FusionInsight HD V100R002C50 (IBM_JDK)

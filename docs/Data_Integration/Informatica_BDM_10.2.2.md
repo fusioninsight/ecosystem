@@ -2,7 +2,15 @@
 
 ## 适用场景
 
+> Informatica 10.0.0  <--> FusionInsight HD V100R002C50 (HDFS/HBase/Hive)
+>
+> Informatica 10.0.0  <--> FusionInsight HD V100R002C60U20 (HDFS/HBase/Hive)
+>
+> Informatica 10.0.0  <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive)
+>
 > Informatica 10.2.2  <--> FusionInsight HD 6.5 (HDFS/Hive)
+>
+>注：以上对接测试Informatica BDM采用的是Native Engine。
 
 ## 简介
 

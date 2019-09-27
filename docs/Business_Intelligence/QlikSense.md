@@ -2,4 +2,6 @@
 
 ## 适用场景
 
+> Qlik Sense 3.2.4 <--> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL)
+>
 > Qlik Sense 3.2.4 <--> FusionInsight HD 6.5 (Hive/SparkSQL)
