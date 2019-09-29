@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Tibco BW5.13 <--> FusionInsight HD 6.5 (GuassDB)
+> Tibco BW 5.13 <--> FusionInsight HD 6.5 (GuassDB)
 
 ## 环境准备
 

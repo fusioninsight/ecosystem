@@ -2,15 +2,15 @@
 
 ## 适用场景
 
-> Kyligence Analytics Platform v2.2 <--> FusionInsight HD V100R002C60U20 (HBase/Hive)
+> Kyligence Analytics Platform 2.2 <--> FusionInsight HD V100R002C60U20 (HBase/Hive)
 >
-> Kyligence Analytics Platform v2.3 <--> FusionInsight HD V100R002C60U20 (HBase/Hive)
+> Kyligence Analytics Platform 2.3 <--> FusionInsight HD V100R002C60U20 (HBase/Hive)
 >
-> Kyligence Analytics Platform v2.4 <--> FusionInsight HD V100R002C70SPC200 (HBase/Hive)
+> Kyligence Analytics Platform 2.4 <--> FusionInsight HD V100R002C70SPC200 (HBase/Hive)
 >
-> Kyligence Analytics Platform v2.5 <--> FusionInsight HD V100R002C70SPC200 (HBase/Hive)
+> Kyligence Analytics Platform 2.5 <--> FusionInsight HD V100R002C70SPC200 (HBase/Hive)
 >
-> Kyligence Analytics Platform v3.0 <--> FusionInsight HD V100R002C80SPC200 (HBase/Hive/Yarn)
+> Kyligence Analytics Platform 3.0 <--> FusionInsight HD V100R002C80SPC200 (HBase/Hive/Yarn)
 
 ## 说明
 
