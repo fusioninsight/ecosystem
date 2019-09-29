@@ -1,1 +1,3 @@
-# SQL Analysis
+<!-- ignore -->
+
+# SQL Analytics
