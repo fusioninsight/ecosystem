@@ -1,7 +1,15 @@
-<!-- ex_nonav -->
+<!-- ignore -->
 
-# 数据可视化
+# 数据分析
 
-* [对接Alteryx](Alteryx.md)
-* [对接RapidMiner](RapidMiner.md)
-* [对接Splunk](Splunk.md)
+* Alteryx
+  * [2018.2.5.48994 <--> C60](Alteryx.md)
+  * [2018.2.5.48994 <--> C80](Alteryx.md)
+  * [2018.2.5.48994 <--> 6.5](Alteryx.md)
+* Rapidminer Studio
+  * [8.2.001 <--> C80](RapidMiner.md)
+* Splunk
+  * [7.2.4 <--> C80](Splunk.md)
+  * [7.2.4 <--> 6.5](Splunk.md)
+* 永洪一站式大数据分析平台
+  * [7.1 <--> C60](永洪一站式大数据分析平台.md)

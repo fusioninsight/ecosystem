@@ -1,9 +1,5 @@
 # FusionInsight HD ES组件与周边生态对接
 
-## 适用场景
-
-> Logstash 6.4.2 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
-
 ## 生态简介
 
 ![](assets/Elasticsearch_Related/markdown-img-paste-20181129095649331.png)
@@ -20,14 +16,18 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 
 >注： FusionInsight HD的Elasticsearch组件支持安全模式，但是相关的周边生态Kibana，Logstash，beats， elasticseach-head为开源，暂时无法支持安全模式，故采用安全FI HD集群的非安全ES组件进行对接
 
-# Logstash对接FusionInsight HD ES组件
+## Logstash对接FusionInsight HD ES组件
 
-## 前提条件
+### 适用场景
+
+> Logstash 6.4.2 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
+
+### 前提条件
 
 - 已完成FusionInsight HD和客户端的安装。
 - FusionInsight HD包含ElasticSearch组件
 
-## 操作步骤
+### 操作步骤
 
 - 登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：
 
@@ -71,18 +71,18 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 
   ![](assets/Elasticsearch_Related/markdown-img-paste-20181115183039111.png)
 
+## Kibana对接FusionInsight HD ES组件
 
-# Kibana对接FusionInsight HD ES组件
+### 适用场景
 
-## 适用场景
-> Kibana 6.1.3 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)
+> Kibana 6.1.3 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
 
-## 前提条件
+### 前提条件
 
 - 已完成FusionInsight HD和客户端的安装。
 - FusionInsight HD包含ElasticSearch组件
 
-## 操作步骤
+### 操作步骤
 
 - 登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：
 
@@ -126,18 +126,18 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 
   ![](assets/Elasticsearch_Related/markdown-img-paste-20181116111209445.png)
 
-# elasticsearch-head对接FusionInsight HD ES组件
+## elasticsearch-head对接FusionInsight HD ES组件
 
-## 适用场景
+### 适用场景
 
-> elasticsearch-head <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch组件非安全模式)
+> elasticsearch-head 1.0 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
 
-## 前提条件
+### 前提条件
 
 - 已完成FusionInsight HD和客户端的安装
 - FusionInsight HD包含ElasticSearch组件
 
-## 操作步骤
+### 操作步骤
 
 - 登录FusionInsight Manager网页，检查ES组件是否为安全模式，如果是，修改配置使其为非安全模式，完成后点击保存配置重启elasticsearch服务：
 
@@ -172,16 +172,17 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
   ![](assets/Elasticsearch_Related/markdown-img-paste-20181116113832137.png)
 
 
-# 在FI HD集群上部署beats
+## 在FI HD集群上部署beats
 
-## 适用场景
-> filebeat-6.5.1 <--> FusionInsight HD V100R002C80SPC200
+### 适用场景
 
-## 前提条件
+> filebeat 6.5.1 <--> FusionInsight HD V100R002C80SPC200 (ElasticSearch)
+
+### 前提条件
 
 - 已完成FusionInsight HD和客户端的安装。
 
-## 操作步骤
+### 操作步骤
 
 - 下载Filebeat 6.5.1, 下载网址为：https://www.elastic.co/downloads/past-releases
 
@@ -221,16 +222,16 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 
   ![](assets/Elasticsearch_Related/markdown-img-paste-20181129115030211.png)
 
-# 应用场景举例说明
+## 应用场景举例说明
 
-## 场景简介
+### 场景简介
 
 ![](assets/Elasticsearch_Related/markdown-img-paste-20181129165527204.png)
 
 分别在FI HD两个节点上部署filebeat实时获取两台服务器的的日志文件（/var/log/ipmitool.fi.log），通过logstash管道获取并过滤元日志文件为多个字段，并传到FI HD Elasticsearch组件上，最后通过Kibana来查看获取的日志文件
 
 
-## 前提条件
+### 前提条件
 
 - 已完成FusionInsight HD和客户端的安装
 - FusionInsight HD包含ElasticSearch组件
@@ -239,7 +240,7 @@ elasticsearch-head: 用户界面，能够查询Elasticsearch中的数据
 - 已了解和完成filebeat的安装
 
 
-## 操作步骤
+### 操作步骤
 
 - 首先登陆FusionInsight HD集群节点172.21.3.102和172.21.3.103上
 

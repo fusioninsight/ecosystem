@@ -1,13 +1,21 @@
-# SQL分析引擎
+<!-- ignore -->
 
-* 对接Apache Kylin
-  * [Apache Kylin 1.6.0 <-> FusionInsight HD V100R002C60U20](Apache_Kylin_1.6.0.md)
-  * [Apache Kylin 2.1.0 <-> FusionInsight HD V100R002C70SPC100](Apache_Kylin_2.1.0.md)
-  * [Apache Kylin 2.3.1 <-> FusionInsight HD V100R002C80SPC100](Apache_Kylin_2.3.1.md)
-  * [Apache Kylin 2.6.1 <-> FusionInsight HD 6.5](Apache_Kylin_2.6.1.md)
+# SQL分析
 
-* [对接Kyligence](Kyligence.md)
-* 对接Presto
-  * [Presto0.155 <-> FusionInsight HD V100R002C60U20](Presto_0.155.md)
-  * [Presto0.184 <-> FusionInsight HD V100R002C70SPC100](Presto_0.184.md)
-  * [Presto0.210 <-> FusionInsight HD V100R002C80SPC200](Presto_0.210.md)
+* Apache Kylin
+  * [1.6.0 <--> C60](Apache_Kylin_1.6.0.md)
+  * [2.1.0 <--> C70](Apache_Kylin_2.1.0.md)
+  * [2.3.1 <--> C80](Apache_Kylin_2.3.1.md)
+  * [2.6.1 <--> 6.5](Apache_Kylin_2.6.1.md)
+* Kyligence Analytics Platform
+  * [2.2 <--> C60](Kyligence.md)
+  * [2.3 <--> C60](Kyligence.md)
+  * [2.4 <--> C70](Kyligence.md)
+  * [2.5 <--> C70](Kyligence.md)
+  * [3.0 <--> C80](Kyligence.md)
+* Presto
+  * [0.155 <--> C60](Presto_0.155.md)
+  * [0.184 <--> C70](Presto_0.184.md)
+  * [0.196 <--> C80](Presto_0.184.md)
+  * [0.210 <--> C80](Presto_0.210.md)
+  * [0.210 <--> 6.5](Presto_0.210.md)

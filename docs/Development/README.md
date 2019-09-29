@@ -1,18 +1,29 @@
-<!-- ex_nonav -->
+<!-- ignore -->
 
 # 集成开发环境
 
-* R语言
-  * [对接RStudio](RStudio.md)
-
-* Notebook类开发IDE
-  * 对接Apache Zeppelin
-    * [Zeppelin0.7.2 <-> FusionInsight HD V100R002C60U20](Zeppelin_0.7.2.md)
-    * [Zeppelin0.7.3 <-> FusionInsight HD V100R002C70SPC100](Zeppelin_0.7.3.md)
-    * [Zeppelin0.8.0 <-> FusionInsight HD V100R002C80SPC200](Zeppelin_0.8.0.md)
-  * [对接Jupyter Notebook](Jupyter_Notebook.md)
-
-* SQL类开发IDE
-  * [对接DBeaver](DBeaver.md)
-  * [对接DbVisualizer](DbVisualizer.md)
-  * [对接Squirrel](Squirrel.md)
+* DBeaver
+  * [4.0.8 <--> C60](DBeaver_4.2.1.md)
+  * [4.2.1 <--> C70](DBeaver_4.2.1.md)
+  * [6.1.4 <--> 6.5](DBeaver_6.1.4.md)
+* DbVisualizer
+  * [10.0.1 <--> C70](DbVisualizer_10.0.1.md)
+  * [10.0.21 <--> 6.5](DbVisualizer_10.0.21.md)
+  * [9.5.7 <--> C60](DbVisualizer_10.0.1.md)
+* HUE
+  * [4.0.1 <--> C70](HUE.md)
+* Jupyter Notebook
+  * [2.4.4.0 <--> C70](Jupyter_Notebook.md)
+* RStudio
+  * [3.4.1 <--> C60](RStudio.md)
+  * [3.4.1 <--> C70](RStudio.md)
+* SQuirreL
+  * [3.9.1 <--> 6.5](Squirrel_3.9.1.md)
+* Squirrel
+  * [3.7.1 <--> C60](Squirrel_3.8.0.md)
+  * [3.8.0 <--> C70](Squirrel_3.8.0.md)
+* Zeppelin
+  * [0.7.2 <--> C60](Zeppelin_0.7.2.md)
+  * [0.7.3 <--> C70](Zeppelin_0.7.3.md)
+  * [0.7.3 <--> C80](Zeppelin_0.7.3.md)
+  * [0.8.0 <--> C80](Zeppelin_0.8.0.md)

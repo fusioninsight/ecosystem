@@ -1,7 +1,27 @@
-<!-- ex_nonav -->
+<!-- ignore -->
 
 # 数据可视化
 
-* [对接Tableau](Tableau.md)
-* [对接QlikView](QlikView.md)
-* [对接Oracle BIEE](Oracle_BIEE.md)
+* IBM Cognos
+  * [10.2.2fp4 <--> C60](IBM_Cognos.md)
+* Oracle BIEE
+  * [11g <--> C60](Oracle_BIEE.md)
+  * [11g <--> C70](Oracle_BIEE.md)
+  * [12c <--> C60](Oracle_BIEE.md)
+  * [12c <--> C70](Oracle_BIEE.md)
+  * [12c <--> 6.5](Oracle_BIEE.md)
+* Qlik Sense
+  * [3.2.4 <--> C70](QlikSense.md)
+  * [3.2.4 <--> 6.5](QlikSense.md)
+* QlikView
+  * [12 <--> C60](QlikView.md)
+  * [12 <--> C70](QlikView.md)
+  * [12 <--> C80](QlikView.md)
+  * [12 <--> 6.5](QlikView.md)
+* SmartBI
+  * [7.2.32464.17374 <--> C70](SmartBI.md)
+* Tableau
+  * [10.0.0 <--> C50](Tableau.md)
+  * [10.1.4 <--> C60](Tableau.md)
+  * [10.3.2 <--> C70](Tableau.md)
+  * [10.5.0 <--> C80](Tableau.md)

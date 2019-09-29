@@ -1,3 +1,4 @@
+
 site_name: 智能数据生态地图
 repo_name: 'fusioninsight/ecosystem'
 repo_url: 'https://github.com/fusioninsight/ecosystem/tree/zh-hans'
@@ -13,56 +14,162 @@ theme:
 
 nav:
 - 数据可视化:
-  - 对接Tableau: Business_Intelligence/Tableau.md
-  - 对接QlikView: Business_Intelligence/QlikView.md
-  - 对接Oracle BIEE: Business_Intelligence/Oracle_BIEE.md
+  - IBM Cognos:
+    - 10.2.2fp4 <--> C60: Business_Intelligence/IBM_Cognos.md
+  - Oracle BIEE:
+    - 11g <--> C60: Business_Intelligence/Oracle_BIEE.md
+    - 11g <--> C70: Business_Intelligence/Oracle_BIEE.md
+    - 12c <--> C60: Business_Intelligence/Oracle_BIEE.md
+    - 12c <--> C70: Business_Intelligence/Oracle_BIEE.md
+    - 12c <--> 6.5: Business_Intelligence/Oracle_BIEE.md
+  - Qlik Sense:
+    - 3.2.4 <--> C70: Business_Intelligence/QlikSense.md
+    - 3.2.4 <--> 6.5: Business_Intelligence/QlikSense.md
+  - QlikView:
+    - 12 <--> C60: Business_Intelligence/QlikView.md
+    - 12 <--> C70: Business_Intelligence/QlikView.md
+    - 12 <--> C80: Business_Intelligence/QlikView.md
+    - 12 <--> 6.5: Business_Intelligence/QlikView.md
+  - SmartBI:
+    - 7.2.32464.17374 <--> C70: Business_Intelligence/SmartBI.md
+  - Tableau:
+    - 10.0.0 <--> C50: Business_Intelligence/Tableau.md
+    - 10.1.4 <--> C60: Business_Intelligence/Tableau.md
+    - 10.3.2 <--> C70: Business_Intelligence/Tableau.md
+    - 10.5.0 <--> C80: Business_Intelligence/Tableau.md
 - 数据分析:
-  - 对接Alteryx: Data_Analysis/Alteryx.md
-  - 对接RapidMiner: Data_Analysis/RapidMiner.md
-  - 对接Splunk: Data_Analysis/Splunk.md
+  - Alteryx:
+    - 2018.2.5.48994 <--> C60: Data_Analysis/Alteryx.md
+    - 2018.2.5.48994 <--> C80: Data_Analysis/Alteryx.md
+    - 2018.2.5.48994 <--> 6.5: Data_Analysis/Alteryx.md
+  - Rapidminer Studio:
+    - 8.2.001 <--> C80: Data_Analysis/RapidMiner.md
+  - Splunk:
+    - 7.2.4 <--> C80: Data_Analysis/Splunk.md
+    - 7.2.4 <--> 6.5: Data_Analysis/Splunk.md
+  - 永洪一站式大数据分析平台:
+    - 7.1 <--> C60: Data_Analysis/永洪一站式大数据分析平台.md
 - 数据集成:
-  - 对接IBM InfoSphere DataStage: Data_Integration/IBM_InfoSphere_DataStage.md
-  - 对接Informatica PowerCenter: Data_Integration/Informatica_PowerCenter.md
-  - 对接Informatica PWX CDC: Data_Integration/Informatica_PWX_CDC.md
-  - 对接Oracle GoldenGate: Data_Integration/Oracle_GoldenGate.md
-  - 对接Talend: Data_Integration/Talend.md
-  - 对接H2O.ai: Data_Integration/H2O.ai.md
-  - 对接Kettle: Data_Integration/Kettle_6.1.md
-  - 对接Apache NiFi: Data_Integration/Apache_NiFi.md
-  - 对接Denodo: Data_Integration/Denodo.md
-  - 对接TIBCO BW: Data_Integration/TIBCO_BusinessWorks.md
-  - 对接Knime: Data_Integration/Knime.md
-  - 对接Kafka-manager: Data_Integration/Kafka_Manager.md
+  - Apache NiFi:
+    - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md
+    - 1.9.2 <--> 6.5: Data_Integration/Apache_NiFi.md
+  - Confluent:
+    - 4.1.0 <--> C80: Data_Integration/Confluent_4_1_0.md
+    - 4.1.0 <--> 6.5: Data_Integration/Confluent_4_1_0.md
+  - Denodo Platform:
+    - 7.0 <--> C80: Data_Integration/Denodo.md
+    - 7.0 <--> 6.5: Data_Integration/Denodo.md
+  - H2O.ai:
+    - 3.24.0.2 <--> 6.5: Data_Integration/H2O.ai.md
+  - IBM InfoSphere CDC:
+    - 11.3.3.1 <--> C50: Data_Integration/IBM_InfoSphere_CDC.md
+  - IBM InfoSphere DataStage:
+    - 11.3.1.0 <--> C50: Data_Integration/IBM_InfoSphere_DataStage.md
+    - 11.5.0.2 <--> C60: Data_Integration/IBM_InfoSphere_DataStage.md
+  - Informatica PowerCenter:
+    - 10.2.0 <--> C80: Data_Integration/Informatica_PowerCenter.md
+    - 10.2.0 <--> 6.5: Data_Integration/Informatica_PowerCenter.md
+  - Informatica PowerexChange CDC:
+    - 10.2.0 <--> C80: Data_Integration/Informatica_PWX_CDC.md
+  - Informatica:
+    - 10.0.0 <--> C50: Data_Integration/Informatica_BDM_10.2.2.md
+    - 10.0.0 <--> C60: Data_Integration/Informatica_BDM_10.2.2.md
+    - 10.0.0 <--> C80: Data_Integration/Informatica_BDM_10.2.2.md
+    - 10.0.0 <--> C70: Data_Integration/Informatica_BDM_PushDown.md
+    - 10.2.2 <--> 6.5: Data_Integration/Informatica_BDM_10.2.2.md
+  - Kafka Manager:
+    - 1.3.3.21 <--> C80: Data_Integration/Kafka_Manager.md
+  - Kettle:
+    - 6.1 <--> C60: Data_Integration/Kettle_6.1.md
+    - 6.1 <--> C70: Data_Integration/Kettle_6.1.md
+    - 6.1 <--> C80: Data_Integration/Kettle_6.1.md
+  - Knime:
+    - 3.6.1 <--> C80: Data_Integration/Knime.md
+    - 3.6.1 <--> 5.0: Data_Integration/Knime.md
+  - Oracle GoldenGate:
+    - 12.2 <--> C60: Data_Integration/Oracle_GoldenGate.md
+    - 12.2 <--> 6.5: Data_Integration/Oracle_GoldenGate.md
+    - 12.3 <--> C70: Data_Integration/Oracle_GoldenGate.md
+    - 12.3 <--> C80: Data_Integration/Oracle_GoldenGate.md
+  - Pentaho:
+    - 7.1 <--> C70: Data_Integration/Pentaho.md
+    - 8.0 <--> C60: Data_Integration/Pentaho.md
+  - Talend:
+    - 6.4.1 <--> C80: Data_Integration/Talend_6.4.1.md
+    - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
+    - 7.2.1 <--> 6.5: Data_Integration/Talend_7.2.1.md
+  - Tibco BW:
+    - 5.13 <--> 6.5: Data_Integration/TIBCO_BusinessWorks.md
+  - 杭州合众UTL:
+    - 5.1 <--> C50: Data_Integration/杭州合众UTL.md
+- 数据库:
+  - Aapache Druid:
+    - 0.14.2 <--> C80: Database/apache_druid_0.14.2.md
+    - 0.15.1 <--> C80: Database/apache_druid_0.15.1.md
+  - SAP VORA:
+    - 2.0 <--> C70: Database/SAP_VORA.md
+    - 2.1 <--> C70: Database/SAP_VORA.md
+  - 杭州合众UDB:
+    - 6.1 <--> C50: Database/杭州合众UDB.md
 - 集成开发环境:
-  - 对接RStudio: Development/RStudio.md
-  - 对接Apache Zeppelin:
-    - Zeppelin0.7.2 <--> C60: Development/Zeppelin_0.7.2.md
-    - Zeppelin0.7.3 <--> C70: Development/Zeppelin_0.7.3.md
-    - Zeppelin0.8.0 <--> C80: Development/Zeppelin_0.8.0.md
-  - 对接Jypyter Notebook: Development/Jupyter_Notebook.md
-  - 对接DBeaver: Development/DBeaver.md
-  - 对接DbVisualizer: Development/DbVisualizer.md
-  - 对接Squirrel: Development/Squirrel.md
-- SQL引擎:
-  - 对接Apache Kylin:
-    - Kylin 1.6.0 <--> C60: SQL_Analytics/Apache_Kylin_1.6.0.md
-    - Kylin 2.1.0 <--> C70: SQL_Analytics/Apache_Kylin_2.1.0.md
-    - Kylin 2.3.1 <--> C80: SQL_Analytics/Apache_Kylin_2.3.1.md
-    - Kylin 2.6.1 <--> 6.5: SQL_Analytics/Apache_Kylin_2.6.1.md
-  - 对接Kyligence: SQL_Analytics/Kyligence.md
-  - 对接Presto:
-    - Presto0.146 <--> C60: SQL_Analytics/Presto_0.155.md
-    - Presto0.184 <--> C70: SQL_Analytics/Presto_0.184.md
-    - Presto0.210 <--> C80: SQL_Analytics/Presto_0.210.md
-- 数据库: /#
+  - DBeaver:
+    - 4.0.8 <--> C60: Development/DBeaver_4.2.1.md
+    - 4.2.1 <--> C70: Development/DBeaver_4.2.1.md
+    - 6.1.4 <--> 6.5: Development/DBeaver_6.1.4.md
+  - DbVisualizer:
+    - 10.0.1 <--> C70: Development/DbVisualizer_10.0.1.md
+    - 10.0.21 <--> 6.5: Development/DbVisualizer_10.0.21.md
+    - 9.5.7 <--> C60: Development/DbVisualizer_10.0.1.md
+  - HUE:
+    - 4.0.1 <--> C70: Development/HUE.md
+  - Jupyter Notebook:
+    - 2.4.4.0 <--> C70: Development/Jupyter_Notebook.md
+  - RStudio:
+    - 3.4.1 <--> C60: Development/RStudio.md
+    - 3.4.1 <--> C70: Development/RStudio.md
+  - SQuirreL:
+    - 3.9.1 <--> 6.5: Development/Squirrel_3.9.1.md
+  - Squirrel:
+    - 3.7.1 <--> C60: Development/Squirrel_3.8.0.md
+    - 3.8.0 <--> C70: Development/Squirrel_3.8.0.md
+  - Zeppelin:
+    - 0.7.2 <--> C60: Development/Zeppelin_0.7.2.md
+    - 0.7.3 <--> C70: Development/Zeppelin_0.7.3.md
+    - 0.7.3 <--> C80: Development/Zeppelin_0.7.3.md
+    - 0.8.0 <--> C80: Development/Zeppelin_0.8.0.md
 - 其他:
-  - 对接FUSE: Other/FUSE.md
-  - 对接Gis-Tools-For-Hadoop: Other/GIS_Tools.md
-  - 对接Apache Livy: Other/Apache_Livy.md
-  - 对接Logstash: Other/Elasticsearch_Related.md
-  - 对接Kibana: Other/Elasticsearch_Related.md
-  - 对接elasticsearch-head: Other/Elasticsearch_Related.md
-  - 对接beats: Other/Elasticsearch_Related.md
+  - Apache Livy:
+    - 0.5.0 <--> C80: Other/Apache_Livy_0_5_0.md
+    - 0.6.0 <--> 6.5: Other/Apache_Livy_0_6_0.md
+  - GIS Tools for Hadoop:
+    - 1.0 <--> C60: Other/GIS_Tools.md
+  - IBM WAS:
+    - 8.5.5.9 <--> C50: Other/IBM_WAS.md
+  - Kibana:
+    - 6.1.3 <--> C80: Other/Elasticsearch_Related.md
+  - Logstash:
+    - 6.4.2 <--> C80: Other/Elasticsearch_Related.md
+  - NeoKylin:
+    - 6.9 <--> C70: Other/NeoKylin.md
+    - 7.2 <--> C70: Other/NeoKylin.md
+- SQL分析:
+  - Apache Kylin:
+    - 1.6.0 <--> C60: SQL_Analytics/Apache_Kylin_1.6.0.md
+    - 2.1.0 <--> C70: SQL_Analytics/Apache_Kylin_2.1.0.md
+    - 2.3.1 <--> C80: SQL_Analytics/Apache_Kylin_2.3.1.md
+    - 2.6.1 <--> 6.5: SQL_Analytics/Apache_Kylin_2.6.1.md
+  - Kyligence Analytics Platform:
+    - 2.2 <--> C60: SQL_Analytics/Kyligence.md
+    - 2.3 <--> C60: SQL_Analytics/Kyligence.md
+    - 2.4 <--> C70: SQL_Analytics/Kyligence.md
+    - 2.5 <--> C70: SQL_Analytics/Kyligence.md
+    - 3.0 <--> C80: SQL_Analytics/Kyligence.md
+  - Presto:
+    - 0.155 <--> C60: SQL_Analytics/Presto_0.155.md
+    - 0.184 <--> C70: SQL_Analytics/Presto_0.184.md
+    - 0.196 <--> C80: SQL_Analytics/Presto_0.184.md
+    - 0.210 <--> C80: SQL_Analytics/Presto_0.210.md
+    - 0.210 <--> 6.5: SQL_Analytics/Presto_0.210.md
 
 extra:
   social:

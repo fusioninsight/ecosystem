@@ -1,4 +1,5 @@
-﻿<!-- ex_nonav -->
+
+<!-- ex_nonav -->
 
 # 智能数据生态地图
 
@@ -21,906 +22,877 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >6.5</td>
  </tr>
 </thead>
- <tr>
-  <td rowspan=10 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i><BR>数据可视化</td>
-  <td rowspan=4 >Tableau</td>
-  <td >10.0.0</td>
-  <td ><a href="Business_Intelligence/Tableau"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Business_Intelligence/Tableau"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
- </tr>
- <tr>
-  <td >10.1.4</td>
-  <td >　</td>
-  <td ><a
-  href="Business_Intelligence/Tableau"><span class="label label-Hive
-  ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >10.3.2</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Business_Intelligence/Tableau"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >10.5.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Business_Intelligence/Tableau"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >QlikView</td>
-  <td >12</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a href="Business_Intelligence/QlikView"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Business_Intelligence/QlikView"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Business_Intelligence/QlikView"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a
-  href="Business_Intelligence/QlikView"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></a></td>
- </tr>
- <tr>
-  <td >QlikSense</td>
-  <td >3.2.4</td>
-  <td >　</td>
-  <td >　</td>
-  <td >Hive<br>
-    SparkSQL</td>
-  <td >　</td>
-  <td >Hive<br>
-    SparkSQL</td>
- </tr>
- <tr>
-  <td >SmartBI</td>
-  <td >7.2.32464.17374</td>
-  <td >　</td>
-  <td >　</td>
-  <td >Hive<br>
-    SparkSQL</td>
-  <td >　</td>
-  <td class=xl7128816>　</td>
- </tr>
- <tr>
-  <td rowspan=2 >Oracle BIEE</td>
-  <td >11g</td>
-  <td >　</td>
-  <td ><a href="Business_Intelligence/Oracle_BIEE"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Business_Intelligence/Oracle_BIEE"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL
-  ">SparkSQL</span></br><span class="label
-  label-ELK ">ELK</span></br><span class="label
-  label-GaussDB ">GaussDB</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >12c</td>
-  <td >　</td>
-  <td ><a href="Business_Intelligence/Oracle_BIEE"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Business_Intelligence/Oracle_BIEE"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL
-  ">SparkSQL</span></br><span class="label
-  label-ELK ">ELK</span></br><span class="label
-  label-GaussDB ">GaussDB</span></a></td>
-  <td >　</td>
-  <td ><a
-  href="Business_Intelligence/Oracle_BIEE"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></br><span
-  class="label label-ELK ">ELK</span></br><span
-  class="label label-GaussDB ">GaussDB</span></a></td>
- </tr>
- <tr>
-  <td >IBM Cognos</td>
-  <td >10.2.2fp4</td>
-  <td >　</td>
-  <td >Hive</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=6 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></i><BR>数据分析</td>
-  <td >SAS Access for Hadoop<br>
-    SAS HPA<br>
-    SAS EP</td>
-  <td >9.4M3</td>
-  <td >HDFS<br>
-    Hive</td>
-  <td ><a
-  href="http://support.huawei.com/enterprise/zh/doc/EDOC1000130490"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td ><a
-  href="http://support.huawei.com/enterprise/zh/doc/EDOC1000175643"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td ><a
-  href="http://support.huawei.com/enterprise/zh/doc/EDOC1100020168"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >IBM SPSS Analytic Server</td>
-  <td >3.1.0</td>
-  <td >　</td>
-  <td ><a
-  href="https://www.ibm.com/support/knowledgecenter/SSWLVY_3.1.0/analytic_server_install_ddita/analytic_server/installation/fusioninsight_container.html"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Spark ">Spark</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Alteryx</td>
-  <td >11.0.2.25199</td>
-  <td >　</td>
-  <td >HDFS<br>
-    Hive<br>
-    SparkSQL</td>
-  <td >　</td>
-  <td ><a href="Data_Analysis/Alteryx"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></a></td>
-  <td ><a href="Data_Analysis/Alteryx"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></a></td>
- </tr>
- <tr>
-  <td >RapidMiner</td>
-  <td >8.2.001</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Analysis/RapidMiner"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-MapReduce ">MapReduce</span></br><span class="label
-  label-Spark ">Spark</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Splunk</td>
-  <td >7.2.4</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Analysis/Splunk"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
-  <td ><a
-  href="Data_Analysis/Splunk"><span class="label label-HDFS
-  ">HDFS</span></a></td>
- </tr>
- <tr>
-  <td >永洪一站式大数据分析平台</td>
-  <td >7.1</td>
-  <td >　</td>
-  <td >Hive<br>
-    SparkSQL</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=20 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><BR>数据集成</td>
-  <td rowspan=2 >IBM InfoSphere DataStage</td>
-  <td >11.3.1.0</td>
-  <td ><a href="Data_Integration/IBM_InfoSphere_DataStage"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >11.5.0.2</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/IBM_InfoSphere_DataStage"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Phoenix
-  ">Phoenix</span></br><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-SparkSQL ">SparkSQL</span></br><span
-  class="label label-Kafka ">Kafka</span></br><span
-  class="label label-GaussDB ">GaussDB</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >IBM InfoSphere CDC</td>
-  <td >11.3.3.1</td>
-  <td >HDFS</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >Oracle GoldenGate</td>
-  <td >12.2.0.1.1</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Oracle_GoldenGate"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Flume ">Flume</span></br><span
-  class="label label-Kafka ">Kafka</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Data_Integration/Oracle_GoldenGate"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Flume ">Flume</span></br><span class="label
-  label-Kafka ">Kafka</span></a></td>
- </tr>
- <tr>
-  <td >12.3.1.1.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Oracle_GoldenGate"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Flume ">Flume</span></br><span
-  class="label label-Kafka ">Kafka</span></a></td>
-  <td ><a href="Data_Integration/Oracle_GoldenGate"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Flume ">Flume</span></br><span
-  class="label label-Kafka ">Kafka</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Informatica BDM(native)</td>
-  <td >10.0.0</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive</td>
-  <td >　</td>
-  <td >HDFS<br>
-    Hive</td>
-  <td >HDFS<br>
-    Hive</td>
- </tr>
- <tr>
-  <td >Informatica BDM(push down)</td>
-  <td >10.2.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive<br>
-    Yarn</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Informatica
-  PWX CDC</td>
-  <td >10.2.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Data_Integration/Informatica_PWX_CDC"><span class="label
-  label-Kafka ">Kafka</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Informatica
-  PowerCenter</td>
-  <td >10.2.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Informatica_PowerCenter"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=3 >Talend</td>
-  <td >6.3.1</td>
-  <td >　</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >6.4.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Talend"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
-  <td ><a href="Data_Integration/Talend"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >7.0.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Talend"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
-  <td ><a href="Data_Integration/Talend"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Apache
-  NiFi</td>
-  <td >1.7.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a href="Data_Integration/Apache_NiFi"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-Spark ">Spark</span></br><span
-  class="label label-Kafka ">Kafka</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Kettle</td>
-  <td >6.1</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Kettle_6.1"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td ><a href="Data_Integration/Kettle_6.1"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td ><a href="Data_Integration/Kettle_6.1"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >Pentaho</td>
-  <td >7.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td >HDFS<br>
-    Hive</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >8.0</td>
-  <td >　</td>
-  <td >HDFS<br>
-    Hive</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Knime</td>
-  <td >3.6.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Data_Integration/Knime"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-Spark ">Spark</span></a></td>
-  <td ><a href="Data_Integration/Knime"><span class="label
-  label-HDFS ">HDFS</span></br><span class="label
-  label-Hive ">Hive</span></a></td>
- </tr>
- <tr>
-  <td >H2O.ai</td>
-  <td >3.24.0.2</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >HDFS<br>
-    GaussDB</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Kafka
-  Manager</td>
-  <td >1.3.3.21</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Data_Integration/Kafka_Manager"><span class="label
-  label-Kafka ">Kafka</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >杭州合众UTL</td>
-  <td >5.1</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive<br>
-    Kafka</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=12 ><i class="fa fa-code fa-2x" aria-hidden="true"></i><BR>集成开发环境</td>
-  <td >RStudio</td>
-  <td >1.0.153</td>
-  <td >　</td>
-  <td ><a
-  href="Development/RStudio"><span class="label label-SparkR
-  ">SparkR</span></a></td>
-  <td ><a
-  href="Development/RStudio"><span class="label label-SparkR
-  ">SparkR</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=3 >Apache Zepplin</td>
-  <td >0.7.2</td>
-  <td >　</td>
-  <td ><a href="Development/Zeppelin_0.7.2"><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-Spark ">Spark</span></br><span
-  class="label label-SparkR ">SparkR</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >0.7.3</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Development/Zeppelin_0.7.3"><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-Spark ">Spark</span></br><span
-  class="label label-SparkR ">SparkR</span></a></td>
-  <td ><a href="Development/Zeppelin_0.7.3"><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-Spark ">Spark</span></br><span
-  class="label label-SparkR ">SparkR</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >0.8.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a href="Development/Zeppelin_0.8.0"><span
-  class="label label-HBase ">HBase</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-Spark ">Spark</span></br><span
-  class="label label-SparkR ">SparkR</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Jypyter Notebook</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Development/Jupyter_Notebook"><span
-  class="label label-pySpark ">pySpark</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >DBeaver</td>
-  <td >4.0.8</td>
-  <td >　</td>
-  <td ><a href="Development/DBeaver"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >4.2.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Development/DBeaver"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >DbVisualizer</td>
-  <td >9.5.7</td>
-  <td >　</td>
-  <td ><a href="Development/DbVisualizer"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >10.0.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Development/DbVisualizer"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >Squirrel</td>
-  <td >3.7.1</td>
-  <td >　</td>
-  <td ><a href="Development/Squirrel"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >3.8.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="Development/Squirrel"><span class="label
-  label-Phoenix ">Phoenix</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-SparkSQL ">SparkSQL</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >HUE</td>
-  <td >4.0.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td >HDFS<br>
-    HBase<br>
-    Hive<br>
-    Spark</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=12 ><i class="fa fa-search fa-2x" aria-hidden="true"></i><BR>SQL分析</td>
-  <td rowspan=4 >Apache Kylin</td>
-  <td >1.6.0</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Apache_Kylin_1.6.0"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.1.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Apache_Kylin_2.1.0"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.3.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a href="SQL_Analytics/Apache_Kylin_2.3.1"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-HBase ">HBase</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.6.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><u style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a
-  href="SQL_Analytics/Apache_Kylin_2.6.1"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></a></td>
- </tr>
- <tr>
-  <td rowspan=5 >Kyligence</td>
-  <td >2.2</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Kyligence"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td class=xl7128816>　</td>
- </tr>
- <tr>
-  <td >2.3</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Kyligence"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.4</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Kyligence"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.5</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Kyligence"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >3.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Kyligence"><span class="label
-  label-Hive ">Hive</span></br><span class="label
-  label-HBase ">HBase</span></br><span class="label
-  label-Yarn ">Yarn</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=3 >Presto</td>
-  <td >0.155</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Presto_0.155"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >0.184</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Presto_0.184"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >0.210</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a href="SQL_Analytics/Presto_0.210"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-ElasticSearch ">ElasticSearch</span></a></td>
-  <td ><a href="SQL_Analytics/Presto_0.210"><span
-  class="label label-HDFS ">HDFS</span></br><span
-  class="label label-Hive ">Hive</span></a></td>
- </tr>
- <tr>
-  <td rowspan=4 ><i class="fa fa-database fa-2x" aria-hidden="true"></i><BR>数据库</td>
-  <td >SAP HANA</td>
-  <td >100_120_0-10009569</td>
-  <td >Hive</td>
-  <td >Hive</td>
-  <td ><a
-  href="http://support.huawei.com/enterprise/zh/doc/EDOC1000175643"><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td ><a
-  href="http://support.huawei.com/enterprise/zh/doc/EDOC1100020168"><span
-  class="label label-Hive ">Hive</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >SAP VORA</td>
-  <td >2.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >Spark</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >2.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td >Spark</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >杭州合众UDB</td>
-  <td >6.1</td>
-  <td >GaussDB</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=10 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i><BR>其他</td>
-  <td >FUSE</td>
-  <td >2.8.3</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a
-  href="Other/FUSE"><span class="label label-HDFS
-  ">HDFS</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >gis-tools-for-hadoop</td>
-  <td >github</td>
-  <td ><u
-  style='visibility:hidden;mso-ignore:visibility'>　</u></td>
-  <td ><a href="Other/GIS_Tools_for_Hadoop"><span
-  class="label label-Hive ">Hive</span></br><span
-  class="label label-MapReduce ">MapReduce</span></a></td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >IBM WAS</td>
-  <td >8.5.5.9</td>
-  <td >IBM_JDK</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Apache Livy</td>
-  <td >0.5.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Other/Apache_Livy"><span class="label label-Spark
-  ">Spark</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Logstash</td>
-  <td >6.4.2</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Other/Elasticsearch_Related"><span class="label
-  label-ElasticSearch ">ElasticSearch</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >Kibana</td>
-  <td >6.1.3</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Other/Elasticsearch_Related"><span class="label
-  label-ElasticSearch ">ElasticSearch</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >elasticsearch-head</td>
-  <td >1.0</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Other/Elasticsearch_Related"><span class="label
-  label-ElasticSearch ">ElasticSearch</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >beats</td>
-  <td >6.5.1</td>
-  <td >　</td>
-  <td >　</td>
-  <td >　</td>
-  <td ><a
-  href="Other/Elasticsearch_Related"><span class="label
-  label-ElasticSearch ">ElasticSearch</span></a></td>
-  <td >　</td>
- </tr>
- <tr>
-  <td rowspan=2 >NeoKylin</td>
-  <td >6.9</td>
-  <td >　</td>
-  <td >　</td>
-  <td >OS</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
- <tr>
-  <td >7.2</td>
-  <td >　</td>
-  <td >　</td>
-  <td >OS</td>
-  <td >　</td>
-  <td >　</td>
- </tr>
 
+
+<tr><td rowspan=17 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
+<td rowspan=1 >IBM Cognos</td>
+<td>10.2.2fp4</td>
+<td></td>
+<td><a href="Business_Intelligence/IBM_Cognos"><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=5 >Oracle BIEE</td>
+<td>11g</td>
+<td></td>
+<td><a href="Business_Intelligence/Oracle_BIEE"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11g</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/Oracle_BIEE"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12c</td>
+<td></td>
+<td><a href="Business_Intelligence/Oracle_BIEE"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12c</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/Oracle_BIEE"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12c</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/Oracle_BIEE"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+</tr>
+<tr>
+<td rowspan=2 >Qlik Sense</td>
+<td>3.2.4</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/QlikSense"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3.2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/QlikSense"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=4 >QlikView</td>
+<td>12</td>
+<td></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >SmartBI</td>
+<td>7.2.32464.17374</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/SmartBI"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=4 >Tableau</td>
+<td>10.0.0</td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.4</td>
+<td></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.3.2</td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.5.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+</tr>
+<tr><td rowspan=7 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
+<td rowspan=3 >Alteryx</td>
+<td>2018.2.5.48994</td>
+<td></td>
+<td><a href="Data_Analysis/Alteryx"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2018.2.5.48994</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/Alteryx"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>2018.2.5.48994</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/Alteryx"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Rapidminer Studio</td>
+<td>8.2.001</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/RapidMiner"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >Splunk</td>
+<td>7.2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/Splunk"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>7.2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/Splunk"><span class="label label-HDFS ">HDFS</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >永洪一站式大数据分析平台</td>
+<td>7.1</td>
+<td></td>
+<td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td rowspan=35 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<td rowspan=2 >Apache NiFi</td>
+<td>1.7.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Apache_NiFi"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>1.9.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Apache_NiFi"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+</tr>
+<tr>
+<td rowspan=2 >Confluent</td>
+<td>4.1.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>4.1.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+</tr>
+<tr>
+<td rowspan=2 >Denodo Platform</td>
+<td>7.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>7.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >H2O.ai</td>
+<td>3.24.0.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/H2O.ai"><span class="label label-HDFS ">HDFS</span></br><span class="label label-GuassDB ">GuassDB</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >IBM InfoSphere CDC</td>
+<td>11.3.3.1</td>
+<td><a href="Data_Integration/IBM_InfoSphere_CDC"><span class="label label-HDFS ">HDFS</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >IBM InfoSphere DataStage</td>
+<td>11.3.1.0</td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11.5.0.2</td>
+<td></td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >Informatica PowerCenter</td>
+<td>10.2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_PowerCenter"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>10.2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_PowerCenter"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Informatica PowerexChange CDC</td>
+<td>10.2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_PWX_CDC"><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=5 >Informatica</td>
+<td>10.0.0</td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_BDM_PushDown"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.2.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Kafka Manager</td>
+<td>1.3.3.21</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Kafka_Manager"><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=3 >Kettle</td>
+<td>6.1</td>
+<td></td>
+<td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6.1</td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >Knime</td>
+<td>3.6.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>3.6.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=4 >Oracle GoldenGate</td>
+<td>12.2</td>
+<td></td>
+<td><a href="Data_Integration/Oracle_GoldenGate"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Oracle_GoldenGate"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+</tr>
+<tr>
+<td>12.3</td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Oracle_GoldenGate"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Oracle_GoldenGate"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >Pentaho</td>
+<td>7.1</td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Pentaho"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8.0</td>
+<td></td>
+<td><a href="Data_Integration/Pentaho"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=3 >Talend</td>
+<td>6.4.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Talend_6.4.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>7.0.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Talend_6.4.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>7.2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Talend_7.2.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Tibco BW</td>
+<td>5.13</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/TIBCO_BusinessWorks"><span class="label label-GuassDB ">GuassDB</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >杭州合众UTL</td>
+<td>5.1</td>
+<td><a href="Data_Integration/杭州合众UTL"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td rowspan=5 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>数据库 </td>
+<td rowspan=2 >Aapache Druid</td>
+<td>0.14.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Database/apache_druid_0.14.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.15.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Database/apache_druid_0.15.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >SAP VORA</td>
+<td>2.0</td>
+<td></td>
+<td></td>
+<td><a href="Database/SAP_VORA"><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.1</td>
+<td></td>
+<td></td>
+<td><a href="Database/SAP_VORA"><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >杭州合众UDB</td>
+<td>6.1</td>
+<td><a href="Database/杭州合众UDB"><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td rowspan=17 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<td rowspan=3 >DBeaver</td>
+<td>4.0.8</td>
+<td></td>
+<td><a href="Development/DBeaver_4.2.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4.2.1</td>
+<td></td>
+<td></td>
+<td><a href="Development/DBeaver_4.2.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6.1.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/DBeaver_6.1.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=3 >DbVisualizer</td>
+<td>10.0.1</td>
+<td></td>
+<td></td>
+<td><a href="Development/DbVisualizer_10.0.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.0.21</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/DbVisualizer_10.0.21"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td>9.5.7</td>
+<td></td>
+<td><a href="Development/DbVisualizer_10.0.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >HUE</td>
+<td>4.0.1</td>
+<td></td>
+<td></td>
+<td><a href="Development/HUE"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >Jupyter Notebook</td>
+<td>2.4.4.0</td>
+<td></td>
+<td></td>
+<td><a href="Development/Jupyter_Notebook"><span class="label label-pySpark ">pySpark</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >RStudio</td>
+<td>3.4.1</td>
+<td></td>
+<td><a href="Development/RStudio"><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3.4.1</td>
+<td></td>
+<td></td>
+<td><a href="Development/RStudio"><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >SQuirreL</td>
+<td>3.9.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Squirrel_3.9.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=2 >Squirrel</td>
+<td>3.7.1</td>
+<td></td>
+<td><a href="Development/Squirrel_3.8.0"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3.8.0</td>
+<td></td>
+<td></td>
+<td><a href="Development/Squirrel_3.8.0"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=4 >Zeppelin</td>
+<td>0.7.2</td>
+<td></td>
+<td><a href="Development/Zeppelin_0.7.2"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.7.3</td>
+<td></td>
+<td></td>
+<td><a href="Development/Zeppelin_0.7.3"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.7.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Zeppelin_0.7.3"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.8.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Zeppelin_0.8.0"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
+<td></td>
+</tr>
+<tr><td rowspan=8 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
+<td rowspan=2 >Apache Livy</td>
+<td>0.5.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/Apache_Livy_0_5_0"><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.6.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/Apache_Livy_0_6_0"><span class="label label-Spark2x ">Spark2x</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >GIS Tools for Hadoop</td>
+<td>1.0</td>
+<td></td>
+<td><a href="Other/GIS_Tools"><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >IBM WAS</td>
+<td>8.5.5.9</td>
+<td><a href="Other/IBM_WAS"><span class="label label-IBM_JDK ">IBM_JDK</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >Kibana</td>
+<td>6.1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/Elasticsearch_Related"><span class="label label-ElasticSearch组件非安全模式 ">ElasticSearch组件非安全模式</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >Logstash</td>
+<td>6.4.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/Elasticsearch_Related"><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >NeoKylin</td>
+<td>6.9</td>
+<td></td>
+<td></td>
+<td><a href="Other/NeoKylin"><span class="label label-OS ">OS</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7.2</td>
+<td></td>
+<td></td>
+<td><a href="Other/NeoKylin"><span class="label label-OS ">OS</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td rowspan=14 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
+<td rowspan=4 >Apache Kylin</td>
+<td>1.6.0</td>
+<td></td>
+<td><a href="SQL_Analytics/Apache_Kylin_1.6.0"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.1.0</td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Apache_Kylin_2.1.0"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Apache_Kylin_2.3.1"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>2.6.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Apache_Kylin_2.6.1"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=5 >Kyligence Analytics Platform</td>
+<td>2.2</td>
+<td></td>
+<td><a href="SQL_Analytics/Kyligence"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.3</td>
+<td></td>
+<td><a href="SQL_Analytics/Kyligence"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.4</td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Kyligence"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2.5</td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Kyligence"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Kyligence"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=5 >Presto</td>
+<td>0.155</td>
+<td></td>
+<td><a href="SQL_Analytics/Presto_0.155"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.184</td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Presto_0.184"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.196</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Presto_0.184"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.210</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Presto_0.210"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.210</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Presto_0.210"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
 </table>

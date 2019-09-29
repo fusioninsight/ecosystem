@@ -1,11 +1,18 @@
-<!-- ex_nonav -->
+<!-- ignore -->
 
 # 其他
 
-* [对接FUSE](FUSE.md)
-* [对接Gis-Tools-For-Hadoop](GIS_Tools.md)
-* [对接Apache Livy](Apache_Livy.md)
-* [对接Logstash](Elasticsearch_Related.md)
-* [对接Kibana](Elasticsearch_Related.md)
-* [对接ElasticSearch-head](Elasticsearch_Related.md)
-* [对接beats](Elasticsearch_Related.md)
+* Apache Livy
+  * [0.5.0 <--> C80](Apache_Livy_0_5_0.md)
+  * [0.6.0 <--> 6.5](Apache_Livy_0_6_0.md)
+* GIS Tools for Hadoop
+  * [1.0 <--> C60](GIS_Tools.md)
+* IBM WAS
+  * [8.5.5.9 <--> C50](IBM_WAS.md)
+* Kibana
+  * [6.1.3 <--> C80](Elasticsearch_Related.md)
+* Logstash
+  * [6.4.2 <--> C80](Elasticsearch_Related.md)
+* NeoKylin
+  * [6.9 <--> C70](NeoKylin.md)
+  * [7.2 <--> C70](NeoKylin.md)
