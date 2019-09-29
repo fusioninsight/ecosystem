@@ -8,15 +8,15 @@
 >
 > Informatica 10.0.0  <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive)
 >
-> Informatica 10.2.2  <--> FusionInsight HD 6.5 (HDFS/Hive)
+> Informatica 10.2.2  <--> FusionInsight HD 6.5 (HDFS/HBase/Hive)
 >
->注：以上对接测试Informatica BDM采用的是Native Engine。
+>注：以上对接测试Informatica BDM采用的是Native Engine。Informatica 10.2.2对接FusionInsight HD 6.5 HBase组件时，需要Zookeeper组件配置enforce.auth.enabled=false，否则对接失败。
 
 ## 简介
 
 Informatica用于管理大数据工程的工具主要有Informatica Administrator、Infoormatica Analyst和Informatica Developer。
 
-本文档主要描述Linux操作系统安装Informatica 10.2.2服务端（Informatica Administrator）并使用Oracle数据库管理域数据、连接数据等，在Window操作系统安装Informatica客户端Big Data Developuser（Informatica Developer其中一种工具）。Informatica服务端与FusionInsight HD的HDFS和Hive对接成功后，通过Informatica的Big Data Developer客户端实现Oracle数据库、HDFS、Hive三者之间数据互传。
+本文档主要描述Linux操作系统安装Informatica 10.2.2服务端（Informatica Administrator）并使用Oracle数据库管理域数据、连接数据等，在Window操作系统安装Informatica客户端Big Data Developuser（Informatica Developer其中一种工具）。Informatica服务端与FusionInsight HD的HDFS和Hive对接成功后，通过Informatica的Big Data Developer客户端实现Oracle数据库、HDFS、Hive、HBase之间数据互传。
 
 本文档的描述使用的Informatic Server安装节点的IP为172.16.6.120，主机名为172-16-6-120。对接的FusionInsight HD集群节点的IP分别是172.16.4.21/172.16.4.22/172.16.4.23.
 
@@ -517,6 +517,34 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
     INSERT INTO user_oracle_out VALUES (52,'Tom-in-oracle');
     ```
 
+  * **HBase**
+
+    登录FusionInsight集群客户端，使用hbase shell创建两个表分别命名为 **USER_HBASE_IN** 和 **USER_HBASE_OUT**。
+
+    **创建命名空间INFA：**
+    ```
+    hbase shell
+    create_namespace 'INFA'
+    ```
+
+    **创建USER_HBASE_IN表示例如下：**
+
+    ```
+    create 'INFA.USER_HBASE_IN',{NAME=>'cf1'},{NAME=>'cf2'}
+    ```
+
+    **创建USER_HBASE_OUT表示例如下：**
+
+    ```
+    create 'INFA.USER_HBASE_OUT',{NAME=>'cf1'},{NAME=>'cf2'}
+    put 'INFA.USER_HBASE_OUT', '001','cf1:id','60'
+    put 'INFA.USER_HBASE_OUT', '001','cf1:name','Andy-in-HBase'
+    put 'INFA.USER_HBASE_OUT', '002','cf1:id','61'
+    put 'INFA.USER_HBASE_OUT', '002','cf1:name','Benny-in-HBase'
+    put 'INFA.USER_HBASE_OUT', '003','cf1:id','62'
+    put 'INFA.USER_HBASE_OUT', '003','cf1:name','Tom-in-HBase'
+    ```
+
 ### 操作步骤
 
 #### 建立项目
@@ -573,19 +601,53 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
 ##### 创建关系数据对象 - Hive
 
-  * 右键 **fi_project**，选择 **新建->数据对象**。
+* 右键 **fi_project**，选择 **新建->数据对象**。
 
-    ![](assets/Informatica_BDM_10.2.2/3868aafc.png)
+  ![](assets/Informatica_BDM_10.2.2/3868aafc.png)
 
-  * 选择 **关系数据对象**，点击 **下一步**。
+* 选择 **关系数据对象**，点击 **下一步**。
 
-    ![](assets/Informatica_BDM_10.2.2/b6574826.png)
+  ![](assets/Informatica_BDM_10.2.2/b6574826.png)
 
-  * 点击“连接”的 **浏览** 按钮，选择连接 **HIVE_fusionginsighthd**。选择 **从现有资源创建数据对象**，点击“资源”的 **浏览** 按钮选择表 **user_hive_in** 和 **user_hive_out**。点击 **完成**。
+* 点击“连接”的 **浏览** 按钮，选择连接 **HIVE_fusionginsighthd**。选择 **从现有资源创建数据对象**，点击“资源”的 **浏览** 按钮选择表 **user_hive_in** 和 **user_hive_out**。点击 **完成**。
 
-    ![](assets/Informatica_BDM_10.2.2/23a30273.png)
+  ![](assets/Informatica_BDM_10.2.2/23a30273.png)
 
-    ![](assets/Informatica_BDM_10.2.2/bb69c736.png)
+  ![](assets/Informatica_BDM_10.2.2/bb69c736.png)
+
+##### 创建HBase数据对象
+
+* 登录FusionInsight Manager将Zookeeper组件的配置 **enforce.auth.enabled** 修改为 **false** 保存后，并 **重启** Zookeeper以及其上层服务。
+
+  ![](assets/Informatica_BDM_10.2.2/a3e45527.png)
+
+* 右键 **fi_project**，选择 **新建->数据对象**。
+
+  ![](assets/Informatica_BDM_10.2.2/3868aafc.png)
+
+* 选择 **HBase数据对象**，点击 **下一步**。
+
+  ![](assets/Informatica_BDM_10.2.2/2bb67709.png)
+
+* “名称”自定义为 **USER_HBASE_IN**，点击“连接”的 **浏览** 按钮，选择连接 **HBASE_fusionginsighthd**。选择 **从现有资源创建数据对象**，点击“选定资源”的 **添加** 按钮选择表 **INFA.USER_HBASE_IN** 。点击 **下一步**。
+
+  ![](assets/Informatica_BDM_10.2.2/4804b893.png)
+
+* 勾选 **cf1**，选择 **添加列**，点击 **添加** 按钮添加两列名称分别为 **id** 和 **name**。点击 **下一步**。
+
+  ![](assets/Informatica_BDM_10.2.2/5b2bb1ab.png)
+
+* 勾选 **包含行ID**，点击 **下一步**。
+
+  ![](assets/Informatica_BDM_10.2.2/86ff8bff.png)
+
+* 点击 **完成**。
+
+  ![](assets/Informatica_BDM_10.2.2/375b60d8.png)
+
+* 同样地新增HBase表 **INFA.USER_HBASE_OUT**。
+
+  ![](assets/Informatica_BDM_10.2.2/f530ffd1.png)
 
 #### Informatica BDM对接FusionInsight HDFS
 
@@ -647,8 +709,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   ![](assets/Informatica_BDM_10.2.2/80174adb.png)
 
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
-
 ##### HDFS from Oracle
 
 获取Oracle数据库表USER_ORACLE_OUT的数据上传至FusionInsight HD的HDFS文件系统并命名为user_hdfs_from_oracle.csv。
@@ -686,8 +746,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 * mapping运行成功之后，登录FusionInsight集群客户端，执行 `hdfs dfs -cat /tmp/user_hdfs_from_oracle.csv`查看mapping产生的文件“user_hdfs_from_oracle.csv”。
 
   ![](assets/Informatica_BDM_10.2.2/52948d1c.png)
-
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
 
 ##### HDFS to Oracle
 
@@ -733,8 +791,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   ![](assets/Informatica_BDM_10.2.2/bedb307e.png)
 
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
-
 ##### HDFS to Hive
 
 将FusionInsight HD的HDFS系统文件user_hdfs_to_hive.csv数据上传至Hive数据库表user_hive_in。
@@ -777,8 +833,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
   ```
 
   ![](assets/Informatica_BDM_10.2.2/2c4dff4f.png)
-
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
 
 #### Informatica BDM对接FusionInsight Hive
 
@@ -824,8 +878,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   ![](assets/Informatica_BDM_10.2.2/9c25de2c.png)
 
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
-
 ##### Hive to Oracle
 
 将FusionInsight HD的Hive数据库表user_hive_out数据上传至Oracle数据库表USER_ORACLE_IN。
@@ -864,8 +916,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   ![](assets/Informatica_BDM_10.2.2/09177cd7.png)
 
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
-
 ##### Hive from Oracle
 
 获取Oracle数据库表USER_ORACLE_OUT的数据上传至FusionInsight HD的Hive数据库表user_hive_in。
@@ -902,8 +952,6 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
   ```
 
   ![](assets/Informatica_BDM_10.2.2/a744467b.png)
-
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
 
 ##### Hive to HDFS
 
@@ -947,7 +995,106 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
 
   ![](assets/Informatica_BDM_10.2.2/1fd52ab2.png)
 
-  >说明：如果mapping运行完成之后，没有写入数据或者mapping运行失败等，可以在Informatica Server安装节点查看mapping的运行日志。路径为$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms
+#### Informatica BDM对接FusionInsight HBase
+
+##### HBase to Local
+
+将FusionInsight HD的HBase表USER_HBASE_OUT数据下载至安装Informatica Server节点的本地文件`/tmp/user_local_from_hbase.csv`。
+
+* 参考创建“平面文件数据对象” **hdfs_from_local** 的操作步骤，创建“平面文件数据对象” **hbase_to_local**。
+
+  **hbase_from_local**的 **高级** 属性中，不需要设置 **运行时：读取** 的相关参数。设置 **运行时：写入** 的属性：“输出文件目录” 为 **/tmp/**，“输出文件名”为 **user_local_from_hbase.csv**。
+
+  ![](assets/Informatica_BDM_10.2.2/b84ef606.png)
+
+* 右键 **fi_project**，选择 **新建->映射**。
+
+  ![](assets/Informatica_BDM_10.2.2/eca86754.png)
+
+* “名称”自定义为 **hbase_to_local_mapping**，点击 **完成**。
+
+  ![](assets/Informatica_BDM_10.2.2/05464332.png)
+
+* “hbase_to_local_mapping”的配置如下：
+
+  将“物理数据对象” **HBASE_fusionginsighthd->USER_HBASE_OUT** 拖曳至 **默认视图** 中，并选择为 **读取**，点击 **新建操作**。
+
+  ![](assets/Informatica_BDM_10.2.2/01bba92c.png)
+
+  “名称”自定义为 **USER_HBASE_OUT_Read**，“功能”选择 **读取**，点击 **添加** 按钮选择 **INFA_USER_HBASE_OUT**，点击 **完成**。
+
+  ![](assets/Informatica_BDM_10.2.2/657e75bb.png)
+
+  “选择操作”为 **USER_HBASE_OUT_Read**，点击 **确定**。
+
+  ![](assets/Informatica_BDM_10.2.2/f7182941.png)
+
+  将“物理数据对象” **hbase_to_local** 拖曳至 **默认视图** 中，并选择为 **写入**。
+
+  将“USER_HBASE_OUT_Read”和“写入_hbase_to_local”对应的列连线。
+
+  点击mapping的空白处确认 **属性->运行时->验证环境** 为 **本地**。
+
+  ![](assets/Informatica_BDM_10.2.2/c83e999a.png)
+
+* 右键mapping的空白处，选择 **运行映射**。
+
+  ![](assets/Informatica_BDM_10.2.2/6d49f54b.png)
+
+* mapping运行成功之后，登录Informatica Server安装节点，查看文件`/tmp/user_local_from_hbase.csv`。
+
+  ```
+  cat /tmp/user_local_from_hbase.csv
+  ```
+
+  ![](assets/Informatica_BDM_10.2.2/f84207f6.png)
+
+##### HBase from Oracle
+
+获取Oracle数据库表USER_ORACLE_OUT的数据上传至FusionInsight HD的HBase表USER_HBASE_IN。
+
+* 右键 **fi_project**，选择 **新建->映射**。
+
+  ![](assets/Informatica_BDM_10.2.2/eca86754.png)
+
+* “名称”自定义为 **hbase_from_oracle_mapping**，点击 **完成**。
+
+  ![](assets/Informatica_BDM_10.2.2/d5f121c4.png)
+
+* “hbase_from_oracle_mapping”的配置如下：
+
+  将“物理数据对象” **ORACLE->USER_ORACLE_OUT** 拖曳至 **默认视图** 中，并选择为 **读取**。
+
+  将“物理数据对象” **HBASE_fusionginsighthd->USER_HBASE_IN** 拖曳至 **默认视图** 中，并选择为 **写入**，点击 **新建操作**。
+
+  ![](assets/Informatica_BDM_10.2.2/0bb0b10a.png)
+
+  “名称”自定义为 **USER_HBASE_IN_Write**，“功能”选择 **写入**，点击 **添加** 按钮选择 **INFA_USER_HBASE_IN**，点击 **完成**。
+
+  ![](assets/Informatica_BDM_10.2.2/d874c7ea.png)
+
+  “选择操作”为 **USER_HBASE_IN_Write**，点击 **确定**。
+
+  ![](assets/Informatica_BDM_10.2.2/05ed28a0.png)
+
+  将“读取_USER_ORACLE_OUT”和“USER_HBASE_IN_Write”对应的列连线。
+
+  点击mapping的空白处确认 **属性->运行时->验证环境** 为 **本地**。
+
+  ![](assets/Informatica_BDM_10.2.2/11dd79e9.png)
+
+* 右键mapping的空白处，选择 **运行映射**。
+
+  ![](assets/Informatica_BDM_10.2.2/58fc693d.png)
+
+* mapping运行成功之后，登录FusionInsight集群客户端，使用hbase shell客户端查询表 **INFA.USER_HBASE_IN** 数据。
+
+  ```
+  hbase shell
+  scan 'INFA.USER_HBASE_IN'
+  ```
+
+  ![](assets/Informatica_BDM_10.2.2/b05b5527.png)
 
 ## FAQ
 
@@ -994,3 +1141,33 @@ Informatica BDM对接FusionInsight HD的HDFS和Hive。通过Informatica的Big Da
     选择群集“FusionInsightHD”，点击 **hdfs_site_xml** 的编辑按钮，选中 **dfs.client.failover.proxy.provider.hacluster** 后点击 **编辑**，“覆盖的值”输入 **org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider**，点击 **确定**。点击 **确定** 完成修改。
 
     ![](assets/Informatica_BDM_10.2.2/e768f549.png)
+
+* **Big Data Developer添加Hbase数据对象时返回KeeperErrorCode = ConnectionLoss for /hbase**
+
+  **【问题描述】**
+
+  新建HBase数据对象，点击 **添加** 获取HBase表时，返回错误SDK_APP_COM_20000。
+  Java.lang.RuntionException:org.apache.hadoop.hbase.ZookeeperConnectionException: Can’t connet to Zookeeper
+  KeeperErrorCode = ConnectionLoss for /hbase
+
+  ![](assets/Informatica_BDM_10.2.2/1ab1d759.png)
+
+  FusionInsight HD的zookeeper日志，例如：`/var/log/Bigdata/zookeeper/quorumpeer/zookeeper-omm-server-euleros-hd01.log`，返回类似以下的错误：
+
+  ERROR | NIOWorkerThread-41 | Authentication failed as scheme is not valid: ['ip,'172.16.6.120], expected scheme zookeeper.enforce.auth.scheme=sasl
+
+  **【解决方法】**
+
+  将Zookeeper组件的配置 **enforce.auth.enabled** 修改为 **false** 保存后，并 **重启** Zookeeper以及其上层服务。
+
+  ![](assets/Informatica_BDM_10.2.2/a3e45527.png)
+
+* **如何查看mapping的日志**
+
+  **【问题描述】**
+
+  如果mapping运行完成之后，没有写入数据或者mapping运行失败等，如何获取mapping运行的详细日志？
+
+  **【解决方法】**
+
+  Mapping运行的日志存放于Informatica Server安装节点的`$INFA_HOME/logs/node01_172-16-6-120/services/DataIntegrationService/disLogs/ms`目录下。
