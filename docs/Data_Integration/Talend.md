@@ -1,11 +1,11 @@
 
 # Connection Instruction between Talend and FusionInsight
 
-
 ## Succeeded Case
->Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase Component)
+
+> Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive)
 >
->Talend 6.4.1 <--> FusionInsight HD V100R002C80SPC200(HDFS,HBase,Hive)
+> Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase)
 >
 >Note: Because of the version bug of Talend 7.0.1, Hive cannot be successfully connected. Using Talend 6.4.1 for substitution.
 

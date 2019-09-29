@@ -2,17 +2,15 @@
 
 ## Succeeded Case
 
-> Tableau 10.0.0 <-> FusionInsight HD V100R002C30
+> Tableau 10.0.0 <--> FusionInsight HD V100R002C30 (Hive/SparkSQL)
 >
-> Tableau 10.0.0 <-> FusionInsight HD V100R002C50
+> Tableau 10.0.0 <--> FusionInsight HD V100R002C50 (Hive/SparkSQL)
 >
-> Tableau 10.0.0 <-> FusionInsight HD V100R002C60U10
+> Tableau 10.1.4 <--> FusionInsight HD V100R002C60U20 (Hive/SparkSQL)
 >
-> Tableau 10.1.4 <-> FusionInsight HD V100R002C60U20
+> Tableau 10.3.2 <--> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL)
 >
-> Tableau 10.3.2 <-> FusionInsight HD V100R002C70SPC200
->
-> Tableau 10.5.0 <-> FusionInsight HD V100R002C80SPC100
+> Tableau 10.5.0 <--> FusionInsight HD V100R002C80SPC100 (Hive/SparkSQL)
 
 
 ## Configure the Kerberos on Windows

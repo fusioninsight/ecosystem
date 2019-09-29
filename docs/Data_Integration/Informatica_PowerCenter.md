@@ -2,7 +2,7 @@
 
 ## Succeeded Case
 
-> Informatica PowerCenter 10.2.0 <--> FusionInsight HD 6.5
+> Informatica PowerCenter 10.2.0 <--> FusionInsight HD 6.5 (HDFS/Hive)
 
 ## Environment Information
 

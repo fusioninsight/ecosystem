@@ -2,11 +2,11 @@
 
 ## Case
 
-> QlikView 12 <-> FusionInsight HD V100R002C60U20
+> QlikView 12 <--> FusionInsight HD V100R002C60U20 (Hive/SparkSQL)
 >
-> QlikView 12 <-> FusionInsight HD V100R002C70SPC200
+> QlikView 12 <-> FusionInsight HD V100R002C70SPC200 (Hive/SparkSQL)
 >
-> QlikView 12 <-> FusionInsight HD V100R002C80SPC100
+> QlikView 12 <-> FusionInsight HD V100R002C80SPC100 (Hive/SparkSQL)
 
 ## Configuring kerberos authentication for Windows
 

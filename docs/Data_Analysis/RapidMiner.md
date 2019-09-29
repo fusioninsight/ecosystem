@@ -2,7 +2,7 @@
 
 ##  Succeeded Case
 
-> Rapidminer Studio 8.2.001 <-> FusionInsight HD V100R002C80SPC200
+> Rapidminer Studio 8.2.001 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/MapReduce/Spark)
 
 ##preparation
 

@@ -2,7 +2,7 @@
 
 ## Succeeded Case
 
-> Informatica PowerexChange CDC 10.2.0 <--> FusionInsight HD 6.5
+> Informatica PowerexChange CDC 10.2.0 <--> FusionInsight HD 6.5 (Kafka)
 
 ## Environment Information
 
