@@ -56,7 +56,7 @@
 .tg td {
   font-family:Arial, sans-serif;
   font-size:14px;
-  padding:10px 5px;
+  padding:5px 5px;
   border-style:solid;
   border-width:1px;
   overflow:hidden;
@@ -98,7 +98,7 @@
     background-color: #5cb85c;
 }
 
-.label-Spark , .label-SparkR , .label-pySpark , .label-SparkSQL {
+.label-Spark, .label-Spark2x, .label-SparkR, .label-pySpark, .label-SparkSQL {
     background-color: #e77215e3;
 }
 
@@ -122,7 +122,7 @@
     background-color: #7D26CD;
 }
 
-.label-GaussDB , .label-ELK{
+.label-GaussDB, .label-ELK{
     background-color: #336791;
 }
 
