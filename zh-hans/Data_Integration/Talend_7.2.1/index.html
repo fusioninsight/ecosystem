@@ -1,0 +1,4195 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>7.2.1 <--> 6.5 - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#talendfusioninsight" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              7.2.1 <--> 6.5
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      IBM Cognos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        IBM Cognos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/IBM_Cognos/" title="10.2.2fp4 C60" class="md-nav__link">
+      10.2.2fp4 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Oracle BIEE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2">
+        Oracle BIEE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C60" class="md-nav__link">
+      11g <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C70" class="md-nav__link">
+      11g <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C60" class="md-nav__link">
+      12c <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C70" class="md-nav__link">
+      12c <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c 6.5" class="md-nav__link">
+      12c <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Qlik Sense
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-3">
+        Qlik Sense
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 C70" class="md-nav__link">
+      3.2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 6.5" class="md-nav__link">
+      3.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+    
+    <label class="md-nav__link" for="nav-1-4">
+      QlikView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-1-4">
+        QlikView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+      12 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+      12 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+      12 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 6.5" class="md-nav__link">
+      12 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      SmartBI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-1-5">
+        SmartBI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/SmartBI/" title="7.2.32464.17374 C70" class="md-nav__link">
+      7.2.32464.17374 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+    
+    <label class="md-nav__link" for="nav-1-6">
+      Tableau
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-1-6">
+        Tableau
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+      10.1.4 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+      10.3.2 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+      10.5.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Alteryx
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Alteryx
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C60" class="md-nav__link">
+      2018.2.5.48994 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C80" class="md-nav__link">
+      2018.2.5.48994 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 6.5" class="md-nav__link">
+      2018.2.5.48994 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Rapidminer Studio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2">
+        Rapidminer Studio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+      8.2.001 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Splunk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3">
+        Splunk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 C80" class="md-nav__link">
+      7.2.4 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 6.5" class="md-nav__link">
+      7.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      永洪一站式大数据分析平台
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-4">
+        永洪一站式大数据分析平台
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/永洪一站式大数据分析平台/" title="7.1 C60" class="md-nav__link">
+      7.1 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Apache NiFi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Apache NiFi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+      1.7.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="1.9.2 6.5" class="md-nav__link">
+      1.9.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Confluent
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2">
+        Confluent
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Confluent_4_1_0/" title="4.1.0 C80" class="md-nav__link">
+      4.1.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Confluent_4_1_0/" title="4.1.0 6.5" class="md-nav__link">
+      4.1.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Denodo Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3">
+        Denodo Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="7.0 C80" class="md-nav__link">
+      7.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Denodo/" title="7.0 6.5" class="md-nav__link">
+      7.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      H2O.ai
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-4">
+        H2O.ai
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H2O.ai/" title="3.24.0.2 6.5" class="md-nav__link">
+      3.24.0.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      IBM InfoSphere CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-3-5">
+        IBM InfoSphere CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-nav__link">
+      11.3.3.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      IBM InfoSphere DataStage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-3-6">
+        IBM InfoSphere DataStage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="11.3.1.0 C50" class="md-nav__link">
+      11.3.1.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_DataStage/" title="11.5.0.2 C60" class="md-nav__link">
+      11.5.0.2 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Informatica PowerCenter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-3-7">
+        Informatica PowerCenter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Informatica PowerexChange CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-3-8">
+        Informatica PowerexChange CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      Informatica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-3-9">
+        Informatica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_BDM_10.2.2/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_BDM_10.2.2/" title="10.0.0 C60" class="md-nav__link">
+      10.0.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_BDM_10.2.2/" title="10.0.0 C80" class="md-nav__link">
+      10.0.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_BDM_PushDown/" title="10.0.0 C70" class="md-nav__link">
+      10.0.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_BDM_10.2.2/" title="10.2.2 6.5" class="md-nav__link">
+      10.2.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-10" type="checkbox" id="nav-3-10">
+    
+    <label class="md-nav__link" for="nav-3-10">
+      Kafka Manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
+      <label class="md-nav__title" for="nav-3-10">
+        Kafka Manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kafka_Manager/" title="1.3.3.21 C80" class="md-nav__link">
+      1.3.3.21 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-11" type="checkbox" id="nav-3-11">
+    
+    <label class="md-nav__link" for="nav-3-11">
+      Kettle
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="12">
+      <label class="md-nav__title" for="nav-3-11">
+        Kettle
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="6.1 C60" class="md-nav__link">
+      6.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="6.1 C70" class="md-nav__link">
+      6.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kettle_6.1/" title="6.1 C80" class="md-nav__link">
+      6.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-12" type="checkbox" id="nav-3-12">
+    
+    <label class="md-nav__link" for="nav-3-12">
+      Knime
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="13">
+      <label class="md-nav__title" for="nav-3-12">
+        Knime
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Knime/" title="3.6.1 C80" class="md-nav__link">
+      3.6.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Knime/" title="3.6.1 5.0" class="md-nav__link">
+      3.6.1 <--> 5.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-13" type="checkbox" id="nav-3-13">
+    
+    <label class="md-nav__link" for="nav-3-13">
+      Oracle GoldenGate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="14">
+      <label class="md-nav__title" for="nav-3-13">
+        Oracle GoldenGate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="12.2 C60" class="md-nav__link">
+      12.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="12.2 6.5" class="md-nav__link">
+      12.2 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="12.3 C70" class="md-nav__link">
+      12.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Oracle_GoldenGate/" title="12.3 C80" class="md-nav__link">
+      12.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-14" type="checkbox" id="nav-3-14">
+    
+    <label class="md-nav__link" for="nav-3-14">
+      Pentaho
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="15">
+      <label class="md-nav__title" for="nav-3-14">
+        Pentaho
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pentaho/" title="7.1 C70" class="md-nav__link">
+      7.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pentaho/" title="8.0 C60" class="md-nav__link">
+      8.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-15" type="checkbox" id="nav-3-15" checked>
+    
+    <label class="md-nav__link" for="nav-3-15">
+      Talend
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="16">
+      <label class="md-nav__title" for="nav-3-15">
+        Talend
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend_6.4.1/" title="6.4.1 C80" class="md-nav__link">
+      6.4.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend_6.4.1/" title="7.0.1 C80" class="md-nav__link">
+      7.0.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        7.2.1 <--> 6.5
+      </label>
+    
+    <a href="./" title="7.2.1 6.5" class="md-nav__link md-nav__link--active">
+      7.2.1 <--> 6.5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="准备工作" class="md-nav__link">
+    准备工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talend" title="安装Talend" class="md-nav__link">
+    安装Talend
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop" title="创建Hadoop服务" class="md-nav__link">
+    创建Hadoop服务
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop_1" title="创建Hadoop集群" class="md-nav__link">
+    创建Hadoop集群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive" title="配置HIVE服务" class="md-nav__link">
+    配置HIVE服务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hdfs" title="Talend对接FusionInsight HDFS" class="md-nav__link">
+    Talend对接FusionInsight HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-connection" title="HDFS Connection 操作步骤" class="md-nav__link">
+    HDFS Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-get" title="HDFS Get操作步骤" class="md-nav__link">
+    HDFS Get操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-put" title="HDFS Put 操作步骤" class="md-nav__link">
+    HDFS Put 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hive" title="Talend对接FusionInsight Hive" class="md-nav__link">
+    Talend对接FusionInsight Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-connection" title="Hive Connection 操作步骤" class="md-nav__link">
+    Hive Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-create-table" title="Hive Create Table 操作步骤" class="md-nav__link">
+    Hive Create Table 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-input" title="Hive Input 操作步骤" class="md-nav__link">
+    Hive Input 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-row" title="Hive Row 操作步骤" class="md-nav__link">
+    Hive Row 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hbase" title="Talend对接FusionInsight HBase" class="md-nav__link">
+    Talend对接FusionInsight HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-connection" title="HBase Connection 操作步骤" class="md-nav__link">
+    HBase Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-input-output" title="HBase Input Output 操作步骤" class="md-nav__link">
+    HBase Input Output 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-16" type="checkbox" id="nav-3-16">
+    
+    <label class="md-nav__link" for="nav-3-16">
+      Tibco BW
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="17">
+      <label class="md-nav__title" for="nav-3-16">
+        Tibco BW
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TIBCO_BusinessWorks/" title="5.13 6.5" class="md-nav__link">
+      5.13 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-17" type="checkbox" id="nav-3-17">
+    
+    <label class="md-nav__link" for="nav-3-17">
+      杭州合众UTL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="18">
+      <label class="md-nav__title" for="nav-3-17">
+        杭州合众UTL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../杭州合众UTL/" title="5.1 C50" class="md-nav__link">
+      5.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      数据库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Aapache Druid
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Aapache Druid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.14.2/" title="0.14.2 C80" class="md-nav__link">
+      0.14.2 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.15.1/" title="0.15.1 C80" class="md-nav__link">
+      0.15.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      SAP VORA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        SAP VORA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.0 C70" class="md-nav__link">
+      2.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.1 C70" class="md-nav__link">
+      2.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      杭州合众UDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3">
+        杭州合众UDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/杭州合众UDB/" title="6.1 C50" class="md-nav__link">
+      6.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      DBeaver
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        DBeaver
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver_4.2.1/" title="4.0.8 C60" class="md-nav__link">
+      4.0.8 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver_4.2.1/" title="4.2.1 C70" class="md-nav__link">
+      4.2.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DBeaver_6.1.4/" title="6.1.4 6.5" class="md-nav__link">
+      6.1.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      DbVisualizer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-2">
+        DbVisualizer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer_10.0.1/" title="10.0.1 C70" class="md-nav__link">
+      10.0.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer_10.0.21/" title="10.0.21 6.5" class="md-nav__link">
+      10.0.21 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/DbVisualizer_10.0.1/" title="9.5.7 C60" class="md-nav__link">
+      9.5.7 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      HUE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        HUE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/HUE/" title="4.0.1 C70" class="md-nav__link">
+      4.0.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      Jupyter Notebook
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-5-4">
+        Jupyter Notebook
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Jupyter_Notebook/" title="2.4.4.0 C70" class="md-nav__link">
+      2.4.4.0 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-5-5">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="3.4.1 C60" class="md-nav__link">
+      3.4.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/RStudio/" title="3.4.1 C70" class="md-nav__link">
+      3.4.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
+    
+    <label class="md-nav__link" for="nav-5-6">
+      SQuirreL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-5-6">
+        SQuirreL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
+      3.9.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      Squirrel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-5-7">
+        Squirrel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel_3.8.0/" title="3.7.1 C60" class="md-nav__link">
+      3.7.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Squirrel_3.8.0/" title="3.8.0 C70" class="md-nav__link">
+      3.8.0 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+    
+    <label class="md-nav__link" for="nav-5-8">
+      Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-5-8">
+        Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.2/" title="0.7.2 C60" class="md-nav__link">
+      0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="0.7.3 C70" class="md-nav__link">
+      0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.7.3/" title="0.7.3 C80" class="md-nav__link">
+      0.7.3 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/Zeppelin_0.8.0/" title="0.8.0 C80" class="md-nav__link">
+      0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Apache Livy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Apache Livy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_5_0/" title="0.5.0 C80" class="md-nav__link">
+      0.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_6_0/" title="0.6.0 6.5" class="md-nav__link">
+      0.6.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      GIS Tools for Hadoop
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2">
+        GIS Tools for Hadoop
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="1.0 C60" class="md-nav__link">
+      1.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      IBM WAS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-3">
+        IBM WAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/IBM_WAS/" title="8.5.5.9 C50" class="md-nav__link">
+      8.5.5.9 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Kibana
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-4">
+        Kibana
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.1.3 C80" class="md-nav__link">
+      6.1.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Logstash
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-6-5">
+        Logstash
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.4.2 C80" class="md-nav__link">
+      6.4.2 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      NeoKylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-6-6">
+        NeoKylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="6.9 C70" class="md-nav__link">
+      6.9 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="7.2 C70" class="md-nav__link">
+      7.2 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      elasticsearch-head
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-6-7">
+        elasticsearch-head
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="1.0 C80" class="md-nav__link">
+      1.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      filebeat
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-6-8">
+        filebeat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.5.1 C80" class="md-nav__link">
+      6.5.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      SQL分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        SQL分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="1.6.0 C60" class="md-nav__link">
+      1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="2.1.0 C70" class="md-nav__link">
+      2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="2.3.1 C80" class="md-nav__link">
+      2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="2.6.1 6.5" class="md-nav__link">
+      2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Kyligence Analytics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-2">
+        Kyligence Analytics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.2 C60" class="md-nav__link">
+      2.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.3 C60" class="md-nav__link">
+      2.3 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.4 C70" class="md-nav__link">
+      2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.5 C70" class="md-nav__link">
+      2.5 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="3.0 C80" class="md-nav__link">
+      3.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-7-3">
+        Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="0.155 C60" class="md-nav__link">
+      0.155 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.184 C70" class="md-nav__link">
+      0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.196 C80" class="md-nav__link">
+      0.196 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 C80" class="md-nav__link">
+      0.210 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 6.5" class="md-nav__link">
+      0.210 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="准备工作" class="md-nav__link">
+    准备工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talend" title="安装Talend" class="md-nav__link">
+    安装Talend
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop" title="创建Hadoop服务" class="md-nav__link">
+    创建Hadoop服务
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop_1" title="创建Hadoop集群" class="md-nav__link">
+    创建Hadoop集群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive" title="配置HIVE服务" class="md-nav__link">
+    配置HIVE服务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hdfs" title="Talend对接FusionInsight HDFS" class="md-nav__link">
+    Talend对接FusionInsight HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-connection" title="HDFS Connection 操作步骤" class="md-nav__link">
+    HDFS Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-get" title="HDFS Get操作步骤" class="md-nav__link">
+    HDFS Get操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-put" title="HDFS Put 操作步骤" class="md-nav__link">
+    HDFS Put 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hive" title="Talend对接FusionInsight Hive" class="md-nav__link">
+    Talend对接FusionInsight Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-connection" title="Hive Connection 操作步骤" class="md-nav__link">
+    Hive Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-create-table" title="Hive Create Table 操作步骤" class="md-nav__link">
+    Hive Create Table 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-input" title="Hive Input 操作步骤" class="md-nav__link">
+    Hive Input 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hive-row" title="Hive Row 操作步骤" class="md-nav__link">
+    Hive Row 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talendfusioninsight-hbase" title="Talend对接FusionInsight HBase" class="md-nav__link">
+    Talend对接FusionInsight HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-connection" title="HBase Connection 操作步骤" class="md-nav__link">
+    HBase Connection 操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-input-output" title="HBase Input Output 操作步骤" class="md-nav__link">
+    HBase Input Output 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Data_Integration/Talend_7.2.1.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="talendfusioninsight">Talend对接FusionInsight<a class="headerlink" href="#talendfusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Talend 7.2.1 &harr; FusionInsight HD 6.5 (HDFS/HBase/Hive)</p>
+</blockquote>
+<h2 id="_2">准备工作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>登录FusionInsight Manager创建一个“人机”用户，例如：developuser，具体请参见FusionInsight HD产品文档的<code>管理员指南-&gt;系统设置-&gt;权限设置-&gt;用户管理-&gt;创建用户</code>章节。给developuser用户授予所有访问权限，包含但不限于HDFS、HIVE、HBASE。</p>
+</li>
+<li>
+<p>登录FusionInsight Manager的<code>系统-&gt;用户-&gt;更多（developuser）-&gt;下载认证凭证</code>，下载developuser对应的认证凭证。解压后，将krb5.conf和user.keytab放在<code>C:\developuser\</code>目录下(developuser文件夹不存在则创建)，复制krb5.conf文件并重命名为krb5.ini，放在<code>C:\Windows</code>目录下。</p>
+</li>
+<li>
+<p>已完成FusionInsight HD客户端安装，具体请参见FusionInsight HD产品文档的<code>应用开发指南-&gt;安全模式-&gt;安全认证-&gt;配置客户端文件</code>章节。FusionInsight HD客户端解压于本地<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig</code></p>
+</li>
+<li>
+<p>Zookeeper的Kerberos认证需要指定jaas配置文件。创建连接zookeeper的jaas配置文件，如<code>C:\developuser\jaas.conf</code>，内容格式如下：
+  <div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;c:/developuser/user.keytab&quot;
+principal=&quot;developuser@HADOOP.COM&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div></p>
+</li>
+<li>
+<p>本地<code>C:\Windows\System32\drivers\etc\hosts</code>已添加FusionInsight集群节点的IP与hostname的映射。</p>
+</li>
+<li>
+<p>本地已安装Hadoop服务（可从<a href="https://hadoop.apache.org/releases.html">https://hadoop.apache.org/releases.html</a>下载Hadoop二进制），该项可选。如果本地没安装Hadoop服务，talend在运行过程中会出现与Hadoop相关的错误日志，但不影响实际运行结果。</p>
+</li>
+</ul>
+<h2 id="talend">安装Talend<a class="headerlink" href="#talend" title="Permanent link">&para;</a></h2>
+<h3 id="_3">操作场景<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>安装Talend Open Studio for Big Data</p>
+<h3 id="_4">操作步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>从<a href="https://www.talend.com/products/big-data/big-data-open-studio/">https://www.talend.com/products/big-data/big-data-open-studio/</a>下载Window版的Talend。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/70e74dcf.png" /></p>
+<ul>
+<li>解压下载安装包，点击TOS_BD-win-x86_64.exe启动Talend Open Studio for Big Data。点击<code>我同意</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/17fd40e9.png" /></p>
+<ul>
+<li>点击<code>完成</code>，默认创建Local_Project的工程。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/03fe6f57.png" /></p>
+<ul>
+<li>选择安装必须的第三方库，点击<code>Finish</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/47b57601.png" /></p>
+<ul>
+<li>选择<code>我接受所选许可协议的条款</code>，点击<code>全部接受</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/d4eec601.png" /></p>
+<ul>
+<li>在右下角可看到安装进度。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/c7cb61cf.png" /></p>
+<h2 id="hadoop">创建Hadoop服务<a class="headerlink" href="#hadoop" title="Permanent link">&para;</a></h2>
+<h3 id="_5">操作场景<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>创建包含HDFS、HIVE、HBASE服务的Hadoop集群</p>
+<h3 id="_6">前提条件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已完成准备工作。</p>
+</li>
+<li>
+<p>将FusionInsight客户端HDFS、HIVE、HBASE以下相关的配置文件拷贝至<code>C:\teland\config</code>目录下。</p>
+</li>
+<li>
+<p><code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HDFS\config</code>的hdfs-site.xml、core-site.xml。</p>
+</li>
+<li>
+<p><code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\Hive\config</code>的hive-site.xml、hivemetastore-site.xml。</p>
+</li>
+<li>
+<p><code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HBase\config</code>的hbase-site.xml。</p>
+</li>
+<li>
+<p><code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\Yarn\config</code>的mapred-site.xml、yarn-site.xml。</p>
+</li>
+</ul>
+<h3 id="_7">操作步骤<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="hadoop_1">创建Hadoop集群<a class="headerlink" href="#hadoop_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>打开<code>Talend Open Studio for Big Data</code>，选择<code>元数据-&gt;Hadoop Cluster</code>，右键<code>Hadoop Cluster</code>选择<code>Create Hadoop Cluster</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/56a46346.png" /></p>
+<ul>
+<li>“名称”输入“FusionInsight”，点击<code>Next</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/a3595edc.png" /></p>
+<ul>
+<li>选择<code>从本地文件导入配置</code>，点击<code>Next</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/d0d7803f.png" /></p>
+<ul>
+<li>点击<code>浏览</code>，选择目录<code>C:\talend\config</code>，默认全选，点击<code>Finish</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/be107746.png" /></p>
+<ul>
+<li>“Distribution”选择<code>Custom - Unsuported</code>，点击下拉框右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮导入HDFS、HIVE、HBASE相关的jar包。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/d3b141bf.png" /></p>
+<ul>
+<li>点击<code>Cancel</code>取消自动弹出的“导入自定义的定义”窗口。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/bbb8973e.png" /></p>
+<ul>
+<li>选择“HDFS/HCatalog/Oozie”，点击<img alt="" src="../assets/Talend_7.2.1/3eabb003.png" />按钮添加HDFS相关的jar包。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/92b78121.png" /></p>
+<ul>
+<li>选择<code>外部库</code>，点击<code>浏览</code>，选择<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HDFS\FusionInsight-Hadoop-3.1.1.tar.gz\hadoop\share\hadoop\hdfs</code>目录下所有的jar包，点击<code>OK</code>导入jar包。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/19f12a38.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/993b65b8.png" /></p>
+<ul>
+<li>按照同样的方法，选择“HDFS/HCatalog/Oozie”，导入<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HDFS\FusionInsight-Hadoop-3.1.1.tar.gz\hadoop\share\hadoop\common</code>和<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HDFS\FusionInsight-Hadoop-3.1.1.tar.gz\hadoop\share\hadoop\common\lib</code>目录下所有的jar包。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/4e53b95c.png" /></p>
+<ul>
+<li>按照同样的方法，选择“Hive”，导入<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\Hive\jdbc</code>目录下所有的jar包。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/9d9cb538.png" /></p>
+<ul>
+<li>按照同样的方法，选择“HBase”，导入<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HBase\FusionInsight-HBase-1.3.1.tar.gz\hbase\lib</code>目录下所有的jar包。完成后，点击<code>OK</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/c292a8bf.png" /></p>
+<ul>
+<li>
+<p>配置Kerberos认证。“Custom-&gt;Authentication”选择<code>Kerberos</code>。</p>
+</li>
+<li>
+<p>勾选<code>Authentication-&gt;Enable Kerberos security</code>，输入信息如下：</p>
+<div class="codehilite"><pre><span></span>Namenode Principal = hdfs/hadoop.hadoop.com@HADOOP.COM
+资源管理器主体 = mapred/hadoop.hadoop.com@HADOOP.COM
+作业历史记录主体 = mapred/hadoop.hadoop.com@HADOOP.COM
+
+备注：
+Namenode Principal的取值为hdfs-site.xml的dfs.namenode.kerberos.principal的value值；
+资源管理器主体的取值为yarn-site.xml的yarn.resourcemanager.principal的value值；
+作业历史记录主体的取值为mapred-site.xml的mapreduce.jobhistory.principal的value值。
+</pre></div>
+
+</li>
+<li>
+<p>勾选<code>Authentication-&gt;Use a keytab to authenticate</code>，输入信息如下：</p>
+<div class="codehilite"><pre><span></span>Principal = developuser
+Keytab = C:/developuser/user.keytab
+
+备注：
+Principal为FusionInsight Manager的用户名，Keytab为用户developuser的认证凭据。
+</pre></div>
+
+<p><img alt="" src="../assets/Talend_7.2.1/70dfb872.png" /></p>
+</li>
+<li>
+<p>配置Hadoop属性，点击<code>Hadoop属性</code>右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/c99caf8e.png" /></p>
+<ul>
+<li>
+<p>点击<img alt="" src="../assets/Talend_7.2.1/3eabb003.png" />按钮，增加以下Hadoop属性。增加完毕，点击<code>OK</code>。</p>
+</li>
+<li>
+<p>增加core-site.xml的hadoop.security.authentication和hadoop.rpc.protection的属性及其对应的value值；</p>
+</li>
+<li>
+<p>增加hdfs-site.xml的dfs.namenode.rpc-address.hacluster.*，dfs.ha.namenodes.hacluster、dfs.nameservices、dfs.client.failover.proxy.provider.hacluster的属性及其对应的value值。</p>
+</li>
+</ul>
+<p><strong>配置示例如下：</strong></p>
+<div class="codehilite"><pre><span></span>hadoop.security.authentication = Kerberos
+hadoop.rpc.protection = privacy
+dfs.namenode.rpc-address.hacluster.141 = euleros-hd02:25000
+dfs.namenode.rpc-address.hacluster.142 = euleros-hd03:25000
+dfs.ha.namenodes.hacluster = 141,142
+dfs.nameservices = hacluster
+dfs.client.failover.proxy.provider.hacluster = org.apache.hadoop.hdfs.server.namenode.ha.AdaptiveFailoverProxyProvider
+</pre></div>
+
+<p><img alt="" src="../assets/Talend_7.2.1/b76c6035.png" /></p>
+<ul>
+<li>确认默认勾选<code>使用自定义Hadoop属性</code>，点击<code>检查服务</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/6b4736fc.png" /></p>
+<ul>
+<li>检查返回100%，则Hadoop集群配置成功，点击<code>Close</code>。如果返回错误日志，则根据错误日志提示修正问题后，重新点击<code>检查服务</code>，直至检查返回100%。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/9830f361.png" /></p>
+<ul>
+<li>点击<code>Finish</code>，则可在<code>元数据-&gt;Hadoop Cluster</code>看到新建的“FusionInsight”集群，包含HDFS、HIVE、HBASE服务。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/496a1bc7.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/be030ae8.png" /></p>
+<h4 id="hive">配置HIVE服务<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h4>
+<ul>
+<li>选择<code>元数据-&gt;Hadoop Cluster-&gt;FusionInsight-&gt;Hive(1)-&gt;FusionInsight_HIVE</code>，右键<code>FusionInsight_HIVE</code>选择<code>Edit Hive</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/bf9328f1.png" /></p>
+<ul>
+<li>点击<code>Next</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/9ac2a7b7.png" /></p>
+<ul>
+<li>需要更新的配置如下，其余的保持不变。
+  <div class="codehilite"><pre><span></span>hive模式 = Standalone
+hive服务器版本 = Hive Server2 -- jdbc:hive2://
+登录名 = developuser
+密码 = Huawei@123
+服务器 = 172.16.4.21:24002,172.16.4.22:24002,172.16.4.23
+端口 = 24002
+DataBase = default
+附加JDBC设置 = ;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;user.principal=developuser;user.keytab=C:/developuser/user.keytab
+
+说明：以上信息可根据JDBC方式连接Hive服务的配置填写。
+</pre></div></li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/fb3b6639.png" /></p>
+<ul>
+<li>点击<code>测试连接</code>，返回连接成功，点击<code>OK</code>，点击<code>Finish</code>完成配置。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/744c6863.png" /></p>
+<h2 id="talendfusioninsight-hdfs">Talend对接FusionInsight HDFS<a class="headerlink" href="#talendfusioninsight-hdfs" title="Permanent link">&para;</a></h2>
+<h3 id="_8">操作场景<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>Talend中配置HDFS解析器，对接FusionInsight HDFS接口，并从Fusion Insight集群的HDFS文件系统下载文件至本地，或者将本地文件上传至Fusion Insight集群的HDFS文件系统。</p>
+<h3 id="_9">前提条件<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已完成准备工作</p>
+</li>
+<li>
+<p>已完成Talend Open Studio for Big Data的安装</p>
+</li>
+<li>
+<p>已创建包含HDFS服务的Hadoop集群</p>
+</li>
+</ul>
+<h3 id="hdfs-connection">HDFS Connection 操作步骤<a class="headerlink" href="#hdfs-connection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>选择<code>作业设计</code>，右键选择<code>创建作业</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/8ac2c894.png" /></p>
+</li>
+<li>
+<p>“名称”输入“hdfsConnection”，点击<code>Finish</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/75c05d86.png" /></p>
+</li>
+<li>
+<p>选择作业<code>hdfsConnection</code>，在Palette面板输入“hdfsConnection”搜索，将搜索返回的“tHDFSConnection”组件拖至Disigner区。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/1f8019c9.png" /></p>
+</li>
+<li>
+<p>点击选中“tHDFSConnection_1”，切换至“组件”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HDFS</code>。如果提示“此组件tHDFSConnection需要至少安装一个外部jar。”，则点击<code>安装</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/7c99ce66.png" /></p>
+</li>
+<li>
+<p>点击<code>下载并安装所有可用的模块</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/d69a7ac3.png" /></p>
+</li>
+<li>
+<p>等待所有可用的模块下载并安装完之后，切换至“运行（作业hdfsConnection）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend对接FusionInsight HDFS成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/2ef585c3.png" /></p>
+</li>
+</ul>
+<h3 id="hdfs-get">HDFS Get操作步骤<a class="headerlink" href="#hdfs-get" title="Permanent link">&para;</a></h3>
+<p>从Fusion Insight集群的HDFS文件系统下载文件至本地。</p>
+<ul>
+<li>
+<p>登录FusionInsight集群客户端，执行<code>hdfs dfs -ls /tmp</code>命令确认<code>/tmp</code>目录已存在文件“getFromHdfs.csv”，内容随意。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/9783ea85.png" /></p>
+</li>
+<li>
+<p>创建作业“hdfsGet”，加入tHDFSConnection、tHDFSGet组件。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/53881fb4.png" /></p>
+</li>
+<li>
+<p>点击选中<code>tHDFSConnection_1</code>，右键选择<code>触发器-&gt;子作业正常时</code>，连接至tHDFSGet_1。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/e1a4a168.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/b5d110f1.png" /></p>
+</li>
+<li>
+<p>点击选中<code>tHDFSConnection_1</code>组件，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HDFS</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/7a9ad3f5.png" /></p>
+</li>
+<li>
+<p>点击选中<code>tHDFSGet_1</code>组件，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHDFSConnection_1</code>，“HDFS目录”选择<code>/tmp</code>，“本地目录”选择<code>C:/talend/testFile</code>(可选择任意的本地目录)，在“文件掩码”输入在HDFS的/tmp目录下需要获取的文件名称<code>getFromHdfs.csv</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/aa25545b.png" /></p>
+</li>
+<li>
+<p>切换至“运行（作业hdfsGet）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend从FusionInsight HDFS下载文件成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/bab4c11f.png" /></p>
+</li>
+<li>
+<p>getFromHdfs.csv已下载至本地<code>C:\talend\testFile</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/bb4c7117.png" /></p>
+</li>
+</ul>
+<h3 id="hdfs-put">HDFS Put 操作步骤<a class="headerlink" href="#hdfs-put" title="Permanent link">&para;</a></h3>
+<p>从本地上传文件至Fusion Insight集群的HDFS文件系统。</p>
+<ul>
+<li>
+<p>创建作业“hdfsPut”，加入tHDFSConnection、tHDFSPut组件，tHDFSConnection_1的子作业正常时执行tHDFSPut_1。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/301e16de.png" /></p>
+</li>
+<li>
+<p>点击选中<code>tHDFSConnection_1</code>组件，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HDFS</code>。
+    <img alt="" src="../assets/Talend_7.2.1/4e0efa87.png" /></p>
+</li>
+<li>
+<p>点击选中<code>tHDFSPut_1</code>组件，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHDFSConnection_1</code>，“本地目录”选择<code>C:/talend/testFile</code>，“HDFS目录”选择<code>/tmp</code>，在“文件掩码”输入需要上传至HDFS文件系统的文件名称<code>putToHdfs.csv</code>。</p>
+</li>
+</ul>
+<p>说明：<code>C:/talend/testFile/putToHdfs.csv</code>为本地已存在文件，内容随意。</p>
+<div class="codehilite"><pre><span></span>![](assets/Talend_7.2.1/61c635ee.png)
+</pre></div>
+
+
+<ul>
+<li>
+<p>切换至“运行（作业hdfsPut）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示从Talend上传文件putToHdfs.csv至FusionInsight HDFS文件系统成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/f8069acb.png" /></p>
+</li>
+<li>
+<p>登录FusionInsight集群客户端，执行<code>hdfs dfs -ls /tmp</code>命令检查putToHdfs.csv已上传至<code>/tmp</code>目录。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/ef69af89.png" /></p>
+</li>
+</ul>
+<h2 id="talendfusioninsight-hive">Talend对接FusionInsight Hive<a class="headerlink" href="#talendfusioninsight-hive" title="Permanent link">&para;</a></h2>
+<h3 id="_10">操作场景<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Talend中配置JDBC解析器，对接FusionInsight Hive接口，进行建表、查表、插入数据等操作。</p>
+<h3 id="_11">前提条件<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已完成准备工作</p>
+</li>
+<li>
+<p>已完成Talend Open Studio for Big Data的安装</p>
+</li>
+<li>
+<p>已创建包含Hive服务的Hadoop集群和完成Hadoop集群的Hive服务配置。</p>
+</li>
+</ul>
+<h3 id="hive-connection">Hive Connection 操作步骤<a class="headerlink" href="#hive-connection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>选择<code>作业设计</code>，右键选择<code>创建作业</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/8316ac58.png" /></p>
+</li>
+<li>
+<p>“名称”输入“hiveConnection”，点击<code>Finish</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/e8eed3d6.png" /></p>
+</li>
+<li>
+<p>选择作业<code>hiveConnection</code>，加入tHiveConnection、tHiveClose组件。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/a0f0b6df.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HIVE</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/96d416ea.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveClose_1”，切换至“组件”，“组件列表”选择<code>tHiveConnection_1</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/7edfc25e.png" /></p>
+</li>
+<li>
+<p>切换至“运行（作业hiveConnection）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend对接FusionInsight Hive成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/6cf8e69c.png" /></p>
+</li>
+</ul>
+<h3 id="hive-create-table">Hive Create Table 操作步骤<a class="headerlink" href="#hive-create-table" title="Permanent link">&para;</a></h3>
+<p>使用Talend创建表talendHiveCreate，并将/tmp/putToHdfs.csv的数据传入表talendHiveCreate。</p>
+<ul>
+<li>
+<p>登录FusionInsight集群客户端，执行<code>hdfs dfs -ls /tmp</code>命令确认<code>/tmp</code>目录已存在文件“putToHdfs.csv”。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/ef69af89.png" /></p>
+<p><strong>putToHdfs.csv的内容如下(包含两列，两列之间用分号隔开)：</strong>
+<div class="codehilite"><pre><span></span>1;EcitQU
+2;Hyy6RC
+3;zju1jR
+4;R9fex9
+5;EU2mVq
+</pre></div></p>
+</li>
+<li>
+<p>创建作业“hiveCreateTable”，加入tHiveConnection、tHiveCreateTable、tHiveLoad、tHiveClose组件，上一个组件的子作业正常时执行下一个组件。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/f8ebc680.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HIVE</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/27b523d1.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveCreateTable_1”，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHiveConnection_1</code>，点击“编辑schema”右边的按钮设计表结构为两列，列名分别id和name，“表名称”输入<code>talendHiveCreate</code>，“表操作”选择<code>如果表不存在则创建表</code>，“格式”选择<code>文本文件</code>，其余选项为默认。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/41b2259e.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveLoad_1”，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHiveConnection_1</code>，“加载操作”选择<code>加载</code>，“文件路径”输入<code>/tmp/putToHdfs.csv</code>，“表名称”输入<code>talendHiveCreate</code>，其余选项默认。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/bbb0d7d5.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveClose_1”，“组件列表”选择<code>tHiveConnection_1</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/6db833bc.png" /></p>
+</li>
+<li>
+<p>切换至“运行（作业hiveCreateTable）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend使用Hive创建表talendHiveCreate，并将putToHdfs.csv的数据输入到表talendHiveCreate成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/200797f6.png" /></p>
+</li>
+<li>
+<p>登录FusionInsight集群客户端，使用beeline执行<code>select * from talendHiveCreate;</code>命令查询表<code>createdTableTalend</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/e3626990.png" /></p>
+</li>
+</ul>
+<h3 id="hive-input">Hive Input 操作步骤<a class="headerlink" href="#hive-input" title="Permanent link">&para;</a></h3>
+<p>使用Talend查询Hive表的数据。</p>
+<ul>
+<li>
+<p>确认已存在表talendHiveCreate。登录FusionInsight集群客户端，使用beeline执行<code>select * from talendHiveCreate;</code>命令查询表<code>createdTableTalend</code>，返回数据如下。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/e3626990.png" /></p>
+</li>
+<li>
+<p>创建作业“hiveInput”，加入tHiveConnection、tHiveInput、tHiveClose、tLogRow组件，上一个组件的子作业正常时执行下一个组件。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/ce6ec8a5.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HIVE</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/9debf160.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveInput_1”，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHiveConnection_1</code>，点击“编辑schema”右边的按钮设计表结构为两列，列名分别id和name，“表名称”输入<code>talendHiveCreate</code>，“查询”输入<code>"select * from talendHiveCreate"</code>，其余选项默认。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/dbd8715c.png" /></p>
+</li>
+<li>
+<p>点击选中“tHiveClose_1”，“组件列表”选择<code>tHiveConnection_1</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/8ea84d89.png" /></p>
+</li>
+<li>
+<p>tLogRow组件使用默认配置。</p>
+</li>
+<li>
+<p>切换至“运行（作业hiveInput）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend查询表<code>createdTableTalend</code>数据成功。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/167427f4.png" /></p>
+</li>
+</ul>
+<h3 id="hive-row">Hive Row 操作步骤<a class="headerlink" href="#hive-row" title="Permanent link">&para;</a></h3>
+<p>使用Talend插入数据至Hive表。</p>
+<ul>
+<li>确认已存在表talendHiveCreate。登录FusionInsight集群客户端，使用beeline执行<code>select * from talendHiveCreate;</code>命令查询表<code>createdTableTalend</code>，返回数据如下。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/e3626990.png" /></p>
+<ul>
+<li>创建作业“hiveRow”，加入tHiveConnection、tHiveRow、tHiveClose组件，上一个组件的子作业正常时执行下一个组件。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/427efec2.png" /></p>
+<ul>
+<li>点击选中“tHiveConnection_1”，切换至“组件”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HIVE</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/6ee1207c.png" /></p>
+<ul>
+<li>点击选中“tHiveRow_1”，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHiveConnection_1</code>，点击“编辑schema”右边的按钮设计表结构为两列，列名分别id和name，“表名称”输入<code>talendHiveCreate</code>，“查询”输入<code>"insert into talendHiveCreate values(123,'shenzhen')"</code>，其余选项默认。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/76c17547.png" /></p>
+<ul>
+<li>点击选中“tHiveClose_1”，“组件列表”选择<code>tHiveConnection_1</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/e898100c.png" /></p>
+<ul>
+<li>切换至“运行（作业hiveRow）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend插入表<code>createdTableTalend</code>数据成功。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/c8990b40.png" /></p>
+<ul>
+<li>登录FusionInsight集群客户端，使用beeline执行<code>select * from talendHiveCreate;</code>命令查询表<code>createdTableTalend</code>，返回数据已包含新增的数据。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/58ecc26a.png" /></p>
+<h2 id="talendfusioninsight-hbase">Talend对接FusionInsight HBase<a class="headerlink" href="#talendfusioninsight-hbase" title="Permanent link">&para;</a></h2>
+<h3 id="_12">操作场景<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Talend中配置HBase解析器，对的FusionInsight HBase接口，进行建表、查询、插入数据等操作。</p>
+<h3 id="_13">前提条件<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已完成准备工作</p>
+</li>
+<li>
+<p>已完成Talend Open Studio for Big Data的安装</p>
+</li>
+<li>
+<p>已创建包含HBase服务的Hadoop集群</p>
+</li>
+<li>
+<p>已在IntelliJ IDEA使用<code>Import project from external model ~ Eclipse</code>方式导入<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HBase\hbase-example</code>，并且调测TestMain.java通过。</p>
+</li>
+</ul>
+<h3 id="hbase-connection">HBase Connection 操作步骤<a class="headerlink" href="#hbase-connection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>导出FusionInsight HD客户端中Hbase样例代码中的LoginUtil类。</p>
+</li>
+<li>
+<p>在IntelliJ IDEA打开<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HBase\hbase-example</code>工程，选择<code>File &gt; Project Structure...</code>菜单项。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/cdbcbbd5.png" /></p>
+</li>
+<li>
+<p>选择<code>Artifacts-&gt;Add-&gt;JAR-&gt;Empty</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/8391fc6a.png" /></p>
+</li>
+<li>
+<p>导出jar包的名称设置为<code>hbase-loginUtil.jar</code>，“Output directory”选择<code>C:\talend\testFile</code>，双击“Available Elements”的<code>'hbase-example' compile output</code>将它加载到左边列表，点击<code>OK</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/d67c371e.png" /></p>
+</li>
+<li>
+<p>选中“hbase-example”工程com.huawei.hadoop.security的LoginUtil.java，选择<code>Build-&gt;Build Artifacts...</code></p>
+<p><img alt="" src="../assets/Talend_7.2.1/2228e86c.png" /></p>
+</li>
+<li>
+<p>选择<code>hbase-loginUtil.jar-&gt;Build</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/fecc5a18.png" /></p>
+</li>
+<li>
+<p>编译完成后，在本地<code>C:\talend\testFile</code>产生“hbase-loginUtil.jar”。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/5b3ee091.png" /></p>
+</li>
+<li>
+<p>选择<code>作业设计</code>，右键选择<code>创建作业</code>。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/d54781b7.png" /></p>
+<ul>
+<li>“名称”输入“hbaseConnection”，点击<code>Finish</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/6369da2f.png" /></p>
+<ul>
+<li>选择作业<code>hbaseConnection</code>，加入tLibraryLoad、tHBaseConnection、tJava、tHBaseClose组件，上一个组件的子作业正常时执行下一个组件。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/4e379a8d.png" /></p>
+<ul>
+<li>点击选中“tLibraryLoad_1”，切换至“组件”，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择模块。在弹出窗口，选择<code>构建库（local m2/nexus）</code>，选择<code>安装一个新模块</code>并选择文件<code>C:\talend\testFile\hbase-loginUtil.jar</code>，然后点击<code>检测模块安装状态</code>，检测没问题则<code>OK</code>按钮激活，点击<code>OK</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/a17467f2.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/f85f6d6f.png" /></p>
+<ul>
+<li>点击选中“tHBaseConnection_1”，“属性类型”选择<code>存储库</code>，点击右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮选择<code>FusionInsight_HBASE</code>，“发行版的Hadoop版本”选择<code>Hadoop 2</code>。如果提示<code>此组件tHbaseConnection需要至少安装一个外部jar。</code>，则点击安装。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/8ed89ce9.png" /></p>
+<p>说明：如果“发行版的Hadoop版本”的下拉框没有“Hadoop 2”，只能选择“Hadoop 1”。则确认创建Hadoop集群时，对于HBase服务，是否已导入<code>C:\talend\FusionInsight_Cluster_1_Services_ClientConfig\HBase\FusionInsight-HBase-1.3.1.tar.gz\hbase\lib</code>目录下所有的jar包。</p>
+<ul>
+<li>点击<code>下载并安装所有可用的模块</code>，选择<code>我接受所选许可协议的条款</code>，点击<code>全部接受</code>。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/765285e1.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/9ad26f4d.png" /></p>
+<p>说明：如果还提示<code>此组件tHbaseConnection需要至少安装一个外部jar。</code>，点击安装，弹出是<code>jersey-client-1.9.jar</code>，则可以忽略处理。作业运行后，该提示会消失。
+  <img alt="" src="../assets/Talend_7.2.1/ef8f9e35.png" /></p>
+<ul>
+<li>点击选中“tJava_1”。</li>
+<li>
+<p>在“基本设置”的“代码”中输入HBase配置相关的代码。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/757c24eb.png" /></p>
+<p><strong>代码示例如下：</strong></p>
+<div class="codehilite"><pre><span></span>org.apache.hadoop.conf.Configuration conf = org.apache.hadoop.hbase.HBaseConfiguration.create();
+
+//设置Kerberos认证的相关文件的路径
+System.setProperty(&quot;java.security.krb5.conf&quot;, &quot;C:\\developuser\\krb5.conf&quot;);
+System.setProperty(&quot;java.security.auth.login.config&quot;, &quot;C:/developuser/jaas.conf&quot;);
+conf.set(&quot;hadoop.security.authentication&quot;,&quot;Kerberos&quot;);
+
+//增加配置文件，根据配置文件所在的位置刷新
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/talend/config/core-site.xml&quot;));
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/talend/config/hdfs-site.xml&quot;));
+conf.addResource(new org.apache.hadoop.fs.Path(&quot;C:/talend/config/hbase-site.xml&quot;));
+
+//输出配置属性
+System.out.println(&quot;=====&quot;);
+System.out.println(org.apache.hadoop.hbase.security.User.isHBaseSecurityEnabled(conf));
+
+//登录
+LoginUtil.setJaasConf(&quot;developuser&quot;, &quot;developuser&quot;, &quot;C:\\developuser\\krb5.conf&quot;);
+LoginUtil.setZookeeperServerPrincipal(&quot;zookeeper.server.principal&quot;, &quot;zookeeper/hadoop.hadoop.com&quot;);
+LoginUtil.login(&quot;developuser&quot;, &quot;C:/developuser/user.keytab&quot;, &quot;C:/developuser/krb5.conf&quot;, conf);
+
+globalMap.put(&quot;conn_tHbaseConnection_1&quot;, conf);
+</pre></div>
+
+</li>
+<li>
+<p>在“tJava_1”的“高级设置”的“导入”输入<code>import com.huawei.hadoop.security.LoginUtil;</code>，</p>
+<p><img alt="" src="../assets/Talend_7.2.1/e9652c59.png" /></p>
+</li>
+<li>
+<p>点击选中“tHBaseClose_1”，“组件列表”选择<code>tHBaseConnection_1</code>。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/453b3daf.png" /></p>
+<ul>
+<li>切换至“运行（作业hbaseConnection）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend对接FusionInsight HBase成功。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/fc3861f9.png" /></p>
+<h3 id="hbase-input-output">HBase Input Output 操作步骤<a class="headerlink" href="#hbase-input-output" title="Permanent link">&para;</a></h3>
+<p>Talend通过FusionInsight HBase接口对接成功后，创建表talendHbaseCreate，将本地<code>C:/talend/testFile/putToHdfs.csv</code>的数据传入表talendHbaseCreate，并且从表talendHbaseCreate查询返回数据。</p>
+<ul>
+<li>确认本地已存在<code>C:/talend/testFile/putToHdfs.csv</code>。</li>
+</ul>
+<p><strong>putToHdfs.csv内容如下：</strong></p>
+<div class="codehilite"><pre><span></span>1;EcitQU
+2;Hyy6RC
+3;zju1jR
+4;R9fex9
+5;EU2mVq
+</pre></div>
+
+<ul>
+<li>创建作业“hbaseInputOutput”，加入tLibraryLoad、tHBaseConnection、tJava、tHBaseClose、tFileInputDelimited、tHBaseOutput、tHBaseInput、tLogRow组件，上一个组件的子作业正常时执行下一个组件。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/8c6b21a6.png" /></p>
+<ul>
+<li>
+<p>tLibraryLoad、tHBaseConnection、tJava、tHBaseClose_1组件的配置请参考“HBase Connection 操作步骤”，tLogRow组件使用默认配置。</p>
+</li>
+<li>
+<p>点击选中“tFileInputDelimited_1”，点击“编辑schema”右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮设计schema为两列，列名分别id和name，“文件名/流”输入<code>C:/talend/testFile/putToHdfs.csv</code>，其余选项保持默认。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/7e192508.png" /></p>
+<ul>
+<li>
+<p>点击选中“tHBaseOutput_1”。</p>
+</li>
+<li>
+<p>在“高级配置”中，增加两列，列名分别为id和name，列名必须要用双引号包括，要不运行时会返回语法错误。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/84769187.png" /></p>
+</li>
+<li>
+<p>在“基本配置”中，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHBaseConnection_1</code>，“表名称”输入<code>talendHbaseCreate</code>，“表操作”选择<code>如果表不存在，则创建表</code>，输入id和name对应的“族名称”，“族名称”必须要用双引号包括，要不运行时会返回语法错误。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/21bd3c7e.png" /></p>
+</li>
+<li>
+<p>点击选中“tHBaseInput_1”，勾选<code>使用一个现有连接</code>，“组件列表”选择<code>tHBaseConnection_1</code>，“表名称”输入<code>talendHbaseCreate</code>，输入id和name对应的“族名称”，“族名称”必须要用双引号包括，点击“编辑schema”右边的<img alt="" src="../assets/Talend_7.2.1/3b81bf5e.png" />按钮增加两列，列名分别id和name。</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/72adff66.png" /></p>
+<ul>
+<li>切换至“运行（作业hbaseInputOutput）”，点击<code>运行</code>按钮。返回结果如下图所示，则表示Talend对接FusionInsight HBase成功，且创建表talendHbaseCreate并将本地文件数据输入表talendHbaseCreate，并且从表talendHbaseCreate查询返回数据。</li>
+</ul>
+<p><img alt="" src="../assets/Talend_7.2.1/4682db29.png" /></p>
+<ul>
+<li>登录FusionInsight集群客户端，执行以下命令检查HBase表“talendHbaseCreate”。</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>hbase shell
+scan &#39;hbaseInputOutputTest&#39;
+</pre></div>
+  <img alt="" src="../assets/Talend_7.2.1/ec1417d9.png" /></p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>向FusionInsight HDFS文件系统上传或者下载文件时，返回Client cannot authenticate via:[TOKEN, KERBEROS]</strong></li>
+</ul>
+<p><strong>【问题描述】</strong></p>
+<p>使用Talend向FusionInsight HDFS文件系统上传或者下载文件时，上传或者下载的组件（例如tHDFSGet_1）采用“使用一个现有连接”，现有连接tHDFSConnection_1的属性类型是“存储库”时，运行时返回java.io.IOException: DestHost:destPort euleros-hd03:25000 , LocalHost:localPort user-PC/172.16.5.106:0. Failed on local exception: java.io.IOException: org.apache.hadoop.security.AccessControlException: Client cannot authenticate via:[TOKEN, KERBEROS]，且上传或者下载文件失败。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/8818d582.png" /></p>
+<p><img alt="" src="../assets/Talend_7.2.1/d352b434.png" /></p>
+<p><strong>【解决方法】</strong></p>
+<p>tHDFSConnection_1使用的存储库FusionInsight_HDFS所属的Hadoop集群FusionInsight没有使用自定义的Hadoop配置。需要修改Hadoop集群FusionInsight使用自定义的Hadoop配置。
+    * 选择<code>元数据-&gt;Hadoop Cluster-&gt;FusionInsight</code>，右键<code>FusionInsight</code>选择<code>Edit Hadoop Cluster</code>。</p>
+<div class="codehilite"><pre><span></span>  ![](assets/Talend_7.2.1/33ef12f1.png)
+
+* 勾选`使用自定义Haddop配置`。
+  ![](assets/Talend_7.2.1/b6962abf.png)
+
+* 点击`Yes`。
+
+  ![](assets/Talend_7.2.1/9e6ea1d7.png)
+</pre></div>
+
+
+<ul>
+<li><strong>对接FusionInsight Hive接口创建表的时候返回Cannot modify dfs.client.use.datanode.hostname at runtime。</strong></li>
+</ul>
+<p><strong>【问题描述】</strong></p>
+<p>对接FusionInsight Hive接口创建表的时候，返回类似的错误：Error while processing statement: Cannot modify dfs.client.use.datanode.hostname at runtime. It is not in list of params that are allowed to be modified at runtime。可能涉及的有以下三个属性：<code>dfs.client.use.datanode.hostname、mapred.job.name、hive.query.name</code>。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/4732c2f1.png" /></p>
+<p><strong>【解决方法】</strong></p>
+<p>登录FusionInsight Manager，在Hive服务的配置参数hive.security.authorization.sqlstd.confwhitelist.append新增<code>|dfs\.client\.use\.datanode\.hostname|mapred\.job\.name|hive\.query\.name</code>，然后重启Hive服务。</p>
+<p><img alt="" src="../assets/Talend_7.2.1/ea44f279.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Talend_6.4.1/" title="7.0.1 <--> C80" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                7.0.1 <--> C80
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../TIBCO_BusinessWorks/" title="5.13 <--> 6.5" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                5.13 <--> 6.5
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>
