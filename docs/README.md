@@ -524,7 +524,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr><td rowspan=5 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>数据库 </td>
-<td rowspan=2 >Aapache Druid</td>
+<td rowspan=2 >Apache Druid</td>
 <td>0.14.2</td>
 <td></td>
 <td></td>

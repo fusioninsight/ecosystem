@@ -1,8 +1,8 @@
-# Aapache Druid 0.15.1 对接FusionInsight
+# Apache Druid 0.15.1 对接FusionInsight
 
 ## 适用场景
 
-> Aapache Druid 0.15.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Kafka)
+> Apache Druid 0.15.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Kafka)
 
 ## 前提条件
 
