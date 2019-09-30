@@ -268,7 +268,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
   </jdbc>
   ```
 
-  **Phoenix的JDBC配置示例：** 需要增加属性hbase.myclient.keytab.file和hbase.myclient.principal。
+  **Phoenix的JDBC配置示例：** 需要增加属性hbase.myclient.keytab和hbase.myclient.principal。
   ```
   <jdbc>
     <identify>phoenix</identify>
@@ -287,7 +287,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
         <value>C:\\ecotesting\\Fiber\\conf\\jaas.conf</value>
       </property>
       <property>
-        <name>hbase.myclient.keytab.file</name>
+        <name>hbase.myclient.keytab</name>
         <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
       </property>
   	<property>
