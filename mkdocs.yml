@@ -152,6 +152,10 @@ nav:
   - NeoKylin:
     - 6.9 <--> C70: Other/NeoKylin.md
     - 7.2 <--> C70: Other/NeoKylin.md
+  - elasticsearch-head:
+    - 1.0 <--> C80: Other/Elasticsearch_Related.md
+  - filebeat:
+    - 6.5.1 <--> C80: Other/Elasticsearch_Related.md
 - SQL分析:
   - Apache Kylin:
     - 1.6.0 <--> C60: SQL_Analytics/Apache_Kylin_1.6.0.md
