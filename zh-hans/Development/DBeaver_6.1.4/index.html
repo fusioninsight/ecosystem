@@ -1690,11 +1690,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
     
     <label class="md-nav__link" for="nav-4-1">
-      Aapache Druid
+      Apache Druid
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-4-1">
-        Aapache Druid
+        Apache Druid
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -2264,46 +2264,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
     
     <label class="md-nav__link" for="nav-5-6">
-      SQuirreL
+      Squirrel
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
       <label class="md-nav__title" for="nav-5-6">
-        SQuirreL
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
-      3.9.1 <--> 6.5
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
-    
-    <label class="md-nav__link" for="nav-5-7">
-      Squirrel
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
-      <label class="md-nav__title" for="nav-5-7">
         Squirrel
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2333,6 +2297,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
+      3.9.1 <--> 6.5
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2345,13 +2321,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-7">
       Zeppelin
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
-      <label class="md-nav__title" for="nav-5-8">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-5-7">
         Zeppelin
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3262,9 +3238,6 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
 <li>
 <p>将<code>/opt/hadoopclient/HBase</code>拷贝至本地<code>C:\ecotesting\Fiber</code>目录。</p>
 </li>
-<li>
-<p>将<code>C:\ecotesting\Fiber\HBase\hbase\lib\phoenix-core-4.13.1-HBase-1.3.jar</code>拷贝至<code>C:\ecotesting\Fiber\lib</code>。</p>
-</li>
 </ul>
 <p><img alt="" src="../assets/DBeaver_6.1.4/dc36eb03.png" /></p>
 <ul>
@@ -3466,7 +3439,7 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
   &lt;/properties&gt;
 &lt;/jdbc&gt;
 </pre></div></p>
-<p><strong>Phoenix的JDBC配置示例：</strong> 需要增加属性hbase.myclient.keytab和hbase.myclient.principal。
+<p><strong>Phoenix的JDBC配置示例：</strong>
   <div class="codehilite"><pre><span></span>&lt;jdbc&gt;
   &lt;identify&gt;phoenix&lt;/identify&gt;
   &lt;describe&gt;phoenix jdbc configuration&lt;/describe&gt;
@@ -3484,14 +3457,6 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
       &lt;value&gt;C:\\ecotesting\\Fiber\\conf\\jaas.conf&lt;/value&gt;
     &lt;/property&gt;
     &lt;property&gt;
-      &lt;name&gt;hbase.myclient.keytab&lt;/name&gt;
-      &lt;value&gt;C:\\ecotesting\\Fiber\\conf\\user.keytab&lt;/value&gt;
-    &lt;/property&gt;
-  &lt;property&gt;
-      &lt;name&gt;hbase.myclient.principal&lt;/name&gt;
-      &lt;value&gt;developuser&lt;/value&gt;
-    &lt;/property&gt;
-  &lt;property&gt;
       &lt;name&gt;zookeeper.server.principal&lt;/name&gt;
       &lt;value&gt;zookeeper/hadoop.hadoop.com&lt;/value&gt;
     &lt;/property&gt;
@@ -3502,6 +3467,19 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
   &lt;/properties&gt;
 &lt;/jdbc&gt;
 </pre></div></p>
+<ul>
+<li>对接Phoenix时，需要修改配置文件<code>C:\ecotesting\Fiber\HBase\hbase\conf\hbase-site.xml</code>新增属性 <strong>hbase.myclient.keytab</strong> 和 <strong>hbase.myclient.principal</strong>。</li>
+</ul>
+<div class="codehilite"><pre><span></span>&lt;property&gt;
+  &lt;name&gt;hbase.myclient.keytab&lt;/name&gt;
+  &lt;value&gt;C:\\ecotesting\\Fiber\\conf\\user.keytab&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+  &lt;name&gt;hbase.myclient.principal&lt;/name&gt;
+  &lt;value&gt;developuser&lt;/value&gt;
+&lt;/property&gt;
+</pre></div>
+
 <h2 id="dbeaverfiber">DBeaver对接Fiber<a class="headerlink" href="#dbeaverfiber" title="Permanent link">&para;</a></h2>
 <h3 id="_7">操作场景<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>DBeaver通过Fiber方式对接FusionInsight HD的Hive、Spark2x、Phoenix组件。</p>
@@ -3519,6 +3497,9 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
 C:\Program Files\Java\jdk1.8.0_202\bin
 </pre></div></p>
 <p><img alt="" src="../assets/DBeaver_6.1.4/5d3dafa2.png" /></p>
+<ul>
+<li>重启DBeaver。修改dbeaver.ini后需要重启DBeaver才生效。</li>
+</ul>
 <h3 id="_9">操作步骤<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="dbeaverfiberhive">DBeaver通过Fiber对接Hive<a class="headerlink" href="#dbeaverfiberhive" title="Permanent link">&para;</a></h4>
 <ul>
