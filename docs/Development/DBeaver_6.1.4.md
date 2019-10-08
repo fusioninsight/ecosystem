@@ -60,8 +60,6 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
 
   * 将`/opt/hadoopclient/HBase`拷贝至本地`C:\ecotesting\Fiber`目录。
 
-  * 将`C:\ecotesting\Fiber\HBase\hbase\lib\phoenix-core-4.13.1-HBase-1.3.jar`拷贝至`C:\ecotesting\Fiber\lib`。
-
   ![](assets/DBeaver_6.1.4/dc36eb03.png)
 
 * 登录FusionInsight Manager的`系统->用户->更多（developuser）->下载认证凭证`，下载developuser对应的认证凭证。将用户的 **krb5.conf** 和 **user.keytab** 文件拷贝到`C:\ecotesting\Fiber\conf`目录下。
@@ -268,7 +266,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
   </jdbc>
   ```
 
-  **Phoenix的JDBC配置示例：** 需要增加属性hbase.myclient.keytab和hbase.myclient.principal。
+  **Phoenix的JDBC配置示例：**
   ```
   <jdbc>
     <identify>phoenix</identify>
@@ -286,15 +284,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
         <name>java.security.auth.login.config</name>
         <value>C:\\ecotesting\\Fiber\\conf\\jaas.conf</value>
       </property>
-      <property>
-        <name>hbase.myclient.keytab</name>
-        <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
-      </property>
-  	<property>
-        <name>hbase.myclient.principal</name>
-        <value>developuser</value>
-      </property>
-  	<property>
+  	  <property>
         <name>zookeeper.server.principal</name>
         <value>zookeeper/hadoop.hadoop.com</value>
       </property>
@@ -304,6 +294,19 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
       </property>
     </properties>
   </jdbc>
+  ```
+
+- 对接Phoenix时，需要修改配置文件`C:\ecotesting\Fiber\HBase\hbase\conf\hbase-site.xml`新增属性 **hbase.myclient.keytab** 和 **hbase.myclient.principal**。
+
+  ```
+  <property>
+    <name>hbase.myclient.keytab</name>
+    <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
+  </property>
+  <property>
+    <name>hbase.myclient.principal</name>
+    <value>developuser</value>
+  </property>
   ```
 
 ## DBeaver对接Fiber
@@ -326,6 +329,8 @@ DBeaver通过Fiber方式对接FusionInsight HD的Hive、Spark2x、Phoenix组件�
   ```
 
   ![](assets/DBeaver_6.1.4/5d3dafa2.png)
+
+* 重启DBeaver。修改dbeaver.ini后需要重启DBeaver才生效。
 
 ### 操作步骤
 
