@@ -6,6 +6,8 @@
   * [2018.2.5.48994 <--> C60](Alteryx.md)
   * [2018.2.5.48994 <--> C80](Alteryx.md)
   * [2018.2.5.48994 <--> 6.5](Alteryx.md)
+* GeoMesa
+  * [2.3.1 <--> 6.5](GeoMesa_2.3.1.md)
 * Rapidminer Studio
   * [8.2.001 <--> C80](RapidMiner.md)
 * Splunk

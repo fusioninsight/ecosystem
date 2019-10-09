@@ -42,6 +42,8 @@ nav:
     - 2018.2.5.48994 <--> C60: Data_Analysis/Alteryx.md
     - 2018.2.5.48994 <--> C80: Data_Analysis/Alteryx.md
     - 2018.2.5.48994 <--> 6.5: Data_Analysis/Alteryx.md
+  - GeoMesa:
+    - 2.3.1 <--> 6.5: Data_Analysis/GeoMesa_2.3.1.md
   - Rapidminer Studio:
     - 8.2.001 <--> C80: Data_Analysis/RapidMiner.md
   - Splunk:
