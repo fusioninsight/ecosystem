@@ -24,28 +24,12 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 </thead>
 
 
-<tr><td rowspan=7 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>Business Intelligence </td>
-<td rowspan=3 >QlikView</td>
+<tr><td rowspan=5 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>Business Intelligence </td>
+<td rowspan=1 >QlikView</td>
 <td>12</td>
 <td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 </tr>
