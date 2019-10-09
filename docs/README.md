@@ -24,7 +24,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 </thead>
 
 
-<tr><td rowspan=17 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
+<tr><td rowspan=10 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
 <td rowspan=1 >IBM Cognos</td>
 <td>10.2.2fp4</td>
 <td></td>
@@ -34,18 +34,10 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=5 >Oracle BIEE</td>
+<td rowspan=2 >Oracle BIEE</td>
 <td>11g</td>
 <td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>11g</td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 <td></td>
 <td></td>
@@ -54,74 +46,26 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td>12c</td>
 <td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12c</td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12c</td>
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
 <tr>
-<td rowspan=2 >Qlik Sense</td>
+<td rowspan=1 >Qlik Sense</td>
 <td>3.2.4</td>
 <td></td>
 <td></td>
 <td><a href="Business_Intelligence/QlikSense.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td>3.2.4</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikSense.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
-<td rowspan=4 >QlikView</td>
+<td rowspan=1 >QlikView</td>
 <td>12</td>
 <td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
@@ -166,29 +110,13 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=7 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
-<td rowspan=3 >Alteryx</td>
+<tr><td rowspan=4 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
+<td rowspan=1 >Alteryx</td>
 <td>2018.2.5.48994</td>
 <td></td>
 <td><a href="Data_Analysis/Alteryx.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>2018.2.5.48994</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Analysis/Alteryx.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>2018.2.5.48994</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Analysis/Alteryx.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
@@ -201,20 +129,12 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=2 >Splunk</td>
+<td rowspan=1 >Splunk</td>
 <td>7.2.4</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Analysis/Splunk.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>7.2.4</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Analysis/Splunk.md"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
@@ -226,7 +146,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=35 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<tr><td rowspan=24 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -244,37 +164,21 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Data_Integration/Apache_NiFi.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
-<td rowspan=2 >Confluent</td>
+<td rowspan=1 >Confluent</td>
 <td>4.1.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Confluent_4_1_0.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>4.1.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Confluent_4_1_0.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
-<td rowspan=2 >Denodo Platform</td>
+<td rowspan=1 >Denodo Platform</td>
 <td>7.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Denodo.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>7.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Denodo.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
@@ -313,20 +217,29 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=2 >Informatica PowerCenter</td>
+<td rowspan=2 >Informatica</td>
+<td>10.0.0</td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Informatica_BDM_PushDown.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>10.2.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Informatica PowerCenter</td>
 <td>10.2.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Informatica_PowerCenter.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>10.2.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Informatica_PowerCenter.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
@@ -339,47 +252,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=5 >Informatica</td>
-<td>10.0.0</td>
-<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.0.0</td>
-<td></td>
-<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.0.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>10.0.0</td>
-<td></td>
-<td></td>
-<td><a href="Data_Integration/Informatica_BDM_PushDown.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.2.2</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a href="Data_Integration/Informatica_BDM_10.2.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
-</tr>
-<tr>
 <td rowspan=1 >Kafka Manager</td>
 <td>1.3.3.21</td>
 <td></td>
@@ -389,32 +261,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=3 >Kettle</td>
+<td rowspan=1 >Kettle</td>
 <td>6.1</td>
 <td></td>
 <td><a href="Data_Integration/Kettle_6.1.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>6.1</td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Kettle_6.1.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>6.1</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Kettle_6.1.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 <td></td>
 </tr>
 <tr>
-<td rowspan=2 >Knime</td>
+<td rowspan=1 >Knime</td>
 <td>3.6.1</td>
 <td></td>
 <td></td>
@@ -423,26 +279,10 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td>3.6.1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan=4 >Oracle GoldenGate</td>
+<td rowspan=2 >Oracle GoldenGate</td>
 <td>12.2</td>
 <td></td>
 <td><a href="Data_Integration/Oracle_GoldenGate.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12.2</td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Oracle_GoldenGate.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
@@ -452,14 +292,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Oracle_GoldenGate.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12.3</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Data_Integration/Oracle_GoldenGate.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Flume ">Flume</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td></td>
 </tr>
@@ -512,7 +344,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/TIBCO_BusinessWorks.md"><span class="label label-GuassDB ">GuassDB</span></a></td>
+<td><a href="Data_Integration/TIBCO_BusinessWorks.md"><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >杭州合众UTL</td>
@@ -566,7 +398,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=17 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<tr><td rowspan=15 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
 <td rowspan=3 >DBeaver</td>
 <td>4.0.8</td>
 <td></td>
@@ -635,33 +467,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=2 >RStudio</td>
+<td rowspan=1 >RStudio</td>
 <td>3.4.1</td>
 <td></td>
 <td><a href="Development/RStudio.md"><span class="label label-SparkR ">SparkR</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>3.4.1</td>
-<td></td>
-<td></td>
 <td><a href="Development/RStudio.md"><span class="label label-SparkR ">SparkR</span></a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >SQuirreL</td>
-<td>3.9.1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a href="Development/Squirrel_3.9.1.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-</tr>
-<tr>
-<td rowspan=2 >Squirrel</td>
+<td rowspan=3 >Squirrel</td>
 <td>3.7.1</td>
 <td></td>
 <td><a href="Development/Squirrel_3.8.0.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
@@ -678,7 +493,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=4 >Zeppelin</td>
+<td>3.9.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Squirrel_3.9.1.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td rowspan=3 >Zeppelin</td>
 <td>0.7.2</td>
 <td></td>
 <td><a href="Development/Zeppelin_0.7.2.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
@@ -691,14 +514,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Development/Zeppelin_0.7.3.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>0.7.3</td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="Development/Zeppelin_0.7.3.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
 <td></td>
 </tr>
@@ -798,7 +613,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Other/Elasticsearch_Related.md"><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=14 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
+<tr><td rowspan=13 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
 <td rowspan=4 >Apache Kylin</td>
 <td>1.6.0</td>
 <td></td>
@@ -873,7 +688,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=5 >Presto</td>
+<td rowspan=4 >Presto</td>
 <td>0.155</td>
 <td></td>
 <td><a href="SQL_Analytics/Presto_0.155.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
@@ -903,14 +718,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="SQL_Analytics/Presto_0.210.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
-<td></td>
-</tr>
-<tr>
-<td>0.210</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td><a href="SQL_Analytics/Presto_0.210.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 </table>

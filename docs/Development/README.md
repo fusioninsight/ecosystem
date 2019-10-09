@@ -17,11 +17,10 @@
 * RStudio
   * [3.4.1 <--> C60](RStudio.md)
   * [3.4.1 <--> C70](RStudio.md)
-* SQuirreL
-  * [3.9.1 <--> 6.5](Squirrel_3.9.1.md)
 * Squirrel
   * [3.7.1 <--> C60](Squirrel_3.8.0.md)
   * [3.8.0 <--> C70](Squirrel_3.8.0.md)
+  * [3.9.1 <--> 6.5](Squirrel_3.9.1.md)
 * Zeppelin
   * [0.7.2 <--> C60](Zeppelin_0.7.2.md)
   * [0.7.3 <--> C70](Zeppelin_0.7.3.md)
