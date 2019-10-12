@@ -37,7 +37,7 @@
   * [6.1 <--> C80](Kettle_6.1.md)
 * Knime
   * [3.6.1 <--> C80](Knime.md)
-  * [3.6.1 <--> 5.0](Knime.md)
+  * [3.6.1 <--> 6.5](Knime.md)
 * Oracle GoldenGate
   * [12.2 <--> C60](Oracle_GoldenGate.md)
   * [12.2 <--> 6.5](Oracle_GoldenGate.md)

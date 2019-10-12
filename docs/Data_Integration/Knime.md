@@ -4,7 +4,7 @@
 
 > Knime 3.6.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/Spark)
 >
-> Knime 3.6.1 <--> FusionInsight HD 6.5.0 (HDFS/Hive)
+> Knime 3.6.1 <--> FusionInsight HD 6.5 (HDFS/Hive)
 
 ## 环境准备以及Knime下载
 
