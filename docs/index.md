@@ -110,7 +110,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=5 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
+<tr><td rowspan=6 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
 <td>2018.2.5.48994</td>
 <td></td>
@@ -135,6 +135,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Analysis/RapidMiner"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >SAS</td>
+<td>9.4M3</td>
+<td></td>
+<td><a href="Data_Analysis/SAS_9.4M3"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
+<td><a href="Data_Analysis/SAS_9.4M3"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
+<td><a href="Data_Analysis/SAS_9.4M3"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Yarn ">Yarn</span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -285,7 +294,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></a></td>
-<td></td>
+<td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >Oracle GoldenGate</td>
