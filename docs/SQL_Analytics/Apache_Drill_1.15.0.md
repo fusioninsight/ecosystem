@@ -129,7 +129,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 ![](assets/Apache_Drill/markdown-img-paste-20191010170552340.png)
 
 - ApacheDrill 1.12.0对接 FI HD V100R002C80SPC200 Hive服务前提条件：
-  1.  下载ApacheDrill 1.12.0的安装包apache-drill-1.12.0.tar.gz， 参考上述《安装Apache Drill》之一章节完成drill安装
+  1.  下载ApacheDrill 1.12.0的安装包apache-drill-1.12.0.tar.gz， 参考上述《安装Apache Drill》章节完成drill安装
   2.  参考上述《对接HDFS》章节完成对接drill 1.12.0版本与FI HD的对接，因为对接hdfs是连接hive的基础，所以需要完成此步骤
 
 
@@ -287,7 +287,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 停止正在运行的drill
 
-- 找到drill安装目录下./jar/ext/路径，将drill自带的zookeeper-3.4.12.jar重命名为zookeeper-3.4.12.jar.org注释掉，并将FI HD客户端中zookeeper相关jar包 zookeeper-3.5.1.jar拷贝到该路径下。这一步的目的是，drill自带的zookeeper-3.4.12.jar版本太旧，其内部没有定义send4LetterWord方法，该方法是想FI HD zookeeper服务自动获取连接zookeeper的service principal (zookeeper/hadoop.hadoop.com@HADOOP.COM)
+- 找到drill安装目录下./jar/ext/路径，将drill自带的zookeeper-3.4.12.jar重命名为zookeeper-3.4.12.jar.org注释掉，并将FI HD客户端中zookeeper相关jar包 zookeeper-3.5.1.jar拷贝到该路径下。这一步的目的是，drill自带的zookeeper-3.4.12.jar版本太旧，其内部没有定义send4LetterWord方法，该方法是向FI HD zookeeper服务自动获取连接zookeeper的service principal (zookeeper/hadoop.hadoop.com@HADOOP.COM)
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010201322646.png)
 
