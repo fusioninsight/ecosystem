@@ -37,6 +37,7 @@ nav:
     - 10.1.4 <--> C60: Business_Intelligence/Tableau.md
     - 10.3.2 <--> C70: Business_Intelligence/Tableau.md
     - 10.5.0 <--> C80: Business_Intelligence/Tableau.md
+    - 10.5.0 <--> 6.5: Business_Intelligence/Tableau.md
 - 数据分析:
   - Alteryx:
     - 2018.2.5.48994 <--> C60: Data_Analysis/Alteryx.md
@@ -167,6 +168,8 @@ nav:
     - 2.1.0 <--> C70: SQL_Analytics/Apache_Kylin_2.1.0.md
     - 2.3.1 <--> C80: SQL_Analytics/Apache_Kylin_2.3.1.md
     - 2.6.1 <--> 6.5: SQL_Analytics/Apache_Kylin_2.6.1.md
+  - ApacheDrill:
+    - 1.15.0 <--> C80: SQL_Analytics/Apache_Drill_1.15.0.md
   - Kyligence Analytics Platform:
     - 2.2 <--> C60: SQL_Analytics/Kyligence.md
     - 2.3 <--> C60: SQL_Analytics/Kyligence.md

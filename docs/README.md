@@ -108,7 +108,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td></td>
+<td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr><td rowspan=6 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
@@ -631,7 +631,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Other/Elasticsearch_Related.md"><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=13 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
+<tr><td rowspan=14 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
 <td rowspan=4 >Apache Kylin</td>
 <td>1.6.0</td>
 <td></td>
@@ -663,6 +663,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="SQL_Analytics/Apache_Kylin_2.6.1.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >ApacheDrill</td>
+<td>1.15.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/Apache_Drill_1.15.0.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
 </tr>
 <tr>
 <td rowspan=5 >Kyligence Analytics Platform</td>

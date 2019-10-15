@@ -1,4 +1,4 @@
-# ApacheDril对接FusionInsight
+# Apache Dril对接FusionInsight
 
 ## 适用场景
 
@@ -18,7 +18,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   或者从官网下载:
 
-  ![](assets/ApacheDrill/markdown-img-paste-20190325150603940.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20190325150603940.png)
 
 - 安装drill
 
@@ -30,11 +30,11 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   bin/drill-embedded
   ```
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010161828468.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010161828468.png)
 
   同时可以登录 `172.16.2.123:8047` 来查看webUI界面
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010161756965.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010161756965.png)
 
 ## 对接HDFS
 
@@ -42,7 +42,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 登陆drill webUI 界面，选择Storage,创建新的huaweihdfs
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010160157973.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010160157973.png)
 
   内容如下：
   ```
@@ -70,14 +70,14 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   }
   ```
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010161034836.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010161034836.png)
 
 
 - 准备认证相关配置文件
 
   登陆对接集群主节点172.16.6.10:/opt路径,使用命令`find /opt -name hdfs.keytab`查找hdfs认证相关keytab文件
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010161923832.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010161923832.png)
 
   将hdfs.keytab文件scp拷贝到apachedrill主机/opt路径下
 
@@ -87,7 +87,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   1.  找到参数项fs.defaultFS,将值改为namenode主节点ip+25000的形式：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010162055372.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010162055372.png)
 
 
   保存修改
@@ -98,11 +98,11 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   security.auth.principal: "hdfs/hadoop.hadoop.com@HADOOP.COM"
   security.auth.keytab: "/opt/hdfs.keytab"
   ```
-  ![](assets/ApacheDrill/markdown-img-paste-20191010104926804.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010104926804.png)
 
 - 在对接集群的/tmp路径下创建json格式的测试数据test.json
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010164236643.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010164236643.png)
 
   内容如下：
   ```
@@ -115,18 +115,18 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   在命令行使用命令`show databases;`检查数据库：
 
-  ![](assets/ApacheDrill/markdown-img-paste-2019101016262138.png)
+  ![](assets/Apache_Drill/markdown-img-paste-2019101016262138.png)
 
   使用命令```select * from huaweihdfs.`tmp`.`test.json`;```查找数据：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010164519607.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010164519607.png)
 
 
 ## 对接HIVE
 
 说明：apache drill 1.15版本的hive版本为2.3.2, FI HD V100R002C80SPC200版本hive版本为1.3.0，版本不匹配，不能对接成功，需要使用drill 1.12.0版本，故本节所述使用的drill版本都为1.12.0
 
-![](assets/ApacheDrill/markdown-img-paste-20191010170552340.png)
+![](assets/Apache_Drill/markdown-img-paste-20191010170552340.png)
 
 - ApacheDrill 1.12.0对接 FI HD V100R002C80SPC200 Hive服务前提条件：
   1.  下载ApacheDrill 1.12.0的安装包apache-drill-1.12.0.tar.gz， 参考上述《安装Apache Drill》之一章节完成drill安装
@@ -135,18 +135,18 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 由于drill 1.12.0版本支持对接ha模式的大数据集群，为减少依赖相关错误发生，更改对接FI HD集群HDFS服务中dfs.client.failover.proxy.provider.hacluster配置项的值为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider，并点击保存配置，重启相关服务
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015141304194.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015141304194.png)
 
   完成后重新下载集群配置文件
 
 - 到drill安装路径/jars下使用命令`mkdir hd_jars`新建一个名为hd_jars的路径
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015142149335.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015142149335.png)
 
   到FI HD客户端下找到Jar包 hadoop-yarn-api-2.7.2.jar， 并将此jar包拷贝到hd_jars路径下
   `cp /opt/hadoopclient/HDFS/hadoop/share/hadoop/yarn/hadoop-yarn-api-2.7.2.jar /opt/drill/apache-drill-1.12.0/jars/hd_jars/`
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015142415103.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015142415103.png)
 
 - 修改drill安装路径/bin/drill-config.sh文件如下：  
 
@@ -154,11 +154,11 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   `CP="$CP:$DRILL_HOME/jars/hd_jars/*"`
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015142620777.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015142620777.png)
 
 - 将重新下载的集群配置文件找到hdfs-site.xml以及yarn-site.xml文件导入到drill安装路径/conf目录下（core-site.xml配置文件在对接HDFS的时候已经导入，并且修改过fs.defaultFS配置项）：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015143059303.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015143059303.png)
 
 - 登陆对接FI HD集群172.16.2.11， 使用如下命令找到对接hive相关认证keytab文件hive.keytab并把此文件传至drill主机/opt路径下：
 
@@ -166,7 +166,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   find /opt -name hive.keytab
   scp /opt/huawei/Bigdata/components/FusionInsight_HD_V100R002C80SPC200/Hive/hive.keytab root@172.16.2.123:/opt
   ```
-  ![](assets/ApacheDrill/markdown-img-paste-20191015143429509.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015143429509.png)
 
 - 登陆drill主机，准备对接集群相关的krb5.conf文件（可从manager下载），复制到drill主机/etc路径下并覆盖，apachedrill默认从/etc/路径下读取krb5.conf文件，如果此步之前做过可以不做
 
@@ -180,7 +180,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
     sys.store.provider.local.path = "/home/drill"
   }
   ```
-  ![](assets/ApacheDrill/markdown-img-paste-2019101514380697.png)
+  ![](assets/Apache_Drill/markdown-img-paste-2019101514380697.png)
 
 - 重启drill,登陆drill WebUI,创建新的storage名字为huaweihive并enable，内容如下：
 
@@ -198,25 +198,25 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   }
   ```
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015143940614.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015143940614.png)
 
   其中hive.metastore.uris可在集群hive-site.xml文件中查到
 
 - 后台登陆drill，使用`show databases`命令查看数据库：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015144235959.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015144235959.png)
 
   使用命令`use huaweihive;`使用hive连接：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015144327744.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015144327744.png)
 
   使用命令`show tables;`查看hive表：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015144406753.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015144406753.png)
 
   使用查询命令查询hive表：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191015144437547.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191015144437547.png)
 
 
 
@@ -225,7 +225,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 对接参考drill官方文档：https://drill.apache.org/docs/kafka-storage-plugin/
 可以知道支持的kafka读取数据结构只能为json：
 
-![](assets/ApacheDrill/markdown-img-paste-20191010171142911.png)
+![](assets/Apache_Drill/markdown-img-paste-20191010171142911.png)
 
 - 准备topic
 
@@ -244,11 +244,11 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   { "_id" : "5968dd23fc13ae04d9000003", "product_name" : "Dextromathorphan HBr", "supplier" : "Schmitt-Weissnat", "quantity" : 211, "unit_cost" : "$20.53" }
   ```
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010194958223.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010194958223.png)
 
 - 启动apachedrill,登陆webUI,点击Storage创建huaweikafka,点击enable，内容如下：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010195412389.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010195412389.png)
 
   ```
   {
@@ -268,19 +268,19 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 后台命令行输入`show databases;`检查数据库
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010195607346.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010195607346.png)
 
   输入命令`use huaweikafka;`使用数据库
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010195639877.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010195639877.png)
 
   输入命令`show tables;`查看topic
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010195732288.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010195732288.png)
 
   输入命令`select * from druidkafka;`查询刚刚创建的kafka topic
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010195822879.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010195822879.png)
 
 
 ## 对接HBase
@@ -289,7 +289,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 找到drill安装目录下./jar/ext/路径，将drill自带的zookeeper-3.4.12.jar重命名为zookeeper-3.4.12.jar.org注释掉，并将FI HD客户端中zookeeper相关jar包 zookeeper-3.5.1.jar拷贝到该路径下。这一步的目的是，drill自带的zookeeper-3.4.12.jar版本太旧，其内部没有定义send4LetterWord方法，该方法是想FI HD zookeeper服务自动获取连接zookeeper的service principal (zookeeper/hadoop.hadoop.com@HADOOP.COM)
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010201322646.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010201322646.png)
 
 - 在/opt路径下准备jass.conf文件，内容如下，其中/opt/user.keytab为用户developuser的认证文件：
   ```
@@ -315,7 +315,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   完成之后使用命令`java -version`检查是否加载成功：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010201557946.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010201557946.png)
 
 - 将HDFS客户端包含的core-site.xml,hdfs-site.xml,yarn-site.xml文件拷贝到drill安装路径下的conf目录下，其中hdfs-site.xml文件需要做如下更改：
 
@@ -326,7 +326,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   <value>org.apache.hadoop.hdfs.server.namenode.ha.BlackListingFailoverProxyProvider</value>
   </property>
   ```
-  ![](assets/ApacheDrill/markdown-img-paste-20191010212449874.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010212449874.png)
 
 - 启动drill，登陆drill webUI，添加Storage名字为huaweihbase并enable,内容如下：
 
@@ -341,16 +341,16 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
     "enabled": true
   }
   ```
-  ![](assets/ApacheDrill/markdown-img-paste-20191010211823311.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010211823311.png)
 
 - 登陆drill后台，使用命令`use huaweihbase;`使用数据库：
 
-  ![](assets/ApacheDrill/markdown-img-paste-20191010211937218.png)
+  ![](assets/Apache_Drill/markdown-img-paste-20191010211937218.png)
 
   使用命令`show tables;`查看hbase表：
 
-  ![](assets/ApacheDrill/markdown-img-paste-2019101021201213.png)
+  ![](assets/Apache_Drill/markdown-img-paste-2019101021201213.png)
 
   使用命令`select * from ImportTable;`查看hbase表：
 
-  ![](assets/ApacheDrill/markdown-img-paste-2019101021211850.png)
+  ![](assets/Apache_Drill/markdown-img-paste-2019101021211850.png)
