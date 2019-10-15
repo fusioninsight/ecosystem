@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> ApacheDrill 1.15.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/HBase/Kafka)
+> Apache Drill 1.15.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/HBase/Kafka)
 
 ## 说明
 
@@ -12,7 +12,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 ## 安装Apache Drill
 
-- 下载ApacheDrill
+- 下载Apache Drill
 
   `wget http://apache.mirrors.hoobly.com/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz`
 
@@ -38,7 +38,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 ## 对接HDFS
 
-- 确保apachedrill主机与对接集群时间差异小于5分钟
+- 确保Apache Drill主机与对接集群时间差异小于5分钟
 
 - 登陆drill webUI 界面，选择Storage,创建新的huaweihdfs
 
