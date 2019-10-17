@@ -2,6 +2,8 @@
 
 # 数据可视化
 
+* FineBI
+  * [5.1 <--> 6.5](FineBI_5.1.md)
 * IBM Cognos
   * [10.2.2fp4 <--> C60](IBM_Cognos.md)
 * Oracle BIEE
