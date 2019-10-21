@@ -173,7 +173,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=24 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<tr><td rowspan=25 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -338,6 +338,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td rowspan=1 >SharePlex</td>
+<td>9.2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/SharePlex.md"><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/SharePlex.md"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=3 >Talend</td>

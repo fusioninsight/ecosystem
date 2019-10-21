@@ -46,6 +46,9 @@
 * Pentaho
   * [7.1 <--> C70](Pentaho.md)
   * [8.0 <--> C60](Pentaho.md)
+* SharePlex
+  * [9.2.1 <--> C80](SharePlex.md)
+  * [9.2.1 <--> 6.5](SharePlex.md)
 * Talend
   * [6.4.1 <--> C80](Talend_6.4.1.md)
   * [7.0.1 <--> C80](Talend_6.4.1.md)

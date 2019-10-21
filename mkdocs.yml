@@ -103,6 +103,9 @@ nav:
   - Pentaho:
     - 7.1 <--> C70: Data_Integration/Pentaho.md
     - 8.0 <--> C60: Data_Integration/Pentaho.md
+  - SharePlex:
+    - 9.2.1 <--> C80: Data_Integration/SharePlex.md
+    - 9.2.1 <--> 6.5: Data_Integration/SharePlex.md
   - Talend:
     - 6.4.1 <--> C80: Data_Integration/Talend_6.4.1.md
     - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
