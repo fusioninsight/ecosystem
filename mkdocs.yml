@@ -95,6 +95,8 @@ nav:
   - Knime:
     - 3.6.1 <--> C80: Data_Integration/Knime.md
     - 3.6.1 <--> 6.5: Data_Integration/Knime.md
+  - OceanSource:
+    - 1.0 <--> C80: Data_Integration/OceanSource.md
   - Oracle GoldenGate:
     - 12.2 <--> C60: Data_Integration/Oracle_GoldenGate.md
     - 12.2 <--> 6.5: Data_Integration/Oracle_GoldenGate.md
