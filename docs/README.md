@@ -575,7 +575,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Development/Zeppelin_0.8.0.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
+<td><a href="Development/Zeppelin_0.8.0.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></br><span class="label label-ELK ">ELK</span></a></td>
 <td></td>
 </tr>
 <tr><td rowspan=10 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
