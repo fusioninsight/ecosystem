@@ -140,6 +140,8 @@ nav:
     - 2.4.4.0 <--> C70: Development/Jupyter_Notebook.md
     - 2.7.16 <--> C80: Development/JupyterNotebook.md
     - 2.7.16 <--> 6.5: Development/JupyterNotebook.md
+  - JupyterHub:
+    - 1.0.0 <--> C80: Development/JupyterHub.md
   - RStudio:
     - 3.4.1 <--> C60: Development/RStudio.md
     - 3.4.1 <--> C70: Development/RStudio.md
