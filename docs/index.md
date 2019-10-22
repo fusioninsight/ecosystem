@@ -425,7 +425,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=15 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<tr><td rowspan=16 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
 <td rowspan=3 >DBeaver</td>
 <td>4.0.8</td>
 <td></td>
@@ -485,13 +485,21 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >Jupyter Notebook</td>
+<td rowspan=2 >Jupyter Notebook</td>
 <td>2.4.4.0</td>
 <td></td>
 <td></td>
 <td><a href="Development/Jupyter_Notebook"><span class="label label-pySpark ">pySpark</span></a></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>2.7.16</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/JupyterNotebook"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/JupyterNotebook"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >RStudio</td>

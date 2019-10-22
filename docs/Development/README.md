@@ -14,6 +14,8 @@
   * [4.0.1 <--> C70](HUE.md)
 * Jupyter Notebook
   * [2.4.4.0 <--> C70](Jupyter_Notebook.md)
+  * [2.7.16 <--> C80](JupyterNotebook.md)
+  * [2.7.16 <--> 6.5](JupyterNotebook.md)
 * RStudio
   * [3.4.1 <--> C60](RStudio.md)
   * [3.4.1 <--> C70](RStudio.md)
