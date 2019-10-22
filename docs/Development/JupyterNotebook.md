@@ -129,6 +129,8 @@
   ./pip freeze | grep JayDeBeApi
   ```
 
+- 将对接集群认证文件user.keytab放到jupyter notebook主机/opt路径下用于连接Hive认证使用
+
 - 使用如下命令启动jupyter notebook
   ```
   source /opt/hadoopclient/bigdata_env
