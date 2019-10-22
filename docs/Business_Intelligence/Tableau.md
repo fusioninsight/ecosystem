@@ -176,3 +176,7 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
 * ODBC连接失败
 
   常见情况是Host(s)、Port、Host FQDN等的输入数据有误，请根据实际情况进行输入
+
+* 票据24小时后过期，无法再访问数据
+
+  在windows上新增定时任务，定时执行kinit命令，刷新kerberos票据

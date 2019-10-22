@@ -173,7 +173,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=24 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<tr><td rowspan=26 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -306,6 +306,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Data_Integration/Knime.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
+<td rowspan=1 >OceanSource</td>
+<td>1.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/OceanSource.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-ElasticSearch ">ElasticSearch</span></br><span class="label label-Redis ">Redis</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+</tr>
+<tr>
 <td rowspan=2 >Oracle GoldenGate</td>
 <td>12.2</td>
 <td></td>
@@ -338,6 +347,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td rowspan=1 >SharePlex</td>
+<td>9.2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/SharePlex.md"><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/SharePlex.md"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=3 >Talend</td>

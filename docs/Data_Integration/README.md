@@ -38,6 +38,8 @@
 * Knime
   * [3.6.1 <--> C80](Knime.md)
   * [3.6.1 <--> 6.5](Knime.md)
+* OceanSource
+  * [1.0 <--> C80](OceanSource.md)
 * Oracle GoldenGate
   * [12.2 <--> C60](Oracle_GoldenGate.md)
   * [12.2 <--> 6.5](Oracle_GoldenGate.md)
@@ -46,6 +48,9 @@
 * Pentaho
   * [7.1 <--> C70](Pentaho.md)
   * [8.0 <--> C60](Pentaho.md)
+* SharePlex
+  * [9.2.1 <--> C80](SharePlex.md)
+  * [9.2.1 <--> 6.5](SharePlex.md)
 * Talend
   * [6.4.1 <--> C80](Talend_6.4.1.md)
   * [7.0.1 <--> C80](Talend_6.4.1.md)
