@@ -129,17 +129,43 @@
   ./pip freeze | grep JayDeBeApi
   ```
 
-- 将对接集群认证文件user.keytab放到jupyter notebook主机/opt路径下用于连接Hive认证使用
+- 将对接集群认证文件user.keytab放到jupyter notebook主机/opt路径下用于连接Hive认证使用,将认证相关的krb5.conf文件放到/etc/路径下
 
-- 使用如下命令启动jupyter notebook
+- 在jupyter notebook主机/opt路径下新建jaas.conf配置文件，内容如下：
+  ```
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="developuser@HADOOP.COM"
+  keyTab="/opt/user.keytab"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+- 使用如下命令加载JVM参数：
   ```
   source /opt/hadoopclient/bigdata_env
   kinit developuser
+  export JAVA_TOOL_OPTIONS="-Djava.security.krb5.conf=/etc/krb5.conf -Djava.security.auth.login.config=/opt/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=120000"
+  ```   
+  完成后使用命令`java -version`查看是否加载成功：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20191023142106563.png)
+
+
+
+
+- 使用如下命令启动jupyter notebook
+  ```
   source ~/.bashrc.anaconda
   export PYSPARK_DRIVER_PYTHON="ipython"
   export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root"
   pyspark --master yarn --deploy-mode client &
   ```
+
+  说明： 如果不需要同Spark2x组件交互，可直接使用命令`jupyter notebook --allow-root`直接启动jupyter notebook
 
 - 新建一个notebook，输入如下代码:
 
@@ -147,7 +173,7 @@
   import jaydebeapi
   import jpype
   import os
-  # this works
+  # this worked
   conn = jaydebeapi.connect(
       "org.apache.hive.jdbc.HiveDriver",
       ["jdbc:hive2://172.16.6.10:24002,172.16.6.11:24002,172.16.6.12:24002/default;serviceDiscoveryMode=zooKeeper;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=/opt/user.keytab" , "developuser", "Huawei@123"], [ '/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'commons-collections-3.2.2.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'commons-configuration-1.6.jar', '/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'commons-lang-2.6.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'commons-logging-1.1.3.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'curator-client-2.11.1.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'curator-framework-2.11.1.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'guava-14.0.1.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hadoop-auth-2.7.2.jar', '/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hadoop-common-2.7.2.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hadoop-mapreduce-client-core-2.7.2.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-common-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-exec-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-jdbc-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-metastore-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-serde-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-service-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-shims-0.23-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'hive-shims-common-1.3.0.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'httpclient-4.4.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'httpcore-4.4.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'libthrift-0.9.3.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'log4j-1.2.17.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'slf4j-api-1.7.5.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'slf4j-log4j12-1.7.5.jar','/opt/hadoopclient/Hive/Beeline/lib/jdbc/' + 'zookeeper-3.5.1.jar']
@@ -162,6 +188,8 @@
   说明：jaydebeapi.connect()为jdbc连接方法，jaydebeapi.connect("Driver Main Class", ["Connecting URL", "User", "Password"], "Path to JDBC driver")，对接hive需要将客户端hive jdbc样例中所有的jar包都导进去
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102215265645.png)
+
+
 
 ## 对接ELK
 
@@ -207,6 +235,9 @@
   export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root"
   pyspark --master yarn --deploy-mode client &
   ```
+
+  说明： 如果不需要同Spark2x组件交互，可直接使用命令`jupyter notebook --allow-root`直接启动jupyter notebook
+
 - 将ELK JDBC驱动jar包 `gsjdbc4.jar` 放到jupyter notebook主机 `/opt`路径下
 
 - 新建一个notebook，输入如下代码:
@@ -217,7 +248,7 @@
   args='-Djava.class.path=%s' % jar
   jvm = jpype.getDefaultJVMPath()
   jpype.startJVM(jvm, args)
-  # this works
+  # this worked
   conn = jaydebeapi.connect(
       'org.postgresql.Driver',
       ["jdbc:postgresql://172.16.6.10:25108/db_tpcds" , "joe", "Bigdata@123"], "/opt/gsjdbc4.jar"
