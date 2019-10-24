@@ -3,6 +3,7 @@
 ## 适用场景
 
 > SharePlex 9.2.1 <--> FusionInsight HD V100R002C80SPC200 (Kafka)
+>
 > SharePlex 9.2.1 <--> FusionInsight HD 6.5 (Kafka)
 
 ## 配置SharePlex上的kafka的post
