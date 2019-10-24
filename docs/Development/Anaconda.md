@@ -47,9 +47,9 @@ Anaconda 是一个免费，易于安装的软件包管理器，环境管理器�
 
 *	Jupyter Notebook
 
-   * **方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群**
+	* **方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群**
 
-     说明: 与方案1的R代码一样，唯一的区别是交互环境换成了jupyter notebook
+    说明: 与方案1的R代码一样，唯一的区别是交互环境换成了jupyter notebook
 
 (2) 使用python语言
 
