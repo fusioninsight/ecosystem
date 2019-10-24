@@ -2,6 +2,8 @@
 
 # 集成开发环境
 
+* Anaconda
+  * [2-2019.03-Linux-x86_64 <--> 6.5](Anaconda.md)
 * DBeaver
   * [4.0.8 <--> C60](DBeaver_4.2.1.md)
   * [4.2.1 <--> C70](DBeaver_4.2.1.md)

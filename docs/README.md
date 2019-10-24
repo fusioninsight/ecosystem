@@ -443,7 +443,16 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=17 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<tr><td rowspan=18 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<td rowspan=1 >Anaconda</td>
+<td>2-2019.03-Linux-x86_64</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Anaconda.md"><span class="label label-Spark2x ">Spark2x</span></a></td>
+</tr>
+<tr>
 <td rowspan=3 >DBeaver</td>
 <td>4.0.8</td>
 <td></td>

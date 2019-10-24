@@ -126,6 +126,8 @@ nav:
   - 杭州合众UDB:
     - 6.1 <--> C50: Database/杭州合众UDB.md
 - 集成开发环境:
+  - Anaconda:
+    - 2-2019.03-Linux-x86_64 <--> 6.5: Development/Anaconda.md
   - DBeaver:
     - 4.0.8 <--> C60: Development/DBeaver_4.2.1.md
     - 4.2.1 <--> C70: Development/DBeaver_4.2.1.md
