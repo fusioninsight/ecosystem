@@ -39,17 +39,17 @@ Anaconda 是一个免费，易于安装的软件包管理器，环境管理器�
 
     * **方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群**
 
-    说明：通过使用sparklyr来对航空公司航班进行数据分析，可查看在线demo http://rpubs.com/jinbnie/513252
+		说明：通过使用sparklyr来对航空公司航班进行数据分析，可查看在线demo http://rpubs.com/jinbnie/513252
 
     * **方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群**
 
-    说明:使用SparkR读取对接集群hive表里的数据
+		说明:使用SparkR读取对接集群hive表里的数据
 
 *	Jupyter Notebook
 
 	* **方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群**
 
-    说明: 与方案1的R代码一样，唯一的区别是交互环境换成了jupyter notebook
+		说明: 与方案1的R代码一样，唯一的区别是交互环境换成了jupyter notebook
 
 (2) 使用python语言
 
@@ -57,7 +57,7 @@ Anaconda 是一个免费，易于安装的软件包管理器，环境管理器�
 
     * **方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群**
 
-    说明: 使用python接口，读取对接集群hdfs中的数据，完成一次经典的spark word count演示样例
+		说明: 使用python接口，读取对接集群hdfs中的数据，完成一次经典的spark word count演示样例
 
 
 
@@ -109,7 +109,7 @@ bash Anaconda2-2019.03-Linux-x86_64.sh
 
 3.  安装程序提示您单击Enter接受默认安装位置，按CTRL-C取消安装，或指定备用安装目录。如果您接受默认安装位置，则安装程序将显示“PREFIX=/home/{username}/anaconda<2 or 3>”并继续安装。可能需要几分钟才能完成。
 
-  注意： 推荐使用默认安装位置，如果使用非root用户进行交互，请安装在其他可访问的路径，比如/opt，否则之后会报关于用户权限的问题
+	注意： 推荐使用默认安装位置，如果使用非root用户进行交互，请安装在其他可访问的路径，比如/opt，否则之后会报关于用户权限的问题
 
 4.  安装程序提示“Do you wish the installer to initialize Anaconda2 by running conda init?”推荐填写 “yes”。
 
