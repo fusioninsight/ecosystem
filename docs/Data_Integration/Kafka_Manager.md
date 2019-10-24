@@ -3,6 +3,7 @@
 ## 适用场景
 
 > Kafka Manager 1.3.3.21 <--> FusionInsight HD V100R002C80SPC200 (Kafka)
+> Kafka Manager 1.3.3.21 <--> FusionInsight HD 6.5 (Kafka)
 
 ## 环境准备
   * 安装JDK1.8及以上版本

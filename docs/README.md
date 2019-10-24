@@ -285,7 +285,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Kafka_Manager.md"><span class="label label-Kafka ">Kafka</span></a></td>
-<td></td>
+<td><a href="Data_Integration/Kafka_Manager.md"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >Kettle</td>

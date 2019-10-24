@@ -31,6 +31,7 @@
   * [10.2.2 <--> 6.5](Informatica_BDM_10.2.2.md)
 * Kafka Manager
   * [1.3.3.21 <--> C80](Kafka_Manager.md)
+  * [1.3.3.21 <--> 6.5](Kafka_Manager.md)
 * Kettle
   * [6.1 <--> C60](Kettle_6.1.md)
   * [6.1 <--> C70](Kettle_6.1.md)
