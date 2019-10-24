@@ -7,6 +7,8 @@
 > Kettle 6.1 <--> FusionInsight HD V100R002C70U10 (HDFS/Hive)
 >
 > Kettle 6.1 <--> FusionInsight HD V100R002C80U10 (HDFS/Hive)
+>
+> Pentaho目前仅仅在企业版（EE）支持Kerberos认证的Hadoop, Pentaho社区版（CE）不支持Kerberos认证的Hadoop，相关答复参考以下链接：https://forums.pentaho.com/threads/230953-Is-Kerberos-auth-Enterprise-only/
 
 ## 环境准备
 
