@@ -45,7 +45,7 @@
   * [12.2 <--> 6.5](Oracle_GoldenGate.md)
   * [12.3 <--> C70](Oracle_GoldenGate.md)
   * [12.3 <--> C80](Oracle_GoldenGate.md)
-* Pentaho
+* Pentaho EE
   * [7.1 <--> C70](Pentaho.md)
   * [8.0 <--> C60](Pentaho.md)
 * SharePlex

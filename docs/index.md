@@ -332,7 +332,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=2 >Pentaho</td>
+<td rowspan=2 >Pentaho EE</td>
 <td>7.1</td>
 <td></td>
 <td></td>

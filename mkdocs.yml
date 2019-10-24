@@ -102,7 +102,7 @@ nav:
     - 12.2 <--> 6.5: Data_Integration/Oracle_GoldenGate.md
     - 12.3 <--> C70: Data_Integration/Oracle_GoldenGate.md
     - 12.3 <--> C80: Data_Integration/Oracle_GoldenGate.md
-  - Pentaho:
+  - Pentaho EE:
     - 7.1 <--> C70: Data_Integration/Pentaho.md
     - 8.0 <--> C60: Data_Integration/Pentaho.md
   - SharePlex:
