@@ -443,7 +443,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=18 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<tr><td rowspan=19 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
 <td rowspan=1 >Anaconda</td>
 <td>2-2019.03-Linux-x86_64</td>
 <td></td>
@@ -572,7 +572,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Development/Squirrel_3.9.1.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
-<td rowspan=3 >Zeppelin</td>
+<td rowspan=4 >Zeppelin</td>
 <td>0.7.2</td>
 <td></td>
 <td><a href="Development/Zeppelin_0.7.2.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></a></td>
@@ -595,6 +595,14 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Development/Zeppelin_0.8.0.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-SparkR ">SparkR</span></br><span class="label label-ELK ">ELK</span></a></td>
 <td></td>
+</tr>
+<tr>
+<td>0.8.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/Zeppelin_0.8.1.md"><span class="label label-HBase,Hive,Spark2x,GaussDB ">HBase,Hive,Spark2x,GaussDB</span></a></td>
 </tr>
 <tr><td rowspan=10 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=2 >Apache Livy</td>
