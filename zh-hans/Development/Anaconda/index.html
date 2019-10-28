@@ -1,0 +1,3907 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>2-2019.03-Linux-x86_64 <--> 6.5 - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#aancondafusioninsight-hd" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              2-2019.03-Linux-x86_64 <--> 6.5
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      FineBI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        FineBI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/FineBI_5.1/" title="5.1 6.5" class="md-nav__link">
+      5.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      IBM Cognos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2">
+        IBM Cognos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/IBM_Cognos/" title="10.2.2fp4 C60" class="md-nav__link">
+      10.2.2fp4 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Oracle BIEE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-3">
+        Oracle BIEE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C60" class="md-nav__link">
+      11g <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C70" class="md-nav__link">
+      11g <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C60" class="md-nav__link">
+      12c <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C70" class="md-nav__link">
+      12c <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c 6.5" class="md-nav__link">
+      12c <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+    
+    <label class="md-nav__link" for="nav-1-4">
+      Qlik Sense
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-1-4">
+        Qlik Sense
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 C70" class="md-nav__link">
+      3.2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 6.5" class="md-nav__link">
+      3.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      QlikView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-1-5">
+        QlikView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+      12 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+      12 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+      12 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 6.5" class="md-nav__link">
+      12 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+    
+    <label class="md-nav__link" for="nav-1-6">
+      SmartBI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-1-6">
+        SmartBI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/SmartBI/" title="7.2.32464.17374 C70" class="md-nav__link">
+      7.2.32464.17374 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7">
+    
+    <label class="md-nav__link" for="nav-1-7">
+      Tableau
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-1-7">
+        Tableau
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+      10.1.4 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+      10.3.2 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+      10.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 6.5" class="md-nav__link">
+      10.5.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Alteryx
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Alteryx
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C60" class="md-nav__link">
+      2018.2.5.48994 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C80" class="md-nav__link">
+      2018.2.5.48994 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 6.5" class="md-nav__link">
+      2018.2.5.48994 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      GeoMesa
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2">
+        GeoMesa
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/GeoMesa_2.3.1/" title="2.3.1 6.5" class="md-nav__link">
+      2.3.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Rapidminer Studio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3">
+        Rapidminer Studio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+      8.2.001 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      SAS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-4">
+        SAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C60" class="md-nav__link">
+      9.4M3 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C70" class="md-nav__link">
+      9.4M3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C80" class="md-nav__link">
+      9.4M3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Splunk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-5">
+        Splunk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 C80" class="md-nav__link">
+      7.2.4 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 6.5" class="md-nav__link">
+      7.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      永洪一站式大数据分析平台
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-2-6">
+        永洪一站式大数据分析平台
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/永洪一站式大数据分析平台/" title="7.1 C60" class="md-nav__link">
+      7.1 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Apache NiFi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Apache NiFi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+      1.7.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="1.9.2 6.5" class="md-nav__link">
+      1.9.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Confluent
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2">
+        Confluent
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Confluent_4_1_0/" title="4.1.0 C80" class="md-nav__link">
+      4.1.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Confluent_4_1_0/" title="4.1.0 6.5" class="md-nav__link">
+      4.1.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Denodo Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3">
+        Denodo Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="7.0 C80" class="md-nav__link">
+      7.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="7.0 6.5" class="md-nav__link">
+      7.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      H2O.ai
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-4">
+        H2O.ai
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="3.24.0.2 6.5" class="md-nav__link">
+      3.24.0.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      IBM InfoSphere CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-3-5">
+        IBM InfoSphere CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-nav__link">
+      11.3.3.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      IBM InfoSphere DataStage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-3-6">
+        IBM InfoSphere DataStage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.3.1.0 C50" class="md-nav__link">
+      11.3.1.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.5.0.2 C60" class="md-nav__link">
+      11.5.0.2 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Informatica PowerCenter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-3-7">
+        Informatica PowerCenter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Informatica PowerexChange CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-3-8">
+        Informatica PowerexChange CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      Informatica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-3-9">
+        Informatica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C60" class="md-nav__link">
+      10.0.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C80" class="md-nav__link">
+      10.0.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_PushDown/" title="10.0.0 C70" class="md-nav__link">
+      10.0.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.2.2 6.5" class="md-nav__link">
+      10.2.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-10" type="checkbox" id="nav-3-10">
+    
+    <label class="md-nav__link" for="nav-3-10">
+      Kafka Manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
+      <label class="md-nav__title" for="nav-3-10">
+        Kafka Manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="1.3.3.21 C80" class="md-nav__link">
+      1.3.3.21 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="1.3.3.21 6.5" class="md-nav__link">
+      1.3.3.21 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-11" type="checkbox" id="nav-3-11">
+    
+    <label class="md-nav__link" for="nav-3-11">
+      Kettle
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="12">
+      <label class="md-nav__title" for="nav-3-11">
+        Kettle
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C60" class="md-nav__link">
+      6.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C70" class="md-nav__link">
+      6.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C80" class="md-nav__link">
+      6.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-12" type="checkbox" id="nav-3-12">
+    
+    <label class="md-nav__link" for="nav-3-12">
+      Knime
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="13">
+      <label class="md-nav__title" for="nav-3-12">
+        Knime
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="3.6.1 C80" class="md-nav__link">
+      3.6.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="3.6.1 6.5" class="md-nav__link">
+      3.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-13" type="checkbox" id="nav-3-13">
+    
+    <label class="md-nav__link" for="nav-3-13">
+      OceanSource
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="14">
+      <label class="md-nav__title" for="nav-3-13">
+        OceanSource
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/OceanSource/" title="1.0 C80" class="md-nav__link">
+      1.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-14" type="checkbox" id="nav-3-14">
+    
+    <label class="md-nav__link" for="nav-3-14">
+      Oracle GoldenGate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="15">
+      <label class="md-nav__title" for="nav-3-14">
+        Oracle GoldenGate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.2 C60" class="md-nav__link">
+      12.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.2 6.5" class="md-nav__link">
+      12.2 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.3 C70" class="md-nav__link">
+      12.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.3 C80" class="md-nav__link">
+      12.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-15" type="checkbox" id="nav-3-15">
+    
+    <label class="md-nav__link" for="nav-3-15">
+      Pentaho EE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="16">
+      <label class="md-nav__title" for="nav-3-15">
+        Pentaho EE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Pentaho/" title="7.1 C70" class="md-nav__link">
+      7.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Pentaho/" title="8.0 C60" class="md-nav__link">
+      8.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-16" type="checkbox" id="nav-3-16">
+    
+    <label class="md-nav__link" for="nav-3-16">
+      SharePlex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="17">
+      <label class="md-nav__title" for="nav-3-16">
+        SharePlex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/SharePlex/" title="9.2.1 C80" class="md-nav__link">
+      9.2.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/SharePlex/" title="9.2.1 6.5" class="md-nav__link">
+      9.2.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-17" type="checkbox" id="nav-3-17">
+    
+    <label class="md-nav__link" for="nav-3-17">
+      Talend
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="18">
+      <label class="md-nav__title" for="nav-3-17">
+        Talend
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_6.4.1/" title="6.4.1 C80" class="md-nav__link">
+      6.4.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_6.4.1/" title="7.0.1 C80" class="md-nav__link">
+      7.0.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_7.2.1/" title="7.2.1 6.5" class="md-nav__link">
+      7.2.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-18" type="checkbox" id="nav-3-18">
+    
+    <label class="md-nav__link" for="nav-3-18">
+      Tibco BW
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="19">
+      <label class="md-nav__title" for="nav-3-18">
+        Tibco BW
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="5.13 6.5" class="md-nav__link">
+      5.13 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-19" type="checkbox" id="nav-3-19">
+    
+    <label class="md-nav__link" for="nav-3-19">
+      杭州合众UTL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="20">
+      <label class="md-nav__title" for="nav-3-19">
+        杭州合众UTL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/杭州合众UTL/" title="5.1 C50" class="md-nav__link">
+      5.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      数据库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Apache Druid
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Apache Druid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.14.2/" title="0.14.2 C80" class="md-nav__link">
+      0.14.2 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.15.1/" title="0.15.1 C80" class="md-nav__link">
+      0.15.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      SAP VORA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        SAP VORA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.0 C70" class="md-nav__link">
+      2.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.1 C70" class="md-nav__link">
+      2.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      杭州合众UDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3">
+        杭州合众UDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/杭州合众UDB/" title="6.1 C50" class="md-nav__link">
+      6.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Anaconda
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Anaconda
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2-2019.03-Linux-x86_64 <--> 6.5
+      </label>
+    
+    <a href="./" title="2-2019.03-Linux-x86_64 6.5" class="md-nav__link md-nav__link--active">
+      2-2019.03-Linux-x86_64 <--> 6.5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="产品介绍" class="md-nav__link">
+    产品介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="测试环境物理拓扑结构图" class="md-nav__link">
+    测试环境物理拓扑结构图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="测试环境相关产品版本" class="md-nav__link">
+    测试环境相关产品版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anacondafusioninsight-hd" title="Anaconda同FusionInsight HD交互的多种方式" class="md-nav__link">
+    Anaconda同FusionInsight HD交互的多种方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="测试环境准备" class="md-nav__link">
+    测试环境准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1sparklyrrstudiorhd-spark" title="方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sparkrrstudiorhd-spark" title="方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3sparklyrjupyter-notebookrhd-spark" title="方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4jupyter-notebookpythonhd-spark" title="方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群" class="md-nav__link">
+    方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      DBeaver
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-2">
+        DBeaver
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_4.2.1/" title="4.0.8 C60" class="md-nav__link">
+      4.0.8 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_4.2.1/" title="4.2.1 C70" class="md-nav__link">
+      4.2.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_6.1.4/" title="6.1.4 6.5" class="md-nav__link">
+      6.1.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      DbVisualizer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        DbVisualizer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.1/" title="10.0.1 C70" class="md-nav__link">
+      10.0.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.21/" title="10.0.21 6.5" class="md-nav__link">
+      10.0.21 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.1/" title="9.5.7 C60" class="md-nav__link">
+      9.5.7 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      HUE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-5-4">
+        HUE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../HUE/" title="4.0.1 C70" class="md-nav__link">
+      4.0.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Jupyter Notebook
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-5-5">
+        Jupyter Notebook
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Jupyter_Notebook/" title="2.4.4.0 C70" class="md-nav__link">
+      2.4.4.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterNotebook/" title="2.7.16 C80" class="md-nav__link">
+      2.7.16 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterNotebook/" title="2.7.16 6.5" class="md-nav__link">
+      2.7.16 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
+    
+    <label class="md-nav__link" for="nav-5-6">
+      JupyterHub
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-5-6">
+        JupyterHub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterHub/" title="1.0.0 C80" class="md-nav__link">
+      1.0.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-5-7">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RStudio/" title="3.4.1 C60" class="md-nav__link">
+      3.4.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RStudio/" title="3.4.1 C70" class="md-nav__link">
+      3.4.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+    
+    <label class="md-nav__link" for="nav-5-8">
+      Squirrel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-5-8">
+        Squirrel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.8.0/" title="3.7.1 C60" class="md-nav__link">
+      3.7.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.8.0/" title="3.8.0 C70" class="md-nav__link">
+      3.8.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
+      3.9.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
+    
+    <label class="md-nav__link" for="nav-5-9">
+      Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-5-9">
+        Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.2/" title="0.7.2 C60" class="md-nav__link">
+      0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.3/" title="0.7.3 C70" class="md-nav__link">
+      0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.3/" title="0.7.3 C80" class="md-nav__link">
+      0.7.3 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.8.0/" title="0.8.0 C80" class="md-nav__link">
+      0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.8.1/" title="0.8.1 6.5" class="md-nav__link">
+      0.8.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Apache Livy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Apache Livy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_5_0/" title="0.5.0 C80" class="md-nav__link">
+      0.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_6_0/" title="0.6.0 6.5" class="md-nav__link">
+      0.6.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      GIS Tools for Hadoop
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2">
+        GIS Tools for Hadoop
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="1.0 C60" class="md-nav__link">
+      1.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      IBM WAS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-3">
+        IBM WAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/IBM_WAS/" title="8.5.5.9 C50" class="md-nav__link">
+      8.5.5.9 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Kibana
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-4">
+        Kibana
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.1.3 C80" class="md-nav__link">
+      6.1.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Logstash
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-6-5">
+        Logstash
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.4.2 C80" class="md-nav__link">
+      6.4.2 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      NeoKylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-6-6">
+        NeoKylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="6.9 C70" class="md-nav__link">
+      6.9 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="7.2 C70" class="md-nav__link">
+      7.2 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      elasticsearch-head
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-6-7">
+        elasticsearch-head
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="1.0 C80" class="md-nav__link">
+      1.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      filebeat
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-6-8">
+        filebeat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.5.1 C80" class="md-nav__link">
+      6.5.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      SQL分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        SQL分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Apache Drill
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Apache Drill
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Drill_1.15.0/" title="1.15.0 C80" class="md-nav__link">
+      1.15.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-2">
+        Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="1.6.0 C60" class="md-nav__link">
+      1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="2.1.0 C70" class="md-nav__link">
+      2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="2.3.1 C80" class="md-nav__link">
+      2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="2.6.1 6.5" class="md-nav__link">
+      2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Kyligence Analytics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-7-3">
+        Kyligence Analytics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.2 C60" class="md-nav__link">
+      2.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.3 C60" class="md-nav__link">
+      2.3 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.4 C70" class="md-nav__link">
+      2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.5 C70" class="md-nav__link">
+      2.5 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="3.0 C80" class="md-nav__link">
+      3.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-7-4">
+        Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="0.155 C60" class="md-nav__link">
+      0.155 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.184 C70" class="md-nav__link">
+      0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.196 C80" class="md-nav__link">
+      0.196 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 C80" class="md-nav__link">
+      0.210 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 6.5" class="md-nav__link">
+      0.210 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="产品介绍" class="md-nav__link">
+    产品介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="测试环境物理拓扑结构图" class="md-nav__link">
+    测试环境物理拓扑结构图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="测试环境相关产品版本" class="md-nav__link">
+    测试环境相关产品版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anacondafusioninsight-hd" title="Anaconda同FusionInsight HD交互的多种方式" class="md-nav__link">
+    Anaconda同FusionInsight HD交互的多种方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="测试环境准备" class="md-nav__link">
+    测试环境准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1sparklyrrstudiorhd-spark" title="方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sparkrrstudiorhd-spark" title="方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3sparklyrjupyter-notebookrhd-spark" title="方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群" class="md-nav__link">
+    方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4jupyter-notebookpythonhd-spark" title="方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群" class="md-nav__link">
+    方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Development/Anaconda.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="aancondafusioninsight-hd">Aanconda对接FusionInsight HD<a class="headerlink" href="#aancondafusioninsight-hd" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Anaconda 2-2019.03-Linux-x86_64  &harr; FusionInsight HD 6.5 (Spark2x)
+</p>
+</blockquote>
+<h2 id="_2">产品介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>Anaconda</strong></p>
+<p>Anaconda 是一个免费，易于安装的软件包管理器，环境管理器和python环境管理软件，其中包含1,000多个带有免费社区支持的开源软件包。 Anaconda可以部署在Windows，macOS以及Linux上。</p>
+<p>更多信息请登录官网了解:<a href="https://docs.anaconda.com/">Anaconda</a></p>
+<h2 id="_3">测试环境物理拓扑结构图<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../assets/Anaconda/2abc.png" /></p>
+<p>说明：如果直接在带有图形界面的客户端主机工作，可以不用安装vnc客户端以及vnc Server</p>
+<h2 id="_4">测试环境相关产品版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Anaconda2-2019.03-Linux-x86_64</li>
+<li>FusionInsight HD 6.5.1</li>
+<li>Spark 2.3.2</li>
+<li>R version 3.5.1 (2018-07-02)</li>
+<li>RStudio 1.1.456</li>
+<li>Python 2.7.16 |Anaconda, Inc.| (default, Mar 14 2019, 21:00:58)</li>
+<li>Jypyter Notebook 5.7.8</li>
+</ul>
+<h2 id="anacondafusioninsight-hd">Anaconda同FusionInsight HD交互的多种方式<a class="headerlink" href="#anacondafusioninsight-hd" title="Permanent link">&para;</a></h2>
+<p>(1) 使用R语言</p>
+<ul>
+<li>
+<p>RStudio</p>
+<ul>
+<li>
+<p><strong>方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群</strong></p>
+<p>说明：通过使用sparklyr来对航空公司航班进行数据分析，可查看在线demo <a href="http://rpubs.com/jinbnie/513252">http://rpubs.com/jinbnie/513252</a></p>
+</li>
+<li>
+<p><strong>方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群</strong></p>
+<p>说明:使用SparkR读取对接集群hive表里的数据</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Jupyter Notebook</p>
+<ul>
+<li>
+<p><strong>方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群</strong></p>
+<p>说明: 与方案1的R代码一样，唯一的区别是交互环境换成了jupyter notebook</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>(2) 使用python语言</p>
+<ul>
+<li>
+<p>Jupyter Notebook</p>
+<ul>
+<li>
+<p><strong>方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群</strong></p>
+<p>说明: 使用python接口，读取对接集群hdfs中的数据，完成一次经典的spark word count演示样例</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">前提条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>FusionInsight HD 6.5 环境安装完成</li>
+<li>linux 客户端主机root权限</li>
+<li>测试环境相关windows跳板机，linux客户端主机以及对接FI HD集群网络互通</li>
+</ul>
+<h2 id="_6">测试环境准备<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>1. 在Linux客户端节点上安装和配置VNC服务器（如果可直接在GUI客户端环境中工作此步骤可省略）</strong></p>
+<p>请参考： <a href="https://github.com/jinbonie/Tips4Tools/blob/master/vnc/README.md">How to Install and Configure VNC Server on CentOS 7</a></p>
+<p><strong>2.安装 Anaconda</strong></p>
+<p>参考Anaconda官方文档：<a href="https://docs.anaconda.com/anaconda/install/linux/">https://docs.anaconda.com/anaconda/install/linux/</a></p>
+<p>下载Anaconda安装包
+<div class="codehilite"><pre><span></span>wget https://repo.anaconda.com/archive/Anaconda2-2019.03-Linux-x86_64.sh
+</pre></div></p>
+<p>Enter the following to install Anaconda for Python 2.7:</p>
+<p>使用如下命令安装Anaconda</p>
+<p><code>说明</code></p>
+<p>~/.bashrc 文件会在anaconda安装过程中初始化，请在安装前备份此配置文件</p>
+<div class="codehilite"><pre><span></span>cp ~/.bashrc ~/.bashrc.bak
+bash Anaconda2-2019.03-Linux-x86_64.sh
+</pre></div>
+
+<ol>
+<li>
+<p>安装程序将提示“In order to continue the installation process, please review the license agreement.”单击Enter以查看许可条款。</p>
+</li>
+<li>
+<p>滚动到许可条款的底部，然后输入“yes”以表示同意。</p>
+</li>
+<li>
+<p>安装程序提示您单击Enter接受默认安装位置，按CTRL-C取消安装，或指定备用安装目录。如果您接受默认安装位置，则安装程序将显示“PREFIX=/home/{username}/anaconda&lt;2 or 3&gt;”并继续安装。可能需要几分钟才能完成。</p>
+<p>注意： 推荐使用默认安装位置，如果使用非root用户进行交互，请安装在其他可访问的路径，比如/opt，否则之后会报关于用户权限的问题</p>
+</li>
+<li>
+<p>安装程序提示“Do you wish the installer to initialize Anaconda2 by running conda init?”推荐填写 “yes”。</p>
+</li>
+<li>
+<p>安装完成，会显示 “Thank you for installing Anaconda&lt;2 or 3&gt;!”</p>
+</li>
+<li>完成后会提供一个PyCharm关于Anaconda的安装包链接 <a href="https://www.anaconda.com/pycharm">https://www.anaconda.com/pycharm</a>.</li>
+<li>
+<p>关闭并打开终端窗口，以使安装生效，</p>
+<div class="codehilite"><pre><span></span>mv ~/.bashrc ~/.bashrc.anaconda
+cp ~/.bashrc.bak ~/.bashrc
+source ~/.bashrc.anaconda
+</pre></div>
+
+</li>
+</ol>
+<p><strong>3.创建R交互环境并且安装、运行RStudio</strong></p>
+<p>参考：<a href="http://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/">http://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/</a></p>
+<div class="codehilite"><pre><span></span>vi ~/.condarc
+</pre></div>
+
+<p>可以将如下内容添加到 ~/.condarc 文件中来增加conda相关包的下载速度</p>
+<div class="codehilite"><pre><span></span>channels:
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+show_channel_urls: true
+</pre></div>
+
+<p>启动 anaconda navigator</p>
+<div class="codehilite"><pre><span></span>anaconda-navigator &amp;
+</pre></div>
+
+<p>创建一个新的编译环境，比如起名为renv2</p>
+<p>Python :2.7</p>
+<p>R:r</p>
+<p><img alt="" src="../assets/Anaconda/abc11.png" /></p>
+<p>回到Home, 安装 rstudio</p>
+<p><img alt="" src="../assets/Anaconda/abc12.png" /></p>
+<p>启动 RStudio
+<div class="codehilite"><pre><span></span>conda env list
+conda activate renv2
+rstudio &amp;
+</pre></div>
+<img alt="" src="../assets/Anaconda/abc13.png" /></p>
+<p><strong>4.安装 FusionInsight HD 客户端</strong></p>
+<p>打开浏览器，登录FusionInsight Mananger，然后下载客户端</p>
+<p><img alt="" src="../assets/Anaconda/abc14.png" /></p>
+<p><img alt="" src="../assets/Anaconda/abc15.png" /></p>
+<p>在Linux客户端节点上以root身份登录，运行下面的命令以安装HD客户端</p>
+<div class="codehilite"><pre><span></span>su – root
+scp root@172.16.4.32:/tmp/FusionInsight-Client/FusionInsight_Services_Client.tar /opt/FusionInsight_Services_Client172.16.4.35.tar
+tar xvf FusionInsight_Services_Client172.16.4.35.tar
+tar xvf FusionInsight_Services_ClientConfig.tar
+cd FusionInsight_Services_ClientConfig/
+./install.sh /opt/client172.16.4.35/
+</pre></div>
+
+<p>将客户端节点ip，主机名加入对接集群所有节点的/etc/hosts文件下，这一步的目的是起spark任务的时候，worker节点（集群节点）能够识别到driver主机（客户端节点）：</p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719100343580.png" /></p>
+<p>启动 RStudio</p>
+<div class="codehilite"><pre><span></span>su - huawei
+cd /opt/client172.16.4.35/
+source bigdata_env
+kinit developuser
+klist
+
+source ~/.bashrc.anaconda
+conda activate renv2
+rstudio &amp;
+</pre></div>
+
+<p><img alt="" src="../assets/Anaconda/abc16.png" /></p>
+<h2 id="1sparklyrrstudiorhd-spark">方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群<a class="headerlink" href="#1sparklyrrstudiorhd-spark" title="Permanent link">&para;</a></h2>
+<p>说明：通过使用sparklyr来对航空公司航班进行数据分析，可查看在线demo <a href="http://rpubs.com/jinbnie/513252">http://rpubs.com/jinbnie/513252</a></p>
+<p><img alt="" src="../assets/Anaconda/abc17.png" /></p>
+<p>注意： 以下 7 步的源码可以在如下链接中获取：<a href="https://fusioninsight.github.io/ecosystem/zh-hans/Development/RStudio/">RStudio</a></p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20191024161357498.png" /></p>
+<p>第5,7步进行相关适配可以对接 FI HD 6.5(Spark 2.3.2).</p>
+<p><strong>Step 1 安装相关包</strong></p>
+<div class="codehilite"><pre><span></span>install.packages(&quot;sparklyr&quot;)
+install.packages(&quot;dplyr&quot;)
+install.packages(&quot;ggplot2&quot;)
+install.packages(&quot;babynames&quot;)
+install.packages(&quot;dygraphs&quot;)
+install.packages(&quot;rbokeh&quot;)
+</pre></div>
+
+<p><strong>Step 2 连接spark</strong></p>
+<div class="codehilite"><pre><span></span>library(sparklyr)
+library(dplyr)
+library(ggplot2)
+options(bitmapType = &#39;cairo&#39;)
+Sys.setenv(JAVA_HOME=&quot;/opt/client172.16.4.35/JDK/jdk-8u201&quot;)
+Sys.setenv(SPARK_HOME=&quot;/opt/client172.16.4.35/Spark2x/spark&quot;)
+spark_version_from_home(Sys.getenv(&quot;SPARK_HOME&quot;))
+Sys.setenv(SPARK_HOME_VERSION=&quot;2.3.2&quot;)
+sc &lt;- spark_connect(master =  &quot;yarn-client&quot;, version = &quot;2.3.2&quot;, spark_home = &quot;/opt/client172.16.4.35/Spark2x/spark&quot;)
+</pre></div>
+
+<p><strong>Step 3 将提前建好的hive表存入缓存</strong></p>
+<p>说明：具体数据准备的方法请参考生态地图-&gt;Rstudio-&gt;如何获取本文中使用sparklyr分析的源数据</p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20191024161621584.png" /></p>
+<div class="codehilite"><pre><span></span>#Use tbl_cache to load the flights table into memory. Caching tables will make analysis much faster. Create a dplyr reference to the Spark DataFrame.
+
+# Cache flights Hive table into Spark
+tbl_cache(sc, &#39;flights&#39;)
+flights_tbl &lt;- tbl(sc, &#39;flights&#39;)
+
+# Cache airlines Hive table into Spark
+tbl_cache(sc, &#39;airlines&#39;)
+airlines_tbl &lt;- tbl(sc, &#39;airlines&#39;)
+
+# Cache airports Hive table into Spark
+tbl_cache(sc, &#39;airports&#39;)
+airports_tbl &lt;- tbl(sc, &#39;airports&#39;)
+</pre></div>
+
+<p><strong>Step 4 建模</strong>
+<div class="codehilite"><pre><span></span>#Filter the data to contain only the records to be used in the fitted model. Join carrier descriptions for reference. Create a new variable called gain which represents the amount of time gained (or lost) in flight.
+
+# Filter records and create target variable &#39;gain&#39;
+model_data &lt;- flights_tbl %&gt;%
+filter(!is.na(arrdelay) &amp; !is.na(depdelay) &amp; !is.na(distance)) %&gt;%
+filter(depdelay &gt; 15 &amp; depdelay &lt; 240) %&gt;%
+filter(arrdelay &gt; -60 &amp; arrdelay &lt; 360) %&gt;%
+filter(year &gt;= 2003 &amp; year &lt;= 2007) %&gt;%
+left_join(airlines_tbl, by = c(&quot;uniquecarrier&quot; = &quot;code&quot;)) %&gt;%
+mutate(gain = depdelay - arrdelay) %&gt;%
+select(year, month, arrdelay, depdelay, distance, uniquecarrier, description, gain)
+
+# Summarize data by carrier
+model_data %&gt;%
+group_by(uniquecarrier) %&gt;%
+summarize(description = min(description), gain=mean(gain),
+          distance=mean(distance), depdelay=mean(depdelay)) %&gt;%
+select(description, gain, distance, depdelay) %&gt;%
+arrange(gain)
+</pre></div></p>
+<p><img alt="" src="../assets/Anaconda/abc18.png" /></p>
+<p><strong>Step 5 训练模型</strong>
+<div class="codehilite"><pre><span></span>#Predict time gained or lost in flight as a function of distance, departure delay, and airline carrier.
+
+# Partition the data into training and validation sets
+model_partition &lt;- model_data %&gt;%
+sdf_random_split(train = 0.8, valid = 0.2, seed = 5555)
+
+# Fit a linear model
+ml1 &lt;- model_partition$train %&gt;%
+ml_linear_regression(gain ~ distance + depdelay + uniquecarrier)
+
+# Summarize the linear model
+summary(ml1)
+</pre></div></p>
+<p><img alt="" src="../assets/Anaconda/abc19.png" /></p>
+<p><strong>Step 6 评估模型表现</strong>
+<div class="codehilite"><pre><span></span>#Compare the model performance using the validation data.
+
+# Calculate average gains by predicted decile
+model_deciles &lt;- lapply(model_partition, function(x) {
+  ml_predict(ml1, x) %&gt;%
+    mutate(decile = ntile(desc(prediction), 10)) %&gt;%
+    group_by(decile) %&gt;%
+    summarize(gain = mean(gain)) %&gt;%
+    select(decile, gain) %&gt;%
+    collect()
+})
+
+# Create a summary dataset for plotting
+deciles &lt;- rbind(
+  data.frame(data = &#39;train&#39;, model_deciles$train),
+  data.frame(data = &#39;valid&#39;, model_deciles$valid),
+  make.row.names = FALSE
+)
+
+# Plot average gains by predicted decile
+deciles %&gt;%
+  ggplot(aes(factor(decile), gain, fill = data)) +
+  geom_bar(stat = &#39;identity&#39;, position = &#39;dodge&#39;) +
+  labs(title = &#39;Average gain by predicted decile&#39;, x = &#39;Decile&#39;, y = &#39;Minutes&#39;)
+</pre></div></p>
+<p><img alt="" src="../assets/Anaconda/abc20.png" /></p>
+<p><strong>Step 7  将预测可视化</strong>
+<div class="codehilite"><pre><span></span>#Compare actual gains to predicted gains for an out of time sample.
+
+# Select data from an out of time sample
+data_2008 &lt;- flights_tbl %&gt;%
+  filter(!is.na(arrdelay) &amp; !is.na(depdelay) &amp; !is.na(distance)) %&gt;%
+  filter(depdelay &gt; 15 &amp; depdelay &lt; 240) %&gt;%
+  filter(arrdelay &gt; -60 &amp; arrdelay &lt; 360) %&gt;%
+  filter(year == 2008) %&gt;%
+  left_join(airlines_tbl, by = c(&quot;uniquecarrier&quot; = &quot;code&quot;)) %&gt;%
+  mutate(gain = depdelay - arrdelay) %&gt;%
+  select(year, month, arrdelay, depdelay, distance, uniquecarrier, description, gain, origin,dest)
+
+# Summarize data by carrier
+carrier &lt;- ml_predict(ml1, data_2008) %&gt;%
+  group_by(description) %&gt;%
+  summarize(gain = mean(gain), prediction = mean(prediction), freq = n()) %&gt;%
+  filter(freq &gt; 10000) %&gt;%
+  collect
+
+# Plot actual gains and predicted gains by airline carrier
+ggplot(carrier, aes(gain, prediction)) +
+  geom_point(alpha = 0.75, color = &#39;red&#39;, shape = 3) +
+  geom_abline(intercept = 0, slope = 1, alpha = 0.15, color = &#39;blue&#39;) +
+  geom_text(aes(label = substr(description, 1, 20)), size = 3, alpha = 0.75, vjust = -1) +
+  labs(title=&#39;Average Gains Forecast&#39;, x = &#39;Actual&#39;, y = &#39;Predicted&#39;)
+</pre></div>
+<img alt="" src="../assets/Anaconda/abc21.png" /></p>
+<h2 id="2-sparkrrstudiorhd-spark">方案2: 使用SparkR在RStudio中以交互方式将R代码提交到HD Spark集群<a class="headerlink" href="#2-sparkrrstudiorhd-spark" title="Permanent link">&para;</a></h2>
+<p>说明：使用SparkR读取预存的hive表数据</p>
+<p>启动 RStudio
+<div class="codehilite"><pre><span></span>cd /opt/client172.16.4.35/
+source ~/.bashrc.anaconda
+conda activate renv2
+source bigdata_env
+kinit developuser
+klist
+rstudio &amp;
+</pre></div>
+在RStudio中提交如下R代码</p>
+<div class="codehilite"><pre><span></span>if (nchar(Sys.getenv(&quot;SPARK_HOME&quot;)) &lt; 1) {
+  Sys.setenv(SPARK_HOME=&quot;/opt/client172.16.4.35/Spark2x/spark&quot;)
+}
+library(SparkR, lib.loc = c(file.path(Sys.getenv(&quot;SPARK_HOME&quot;), &quot;R&quot;, &quot;lib&quot;)))
+sparkR.session(master = &quot;yarn&quot;, sparkConfig = list(spark.driver.memory = &quot;2g&quot;),(spark.submit.deployMode=&quot;client&quot;))
+
+results &lt;- sql(&quot;FROM airports SELECT id, name &quot;)
+head(results)
+</pre></div>
+
+<p><img alt="" src="../assets/Anaconda/abc22.png" /></p>
+<h2 id="3sparklyrjupyter-notebookrhd-spark">方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群<a class="headerlink" href="#3sparklyrjupyter-notebookrhd-spark" title="Permanent link">&para;</a></h2>
+<p><strong>step 1:启动 Jupyter Notebook</strong></p>
+<div class="codehilite"><pre><span></span>cd /opt/client172.16.4.35/
+source bigdata_env
+kinit developuser
+source ~/.bashrc.anaconda
+conda env list
+conda activate renv2
+sudo chmod -R 777 /opt/client172.16.4.35
+jupyter-notebook &amp;
+</pre></div>
+
+<p><strong>step 2:创建一个新的 R Notebook</strong></p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719103529971.png" /></p>
+<p><strong>step 3:在Jupyter Notebook提交同方案1中相同的R代码，查看结果</strong></p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719130453964.png" /></p>
+<h2 id="4jupyter-notebookpythonhd-spark"><strong>方案4：在jupyter notebook中以交互方式将python代码提交到HD Spark集群</strong><a class="headerlink" href="#4jupyter-notebookpythonhd-spark" title="Permanent link">&para;</a></h2>
+<p>说明: 使用python接口，读取对接集群hdfs中的数据，完成一次经典的spark word count演示样例</p>
+<p><strong>step 1:启动 PySpark</strong></p>
+<div class="codehilite"><pre><span></span>cd /opt/client172.16.4.35/
+source bigdata_env
+kinit developuser
+klist
+source ~/.bashrc.anaconda
+export PYSPARK_DRIVER_PYTHON=&quot;ipython&quot;
+export PYSPARK_DRIVER_PYTHON_OPTS=&quot;notebook&quot;
+pyspark --master yarn --deploy-mode client &amp;
+</pre></div>
+
+<p><strong>step 2:创建一个新的Python Notebook</strong></p>
+<p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719132404857.png" /></p>
+<p><strong>step3:在Jupyter Notebook中提交如下的python代码</strong></p>
+<p><div class="codehilite"><pre><span></span># spark-wordcount.py
+from pyspark import SparkConf
+from pyspark import SparkContext
+conf = SparkConf()
+conf.setAppName(&#39;spark-wordcount_from172.16.5.103&#39;)
+sc = SparkContext(conf=conf)
+distFile = sc.textFile(&#39;hdfs://hacluster/user/developuser/airlines.csv&#39;)
+nonempty_lines = distFile.filter(lambda x: len(x) &gt; 0)
+print &#39;Nonempty lines&#39;, nonempty_lines.count()
+words = nonempty_lines.flatMap(lambda x: x.split(&#39; &#39;))
+wordcounts = words.map(lambda x: (x, 1)) \
+                  .reduceByKey(lambda x, y: x+y) \
+                  .map(lambda x: (x[1], x[0])).sortByKey(False)
+print &#39;Top 100 words:&#39;
+print wordcounts.take(100)
+</pre></div>
+查看结果:
+<img alt="" src="../assets/Anaconda/markdown-img-paste-20190719135155798.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Database/杭州合众UDB/" title="6.1 <--> C50" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                6.1 <--> C50
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../DBeaver_4.2.1/" title="4.0.8 <--> C60" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                4.0.8 <--> C60
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>

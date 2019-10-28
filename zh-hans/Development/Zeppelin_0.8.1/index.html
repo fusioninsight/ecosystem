@@ -1,0 +1,4695 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>0.8.1 <--> 6.5 - 智能数据生态地图</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#zeppelinfusioninsight-hd" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              智能数据生态地图
+            </span>
+            <span class="md-header-nav__topic">
+              0.8.1 <--> 6.5
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="智能数据生态地图" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    智能数据生态地图
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      数据可视化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        数据可视化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      FineBI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        FineBI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/FineBI_5.1/" title="5.1 6.5" class="md-nav__link">
+      5.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      IBM Cognos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2">
+        IBM Cognos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/IBM_Cognos/" title="10.2.2fp4 C60" class="md-nav__link">
+      10.2.2fp4 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Oracle BIEE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-3">
+        Oracle BIEE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C60" class="md-nav__link">
+      11g <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="11g C70" class="md-nav__link">
+      11g <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C60" class="md-nav__link">
+      12c <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c C70" class="md-nav__link">
+      12c <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Oracle_BIEE/" title="12c 6.5" class="md-nav__link">
+      12c <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+    
+    <label class="md-nav__link" for="nav-1-4">
+      Qlik Sense
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-1-4">
+        Qlik Sense
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 C70" class="md-nav__link">
+      3.2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikSense/" title="3.2.4 6.5" class="md-nav__link">
+      3.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      QlikView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-1-5">
+        QlikView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+      12 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+      12 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+      12 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 6.5" class="md-nav__link">
+      12 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+    
+    <label class="md-nav__link" for="nav-1-6">
+      SmartBI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-1-6">
+        SmartBI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/SmartBI/" title="7.2.32464.17374 C70" class="md-nav__link">
+      7.2.32464.17374 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7">
+    
+    <label class="md-nav__link" for="nav-1-7">
+      Tableau
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-1-7">
+        Tableau
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+      10.1.4 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+      10.3.2 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+      10.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 6.5" class="md-nav__link">
+      10.5.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Alteryx
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Alteryx
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C60" class="md-nav__link">
+      2018.2.5.48994 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C80" class="md-nav__link">
+      2018.2.5.48994 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Alteryx/" title="2018.2.5.48994 6.5" class="md-nav__link">
+      2018.2.5.48994 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      GeoMesa
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2">
+        GeoMesa
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/GeoMesa_2.3.1/" title="2.3.1 6.5" class="md-nav__link">
+      2.3.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Rapidminer Studio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3">
+        Rapidminer Studio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+      8.2.001 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      SAS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-4">
+        SAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C60" class="md-nav__link">
+      9.4M3 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C70" class="md-nav__link">
+      9.4M3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C80" class="md-nav__link">
+      9.4M3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Splunk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-5">
+        Splunk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 C80" class="md-nav__link">
+      7.2.4 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/Splunk/" title="7.2.4 6.5" class="md-nav__link">
+      7.2.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      永洪一站式大数据分析平台
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-2-6">
+        永洪一站式大数据分析平台
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/永洪一站式大数据分析平台/" title="7.1 C60" class="md-nav__link">
+      7.1 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据集成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数据集成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Apache NiFi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Apache NiFi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+      1.7.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="1.9.2 6.5" class="md-nav__link">
+      1.9.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Confluent
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2">
+        Confluent
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Confluent_4_1_0/" title="4.1.0 C80" class="md-nav__link">
+      4.1.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Confluent_4_1_0/" title="4.1.0 6.5" class="md-nav__link">
+      4.1.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Denodo Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3">
+        Denodo Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="7.0 C80" class="md-nav__link">
+      7.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Denodo/" title="7.0 6.5" class="md-nav__link">
+      7.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      H2O.ai
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-4">
+        H2O.ai
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/H2O.ai/" title="3.24.0.2 6.5" class="md-nav__link">
+      3.24.0.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      IBM InfoSphere CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-3-5">
+        IBM InfoSphere CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-nav__link">
+      11.3.3.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      IBM InfoSphere DataStage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-3-6">
+        IBM InfoSphere DataStage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.3.1.0 C50" class="md-nav__link">
+      11.3.1.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.5.0.2 C60" class="md-nav__link">
+      11.5.0.2 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Informatica PowerCenter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-3-7">
+        Informatica PowerCenter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Informatica PowerexChange CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-3-8">
+        Informatica PowerexChange CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="10.2.0 C80" class="md-nav__link">
+      10.2.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      Informatica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-3-9">
+        Informatica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C60" class="md-nav__link">
+      10.0.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C80" class="md-nav__link">
+      10.0.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_PushDown/" title="10.0.0 C70" class="md-nav__link">
+      10.0.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_BDM_10.2.2/" title="10.2.2 6.5" class="md-nav__link">
+      10.2.2 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-10" type="checkbox" id="nav-3-10">
+    
+    <label class="md-nav__link" for="nav-3-10">
+      Kafka Manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
+      <label class="md-nav__title" for="nav-3-10">
+        Kafka Manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="1.3.3.21 C80" class="md-nav__link">
+      1.3.3.21 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kafka_Manager/" title="1.3.3.21 6.5" class="md-nav__link">
+      1.3.3.21 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-11" type="checkbox" id="nav-3-11">
+    
+    <label class="md-nav__link" for="nav-3-11">
+      Kettle
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="12">
+      <label class="md-nav__title" for="nav-3-11">
+        Kettle
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C60" class="md-nav__link">
+      6.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C70" class="md-nav__link">
+      6.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Kettle_6.1/" title="6.1 C80" class="md-nav__link">
+      6.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-12" type="checkbox" id="nav-3-12">
+    
+    <label class="md-nav__link" for="nav-3-12">
+      Knime
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="13">
+      <label class="md-nav__title" for="nav-3-12">
+        Knime
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="3.6.1 C80" class="md-nav__link">
+      3.6.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Knime/" title="3.6.1 6.5" class="md-nav__link">
+      3.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-13" type="checkbox" id="nav-3-13">
+    
+    <label class="md-nav__link" for="nav-3-13">
+      OceanSource
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="14">
+      <label class="md-nav__title" for="nav-3-13">
+        OceanSource
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/OceanSource/" title="1.0 C80" class="md-nav__link">
+      1.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-14" type="checkbox" id="nav-3-14">
+    
+    <label class="md-nav__link" for="nav-3-14">
+      Oracle GoldenGate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="15">
+      <label class="md-nav__title" for="nav-3-14">
+        Oracle GoldenGate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.2 C60" class="md-nav__link">
+      12.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.2 6.5" class="md-nav__link">
+      12.2 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.3 C70" class="md-nav__link">
+      12.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Oracle_GoldenGate/" title="12.3 C80" class="md-nav__link">
+      12.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-15" type="checkbox" id="nav-3-15">
+    
+    <label class="md-nav__link" for="nav-3-15">
+      Pentaho EE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="16">
+      <label class="md-nav__title" for="nav-3-15">
+        Pentaho EE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Pentaho/" title="7.1 C70" class="md-nav__link">
+      7.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Pentaho/" title="8.0 C60" class="md-nav__link">
+      8.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-16" type="checkbox" id="nav-3-16">
+    
+    <label class="md-nav__link" for="nav-3-16">
+      SharePlex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="17">
+      <label class="md-nav__title" for="nav-3-16">
+        SharePlex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/SharePlex/" title="9.2.1 C80" class="md-nav__link">
+      9.2.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/SharePlex/" title="9.2.1 6.5" class="md-nav__link">
+      9.2.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-17" type="checkbox" id="nav-3-17">
+    
+    <label class="md-nav__link" for="nav-3-17">
+      Talend
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="18">
+      <label class="md-nav__title" for="nav-3-17">
+        Talend
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_6.4.1/" title="6.4.1 C80" class="md-nav__link">
+      6.4.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_6.4.1/" title="7.0.1 C80" class="md-nav__link">
+      7.0.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_7.2.1/" title="7.2.1 6.5" class="md-nav__link">
+      7.2.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-18" type="checkbox" id="nav-3-18">
+    
+    <label class="md-nav__link" for="nav-3-18">
+      Tibco BW
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="19">
+      <label class="md-nav__title" for="nav-3-18">
+        Tibco BW
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/TIBCO_BusinessWorks/" title="5.13 6.5" class="md-nav__link">
+      5.13 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-19" type="checkbox" id="nav-3-19">
+    
+    <label class="md-nav__link" for="nav-3-19">
+      杭州合众UTL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="20">
+      <label class="md-nav__title" for="nav-3-19">
+        杭州合众UTL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/杭州合众UTL/" title="5.1 C50" class="md-nav__link">
+      5.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      数据库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Apache Druid
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Apache Druid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.14.2/" title="0.14.2 C80" class="md-nav__link">
+      0.14.2 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/apache_druid_0.15.1/" title="0.15.1 C80" class="md-nav__link">
+      0.15.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      SAP VORA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2">
+        SAP VORA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.0 C70" class="md-nav__link">
+      2.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/SAP_VORA/" title="2.1 C70" class="md-nav__link">
+      2.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      杭州合众UDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3">
+        杭州合众UDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Database/杭州合众UDB/" title="6.1 C50" class="md-nav__link">
+      6.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      集成开发环境
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        集成开发环境
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Anaconda
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Anaconda
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Anaconda/" title="2-2019.03-Linux-x86_64 6.5" class="md-nav__link">
+      2-2019.03-Linux-x86_64 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      DBeaver
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-2">
+        DBeaver
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_4.2.1/" title="4.0.8 C60" class="md-nav__link">
+      4.0.8 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_4.2.1/" title="4.2.1 C70" class="md-nav__link">
+      4.2.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DBeaver_6.1.4/" title="6.1.4 6.5" class="md-nav__link">
+      6.1.4 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      DbVisualizer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-5-3">
+        DbVisualizer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.1/" title="10.0.1 C70" class="md-nav__link">
+      10.0.1 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.21/" title="10.0.21 6.5" class="md-nav__link">
+      10.0.21 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DbVisualizer_10.0.1/" title="9.5.7 C60" class="md-nav__link">
+      9.5.7 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      HUE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-5-4">
+        HUE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../HUE/" title="4.0.1 C70" class="md-nav__link">
+      4.0.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Jupyter Notebook
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-5-5">
+        Jupyter Notebook
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Jupyter_Notebook/" title="2.4.4.0 C70" class="md-nav__link">
+      2.4.4.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterNotebook/" title="2.7.16 C80" class="md-nav__link">
+      2.7.16 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterNotebook/" title="2.7.16 6.5" class="md-nav__link">
+      2.7.16 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
+    
+    <label class="md-nav__link" for="nav-5-6">
+      JupyterHub
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-5-6">
+        JupyterHub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JupyterHub/" title="1.0.0 C80" class="md-nav__link">
+      1.0.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-5-7">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RStudio/" title="3.4.1 C60" class="md-nav__link">
+      3.4.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RStudio/" title="3.4.1 C70" class="md-nav__link">
+      3.4.1 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+    
+    <label class="md-nav__link" for="nav-5-8">
+      Squirrel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-5-8">
+        Squirrel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.8.0/" title="3.7.1 C60" class="md-nav__link">
+      3.7.1 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.8.0/" title="3.8.0 C70" class="md-nav__link">
+      3.8.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
+      3.9.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9" checked>
+    
+    <label class="md-nav__link" for="nav-5-9">
+      Zeppelin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-5-9">
+        Zeppelin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.2/" title="0.7.2 C60" class="md-nav__link">
+      0.7.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.3/" title="0.7.3 C70" class="md-nav__link">
+      0.7.3 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.7.3/" title="0.7.3 C80" class="md-nav__link">
+      0.7.3 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Zeppelin_0.8.0/" title="0.8.0 C80" class="md-nav__link">
+      0.8.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        0.8.1 <--> 6.5
+      </label>
+    
+    <a href="./" title="0.8.1 6.5" class="md-nav__link md-nav__link--active">
+      0.8.1 <--> 6.5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="概述" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="测试环境物理拓扑结构" class="md-nav__link">
+    测试环境物理拓扑结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusioninsight-hd" title="安装Fusioninsight HD客户端" class="md-nav__link">
+    安装Fusioninsight HD客户端
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelin" title="安装Zeppelin" class="md-nav__link">
+    安装Zeppelin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinhbase" title="Zeppelin连接HBase" class="md-nav__link">
+    Zeppelin连接HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinhive" title="Zeppelin连接Hive" class="md-nav__link">
+    Zeppelin连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinspark" title="Zeppelin连接Spark" class="md-nav__link">
+    Zeppelin连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinsparkr" title="Zeppelin连接SparkR" class="md-nav__link">
+    Zeppelin连接SparkR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelingaussdb200" title="Zeppelin连接GaussDB200" class="md-nav__link">
+    Zeppelin连接GaussDB200
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sparklyr" title="如何获取本文中使用sparklyr分析的源数据" class="md-nav__link">
+    如何获取本文中使用sparklyr分析的源数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      其他
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        其他
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Apache Livy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Apache Livy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_5_0/" title="0.5.0 C80" class="md-nav__link">
+      0.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Apache_Livy_0_6_0/" title="0.6.0 6.5" class="md-nav__link">
+      0.6.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      GIS Tools for Hadoop
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2">
+        GIS Tools for Hadoop
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/GIS_Tools/" title="1.0 C60" class="md-nav__link">
+      1.0 <--> C60
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      IBM WAS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-3">
+        IBM WAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/IBM_WAS/" title="8.5.5.9 C50" class="md-nav__link">
+      8.5.5.9 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Kibana
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-4">
+        Kibana
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.1.3 C80" class="md-nav__link">
+      6.1.3 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Logstash
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-6-5">
+        Logstash
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.4.2 C80" class="md-nav__link">
+      6.4.2 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      NeoKylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-6-6">
+        NeoKylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="6.9 C70" class="md-nav__link">
+      6.9 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/NeoKylin/" title="7.2 C70" class="md-nav__link">
+      7.2 <--> C70
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      elasticsearch-head
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-6-7">
+        elasticsearch-head
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="1.0 C80" class="md-nav__link">
+      1.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      filebeat
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-6-8">
+        filebeat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Elasticsearch_Related/" title="6.5.1 C80" class="md-nav__link">
+      6.5.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      SQL分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        SQL分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Apache Drill
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Apache Drill
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Drill_1.15.0/" title="1.15.0 C80" class="md-nav__link">
+      1.15.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Apache Kylin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-2">
+        Apache Kylin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_1.6.0/" title="1.6.0 C60" class="md-nav__link">
+      1.6.0 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.1.0/" title="2.1.0 C70" class="md-nav__link">
+      2.1.0 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.3.1/" title="2.3.1 C80" class="md-nav__link">
+      2.3.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Apache_Kylin_2.6.1/" title="2.6.1 6.5" class="md-nav__link">
+      2.6.1 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Kyligence Analytics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-7-3">
+        Kyligence Analytics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.2 C60" class="md-nav__link">
+      2.2 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.3 C60" class="md-nav__link">
+      2.3 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.4 C70" class="md-nav__link">
+      2.4 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="2.5 C70" class="md-nav__link">
+      2.5 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Kyligence/" title="3.0 C80" class="md-nav__link">
+      3.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Presto
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-7-4">
+        Presto
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.155/" title="0.155 C60" class="md-nav__link">
+      0.155 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.184 C70" class="md-nav__link">
+      0.184 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.184/" title="0.196 C80" class="md-nav__link">
+      0.196 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 C80" class="md-nav__link">
+      0.210 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/Presto_0.210/" title="0.210 6.5" class="md-nav__link">
+      0.210 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="适用场景" class="md-nav__link">
+    适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="概述" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="测试环境物理拓扑结构" class="md-nav__link">
+    测试环境物理拓扑结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusioninsight-hd" title="安装Fusioninsight HD客户端" class="md-nav__link">
+    安装Fusioninsight HD客户端
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelin" title="安装Zeppelin" class="md-nav__link">
+    安装Zeppelin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinhbase" title="Zeppelin连接HBase" class="md-nav__link">
+    Zeppelin连接HBase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinhive" title="Zeppelin连接Hive" class="md-nav__link">
+    Zeppelin连接Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinspark" title="Zeppelin连接Spark" class="md-nav__link">
+    Zeppelin连接Spark
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelinsparkr" title="Zeppelin连接SparkR" class="md-nav__link">
+    Zeppelin连接SparkR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeppelingaussdb200" title="Zeppelin连接GaussDB200" class="md-nav__link">
+    Zeppelin连接GaussDB200
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="操作场景" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="前提条件" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="操作步骤" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sparklyr" title="如何获取本文中使用sparklyr分析的源数据" class="md-nav__link">
+    如何获取本文中使用sparklyr分析的源数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/zh-hans/edit/master/docs/Development/Zeppelin_0.8.1.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="zeppelinfusioninsight-hd">Zeppelin对接FusionInsight HD<a class="headerlink" href="#zeppelinfusioninsight-hd" title="Permanent link">&para;</a></h1>
+<h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Zeppelin 0.8.1  &harr; FusionInsight HD 6.5 (HBase/Hive/Spark2x/GaussDB)</p>
+</blockquote>
+<h2 id="_2">概述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>Appache Zeppelin</strong> 是一个提供交互数据分析,数据可视化等功能的web笔记本。支持多种语言，包括 Scala、Python、SparkSQL、 R、Hive、 Markdown、Shell等等</p>
+<p><strong>FusionInsight HD</strong> 是企业级的分布式大数据处理系统，对外提供大容量的数据存储、分析查询和实时流式数据处理分析能力。</p>
+<p>本文档介绍以FusionInsight HD为后端，Zeppelin为前端，用SQL,Scala,Python,R等语言对接HD组件Hive,HBase,Spark2x,GaussDB进行交互数据分析的方法。</p>
+<h2 id="_3">测试环境物理拓扑结构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/Physical_Topology_test_env_of_zeppelin_with_HD.png" /></p>
+<h2 id="fusioninsight-hd">安装Fusioninsight HD客户端<a class="headerlink" href="#fusioninsight-hd" title="Permanent link">&para;</a></h2>
+<p>参考 产品文档 <strong>软件安装</strong>&gt; <strong>初始配置</strong> &gt; <strong>配置客户端</strong> &gt; <strong>安装客户端</strong> 章节。
+文档假定已创建用户developuser，并赋予足够权限，下载developuser用户凭证文件user.keytab，上传至<code>/opt/developuser/</code>目录下；完整客户端假定安装在<code>/opt/hadoopclient/</code>。</p>
+<h2 id="zeppelin">安装Zeppelin<a class="headerlink" href="#zeppelin" title="Permanent link">&para;</a></h2>
+<h3 id="_4">操作场景<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>安装Zeppelin0.8.1</p>
+<h3 id="_5">前提条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>已完成FusionInsight HD和客户端的安装。</li>
+</ul>
+<h3 id="_6">操作步骤<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>安装Zeppelin</li>
+</ul>
+<p>在网址<code>https://zeppelin.apache.org/download.html</code>下载安装包，</p>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-14-16-10-58.png" /></p>
+<ul>
+<li>
+<p>使用WinSCP等工具导入主机并用以下命令安装生成/usr/zeppelin目录。
+   <div class="codehilite"><pre><span></span>tar -zxvf zeppelin-0.8.1-bin-all.tgz
+mv zeppelin-0.8.1-bin-all /usr/zeppelin
+</pre></div></p>
+</li>
+<li>
+<p>配置Zeppelin环境变量，在profile文件中加入如下变量
+  <div class="codehilite"><pre><span></span>vi /etc/profile
+export ZEPPELIN_HOME=/usr/zeppelin
+export PATH=$ZEPPELIN_HOME/bin:$PATH
+</pre></div></p>
+</li>
+<li>
+<p>导入环境变量
+  <div class="codehilite"><pre><span></span>source /etc/profile
+</pre></div></p>
+</li>
+<li>
+<p>编辑zeppelin-env.sh文件，加入JAVA_HOME,位置<code>/usr/zeppelin/conf</code></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>cd /usr/zeppelin/conf/
+cp zeppelin-env.sh.template zeppelin-env.sh
+source /opt/hadoopclient/bigdata_env
+echo $JAVA_HOME
+echo &quot;export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201&quot;&gt;&gt;zeppelin-env.sh
+</pre></div>
+
+<div class="codehilite"><pre><span></span> ![](assets/Zeppelin_0.8.1/2019-08-29-22-22-26.png)
+</pre></div>
+
+
+<ul>
+<li>编辑zeppelin-site.xml文件，位置<code>/usr/zeppelin/conf</code>,将zeppelin.server.port 8080替换成18081（可自定义，也可以不改）；将zeppelin.anonymous.allowed参数的true修改为false
+  <div class="codehilite"><pre><span></span>cd /usr/zeppelin/conf
+cp zeppelin-site.xml.template  zeppelin-site.xml
+vi zeppelin-site.xml
+</pre></div></li>
+</ul>
+<div class="codehilite"><pre><span></span>&lt;property&gt;
+&lt;name&gt;zeppelin.server.port&lt;/name&gt;
+&lt;value&gt;18081&lt;/value&gt;
+&lt;description&gt;Server port.&lt;/description&gt;
+&lt;/property&gt;
+</pre></div>
+
+<div class="codehilite"><pre><span></span>```
+&lt;property&gt;
+&lt;name&gt;zeppelin.anonymous.allowed&lt;/name&gt;
+&lt;value&gt;falase&lt;/value&gt;
+&lt;description&gt;Anonymous user allowed by default&lt;/description&gt;
+&lt;/property&gt;
+```
+</pre></div>
+
+
+<ul>
+<li>编辑shiro.ini文件，位置/usr/zeppelin/conf/shiro.ini,增加用户developuser
+  <div class="codehilite"><pre><span></span>cp shiro.ini.template shiro.ini
+vi shiro.ini
+</pre></div></li>
+</ul>
+<p>[users]下增加用户developuser，密码Huawei@123，权限admin</p>
+<div class="codehilite"><pre><span></span>developuser = Huawei@123, admin
+</pre></div>
+
+<div class="codehilite"><pre><span></span>![](assets/Zeppelin_0.8.1/2019-08-29-22-42-45.png)
+</pre></div>
+
+
+<ul>
+<li>升级zeppelin的libthrift-0.9.2至libthrift-0.9.3（或以上）版本。<blockquote>
+<p>说明：zeppelin0.8.1源码打包的是libthrift-0.9.2.jar，运行后面的样例会出现错误<code>java.lang.NoSuchMethodError: com.facebook.fb303.FacebookService$Client.sendBaseOneway(Ljava/lang/String;Lorg/apache/thrift/TBase;)V</code></p>
+</blockquote>
+</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+cd /opt/hadoopclient/Hive/Beeline/lib/jdbc
+jar xvf libthrift-0.9.3.jar org/apache/thrift/TServiceClient.class
+javap -p org/apache/thrift/TServiceClient.class
+  ```
+  ```
+source /opt/hadoopclient/bigdata_env
+cd /usr/zeppelin/interpreter/spark/
+jar xvf spark-interpreter-0.8.1.jar org/apache/thrift/TServiceClient.class
+javap -p org/apache/thrift/TServiceClient.class
+find /usr/zeppelin -name &quot;libthrift*.jar&quot;
+cp -r /usr/zeppelin /usr/zeppelin_bakup
+find /usr/zeppelin  -name &quot;libthrift*.jar&quot; | xargs rm -f {} \;
+find /usr/zeppelin -name &quot;libthrift*.jar&quot;
+cp /opt/hadoopclient/Hive/Beeline/lib/jdbc/libthrift-0.9.3.jar /usr/zeppelin/lib/interpreter/
+cp /opt/hadoopclient/Hive/Beeline/lib/jdbc/org/apache/thrift/TServiceClient.class /usr/zeppelin/interpreter/spark/org/apache/thrift/TServiceClient.class
+jar uvf spark-interpreter-0.8.1.jar org/apache/thrift/TServiceClient.class
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-01-50-01.png" /></p>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-04-36-30.png" /></p>
+<ul>
+<li>
+<p>运行zeppelin(并检查启动参数)
+    <div class="codehilite"><pre><span></span>zeppelin-daemon.sh start
+ps ef | grep /opt/hadoopclient/JDK/jdk-8u201
+</pre></div>
+    <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-29-22-49-16.png" /></p>
+</li>
+<li>
+<p>关闭防火墙,允许端口18081(此为测试环境，生产环境建议采取更安全措施)
+   <code>systtemctl stop firewalld</code></p>
+</li>
+<li>在浏览器中输入地址zeppelin_ip:18081，用developuser登陆。zeppelin_ip为安装zeppelin的HD客户端IP
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-29-23-38-49.png" /></li>
+</ul>
+<h2 id="zeppelinhbase">Zeppelin连接HBase<a class="headerlink" href="#zeppelinhbase" title="Permanent link">&para;</a></h2>
+<h3 id="_7">操作场景<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>Zeppelin中配置Hbase解析器，对接Hbase</p>
+<h3 id="_8">前提条件<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>已经完成Zeppelin 0.8.1的安装</p>
+</li>
+<li>
+<p>已完成FusionInsight HD和客户端的安装，包含HBase组件</p>
+</li>
+</ul>
+<h3 id="_9">操作步骤<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>对接HBase前，确认客户端hbase shell能连接HBase
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+hbase shell
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-05-08-20.png" /></p>
+</li>
+<li>
+<p>将<code>/usr/zeppelin/interpreter/hbase/</code>目录下旧的jar包移走
+  <div class="codehilite"><pre><span></span>cd /usr/zeppelin/interpreter/hbase
+mkdir hbase_jar
+mv hbase*.jar hbase_jar
+mv hadoop*.jar hbase_jar
+mv zookeeper-3.4.6.jar hbase_jar
+</pre></div></p>
+</li>
+<li>
+<p>将<code>/opt/hadoopclient/HBase/hbase/lib/</code>以下的jar包拷贝至<code>/usr/zeppelin/interpreter/hbase/</code>。
+  <div class="codehilite"><pre><span></span>\cp -f /opt/hadoopclient/HBase/hbase/lib/*.jar /usr/zeppelin/interpreter/hbase/
+</pre></div></p>
+</li>
+<li>
+<p>新建Java Authentication Authorization Service认证文件<code>/usr/zeppelin/conf/jaas.conf</code>，内容如下:
+  <div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/developuser/user.keytab&quot;
+principal=&quot;developuser&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div></p>
+</li>
+<li>
+<p>编辑zeppelin-env.sh文件，位置/usr/zeppelin/conf，加入以下三个配置内容
+  <div class="codehilite"><pre><span></span>export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201
+export ZEPPELIN_INTP_JAVA_OPTS=&quot;-Djava.security.krb5.conf=/opt/developuser/krb5.conf -Djava.security.auth.login.config=/usr/zeppelin/conf/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=120000&quot;
+export HBASE_HOME=/opt/hadoopclient/HBase/hbase
+</pre></div></p>
+</li>
+<li>
+<p>编辑interpreter.json，位置<code>/usr/zeppelin/conf/interpreter.json</code>,修改hbase.home。</p>
+</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>  &quot;hbase.home&quot;: {
+        &quot;name&quot;: &quot;hbase.home&quot;,
+        &quot;value&quot;: &quot;/opt/hadoopclient/HBase/hbase&quot;,
+        &quot;type&quot;: &quot;string&quot;
+      },
+</pre></div>
+- 重启zeppelin。
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit –kt /opt/developuser/user.keytab developuser
+zeppelin-daemon.sh restart
+</pre></div></p>
+<ul>
+<li>登陆Zeppelin，确认hbase配置。选择右上角菜单中的 Interpreter</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/750fd.png" /></p>
+<ul>
+<li>选择hbase</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/7dfed.png" /></p>
+<ul>
+<li>页面选择Notebook -&gt; Create new note</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/19d9c.png" /></p>
+<ul>
+<li>自定义note名称，例如hbase_test</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/28c70.png" /></p>
+<ul>
+<li>
+<p>编辑note，点击右侧“执行”按钮
+  <div class="codehilite"><pre><span></span>%hbase
+create &#39;test6&#39;, &#39;cf&#39;
+put &#39;test6&#39;, &#39;row1&#39;, &#39;cf:a&#39;, &#39;value1&#39;
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-07-08-27.png" /></p>
+</li>
+<li>
+<p>在FusionInsight的客户端下可以看到创建的hbase表test4和数据
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-07-05-09.png" /></p>
+</li>
+</ul>
+<h2 id="zeppelinhive">Zeppelin连接Hive<a class="headerlink" href="#zeppelinhive" title="Permanent link">&para;</a></h2>
+<h3 id="_10">操作场景<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Zeppelin中配置JDBC解析器，对接Hive的JDBC接口。</p>
+<h3 id="_11">前提条件<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>已经完成Zeppelin 0.8.1的安装；</li>
+<li>已完成FusionInsight HD，包含Hive组件。</li>
+<li>根据产品文档完成客户端的安装，创建用户developuser，并赋予足够权限，下载用户developuser的keytab文件user.keytab，上传至<code>/opt/developuser/</code>目录下</li>
+</ul>
+<h3 id="_12">操作步骤<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>对接前，确认HD自带beeline客户端可连接hive</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+beeline
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-02-07-03.png" /></p>
+<ul>
+<li>
+<p>新建Java Authentication Authorization Service认证文件<code>/usr/zeppelin/conf/jaas.conf</code>，内容如下:
+  <div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+keyTab=&quot;/opt/developuser/user.keytab&quot;
+principal=&quot;developuser&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div></p>
+</li>
+<li>
+<p>编辑zeppelin-env.sh文件，位置<code>/usr/zeppelin/conf/zeppelin-env.sh</code>，配置ZEPPELIN_INTP_JAVA_OPTS等内容
+  <div class="codehilite"><pre><span></span>export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201
+export ZEPPELIN_INTP_JAVA_OPTS=&quot;-Djava.security.krb5.conf=/opt/developuser/krb5.conf -Djava.security.auth.login.config=/usr/zeppelin/conf/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=120000&quot;
+</pre></div></p>
+</li>
+<li>
+<p>复制 Hive JDBC 相关jar包至zeppelin</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>cd /opt/hadoopclient/Hive/Beeline/lib/jdbc
+\cp -f hive-jdbc-3.1.0.jar hive-service-rpc-3.1.0.jar hive-service-3.1.0.jar curator-client-2.12.0.jar curator-framework-2.12.0.jar zookeeper-3.5.1.jar guava-19.0.jar hive-common-3.1.0.jar hive-shims-common-3.1.0.jar hive-standalone-metastore-3.1.0.jar hadoop-common-3.1.1.jar woodstox-core-asl-4.4.1.jar woodstox-core-5.0.3.jar stax2-api-3.1.4.jar commons-collections-3.2.2.jar commons-configuration2-2.1.1.jar hadoop-auth-3.1.1.jar hive-serde-3.1.0.jar /usr/zeppelin/interpreter/jdbc/
+</pre></div>
+
+<ul>
+<li>
+<p>查询CLIENT HIVE URI
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+echo $CLIENT_HIVE_URI
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-03-12-50.png" /></p>
+</li>
+<li>
+<p>编辑interpreter.json，位置<code>/usr/zeppelin/conf/interpreter.json</code>,修改JDBC default.url,default.driver.</p>
+<blockquote>
+<p>说明:default.url为$CLIENT_HIVE_URI的值，注意字符等号=在json文件中为\u003；default.driver为org.apache.hive.jdbc.HiveDriver</p>
+</blockquote>
+</li>
+</ul>
+<p>```
+    "jdbc": {
+          "id": "jdbc",
+          "name": "jdbc",
+          "group": "jdbc",
+          "properties": {
+            "default.url": {
+              "name": "default.url",
+              "value": "jdbc:hive2://172.16.4.21:24002,172.16.4.22:24002,172.16.4.23:24002/;serviceDiscoveryMode\u003dzooKeeper;zooKeeperNamespace\u003dhiveserver2;sasl.qop\u003dauth-conf;auth\u003dKERBEROS;principal\u003dhive/hadoop.<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#97;&#100;&#111;&#111;&#112;&#46;&#99;&#111;&#109;&#64;&#72;&#65;&#68;&#79;&#79;&#80;&#46;&#67;&#79;&#77;">&#104;&#97;&#100;&#111;&#111;&#112;&#46;&#99;&#111;&#109;&#64;&#72;&#65;&#68;&#79;&#79;&#80;&#46;&#67;&#79;&#77;</a>",
+              "type": "string"
+            },
+            "default.driver": {
+              "name": "default.driver",
+              "value": "org.apache.hive.jdbc.HiveDriver",
+              "type": "string"
+            },</p>
+<div class="codehilite"><pre><span></span>```
+</pre></div>
+
+
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-03-21-52.png" /></p>
+<ul>
+<li>重启zeppelin。
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit –kt /opt/developuser/user.keytab developuser
+zeppelin-daemon.sh restart
+</pre></div></li>
+<li>登陆Zeppelin，确认jdbc的配置。选择右上角菜单中的 Interpreter</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/750fd.png" /></p>
+<ul>
+<li>选择JDBC</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-03-38-48.png" /></p>
+<ul>
+<li>页面选择Notebook -&gt; Create new note</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/19d9c.png" /></p>
+<ul>
+<li>自定义note名称，例如hive_test</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/414cd.png" /></p>
+<ul>
+<li>编辑note，点击右侧“执行”按钮。
+  <div class="codehilite"><pre><span></span>%jdbc
+Show tables;
+</pre></div>
+  <div class="codehilite"><pre><span></span>%jdbc
+select * from t2
+</pre></div></li>
+<li>导入预定义的hive notebook,<code>import note</code>,选择json文件 <a href="../assets/Zeppelin_0.8.1/zeppelin_notebook_hive_test.json">zeppelin_notebook_hive_test.json</a>
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-03-48-30.png" /></li>
+<li>点击右侧“执行”(Shift+Enter)按钮，查看结果</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-02-57-44.png" /></p>
+<h2 id="zeppelinspark">Zeppelin连接Spark<a class="headerlink" href="#zeppelinspark" title="Permanent link">&para;</a></h2>
+<h3 id="_13">操作场景<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>Zeppelin中配置Spark解析器</p>
+<h3 id="_14">前提条件<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>完成Zeppelin0.8.1的安装；</li>
+<li>已完成FusionInsight HD和客户端的安装，包含Spark2x组件。</li>
+</ul>
+<h3 id="_15">操作步骤<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>对接Spark前，确认客户端工具spark-beeline能连接Spark
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit -kt /opt/developuser/user.keytab developuser
+spark-beeline
+</pre></div>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-07-32-21.png" /></p>
+</li>
+<li>
+<p>将<code>/opt/hadoopclient/Spark2x/spark/jars</code>路径下所有的jar包拷贝至<code>/usr/zeppelin/interpreter/spark</code></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>cp /opt/hadoopclient/Spark2x/spark/jars/*.jar /usr/zeppelin/interpreter/spark/
+</pre></div>
+
+<ul>
+<li>编辑zeppelin-env.sh文件，位置<code>/usr/zeppelin/conf</code>，加入以下内容</li>
+</ul>
+<div class="codehilite"><pre><span></span>export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201
+export MASTER=yarn-client
+export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
+export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
+</pre></div>
+
+<ul>
+<li>
+<p>关闭防火墙(提交spark任务时，能方便访问Spark Driver所在节点的端口)
+    <div class="codehilite"><pre><span></span>  systemctl stop firewalld
+</pre></div></p>
+</li>
+<li>
+<p>登陆Zeppelin，选择右上角菜单中的 Interpreter</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/750fd.png" /></p>
+<ul>
+<li>选择Spark，点击 <strong>edit</strong> 编辑，将 master 参数改为 yarn-client，并且检查zeppelin.spark.useHiveContext项，使其值为false，点击 <strong>save</strong> 保存</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/5eb45.png" /></p>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/8a354.png" /></p>
+<ul>
+<li>
+<p>使用yarn-client模式，还需要将客户端的主机名与IP的映射关系添加到Yarn ResourceManager节点(本文即HD的3台主机节点）的hosts文件中。（另一种方式是在ZEPPELIN_INTP_JAVA_OPTS中添加-Dspark.driver.host=172.16.5.102）</p>
+<p><div class="codehilite"><pre><span></span>echo &quot;172.16.5.102 172-16-5-102&quot;&gt;&gt;/etc/hosts
+</pre></div>
+- 重启zeppelin。
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit –kt /opt/developuser/user.keytab developuser
+zeppelin-daemon.sh restart
+</pre></div>
+- 执行zeppelin的spark样例代码，参考网址
+  <code>https://www.zepl.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hvcnRvbndvcmtzLWdhbGxlcnkvemVwcGVsaW4tbm90ZWJvb2tzL21hc3Rlci8yQTk0TTVKMVovbm90ZS5qc29u/</code></p>
+<blockquote>
+<p>样例代码需要访问Internet上的资源，所以保证zeppelin所在的节点可以联网
+ - 或者导入预定义的notebook, Zeppelin页面选择<code>import note</code>,选择json文件 <a href="../assets/Zeppelin_0.8.1/zeppelin_notebook_spark_test.json">zeppelin_notebook_spark_test.json</a>
+ - 点击右侧“执行”(Shift+Enter)按钮，查看结果
+ <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-14-58-59.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>（可选）查看zeppelin启动参数
+    <div class="codehilite"><pre><span></span>ps -ef | grep org.apache.zeppelin
+</pre></div></p>
+</li>
+<li>执行zeppelin的spark样例代码Zeppelin Tutorial -&gt; Matplotlib (Python • PySpark)</li>
+</ul>
+<p>安装Anaconda2</p>
+<div class="codehilite"><pre><span></span>wget https://repo.anaconda.com/archive/Anaconda2-2019.07-Linux-x86_64.sh
+sh Anaconda2-2019.07-Linux-x86_64.sh
+</pre></div>
+
+<p>安装matplotlib</p>
+<div class="codehilite"><pre><span></span>conda install matplotlib
+</pre></div>
+
+<p>在zeppelin的界面中，选择右上角的 Interpreter</p>
+<p>选择Spark，点击 <strong>edit</strong> 编辑，将 zeppelin.pyspark.python 参数改为Anaconda安装目录中的python，点击 <strong>save</strong> 保存</p>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/5924a.png" /></p>
+<p>执行zeppelin的pyspark样例代码Zeppelin Tutorial -&gt; Matplotlib (Python • PySpark)
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-21-36-23.png" /></p>
+<h2 id="zeppelinsparkr">Zeppelin连接SparkR<a class="headerlink" href="#zeppelinsparkr" title="Permanent link">&para;</a></h2>
+<h3 id="_16">操作场景<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>Zeppelin中配置Spark解析器，连接SparkR</p>
+<h3 id="_17">前提条件<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>完成Zeppelin0.8.1的安装；</li>
+<li>已完成FusionInsight HD和客户端的安装，包含Spark2x组件。</li>
+<li>参考<a href="http://zeppelin.apache.org/docs/latest/interpreter/spark.html">http://zeppelin.apache.org/docs/latest/interpreter/spark.html</a></li>
+</ul>
+<h3 id="_18">操作步骤<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在Zeppelin的节点上安装R。</li>
+</ul>
+<div class="codehilite"><pre><span></span>yum install R R-devel libcurl-devel openssl-devel libxml2-devel
+</pre></div>
+
+<blockquote>
+<p>由于Executor需要执行R，采用yarn-client模式，所以在Zeppelin的节点上安装R。HD集群节点不需要R,因为有SparkR</p>
+</blockquote>
+<ul>
+<li>
+<p>执行<code>R</code>，检查R是否可用。正常启动如下图所示
+    <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-16-53-38.png" /></p>
+</li>
+<li>
+<p>在R的命令行中安装R interpreter的libraries，参考<a href="http://zeppelin.apache.org/docs/0.8.1/interpreter/r.html">http://zeppelin.apache.org/docs/0.8.1/interpreter/r.html </a></p>
+</li>
+<li>
+<p>在R的命令行中安装后面样例工程所需的libraries</p>
+</li>
+</ul>
+<p>```
+    options(repos=structure(c(CRAN="<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/">https://mirrors.tuna.tsinghua.edu.cn/CRAN/</a>")))
+    install.packages('devtools')
+    install.packages("sparklyr")
+    install.packages("dplyr")
+    install.packages("ggplot2")
+    install.packages("babynames")
+    install.packages("dygraphs")
+    install.packages('knitr')
+    install.packages("rbokeh")</p>
+<div class="codehilite"><pre><span></span>```
+</pre></div>
+
+
+<ul>
+<li>FusionInsight客户端下测试是否可以使用sparkR
+  <code>source /opt/hadoopclient/bigdata_env
+  kinit developuser
+  sparkR</code>
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-16-57-55.png" /></li>
+<li>
+<p>编辑zeppelin-env.sh文件，位置<code>/usr/zeppelin/conf</code>，加入以下内容
+  <code>export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201
+    export MASTER=yarn-client
+    export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
+    export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop</code></p>
+</li>
+<li>
+<p>在zeppelin的界面中，选择右上角的 Interpreter 选择Spark，点击 <strong>edit</strong> 编辑，将 zeppelin.R.cmd 参数改为R的启动文件，master 改为yarn-client ，zeppelin.spark.useHiveContext改为false 点击 <strong>save</strong> 保存</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-20-48-47.png" /></p>
+<ul>
+<li>
+<p>使用yarn-client模式，还需要将客户端的主机名与IP的映射关系添加到Yarn ResourceManager节点(本文即HD的3台主机节点）的hosts文件中</p>
+<div class="codehilite"><pre><span></span>echo &quot;172.16.5.102 172-16-5-102&quot;&gt;&gt;/etc/hosts
+</pre></div>
+
+</li>
+<li>
+<p>重启zeppelin。
+  <div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit –kt /opt/developuser/user.keytab developuser
+zeppelin-daemon.sh restart
+</pre></div></p>
+</li>
+<li>在Zeppelin新建notebook
+  <div class="codehilite"><pre><span></span>%r
+if (nchar(Sys.getenv(&quot;SPARK_HOME&quot;)) &lt; 1) {
+  Sys.setenv(SPARK_HOME=&quot;/opt/hadoopclient/Spark2x/spark&quot;)
+}
+library(SparkR, lib.loc = c(file.path(Sys.getenv(&quot;SPARK_HOME&quot;), &quot;R&quot;, &quot;lib&quot;)))
+
+results &lt;- sql(&quot;FROM airports SELECT id,name&quot;)
+head(results)
+</pre></div></li>
+<li>点击右侧“执行”(Shift+Enter)按钮，查看结果</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-20-44-34.png" /></p>
+<ul>
+<li>
+<p>导入预定义的notebook, Zeppelin页面选择<code>import note</code>,选择json文件 <a href="../assets/Zeppelin_0.8.1/zeppelin_notebook_sparklyr_test.json">zeppelin_notebook_sparklyr_test.json</a></p>
+<blockquote>
+<p>说明：本样例使用库sparklyr连接SparkR</p>
+</blockquote>
+</li>
+<li>
+<p>点击右侧“执行”(Shift+Enter)按钮，查看结果</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-21-23-46.png" /></p>
+<h2 id="zeppelingaussdb200">Zeppelin连接GaussDB200<a class="headerlink" href="#zeppelingaussdb200" title="Permanent link">&para;</a></h2>
+<h3 id="_19">操作场景<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>Zeppelin中配置JDBC解析器，连接GaussDB200</p>
+<h3 id="_20">前提条件<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>完成Zeppelin0.8.1的安装；</li>
+<li>已完成FusionInsight HD和客户端的安装;</li>
+<li>已完成GaussDB200的安装。</li>
+</ul>
+<h3 id="_21">操作步骤<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>第一步： 后台登录GaussDB200, 创建登录用户， 分配用户权限， 创建数据库</li>
+<li>
+<p>以omm用户身份登录CN所在服务器（172-16-4-143 集群主节点），执行<code>source ${BIGDATA_HOME}/mppdb/.mppdbgs_profile</code>命令启动环境变量</p>
+</li>
+<li>
+<p>使用<code>gsql -d postgres -p 25308</code>连接数据库
+  <img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-22-15-54.png" /></p>
+</li>
+<li>
+<p>创建数据库用户**developuser**, 密码为**Bigdata@123**</p>
+<p><code>CREATE USER developuser WITH PASSWORD "Bigdata@123";</code></p>
+</li>
+<li>
+<p>用下面这个命令将系统权限授权给用户或者角色</p>
+<p><code>GRANT ALL PRIVILEGES TO developuser;</code></p>
+</li>
+<li>
+<p>创建数据库。</p>
+<p><code>CREATE DATABASE db_tpcds;</code></p>
+<p>创建完db_tpcds数据库后，就可以按如下方法退出postgres数据库，使用新用户连接到此数据库执行接下来的创建表等操作。当然，也可以选择继续在默认的postgres数据库 下做后续的体验。</p>
+<div class="codehilite"><pre><span></span>\q
+gsql -d db_tpcds -p 25308 -U developuser -W Bigdata@123
+</pre></div>
+
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-22-27-04.png" /></p>
+</li>
+<li>
+<p>第二步： 配置GaussDB200远程连接</p>
+</li>
+<li>
+<p>以omm用户身份登录CN所在服务器（172-16-4-143 集群主节点），执行<code>source ${BIGDATA_HOME}/mppdb/.mppdbgs_profile</code>命令启动环境变量</p>
+</li>
+<li>
+<p>配置客户端认证方式，允许客户端以 <strong>developuser</strong> 用户连接到本机，此处远程连接禁止使用 <strong>omm</strong> 用户。 例如，下面示例中配置允许IP地址为 <strong>172.16.5.103</strong> 的客户端访问集群本机。</p>
+<p><code>gs_guc set -Z coordinator -N all -I all -h "host all developuser 172.16.5.103/32 sha256"</code>  <br />
+-Z coordinator表示实例类型为coordinator。
+-N all表示集群的所有主机。
+-I all表示主机的所有实例。
+-h 表示指定需要在“pg_hba.conf”增加的语句。
+all表示允许客户端连接到任意的数据库。
+developuser 表示连接数据库的用户。
+172.16.5.103/32表示只允许IP地址为10.10.0.30的主机连接。在使用过程中，请根据用户的网络
+进行配置修改。
+sha256表示连接时jack用户的密码使用sha256算法加密。</p>
+</li>
+<li>
+<p>查看配置是非生效，vi /srv/BigData/mppdb/data1/coordinator/pg_hba.conf</p>
+<p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-22-35-11.png" /></p>
+</li>
+<li>
+<p>使用如下命令查看CN目前的listen_addresses配置。</p>
+<p><code>gs_guc check -Z coordinator -I all -c "listen_addresses"</code>
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-22-45-38.png" /></p>
+</li>
+<li>
+<p>配置listen_addresses</p>
+<p>使用命令 <code>gs_guc set -N all -I all -Z coordinator -c "listen_addresses = '*'"</code></p>
+</li>
+<li>
+<p>第三步： 配置zeppelin JDBC 接口对接 GaussDB200</p>
+</li>
+<li>
+<p>根据相关文档下载GaussDB200的jdbc驱动：</p>
+<p>驱动程序：gsjdbc200.jar</p>
+<p>驱动类：com.huawei.gauss200.jdbc.Driver</p>
+</li>
+<li>
+<p>将 <strong>gsjdbc200.jar</strong> 驱动文件使用WinSCP等工具拷贝到 <code>/usr/zepplein/interpreter/jdbc</code>路径下</p>
+</li>
+<li>
+<p>配置 JDBC interpreter，vi /usr/zepplein/conf/interpreter.json</p>
+<div class="codehilite"><pre><span></span>1: default.driver = com.huawei.gauss200.jdbc.Driver
+2: default.password = Bigdata@123
+3: default.url = jdbc:postgresql://172.21.3.101:25108/db_tpcds
+4: default.user = developuser
+</pre></div>
+
+<p><div class="codehilite"><pre><span></span>&quot;jdbc&quot;: {
+  &quot;id&quot;: &quot;jdbc&quot;,
+  &quot;name&quot;: &quot;jdbc&quot;,
+  &quot;group&quot;: &quot;jdbc&quot;,
+  &quot;properties&quot;: {
+    &quot;default.url&quot;: {
+      &quot;name&quot;: &quot;default.url&quot;,
+      &quot;value&quot;: &quot;jdbc:gaussdb://172.16.4.143:25308/db_tpcds&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;default.driver&quot;: {
+      &quot;name&quot;: &quot;default.driver&quot;,
+      &quot;value&quot;: &quot;com.huawei.gauss200.jdbc.Driver&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;zeppelin.jdbc.principal&quot;: {
+      &quot;name&quot;: &quot;zeppelin.jdbc.principal&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;default.completer.ttlInSeconds&quot;: {
+      &quot;name&quot;: &quot;default.completer.ttlInSeconds&quot;,
+      &quot;value&quot;: &quot;120&quot;,
+      &quot;type&quot;: &quot;number&quot;
+    },
+    &quot;default.password&quot;: {
+      &quot;name&quot;: &quot;default.password&quot;,
+      &quot;value&quot;: &quot;Bigdata@123&quot;,
+      &quot;type&quot;: &quot;password&quot;
+    },
+    &quot;default.completer.schemaFilters&quot;: {
+      &quot;name&quot;: &quot;default.completer.schemaFilters&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;type&quot;: &quot;textarea&quot;
+    },
+    &quot;default.splitQueries&quot;: {
+      &quot;name&quot;: &quot;default.splitQueries&quot;,
+      &quot;value&quot;: false,
+      &quot;type&quot;: &quot;checkbox&quot;
+    },
+    &quot;default.user&quot;: {
+      &quot;name&quot;: &quot;default.user&quot;,
+      &quot;value&quot;: &quot;developuser&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+</pre></div>
+  - 重启zeppelin。
+<div class="codehilite"><pre><span></span>source /opt/hadoopclient/bigdata_env
+kinit –kt /opt/developuser/user.keytab developuser
+zeppelin-daemon.sh restart
+</pre></div>
+   - 导入预定义的notebook, Zeppelin页面选择<code>import note</code>,选择json文件<a href="../assets/Zeppelin_0.8.1/zeppelin_notebook_GaussDB200_test.json">zeppelin_notebook_GaussDB200_test.json</a></p>
+</li>
+<li>
+<p>点击右侧“执行”(Shift+Enter)按钮，查看结果
+<img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-23-56-25.png" /></p>
+</li>
+</ul>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h3 id="sparklyr">如何获取本文中使用sparklyr分析的源数据<a class="headerlink" href="#sparklyr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>执行以下shell脚本获取待分析的数据(或者直接用浏览器访问http://stat-computing.org/dataexpo/2009 来下载)
+  <div class="codehilite"><pre><span></span><span class="c1"># Make download directory</span>
+mkdir /tmp/flights
+
+<span class="c1"># Download flight data by year</span>
+<span class="k">for</span> i in <span class="o">{</span><span class="m">2006</span>..2008<span class="o">}</span>
+  <span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> </span><span class="nv">$i</span><span class="s2"> Download&quot;</span>
+    <span class="nv">fnam</span><span class="o">=</span><span class="nv">$i</span>.csv.bz2
+    wget -O /tmp/flights/<span class="nv">$fnam</span> http://stat-computing.org/dataexpo/2009/<span class="nv">$fnam</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> </span><span class="nv">$i</span><span class="s2"> Unzip&quot;</span>
+    bunzip2 /tmp/flights/<span class="nv">$fnam</span>
+  <span class="k">done</span>
+
+<span class="c1"># Download airline carrier data</span>
+wget --no-check-certificate -O /tmp/airlines.csv http://www.transtats.bts.gov/Download_Lookup.asp?Lookup<span class="o">=</span>L_UNIQUE_CARRIERS
+
+<span class="c1"># Download airports data</span>
+wget --no-check-certificate -O /tmp/airports.csv https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat
+</pre></div></p>
+</li>
+<li>
+<p>将下载下来的/tmp/flights目录以及/tmp/airlines.csv，/tmp/airports.csv文件上传到HDFS的/user/developuser目录中，然后在Hive中创建三张表，将数据加载到对应的表中</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>hdfs dfs -mkdir /user/developuser/flights
+hdfs dfs -put flights/* /user/developuser/flights/
+hdfs dfs -put airlines.csv /user/developuser/
+hdfs dfs -put airports.csv /user/developuser/
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights</span>
+<span class="p">(</span>
+  <span class="k">year</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="k">month</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">dayofmonth</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">dayofweek</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">deptime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">crsdeptime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">arrtime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">crsarrtime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">uniquecarrier</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">flightnum</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">tailnum</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">actualelapsedtime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">crselapsedtime</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">airtime</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">arrdelay</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">depdelay</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">origin</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">dest</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">distance</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">taxiin</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">taxiout</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">cancelled</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">cancellationcode</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">diverted</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">carrierdelay</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">weatherdelay</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">nasdelay</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">securitydelay</span> <span class="n">string</span><span class="p">,</span>
+  <span class="n">lateaircraftdelay</span> <span class="n">string</span>
+<span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">DELIMITED</span>
+<span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">&#39;,&#39;</span>
+<span class="n">LINES</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">&#39;\n&#39;</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
+<span class="n">TBLPROPERTIES</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2006.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
+<span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2007.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
+<span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2008.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airlines</span>
+<span class="p">(</span>
+<span class="n">Code</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">Description</span> <span class="n">string</span>
+<span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">SERDE</span> <span class="s1">&#39;org.apache.hadoop.hive.serde2.OpenCSVSerde&#39;</span>
+<span class="k">WITH</span> <span class="n">SERDEPROPERTIES</span>
+<span class="p">(</span>
+<span class="ss">&quot;separatorChar&quot;</span> <span class="o">=</span> <span class="s1">&#39;\,&#39;</span><span class="p">,</span>
+<span class="ss">&quot;quoteChar&quot;</span>     <span class="o">=</span> <span class="s1">&#39;\&quot;&#39;</span>
+<span class="p">)</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
+<span class="n">tblproperties</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/airlines.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airlines</span><span class="p">;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airports</span>
+<span class="p">(</span>
+<span class="n">id</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">name</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">city</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">country</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">faa</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">icao</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">lat</span> <span class="n">double</span><span class="p">,</span>
+<span class="n">lon</span> <span class="n">double</span><span class="p">,</span>
+<span class="n">alt</span> <span class="nb">int</span><span class="p">,</span>
+<span class="n">tz_offset</span> <span class="n">double</span><span class="p">,</span>
+<span class="n">dst</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">tz_name</span> <span class="n">string</span>
+<span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">SERDE</span> <span class="s1">&#39;org.apache.hadoop.hive.serde2.OpenCSVSerde&#39;</span>
+<span class="k">WITH</span> <span class="n">SERDEPROPERTIES</span>
+<span class="p">(</span>
+<span class="ss">&quot;separatorChar&quot;</span> <span class="o">=</span> <span class="s1">&#39;\,&#39;</span><span class="p">,</span>
+<span class="ss">&quot;quoteChar&quot;</span>     <span class="o">=</span> <span class="s1">&#39;\&quot;&#39;</span>
+<span class="p">)</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span><span class="p">;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/airports.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airports</span><span class="p">;</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Zeppelin_0.8.0/" title="0.8.0 <--> C80" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                0.8.0 <--> C80
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Other/Apache_Livy_0_5_0/" title="0.5.0 <--> C80" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                0.5.0 <--> C80
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>
