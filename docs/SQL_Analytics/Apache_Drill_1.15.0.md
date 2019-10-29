@@ -333,7 +333,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   {
     "type": "hbase",
     "config": {
-      "hbase.zookeeper.quorum": "172.16.6.10,172.16.6.11，172.16.6.12",
+      "hbase.zookeeper.quorum": "172.16.6.10,172.16.6.11,172.16.6.12",
       "hbase.zookeeper.property.clientPort": "24002"
     },
     "size.calculator.enabled": false,
