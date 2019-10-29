@@ -299,7 +299,6 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   principal="developuser@HADOOP.COM"
   keyTab="/opt/user.keytab"
   useTicketCache=false
-  serviceName="kafka"
   storeKey=true
   debug=true;
   };
@@ -317,7 +316,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010201557946.png)
 
-- 将HDFS客户端包含的core-site.xml,hdfs-site.xml,yarn-site.xml文件拷贝到drill安装路径下的conf目录下，其中hdfs-site.xml文件需要做如下更改：
+- 将HDFS客户端包含的core-site.xml,hdfs-site.xml,yarn-site.xml文件,HBase客户端包含的hbase-site.xml文件拷贝到drill安装路径下的conf目录下，其中hdfs-site.xml文件需要做如下更改：
 
   删除hdfs-site.xml文件中的如下参数：
   ```
