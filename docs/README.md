@@ -215,7 +215,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/H2O.ai.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-GuassDB ">GuassDB</span></a></td>
+<td><a href="Data_Integration/H2O.ai.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >IBM InfoSphere CDC</td>
@@ -525,8 +525,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Development/JupyterNotebook.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
-<td><a href="Development/JupyterNotebook.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/JupyterNotebook.md"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/JupyterNotebook.md"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >JupyterHub</td>
@@ -692,7 +692,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Other/Elasticsearch_Related.md"><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=14 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
+<tr><td rowspan=15 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
 <td rowspan=1 >Apache Drill</td>
 <td>1.15.0</td>
 <td></td>
@@ -733,6 +733,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="SQL_Analytics/Apache_Kylin_2.6.1.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >ApacheDrill</td>
+<td>1.15.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/ApacheDrill_1.15.0toHD651.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=5 >Kyligence Analytics Platform</td>
