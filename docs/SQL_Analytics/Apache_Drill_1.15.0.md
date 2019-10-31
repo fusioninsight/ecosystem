@@ -71,7 +71,9 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   ```
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010161034836.png)
-
+  
+  其中172.16.6.12为集群namenode主节点
+  
 
 - 准备认证相关配置文件
 
@@ -287,6 +289,8 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
 - 停止正在运行的drill
 
+- 参考前文对接hdfs,对接hive章节，成功配置好对接hdfs,hive组件
+
 - 找到drill安装目录下./jar/ext/路径，将drill自带的zookeeper-3.4.12.jar重命名为zookeeper-3.4.12.jar.org注释掉，并将FI HD客户端中zookeeper相关jar包 zookeeper-3.5.1.jar拷贝到该路径下。这一步的目的是，drill自带的zookeeper-3.4.12.jar版本太旧，其内部没有定义send4LetterWord方法，该方法是向FI HD zookeeper服务自动获取连接zookeeper的service principal (zookeeper/hadoop.hadoop.com@HADOOP.COM)
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010201322646.png)
@@ -316,16 +320,7 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010201557946.png)
 
-- 将HDFS客户端包含的core-site.xml,hdfs-site.xml,yarn-site.xml文件,HBase客户端包含的hbase-site.xml文件拷贝到drill安装路径下的conf目录下，其中hdfs-site.xml文件需要做如下更改：
-
-  删除hdfs-site.xml文件中的如下参数：
-  ```
-  <property>
-  <name>dfs.client.failover.proxy.provider.hacluster</name>
-  <value>org.apache.hadoop.hdfs.server.namenode.ha.BlackListingFailoverProxyProvider</value>
-  </property>
-  ```
-  ![](assets/Apache_Drill/markdown-img-paste-20191010212449874.png)
+- 将HBase客户端包含的配置文件hbase-site.xml拷贝到drill安装路径下的conf目录下
 
 - 启动drill，登陆drill webUI，添加Storage名字为huaweihbase并enable,内容如下：
 
