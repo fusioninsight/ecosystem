@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> ApacheDrill 1.15.0 <--> FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka)
+> Apache Drill 1.15.0 <--> FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka)
 
 ## 说明
 
