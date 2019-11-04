@@ -101,7 +101,7 @@
   print wordcounts.take(100)
   ```
 
-  ![](assets/JupyterNotebook/markdown-img-paste-20191022141721623.png)
+  ![](assets/JupyterNotebook/markdown-img-paste-2019110411122286.png)
 
   并且在对接集群的yarn上查看任务：
 
