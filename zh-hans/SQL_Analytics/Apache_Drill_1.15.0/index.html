@@ -2943,6 +2943,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../ApacheDrill_1.15.0toHD651/" title="1.15.0 6.5" class="md-nav__link">
+      1.15.0 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -3432,6 +3444,7 @@ bin/drill-embedded
 }
 </pre></div></p>
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191010161034836.png" /></p>
+<p>其中172.16.6.12为集群namenode主节点</p>
 <ul>
 <li>准备认证相关配置文件</li>
 </ul>
@@ -3489,6 +3502,13 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
 </ul>
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191015141304194.png" /></p>
 <p>完成后重新下载集群配置文件</p>
+<p>注意：此步骤为更改集群HDFS配置，属于高危操作。如果不能更改集群配置则相应的规避方式如下（只改对接需要使用的配置文件hdfs-site.xml而不对集群配置做实际更改）:</p>
+<p>修改配置文件hdfs-site.xml文件中的配置项dfs.client.failover.proxy.provider.hacluster的值改成org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</p>
+<ul>
+<li>在对接集群的配置文件找到hdfs-site.xml以及yarn-site.xml文件导入到drill安装路径/conf目录下：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191015143059303.png" /></p>
+<p>其中core-site.xml配置文件在对接HDFS的时候已经导入，并且修改过fs.defaultFS配置项， hdfs-site.xml文件的dfs.client.failover.proxy.provider.hacluster 配置项做相应更改，改成org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</p>
 <ul>
 <li>到drill安装路径/jars下使用命令<code>mkdir hd_jars</code>新建一个名为hd_jars的路径</li>
 </ul>
@@ -3502,10 +3522,6 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
 <p>在 3rdparty路径导入前加入一行：</p>
 <p><code>CP="$CP:$DRILL_HOME/jars/hd_jars/*"</code></p>
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191015142620777.png" /></p>
-<ul>
-<li>将重新下载的集群配置文件找到hdfs-site.xml以及yarn-site.xml文件导入到drill安装路径/conf目录下（core-site.xml配置文件在对接HDFS的时候已经导入，并且修改过fs.defaultFS配置项）：</li>
-</ul>
-<p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191015143059303.png" /></p>
 <ul>
 <li>登陆对接FI HD集群172.16.2.11， 使用如下命令找到对接hive相关认证keytab文件hive.keytab并把此文件传至drill主机/opt路径下：</li>
 </ul>
@@ -3610,6 +3626,9 @@ scp /opt/huawei/Bigdata/components/FusionInsight_HD_V100R002C80SPC200/Hive/hive.
 <p>停止正在运行的drill</p>
 </li>
 <li>
+<p>参考前文《对接HDFS》,《对接HIVE》章节，成功配置好对接hdfs,hive组件</p>
+</li>
+<li>
 <p>找到drill安装目录下./jar/ext/路径，将drill自带的zookeeper-3.4.12.jar重命名为zookeeper-3.4.12.jar.org注释掉，并将FI HD客户端中zookeeper相关jar包 zookeeper-3.5.1.jar拷贝到该路径下。这一步的目的是，drill自带的zookeeper-3.4.12.jar版本太旧，其内部没有定义send4LetterWord方法，该方法是向FI HD zookeeper服务自动获取连接zookeeper的service principal (zookeeper/hadoop.<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#97;&#100;&#111;&#111;&#112;&#46;&#99;&#111;&#109;&#64;&#72;&#65;&#68;&#79;&#79;&#80;&#46;&#67;&#79;&#77;">&#104;&#97;&#100;&#111;&#111;&#112;&#46;&#99;&#111;&#109;&#64;&#72;&#65;&#68;&#79;&#79;&#80;&#46;&#67;&#79;&#77;</a>)</p>
 </li>
 </ul>
@@ -3623,7 +3642,6 @@ useKeyTab=true
 principal=&quot;developuser@HADOOP.COM&quot;
 keyTab=&quot;/opt/user.keytab&quot;
 useTicketCache=false
-serviceName=&quot;kafka&quot;
 storeKey=true
 debug=true;
 };
@@ -3640,22 +3658,17 @@ export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.confi
 <p>完成之后使用命令<code>java -version</code>检查是否加载成功：</p>
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191010201557946.png" /></p>
 <ul>
-<li>将HDFS客户端包含的core-site.xml,hdfs-site.xml,yarn-site.xml文件拷贝到drill安装路径下的conf目录下，其中hdfs-site.xml文件需要做如下更改：</li>
-</ul>
-<p>删除hdfs-site.xml文件中的如下参数：
-  <div class="codehilite"><pre><span></span>&lt;property&gt;
-&lt;name&gt;dfs.client.failover.proxy.provider.hacluster&lt;/name&gt;
-&lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.BlackListingFailoverProxyProvider&lt;/value&gt;
-&lt;/property&gt;
-</pre></div>
-  <img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191010212449874.png" /></p>
-<ul>
-<li>启动drill，登陆drill webUI，添加Storage名字为huaweihbase并enable,内容如下：</li>
+<li>
+<p>将HBase客户端包含的配置文件hbase-site.xml拷贝到drill安装路径下的conf目录下</p>
+</li>
+<li>
+<p>启动drill，登陆drill webUI，添加Storage名字为huaweihbase并enable,内容如下：</p>
+</li>
 </ul>
 <p><div class="codehilite"><pre><span></span>{
   &quot;type&quot;: &quot;hbase&quot;,
   &quot;config&quot;: {
-    &quot;hbase.zookeeper.quorum&quot;: &quot;172.16.6.10,172.16.6.11，172.16.6.12&quot;,
+    &quot;hbase.zookeeper.quorum&quot;: &quot;172.16.6.10,172.16.6.11,172.16.6.12&quot;,
     &quot;hbase.zookeeper.property.clientPort&quot;: &quot;24002&quot;
   },
   &quot;size.calculator.enabled&quot;: false,
@@ -3691,7 +3704,7 @@ export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.confi
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../Other/Elasticsearch_Related/" title="6.5.1 <--> C80" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ApacheDrill_1.15.0toHD651/" title="1.15.0 <--> 6.5" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -3700,7 +3713,7 @@ export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.confi
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                6.5.1 <--> C80
+                1.15.0 <--> 6.5
               </span>
             </div>
           </a>
