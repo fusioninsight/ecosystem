@@ -8,6 +8,8 @@
 * Confluent
   * [4.1.0 <--> C80](Confluent_4_1_0.md)
   * [4.1.0 <--> 6.5](Confluent_4_1_0.md)
+* DataX
+  * [0.1 <--> 6.5](DataX.md)
 * Denodo Platform
   * [7.0 <--> C80](Denodo.md)
   * [7.0 <--> 6.5](Denodo.md)

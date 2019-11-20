@@ -65,6 +65,8 @@ nav:
   - Confluent:
     - 4.1.0 <--> C80: Data_Integration/Confluent_4_1_0.md
     - 4.1.0 <--> 6.5: Data_Integration/Confluent_4_1_0.md
+  - DataX:
+    - 0.1 <--> 6.5: Data_Integration/DataX.md
   - Denodo Platform:
     - 7.0 <--> C80: Data_Integration/Denodo.md
     - 7.0 <--> 6.5: Data_Integration/Denodo.md
