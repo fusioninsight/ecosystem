@@ -1,4 +1,4 @@
-# H2O.ai 对接FusionInsight
+# DataX 对接FusionInsight
 
 ## 适用场景
 
@@ -231,5 +231,4 @@
   * 数据能够正常写入HDFS
 
     ![](assets/DataX/31676.png)
-
     ![](assets/DataX/8caf4.png)
