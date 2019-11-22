@@ -409,7 +409,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=5 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>数据库 </td>
+<tr><td rowspan=6 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>数据库 </td>
 <td rowspan=2 >Apache Druid</td>
 <td>0.14.2</td>
 <td></td>
@@ -425,6 +425,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Database/apache_druid_0.15.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td></td>
+</tr>
+<tr>
+<td rowspan=1 >OpenTSDB</td>
+<td>2.4.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Database/OpenTSDB_2.4.0"><span class="label label-HBase ">HBase</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >SAP VORA</td>
