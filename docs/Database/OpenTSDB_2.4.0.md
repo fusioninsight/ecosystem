@@ -146,7 +146,9 @@ OpenTSDB用HBase存储所有的时序（无须采样）来构建一个分布式�
 
   * 修改opentsdb的tsdb脚本增加认证配置。
 
-    将`/usr/local/share/opentsdb/bin/tsdb`脚本倒数第二行（else后面）的“exec $JAVA $JVMARGS -classpath "$CLASSPATH" net.opentsdb.tools.$MAINCLASS "$@" ”修改为 **exec $JAVA $JVMARGS -classpath "$CLASSPATH" -Djava.security.krb5.conf=/etc/opentsdb/krb5.conf -Djava.security.auth.login.config=/etc/opentsdb/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com net.opentsdb.tools.$MAINCLASS "$@"** 。
+    将`/usr/local/share/opentsdb/bin/tsdb`脚本倒数第二行（else后面）增加蓝色部分安全相关的环境变量：
+
+    exec $JAVA $JVMARGS -classpath "$CLASSPATH" **<span style="color:blue;">-Djava.security.krb5.conf=/etc/opentsdb/krb5.conf -Djava.security.auth.login.config=/etc/opentsdb/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com</span>** net.opentsdb.tools.$MAINCLASS "$@"
 
     ```
     vi /usr/local/share/opentsdb/bin/tsdb
