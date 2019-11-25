@@ -213,7 +213,7 @@ OpenTSDB用HBase存储所有的时序（无须采样）来构建一个分布式�
     list
     ```
 
-   ![](assets/OpenTSDB_2.4.0/ed9c78db.png)
+    ![](assets/OpenTSDB_2.4.0/ed9c78db.png)
 
     >说明：Opentsdb表一共有4张表
     >
@@ -343,9 +343,9 @@ OpenTSDB用HBase存储所有的时序（无须采样）来构建一个分布式�
 
     **【解决方法】**
 
-    * 检查是否已安装插件。如果未安装，执行以下命令安装后再重新启动OpenTSDB。
+    检查是否已安装插件。如果未安装，执行以下命令安装后再重新启动OpenTSDB。
 
-      ```
-      yum install gnuplot
-      /usr/local/share/opentsdb/bin/tsdb tsd
-      ```
+    ```
+    yum install gnuplot
+    /usr/local/share/opentsdb/bin/tsdb tsd
+    ```
