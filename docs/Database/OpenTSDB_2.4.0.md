@@ -150,7 +150,7 @@ OpenTSDB用HBase存储所有的时序（无须采样）来构建一个分布式�
     vi /usr/local/share/opentsdb/bin/tsdb
     ```
 
-    将脚本倒数第二行）在"$CLASSPATH"后面,net.opentsdb.tools之前增加如下安全相关的环境变量：
+    将脚本倒数第二行"$CLASSPATH"后面，net.opentsdb.tools之前增加如下安全相关的环境变量：
 
     `-Djava.security.krb5.conf=/etc/opentsdb/krb5.conf -Djava.security.auth.login.config=/etc/opentsdb/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com`
 
