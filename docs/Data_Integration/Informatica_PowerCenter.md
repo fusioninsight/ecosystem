@@ -325,7 +325,7 @@
 
   ![](assets/Informatica_PowerCenter/8900d6f6.png)
 
-### PowerCenter Designer创建mapping
+#### PowerCenter Designer创建mapping
 
 - 登录FusionInsight客户端，使用beeline创建Hive表class并插入数据。
 
@@ -375,7 +375,7 @@
 
   ![](assets/Informatica_PowerCenter/8a9c75dd.png)
 
-### PowerCenter Workflow Manager运行workflow
+#### PowerCenter Workflow Manager运行workflow
 
 - 以管理员身份运行PowerCenter Wrokflow，在菜单栏选择“任务->创建”，命名为“session_hive_to_local”，并选择映射“mapping_hive_to_local”，点击 **确定**。
 
