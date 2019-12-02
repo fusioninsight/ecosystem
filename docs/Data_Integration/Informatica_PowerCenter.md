@@ -26,16 +26,28 @@
 ### 在Linux上安装Oracle database 以及 Informatica Server
 
   * 创建oracle 用户，安装oracle 数据库
+
   * 创建infa用户，使用`sqlplus / as sysdba`登录至oracle数据库中，执行以下sql语句
-    ```sql
+
+    ```
     create tablespace rep_data datafile '/u01/app/oracle/oradata/orcl/rep_data_01.dbf' size 512m ;
     create user pwc_user identified by pwc_user default tablespace rep_data temporary tablespace temp;
     create user mdl_user identified by mdl_user default tablespace rep_data temporary tablespace temp;
     create user domain_user identified by domain_user default tablespace rep_data temporary tablespace temp;
     grant dba to  domain_user,pwc_user,mdl_user;
     ```
-  * 获取Informatica Server安装包并上传至节点,解压安装包之后，执行`./install.sh`，根据提示进行安装,这里安装目录为`/home/infa/Informatica/10.2.0`.
-  * 安装完成后,Informatica Server会自行启动，在浏览器输入ip:6008端口，打开Administrator 管理界面，输入安装时设置的用户名密码进行登录。
+
+  * 获取Informatica Server安装包并上传至节点,解压安装包之后，执行`./install.sh`，根据提示进行安装,这里安装目录为`/home/infa/Informatica/10.2.0`。
+
+  * 安装完成后，Informatica Server会自行启动，在浏览器输入ip:6008端口，打开Administrator 管理界面，输入安装时设置的用户名密码进行登录。也可以通过以下命令启动或停止Informatica Server。
+
+    ```
+    su - infa
+    /home/infa/Informatica/10.2.0/tomcat/bin/infaservice.sh startup
+    /home/infa/Informatica/10.2.0/tomcat/bin/infaservice.sh shutdown
+    ```
+
+    >说明：如果使用非infa用户启动或者停止Informatica Server之后，会导致`/home/infa/Informatica/10.2.0`目录下一些文件的所有者发生变化，导致下一次启动或者停止失败。可执行 **chown -R infa:oinstall /home/infa/Informatica/10.2.0** 修复。
 
 ### Informatica Server配置
   * 创建PowerCenter 存储库
@@ -75,17 +87,34 @@
       ![](assets/Informatica_PowerCenter/d9266.png)
 
   * 在infa Server 进行Hadoop配置
-    - 将`/opt`目录下的krb5.conf文件复制至`/etc`目录下以及informatica安装目录`${INFA_HOME}java/jre/lib/security/`下，并赋予infa用户改文件的读取权限.
+
+    - 将`/opt`目录下的krb5.conf文件复制至`/etc`目录下以及informatica安装目录`${INFA_HOME}java/jre/lib/security/`下，并赋予infa用户改文件的读取权限
+
     - 以infa用户登录节点，创建配置文件目录，例如`/opt/pwx-hadoop/conf`
-    - 在FusionInsight HD客户端中获取以下配置文件,放至`/opt/pwx-hadoop/conf`目录中，并修改文件权限至775
+
+    - 在FusionInsight HD客户端中获取以下配置文件，放至`/opt/pwx-hadoop/conf`目录中，并修改文件权限至775
+
+      ```
+      cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/pwx-hadoop/conf
+      cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml /opt/pwx-hadoop/conf
+      cp /opt/hadoopclient/Hive/config/hive-site.xml /opt/pwx-hadoop/conf
+      cp /opt/hadoopclient/Yarn/config/mapred-site.xml /opt/pwx-hadoop/conf
+      chmod -R 775 /opt/pwx-hadoop/conf
+      chown infa:oinstall /opt/pwx-hadoop/conf/*
+      ```
 
       ![](assets/Informatica_PowerCenter/22248.png)
-    - 执行以下命令进行Kerberos认证,并指定cache文件,infa用户需要对指定的路径有读写权限
+
+    - 执行以下命令进行Kerberos认证，并指定cache文件，infa用户需要对指定的路径有读写权限
+
       ```
       source /opt/hadoopclient/bigdata_env
       kinit -c /home/infa/krb5cc_developuser developuser
+      chown infa:oinstall /home/infa/krb5cc_developuser
       ```
+
     - 修改`/opt/pwx-hadoop/conf`目录中的`core-site.xml`文件，添加如下配置
+
       ```
       <property>
       <name>hadoop.security.kerberos.ticket.cache.path</name>
@@ -93,6 +122,7 @@
       <description>Path to the Kerberos ticket cache. </description>
       </property>
       ```
+
     - 在Administrator 管理界面，为集成服务创建环境变量 **CLASSPATH=/opt/pwx-hadoop/conf**，并重启集成服务
 
       ![](assets/Informatica_PowerCenter/ace8a.png)
@@ -111,7 +141,9 @@
       ```
 
 ### PowerCenter Client ~ From Oracle to HDFS/Hive
+
 #### PowerCenter Repository Manager配置
+
   - 获取PowerCenter Client安装包，安装时选取PowerCenter Client,启动PowerCenter Repository Manager，选择菜单栏仓库->配置域，配置完成可以看到之前创建的存储库
 
       ![](assets/Informatica_PowerCenter/fcffd.png)
@@ -129,6 +161,7 @@
       ![](assets/Informatica_PowerCenter/55ebe.png)
 
 #### PowerCenter Designer创建mapping
+
   - 打开PowerCenter Designer，右键刚才创建的文件夹，点击open，打开配置界面
 
       ![](assets/Informatica_PowerCenter/e55a6.png)
@@ -154,6 +187,7 @@
       ![](assets/Informatica_PowerCenter/165bd.png)
 
 #### PowerCenter Workflow Manager运行workflow
+
   - 在菜单栏选择task,新建一个task,命名并选择刚才新建的map
 
       ![](assets/Informatica_PowerCenter/4ddd4.png)
@@ -171,6 +205,7 @@
       ![](assets/Informatica_PowerCenter/9412f.png)
 
   - 具体信息填写如下
+
       ```
       HDFS Connection URI：hdfs://namenodeip:25000
       Hive URL : jdbc:hive2://172.16.4.21:21066/default;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.keytab=/opt/user.keytab;user.principal=developuser
@@ -220,8 +255,9 @@
 
     ![](assets/Informatica_PowerCenter/c7536e95.png)
 
-    >说明：如果ldd命令返回有包丢失，则需要创建符号链接。例如：
-    >```
+    >说明：如果ldd命令返回有包丢失，则需要创建对应的符号链接。例如：
+
+    ```
     ln -s /opt/hadoopclient/JDK/jdk-8u201/jre/lib/amd64/server/libjvm.so /usr/lib64/libjvm.so
     ln -s /usr/lib64/libssl.so.1.0.2k /usr/lib64/libssl.so.1.0.0
     ln -s /usr/lib64/libcrypto.so.1.0.2k /usr/lib64/libcrypto.so.1.0.0
@@ -262,6 +298,26 @@
   ```
 
   ![](assets/Informatica_PowerCenter/ea105a63.png)
+
+#### kinit认证方式配置
+
+- 从<http://web.mit.edu/kerberos/dist/#kfw-4.0>下载对应操作系统架构的MIT Kerberos并安装。
+
+- 设置Kerberos的配置文件。将用户的krb5.conf文件重命名为 **krb5.ini** 放在`C:\ProgramData\MIT\Kerberos5`目录下。
+
+- 设置Kerberos票据的缓存文件
+
+  * 在本地创建存放票据的目录，例如`C:\temp`。
+
+  * 设置Windows的系统环境变量，变量名为`KRB5CCNAME`，变量值为`C:\temp\krb5cache`。
+
+    ![](assets/Informatica_PowerCenter/5cd8e910.png)
+
+- 在Windows上进行认证
+
+  打开MIT Kerberos，单击 **get Ticket** ，在弹出的MIT Kerberos: Get Ticket窗口中，**Pricipal** 输入用户名`developuser@HADOOP.COM`，**Password** 输入密码，单击 **OK**。
+
+  ![](assets/Informatica_PowerCenter/51cd29fb.png)
 
 #### PowerCenter Repository Manager配置
 
