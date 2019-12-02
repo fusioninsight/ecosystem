@@ -394,7 +394,7 @@
   代码页：UTF-8 encoding of Unicode
   ```
 
-  ![](assets/Informatica_PowerCenter/fada2570.png)
+  ![](assets/Informatica_PowerCenter/c6282066.png)
 
 - 在“Task Developer”中双击会话“session_hive_to_local”，点击 **映射**，设置源SQ_class的连接值为 **hivefi**，目标class1的属性“Output file directory”为 **/home/infa**，“Output filename”为 **class.out**。
 
