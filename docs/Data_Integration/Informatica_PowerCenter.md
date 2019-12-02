@@ -79,9 +79,13 @@
       ![](assets/Informatica_PowerCenter/1e993.png)
 
   * 在infa server创建developuser
+  
     - 在安全页签下，创建一个用户，名为developuser，与Hadoop集群用户保持一致
+
       ![](assets/Informatica_PowerCenter/aa8bb.png)
+
     - 修改用户的优先级以及用户组
+
       ![](assets/Informatica_PowerCenter/b2f50.png)
 
       ![](assets/Informatica_PowerCenter/d9266.png)
