@@ -1124,7 +1124,7 @@ NiFi中配置kafka解析器，对的FI HD kafka 21007端口
 
   注意：华为kafka客户端中的kafka-clients-0.11.0.1.jar更大
 
-- 登陆nifi主机，先试用`source /opt/hadoopclient/bigdata_env`加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:`export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"`
+- 登陆nifi主机，先使用`source /opt/hadoopclient/bigdata_env`加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:`export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"`
 
   其中/etc/krb5.conf为对应对接集群的认证krb5.conf文件
 
@@ -1203,6 +1203,6 @@ NiFi中配置kafka解析器，对的FI HD kafka 21007端口
 
   ![](assets/Apache_NiFi/2019-09-26_155308.png)
 
-- 登陆druid主机/opt/nifikafka21007路径检查结果
+- 登陆nifi主机/opt/nifikafka21007路径检查结果
 
   ![](assets/Apache_NiFi/2019-09-26_155521.png)
