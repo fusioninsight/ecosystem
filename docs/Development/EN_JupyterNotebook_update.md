@@ -259,6 +259,7 @@ Note：Configure jdbc interface to connect to the cluster ELK
   ![](assets/JupyterNotebook/markdown-img-paste-20191206105726364.png)
 
 
+
 ## F&Q
 
 1.  Encountered the following problems when using pySpark:
