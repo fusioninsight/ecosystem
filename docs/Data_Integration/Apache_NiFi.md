@@ -1239,3 +1239,131 @@ Configuring NiFi Kafka processor to connect FusionInsight HD Kafka
     ![](assets/Apache_NiFi/markdown-img-paste-20180914151628975.png)
 
     ![](assets/Apache_NiFi/markdown-img-paste-20180914151713272.png)
+
+## Connecting NiFi to Kafka with security mode
+
+### Purpose
+
+Configuring NiFi Kafka processor to connect FusionInsight HD Kafka with port 21007
+
+### Prerequisites
+
+- Installing NiFi 1.7.1 completed
+
+- Installing FusionInsight HD cluster and its client completed
+
+- Complete NiFi Kerberos configuration
+
+- nifi host ip: 172.16.2.119, FI HD ip: 172.16.6.10-12
+
+### Kerberos authentication related operation steps
+
+- Create a jaas.conf file in the nifi host `/opt` path, with the content：
+  ```
+  KafkaClient {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="developuser@HADOOP.COM"
+  keyTab="/opt/user_keytabs/101keytab/user.keytab"
+  useTicketCache=false
+  serviceName="kafka"
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+  ![](assets/Apache_NiFi/2019-09-26_141743.png)
+
+- Stop nifi with the command `bin/nifi.sh stop`
+
+- Find the corresponding kafka client jar package in the kafka client of FI HD，for example: `/opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar`
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206160333705.png)
+
+- Find the original kafka client jar package on `/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-1-0-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies` with the name kafka-clients-1.1.0.jar. Rename it  into kafka-clients-0.11.0.1.jar.org. And copy the FI HD corresponding kafka-clients-1.1.0.jar into this directory:
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206160826347.png)
+
+
+- Login to nifi server，use the following command at first to load the environment variables `source /opt/hadoopclient/bigdata_env`，Then use the following command to load the jvm parameters for java running:`export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"`
+
+ `/etc/krb5.conf` is the authentication krb5.conf file corresponding to the connecting FI cluster
+
+  After completing the above steps, you can use the command `java -version` to check whether the jvm parameters are successfully loaded:
+
+  ![](assets/Apache_NiFi/2019-09-26_143425.png)
+
+- Use command `bin/nifi.sh start` to start nifi:
+
+  ![](assets/Apache_NiFi/2019-09-26_143552.png)
+
+### PublishKafka_1_0 Sample
+
+- The entire workflow is：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206161510376.png)
+
+- The configuration of the processor GetHTTP is as follows：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20180914143715990.png)
+
+  ```
+  1: http://vincentarelbundock.github.io/Rdatasets/csv/datasets/iris.csv
+  2: iris.csv
+  ```
+- The configuration of the processor PublishKafka_1_0 is as follows：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206161820588.png)
+
+  ```
+  1: 172.16.4.121:21007,172.16.4.122:21007,172.16.4.123:21007
+  2: SASL_PLAINTEXT
+  3: Kafka
+  4: KeytabCredentialsService
+  5: testtopic
+  6: Guarantee Replicated Delivery
+  ```
+
+- Running the entire workflow：  
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206162040660.png)
+
+- Check the outcome on kafka:
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206162130884.png)
+
+### ConsumeKafka_1_0 Sample
+
+- The entire workflow is：
+
+  ![](assets/Apache_NiFi/2019-09-26_154306.png)
+
+- The configuration of the processor ConsumeKafka_1_0 is as follows：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206162716591.png)
+
+  ```
+  1: 172.16.4.121:21007,172.16.4.122:21007,172.16.4.123:21007
+  2: SASL_PLAINTEXT
+  3: kafka
+  4: KeytabCredentialsService
+  5: testtopic
+  6: Demo
+  ```
+
+- The configuration of the processor PutFile is as follows：
+
+  ![](assets/Apache_NiFi/2019-09-26_154859.png)
+
+- Running the entire workflow：  
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206162445287.png)
+
+- Use command on Kafka client to insert some data:
+  `./bin/kafka-console-producer.sh --broker-list 172.16.4.121:21007,172.16.4.122:21007,172.16.4.123:21007 --topic testtopic --producer.config config/producer.properties`
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206162954392.png)
+
+- Login to nifi host `/opt/nifikafka21007` to check the outcome
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191206163231548.png)
