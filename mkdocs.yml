@@ -36,6 +36,14 @@ nav:
   - Talend:
     - 6.4.1 <--> C80: Data_Integration/Talend.md
     - 7.0.1 <--> C80: Data_Integration/Talend.md
+- Development:
+  - Jupyter Notebook:
+    - 5.7.8 <--> C80: Development/EN_JupyterNotebook_update.md
+    - 5.7.8 <--> 6.5: Development/EN_JupyterNotebook_update.md
+- Other:
+  - Apache Livy:
+    - 0.5.0-incubating <--> C80: Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md
+    - 0.6.0-incubating <--> 5.1: Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md
 
 extra:
   social:

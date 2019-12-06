@@ -119,4 +119,30 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td><a href="Data_Integration/Talend.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></a></td>
 <td></td>
 </tr>
+<tr><td rowspan=1 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>Development </td>
+<td rowspan=1 >Jupyter Notebook</td>
+<td>5.7.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/EN_JupyterNotebook_update.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/EN_JupyterNotebook_update.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+</tr>
+<tr><td rowspan=2 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>Other </td>
+<td rowspan=2 >Apache Livy</td>
+<td>0.5.0-incubating</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md"><span class="label label-Spark2.x ">Spark2.x</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>0.6.0-incubating</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </table>
