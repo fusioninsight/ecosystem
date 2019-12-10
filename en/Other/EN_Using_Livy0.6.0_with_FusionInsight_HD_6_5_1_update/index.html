@@ -1,0 +1,1445 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+    
+    
+      
+        <title>0.6.0 6.5 - FusionData Ecosystem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#connection-instruction-between-apache-livy-and-fusioninsight" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="FusionData Ecosystem" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              FusionData Ecosystem
+            </span>
+            <span class="md-header-nav__topic">
+              
+                0.6.0 <--> 6.5
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="FusionData Ecosystem" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FusionData Ecosystem
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Business Intelligence
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Business Intelligence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      QlikView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        QlikView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+      12 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+      12 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+      12 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Tableau
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        Tableau
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+      10.1.4 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+      10.3.2 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+      10.5.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Rapidminer Studio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Rapidminer Studio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+      8.2.001 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Data Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Apache NiFi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Apache NiFi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+      1.7.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Informatica PowerCenter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Informatica PowerCenter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Informatica PowerexChange CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Informatica PowerexChange CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Informatica_PWX_CDC/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Talend
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Talend
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="6.4.1 C80" class="md-nav__link">
+      6.4.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend/" title="7.0.1 C80" class="md-nav__link">
+      7.0.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Jupyter Notebook
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Jupyter Notebook
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/EN_JupyterNotebook_update/" title="5.7.8 C80" class="md-nav__link">
+      5.7.8 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/EN_JupyterNotebook_update/" title="5.7.8 6.5" class="md-nav__link">
+      5.7.8 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Apache Livy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Apache Livy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="0.5.0 C80" class="md-nav__link">
+      0.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        0.6.0 <--> 6.5
+      </label>
+    
+    <a href="./" title="0.6.0 6.5" class="md-nav__link md-nav__link--active">
+      0.6.0 <--> 6.5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-externally-verified-livy-service-and-submit-tasks-using-session-and-batch-methods" class="md-nav__link">
+    Deploy the externally verified livy service and submit tasks using session and batch methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-description" class="md-nav__link">
+    Scenario Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos-authentication-related-configuration" class="md-nav__link">
+    Kerberos authentication-related configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-related-checks" class="md-nav__link">
+    Client related checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livy-server-configuration" class="md-nav__link">
+    Livy server configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-tasks-using-livy-session" class="md-nav__link">
+    Submit tasks using Livy session
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch1" class="md-nav__link">
+    Submit task example using Livy batch(1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch2" class="md-nav__link">
+    Submit task example using Livy batch(2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch3" class="md-nav__link">
+    Submit task example using Livy batch(3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch4" class="md-nav__link">
+    Submit task example using Livy batch(4)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-kerberos-spnego-on-windows-jump-machine-to-log-in-livy-web-ui" class="md-nav__link">
+    Configure Kerberos Spnego on Windows jump machine to log in livy web UI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#succeeded-case" class="md-nav__link">
+    Succeeded Case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-externally-verified-livy-service-and-submit-tasks-using-session-and-batch-methods" class="md-nav__link">
+    Deploy the externally verified livy service and submit tasks using session and batch methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-description" class="md-nav__link">
+    Scenario Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos-authentication-related-configuration" class="md-nav__link">
+    Kerberos authentication-related configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-related-checks" class="md-nav__link">
+    Client related checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livy-server-configuration" class="md-nav__link">
+    Livy server configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-tasks-using-livy-session" class="md-nav__link">
+    Submit tasks using Livy session
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch1" class="md-nav__link">
+    Submit task example using Livy batch(1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch2" class="md-nav__link">
+    Submit task example using Livy batch(2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch3" class="md-nav__link">
+    Submit task example using Livy batch(3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-task-example-using-livy-batch4" class="md-nav__link">
+    Submit task example using Livy batch(4)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-kerberos-spnego-on-windows-jump-machine-to-log-in-livy-web-ui" class="md-nav__link">
+    Configure Kerberos Spnego on Windows jump machine to log in livy web UI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/en/edit/master/docs/Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="connection-instruction-between-apache-livy-and-fusioninsight">Connection Instruction between Apache Livy and FusionInsight<a class="headerlink" href="#connection-instruction-between-apache-livy-and-fusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="succeeded-case">Succeeded Case<a class="headerlink" href="#succeeded-case" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Apache Livy 0.6.0 &harr; FusionInsight HD 6.5 (Spark2x)</p>
+<p>Apache Livy 0.5.0 &harr; FusionInsight HD V100R002C80SPC200 (Spark2x)</p>
+</blockquote>
+<h2 id="deploy-the-externally-verified-livy-service-and-submit-tasks-using-session-and-batch-methods">Deploy the externally verified livy service and submit tasks using session and batch methods<a class="headerlink" href="#deploy-the-externally-verified-livy-service-and-submit-tasks-using-session-and-batch-methods" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-description">Scenario Description<a class="headerlink" href="#scenario-description" title="Permanent link">&para;</a></h3>
+<p>In some complex scenarios, access control is required for users who submit tasks. The livy service supports Kerberos SPNEGO authentication for external access. The following is a specific test scenario</p>
+<ul>
+<li>
+<p>Connection with FI HD cluster: 172.16.6.10-12, three-node deployment</p>
+</li>
+<li>
+<p>Apache Livy server side： 172.16.2.118, Install the FI HD client on this node and complete the download and installation of Livy by referring to the previous chapter.</p>
+</li>
+<li>
+<p>Client: 172.16.2.119, Submit a task request using the curl command on this node. You need to install an FI HD client and check whether curl supports SPNEGO authentication by using the command 'curl -V'</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20191205170853463.png" /></p>
+<p>Two authenticated users are used in this scenario, user developuser, and user livy</p>
+<ul>
+<li>
+<p>User livy is the user who needs to actually submit a spark task request to the FI HD cluster for the livy service</p>
+</li>
+<li>
+<p>User developuser is the user used by the client to submit tasks to the Livy server</p>
+</li>
+<li>
+<p>The entire business process is actually the proxy user developuser submits the spark task to the FI HD cluster in the name of the user livy, but before the task is performed, the user developuser needs to pass the Kerberos authentication of the FI HD cluster. In this way, the Apache Livy server access control is implemented</p>
+</li>
+</ul>
+<h3 id="kerberos-authentication-related-configuration">Kerberos authentication-related configuration<a class="headerlink" href="#kerberos-authentication-related-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Log in to the FI HD manager to create the users developuser, livy to be used in the test. And download the user livy authentication information (user.keytab, krb5.conf)</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20191206111259112.png" /></p>
+<ul>
+<li>Log in to kadmin with the FI HD client, and create a new principal for FI HD's Kerberos authentication to the Livy HTTP service. The principal is "HTTP/host-172-16-2-118". host-172-16-2-118 is the hostname of the node where Apache Livy is deployed.</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806114250120.png" /></p>
+<p>When you execute the command "kadmin –p kadmin/admin", the initial password is "Admin@123", and the new password must be kept in mind after modification.</p>
+<p>Pass the generated http2.keytab (keytab file name can be customized) authentication file to the /opt path of the livy server and use the "kinit -kt" command to check whether the authentication is successful</p>
+<p><code>kinit -kt /opt/http2.keytab HTTP/host-172-16-2-118@HADOOP.COM</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806114756630.png" /></p>
+<p>Use the command "kdestroy" to clear the cached notes when done</p>
+<ul>
+<li>To log in to the cluster, click Service Management-&gt; Yarn-&gt; Service Configuration-&gt; Select All Configuration-&gt; Custom. Add the following configuration under the corresponding parameter file as core-site.xml:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019120609545724.png" /></p>
+<div class="codehilite"><pre><span></span>hadoop.proxyuser.livy.hosts = *
+hadoop.proxyuser.livy.groups = *
+</pre></div>
+
+<ul>
+<li>Follow the same method above to add the same configuration to the core-site.xml file on both hdfs and hive service:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20191206100058854.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20191206100217816.png" /></p>
+<h3 id="client-related-checks">Client related checks<a class="headerlink" href="#client-related-checks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use "curl -V" command to check if client curl command supports Kerberos Spnego</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805103921157.png" /></p>
+<ul>
+<li>
+<p>Install the corresponding client for FI HD cluster</p>
+</li>
+<li>
+<p>Check that client time and cluster time are less than 5 minutes</p>
+</li>
+</ul>
+<h3 id="livy-server-configuration">Livy server configuration<a class="headerlink" href="#livy-server-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Install the corresponding client for FI HD cluster</p>
+</li>
+<li>
+<p>Check that client time and cluster time are less than 5 minutes</p>
+</li>
+<li>
+<p>Check the livy.conf file configuration</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806115225643.png" /></p>
+<p>Note：</p>
+<ol>
+<li>
+<p>"livy.file.local-dir-whitelist=/opt/". This configuration parameter is to use the livy batch method to submit the task locally, you need to open the whitelist of the local path.</p>
+</li>
+<li>
+<p>launch.kerberos.* related configuration parameters are  required for Livy to actually interact with the FI HD cluster</p>
+</li>
+<li>
+<p>auth.kerberos.* related configuration parameters are used for external access control to livy web UI</p>
+</li>
+<li>
+<p>Check the livy-client.conf file configuration</p>
+</li>
+</ol>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080511062850.png" /></p>
+<ul>
+<li>Check the livy-env.sh file configuration</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805110815683.png" /></p>
+<ul>
+<li>Check spark-blacklist.conf file configuration</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805110944567.png" /></p>
+<ul>
+<li>Add the following configuration to the log4j.properties file to adjust the log level (optional)</li>
+</ul>
+<div class="codehilite"><pre><span></span>log4j.logger.org.eclipse.jetty=DEBUG
+</pre></div>
+
+<h3 id="submit-tasks-using-livy-session">Submit tasks using Livy session<a class="headerlink" href="#submit-tasks-using-livy-session" title="Permanent link">&para;</a></h3>
+<p>The livy session mode corresponds to the spark console interactive mode. The spark task is submitted and ran by using the detailed code</p>
+<ul>
+<li>Log into the livy server and use <code>bin / livy-server start</code> to start the livy service</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112111902.png" /></p>
+<p>Open Livy-end livy-root-server.out log to see if livy starts successfully</p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112159413.png" /></p>
+<ul>
+<li>Log in to the client (172.16.2.119) and use <code>kinit developuser</code> to enter a password to obtain a ticket</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805112312259.png" /></p>
+<ul>
+<li>Use the following command to start a pyspark session in livy</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST --data '{"kind": "pyspark"}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/sessions</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141351861.png" /></p>
+<ul>
+<li>Submit a piece of code for session/0 using the following command</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST -H 'Content-Type: application/json' -d '{"code":"1 + 1"}' http://host-172-16-2-118:8998/sessions/0/statements</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141624866.png" /></p>
+<ul>
+<li>Use the following command to view the results:</li>
+</ul>
+<p><code>curl --negotiate -k -v -u : http://host-172-16-2-118:8998/sessions/0/statements | python -m json.tool</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141719681.png" /></p>
+<ul>
+<li>Use the following command to close the session</li>
+</ul>
+<p><code>curl --negotiate -k -v -u : http://host-172-16-2-118:8998/sessions/0 -X DELETE</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806141829801.png" /></p>
+<ul>
+<li>Log in to the connected cluster's yarn view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142026694.png" /></p>
+<ul>
+<li>Besides, after the client (172.16.2.119) completes the curl command submission task, you can use klist to view the ticket information:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806181720594.png" /></p>
+<p>You can see that the ticket authentication ticket will be updated HTTP/host-172-16-2-118@HADOOP.COM</p>
+<h3 id="submit-task-example-using-livy-batch1">Submit task example using Livy batch(1)<a class="headerlink" href="#submit-task-example-using-livy-batch1" title="Permanent link">&para;</a></h3>
+<p>The livy batch mode corresponds to the spark-submit interactive mode. The spark task is submitted and ran by using a compiled jar package or a completed py file.</p>
+<p>This example calculates the pi value by submitting a jar package locally using yarn client mode</p>
+<ul>
+<li>
+<p>Log in to the client (172.16.2.119) and use <code>kinit developuser</code> to enter a password to obtain a ticket.</p>
+</li>
+<li>
+<p>Find the test jar package spark-examples_2.11-2.1.0.jar in the FI HD client and transfer it to the /opt/ path of the livy server</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805115748160.png" /></p>
+<ul>
+<li>Submit the spark task on the client (172.16.2.119) with the following command</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST --data '{"file": "file:/opt/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614231861.png" /></p>
+<ul>
+<li>Open the livy-root-server.out log to see the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142412857.png" /></p>
+<ul>
+<li>Log in to the yarn to view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142447984.png" /></p>
+<h3 id="submit-task-example-using-livy-batch2">Submit task example using Livy batch(2)<a class="headerlink" href="#submit-task-example-using-livy-batch2" title="Permanent link">&para;</a></h3>
+<p>This example calculates the pi value by submitting a py file locally using yarn client mode</p>
+<ul>
+<li>
+<p>Log in to the client (172.16.2.119) and use <code>kinit developuser</code> to enter a password to obtain a ticket.</p>
+</li>
+<li>
+<p>Create a py2.py file and upload it to the /opt/ path of the Livy server. The specific content is as follows：</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>import sys
+from random import random
+from operator import add
+
+from pyspark.sql import SparkSession
+
+
+if __name__ == &quot;__main__&quot;:
+    &quot;&quot;&quot;
+        Usage: pi [partitions]
+    &quot;&quot;&quot;
+    spark = SparkSession\
+        .builder\
+        .appName(&quot;PythonPi&quot;)\
+        .getOrCreate()
+
+    partitions = int(sys.argv[1]) if len(sys.argv) &gt; 1 else 2
+    n = 100000 * partitions
+
+    def f(_):
+        x = random() * 2 - 1
+        y = random() * 2 - 1
+        return 1 if x ** 2 + y ** 2 &lt;= 1 else 0
+
+    count = spark.sparkContext.parallelize(range(1, n + 1), partitions).map(f).reduce(add)
+    print(&quot;Pi is roughly %f&quot; % (4.0 * count / n))
+
+    spark.stop()
+</pre></div>
+
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805122730950.png" /></p>
+<ul>
+<li>Submit the spark task on the client (172.16.2.119) with the following command</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST --data '{"file": "file:/opt/pi2.py" }' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142550152.png" /></p>
+<ul>
+<li>Open the livy-root-server.out log to see the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614262941.png" /></p>
+<ul>
+<li>Log in to the yarn to view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080614265792.png" /></p>
+<h3 id="submit-task-example-using-livy-batch3">Submit task example using Livy batch(3)<a class="headerlink" href="#submit-task-example-using-livy-batch3" title="Permanent link">&para;</a></h3>
+<p>This example uses the yarn cluster mode to submit a jar package under the cluster hdfs path and run it to calculate the pi value.</p>
+<ul>
+<li>
+<p>Log in to the client (172.16.2.119) and use <code>kinit developuser</code> to enter a password to obtain a ticket.</p>
+</li>
+<li>
+<p>Modify the livy.conf file configuration to:</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806142834644.png" /></p>
+<ul>
+<li>Upload the jar package in the /tmp path of the HDFS connected to the FI HD cluster</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805141930586.png" /></p>
+<ul>
+<li>
+<p>Restart Livy</p>
+</li>
+<li>
+<p>Submit the spark task on the client (172.16.2.119) with the following command</p>
+</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST --data '{"file": "/tmp/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143100296.png" /></p>
+<ul>
+<li>Open the livy-root-server.out log to see the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143129614.png" /></p>
+<ul>
+<li>Log in to the yarn to view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143210274.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143247373.png" /></p>
+<h3 id="submit-task-example-using-livy-batch4">Submit task example using Livy batch(4)<a class="headerlink" href="#submit-task-example-using-livy-batch4" title="Permanent link">&para;</a></h3>
+<p>This example uses the yarn cluster mode to submit a jar package under the local path of the cluster and run it to calculate the pi value.</p>
+<ul>
+<li>
+<p>Log in to the client (172.16.2.119) and use <code>kinit developuser</code> to enter a password to obtain a ticket.</p>
+</li>
+<li>
+<p>Because you use the yarn cluster to submit the jar package locally, you do not know in advance which cluster node the worker is in, so put the jar package spark-examples_2.11-2.1.0.jar in the /home path of each cluster node:</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805143623305.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080514364033.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190805143653616.png" /></p>
+<ul>
+<li>Submit the spark task on the client (172.16.2.119) with the following command</li>
+</ul>
+<p><code>curl --negotiate -k -v -u developuser : -X POST --data '{"file": "local:/home/spark-examples_2.11-2.1.0.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://host-172-16-2-118:8998/batches</code></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143404351.png" /></p>
+<ul>
+<li>Open the livy-root-server.out log to see the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143436711.png" /></p>
+<ul>
+<li>Log in to the yarn to view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143513482.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806143541228.png" /></p>
+<h3 id="configure-kerberos-spnego-on-windows-jump-machine-to-log-in-livy-web-ui">Configure Kerberos Spnego on Windows jump machine to log in livy web UI<a class="headerlink" href="#configure-kerberos-spnego-on-windows-jump-machine-to-log-in-livy-web-ui" title="Permanent link">&para;</a></h3>
+<p>The authentication mechanism of the Windows jump machine (172.16.2.111) accessing Livy web UI is the same as that of the client (172.16.2.119) using curl command to access Livy server and submit spark task.</p>
+<ul>
+<li>Product documentation -&gt; Application Development Guide -&gt; Security Mode -&gt; Spark2x Development Guide -&gt; Preparing the Environment -&gt; Preparing for the HiveODBC Development Environment -&gt; Windows Environment -&gt; Finish the first 4 steps</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20191206093348886.png" /></p>
+<ul>
+<li>Configure JCE</li>
+</ul>
+<p>Download the Java Cryptography Extension (JCE) from the java official website, then decompress it to %JAVA_HOME%/jre/lib/security and replace the corresponding file.</p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145516277.png" /></p>
+<ul>
+<li>Check if the hostname of the livy server is added to the hosts file:</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806160858384.png" /></p>
+<ul>
+<li>Configure Firefox</li>
+</ul>
+<p>Firefox under windows needs to adjust the following parameters by visiting the <code>about:config</code> page:</p>
+<ol>
+<li>
+<p><code>network.negotiate-auth.trusted-uris</code> is set to trusted addresses</p>
+</li>
+<li>
+<p><code>network.auth.use-sspi</code> is set to disable sspi authentication protocol</p>
+</li>
+</ol>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145819801.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806145845785.png" /></p>
+<ul>
+<li>Authentication with MIT Kerberos</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150006300.png" /></p>
+<ul>
+<li>Login to Livy's web ui address http://host-172-16-2-118:8998/ui</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150130275.png" /></p>
+<ul>
+<li>Submit the task using the previous sample and check it on Livy web ui</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080615064401.png" /></p>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-20190806150717610.png" /></p>
+<ul>
+<li>Check the service ticket generated by MIT Kerberos</li>
+</ul>
+<p><img alt="" src="../assets/Using_Livy_with_FusionInsight/markdown-img-paste-2019080615091446.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="./" title="0.5.0 C80" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                0.5.0 <--> C80
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8e03edeb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>
