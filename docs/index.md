@@ -126,7 +126,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td><a href="Development/EN_JupyterNotebook_update"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
-<td><a href="Development/EN_JupyterNotebook_update"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/EN_JupyterNotebook_update"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr><td rowspan=2 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>Other </td>
 <td rowspan=2 >Apache Livy</td>
