@@ -2,9 +2,9 @@
 
 ## Succeeded Case
 
-> Apache Livy 0.6.0-incubating <--> FusionInsight HD 6.5.1 (Spark2.x)
+> Apache Livy 0.6.0 <--> FusionInsight HD 6.5 (Spark2.x)
 >
-> Apache Livy 0.5.0-incubating <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
+> Apache Livy 0.5.0 <--> FusionInsight HD V100R002C80SPC200 (Spark2.x)
 
 ## Deploy the externally verified livy service and submit tasks using session and batch methods
 

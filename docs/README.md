@@ -130,7 +130,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 </tr>
 <tr><td rowspan=2 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>Other </td>
 <td rowspan=2 >Apache Livy</td>
-<td>0.5.0-incubating</td>
+<td>0.5.0</td>
 <td></td>
 <td></td>
 <td></td>
@@ -138,11 +138,11 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 </tr>
 <tr>
-<td>0.6.0-incubating</td>
+<td>0.6.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md"><span class="label label-Spark2.x ">Spark2.x</span></a></td>
 </tr>
 </table>
