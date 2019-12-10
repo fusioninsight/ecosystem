@@ -2,7 +2,7 @@
 
 ## Succeeded Case
 
-> Jupyter Notebook 5.7.8 <--> FusionInsight HD V100R002C80SPC200 (Hive/Elk/Spark2x)
+> Jupyter Notebook 5.7.8 <--> FusionInsight HD V100R002C80SPC200 (Hive/ELK/Spark2x)
 
 > Jupyter Notebook 5.7.8 <--> FusionInsight HD 6.5 (Hive/ELK/Spark2x)
 
