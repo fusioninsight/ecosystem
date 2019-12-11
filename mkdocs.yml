@@ -34,6 +34,8 @@ nav:
     - 12 <--> C70: Business_Intelligence/QlikView.md
     - 12 <--> C80: Business_Intelligence/QlikView.md
     - 12 <--> 6.5: Business_Intelligence/QlikView.md
+  - SSRS:
+    - 2017 <--> 6.5: Business_Intelligence/SSRS.md
   - SmartBI:
     - 7.2.32464.17374 <--> C70: Business_Intelligence/SmartBI.md
   - Tableau:
@@ -147,8 +149,8 @@ nav:
     - 4.0.1 <--> C70: Development/HUE.md
   - Jupyter Notebook:
     - 2.4.4.0 <--> C70: Development/Jupyter_Notebook.md
-    - 2.7.16 <--> C80: Development/JupyterNotebook.md
-    - 2.7.16 <--> 6.5: Development/JupyterNotebook.md
+    - 5.7.8 <--> C80: Development/JupyterNotebook.md
+    - 5.7.8 <--> 6.5: Development/JupyterNotebook.md
   - JupyterHub:
     - 1.0.0 <--> C80: Development/JupyterHub.md
   - RStudio:

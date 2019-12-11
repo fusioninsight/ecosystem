@@ -22,6 +22,8 @@
   * [12 <--> C70](QlikView.md)
   * [12 <--> C80](QlikView.md)
   * [12 <--> 6.5](QlikView.md)
+* SSRS
+  * [2017 <--> 6.5](SSRS.md)
 * SmartBI
   * [7.2.32464.17374 <--> C70](SmartBI.md)
 * Tableau
