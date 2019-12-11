@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Jupyter Notebook 2.7.16 <--> FusionInsight HD V100R002C80SPC200 (Hive/ELK/Spark2x)
+> Jupyter Notebook 5.7.8 <--> FusionInsight HD V100R002C80SPC200 (Hive/ELK/Spark2x)
 
-> Jupyter Notebook 2.7.16 <--> FusionInsight HD 6.5 (Hive/ELK/Spark2x)
+> Jupyter Notebook 5.7.8 <--> FusionInsight HD 6.5 (Hive/ELK/Spark2x)
 
 说明：Jupyter Notebook版本 基于Anaconda Python内核版本
 
@@ -122,7 +122,7 @@
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102214570601.png)
 
-  注意：JPype1已经JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
+  注意：JPype1和JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
 
   ```
   ./pip freeze | grep JPype1
@@ -219,7 +219,7 @@
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102214570601.png)
 
-  注意：JPype1已经JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
+  注意：JPype1和JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
 
   ```
   ./pip freeze | grep JPype1
