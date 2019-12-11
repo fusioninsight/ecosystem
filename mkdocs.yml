@@ -18,6 +18,8 @@ nav:
     - 12 <--> C60: Business_Intelligence/QlikView.md
     - 12 <--> C70: Business_Intelligence/QlikView.md
     - 12 <--> C80: Business_Intelligence/QlikView.md
+  - SSRS:
+    - 2017 <--> 6.5: Business_Intelligence/SSRS.md
   - Tableau:
     - 10.0.0 <--> C50: Business_Intelligence/Tableau.md
     - 10.1.4 <--> C60: Business_Intelligence/Tableau.md
