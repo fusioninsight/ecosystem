@@ -12,6 +12,8 @@
   * [12c <--> C60](Oracle_BIEE.md)
   * [12c <--> C70](Oracle_BIEE.md)
   * [12c <--> 6.5](Oracle_BIEE.md)
+* Power BI
+  * [2.75.5649.861 <--> 6.5](PowerBI_2.75.5649.861.md)
 * Qlik Sense
   * [3.2.4 <--> C70](QlikSense.md)
   * [3.2.4 <--> 6.5](QlikSense.md)

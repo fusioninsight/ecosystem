@@ -24,7 +24,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 </thead>
 
 
-<tr><td rowspan=11 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
+<tr><td rowspan=12 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
 <td rowspan=1 >FineBI</td>
 <td>5.1</td>
 <td></td>
@@ -58,6 +58,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 <td></td>
 <td><a href="Business_Intelligence/Oracle_BIEE.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >Power BI</td>
+<td>2.75.5649.861</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/PowerBI_2.75.5649.861.md"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-FTP-Server ">FTP-Server</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >Qlik Sense</td>
