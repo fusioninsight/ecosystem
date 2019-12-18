@@ -268,7 +268,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
   </jdbc>
   ```
 
-  **Phoenix的JDBC配置示例：** 需要增加属性hbase.myclient.keytab.file和hbase.myclient.principal。
+  **Phoenix的JDBC配置示例：**
   ```
   <jdbc>
     <identify>phoenix</identify>
@@ -286,15 +286,7 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
         <name>java.security.auth.login.config</name>
         <value>C:\\ecotesting\\Fiber\\conf\\jaas.conf</value>
       </property>
-      <property>
-        <name>hbase.master.keytab.file</name>
-        <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
-      </property>
-  	<property>
-        <name>hbase.myclient.principal</name>
-        <value>developuser</value>
-      </property>
-  	<property>
+  	  <property>
         <name>zookeeper.server.principal</name>
         <value>zookeeper/hadoop.hadoop.com</value>
       </property>
@@ -304,6 +296,19 @@ Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可�
       </property>
     </properties>
   </jdbc>
+  ```
+
+- 对接Phoenix时，需要修改配置文件`C:\ecotesting\Fiber\HBase\hbase\conf\hbase-site.xml`新增属性 **hbase.myclient.keytab** 和 **hbase.myclient.principal**。
+
+  ```
+  <property>
+    <name>hbase.myclient.keytab</name>
+    <value>C:\\ecotesting\\Fiber\\conf\\user.keytab</value>
+  </property>
+  <property>
+    <name>hbase.myclient.principal</name>
+    <value>developuser</value>
+  </property>
   ```
 
 ## SQuirreL对接Fiber

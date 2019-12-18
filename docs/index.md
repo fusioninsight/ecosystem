@@ -24,7 +24,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 </thead>
 
 
-<tr><td rowspan=13 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
+<tr><td rowspan=14 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
 <td rowspan=1 >FineBI</td>
 <td>5.1</td>
 <td></td>
@@ -41,6 +41,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td rowspan=1 >MicroStrategy Desktop</td>
+<td>11.1.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/MicroStrategy_11.1.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >Oracle BIEE</td>
