@@ -6,7 +6,7 @@
   * [5.1 <--> 6.5](FineBI_5.1.md)
 * IBM Cognos
   * [10.2.2fp4 <--> C60](IBM_Cognos.md)
-* MicroStrategy Desktop
+* MicroStrategy
   * [11.1.4 <--> 6.5](MicroStrategy_11.1.4.md)
 * Oracle BIEE
   * [11g <--> C60](Oracle_BIEE.md)

@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> MicroStrategy Desktop 11.1.4 <--> FusionInsight HD 6.5 (Hive/Spark2x)
+> MicroStrategy 11.1.4 <--> FusionInsight HD 6.5 (Hive/Spark2x)
 
 ## 简介
 

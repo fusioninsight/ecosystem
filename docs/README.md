@@ -43,7 +43,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >MicroStrategy Desktop</td>
+<td rowspan=1 >MicroStrategy</td>
 <td>11.1.4</td>
 <td></td>
 <td></td>
