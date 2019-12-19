@@ -35,7 +35,7 @@
 
 ### 配置Kerberos认证
 
-    * 配置Kerberos认证过程：
+  * 配置Kerberos认证过程：
 
     1. 下载并安装MIT Kerberos。请记住安装路径，例如：“C:\Program Files\MIT\Kerberos”。
 
