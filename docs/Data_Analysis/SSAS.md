@@ -11,38 +11,38 @@
 
   * 提前安装以下软件用于SSAS测试验证：
 
-    1. visual studio 2019，需要安装 Microsoft Analysis Services Projects 扩展包以及data storage and processing 工具包。
+  1. visual studio 2019，需要安装 Microsoft Analysis Services Projects 扩展包以及data storage and processing 工具包。
 
-    2. Power BI Desktop，用于调用SSAS数据源，进行数据展现。
+  2. Power BI Desktop，用于调用SSAS数据源，进行数据展现。
 
-    3. SQL Server 2017，用于创建Linked Server For Hive/Spark 。
+  3. SQL Server 2017，用于创建Linked Server For Hive/Spark 。
 
-    4. SSMS, 用于SQL Server和SSAS数据库管理。
+  4. SSMS, 用于SQL Server和SSAS数据库管理。
 
-    5. SSAS 2017, 安装过程参考官方指导，Server Mode 选择 Tabular Mode。
+  5. SSAS 2017, 安装过程参考官方指导，Server Mode 选择 Tabular Mode。
 
 ### 数据源驱动准备
 
-    下载和安装32bit 和64 bit的Microsoft ODBC驱动:
+  * 下载和安装32bit 和64 bit的Microsoft ODBC驱动:
 
-    * Microsoft Hive ODBC  Driver下载：
-    [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=40886)
+  * Microsoft Hive ODBC  Driver下载：
+  [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=40886)
 
-    * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
+  * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
 
 ### 配置Kerberos认证
 
     1. 下载并安装MIT Kerberos。请记住安装路径，例如：“C:\Program Files\MIT\Kerberos”。
 
-    2. 	参考FusionInsight HD 6.5 文档，“应用开发指南->安全模式->安全认证”配置对接账号及相关权限。
+    2. 参考FusionInsight HD 6.5 文档，“应用开发指南->安全模式->安全认证”配置对接账号及相关权限。
 
-    3. 	使用对接账号登录FusionInsight管理界面，鼠标停留在右上角显示用户处，在下拉显示框中选择“下载用户凭据”，选择集群并确认下载，下载解压后包括krb5.conf和user.keytab两个文件。
+    3. 使用对接账号登录FusionInsight管理界面，鼠标停留在右上角显示用户处，在下拉显示框中选择“下载用户凭据”，选择集群并确认下载，下载解压后包括krb5.conf和user.keytab两个文件。
 
-    4.	重命名krb5.conf文件为krb5.ini，并拷贝到“C:\ProgramData\MIT\Kerberos5”目录下。“C:\ProgramData”目录一般是隐藏的，需要设置显示隐藏文件。
+    4. 重命名krb5.conf文件为krb5.ini，并拷贝到“C:\ProgramData\MIT\Kerberos5”目录下。“C:\ProgramData”目录一般是隐藏的，需要设置显示隐藏文件。
 
-    5.	设置Kerberos票据的缓存文件。创建存放票据的目录，例如“C:\temp”。
+    5. 设置Kerberos票据的缓存文件。创建存放票据的目录，例如“C:\temp”。
 
-    6.	设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cache”。设置Windows的系统环境变量，变量名为“KRB5_CONFIG”，变量值为“C:\ProgramData\MIT\Kerberos5\krb5.ini”,重启服务器。
+    6. 设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cache”。设置Windows的系统环境变量，变量名为“KRB5_CONFIG”，变量值为“C:\ProgramData\MIT\Kerberos5\krb5.ini”,重启服务器。
 
     7. 在Windows上进行认证。打开MIT Kerberos，单击“get Ticket”，在弹出的“MIT Kerberos: Get Ticket”窗口中，“Pricipal”输入用户名，“Password”输入密码，单击“OK”。
 
