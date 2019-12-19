@@ -2,7 +2,7 @@
 
 ## Applicable Scene
 
-> SSRS 2017 <-> FusionInsight HD 6.5 (Hive / SparkSQL)
+> SSRS 2017 <-> FusionInsight HD 6.5 (Hive/SparkSQL)
 
 ## SSRS Connection Guide
 

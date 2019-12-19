@@ -40,7 +40,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Business_Intelligence/SSRS.md"><span class="label label-Hive  ">Hive </span></br><span class="label label- SparkSQL "> SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/SSRS.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
 <td rowspan=4 >Tableau</td>
