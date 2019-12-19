@@ -28,7 +28,10 @@
     * Microsoft Hive ODBC  Driver下载：
     [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=40886)
 
-    * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
+    * Microsoft Spark ODBC  Driver下载地址：
+    [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=49883)
+
+  * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
 
 ### 配置Kerberos认证
 
