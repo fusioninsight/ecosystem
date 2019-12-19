@@ -126,6 +126,14 @@
     background-color: #7D26CD;
 }
 
+.label-FTP-Server {
+    background-color: #908c029e;
+}
+
+.label-OS {
+    background-color: #31697973;
+}
+
 .label-GaussDB, .label-ELK{
     background-color: #336791;
 }
