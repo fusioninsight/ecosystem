@@ -18,6 +18,8 @@ nav:
     - 5.1 <--> 6.5: Business_Intelligence/FineBI_5.1.md
   - IBM Cognos:
     - 10.2.2fp4 <--> C60: Business_Intelligence/IBM_Cognos.md
+  - MicroStrategy:
+    - 11.1.4 <--> 6.5: Business_Intelligence/MicroStrategy_11.1.4.md
   - Oracle BIEE:
     - 11g <--> C60: Business_Intelligence/Oracle_BIEE.md
     - 11g <--> C70: Business_Intelligence/Oracle_BIEE.md
