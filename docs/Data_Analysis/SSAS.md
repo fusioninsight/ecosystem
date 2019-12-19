@@ -1,4 +1,4 @@
-# SQL Server Analysis services 对接 FusionInsight HD
+# SQL Server Analysis Services 对接 FusionInsight HD
 
 ## 适用场景
 
