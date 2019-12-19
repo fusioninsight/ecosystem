@@ -42,8 +42,7 @@
 
     5.	设置Kerberos票据的缓存文件。创建存放票据的目录，例如“C:\temp”。
 
-    6.	设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cache”。设置Windows的系统环境变量，变量名为“KRB5_CONFIG”，变量值为“C:\ProgramData\MIT\Kerberos5\krb5.ini”。
-  重启服务器。
+    6.	设置Windows的系统环境变量，变量名为“KRB5CCNAME”，变量值为“C:\temp\krb5cache”。设置Windows的系统环境变量，变量名为“KRB5_CONFIG”，变量值为“C:\ProgramData\MIT\Kerberos5\krb5.ini”,重启服务器。
 
     7. 在Windows上进行认证。打开MIT Kerberos，单击“get Ticket”，在弹出的“MIT Kerberos: Get Ticket”窗口中，“Pricipal”输入用户名，“Password”输入密码，单击“OK”。
 
@@ -238,6 +237,6 @@
 
       右键图表，选择 **show data**，可以查看详细数据，如下图：
 
-      ![](assets/SSAS/fa553.png)
+      ![](assets/SSAS/598f3.png)
 
     * Power BI Desktop 能够正确读取SSAS模型数据并报表呈现，验证完成。    
