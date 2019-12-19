@@ -25,12 +25,14 @@
 
   * 下载和安装32bit 和64 bit的Microsoft ODBC驱动:
 
-  * Microsoft Hive ODBC  Driver下载：
-  [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=40886)
+    * Microsoft Hive ODBC  Driver下载：
+    [点击下载](https://www.microsoft.com/en-us/download/details.aspx?id=40886)
 
-  * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
+    * 下载和安装MIT Kerberos认证客户端: [点击下载](http://web.mit.edu/ker)
 
 ### 配置Kerberos认证
+
+    * 配置Kerberos认证过程：
 
     1. 下载并安装MIT Kerberos。请记住安装路径，例如：“C:\Program Files\MIT\Kerberos”。
 
