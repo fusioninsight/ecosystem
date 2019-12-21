@@ -21,9 +21,11 @@
 
   2. Power BI Desktop，用于调用SSAS数据源，进行数据展现。
 
-  4. SSMS, 用于SQL Server和SSAS数据库管理。
+  3. SSMS, 用于SQL Server和SSAS数据库管理。
 
-  5. SSAS 2017, 安装过程参考官方指导，Server Mode 选择 Tabular Mode。
+  4. SQL Server 2017，需要创建两个实例，分别支持运行表格模型和多维模型的SSAS。
+
+  5. SSAS 2017，创建两个实例，分别运行表格模型模式和多维模型模式。
 
 
 
@@ -317,7 +319,7 @@
 
 ### 导入数据用于建模
 
-  * 在右侧 Solution Explorer 中，右键 **Data Sources ** -> **New Data Source** ，点击 **NEXT**, 选择 **Create a data source based on an existing or a new connection** ,点击 **new**, 设置数据库连接。
+  * 在右侧 Solution Explorer 中，右键 **Data Sources** -> **New Data Source** ，点击 **NEXT**, 选择 **Create a data source based on an existing or a new connection** ,点击 **new**, 设置数据库连接。
 
   * Connection Manager 窗口中，选择或者输入 **Server Name** 的IP或者域名，Database 选择 **master(创建的视图所在的DB)**，点击 **next** 进入下一步。
 
