@@ -218,7 +218,7 @@
 
     多维模型建模涉及的工具及流程参考如下图：
 
-    ![](assets/SSAS/be26e.png)
+    ![](assets/SSAS/5495f.png)
 
     Microsoft官方SSAS对接Hive/Spark最佳实践: [点击查看](http://download.microsoft.com/download/d/2/0/d20e1c5f-72ea-4505-9f26-fef9550efd44/molap2hive_klout.docx)
 
