@@ -6,6 +6,8 @@
   * [12 <--> C60](QlikView.md)
   * [12 <--> C70](QlikView.md)
   * [12 <--> C80](QlikView.md)
+* SSRS
+  * [2017 <--> 6.5](SSRS.md)
 * Tableau
   * [10.0.0 <--> C50](Tableau.md)
   * [10.1.4 <--> C60](Tableau.md)
