@@ -1368,7 +1368,6 @@ Configuring NiFi Kafka processor to connect FusionInsight HD Kafka with port 210
 
   ![](assets/Apache_NiFi/markdown-img-paste-20191206163231548.png)
 
-
 ## NiFi connect to Solr with security mode
 
 ### Test environmental description
@@ -1380,7 +1379,7 @@ NIFI: 172.17.2.124
 
 1. Refer to the solr section of the product documentation and do the following configuration (optional)：
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220142400497.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220142400497.png)
 
 2. Use the following curl command to create a collection named nifi_test on FusionInsight Solr
 
@@ -1393,7 +1392,7 @@ NIFI: 172.17.2.124
 
   Note 2: The initial password is Admin@123 when executing the `kadmin –p kadmin/admin` command, the new password must be kept in mind after modification
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191219213241757.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219213241757.png)
 
 
 
@@ -1403,11 +1402,11 @@ NIFI: 172.17.2.124
 
   The specific operation is as follows: decompress the downloaded jce, and copy the two decompressed jar packages `US_export_policy.jar` and` local_policy.jar` to `/opt/huawei/Bigdata/common/runtime0/jdk-8u201/jre/lib/security/`path of every FI HD node(172.16.4.121,172.16.4.122,172.16.4.123), and **restart** the entire solr service
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220154656535.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154656535.png)
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220154755973.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154755973.png)
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220154846833.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154846833.png)
 
 ### NiFi related configuration:
 
@@ -1415,11 +1414,11 @@ NIFI: 172.17.2.124
 
     - web properties part：
 
-      ![](assets/NIFI_SOLR/markdown-img-paste-20191219181722253.png)
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219181722253.png)
 
     - kerberos part：
 
-      ![](assets/NIFI_SOLR/markdown-img-paste-20191219182014778.png)
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219182014778.png)
 
     - Add sasl configuration：
 
@@ -1435,7 +1434,7 @@ NIFI: 172.17.2.124
 
     - Add one jvm parameter: `java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
 
-        ![](assets/NIFI_SOLR/markdown-img-paste-20191219182424298.png)
+        ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
 
       The jaas.conf content is:
 
@@ -1454,7 +1453,7 @@ NIFI: 172.17.2.124
 3.   Because it is connected to solr, we need to find the path of nifi's solr dependency package directory, taking my machine as an example, it is：`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-solr-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies
 `
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191219183059648.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219183059648.png)
 
     Rename the original zookeeper-3.4.6.jar to zookeeper-3.4.6.jar.org, and copy the FI HD corresponding zookeeper-3.5.1.jar into this directory
 
@@ -1469,25 +1468,25 @@ Note: Because the FI HD solr is deployed in a secure mode, when using the rest i
 
       There will be three segments of certificates: huawei-huawei, huawei-FusionInsight, FusionInsight-172.16.4.122. We need the huawei-huawei part.
 
-      ![](assets/NIFI_SOLR/markdown-img-paste-20191220152730226.png)
+      ![](assets/Apache_NiFi/markdown-img-paste-20191220152730226.png)
 
       Copy part of huawei-huawei to a new file: `/opt/ssltest/huawei-huawei.pem`
 
-      ![](assets/NIFI_SOLR/markdown-img-paste-20191219190446576.png)
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219190446576.png)
 
     - Use the command `keytool -import -alias gca -file /opt/ssltest/huawei-huawei.pem -keystore /opt/ssltest/truststore` to add the content of the` huawei-huawei.pem` certificate generated in the previous step to `/opt/ssltest/truststore` file, the password entered during the process is `changeit`, enter `yes` at the last step
 
-      ![](assets/NIFI_SOLR/markdown-img-paste-20191219190618418.png)
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219190618418.png)
 
 2. Certificate chain，It is known from the previous step that a certificate chain will be generated, which contains three segments. This step is to generate a new truststore_huawei file for the entire certificate chain(all three segements).
 
     - Use the following command `echo "" | openssl s_client -host 172.16.4.122 -port 21101 -showcerts | awk '/BEGIN CERT/ {p=1} ; p==1; /END CERT/ {p=0}' > /opt/ssltest/allcerts122.pem` to redirect the entire certificate chain into the following pem file: `/opt/ssltest/allcerts122.pem`
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191219191227143.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219191227143.png)
 
     - Use the command `keytool -import -alias gca -file /opt/ssltest/allcerts122.pem -keystore /opt/ssltest/truststore_chain`to add the content of the `allcerts122.pem` certificate generated in the previous step to `/opt/ssltest/truststore_chain` file，he password entered during the process is `changeit`, enter `yes` at the last step
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191219191354715.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219191354715.png)
 
 
 ### NiFi PutSolrContentStream STANDARD mode Configuration
@@ -1496,7 +1495,7 @@ Note: Standard mode directly connects to Solr service through HTTPS. SSL require
 
 1.  Configure KeytabCredentialsService
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191219183726192.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219183726192.png)
 
 2.  Configure StandardRestrictedSSLContextService
 
@@ -1509,13 +1508,13 @@ Note: Standard mode directly connects to Solr service through HTTPS. SSL require
   4.  TLS
   ```
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-2019122010591137.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-2019122010591137.png)
 
 
 
 3.  The entire PutSolrContentStream workflow is shown in Figure：
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191219211224328.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219211224328.png)
 
 
 4.  GenerateFlowFile Configuration:
@@ -1527,11 +1526,11 @@ Note: Standard mode directly connects to Solr service through HTTPS. SSL require
   }
   ```
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220105355589.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220105355589.png)
 
 5.  PutSolrContentStream Configuration：
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220105801286.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220105801286.png)
 
   ```
   1. Standard
@@ -1543,11 +1542,11 @@ Note: Standard mode directly connects to Solr service through HTTPS. SSL require
 
 6.  Start the entire workflow
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220111653299.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220111653299.png)
 
 7.  Log in to the Cluster Manager interface and log in to the solradmin webUI to view the results：
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220111807584.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220111807584.png)
 
 
 ### NiFi PutSolrContentStream CLOUD mode Configuration
@@ -1556,7 +1555,7 @@ Note: Cloud mode first connects to the cluster zookeeper service and then reads 
 
 1.  Configure KeytabCredentialsService
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191219183726192.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219183726192.png)
 
 2.  Configure StandardRestrictedSSLContextService
 
@@ -1567,12 +1566,12 @@ Note: Cloud mode first connects to the cluster zookeeper service and then reads 
   4.  TLS
   ```
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191219192020162.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219192020162.png)
 
 
 3.  The entire PutSolrContentStream workflow is shown in Figure：
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191219211224328.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219211224328.png)
 
 
 4.  GenerateFlowFile Configuration：
@@ -1584,11 +1583,11 @@ Note: Cloud mode first connects to the cluster zookeeper service and then reads 
     }
     ```
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191220105355589.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220105355589.png)
 
 5.  PutSolrContentStream Configuration:
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191220112935334.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220112935334.png)
 
     ```
     1. Cloud
@@ -1600,11 +1599,11 @@ Note: Cloud mode first connects to the cluster zookeeper service and then reads 
 
 6.  Start the entire workflow
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191220111653299.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220111653299.png)
 
 7.  Log in to the Cluster Manager interface and log in to the solradmin webUI to view the results：
 
-    ![](assets/NIFI_SOLR/markdown-img-paste-20191220111807584.png)
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220111807584.png)
 
 
 ### NIFI QuerySolr Configuration
@@ -1613,11 +1612,11 @@ Note: QuerySolr can be connected to Solr in either Standard or Cloud mode. The d
 
 - The entire PutSolrContentStream workflow is shown in Figure：
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220113909965.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220113909965.png)
 
 - QuerySolr Standard mode Configuration:
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220114106290.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114106290.png)
 
   ```
   1. Standard
@@ -1629,7 +1628,7 @@ Note: QuerySolr can be connected to Solr in either Standard or Cloud mode. The d
 
 - QuerySolr Cloud mode Configuration:
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220115356470.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220115356470.png)
 
   ```
   1. Cloud
@@ -1641,12 +1640,12 @@ Note: QuerySolr can be connected to Solr in either Standard or Cloud mode. The d
 
 - PutFile Configuration:
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220114249340.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114249340.png)
 
 - Start the entire workflow:
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220114623496.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114623496.png)
 
 - Log in to the background to view the results:
 
-  ![](assets/NIFI_SOLR/markdown-img-paste-20191220114907298.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114907298.png)
