@@ -1431,23 +1431,24 @@ NIFI: 172.17.2.124
 
 
 2.    bootstrap.conf file configuration changes：
-    - Add one jvm parameter: `java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
 
-    ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
+  Add one jvm parameter: `java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
 
-    The jaas.conf content is:
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
 
-    ```
-    Client {
-    com.sun.security.auth.module.Krb5LoginModule required
-    useKeyTab=true
-    principal="developuser@HADOOP.COM"
-    keyTab="/opt/user.keytab"
-    useTicketCache=false
-    storeKey=true
-    debug=true;
-    };
-    ```
+  The jaas.conf content is:
+
+  ```
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="developuser@HADOOP.COM"
+  keyTab="/opt/user.keytab"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
 
 3.   Because it is connected to solr, we need to find the path of nifi's solr dependency package directory, taking my machine as an example, it is：`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-solr-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies
 `
