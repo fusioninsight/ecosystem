@@ -1206,3 +1206,268 @@ NiFi中配置kafka解析器，对的FI HD kafka 21007端口
 - 登陆nifi主机/opt/nifikafka21007路径检查结果
 
   ![](assets/Apache_NiFi/2019-09-26_155521.png)
+
+
+## NiFi对接Solr安全模式
+
+### 环境说明
+
+FI HD: 172.16.4.121-123
+NIFI: 172.17.2.124
+
+### FI HD相关配置:
+
+1. 参考产品文档solr部分，做如下配置（可不做）：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219185644233.png)
+
+2. 使用如下curl命令在对接集群solr创建一个collection，名字叫做nifi_test
+
+  `curl --negotiate -k -v -u : "https://172.16.4.122:21101/solr/admin/collections?action=CREATE&name=nifi_test&collection.configName=confWithSchema&numShards=3&replicationFactor=1"`
+
+
+3. 登陆客户端，按照如下截图方式登陆kadmin，增加3个节点的HTTP服务principal
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219213241757.png)
+
+  注意：执行kadmin –p kadmin/admin命令时初始密码Admin@123，修改后需严格牢记新密码
+
+4.  登陆oracle官网获取jce，并适配到对接FI HD集群中
+
+  由于kerberos校验和加解密用到密钥长度远超出jre默认的安全字符长度，所以需要到java官网上下载Java Cryptography Extension (JCE)：https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html，然后解压到`%JAVA_HOME%/jre/lib/security`中替换相应的文件。
+
+  具体将下载好jce解压，并将解压后的两个jar包`US_export_policy.jar`，`local_policy.jar`拷贝到三台服务器172.16.4.121,122,123的`/opt/huawei/Bigdata/common/runtime0/jdk-8u201/jre/lib/security/`路径下,并且重启solr服务
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154656535.png)
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154755973.png)
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220154846833.png)
+
+### NiFi kerberos相关配置
+
+1.  nifi.properties配置文件：
+
+    - web properties部分做如下更改：
+
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219181722253.png)
+
+      - kerberos部分：
+
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219182014778.png)
+
+      - 增加sasl配置：
+
+      ```
+      nifi.zookeeper.auth.type=sasl
+      nifi.zookeeper.kerberos.removeHostFromPrincipal=true
+      nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
+      ```
+
+
+
+2.    bootstrap.conf配置文件：
+
+    - 增加一个jvm参数`java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
+
+        ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
+
+3.   因为对接solr，所以找到nifi关于solr的依赖包路径，以本机为例：`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-solr-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies
+`
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219183059648.png)
+
+    将原有的zookeeper-3.4.6.jar重命名zookeeper-3.4.6.jar.org，再将FI HD的匹配zookeeper-3.5.1.jar拷贝过来
+
+
+### SSL证书相关配置
+
+说明：因为对接solr部署在安全模式上，使用rest接口进行交互的时候是要通过ssl层的认证，需要创建对应的证书（truststore），完成后还要使用spnego同集群solr进行交互。下面将介绍两种认证证书获取的方式，分别对应solr两种对接方法CLOUD和HTTPS
+
+1.  huawei-huawei证书
+
+    - 登陆linux后台（需要安装openssl），使用如下命令`openssl s_client -host 172.16.4.122 -port 21101 -prexit -showcerts\`
+
+      会有三段证书，分别为huawei-huawei, huawei-FusionInsight, FusionInsight-172.16.4.122
+
+      ![](assets/Apache_NiFi/markdown-img-paste-20191220152755558.png)
+
+      将huawei-huawei部分内容复制，拷贝到一个文件`/opt/ssltest/huawei-huawei.pem`文件中
+
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219190446576.png)
+
+    - 使用命令`keytool -import -alias gca -file /opt/ssltest/huawei-huawei.pem -keystore /opt/ssltest/truststore`将上一步生成的`huawei-huawei.pem`证书内容加入`/opt/ssltest/truststore`文件中，过程中输入的密码为`changeit`，完成后输入yes
+
+      ![](assets/Apache_NiFi/markdown-img-paste-20191219190618418.png)
+
+2. 证书链，因为由上已经知道了会生成一个证书链，包含三段，此步骤就是将整个证书链生成一个新的truststore_huawei文件
+
+  - 使用命令`echo "" | openssl s_client -host 172.16.4.122 -port 21101 -showcerts | awk '/BEGIN CERT/ {p=1} ; p==1; /END CERT/ {p=0}' > /opt/ssltest/allcerts122.pem`将整个证书链重定向到`/opt/ssltest/allcerts122.pem`文件中
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219191227143.png)
+
+  - 使用命令`keytool -import -alias gca -file /opt/ssltest/allcerts122.pem -keystore /opt/ssltest/truststore_chain`将上一步生成的`allcerts122.pem`证书内容加入`/opt/ssltest/truststore_chain`文件中，过程中输入的密码为`changeit`，完成后输入yes
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219191354715.png)
+
+
+### NiFi PutSolrContentStream STANDARD模式工作流相关配置
+
+说明：Standard模式直接通过HTTPS方式连接solr服务，SSL需要证书链truststore_chain
+
+1.  配置 KeytabCredentialsService
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219183726192.png)
+
+2.  配置 StandardRestrictedSSLContextService
+
+  将这个contoller改名为CHAINStandardRestrictedSSLContextService便于区分
+
+  ```
+  1.  /opt/ssltest/truststore_chain
+  2.  changeit
+  3.  JKS
+  4.  TLS
+  ```
+
+  ![](assets/Apache_NiFi/markdown-img-paste-2019122010591137.png)
+
+
+
+3.  整个PutSolrContentStream工作流如图：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219211224328.png)
+
+
+4.  GenerateFlowFile配置如下:
+
+  ```
+  {
+  	"id":"${UUID()}",
+  	"message":"The time is ${now()}"
+  }
+  ```
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220105355589.png)
+
+5.  PutSolrContentStream配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220105801286.png)
+
+  ```
+  1. Standard
+  2. https://172.16.4.122:21101/solr/nifi_test
+  3. nifi_test
+  4. KeytabCredentialsService
+  5. CHAINStandardRestrictedSSLContextService
+  ```
+
+6.  启动工作流
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220111653299.png)
+
+7.  登陆集群Manager界面，登陆solradmin webUI查看结果：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220111807584.png)
+
+
+### NiFi PutSolrContentStream CLOUD模式工作流相关配置
+
+说明：Cloud模式先连接集群zookeeper服务然后再读取solr连接信息连接solr服务，SSL只需要huawei-huawei证书truststore即可。
+
+1.  配置 KeytabCredentialsService
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219183726192.png)
+
+2.  配置 StandardRestrictedSSLContextService
+
+  ```
+  1.  /opt/ssltest/truststore
+  2.  changeit
+  3.  JKS
+  4.  TLS
+  ```
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219192020162.png)
+
+
+3.  整个PutSolrContentStream工作流如图：
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191219211224328.png)
+
+
+4.  GenerateFlowFile配置如下:
+
+    ```
+    {
+    	"id":"${UUID()}",
+    	"message":"The time is ${now()}"
+    }
+    ```
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220105355589.png)
+
+5.  PutSolrContentStream配置如下：
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220112935334.png)
+
+    ```
+    1. Cloud
+    2. 172.16.4.122:24002/solr
+    3. nifi_test
+    4. KeytabCredentialsService
+    5. StandardRestrictedSSLContextService
+    ```
+
+6.  启动工作流
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220111653299.png)
+
+7.  登陆集群Manager界面，登陆solradmin webUI查看结果：
+
+    ![](assets/Apache_NiFi/markdown-img-paste-20191220111807584.png)
+
+
+### NIFI QuerySolr 工作流相关配置
+
+说明：QuerySolr连接solr方式也可以选择Standard或者Cloud模式，区别就是请求的链接，以及SSL证书配置不一样，其他一样，链接信息参考上面的配置
+
+- 整个工作流如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220113909965.png)
+
+- QuerySolr Standard配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114106290.png)
+
+  ```
+  1. Standard
+  2. https://172.16.4.122:21101/solr/nifi_test
+  3. nifi_test
+  4. KeytabCredentialsService
+  5. CHAINStandardRestrictedSSLContextService
+  ```
+
+- QuerySolr Cloud配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220115356470.png)
+
+  ```
+  1. Cloud
+  2. 172.16.4.122:24002/solr
+  3. nifi_test
+  4. KeytabCredentialsService
+  5. StandardRestrictedSSLContextService
+  ```
+
+- PutFile配置如下：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114249340.png)
+
+- 启动工作流：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114623496.png)
+
+- 登陆后台查看结果：
+
+  ![](assets/Apache_NiFi/markdown-img-paste-20191220114907298.png)
