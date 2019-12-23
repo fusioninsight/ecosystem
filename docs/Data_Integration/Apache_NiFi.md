@@ -1268,7 +1268,7 @@ NIFI: 172.17.2.124
 
 2.    bootstrap.conf配置文件：
 
-    - 增加一个jvm参数： `java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
+  - 增加一个jvm参数： `java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
 
   ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
 
