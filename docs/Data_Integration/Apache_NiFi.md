@@ -1270,12 +1270,12 @@ NIFI: 172.17.2.124
 
     - 增加一个jvm参数`java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf`
 
-        ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219182424298.png)
 
 3.   因为对接solr，所以找到nifi关于solr的依赖包路径，以本机为例：`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-solr-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies
 `
 
-    ![](assets/Apache_NiFi/markdown-img-paste-20191219183059648.png)
+  ![](assets/Apache_NiFi/markdown-img-paste-20191219183059648.png)
 
     将原有的zookeeper-3.4.6.jar重命名zookeeper-3.4.6.jar.org，再将FI HD的匹配zookeeper-3.5.1.jar拷贝过来
 
