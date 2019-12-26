@@ -914,6 +914,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nifi-connect-to-solr-with-security-mode" class="md-nav__link">
+    NiFi connect to Solr with security mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-environmental-description" class="md-nav__link">
+    Test environmental description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-hd-related-configuration" class="md-nav__link">
+    FI HD related configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-related-configuration" class="md-nav__link">
+    NiFi related configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssl-certificate-related-configuration" class="md-nav__link">
+    SSL certificate related configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-putsolrcontentstream-standard-mode-configuration" class="md-nav__link">
+    NiFi PutSolrContentStream STANDARD mode Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-putsolrcontentstream-cloud-mode-configuration" class="md-nav__link">
+    NiFi PutSolrContentStream CLOUD mode Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-querysolr-configuration" class="md-nav__link">
+    NIFI QuerySolr Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1589,6 +1651,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nifi-connect-to-solr-with-security-mode" class="md-nav__link">
+    NiFi connect to Solr with security mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-environmental-description" class="md-nav__link">
+    Test environmental description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-hd-related-configuration" class="md-nav__link">
+    FI HD related configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-related-configuration" class="md-nav__link">
+    NiFi related configuration:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssl-certificate-related-configuration" class="md-nav__link">
+    SSL certificate related configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-putsolrcontentstream-standard-mode-configuration" class="md-nav__link">
+    NiFi PutSolrContentStream STANDARD mode Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-putsolrcontentstream-cloud-mode-configuration" class="md-nav__link">
+    NiFi PutSolrContentStream CLOUD mode Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nifi-querysolr-configuration" class="md-nav__link">
+    NIFI QuerySolr Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1611,7 +1735,7 @@
                 <h1 id="connection-instruction-between-apache-nifi-and-fusioninsight">Connection Instruction between Apache NiFi and FusionInsight<a class="headerlink" href="#connection-instruction-between-apache-nifi-and-fusioninsight" title="Permanent link">&para;</a></h1>
 <h2 id="succeeded-case">Succeeded Case<a class="headerlink" href="#succeeded-case" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Apache NiFi 1.7.1 &harr; FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka)</p>
+<p>Apache NiFi 1.7.1 &harr; FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka/Solr)</p>
 </blockquote>
 <h2 id="installing-apache-nifi">Installing Apache NiFi<a class="headerlink" href="#installing-apache-nifi" title="Permanent link">&para;</a></h2>
 <h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
@@ -2713,6 +2837,247 @@ debug=true;
 <li>Login to nifi host <code>/opt/nifikafka21007</code> to check the outcome</li>
 </ul>
 <p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191206163231548.png" /></p>
+<h2 id="nifi-connect-to-solr-with-security-mode">NiFi connect to Solr with security mode<a class="headerlink" href="#nifi-connect-to-solr-with-security-mode" title="Permanent link">&para;</a></h2>
+<h3 id="test-environmental-description">Test environmental description<a class="headerlink" href="#test-environmental-description" title="Permanent link">&para;</a></h3>
+<p>FI HD: 172.16.4.121-123
+NIFI: 172.17.2.124</p>
+<h3 id="fi-hd-related-configuration">FI HD related configuration:<a class="headerlink" href="#fi-hd-related-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Refer to the solr section of the product documentation and do the following configuration (optional)：</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220142400497.png" /></p>
+<ol>
+<li>Use the following curl command to create a collection named nifi_test on FusionInsight Solr</li>
+</ol>
+<p><code>curl --negotiate -k -v -u : "https://172.16.4.122:21101/solr/admin/collections?action=CREATE&amp;name=nifi_test&amp;collection.configName=confWithSchema&amp;numShards=3&amp;replicationFactor=1"</code></p>
+<ol>
+<li>Log in to the fusioninsight client, log in to kadmin as shown in the screenshot below, and add the HTTP service principal of 3 nodes.</li>
+</ol>
+<p>Note 1: Follow the steps shown as the pic below</p>
+<p>Note 2: The initial password is Admin@123 when executing the <code>kadmin –p kadmin/admin</code> command, the new password must be kept in mind after modification</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219213241757.png" /></p>
+<ol>
+<li>Log in to the oracle official website to obtain JCE, and adapt it to the FI HD cluster</li>
+</ol>
+<p>Explanation: Because kerberos checksum encryption and decryption uses a key length that far beyond the default secure character length of jre, you need to download the Java Cryptography Extension (JCE) from the java official website: <a href="https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a>, then extract it to <code>%JAVA_HOME%/jre/lib/security</code> and replace the corresponding file.</p>
+<p>The specific operation is as follows: decompress the downloaded jce, and copy the two decompressed jar packages <code>US_export_policy.jar</code> and<code>local_policy.jar</code> to <code>/opt/huawei/Bigdata/common/runtime0/jdk-8u201/jre/lib/security/</code>path of every FI HD node(172.16.4.121,172.16.4.122,172.16.4.123), and <strong>restart</strong> the entire solr service</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220154656535.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220154755973.png" /></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220154846833.png" /></p>
+<h3 id="nifi-related-configuration">NiFi related configuration:<a class="headerlink" href="#nifi-related-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>nifi.properties file configuration changes：</p>
+<ul>
+<li>web properties part：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219181722253.png" /></p>
+<ul>
+<li>kerberos part：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219182014778.png" /></p>
+<ul>
+<li>Add sasl configuration：</li>
+</ul>
+<div class="codehilite"><pre><span></span>nifi.zookeeper.auth.type=sasl
+nifi.zookeeper.kerberos.removeHostFromPrincipal=true
+nifi.zookeeper.kerberos.removeRealmFromPrincipal=true
+</pre></div>
+
+</li>
+<li>
+<p>bootstrap.conf file configuration changes：</p>
+</li>
+</ol>
+<p>Add one jvm parameter: <code>java.arg.17=-Djava.security.auth.login.config=/opt/jaas.conf</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219182424298.png" /></p>
+<p>The jaas.conf content is:</p>
+<div class="codehilite"><pre><span></span>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+principal=&quot;developuser@HADOOP.COM&quot;
+keyTab=&quot;/opt/user.keytab&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</pre></div>
+
+<ol>
+<li>Because it is connected to solr, we need to find the path of nifi's solr dependency package directory, taking my machine as an example, it is：<code>/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-solr-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code>
+  <img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219183059648.png" /></li>
+</ol>
+<p>Rename the original zookeeper-3.4.6.jar to zookeeper-3.4.6.jar.org, and copy the FI HD corresponding zookeeper-3.5.1.jar into this directory</p>
+<h3 id="ssl-certificate-related-configuration">SSL certificate related configuration<a class="headerlink" href="#ssl-certificate-related-configuration" title="Permanent link">&para;</a></h3>
+<p>Note: Because the FI HD solr is deployed in a secure mode, when using the rest interface to interact, it is required to pass the SSL layer authentication. You need to create a corresponding certificate (truststore). After completion, you need to use spnego to interact with the cluster solr. The following describes two methods of obtaining authentication certificates, which correspond to the two connect methods of Solr, Cloud and Standard, respectively.</p>
+<ol>
+<li>
+<p>huawei-huawei certificate</p>
+<ul>
+<li>Login to the Linux background (requires openssl), use the following command: <code>openssl s_client -host 172.16.4.122 -port 21101 -prexit -showcerts\</code></li>
+</ul>
+<p>There will be three segments of certificates: huawei-huawei, huawei-FusionInsight, FusionInsight-172.16.4.122. We need the huawei-huawei part.</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220152730226.png" /></p>
+<p>Copy part of huawei-huawei to a new file: <code>/opt/ssltest/huawei-huawei.pem</code></p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219190446576.png" /></p>
+<ul>
+<li>Use the command <code>keytool -import -alias gca -file /opt/ssltest/huawei-huawei.pem -keystore /opt/ssltest/truststore</code> to add the content of the<code>huawei-huawei.pem</code> certificate generated in the previous step to <code>/opt/ssltest/truststore</code> file, the password entered during the process is <code>changeit</code>, enter <code>yes</code> at the last step</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219190618418.png" /></p>
+</li>
+<li>
+<p>Certificate chain，It is known from the previous step that a certificate chain will be generated, which contains three segments. This step is to generate a new truststore_huawei file for the entire certificate chain(all three segements).</p>
+<ul>
+<li>Use the following command <code>echo "" | openssl s_client -host 172.16.4.122 -port 21101 -showcerts | awk '/BEGIN CERT/ {p=1} ; p==1; /END CERT/ {p=0}' &gt; /opt/ssltest/allcerts122.pem</code> to redirect the entire certificate chain into the following pem file: <code>/opt/ssltest/allcerts122.pem</code></li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219191227143.png" /></p>
+<ul>
+<li>Use the command <code>keytool -import -alias gca -file /opt/ssltest/allcerts122.pem -keystore /opt/ssltest/truststore_chain</code>to add the content of the <code>allcerts122.pem</code> certificate generated in the previous step to <code>/opt/ssltest/truststore_chain</code> file，he password entered during the process is <code>changeit</code>, enter <code>yes</code> at the last step</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219191354715.png" /></p>
+</li>
+</ol>
+<h3 id="nifi-putsolrcontentstream-standard-mode-configuration">NiFi PutSolrContentStream STANDARD mode Configuration<a class="headerlink" href="#nifi-putsolrcontentstream-standard-mode-configuration" title="Permanent link">&para;</a></h3>
+<p>Note: Standard mode directly connects to Solr service through HTTPS. SSL requires certificate chain truststore_chain</p>
+<ol>
+<li>Configure KeytabCredentialsService</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219183726192.png" /></p>
+<ol>
+<li>Configure StandardRestrictedSSLContextService</li>
+</ol>
+<p>Note: Rename this contoller to CHAINStandardRestrictedSSLContextService for easy differentiation</p>
+<div class="codehilite"><pre><span></span>1.  /opt/ssltest/truststore_chain
+2.  changeit
+3.  JKS
+4.  TLS
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-2019122010591137.png" /></p>
+<ol>
+<li>The entire PutSolrContentStream workflow is shown in Figure：</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219211224328.png" /></p>
+<ol>
+<li>GenerateFlowFile Configuration:</li>
+</ol>
+<div class="codehilite"><pre><span></span>{
+  &quot;id&quot;:&quot;${UUID()}&quot;,
+  &quot;message&quot;:&quot;The time is ${now()}&quot;
+}
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220105355589.png" /></p>
+<ol>
+<li>PutSolrContentStream Configuration：</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220105801286.png" /></p>
+<div class="codehilite"><pre><span></span>1. Standard
+2. https://172.16.4.122:21101/solr/nifi_test
+3. nifi_test
+4. KeytabCredentialsService
+5. CHAINStandardRestrictedSSLContextService
+</pre></div>
+
+<ol>
+<li>Start the entire workflow</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220111653299.png" /></p>
+<ol>
+<li>Log in to the Cluster Manager interface and log in to the solradmin webUI to view the results：</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220111807584.png" /></p>
+<h3 id="nifi-putsolrcontentstream-cloud-mode-configuration">NiFi PutSolrContentStream CLOUD mode Configuration<a class="headerlink" href="#nifi-putsolrcontentstream-cloud-mode-configuration" title="Permanent link">&para;</a></h3>
+<p>Note: Cloud mode first connects to the cluster zookeeper service and then reads the solr connection information to connect to the solr service. SSL only requires the huawei-huawei certificate truststore.</p>
+<ol>
+<li>Configure KeytabCredentialsService</li>
+</ol>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219183726192.png" /></p>
+<ol>
+<li>Configure StandardRestrictedSSLContextService</li>
+</ol>
+<div class="codehilite"><pre><span></span>1.  /opt/ssltest/truststore
+2.  changeit
+3.  JKS
+4.  TLS
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219192020162.png" /></p>
+<ol>
+<li>
+<p>The entire PutSolrContentStream workflow is shown in Figure：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191219211224328.png" /></p>
+</li>
+<li>
+<p>GenerateFlowFile Configuration：</p>
+<div class="codehilite"><pre><span></span>{
+    &quot;id&quot;:&quot;${UUID()}&quot;,
+    &quot;message&quot;:&quot;The time is ${now()}&quot;
+}
+</pre></div>
+
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220105355589.png" /></p>
+</li>
+<li>
+<p>PutSolrContentStream Configuration:</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220112935334.png" /></p>
+<div class="codehilite"><pre><span></span>1. Cloud
+2. 172.16.4.122:24002/solr
+3. nifi_test
+4. KeytabCredentialsService
+5. StandardRestrictedSSLContextService
+</pre></div>
+
+</li>
+<li>
+<p>Start the entire workflow</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220111653299.png" /></p>
+</li>
+<li>
+<p>Log in to the Cluster Manager interface and log in to the solradmin webUI to view the results：</p>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220111807584.png" /></p>
+</li>
+</ol>
+<h3 id="nifi-querysolr-configuration">NIFI QuerySolr Configuration<a class="headerlink" href="#nifi-querysolr-configuration" title="Permanent link">&para;</a></h3>
+<p>Note: QuerySolr can be connected to Solr in either Standard or Cloud mode. The difference is that the requested Solor Location and SSL certificate configuration are different. The others are the same.</p>
+<ul>
+<li>The entire PutSolrContentStream workflow is shown in Figure：</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220113909965.png" /></p>
+<ul>
+<li>QuerySolr Standard mode Configuration:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220114106290.png" /></p>
+<div class="codehilite"><pre><span></span>1. Standard
+2. https://172.16.4.122:21101/solr/nifi_test
+3. nifi_test
+4. KeytabCredentialsService
+5. CHAINStandardRestrictedSSLContextService
+</pre></div>
+
+<ul>
+<li>QuerySolr Cloud mode Configuration:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220115356470.png" /></p>
+<div class="codehilite"><pre><span></span>1. Cloud
+2. 172.16.4.122:24002/solr
+3. nifi_test
+4. KeytabCredentialsService
+5. StandardRestrictedSSLContextService
+</pre></div>
+
+<ul>
+<li>PutFile Configuration:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220114249340.png" /></p>
+<ul>
+<li>Start the entire workflow:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220114623496.png" /></p>
+<ul>
+<li>Log in to the background to view the results:</li>
+</ul>
+<p><img alt="" src="../assets/Apache_NiFi/markdown-img-paste-20191220114907298.png" /></p>
                 
                   
                 
