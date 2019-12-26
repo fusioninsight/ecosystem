@@ -2,7 +2,7 @@
 
 
 ## Succeeded Case
-> Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka)
+> Apache NiFi 1.7.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive/Spark/Kafka/Solr)
 
 ## Installing Apache NiFi
 
