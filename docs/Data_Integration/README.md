@@ -40,7 +40,7 @@
   * [6.1 <--> C80](Kettle_6.1.md)
 * Knime
   * [3.6.1 <--> C80](Knime.md)
-  * [3.6.1 <--> 6.5](Knime.md)
+  * [4.1.0 <--> 6.5](Knime.md)
 * OceanSource
   * [1.0 <--> C80](OceanSource.md)
 * Oracle GoldenGate
