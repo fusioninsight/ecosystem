@@ -665,7 +665,7 @@ Talend通过FusionInsight HBase接口对接成功后，创建表talendHbaseCreat
 
       ![](assets/Talend_7.2.1/33ef12f1.png)
 
-    * 勾选`使用自定义Haddop配置`。
+    * 勾选`使用自定义Hadoop配置`。
       ![](assets/Talend_7.2.1/b6962abf.png)
 
     * 点击`Yes`。
