@@ -518,7 +518,7 @@
 
   在Knime Analytics Platform中运行Create Spark Context(Jobserver)时失败，返回 **Possible reason: Incompatible Jobserver version, malconfigured Spark Jobserver。**
 
-  ![](assets/Knime/b542a1d9.png)
+  ![](assets/Knime/f377b8c6.png)
 
   查看运行日志/var/log/spark2-job-server/jobserver-knimeSparkContext7418932986808208865/spark-job-server.log返回以下错误：
   DestHost:destPort 172-16-4-22:26004 , LocalHost:localPort 172-16-5-105/172.16.5.105:0. **Failed on local exception: java.io.IOException: org.apache.hadoop.security.AccessControlException: Client cannot authenticate via:[TOKEN, KERBEROS]** , while invoking ApplicationClientProtocolPBClientImpl.getNewApplication over 167 after 2 failover attempts. Trying to failover after sleeping for 43502ms.
@@ -545,7 +545,7 @@
 
   当/opt/spark2-job-server/environment.conf设置master = "yarn-client"，在Knime Analytics Platform中运行Create Spark Context(Jobserver)时失败，返回 **Yarn application has already ended! It might have been killed or unable to launch application master.**
 
-  ![](assets/Knime/4ee8c550.png)
+  ![](assets/Knime/4b793071.png)
 
   登录Funsion Manager进入Yarn ResourceManager WebUI查看application的日志，返回错误如下：
 
@@ -578,9 +578,9 @@ Caused by: KrbException: Cannot locate default realm
 
   ```
 
-  ![](assets/Knime/82248aeb.png)
+  ![](assets/Knime/6b352afd.png)
 
-  ![](assets/Knime/21049df1.png)
+  ![](assets/Knime/3c5d9e65.png)
 
   **【问题分析】**
 
