@@ -265,7 +265,7 @@
 
   - 已完成FusionInsight HD客户端安装，具体请参见FusionInsight HD产品文档的`应用开发指南->安全模式->安全认证->配置客户端文件`章节。
 
-  >说明：FusionInsight客户端安装目录为`/opt/hadoopclient`，且能使用spark-submit命令提交任务。
+    >说明：FusionInsight客户端安装目录为`/opt/hadoopclient`，且能使用spark-submit命令提交任务。
 
 ### 安装Spark Job Server
 
@@ -425,7 +425,7 @@
 
 ## Spark应用实例
 
-* Spark应用实例下载地址<https://www.knime.com/nodeguide/big-data/spark-executor>。
+Spark应用实例下载地址<https://www.knime.com/nodeguide/big-data/spark-executor>。
 
 ### Hive to Spark to Hive
 
