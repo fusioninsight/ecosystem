@@ -1114,15 +1114,9 @@ NiFi中配置kafka解析器，对的FI HD kafka 21007端口
 
 - 使用命令bin/nifi.sh stop停止nifi
 
-- 在FI HD的kafka客户端中找到对应的kafka client jar包，比如/opt/hadoopclient/Kafka/kafka/libs/kafka-clients-0.11.0.1.jar
+- 在FI HD的kafka客户端中找到对应的kafka client jar包，比如/opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar
 
-  ![](assets/Apache_NiFi/2019-09-26_142133.png)
-
-- 将nifi主机下`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-0-11-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies`路径中原来的kafka client jar包kafka-clients-0.11.0.1.jar 使用重命名命令命名为 kafka-clients-0.11.0.1.jar.org 并且把上一步在 FI HD kafka客户端中找到的kafka-clients-0.11.0.1.jar复制到此路径下：
-
-  ![](assets/Apache_NiFi/2019-09-26_142836.png)
-
-  注意：华为kafka客户端中的kafka-clients-0.11.0.1.jar更大
+- 将nifi主机下`/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-0-11-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies`路径中原来的kafka client jar包kafka-clients-0.11.0.1.jar 使用重命名命令命名为 kafka-clients-0.11.0.1.jar.org 并且把上一步在 FI HD kafka客户端中找到的kafka-clients-1.1.0.jar复制到此路径下。
 
 - 登陆nifi主机，先使用`source /opt/hadoopclient/bigdata_env`加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:`export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"`
 

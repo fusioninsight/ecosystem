@@ -1,4 +1,4 @@
-#  ROMA集成FusionInsight 指导
+#  FusionInsight集成ROMA实践
 
 ## ROMA介绍
 
