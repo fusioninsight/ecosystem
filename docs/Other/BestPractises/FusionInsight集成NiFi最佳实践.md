@@ -700,37 +700,3 @@ http://apache.communilink.net/nifi/minifi/0.5.0/minifi-toolkit-0.5.0-bin.tar.gz
     ![](assets/NIFI-72b77.png)
 
   * mqtt数据已成功同步到kafka和hdfs，验证完成。
-
-
-
-## 问题记录
-
-###  提示找不到lzc.ZCodec类
-
-  * Failed to write to HDFS due to java.lang.IllegalArgumentException: Compression codec com.huawei.hadoop.datasight.io.compress.lzc.ZCodec not found.: java.lang.IllegalArgumentException: Compression codec com.huawei.hadoop.datasight.io.compress.lzc.ZCodec not found.
-
-
-    ![](assets/NIFI-f5922.png)
-
-
-    ```
-    <property>
-    <name>io.compression.codec.lzc.class</name>
-    <value>com.huawei.hadoop.datasight.io.compress.lzc.ZCodec</value>
-    </property>
-
-    ```
-
-    ```
-    <property>
-    <name>io.compression.codecs</name>
-    <value>org.apache.hadoop.io.compress.BZip2Codec,org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.DeflateCodec,org.apache.hadoop.io.compress.Lz4Codec,org.apache.hadoop.io.compress.SnappyCodec,org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.ZStandardCodec,com.huawei.hadoop.datasight.io.compress.lzc.ZCodec</value>
-    </property>
-
-    ```
-    ![](assets/NIFI-7be56.png)
-
-
-## 提示认证失败
-
-   验证是否需要替换zookeeper版本，理论上来说是需要替换的。
