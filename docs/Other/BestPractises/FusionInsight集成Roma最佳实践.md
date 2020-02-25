@@ -218,6 +218,8 @@ https://github.com/google/guava/releases/download/v26.0/guava-26.0-jre.jar),下�
 
     示例场景模拟了用电管理系统和客户关系管理系统，通过ROMA分别获取客户关系管理系统中的用户信息和用电管理系统中的电表信息并写入到HIVE中，经过Hive分析后，将数据导入到gauss数据库，并以REST API接口方式提供用电数据查询服务。
 
+    ![](assets/FusionInsight集成Roma最佳实践-ca11b.png)
+
     主要步骤：
 
     1. 通过模拟电表（MQTT协议 IOT设备），被Link接管并通过ROMA MQS 消息服务实时发送消息，消息数据通过ROMA FDI转换写入到 HIVE表中。在插入HIVE前，通过FDI编排插件增加用电数据上报时间。
