@@ -98,7 +98,7 @@
 
   * 使用intellij idea 创建java工程，名称为MongoToHive
 
-  * 在src文件夹下，粘贴LoginUtil.java和MongoToHadoop.java文件
+  * 在src文件夹下，粘贴LoginUtil.java[(下载)](https://github.com/fusioninsight/ecosystem/blob/zh-hans/docs/Other/BestPractises/LoginUtil.java)和MongoToHadoop.java[(下载)](https://github.com/fusioninsight/ecosystem/blob/zh-hans/docs/Other/BestPractises/MongoToHadoop.java)文件
 
     ![](assets/FusionInsight迁移MongoDB数据最佳实践-24b7b.png)
 
