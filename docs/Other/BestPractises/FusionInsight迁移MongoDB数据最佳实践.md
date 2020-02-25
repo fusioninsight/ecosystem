@@ -98,6 +98,10 @@
 
   * 使用intellij idea 创建java工程，名称为MongoToHive
 
+  * 在src文件夹下，粘贴LoginUtil.java和MongoToHadoop.java文件
+
+    ![](assets/FusionInsight迁移MongoDB数据最佳实践-24b7b.png)
+
   * 在 ***File*** -> ***project structure*** ->***libirary*** 中添加spark2x示例工程下的全部jar包(*FusionInsight_Cluster_1_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars*)，以及mongo spark connector和mongo-jar-driver jar包。
 
   * 在 ***File*** -> ***project structure*** ->***Artifacts*** -> ***jar*** -> ***Form Modules with dependencies*** -> ***OK***
