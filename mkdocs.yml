@@ -185,6 +185,9 @@ nav:
   - NeoKylin:
     - 6.9 <--> C70: Other/NeoKylin.md
     - 7.2 <--> C70: Other/NeoKylin.md
+  - Tensorflow:
+    - 1.15.0 <--> 5.1: Other/Tensorflow.md
+    - 2.1.0 <--> 5.1: Other/Tensorflow.md
   - elasticsearch-head:
     - 1.0 <--> C80: Other/Elasticsearch_Related.md
   - filebeat:
