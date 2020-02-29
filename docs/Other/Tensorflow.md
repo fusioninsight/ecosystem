@@ -1,9 +1,9 @@
 # Tensorflow对接FusionInsight
 
 ## 适用场景
-> Tensorflow 1.15.0 <--> FusionInsight HD 6.5.1 (HDFS)
+> Tensorflow 1.15.0 <--> FusionInsight HD 6.5 (HDFS)
 
-> Tensorflow 2.1.0 <--> FusionInsight HD 6.5.1 (HDFS)
+> Tensorflow 2.1.0 <--> FusionInsight HD 6.5 (HDFS)
 
 
 
@@ -38,7 +38,7 @@ Apache Airflow安装主机： 172.16.2.124
 
 - 使用命令`vi ~/.bash_profile`配置环境变量
 
-  ![](assets/markdown-img-paste-20200225111516775.png)
+  ![](assets/Tensorflow/markdown-img-paste-20200225111516775.png)
 
   ```
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/125_651hdclient/hadoopclient/JDK/jdk-8u201/jre/lib/amd64/server
@@ -47,7 +47,7 @@ Apache Airflow安装主机： 172.16.2.124
 
   注意：配置LD_LIBRARY_PATH时需根据安装客户端具体jdk路径位置来配置，配置KRB5CCNAME缓存票据要根据kinit认证后具体票据名字配置。
 
-  ![](assets/markdown-img-paste-2020022511181531.png)
+  ![](assets/Tensorflow/markdown-img-paste-2020022511181531.png)
 
 - 将对接集群获取的认证文件krb5.conf文件放置/etc/路径下面，系统默认从该路径下获取配置文件
 
@@ -81,7 +81,7 @@ Apache Airflow安装主机： 172.16.2.124
 
   `CLASSPATH=$(/opt/125_651hdclient/hadoopclient/HDFS/hadoop/bin/hadoop classpath --glob) python /opt/tensorflow2-hdfs.py`
 
-  ![](assets/markdown-img-paste-20200228150403345.png)
+  ![](assets/Tensorflow/markdown-img-paste-20200228150403345.png)
 
   注意：其中涉及的hadoop路径为安装的集群客户端HDFS路径
 

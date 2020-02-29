@@ -743,7 +743,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="Other/Tensorflow"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
 <td>2.1.0</td>
@@ -751,7 +751,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="Other/Tensorflow"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >elasticsearch-head</td>

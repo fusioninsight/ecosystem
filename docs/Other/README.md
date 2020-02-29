@@ -17,8 +17,8 @@
   * [6.9 <--> C70](NeoKylin.md)
   * [7.2 <--> C70](NeoKylin.md)
 * Tensorflow
-  * [1.15.0 <--> 5.1](Tensorflow.md)
-  * [2.1.0 <--> 5.1](Tensorflow.md)
+  * [1.15.0 <--> 6.5](Tensorflow.md)
+  * [2.1.0 <--> 6.5](Tensorflow.md)
 * elasticsearch-head
   * [1.0 <--> C80](Elasticsearch_Related.md)
 * filebeat
