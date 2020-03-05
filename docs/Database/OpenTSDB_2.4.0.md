@@ -1,4 +1,4 @@
-# GeoMesa对接FusionInsight
+# OpenTSDB对接FusionInsight
 
 ## 适用场景
 
