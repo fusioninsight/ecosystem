@@ -2188,8 +2188,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Knime/" title="3.6.1 6.5" class="md-nav__link">
-      3.6.1 <--> 6.5
+    <a href="../Knime/" title="4.1.0 6.5" class="md-nav__link">
+      4.1.0 <--> 6.5
     </a>
   </li>
 
@@ -2509,10 +2509,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-20" type="checkbox" id="nav-3-20">
     
     <label class="md-nav__link" for="nav-3-20">
-      杭州合众UTL
+      debezium
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-20">
+        debezium
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DEBEZIUM/" title="1.0.0 6.5" class="md-nav__link">
+      1.0.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-21" type="checkbox" id="nav-3-21">
+    
+    <label class="md-nav__link" for="nav-3-21">
+      杭州合众UTL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-21">
         杭州合众UTL
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3505,10 +3541,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
     
     <label class="md-nav__link" for="nav-6-7">
-      elasticsearch-head
+      Tensorflow
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-7">
+        Tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Tensorflow/" title="1.15.0 6.5" class="md-nav__link">
+      1.15.0 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/Tensorflow/" title="2.1.0 6.5" class="md-nav__link">
+      2.1.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      elasticsearch-head
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
         elasticsearch-head
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3538,13 +3622,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
     
-    <label class="md-nav__link" for="nav-6-8">
+    <label class="md-nav__link" for="nav-6-9">
       filebeat
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-8">
+      <label class="md-nav__title" for="nav-6-9">
         filebeat
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -5376,17 +5460,14 @@ debug=true;
 <p>使用命令bin/nifi.sh stop停止nifi</p>
 </li>
 <li>
-<p>在FI HD的kafka客户端中找到对应的kafka client jar包，比如/opt/hadoopclient/Kafka/kafka/libs/kafka-clients-0.11.0.1.jar</p>
+<p>在FI HD的kafka客户端中找到对应的kafka client jar包，比如/opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar</p>
 </li>
-</ul>
-<p><img alt="" src="../assets/Apache_NiFi/2019-09-26_142133.png" /></p>
-<ul>
-<li>将nifi主机下<code>/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-0-11-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code>路径中原来的kafka client jar包kafka-clients-0.11.0.1.jar 使用重命名命令命名为 kafka-clients-0.11.0.1.jar.org 并且把上一步在 FI HD kafka客户端中找到的kafka-clients-0.11.0.1.jar复制到此路径下：</li>
-</ul>
-<p><img alt="" src="../assets/Apache_NiFi/2019-09-26_142836.png" /></p>
-<p>注意：华为kafka客户端中的kafka-clients-0.11.0.1.jar更大</p>
-<ul>
-<li>登陆nifi主机，先使用<code>source /opt/hadoopclient/bigdata_env</code>加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:<code>export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"</code></li>
+<li>
+<p>将nifi主机下<code>/opt/nifi/nifi-1.7.1/work/nar/extensions/nifi-kafka-0-11-nar-1.7.1.nar-unpacked/META-INF/bundled-dependencies</code>路径中原来的kafka client jar包kafka-clients-0.11.0.1.jar 使用重命名命令命名为 kafka-clients-0.11.0.1.jar.org 并且把上一步在 FI HD kafka客户端中找到的kafka-clients-1.1.0.jar复制到此路径下。</p>
+</li>
+<li>
+<p>登陆nifi主机，先使用<code>source /opt/hadoopclient/bigdata_env</code>加载运行的环境变量，然后再使用如下命令加载java运行的jvm参数:<code>export JAVA_TOOL_OPTIONS="-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dsun.security.krb5.debug=true -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf"</code></p>
+</li>
 </ul>
 <p>其中/etc/krb5.conf为对应对接集群的认证krb5.conf文件</p>
 <p>完成上述步骤后可以使用命令<code>java -version</code>检查jvm参数是否加载成功：</p>
