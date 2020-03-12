@@ -209,7 +209,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=28 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<tr><td rowspan=29 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -443,6 +443,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/TIBCO_BusinessWorks"><span class="label label-GaussDB ">GaussDB</span></a></td>
+</tr>
+<tr>
+<td rowspan=1 >debezium</td>
+<td>1.0.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/DEBEZIUM"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >杭州合众UTL</td>

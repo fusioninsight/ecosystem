@@ -1,4 +1,10 @@
-## 使用confluent中的debezium connector对接
+# debezium connector对接FusionInsight
+
+
+## 适用场景
+
+> debezium 1.0.0 <--> FusionInsight HD 6.5 (Kafka)
+
 
 测试环境说明：
 

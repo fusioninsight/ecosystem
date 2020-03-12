@@ -60,5 +60,7 @@
   * [7.2.1 <--> 6.5](Talend_7.2.1.md)
 * Tibco BW
   * [5.13 <--> 6.5](TIBCO_BusinessWorks.md)
+* debezium
+  * [1.0.0 <--> 6.5](DEBEZIUM.md)
 * 杭州合众UTL
   * [5.1 <--> C50](杭州合众UTL.md)
