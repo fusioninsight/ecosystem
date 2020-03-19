@@ -675,7 +675,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Development/Zeppelin_0.8.1.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
-<tr><td rowspan=12 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
+<tr><td rowspan=13 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=2 >Apache Livy</td>
 <td>0.5.0</td>
 <td></td>
@@ -720,13 +720,21 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >Logstash</td>
+<td rowspan=2 >Logstash</td>
 <td>6.4.2</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Other/Elasticsearch_Related.md"><span class="label label-ElasticSearch ">ElasticSearch</span></a></td>
 <td></td>
+</tr>
+<tr>
+<td>6.7.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/Logstash.md"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >NeoKylin</td>
@@ -828,7 +836,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="SQL_Analytics/ApacheKylin_3.0.1.md"><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td><a href="SQL_Analytics/ApacheKylin3.0.1.md"><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark ">Spark</span></a></td>
 </tr>
 <tr>
 <td rowspan=5 >Kyligence Analytics Platform</td>

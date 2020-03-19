@@ -13,6 +13,7 @@
   * [6.1.3 <--> C80](Elasticsearch_Related.md)
 * Logstash
   * [6.4.2 <--> C80](Elasticsearch_Related.md)
+  * [6.7.1 <--> 6.5](Logstash.md)
 * NeoKylin
   * [6.9 <--> C70](NeoKylin.md)
   * [7.2 <--> C70](NeoKylin.md)
