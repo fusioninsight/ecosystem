@@ -592,12 +592,12 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td>5.7.8</td>
+<td>2.7.16</td>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Development/JupyterNotebook"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
-<td><a href="Development/JupyterNotebook"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/JupyterNotebook"><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/JupyterNotebook"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Elk ">Elk</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >JupyterHub</td>

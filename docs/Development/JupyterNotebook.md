@@ -2,9 +2,9 @@
 
 ## 适用场景
 
-> Jupyter Notebook 5.7.8 <--> FusionInsight HD V100R002C80SPC200 (Hive/ELK/Spark2x)
+> Jupyter Notebook 2.7.16 <--> FusionInsight HD V100R002C80SPC200 (Hive/Elk/Spark2x)
 
-> Jupyter Notebook 5.7.8 <--> FusionInsight HD 6.5 (Hive/ELK/Spark2x)
+> Jupyter Notebook 2.7.16 <--> FusionInsight HD 6.5 (HDFS/Hive/Elk/Spark2x)
 
 说明：Jupyter Notebook版本 基于Anaconda Python内核版本
 
@@ -122,7 +122,7 @@
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102214570601.png)
 
-  注意：JPype1和JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
+  注意：JPype1已经JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
 
   ```
   ./pip freeze | grep JPype1
@@ -219,7 +219,7 @@
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102214570601.png)
 
-  注意：JPype1和JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
+  注意：JPype1已经JayDeBeApi版本必须同上述一致，不然会报版本匹配错误，已经安装这两个包的可以通过如下命令检查版本：
 
   ```
   ./pip freeze | grep JPype1
@@ -263,6 +263,104 @@
   ![](assets/JupyterNotebook/markdown-img-paste-20191022155949491.png)
 
 
+
+## 对接HDFS
+
+选用python的hdfs包用作测试 https://pypi.org/project/hdfs/
+
+原因：根据anaconda文档：https://enterprise-docs.anaconda.com/en/docs-site-5.1.2/user-guide/projects/connect-hive-impala-hdfs.html
+
+可以得知使用上述工具包对接hdfs
+
+- 因为此次使用webhdfs的http连接方式对接集群，首先先检查集群配置项是否符合要求：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312155137393.png)
+
+  若配置项只支持HTTPS，参考如下步骤修改
+
+  登录FusionInsight Manager页面，单击“集群 > 待操作集群的名称 > 服务 > HDFS > 配置 >全部配置”，在“搜索”框里搜索“dfs.http.policy”，然后勾选“HTTP_AND_HTTPS”，单击“保存”，单击“更多 > 重启”重启HDFS服务
+
+- 登陆路径`/opt/anaconda3/bin`, 使用命令`./pip install hdfs`安装插件包
+
+  ![](assets/JupyterNotebook/markdown-img-paste-2020031212061682.png)
+
+  再使用`./pip install hdfs[avro,dataframe,kerberos]`安装额外工具包
+
+  安装完成之后会在bin目录下生成hdfscli的可执行文件
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312120706448.png)
+
+- 使用命令`vi ~/.hdfscli.cfg`编辑连接参数：
+
+  ```
+  [global]
+  default.alias = dev
+  autoload.modules = hdfs.ext.kerberos
+
+  [dev.alias]
+  client = KerberosClient
+  url = http://172.16.4.122:25002
+  ```
+
+- 使用如下命令登陆集群客户端，并做kerberos认证
+
+  ```
+  source /opt/125_651hdclient/hadoopclient/bigdata_env
+  kinit developuser
+  ```
+
+  使用命令`hdfscli`登陆命令行终端
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312155347383.png)
+
+  输入命令`CLIENT.list('/')`检查是否对接成功：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312155702889.png)
+
+  命令行测试成功
+
+
+- 使用如下命令启动jupyter notebook
+  ```
+  source /opt/hadoopclient/bigdata_env
+  kinit developuser
+  source ~/.bashrc.anaconda3
+  jupyter notebook --allow-root
+  ```
+
+- 使用如下代码进行hdfs对接
+  ```
+  import hdfs
+  from hdfs.ext.kerberos import KerberosClient
+
+  client = KerberosClient('http://172.16.4.122:25002', root='/tmp')
+  print(client.list('/'))
+  ```
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312160406520.png)
+
+- 继续使用如下代码往hdfs里写一个文件：
+
+  ```
+  client.write('hello2.md', 'Hello, world!')
+  ```
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312160505916.png)
+
+  去hdfs对应路径检查文件是否写入成功：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312160557749.png)
+
+- 继续使用如下代码从hdfs路径读取一个文件：
+
+  ```
+  with client.read('iris.csv', encoding='utf-8') as reader:
+    for row in reader:
+        print(row)
+  ```
+
+  ![](assets/JupyterNotebook/markdown-img-paste-2020031216071518.png)
+
+
 ## F&Q
 
 1.  在使用pySpark的时候遇到如下问题：
@@ -280,3 +378,9 @@
   ![](assets/JupyterNotebook/markdown-img-paste-20191022155727160.png)
 
   解决办法：配置ELK白名单
+
+3.  连接hdfs的时候遇到报错：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20200312155806167.png)
+
+  解决办法：kinit完成kerberos认证
