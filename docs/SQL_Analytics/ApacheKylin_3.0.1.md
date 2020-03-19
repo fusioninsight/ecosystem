@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Apache Kylin 3.0.1 <--> FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka/Spark)
+> Apache Kylin 3.0.1 <--> FusionInsight HD 6.5 (Hive/HBase/Kafka/Spark)
 
 ## 说明
 

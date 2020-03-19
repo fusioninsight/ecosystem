@@ -828,7 +828,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="SQL_Analytics/ApacheKylin_3.0.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td><a href="SQL_Analytics/ApacheKylin_3.0.1"><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark ">Spark</span></a></td>
 </tr>
 <tr>
 <td rowspan=5 >Kyligence Analytics Platform</td>
