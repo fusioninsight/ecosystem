@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> librdkafka <--> FusionInsight HD 6.5 (Kafka)
+> librdkafka (version) <--> FusionInsight HD 6.5 (Kafka)
 
 ## 1.1提前准备：
 
