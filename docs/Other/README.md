@@ -24,3 +24,5 @@
   * [1.0 <--> C80](Elasticsearch_Related.md)
 * filebeat
   * [6.5.1 <--> C80](Elasticsearch_Related.md)
+* librdkafka
+  * [1.0 <--> 6.5](librdkafka.md)
