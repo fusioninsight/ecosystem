@@ -519,4 +519,4 @@ python3 安装问题单： https://issues.apache.org/jira/browse/AIRFLOW-5033
 
   ![](assets/Airflow/markdown-img-paste-20200403092331526.png)
 
-  在使用python命令后台测试前 `kinit /opt/hadoopclient/bigdata_env` 在测试问题解决
+  在使用python命令后台测试前 `kinit /opt/hadoopclient/bigdata_env` 再测试问题解决
