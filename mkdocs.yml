@@ -173,6 +173,8 @@ nav:
     - 0.8.0 <--> C80: Development/Zeppelin_0.8.0.md
     - 0.8.1 <--> 6.5: Development/Zeppelin_0.8.1.md
 - 其他:
+  - Apache Airflow:
+    - 1.10.6 <--> 5.1: Other/Airflow.md
   - Apache Livy:
     - 0.5.0 <--> C80: Other/Apache_Livy_0_5_0.md
     - 0.6.0 <--> 6.5: Other/Apache_Livy_0_6_0.md
