@@ -2,7 +2,7 @@
 
 ## 适用场景
 
-> Apache Airflow 1.10.6 <--> FusionInsight HD 6.5.1 (HDFS/Hive/HeTu)
+> Apache Airflow 1.10.6 <--> FusionInsight HD 6.5 (HDFS/Hive/HeTu)
 
 
 ## 测试环境描述

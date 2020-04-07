@@ -3,7 +3,7 @@
 # 其他
 
 * Apache Airflow
-  * [1.10.6 <--> 5.1](Airflow.md)
+  * [1.10.6 <--> 6.5](Airflow.md)
 * Apache Livy
   * [0.5.0 <--> C80](Apache_Livy_0_5_0.md)
   * [0.6.0 <--> 6.5](Apache_Livy_0_6_0.md)
