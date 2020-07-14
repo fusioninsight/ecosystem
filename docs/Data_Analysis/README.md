@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# Data Analysis
+# 数据分析
 
 * Alteryx
   * [2018.2.5.48994 <--> C60](Alteryx.md)

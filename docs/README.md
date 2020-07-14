@@ -1,20 +1,20 @@
 
 <!-- ex_nonav -->
 
-# FusionData Ecosystem
+# 智能数据生态地图
 
-FusionInsight support opensource Hadoop interface, it can integrate with the following thridparty tools
+FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具进行对接
 
 <table class="tg">
  <thead>
  <tr>
-  <td colspan=3 >Thrid Party Tools</td>
+  <td colspan=3 >第三方工具</td>
   <td colspan=5 >FusionInsight</td>
  </tr>
  <tr>
-  <td >Category</td>
-  <td >Name</td>
-  <td >Version</td>
+  <td >涉及领域</td>
+  <td >工具名称</td>
+  <td >版本</td>
   <td >C50</td>
   <td >C60</td>
   <td >C70</td>
@@ -24,7 +24,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 </thead>
 
 
-<tr><td rowspan=14 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>Business Intelligence </td>
+<tr><td rowspan=14 ><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i></br>数据可视化 </td>
 <td rowspan=1 >FineBI</td>
 <td>5.1</td>
 <td></td>
@@ -146,7 +146,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
-<tr><td rowspan=7 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>Data Analysis </td>
+<tr><td rowspan=7 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
 <td>2018.2.5.48994</td>
 <td></td>
@@ -209,7 +209,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=30 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>Data Integration </td>
+<tr><td rowspan=30 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -417,7 +417,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="Data_Integration/streamsets_3.16.1.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=3 >Talend</td>
@@ -471,7 +471,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=6 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>Database </td>
+<tr><td rowspan=6 ><i class="fa fa-database fa-2x" aria-hidden="true"></i></br>数据库 </td>
 <td rowspan=2 >Apache Druid</td>
 <td>0.14.2</td>
 <td></td>
@@ -523,7 +523,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=19 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>Development </td>
+<tr><td rowspan=19 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
 <td rowspan=1 >Anaconda</td>
 <td>2-2019.03-Linux-x86_64</td>
 <td></td>
@@ -684,7 +684,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td><a href="Development/Zeppelin_0.8.1.md"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
-<tr><td rowspan=15 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>Other </td>
+<tr><td rowspan=15 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=1 >Apache Airflow</td>
 <td>1.10.6</td>
 <td></td>
@@ -815,7 +815,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td><a href="Other/librdkafka.md"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
-<tr><td rowspan=15 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL Analytics </td>
+<tr><td rowspan=15 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
 <td rowspan=1 >Apache Drill</td>
 <td>1.15.0</td>
 <td></td>

@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# Other
+# 其他
 
 * Apache Airflow
   * [1.10.6 <--> 6.5](Airflow.md)

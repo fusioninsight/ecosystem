@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# Business Intelligence
+# 数据可视化
 
 * FineBI
   * [5.1 <--> 6.5](FineBI_5.1.md)
