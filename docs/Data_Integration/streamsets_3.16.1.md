@@ -772,7 +772,7 @@
 
 问题2
 
-在启动数据流之后，使用kafka producer插入数据是，streamsets报错
+在启动数据流之后，使用kafka producer插入数据时，streamsets报错
 
 ![20200713_115252_77](assets/streamsets_3.16.1/20200713_115252_77.png)
 
