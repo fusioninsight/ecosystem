@@ -1,11 +1,11 @@
 
-site_name: 智能数据生态地图
+site_name: FusionData Ecosystem
 repo_name: 'fusioninsight/ecosystem'
-repo_url: 'https://github.com/fusioninsight/ecosystem/tree/zh-hans'
+repo_url: 'https://github.com/fusioninsight/ecosystem/tree/en'
 
 theme:
   name: 'material'
-  language: 'zh'
+  language: 'en'
   palette:
     primary: 'Indigo'
     accent: 'Indigo'
@@ -13,7 +13,7 @@ theme:
     tabs: false
 
 nav:
-- 数据可视化:
+- Business Intelligence:
   - FineBI:
     - 5.1 <--> 6.5: Business_Intelligence/FineBI_5.1.md
   - IBM Cognos:
@@ -46,7 +46,7 @@ nav:
     - 10.3.2 <--> C70: Business_Intelligence/Tableau.md
     - 10.5.0 <--> C80: Business_Intelligence/Tableau.md
     - 10.5.0 <--> 6.5: Business_Intelligence/Tableau.md
-- 数据分析:
+- Data Analysis:
   - Alteryx:
     - 2018.2.5.48994 <--> C60: Data_Analysis/Alteryx.md
     - 2018.2.5.48994 <--> C80: Data_Analysis/Alteryx.md
@@ -66,7 +66,7 @@ nav:
     - 7.2.4 <--> 6.5: Data_Analysis/Splunk.md
   - 永洪一站式大数据分析平台:
     - 7.1 <--> C60: Data_Analysis/永洪一站式大数据分析平台.md
-- 数据集成:
+- Data Integration:
   - Apache NiFi:
     - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md
     - 1.9.2 <--> 6.5: Data_Integration/Apache_NiFi.md
@@ -119,6 +119,8 @@ nav:
   - SharePlex:
     - 9.2.1 <--> C80: Data_Integration/SharePlex.md
     - 9.2.1 <--> 6.5: Data_Integration/SharePlex.md
+  - Streamsets:
+    - 3.16.1 <--> 5.1: Data_Integration/streamsets_3.16.1.md
   - Talend:
     - 6.4.1 <--> C80: Data_Integration/Talend_6.4.1.md
     - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
@@ -129,7 +131,7 @@ nav:
     - 1.0.0 <--> 6.5: Data_Integration/DEBEZIUM.md
   - 杭州合众UTL:
     - 5.1 <--> C50: Data_Integration/杭州合众UTL.md
-- 数据库:
+- Database:
   - Apache Druid:
     - 0.14.2 <--> C80: Database/apache_druid_0.14.2.md
     - 0.15.1 <--> C80: Database/apache_druid_0.15.1.md
@@ -140,7 +142,7 @@ nav:
     - 2.1 <--> C70: Database/SAP_VORA.md
   - 杭州合众UDB:
     - 6.1 <--> C50: Database/杭州合众UDB.md
-- 集成开发环境:
+- Development:
   - Anaconda:
     - 2-2019.03-Linux-x86_64 <--> 6.5: Development/Anaconda.md
   - DBeaver:
@@ -172,7 +174,7 @@ nav:
     - 0.7.3 <--> C80: Development/Zeppelin_0.7.3.md
     - 0.8.0 <--> C80: Development/Zeppelin_0.8.0.md
     - 0.8.1 <--> 6.5: Development/Zeppelin_0.8.1.md
-- 其他:
+- Other:
   - Apache Airflow:
     - 1.10.6 <--> 6.5: Other/Airflow.md
   - Apache Livy:
@@ -199,7 +201,7 @@ nav:
     - 6.5.1 <--> C80: Other/Elasticsearch_Related.md
   - librdkafka:
     - 1.0 <--> 6.5: Other/librdkafka.md
-- SQL分析:
+- SQL Analytics:
   - Apache Drill:
     - 1.15.0 <--> 6.5: SQL_Analytics/ApacheDrill_1.15.0toHD651.md
     - 1.15.0 <--> C80: SQL_Analytics/Apache_Drill_1.15.0.md

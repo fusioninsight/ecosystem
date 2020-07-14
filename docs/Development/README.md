@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# 集成开发环境
+# Development
 
 * Anaconda
   * [2-2019.03-Linux-x86_64 <--> 6.5](Anaconda.md)

@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# 数据集成
+# Data Integration
 
 * Apache NiFi
   * [1.7.1 <--> C80](Apache_NiFi.md)
@@ -54,6 +54,8 @@
 * SharePlex
   * [9.2.1 <--> C80](SharePlex.md)
   * [9.2.1 <--> 6.5](SharePlex.md)
+* Streamsets
+  * [3.16.1 <--> 5.1](streamsets_3.16.1.md)
 * Talend
   * [6.4.1 <--> C80](Talend_6.4.1.md)
   * [7.0.1 <--> C80](Talend_6.4.1.md)

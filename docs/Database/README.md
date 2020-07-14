@@ -1,6 +1,6 @@
 <!-- ignore -->
 
-# 数据库
+# Database
 
 * Apache Druid
   * [0.14.2 <--> C80](apache_druid_0.14.2.md)
