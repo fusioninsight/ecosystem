@@ -4,7 +4,7 @@
 
 * Apache NiFi
   * [1.7.1 <--> C80](Apache_NiFi.md)
-  * [1.9.2 <--> 6.5](Apache_NiFi.md)
+  * [1.9.2 <--> 6.5](ApacheNifi-1.9.2.md)
 * Confluent
   * [4.1.0 <--> C80](Confluent_4_1_0.md)
   * [4.1.0 <--> 6.5](Confluent_4_1_0.md)

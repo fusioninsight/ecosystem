@@ -224,7 +224,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Apache_NiFi.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/ApacheNifi-1.9.2.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Solr ">Solr</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >Confluent</td>

@@ -69,7 +69,7 @@ nav:
 - 数据集成:
   - Apache NiFi:
     - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md
-    - 1.9.2 <--> 6.5: Data_Integration/Apache_NiFi.md
+    - 1.9.2 <--> 6.5: Data_Integration/ApacheNifi-1.9.2.md
   - Confluent:
     - 4.1.0 <--> C80: Data_Integration/Confluent_4_1_0.md
     - 4.1.0 <--> 6.5: Data_Integration/Confluent_4_1_0.md
