@@ -2,7 +2,7 @@
 
 ## 适用场景
 
->Streamsets 3.16.1 <--> FusionInsight HD 6.5 (HDFS/Hive/Kafka)
+>Streamsets 3.16.1 <--> FusionInsight HD 6.5.1(HDFS/Hive/Kafka)
 
 ## 安装streamsets
 环境：172.16.2.121
@@ -68,8 +68,9 @@
 
 | 组件 | 对应streamsets版本   |
 | ----- | --------- |
-| HDFS | HDP 3.1.0 |  
+| HDFS | HDP 3.1.0 |
 | Hive  | HDP 3.1.0 |
+| HBase  | CDH 5.14.0 |
 | Kafka  | Apache Kafka 1.1.0 |
 
 
@@ -148,7 +149,15 @@
   ![20200713_104827_82](assets/streamsets_3.16.1/20200713_104827_82.png)
 
 
-- 创建路径`/opt/streamsets/hdfsconf`，在FI HD客户端中获取`core-site.xml, hdfs-site.xml, hive-site.xml`拷贝到该路径下，并且做如下修改
+- 使用如下命令在FI HD客户端中获取`zookeeper-3.5.1.jar`拷贝到`/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib`路径下，并且把原来的`zookeeper-3.4.5-cdh5.14.0.jar`注释掉
+
+  ```
+  mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar.org
+  cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib
+  ```
+
+
+- 创建路径`/opt/streamsets/hdfsconf`，在FI HD客户端中获取`core-site.xml, hdfs-site.xml, hive-site.xml, hbase-site.xml`拷贝到该路径下，并且做如下修改
 
   1. core-site.xml配置文件修改：
 
@@ -455,6 +464,132 @@
 
   ![20200713_171353_78](assets/streamsets_3.16.1/20200713_171353_78.png)
 
+## 对接HBase
+
+### 操作场景
+
+配置streamsets对接HBase
+
+注意：streamstes不提供HBase作为源端的功能，本节只提供HBase写入用例
+
+### 前提条件
+
+完成streamsets安装，完成Kerberos认证相关配置
+
+### HBase相关配置
+
+说明： FusionInisight 的HBase版本（1.3.1）与CDH 5.14.0 的HBase版本（1.2.0）相近, 已经修改了zookeeper-3.4.5-cdh5.14.0.jar 为FusionInsight的 zookeeper-3.5.1.jar. 但是版本还是有差异，需要导入Fusioninsight hbase相关jar包，避免发生依赖错误
+
+参考如下链接安装外部依赖库,并导入FusionInsgiht HBase依赖： https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Configuration/ExternalLibs.html#concept_amy_pzs_gz
+
+![20200715_181917_93](assets/streamsets_3.16.1/20200715_181917_93.png)
+
+![20200715_182231_57](assets/streamsets_3.16.1/20200715_182231_57.png)
+
+- 首先创建路径`/opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib`
+
+  `mkdir -p /opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib`
+
+- 将FusionInsight HBase相关依赖jar包拷贝到上一步创建的路径中
+
+  ```
+  cp /opt/125_651hdclient/hadoopclient/HBase/hbase/lib/*.jar /opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib
+  ```
+
+- 修改配置文件`$SDC_CONF/sdc-security.policy`，比如`/opt/streamsets/sdc/conf/sdc-security.policy`,增加如下内容：
+
+  ```
+  // user-defined external directory
+  grant codebase "file:///opt/streamsets/sdc/sdc-extras/-" {
+    permission java.security.AllPermission;
+  };
+  ```
+
+  ![20200715_182632_49](assets/streamsets_3.16.1/20200715_182632_49.png)
+
+
+- (重要)关闭正在运行的streamsets, 先申明之前配置的环境变量`STREAMSETS_LIBRARIES_EXTRA_DIR`,再启动streamsets. 比如：
+
+  ```
+  export STREAMSETS_LIBRARIES_EXTRA_DIR="/opt/streamsets/sdc/sdc-extras"
+  bin/streamsets dc
+  ```
+
+- 登陆streamsets的web界面，在**Package Manager**处的**External Libraries**检查相关依赖是否导入成功
+
+  ![20200715_183339_55](assets/streamsets_3.16.1/20200715_183339_55.png)
+
+### 写入HBase数据用例
+
+- 新建一个数据流任务
+
+  ![20200713_162248_84](assets/streamsets_3.16.1/20200713_162248_84.png)
+
+- 整个数据流如下：
+
+  ![20200715_183611_42](assets/streamsets_3.16.1/20200715_183611_42.png)
+
+- **Dev Raw Data Source 1** 配置
+
+  - General页签
+
+    ![20200715_183745_27](assets/streamsets_3.16.1/20200715_183745_27.png)
+
+  - Raw Data页签
+
+    ![20200715_183812_27](assets/streamsets_3.16.1/20200715_183812_27.png)
+
+    `{ "firstname": "abc", "midname": "xyz","lastname": "lmn" }`
+
+  - Event Data页签未作修改
+
+    ![20200715_183841_71](assets/streamsets_3.16.1/20200715_183841_71.png)
+
+  - Data Format页签
+
+    ![20200715_183923_64](assets/streamsets_3.16.1/20200715_183923_64.png)
+
+- **HBase** 配置
+
+  - General页签
+
+    ![20200715_184044_44](assets/streamsets_3.16.1/20200715_184044_44.png)
+
+  - HBase页签
+
+    ![20200715_184255_44](assets/streamsets_3.16.1/20200715_184255_44.png)
+
+    ![20200715_184545_24](assets/streamsets_3.16.1/20200715_184545_24.png)
+
+    ```
+    1. host-172-16-4-121,host-172-16-4-122,host-172-16-4-123
+    2. 24002
+    3. /hbase
+    4. streamsets1
+    5. /firstname
+    6. Text
+    7. /firstname - data:firstname - Text
+       /midname - data:midname - Text
+       /lastname - data:lastname - Text
+    8. /opt/streamsets/hdfsconf
+    ```
+
+- 测试前登陆hbase客户端，创建表streamsets1
+
+  ```
+  hbase shell
+  create 'streamsets1','data'
+  ```
+
+- 启动数据流
+
+  ![20200715_185009_28](assets/streamsets_3.16.1/20200715_185009_28.png)
+
+- hbase客户端检查结果
+
+  `scan 'streamsets1'`
+
+  ![20200715_185051_34](assets/streamsets_3.16.1/20200715_185051_34.png)
 
 ## 对接Kafka安全模式
 
@@ -595,6 +730,9 @@
 - 登陆后台对应路径检查结果：
 
   ![20200713_174302_96](assets/streamsets_3.16.1/20200713_174302_96.png)
+
+
+
 
 
 ## streamsets最佳实践
