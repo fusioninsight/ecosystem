@@ -2,7 +2,7 @@
 
 ## 适用场景
 
->Streamsets 3.16.1 <--> FusionInsight HD 6.5.1(HDFS/Hive/Kafka)
+>Streamsets 3.16.1 <--> FusionInsight HD 6.5.1(HDFS/Hive/HBase/Kafka)
 
 ## 安装streamsets
 环境：172.16.2.121
@@ -68,7 +68,7 @@
 
 | 组件 | 对应streamsets版本   |
 | ----- | --------- |
-| HDFS | HDP 3.1.0 |
+| HDFS | HDP 3.1.0 |  
 | Hive  | HDP 3.1.0 |
 | HBase  | CDH 5.14.0 |
 | Kafka  | Apache Kafka 1.1.0 |

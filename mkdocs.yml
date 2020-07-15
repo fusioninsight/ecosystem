@@ -120,7 +120,7 @@ nav:
     - 9.2.1 <--> C80: Data_Integration/SharePlex.md
     - 9.2.1 <--> 6.5: Data_Integration/SharePlex.md
   - Streamsets:
-    - 3.16.1 <--> 6.5: Data_Integration/streamsets_3.16.1.md
+    - 3.16.1 <--> 5.1: Data_Integration/streamsets_3.16.1.md
   - Talend:
     - 6.4.1 <--> C80: Data_Integration/Talend_6.4.1.md
     - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
