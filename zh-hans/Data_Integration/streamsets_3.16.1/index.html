@@ -2135,8 +2135,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kafka" class="md-nav__link">
-    对接Kafka安全模式
+  <a href="#hbase" class="md-nav__link">
+    对接HBase
   </a>
   
     <nav class="md-nav">
@@ -2151,6 +2151,47 @@
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_1" class="md-nav__link">
+    HBase相关配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_2" class="md-nav__link">
+    写入HBase数据用例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    对接Kafka安全模式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
     前提条件
   </a>
   
@@ -2184,21 +2225,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     操作场景
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     前提条件
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     测试用例
   </a>
   
@@ -4064,8 +4105,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kafka" class="md-nav__link">
-    对接Kafka安全模式
+  <a href="#hbase" class="md-nav__link">
+    对接HBase
   </a>
   
     <nav class="md-nav">
@@ -4080,6 +4121,47 @@
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_1" class="md-nav__link">
+    HBase相关配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase_2" class="md-nav__link">
+    写入HBase数据用例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    对接Kafka安全模式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    操作场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
     前提条件
   </a>
   
@@ -4113,21 +4195,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     操作场景
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     前提条件
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     测试用例
   </a>
   
@@ -4167,7 +4249,7 @@
                 <h1 id="streamsetsfusioninsight">streamsets对接FusionInsight<a class="headerlink" href="#streamsetsfusioninsight" title="Permanent link">&para;</a></h1>
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Streamsets 3.16.1 &harr; FusionInsight HD 6.5 (HDFS/Hive/Kafka)</p>
+<p>Streamsets 3.16.1 &harr; FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka)</p>
 </blockquote>
 <h2 id="streamsets">安装streamsets<a class="headerlink" href="#streamsets" title="Permanent link">&para;</a></h2>
 <p>环境：172.16.2.121</p>
@@ -4231,6 +4313,10 @@ bin/streamsets dc
 <tr>
 <td>Hive</td>
 <td>HDP 3.1.0</td>
+</tr>
+<tr>
+<td>HBase</td>
+<td>CDH 5.14.0</td>
 </tr>
 <tr>
 <td>Kafka</td>
@@ -4308,8 +4394,15 @@ cp /opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/zookeeper-3.5.1.jar /opt/s
 
 <p><img alt="20200713_104827_82" src="../assets/streamsets_3.16.1/20200713_104827_82.png" /></p>
 <ul>
+<li>使用如下命令在FI HD客户端中获取<code>zookeeper-3.5.1.jar</code>拷贝到<code>/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib</code>路径下，并且把原来的<code>zookeeper-3.4.5-cdh5.14.0.jar</code>注释掉</li>
+</ul>
+<div class="codehilite"><pre><span></span>mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar.org
+cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib
+</pre></div>
+
+<ul>
 <li>
-<p>创建路径<code>/opt/streamsets/hdfsconf</code>，在FI HD客户端中获取<code>core-site.xml, hdfs-site.xml, hive-site.xml</code>拷贝到该路径下，并且做如下修改</p>
+<p>创建路径<code>/opt/streamsets/hdfsconf</code>，在FI HD客户端中获取<code>core-site.xml, hdfs-site.xml, hive-site.xml, hbase-site.xml</code>拷贝到该路径下，并且做如下修改</p>
 </li>
 <li>
 <p>core-site.xml配置文件修改：</p>
@@ -4607,10 +4700,123 @@ table_name = sdc_drift_example
 </li>
 </ul>
 <p><img alt="20200713_171353_78" src="../assets/streamsets_3.16.1/20200713_171353_78.png" /></p>
-<h2 id="kafka">对接Kafka安全模式<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h2>
+<h2 id="hbase">对接HBase<a class="headerlink" href="#hbase" title="Permanent link">&para;</a></h2>
 <h3 id="_12">操作场景<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>配置streamsets对接Kafka，生产，消费数据</p>
+<p>配置streamsets对接HBase</p>
+<p>注意：streamstes不提供HBase作为源端的功能，本节只提供HBase写入用例</p>
 <h3 id="_13">前提条件<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>完成streamsets安装，完成Kerberos认证相关配置</p>
+<h3 id="hbase_1">HBase相关配置<a class="headerlink" href="#hbase_1" title="Permanent link">&para;</a></h3>
+<p>说明： FusionInisight 的HBase版本（1.3.1）与CDH 5.14.0 的HBase版本（1.2.0）相近, 已经修改了zookeeper-3.4.5-cdh5.14.0.jar 为FusionInsight的 zookeeper-3.5.1.jar. 但是版本还是有差异，需要导入Fusioninsight hbase相关jar包，避免发生依赖错误</p>
+<p>参考如下链接安装外部依赖库,并导入FusionInsgiht HBase依赖： <a href="https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Configuration/ExternalLibs.html#concept_amy_pzs_gz">https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Configuration/ExternalLibs.html#concept_amy_pzs_gz</a></p>
+<p><img alt="20200715_181917_93" src="../assets/streamsets_3.16.1/20200715_181917_93.png" /></p>
+<p><img alt="20200715_182231_57" src="../assets/streamsets_3.16.1/20200715_182231_57.png" /></p>
+<ul>
+<li>首先创建路径<code>/opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib</code></li>
+</ul>
+<p><code>mkdir -p /opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib</code></p>
+<ul>
+<li>将FusionInsight HBase相关依赖jar包拷贝到上一步创建的路径中</li>
+</ul>
+<div class="codehilite"><pre><span></span>cp /opt/125_651hdclient/hadoopclient/HBase/hbase/lib/*.jar /opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib
+</pre></div>
+
+<ul>
+<li>修改配置文件<code>$SDC_CONF/sdc-security.policy</code>，比如<code>/opt/streamsets/sdc/conf/sdc-security.policy</code>,增加如下内容：</li>
+</ul>
+<div class="codehilite"><pre><span></span>// user-defined external directory
+grant codebase &quot;file:///opt/streamsets/sdc/sdc-extras/-&quot; {
+  permission java.security.AllPermission;
+};
+</pre></div>
+
+<p><img alt="20200715_182632_49" src="../assets/streamsets_3.16.1/20200715_182632_49.png" /></p>
+<ul>
+<li>(重要)关闭正在运行的streamsets, 先申明之前配置的环境变量<code>STREAMSETS_LIBRARIES_EXTRA_DIR</code>,再启动streamsets. 比如：</li>
+</ul>
+<div class="codehilite"><pre><span></span>export STREAMSETS_LIBRARIES_EXTRA_DIR=&quot;/opt/streamsets/sdc/sdc-extras&quot;
+bin/streamsets dc
+</pre></div>
+
+<ul>
+<li>登陆streamsets的web界面，在**Package Manager**处的**External Libraries**检查相关依赖是否导入成功</li>
+</ul>
+<p><img alt="20200715_183339_55" src="../assets/streamsets_3.16.1/20200715_183339_55.png" /></p>
+<h3 id="hbase_2">写入HBase数据用例<a class="headerlink" href="#hbase_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>新建一个数据流任务</li>
+</ul>
+<p><img alt="20200713_162248_84" src="../assets/streamsets_3.16.1/20200713_162248_84.png" /></p>
+<ul>
+<li>整个数据流如下：</li>
+</ul>
+<p><img alt="20200715_183611_42" src="../assets/streamsets_3.16.1/20200715_183611_42.png" /></p>
+<ul>
+<li>
+<p><strong>Dev Raw Data Source 1</strong> 配置</p>
+</li>
+<li>
+<p>General页签</p>
+<p><img alt="20200715_183745_27" src="../assets/streamsets_3.16.1/20200715_183745_27.png" /></p>
+</li>
+<li>
+<p>Raw Data页签</p>
+<p><img alt="20200715_183812_27" src="../assets/streamsets_3.16.1/20200715_183812_27.png" /></p>
+<p><code>{ "firstname": "abc", "midname": "xyz","lastname": "lmn" }</code></p>
+</li>
+<li>
+<p>Event Data页签未作修改</p>
+<p><img alt="20200715_183841_71" src="../assets/streamsets_3.16.1/20200715_183841_71.png" /></p>
+</li>
+<li>
+<p>Data Format页签</p>
+<p><img alt="20200715_183923_64" src="../assets/streamsets_3.16.1/20200715_183923_64.png" /></p>
+</li>
+<li>
+<p><strong>HBase</strong> 配置</p>
+</li>
+<li>
+<p>General页签</p>
+<p><img alt="20200715_184044_44" src="../assets/streamsets_3.16.1/20200715_184044_44.png" /></p>
+</li>
+<li>
+<p>HBase页签</p>
+<p><img alt="20200715_184255_44" src="../assets/streamsets_3.16.1/20200715_184255_44.png" /></p>
+<p><img alt="20200715_184545_24" src="../assets/streamsets_3.16.1/20200715_184545_24.png" /></p>
+<div class="codehilite"><pre><span></span>1. host-172-16-4-121,host-172-16-4-122,host-172-16-4-123
+2. 24002
+3. /hbase
+4. streamsets1
+5. /firstname
+6. Text
+7. /firstname - data:firstname - Text
+   /midname - data:midname - Text
+   /lastname - data:lastname - Text
+8. /opt/streamsets/hdfsconf
+</pre></div>
+
+</li>
+<li>
+<p>测试前登陆hbase客户端，创建表streamsets1</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>hbase shell
+create &#39;streamsets1&#39;,&#39;data&#39;
+</pre></div>
+
+<ul>
+<li>启动数据流</li>
+</ul>
+<p><img alt="20200715_185009_28" src="../assets/streamsets_3.16.1/20200715_185009_28.png" /></p>
+<ul>
+<li>hbase客户端检查结果</li>
+</ul>
+<p><code>scan 'streamsets1'</code></p>
+<p><img alt="20200715_185051_34" src="../assets/streamsets_3.16.1/20200715_185051_34.png" /></p>
+<h2 id="kafka">对接Kafka安全模式<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h2>
+<h3 id="_14">操作场景<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>配置streamsets对接Kafka，生产，消费数据</p>
+<h3 id="_15">前提条件<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>完成streamsets安装，完成Kerberos认证相关配置</p>
 <h3 id="kafka_1">写入Kafka数据用例<a class="headerlink" href="#kafka_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4746,11 +4952,11 @@ table_name = sdc_drift_example
 </ul>
 <p><img alt="20200713_174302_96" src="../assets/streamsets_3.16.1/20200713_174302_96.png" /></p>
 <h2 id="streamsets_1">streamsets最佳实践<a class="headerlink" href="#streamsets_1" title="Permanent link">&para;</a></h2>
-<h3 id="_14">操作场景<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_16">操作场景<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>配置streamsets ETL数据流，从FI kafka读取数据，再写入FI Hive中</p>
-<h3 id="_15">前提条件<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_17">前提条件<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>完成streamsets安装，完成Kerberos认证相关配置，完成HDFS, Hive, Kafka用例测试</p>
-<h3 id="_16">测试用例<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_18">测试用例<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <p>新建一个数据流任务</p>
 <p><img alt="20200713_162248_84" src="../assets/streamsets_3.16.1/20200713_162248_84.png" /></p>
 <p>整个数据流如下：</p>
