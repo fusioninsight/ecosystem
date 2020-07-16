@@ -33,7 +33,9 @@
 
   ![20200713_155833_39](assets/streamsets_3.16.1/20200713_155833_39.png)
 
-  并且将`/opt/streamsets/streamsets-datacollector-3.16.1/etc`路径下的配置文件拷贝到`/opt/streamsets/sdc/conf`路径下
+  并且将`/opt/streamsets/streamsets-datacollector-3.16.1/etc`路径下的所有配置文件拷贝到`/opt/streamsets/sdc/conf`路径下
+  
+  `cp /opt/streamsets/streamsets-datacollector-3.16.1/etc/* /opt/streamsets/sdc/conf/`
 
   注意：需提前创建好对应的路径，再配置
 
