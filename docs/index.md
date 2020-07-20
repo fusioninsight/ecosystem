@@ -720,6 +720,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
+<td rowspan=1 >IBM WAS</td>
+<td>8.5.5.9</td>
+<td><a href="Other/IBM_WAS"><span class="label label-IBM_JDK ">IBM_JDK</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td rowspan=1 >Kibana</td>
 <td>6.1.3</td>
 <td></td>
