@@ -8,6 +8,7 @@
   * [4.0.8 <--> C60](DBeaver_4.2.1.md)
   * [4.2.1 <--> C70](DBeaver_4.2.1.md)
   * [6.1.4 <--> 6.5](DBeaver_6.1.4.md)
+  * [6.3.4 <--> 6.5](DBeaver_6.3.4.md)
 * DbVisualizer
   * [10.0.1 <--> C70](DbVisualizer_10.0.1.md)
   * [10.0.21 <--> 6.5](DbVisualizer_10.0.21.md)

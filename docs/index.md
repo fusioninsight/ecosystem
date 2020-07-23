@@ -523,7 +523,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 </tr>
-<tr><td rowspan=19 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
+<tr><td rowspan=20 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>集成开发环境 </td>
 <td rowspan=1 >Anaconda</td>
 <td>2-2019.03-Linux-x86_64</td>
 <td></td>
@@ -533,7 +533,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Development/Anaconda"><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
-<td rowspan=3 >DBeaver</td>
+<td rowspan=4 >DBeaver</td>
 <td>4.0.8</td>
 <td></td>
 <td><a href="Development/DBeaver_4.2.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
@@ -556,6 +556,14 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Development/DBeaver_6.1.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+</tr>
+<tr>
+<td>6.3.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Development/DBeaver_6.3.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Hetu ">Hetu</span></a></td>
 </tr>
 <tr>
 <td rowspan=3 >DbVisualizer</td>

@@ -149,6 +149,7 @@ nav:
     - 4.0.8 <--> C60: Development/DBeaver_4.2.1.md
     - 4.2.1 <--> C70: Development/DBeaver_4.2.1.md
     - 6.1.4 <--> 6.5: Development/DBeaver_6.1.4.md
+    - 6.3.4 <--> 6.5: Development/DBeaver_6.3.4.md
   - DbVisualizer:
     - 10.0.1 <--> C70: Development/DbVisualizer_10.0.1.md
     - 10.0.21 <--> 6.5: Development/DbVisualizer_10.0.21.md
