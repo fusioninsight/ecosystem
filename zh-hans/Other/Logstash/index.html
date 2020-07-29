@@ -3132,30 +3132,70 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    环境说明
+  <a href="#hdfs" class="md-nav__link">
+    HDFS对接
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" class="md-nav__link">
+    HDFS对接认证相关配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash-webhdfs-output" class="md-nav__link">
+    logstash webhdfs output用例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-faq" class="md-nav__link">
+    HDFS对接 FAQ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    认证相关配置
+  <a href="#kafka" class="md-nav__link">
+    kafka安全模式对接
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kafka_1" class="md-nav__link">
+    kafka安全模式对接认证相关配置
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#logstash-kafka-input" class="md-nav__link">
     logstash kafka input用例
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#logstash-kafka-output" class="md-nav__link">
     logstash kafka output用例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3743,30 +3783,70 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    环境说明
+  <a href="#hdfs" class="md-nav__link">
+    HDFS对接
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hdfs_1" class="md-nav__link">
+    HDFS对接认证相关配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash-webhdfs-output" class="md-nav__link">
+    logstash webhdfs output用例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdfs-faq" class="md-nav__link">
+    HDFS对接 FAQ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    认证相关配置
+  <a href="#kafka" class="md-nav__link">
+    kafka安全模式对接
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kafka_1" class="md-nav__link">
+    kafka安全模式对接认证相关配置
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#logstash-kafka-input" class="md-nav__link">
     logstash kafka input用例
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#logstash-kafka-output" class="md-nav__link">
     logstash kafka output用例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3799,12 +3879,102 @@
                 <h1 id="logstashkafka">Logstash对接Kafka安全模式<a class="headerlink" href="#logstashkafka" title="Permanent link">&para;</a></h1>
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Logstash 6.7.1 &harr; FusionInsight HD 6.5 (Kafka)</p>
+<p>Logstash 6.7.1 &harr; FusionInsight HD 6.5 (HDFS/Kafka)</p>
 </blockquote>
-<h2 id="_2">环境说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="hdfs">HDFS对接<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
+<p>HDFS对接环境说明：</p>
+<p>logstash主机：172.16.9.107</p>
+<p>FI HD集群：172.16.4.121-123</p>
+<h3 id="hdfs_1">HDFS对接认证相关配置<a class="headerlink" href="#hdfs_1" title="Permanent link">&para;</a></h3>
+<p>logstash 使用包含 webhdfs output插件同集群交互，首先需要配置webhdfs相关配置项</p>
+<ul>
+<li>
+<p>HDFS是通过WebHDFS连接，前提条件是获取kerberos的缓存票据，所以需要在Logstash部署的主机上安装FusionInsight HD客户端，具体可参考产品文档相关章节《安装部署》-&gt;《软件安装》-&gt;《初始配置》-&gt;《配置客户端》-&gt;《安装客户端》</p>
+</li>
+<li>
+<p>在FusionInsight Manager中修改HDFS的配置： dfs.http.policy 修改为HTTP_AND_HTTPS，重启HDFS</p>
+</li>
+</ul>
+<p><img alt="20200729_142622_35" src="../assets/Logstash/20200729_142622_35.png" /></p>
+<ul>
+<li>
+<p>需要在logstash上安装gssapi插件做kerberos认证，此过程需要logstash部署主机能连外网，具体步骤为：</p>
+</li>
+<li>
+<p>使用命令<code>cd /opt/logstash/logstash-6.7.1</code>登陆logstash安装目录，然后使用命令<code>vendor/jruby/bin/jruby vendor/jruby/bin/gem install gssapi</code>在jruby下安装gssapi</p>
+<p><img alt="20200729_152346_97" src="../assets/Logstash/20200729_152346_97.png" /></p>
+</li>
+<li>
+<p>使用命令<code>cd /opt/logstash/logstash-6.7.1</code>登陆logstash安装目录，然后使用命令<code>bin/logstash-plugin install --no-verify gssapi</code>安装gssapi plugin</p>
+<p><img alt="20200729_151855_40" src="../assets/Logstash/20200729_151855_40.png" /></p>
+</li>
+<li>
+<p>将认证所需要的的user.keytab文件放置在/opt路径下</p>
+</li>
+</ul>
+<h3 id="logstash-webhdfs-output">logstash webhdfs output用例<a class="headerlink" href="#logstash-webhdfs-output" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在logstash的config目录下创建配置文件<code>logstash-webhdfs.conf</code>,内容为：</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>input { stdin{} }
+
+output {
+  webhdfs {
+    host =&gt; &quot;172.16.4.123&quot;
+    port =&gt; 25002
+    path =&gt; &quot;/tmp/logstash/dt=%{+YYYY-MM-dd}/logstash-%{+HH}.log&quot;
+    user =&gt; &quot;developuser&quot;
+    kerberos_keytab =&gt; &quot;/opt/user.keytab&quot;
+    use_kerberos_auth =&gt; true
+  }
+
+}
+</pre></div>
+  其中172.16.4.123为对接集群HDFS的NameNode主节点</p>
+<ul>
+<li>使用如下命令在logstash部署主机通过FusionInsight客户端做认证</li>
+</ul>
+<div class="codehilite"><pre><span></span>source /opt/125_hadoopclient/hadoopclient/bigdata_env
+kinit developuser
+</pre></div>
+
+<ul>
+<li>使用命令<code>bin/logstash -f config/logstash-webhdfs.conf</code> 启动logstash webhdfs output</li>
+</ul>
+<p><img alt="20200729_152737_96" src="../assets/Logstash/20200729_152737_96.png" /></p>
+<p>输入几条数据：</p>
+<p><img alt="20200729_152818_89" src="../assets/Logstash/20200729_152818_89.png" />  </p>
+<ul>
+<li>登陆hdfs对应路径检查结果：</li>
+</ul>
+<p><img alt="20200729_153110_19" src="../assets/Logstash/20200729_153110_19.png" /></p>
+<h3 id="hdfs-faq">HDFS对接 FAQ<a class="headerlink" href="#hdfs-faq" title="Permanent link">&para;</a></h3>
+<p>问题1： 对接webhdfs</p>
+<p>使用命令<code>bin/logstash -f config/logstash-webhdfs.conf</code>得到报错：</p>
+<p><img alt="20200727_174059_67" src="../assets/Logstash/20200727_174059_67.png" />
+<div class="codehilite"><pre><span></span>LoadError: no such file to load -- gssapi
+</pre></div></p>
+<p>没有装gssapi这个插件</p>
+<p>解决办法：参考对接文档相关章节完成gssapi插件安装</p>
+<p>问题2：对接webhdfs</p>
+<p>使用命令<code>bin/logstash -f config/logstash-webhdfs.conf</code>得到报错：</p>
+<p><img alt="20200729_143741_75" src="../assets/Logstash/20200729_143741_75.png" /></p>
+<p><code>&lt;title&gt;Error 401 Authentication required&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;HTTP ERROR 401&lt;/h2&gt;&lt;p&gt;Problem accessing /webhdfs/v1/. Reason:&lt;pre&gt;</code></p>
+<p>问题原因：<code>use_kerberos_auth =&gt; true</code>这个配置项没有加入到<code>logstash-webhdfs.conf</code>配置文件中</p>
+<p>解决办法：增加上述配置项重启问题解决</p>
+<p>问题3：对接webhdfs</p>
+<p>使用命令<code>bin/logstash -f config/logstash-webhdfs.conf</code>得到报错：</p>
+<p><img alt="20200729_145341_80" src="../assets/Logstash/20200729_145341_80.png" /></p>
+<div class="codehilite"><pre><span></span>[ERROR][logstash.outputs.webhdfs ] Webhdfs check request failed. (namenode: 172.16.4.123:25002, Exception: undefined method `read_uint32&#39; for #&lt;FFI::MemoryPointer address=0x7f8eb0059fa0 size=4&gt;)
+</pre></div>
+
+<p>问题原因：启动时未使用<code>kinit developuser</code>获得缓存的认证票据</p>
+<p>解决办法：参考对接文档相关章节加载对接环境变量以及kinit做认证获得缓存的票据在启动logstash</p>
+<h2 id="kafka">kafka安全模式对接<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h2>
+<p>kafka安全模式对接环境说明：</p>
 <p>logstash主机：172.16.2.124</p>
 <p>FI HD集群：172.16.10.131-133</p>
-<h2 id="_3">认证相关配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="kafka_1">kafka安全模式对接认证相关配置<a class="headerlink" href="#kafka_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>登陆集群manager下载认证用户的配置文件，user.keytab和krb5.conf并将这两个文件放到logstash安装主机的<code>/opt</code>路径下</p>
@@ -3864,7 +4034,7 @@ cp /opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /opt/logstash/logs
 <p>参考下图命令，将input,output路径下原来的jar包注释掉，并将拷贝过来的<code>kafka-clients-1.1.0.jar</code>名字修改为<code>kafka-clients-2.1.0.jar</code>,否则在启动logstash的时候会报错</p>
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-20200316164006321.png" /></p>
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-20200316164227601.png" /></p>
-<h2 id="logstash-kafka-input">logstash kafka input用例<a class="headerlink" href="#logstash-kafka-input" title="Permanent link">&para;</a></h2>
+<h3 id="logstash-kafka-input">logstash kafka input用例<a class="headerlink" href="#logstash-kafka-input" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在logsatash安装路径config下新建配置文件<code>logstash-21007input.conf</code>内容为：</li>
 </ul>
@@ -3909,7 +4079,7 @@ cp /opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /opt/logstash/logs
 <li>在logstash端检查结果：</li>
 </ul>
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-20200316170115426.png" /></p>
-<h2 id="logstash-kafka-output">logstash kafka output用例<a class="headerlink" href="#logstash-kafka-output" title="Permanent link">&para;</a></h2>
+<h3 id="logstash-kafka-output">logstash kafka output用例<a class="headerlink" href="#logstash-kafka-output" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在logsatash安装路径config下新建配置文件<code>logstash-21007output.conf</code>内容为：</li>
 </ul>
