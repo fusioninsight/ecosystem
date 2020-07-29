@@ -2,15 +2,135 @@
 
 ## 适用场景
 
-> Logstash 6.7.1 <--> FusionInsight HD 6.5 (Kafka)
+> Logstash 6.7.1 <--> FusionInsight HD 6.5 (HDFS/Kafka)
 
-## 环境说明
+## HDFS对接
+
+HDFS对接环境说明：
+
+logstash主机：172.16.9.107
+
+FI HD集群：172.16.4.121-123
+
+### HDFS对接认证相关配置
+
+logstash 使用包含 webhdfs output插件同集群交互，首先需要配置webhdfs相关配置项
+
+- HDFS是通过WebHDFS连接，前提条件是获取kerberos的缓存票据，所以需要在Logstash部署的主机上安装FusionInsight HD客户端，具体可参考产品文档相关章节《安装部署》->《软件安装》->《初始配置》->《配置客户端》->《安装客户端》
+
+- 在FusionInsight Manager中修改HDFS的配置： dfs.http.policy 修改为HTTP_AND_HTTPS，重启HDFS
+
+  ![20200729_142622_35](assets/Logstash/20200729_142622_35.png)
+
+- 需要在logstash上安装gssapi插件做kerberos认证，此过程需要logstash部署主机能连外网，具体步骤为：
+
+  - 使用命令`cd /opt/logstash/logstash-6.7.1`登陆logstash安装目录，然后使用命令`vendor/jruby/bin/jruby vendor/jruby/bin/gem install gssapi`在jruby下安装gssapi
+
+    ![20200729_152346_97](assets/Logstash/20200729_152346_97.png)
+
+  - 使用命令`cd /opt/logstash/logstash-6.7.1`登陆logstash安装目录，然后使用命令`bin/logstash-plugin install --no-verify gssapi`安装gssapi plugin
+
+    ![20200729_151855_40](assets/Logstash/20200729_151855_40.png)
+
+- 将认证所需要的的user.keytab文件放置在/opt路径下
+
+
+
+### logstash webhdfs output用例
+
+- 在logstash的config目录下创建配置文件`logstash-webhdfs.conf`,内容为：
+
+  ```
+  input { stdin{} }
+
+  output {
+    webhdfs {
+      host => "172.16.4.123"
+      port => 25002
+      path => "/tmp/logstash/dt=%{+YYYY-MM-dd}/logstash-%{+HH}.log"
+      user => "developuser"
+      kerberos_keytab => "/opt/user.keytab"
+      use_kerberos_auth => true
+    }
+
+  }
+  ```
+  其中172.16.4.123为对接集群HDFS的NameNode主节点
+
+- 使用如下命令在logstash部署主机通过FusionInsight客户端做认证
+
+  ```
+  source /opt/125_hadoopclient/hadoopclient/bigdata_env
+  kinit developuser
+  ```
+
+- 使用命令`bin/logstash -f config/logstash-webhdfs.conf` 启动logstash webhdfs output
+
+  ![20200729_152737_96](assets/Logstash/20200729_152737_96.png)
+
+  输入几条数据：
+
+  ![20200729_152818_89](assets/Logstash/20200729_152818_89.png)  
+
+- 登陆hdfs对应路径检查结果：
+
+  ![20200729_153110_19](assets/Logstash/20200729_153110_19.png)
+
+
+
+### HDFS对接 FAQ
+
+问题1： 对接webhdfs
+
+使用命令`bin/logstash -f config/logstash-webhdfs.conf`得到报错：
+
+![20200727_174059_67](assets/Logstash/20200727_174059_67.png)
+```
+LoadError: no such file to load -- gssapi
+```
+
+没有装gssapi这个插件
+
+解决办法：参考对接文档相关章节完成gssapi插件安装
+
+
+问题2：对接webhdfs
+
+使用命令`bin/logstash -f config/logstash-webhdfs.conf`得到报错：
+
+![20200729_143741_75](assets/Logstash/20200729_143741_75.png)
+
+`<title>Error 401 Authentication required</title></head><body><h2>HTTP ERROR 401</h2><p>Problem accessing /webhdfs/v1/. Reason:<pre>`
+
+问题原因：`use_kerberos_auth => true`这个配置项没有加入到`logstash-webhdfs.conf`配置文件中
+
+解决办法：增加上述配置项重启问题解决
+
+
+问题3：对接webhdfs
+
+使用命令`bin/logstash -f config/logstash-webhdfs.conf`得到报错：
+
+![20200729_145341_80](assets/Logstash/20200729_145341_80.png)
+
+```
+[ERROR][logstash.outputs.webhdfs ] Webhdfs check request failed. (namenode: 172.16.4.123:25002, Exception: undefined method `read_uint32' for #<FFI::MemoryPointer address=0x7f8eb0059fa0 size=4>)
+```
+
+问题原因：启动时未使用`kinit developuser`获得缓存的认证票据
+
+解决办法：参考对接文档相关章节加载对接环境变量以及kinit做认证获得缓存的票据在启动logstash
+
+
+## kafka安全模式对接
+
+kafka安全模式对接环境说明：
 
 logstash主机：172.16.2.124
 
 FI HD集群：172.16.10.131-133
 
-## 认证相关配置
+### kafka安全模式对接认证相关配置
 
 - 登陆集群manager下载认证用户的配置文件，user.keytab和krb5.conf并将这两个文件放到logstash安装主机的`/opt`路径下
 
@@ -73,7 +193,7 @@ FI HD集群：172.16.10.131-133
   ![](assets/Logstash/markdown-img-paste-20200316164227601.png)
 
 
-## logstash kafka input用例
+### logstash kafka input用例
 
 - 在logsatash安装路径config下新建配置文件`logstash-21007input.conf`内容为：
 
@@ -116,7 +236,7 @@ FI HD集群：172.16.10.131-133
   ![](assets/Logstash/markdown-img-paste-20200316170115426.png)
 
 
-## logstash kafka output用例
+### logstash kafka output用例
 
 - 在logsatash安装路径config下新建配置文件`logstash-21007output.conf`内容为：
 
@@ -154,6 +274,7 @@ output {
 - 去kafka客户端检查结果：
 
   ![](assets/Logstash/markdown-img-paste-20200316170833539.png)
+
 
 ## 关于使用ARM服务器使用logstash遇到的问题
 
