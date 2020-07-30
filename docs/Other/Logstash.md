@@ -1,4 +1,4 @@
-# Logstash对接Kafka安全模式
+# Logstash对接FusionInsight
 
 ## 适用场景
 
