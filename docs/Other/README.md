@@ -28,3 +28,5 @@
   * [6.5.1 <--> C80](Elasticsearch_Related.md)
 * librdkafka
   * [1.0 <--> 6.5](librdkafka.md)
+* 生态对接常见问题总结
+  * [1.0 <--> 6.5](对接问题总结1.0.md)

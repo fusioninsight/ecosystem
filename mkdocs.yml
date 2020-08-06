@@ -202,6 +202,8 @@ nav:
     - 6.5.1 <--> C80: Other/Elasticsearch_Related.md
   - librdkafka:
     - 1.0 <--> 6.5: Other/librdkafka.md
+  - 生态对接常见问题总结:
+    - 1.0 <--> 6.5: Other/对接问题总结1.0.md
 - SQL分析:
   - Apache Drill:
     - 1.15.0 <--> 6.5: SQL_Analytics/ApacheDrill_1.15.0toHD651.md
