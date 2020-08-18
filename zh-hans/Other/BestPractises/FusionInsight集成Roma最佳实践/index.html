@@ -32,17 +32,17 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.0.0">
     
     
       
-        <title>FusionInsight集成ROMA实践 - 智能数据生态地图</title>
+        <title>FusionInsight集成ROMA实践 - FusionInsight MRS 生态地图</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -79,7 +79,24 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
@@ -96,7 +113,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="智能数据生态地图" class="md-header-nav__button md-logo">
+        <a href="../../.." title="FusionInsight MRS 生态地图" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -109,12 +126,10 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              智能数据生态地图
+              FusionInsight MRS 生态地图
             </span>
             <span class="md-header-nav__topic">
-              
-                FusionInsight集成ROMA实践
-              
+              FusionInsight集成ROMA实践
             </span>
           
         </div>
@@ -179,7 +194,7 @@
         
       
       
-      <main class="md-main" role="main">
+      <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -188,12 +203,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../.." title="智能数据生态地图" class="md-nav__button md-logo">
+    <a href="../../.." title="FusionInsight MRS 生态地图" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    智能数据生态地图
+    FusionInsight MRS 生态地图
   </label>
   
     <div class="md-nav__source">
@@ -262,7 +277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/FineBI_5.1/" title="5.1 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/FineBI_5.1/" title="5.1 <--> 6.5" class="md-nav__link">
       5.1 <--> 6.5
     </a>
   </li>
@@ -298,7 +313,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/IBM_Cognos/" title="10.2.2fp4 C60" class="md-nav__link">
+    <a href="../../../Business_Intelligence/IBM_Cognos/" title="10.2.2fp4 <--> C60" class="md-nav__link">
       10.2.2fp4 <--> C60
     </a>
   </li>
@@ -334,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/MicroStrategy_11.1.4/" title="11.1.4 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/MicroStrategy_11.1.4/" title="11.1.4 <--> 6.5" class="md-nav__link">
       11.1.4 <--> 6.5
     </a>
   </li>
@@ -370,7 +385,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="11g C60" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="11g <--> C60" class="md-nav__link">
       11g <--> C60
     </a>
   </li>
@@ -382,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="11g C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="11g <--> C70" class="md-nav__link">
       11g <--> C70
     </a>
   </li>
@@ -394,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c C60" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c <--> C60" class="md-nav__link">
       12c <--> C60
     </a>
   </li>
@@ -406,7 +421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c <--> C70" class="md-nav__link">
       12c <--> C70
     </a>
   </li>
@@ -418,7 +433,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Oracle_BIEE/" title="12c <--> 6.5" class="md-nav__link">
       12c <--> 6.5
     </a>
   </li>
@@ -454,7 +469,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/PowerBI_2.75.5649.861/" title="2.75.5649.861 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/PowerBI_2.75.5649.861/" title="2.75.5649.861 <--> 6.5" class="md-nav__link">
       2.75.5649.861 <--> 6.5
     </a>
   </li>
@@ -490,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikSense/" title="3.2.4 C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikSense/" title="3.2.4 <--> C70" class="md-nav__link">
       3.2.4 <--> C70
     </a>
   </li>
@@ -502,7 +517,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikSense/" title="3.2.4 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikSense/" title="3.2.4 <--> 6.5" class="md-nav__link">
       3.2.4 <--> 6.5
     </a>
   </li>
@@ -538,7 +553,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikView/" title="12 <--> C60" class="md-nav__link">
       12 <--> C60
     </a>
   </li>
@@ -550,7 +565,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikView/" title="12 <--> C70" class="md-nav__link">
       12 <--> C70
     </a>
   </li>
@@ -562,7 +577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikView/" title="12 <--> C80" class="md-nav__link">
       12 <--> C80
     </a>
   </li>
@@ -574,7 +589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/QlikView/" title="12 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/QlikView/" title="12 <--> 6.5" class="md-nav__link">
       12 <--> 6.5
     </a>
   </li>
@@ -610,7 +625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/SSRS/" title="2017 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/SSRS/" title="2017 <--> 6.5" class="md-nav__link">
       2017 <--> 6.5
     </a>
   </li>
@@ -646,7 +661,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/SmartBI/" title="7.2.32464.17374 C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/SmartBI/" title="7.2.32464.17374 <--> C70" class="md-nav__link">
       7.2.32464.17374 <--> C70
     </a>
   </li>
@@ -682,7 +697,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Tableau/" title="10.0.0 <--> C50" class="md-nav__link">
       10.0.0 <--> C50
     </a>
   </li>
@@ -694,7 +709,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Tableau/" title="10.1.4 <--> C60" class="md-nav__link">
       10.1.4 <--> C60
     </a>
   </li>
@@ -706,7 +721,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Tableau/" title="10.3.2 <--> C70" class="md-nav__link">
       10.3.2 <--> C70
     </a>
   </li>
@@ -718,7 +733,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Tableau/" title="10.5.0 <--> C80" class="md-nav__link">
       10.5.0 <--> C80
     </a>
   </li>
@@ -730,7 +745,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Business_Intelligence/Tableau/" title="10.5.0 6.5" class="md-nav__link">
+    <a href="../../../Business_Intelligence/Tableau/" title="10.5.0 <--> 6.5" class="md-nav__link">
       10.5.0 <--> 6.5
     </a>
   </li>
@@ -790,7 +805,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C60" class="md-nav__link">
+    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 <--> C60" class="md-nav__link">
       2018.2.5.48994 <--> C60
     </a>
   </li>
@@ -802,7 +817,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 C80" class="md-nav__link">
+    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 <--> C80" class="md-nav__link">
       2018.2.5.48994 <--> C80
     </a>
   </li>
@@ -814,7 +829,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 6.5" class="md-nav__link">
+    <a href="../../../Data_Analysis/Alteryx/" title="2018.2.5.48994 <--> 6.5" class="md-nav__link">
       2018.2.5.48994 <--> 6.5
     </a>
   </li>
@@ -850,7 +865,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/GeoMesa_2.3.1/" title="2.3.1 6.5" class="md-nav__link">
+    <a href="../../../Data_Analysis/GeoMesa_2.3.1/" title="2.3.1 <--> 6.5" class="md-nav__link">
       2.3.1 <--> 6.5
     </a>
   </li>
@@ -886,7 +901,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+    <a href="../../../Data_Analysis/RapidMiner/" title="8.2.001 <--> C80" class="md-nav__link">
       8.2.001 <--> C80
     </a>
   </li>
@@ -922,7 +937,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C60" class="md-nav__link">
+    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 <--> C60" class="md-nav__link">
       9.4M3 <--> C60
     </a>
   </li>
@@ -934,7 +949,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C70" class="md-nav__link">
+    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 <--> C70" class="md-nav__link">
       9.4M3 <--> C70
     </a>
   </li>
@@ -946,7 +961,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 C80" class="md-nav__link">
+    <a href="../../../Data_Analysis/SAS_9.4M3/" title="9.4M3 <--> C80" class="md-nav__link">
       9.4M3 <--> C80
     </a>
   </li>
@@ -982,7 +997,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/SSAS/" title="2017 6.5" class="md-nav__link">
+    <a href="../../../Data_Analysis/SSAS/" title="2017 <--> 6.5" class="md-nav__link">
       2017 <--> 6.5
     </a>
   </li>
@@ -1018,7 +1033,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/Splunk/" title="7.2.4 C80" class="md-nav__link">
+    <a href="../../../Data_Analysis/Splunk/" title="7.2.4 <--> C80" class="md-nav__link">
       7.2.4 <--> C80
     </a>
   </li>
@@ -1030,7 +1045,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/Splunk/" title="7.2.4 6.5" class="md-nav__link">
+    <a href="../../../Data_Analysis/Splunk/" title="7.2.4 <--> 6.5" class="md-nav__link">
       7.2.4 <--> 6.5
     </a>
   </li>
@@ -1066,7 +1081,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Analysis/永洪一站式大数据分析平台/" title="7.1 C60" class="md-nav__link">
+    <a href="../../../Data_Analysis/%E6%B0%B8%E6%B4%AA%E4%B8%80%E7%AB%99%E5%BC%8F%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/" title="7.1 <--> C60" class="md-nav__link">
       7.1 <--> C60
     </a>
   </li>
@@ -1126,7 +1141,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Apache_NiFi/" title="1.7.1 <--> C80" class="md-nav__link">
       1.7.1 <--> C80
     </a>
   </li>
@@ -1138,7 +1153,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/ApacheNifi-1.9.2/" title="1.9.2 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/ApacheNifi-1.9.2/" title="1.9.2 <--> 6.5" class="md-nav__link">
       1.9.2 <--> 6.5
     </a>
   </li>
@@ -1174,7 +1189,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Confluent_4_1_0/" title="4.1.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Confluent_4_1_0/" title="4.1.0 <--> C80" class="md-nav__link">
       4.1.0 <--> C80
     </a>
   </li>
@@ -1186,7 +1201,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Confluent_4_1_0/" title="4.1.0 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Confluent_4_1_0/" title="4.1.0 <--> 6.5" class="md-nav__link">
       4.1.0 <--> 6.5
     </a>
   </li>
@@ -1222,7 +1237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/DataX/" title="0.1 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/DataX/" title="0.1 <--> 6.5" class="md-nav__link">
       0.1 <--> 6.5
     </a>
   </li>
@@ -1258,7 +1273,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Denodo/" title="7.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Denodo/" title="7.0 <--> C80" class="md-nav__link">
       7.0 <--> C80
     </a>
   </li>
@@ -1270,7 +1285,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Denodo/" title="7.0 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Denodo/" title="7.0 <--> 6.5" class="md-nav__link">
       7.0 <--> 6.5
     </a>
   </li>
@@ -1306,7 +1321,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/H2O.ai/" title="3.24.0.2 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/H2O.ai/" title="3.24.0.2 <--> 6.5" class="md-nav__link">
       3.24.0.2 <--> 6.5
     </a>
   </li>
@@ -1342,7 +1357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-nav__link">
+    <a href="../../../Data_Integration/IBM_InfoSphere_CDC/" title="11.3.3.1 <--> C50" class="md-nav__link">
       11.3.3.1 <--> C50
     </a>
   </li>
@@ -1378,7 +1393,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.3.1.0 C50" class="md-nav__link">
+    <a href="../../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.3.1.0 <--> C50" class="md-nav__link">
       11.3.1.0 <--> C50
     </a>
   </li>
@@ -1390,7 +1405,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.5.0.2 C60" class="md-nav__link">
+    <a href="../../../Data_Integration/IBM_InfoSphere_DataStage/" title="11.5.0.2 <--> C60" class="md-nav__link">
       11.5.0.2 <--> C60
     </a>
   </li>
@@ -1426,7 +1441,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 <--> C80" class="md-nav__link">
       10.2.0 <--> C80
     </a>
   </li>
@@ -1438,7 +1453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_PowerCenter/" title="10.2.0 <--> 6.5" class="md-nav__link">
       10.2.0 <--> 6.5
     </a>
   </li>
@@ -1474,7 +1489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_PWX_CDC/" title="10.2.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_PWX_CDC/" title="10.2.0 <--> C80" class="md-nav__link">
       10.2.0 <--> C80
     </a>
   </li>
@@ -1510,7 +1525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C50" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 <--> C50" class="md-nav__link">
       10.0.0 <--> C50
     </a>
   </li>
@@ -1522,7 +1537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C60" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 <--> C60" class="md-nav__link">
       10.0.0 <--> C60
     </a>
   </li>
@@ -1534,7 +1549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.0.0 <--> C80" class="md-nav__link">
       10.0.0 <--> C80
     </a>
   </li>
@@ -1546,7 +1561,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_BDM_PushDown/" title="10.0.0 C70" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_BDM_PushDown/" title="10.0.0 <--> C70" class="md-nav__link">
       10.0.0 <--> C70
     </a>
   </li>
@@ -1558,7 +1573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.2.2 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Informatica_BDM_10.2.2/" title="10.2.2 <--> 6.5" class="md-nav__link">
       10.2.2 <--> 6.5
     </a>
   </li>
@@ -1594,7 +1609,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Kafka_Manager/" title="1.3.3.21 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Kafka_Manager/" title="1.3.3.21 <--> C80" class="md-nav__link">
       1.3.3.21 <--> C80
     </a>
   </li>
@@ -1606,7 +1621,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Kafka_Manager/" title="1.3.3.21 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Kafka_Manager/" title="1.3.3.21 <--> 6.5" class="md-nav__link">
       1.3.3.21 <--> 6.5
     </a>
   </li>
@@ -1642,7 +1657,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 C60" class="md-nav__link">
+    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 <--> C60" class="md-nav__link">
       6.1 <--> C60
     </a>
   </li>
@@ -1654,7 +1669,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 C70" class="md-nav__link">
+    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 <--> C70" class="md-nav__link">
       6.1 <--> C70
     </a>
   </li>
@@ -1666,7 +1681,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Kettle_6.1/" title="6.1 <--> C80" class="md-nav__link">
       6.1 <--> C80
     </a>
   </li>
@@ -1702,7 +1717,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Knime/" title="3.6.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Knime/" title="3.6.1 <--> C80" class="md-nav__link">
       3.6.1 <--> C80
     </a>
   </li>
@@ -1714,7 +1729,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Knime/" title="4.1.0 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Knime/" title="4.1.0 <--> 6.5" class="md-nav__link">
       4.1.0 <--> 6.5
     </a>
   </li>
@@ -1750,7 +1765,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/OceanSource/" title="1.0 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/OceanSource/" title="1.0 <--> C80" class="md-nav__link">
       1.0 <--> C80
     </a>
   </li>
@@ -1786,7 +1801,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.2 C60" class="md-nav__link">
+    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.2 <--> C60" class="md-nav__link">
       12.2 <--> C60
     </a>
   </li>
@@ -1798,7 +1813,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.2 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.2 <--> 6.5" class="md-nav__link">
       12.2 <--> 6.5
     </a>
   </li>
@@ -1810,7 +1825,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.3 C70" class="md-nav__link">
+    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.3 <--> C70" class="md-nav__link">
       12.3 <--> C70
     </a>
   </li>
@@ -1822,7 +1837,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.3 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Oracle_GoldenGate/" title="12.3 <--> C80" class="md-nav__link">
       12.3 <--> C80
     </a>
   </li>
@@ -1858,7 +1873,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Pentaho/" title="7.1 C70" class="md-nav__link">
+    <a href="../../../Data_Integration/Pentaho/" title="7.1 <--> C70" class="md-nav__link">
       7.1 <--> C70
     </a>
   </li>
@@ -1870,7 +1885,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Pentaho/" title="8.0 C60" class="md-nav__link">
+    <a href="../../../Data_Integration/Pentaho/" title="8.0 <--> C60" class="md-nav__link">
       8.0 <--> C60
     </a>
   </li>
@@ -1906,7 +1921,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/SharePlex/" title="9.2.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/SharePlex/" title="9.2.1 <--> C80" class="md-nav__link">
       9.2.1 <--> C80
     </a>
   </li>
@@ -1918,7 +1933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/SharePlex/" title="9.2.1 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/SharePlex/" title="9.2.1 <--> 6.5" class="md-nav__link">
       9.2.1 <--> 6.5
     </a>
   </li>
@@ -1954,7 +1969,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/streamsets_3.16.1/" title="3.16.1 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/streamsets_3.16.1/" title="3.16.1 <--> 6.5" class="md-nav__link">
       3.16.1 <--> 6.5
     </a>
   </li>
@@ -1990,7 +2005,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Talend_6.4.1/" title="6.4.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Talend_6.4.1/" title="6.4.1 <--> C80" class="md-nav__link">
       6.4.1 <--> C80
     </a>
   </li>
@@ -2002,7 +2017,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Talend_6.4.1/" title="7.0.1 C80" class="md-nav__link">
+    <a href="../../../Data_Integration/Talend_6.4.1/" title="7.0.1 <--> C80" class="md-nav__link">
       7.0.1 <--> C80
     </a>
   </li>
@@ -2014,7 +2029,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/Talend_7.2.1/" title="7.2.1 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/Talend_7.2.1/" title="7.2.1 <--> 6.5" class="md-nav__link">
       7.2.1 <--> 6.5
     </a>
   </li>
@@ -2050,7 +2065,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/TIBCO_BusinessWorks/" title="5.13 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/TIBCO_BusinessWorks/" title="5.13 <--> 6.5" class="md-nav__link">
       5.13 <--> 6.5
     </a>
   </li>
@@ -2086,7 +2101,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/DEBEZIUM/" title="1.0.0 6.5" class="md-nav__link">
+    <a href="../../../Data_Integration/DEBEZIUM/" title="1.0.0 <--> 6.5" class="md-nav__link">
       1.0.0 <--> 6.5
     </a>
   </li>
@@ -2122,7 +2137,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Data_Integration/杭州合众UTL/" title="5.1 C50" class="md-nav__link">
+    <a href="../../../Data_Integration/%E6%9D%AD%E5%B7%9E%E5%90%88%E4%BC%97UTL/" title="5.1 <--> C50" class="md-nav__link">
       5.1 <--> C50
     </a>
   </li>
@@ -2182,7 +2197,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/apache_druid_0.14.2/" title="0.14.2 C80" class="md-nav__link">
+    <a href="../../../Database/apache_druid_0.14.2/" title="0.14.2 <--> C80" class="md-nav__link">
       0.14.2 <--> C80
     </a>
   </li>
@@ -2194,7 +2209,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/apache_druid_0.15.1/" title="0.15.1 C80" class="md-nav__link">
+    <a href="../../../Database/apache_druid_0.15.1/" title="0.15.1 <--> C80" class="md-nav__link">
       0.15.1 <--> C80
     </a>
   </li>
@@ -2230,7 +2245,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/OpenTSDB_2.4.0/" title="2.4.0 6.5" class="md-nav__link">
+    <a href="../../../Database/OpenTSDB_2.4.0/" title="2.4.0 <--> 6.5" class="md-nav__link">
       2.4.0 <--> 6.5
     </a>
   </li>
@@ -2266,7 +2281,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/SAP_VORA/" title="2.0 C70" class="md-nav__link">
+    <a href="../../../Database/SAP_VORA/" title="2.0 <--> C70" class="md-nav__link">
       2.0 <--> C70
     </a>
   </li>
@@ -2278,7 +2293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/SAP_VORA/" title="2.1 C70" class="md-nav__link">
+    <a href="../../../Database/SAP_VORA/" title="2.1 <--> C70" class="md-nav__link">
       2.1 <--> C70
     </a>
   </li>
@@ -2314,7 +2329,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Database/杭州合众UDB/" title="6.1 C50" class="md-nav__link">
+    <a href="../../../Database/%E6%9D%AD%E5%B7%9E%E5%90%88%E4%BC%97UDB/" title="6.1 <--> C50" class="md-nav__link">
       6.1 <--> C50
     </a>
   </li>
@@ -2374,7 +2389,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Anaconda/" title="2-2019.03-Linux-x86_64 6.5" class="md-nav__link">
+    <a href="../../../Development/Anaconda/" title="2-2019.03-Linux-x86_64 <--> 6.5" class="md-nav__link">
       2-2019.03-Linux-x86_64 <--> 6.5
     </a>
   </li>
@@ -2410,7 +2425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DBeaver_4.2.1/" title="4.0.8 C60" class="md-nav__link">
+    <a href="../../../Development/DBeaver_4.2.1/" title="4.0.8 <--> C60" class="md-nav__link">
       4.0.8 <--> C60
     </a>
   </li>
@@ -2422,7 +2437,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DBeaver_4.2.1/" title="4.2.1 C70" class="md-nav__link">
+    <a href="../../../Development/DBeaver_4.2.1/" title="4.2.1 <--> C70" class="md-nav__link">
       4.2.1 <--> C70
     </a>
   </li>
@@ -2434,7 +2449,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DBeaver_6.1.4/" title="6.1.4 6.5" class="md-nav__link">
+    <a href="../../../Development/DBeaver_6.1.4/" title="6.1.4 <--> 6.5" class="md-nav__link">
       6.1.4 <--> 6.5
     </a>
   </li>
@@ -2446,7 +2461,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DBeaver_6.3.4/" title="6.3.4 6.5" class="md-nav__link">
+    <a href="../../../Development/DBeaver_6.3.4/" title="6.3.4 <--> 6.5" class="md-nav__link">
       6.3.4 <--> 6.5
     </a>
   </li>
@@ -2482,7 +2497,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DbVisualizer_10.0.1/" title="10.0.1 C70" class="md-nav__link">
+    <a href="../../../Development/DbVisualizer_10.0.1/" title="10.0.1 <--> C70" class="md-nav__link">
       10.0.1 <--> C70
     </a>
   </li>
@@ -2494,7 +2509,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DbVisualizer_10.0.21/" title="10.0.21 6.5" class="md-nav__link">
+    <a href="../../../Development/DbVisualizer_10.0.21/" title="10.0.21 <--> 6.5" class="md-nav__link">
       10.0.21 <--> 6.5
     </a>
   </li>
@@ -2506,7 +2521,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/DbVisualizer_10.0.1/" title="9.5.7 C60" class="md-nav__link">
+    <a href="../../../Development/DbVisualizer_10.0.1/" title="9.5.7 <--> C60" class="md-nav__link">
       9.5.7 <--> C60
     </a>
   </li>
@@ -2542,7 +2557,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/HUE/" title="4.0.1 C70" class="md-nav__link">
+    <a href="../../../Development/HUE/" title="4.0.1 <--> C70" class="md-nav__link">
       4.0.1 <--> C70
     </a>
   </li>
@@ -2578,7 +2593,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Jupyter_Notebook/" title="2.4.4.0 C70" class="md-nav__link">
+    <a href="../../../Development/Jupyter_Notebook/" title="2.4.4.0 <--> C70" class="md-nav__link">
       2.4.4.0 <--> C70
     </a>
   </li>
@@ -2590,7 +2605,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/JupyterNotebook/" title="2.7.16 C80" class="md-nav__link">
+    <a href="../../../Development/JupyterNotebook/" title="2.7.16 <--> C80" class="md-nav__link">
       2.7.16 <--> C80
     </a>
   </li>
@@ -2602,7 +2617,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/JupyterNotebook/" title="2.7.16 6.5" class="md-nav__link">
+    <a href="../../../Development/JupyterNotebook/" title="2.7.16 <--> 6.5" class="md-nav__link">
       2.7.16 <--> 6.5
     </a>
   </li>
@@ -2638,7 +2653,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/JupyterHub/" title="1.0.0 C80" class="md-nav__link">
+    <a href="../../../Development/JupyterHub/" title="1.0.0 <--> C80" class="md-nav__link">
       1.0.0 <--> C80
     </a>
   </li>
@@ -2674,7 +2689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/RStudio/" title="3.4.1 C60" class="md-nav__link">
+    <a href="../../../Development/RStudio/" title="3.4.1 <--> C60" class="md-nav__link">
       3.4.1 <--> C60
     </a>
   </li>
@@ -2686,7 +2701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/RStudio/" title="3.4.1 C70" class="md-nav__link">
+    <a href="../../../Development/RStudio/" title="3.4.1 <--> C70" class="md-nav__link">
       3.4.1 <--> C70
     </a>
   </li>
@@ -2722,7 +2737,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Squirrel_3.8.0/" title="3.7.1 C60" class="md-nav__link">
+    <a href="../../../Development/Squirrel_3.8.0/" title="3.7.1 <--> C60" class="md-nav__link">
       3.7.1 <--> C60
     </a>
   </li>
@@ -2734,7 +2749,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Squirrel_3.8.0/" title="3.8.0 C70" class="md-nav__link">
+    <a href="../../../Development/Squirrel_3.8.0/" title="3.8.0 <--> C70" class="md-nav__link">
       3.8.0 <--> C70
     </a>
   </li>
@@ -2746,7 +2761,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Squirrel_3.9.1/" title="3.9.1 6.5" class="md-nav__link">
+    <a href="../../../Development/Squirrel_3.9.1/" title="3.9.1 <--> 6.5" class="md-nav__link">
       3.9.1 <--> 6.5
     </a>
   </li>
@@ -2782,7 +2797,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Zeppelin_0.7.2/" title="0.7.2 C60" class="md-nav__link">
+    <a href="../../../Development/Zeppelin_0.7.2/" title="0.7.2 <--> C60" class="md-nav__link">
       0.7.2 <--> C60
     </a>
   </li>
@@ -2794,7 +2809,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Zeppelin_0.7.3/" title="0.7.3 C70" class="md-nav__link">
+    <a href="../../../Development/Zeppelin_0.7.3/" title="0.7.3 <--> C70" class="md-nav__link">
       0.7.3 <--> C70
     </a>
   </li>
@@ -2806,7 +2821,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Zeppelin_0.7.3/" title="0.7.3 C80" class="md-nav__link">
+    <a href="../../../Development/Zeppelin_0.7.3/" title="0.7.3 <--> C80" class="md-nav__link">
       0.7.3 <--> C80
     </a>
   </li>
@@ -2818,7 +2833,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Zeppelin_0.8.0/" title="0.8.0 C80" class="md-nav__link">
+    <a href="../../../Development/Zeppelin_0.8.0/" title="0.8.0 <--> C80" class="md-nav__link">
       0.8.0 <--> C80
     </a>
   </li>
@@ -2830,7 +2845,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Development/Zeppelin_0.8.1/" title="0.8.1 6.5" class="md-nav__link">
+    <a href="../../../Development/Zeppelin_0.8.1/" title="0.8.1 <--> 6.5" class="md-nav__link">
       0.8.1 <--> 6.5
     </a>
   </li>
@@ -2890,7 +2905,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Airflow/" title="1.10.6 6.5" class="md-nav__link">
+    <a href="../../Airflow/" title="1.10.6 <--> 6.5" class="md-nav__link">
       1.10.6 <--> 6.5
     </a>
   </li>
@@ -2926,7 +2941,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Apache_Livy_0_5_0/" title="0.5.0 C80" class="md-nav__link">
+    <a href="../../Apache_Livy_0_5_0/" title="0.5.0 <--> C80" class="md-nav__link">
       0.5.0 <--> C80
     </a>
   </li>
@@ -2938,7 +2953,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Apache_Livy_0_6_0/" title="0.6.0 6.5" class="md-nav__link">
+    <a href="../../Apache_Livy_0_6_0/" title="0.6.0 <--> 6.5" class="md-nav__link">
       0.6.0 <--> 6.5
     </a>
   </li>
@@ -2974,7 +2989,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../GIS_Tools/" title="1.0 C60" class="md-nav__link">
+    <a href="../../GIS_Tools/" title="1.0 <--> C60" class="md-nav__link">
       1.0 <--> C60
     </a>
   </li>
@@ -3010,7 +3025,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../IBM_WAS/" title="8.5.5.9 C50" class="md-nav__link">
+    <a href="../../IBM_WAS/" title="8.5.5.9 <--> C50" class="md-nav__link">
       8.5.5.9 <--> C50
     </a>
   </li>
@@ -3046,7 +3061,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Elasticsearch_Related/" title="6.1.3 C80" class="md-nav__link">
+    <a href="../../Elasticsearch_Related/" title="6.1.3 <--> C80" class="md-nav__link">
       6.1.3 <--> C80
     </a>
   </li>
@@ -3082,7 +3097,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Elasticsearch_Related/" title="6.4.2 C80" class="md-nav__link">
+    <a href="../../Elasticsearch_Related/" title="6.4.2 <--> C80" class="md-nav__link">
       6.4.2 <--> C80
     </a>
   </li>
@@ -3094,7 +3109,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Logstash/" title="6.7.1 6.5" class="md-nav__link">
+    <a href="../../Logstash/" title="6.7.1 <--> 6.5" class="md-nav__link">
       6.7.1 <--> 6.5
     </a>
   </li>
@@ -3130,7 +3145,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../NeoKylin/" title="6.9 C70" class="md-nav__link">
+    <a href="../../NeoKylin/" title="6.9 <--> C70" class="md-nav__link">
       6.9 <--> C70
     </a>
   </li>
@@ -3142,7 +3157,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../NeoKylin/" title="7.2 C70" class="md-nav__link">
+    <a href="../../NeoKylin/" title="7.2 <--> C70" class="md-nav__link">
       7.2 <--> C70
     </a>
   </li>
@@ -3178,7 +3193,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tensorflow/" title="1.15.0 6.5" class="md-nav__link">
+    <a href="../../Tensorflow/" title="1.15.0 <--> 6.5" class="md-nav__link">
       1.15.0 <--> 6.5
     </a>
   </li>
@@ -3190,7 +3205,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tensorflow/" title="2.1.0 6.5" class="md-nav__link">
+    <a href="../../Tensorflow/" title="2.1.0 <--> 6.5" class="md-nav__link">
       2.1.0 <--> 6.5
     </a>
   </li>
@@ -3226,7 +3241,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Elasticsearch_Related/" title="1.0 C80" class="md-nav__link">
+    <a href="../../Elasticsearch_Related/" title="1.0 <--> C80" class="md-nav__link">
       1.0 <--> C80
     </a>
   </li>
@@ -3262,7 +3277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Elasticsearch_Related/" title="6.5.1 C80" class="md-nav__link">
+    <a href="../../Elasticsearch_Related/" title="6.5.1 <--> C80" class="md-nav__link">
       6.5.1 <--> C80
     </a>
   </li>
@@ -3298,7 +3313,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../librdkafka/" title="1.0 6.5" class="md-nav__link">
+    <a href="../../librdkafka/" title="1.0 <--> 6.5" class="md-nav__link">
       1.0 <--> 6.5
     </a>
   </li>
@@ -3334,7 +3349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../对接问题总结1.0/" title="1.0 6.5" class="md-nav__link">
+    <a href="../../%E5%AF%B9%E6%8E%A5%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%931.0/" title="1.0 <--> 6.5" class="md-nav__link">
       1.0 <--> 6.5
     </a>
   </li>
@@ -3394,7 +3409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/ApacheDrill_1.15.0toHD651/" title="1.15.0 6.5" class="md-nav__link">
+    <a href="../../../SQL_Analytics/ApacheDrill_1.15.0toHD651/" title="1.15.0 <--> 6.5" class="md-nav__link">
       1.15.0 <--> 6.5
     </a>
   </li>
@@ -3406,7 +3421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Apache_Drill_1.15.0/" title="1.15.0 C80" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Apache_Drill_1.15.0/" title="1.15.0 <--> C80" class="md-nav__link">
       1.15.0 <--> C80
     </a>
   </li>
@@ -3442,7 +3457,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Apache_Kylin_1.6.0/" title="1.6.0 C60" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Apache_Kylin_1.6.0/" title="1.6.0 <--> C60" class="md-nav__link">
       1.6.0 <--> C60
     </a>
   </li>
@@ -3454,7 +3469,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Apache_Kylin_2.1.0/" title="2.1.0 C70" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Apache_Kylin_2.1.0/" title="2.1.0 <--> C70" class="md-nav__link">
       2.1.0 <--> C70
     </a>
   </li>
@@ -3466,7 +3481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Apache_Kylin_2.3.1/" title="2.3.1 C80" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Apache_Kylin_2.3.1/" title="2.3.1 <--> C80" class="md-nav__link">
       2.3.1 <--> C80
     </a>
   </li>
@@ -3478,7 +3493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Apache_Kylin_2.6.1/" title="2.6.1 6.5" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Apache_Kylin_2.6.1/" title="2.6.1 <--> 6.5" class="md-nav__link">
       2.6.1 <--> 6.5
     </a>
   </li>
@@ -3490,7 +3505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/ApacheKylin3.0.1/" title="3.0.1 6.5" class="md-nav__link">
+    <a href="../../../SQL_Analytics/ApacheKylin3.0.1/" title="3.0.1 <--> 6.5" class="md-nav__link">
       3.0.1 <--> 6.5
     </a>
   </li>
@@ -3526,7 +3541,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Kyligence/" title="2.2 C60" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Kyligence/" title="2.2 <--> C60" class="md-nav__link">
       2.2 <--> C60
     </a>
   </li>
@@ -3538,7 +3553,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Kyligence/" title="2.3 C60" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Kyligence/" title="2.3 <--> C60" class="md-nav__link">
       2.3 <--> C60
     </a>
   </li>
@@ -3550,7 +3565,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Kyligence/" title="2.4 C70" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Kyligence/" title="2.4 <--> C70" class="md-nav__link">
       2.4 <--> C70
     </a>
   </li>
@@ -3562,7 +3577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Kyligence/" title="2.5 C70" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Kyligence/" title="2.5 <--> C70" class="md-nav__link">
       2.5 <--> C70
     </a>
   </li>
@@ -3574,7 +3589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Kyligence/" title="3.0 C80" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Kyligence/" title="3.0 <--> C80" class="md-nav__link">
       3.0 <--> C80
     </a>
   </li>
@@ -3610,7 +3625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Presto_0.155/" title="0.155 C60" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Presto_0.155/" title="0.155 <--> C60" class="md-nav__link">
       0.155 <--> C60
     </a>
   </li>
@@ -3622,7 +3637,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Presto_0.184/" title="0.184 C70" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Presto_0.184/" title="0.184 <--> C70" class="md-nav__link">
       0.184 <--> C70
     </a>
   </li>
@@ -3634,7 +3649,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Presto_0.184/" title="0.196 C80" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Presto_0.184/" title="0.196 <--> C80" class="md-nav__link">
       0.196 <--> C80
     </a>
   </li>
@@ -3646,7 +3661,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Presto_0.210/" title="0.210 C80" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Presto_0.210/" title="0.210 <--> C80" class="md-nav__link">
       0.210 <--> C80
     </a>
   </li>
@@ -3658,7 +3673,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../SQL_Analytics/Presto_0.210/" title="0.210 6.5" class="md-nav__link">
+    <a href="../../../SQL_Analytics/Presto_0.210/" title="0.210 <--> 6.5" class="md-nav__link">
       0.210 <--> 6.5
     </a>
   </li>
@@ -3695,7 +3710,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#roma" class="md-nav__link">
+  <a href="#roma" title="ROMA介绍" class="md-nav__link">
     ROMA介绍
   </a>
   
@@ -3703,28 +3718,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#roma_1" class="md-nav__link">
+  <a href="#roma_1" title="ROMA简介" class="md-nav__link">
     ROMA简介
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#roma_2" class="md-nav__link">
+  <a href="#roma_2" title="ROMA定位" class="md-nav__link">
     ROMA定位
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#roma_3" class="md-nav__link">
+  <a href="#roma_3" title="ROMA组件及功能介绍" class="md-nav__link">
     ROMA组件及功能介绍
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#roma-fdi" class="md-nav__link">
+  <a href="#roma-fdi" title="ROMA FDI支持的数据源" class="md-nav__link">
     ROMA FDI支持的数据源
   </a>
   
@@ -3736,7 +3751,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roma_4" class="md-nav__link">
+  <a href="#roma_4" title="ROMA安装配置" class="md-nav__link">
     ROMA安装配置
   </a>
   
@@ -3744,28 +3759,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_1" title="版本配套关系" class="md-nav__link">
     版本配套关系
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_2" title="安装指导文档" class="md-nav__link">
     安装指导文档
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_3" title="安装规划" class="md-nav__link">
     安装规划
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_4" title="安装注意事项" class="md-nav__link">
     安装注意事项
   </a>
   
@@ -3777,7 +3792,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#romafusioninsight" class="md-nav__link">
+  <a href="#romafusioninsight" title="ROMA对接FusionInsight配置指导" class="md-nav__link">
     ROMA对接FusionInsight配置指导
   </a>
   
@@ -3785,21 +3800,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#roma-fdihive" class="md-nav__link">
+  <a href="#roma-fdihive" title="ROMA FDI对接HIVE" class="md-nav__link">
     ROMA FDI对接HIVE
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#roma-fdihdfs" class="md-nav__link">
+  <a href="#roma-fdihdfs" title="ROMA FDI对接HDFS" class="md-nav__link">
     ROMA FDI对接HDFS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#roma-fdikafka" class="md-nav__link">
+  <a href="#roma-fdikafka" title="ROMA FDI对接KAFKA" class="md-nav__link">
     ROMA FDI对接KAFKA
   </a>
   
@@ -3811,7 +3826,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roma-fusioninsight-hdfshivekafka" class="md-nav__link">
+  <a href="#roma-fusioninsight-hdfshivekafka" title="ROMA 对接FusionInsight HDFS、Hive及Kafka示例场景" class="md-nav__link">
     ROMA 对接FusionInsight HDFS、Hive及Kafka示例场景
   </a>
   
@@ -3819,14 +3834,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_5" title="示例场景说明" class="md-nav__link">
     示例场景说明
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_6" title="示例准备过程" class="md-nav__link">
     示例准备过程
   </a>
   
@@ -3834,7 +3849,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_7" title="测试数据准备" class="md-nav__link">
     测试数据准备
   </a>
   
@@ -3846,7 +3861,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#api" title="发布客户关系管理系统中的数据为数据API服务" class="md-nav__link">
     发布客户关系管理系统中的数据为数据API服务
   </a>
   
@@ -3854,21 +3869,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_8" title="注册应用" class="md-nav__link">
     注册应用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#livedata" class="md-nav__link">
+  <a href="#livedata" title="创建LiveData数据源" class="md-nav__link">
     创建LiveData数据源
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api_1" class="md-nav__link">
+  <a href="#api_1" title="创建/测试/部署/授权API" class="md-nav__link">
     创建/测试/部署/授权API
   </a>
   
@@ -3880,7 +3895,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-hive" class="md-nav__link">
+  <a href="#api-hive" title="集成API数据到 Hive表中。" class="md-nav__link">
     集成API数据到 Hive表中。
   </a>
   
@@ -3888,14 +3903,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#api_2" class="md-nav__link">
+  <a href="#api_2" title="创建API数据源" class="md-nav__link">
     创建API数据源
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apihive" class="md-nav__link">
+  <a href="#apihive" title="创建API数据同步到hive的任务" class="md-nav__link">
     创建API数据同步到hive的任务
   </a>
   
@@ -3907,14 +3922,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fdihive" class="md-nav__link">
+  <a href="#fdihive" title="使用FDI加载历史数据到hive表中" class="md-nav__link">
     使用FDI加载历史数据到hive表中
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#iotfi-hive" class="md-nav__link">
+  <a href="#iotfi-hive" title="模拟IOT设备，将实时增量数据同步到FI HIVE表中" class="md-nav__link">
     模拟IOT设备，将实时增量数据同步到FI HIVE表中
   </a>
   
@@ -3922,28 +3937,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mqstopic" class="md-nav__link">
+  <a href="#mqstopic" title="MQS创建TOPIC" class="md-nav__link">
     MQS创建TOPIC
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
+  <a href="#topic" title="发布Topic" class="md-nav__link">
     发布Topic
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_9" title="订阅应用" class="md-nav__link">
     订阅应用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#link" class="md-nav__link">
+  <a href="#link" title="LINK接入模拟设备" class="md-nav__link">
     LINK接入模拟设备
   </a>
   
@@ -3951,63 +3966,63 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_10" title="添加应用实例" class="md-nav__link">
     添加应用实例
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_11" title="创建模型" class="md-nav__link">
     创建模型
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_12" title="创建产品（网关产品）" class="md-nav__link">
     创建产品（网关产品）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_13" title="创建产品（普通产品）" class="md-nav__link">
     创建产品（普通产品）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_14" title="创建网关设备" class="md-nav__link">
     创建网关设备
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_15" title="模拟上线网关和电子设备" class="md-nav__link">
     模拟上线网关和电子设备
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_16" title="配置规则引擎" class="md-nav__link">
     配置规则引擎
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_17" title="模拟发送消息" class="md-nav__link">
     模拟发送消息
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mqs" class="md-nav__link">
+  <a href="#mqs" title="查看MQS中发送的消息" class="md-nav__link">
     查看MQS中发送的消息
   </a>
   
@@ -4019,7 +4034,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fdi" class="md-nav__link">
+  <a href="#fdi" title="FDI采集实时用电数据" class="md-nav__link">
     FDI采集实时用电数据
   </a>
   
@@ -4031,14 +4046,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hivemysql" class="md-nav__link">
+  <a href="#hivemysql" title="在Hive表执行数据分析，并将结果导入到mysql" class="md-nav__link">
     在Hive表执行数据分析，并将结果导入到mysql
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#livedata-api" class="md-nav__link">
+  <a href="#livedata-api" title="通过LiveData API，开放数据服务。" class="md-nav__link">
     通过LiveData API，开放数据服务。
   </a>
   
@@ -4074,7 +4089,7 @@
 <ul>
 <li>
 <p>ROMA是多云时代的融合集成平台，源自华为10+年数字化转型实践，聚焦A（Application）、B（Business）、C（Cloud）、D（Device）四类集成场景，提供快速、简单的消息、数据、服务、设备集成能力，简化企业上云，支持云上云下、跨区域集成，打通IT与OT，连接企业与生态伙伴，助力行业数字化转型。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/87de8.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/87de8.png" /></p>
 </li>
 <li>
 <p>ROMA致力于解决行业在向数字化转型的过程中面临的难题：</p>
@@ -4098,7 +4113,7 @@
 <ul>
 <li>
 <p>ROMA定位为便捷的集成平台，提供数据接入、数据集成以及数据服务API构建的能力。ROMA不是传统的ETL工具，提供相比ETL工具更为丰富的数据源支持类型以及更为丰富的功能。ROMA不是大数据平台，ROMA支持将来自不同系统的多种类型及格式的数据同步到FusionInsight，实现IT和OT数据汇聚，经过FusionInsight数据分析后的数据导入到数据集市，ROMA通过APIC LiveData 对外提供Restful的数据服务接口。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/a82bc.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/a82bc.png" /></p>
 </li>
 </ul>
 <h3 id="roma_3">ROMA组件及功能介绍<a class="headerlink" href="#roma_3" title="Permanent link">&para;</a></h3>
@@ -4125,7 +4140,7 @@
 <ul>
 <li>
 <p>ROMA FDI支持的数据源如下：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/d72ac.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/d72ac.png" /></p>
 </li>
 </ul>
 <h2 id="roma_4">ROMA安装配置<a class="headerlink" href="#roma_4" title="Permanent link">&para;</a></h2>
@@ -4262,17 +4277,17 @@
 <p>修改guava-26.0-jre.jar的所有者及权限：</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>chown romafdi:users guava-26.0-jre.jar
+<div class="highlight"><pre><span></span><code>chown romafdi:users guava-26.0-jre.jar
 chmod 755 guava-26.0-jre.jar
-</pre></div>
+</code></pre></div>
 
 <ul>
 <li>重启fi reader/writer服务使jar包替换生效，以下为替换hivewriter guava版本后重启服务的命令，重启hdfs/hive/kafa的reader和writer的命令类似，替换 <em>tomcat-fihivewriter</em> 为对应路径即可。</li>
 </ul>
-<div class="codehilite"><pre><span></span>su - romafdi
+<div class="highlight"><pre><span></span><code>su - romafdi
 cd /data01/fdi/tomcat-fihivewriter/bin
 sh catalina.sh stop;sh catalina.sh star
-</pre></div>
+</code></pre></div>
 
 </li>
 </ul>
@@ -4295,7 +4310,7 @@ sh catalina.sh stop;sh catalina.sh star
 <ul>
 <li>
 <p>参考配置如下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/9466c.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/9466c.png" /></p>
 </li>
 </ul>
 </li>
@@ -4346,7 +4361,7 @@ sh catalina.sh stop;sh catalina.sh star
 <ul>
 <li>
 <p>配置参考下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/b660b.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/b660b.png" /></p>
 </li>
 </ul>
 <h3 id="roma-fdikafka">ROMA FDI对接KAFKA<a class="headerlink" href="#roma-fdikafka" title="Permanent link">&para;</a></h3>
@@ -4425,7 +4440,7 @@ sh catalina.sh stop;sh catalina.sh star
 <li>
 <p>示例场景</p>
 <p>示例场景模拟了用电管理系统和客户关系管理系统，通过ROMA分别获取客户关系管理系统中的用户信息和用电管理系统中的电表信息并写入到HIVE中，经过Hive分析后，将数据导入到gauss数据库，并以REST API接口方式提供用电数据查询服务。</p>
-<p><img alt="" src="../assets/FusionInsight集成Roma最佳实践-ca11b.png" /></p>
+<p><img alt="" src="../assets/FusionInsight%E9%9B%86%E6%88%90Roma%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-ca11b.png" /></p>
 <p>主要步骤：</p>
 <ol>
 <li>
@@ -4449,7 +4464,7 @@ sh catalina.sh stop;sh catalina.sh star
 <h3 id="_6">示例准备过程<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="_7">测试数据准备<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>*　模拟客户关系管理数据库中的客户信息。准备一台mysql服务器，创建customer_info表，包括用户ID，用户姓名，用户家庭住址，用户电表设备ID。</p>
-<div class="codehilite"><pre><span></span>```
+<div class="codehilite"><pre><span></span><code>```
 create database roma_customer;
 use roma_customer;
 create table customer_info(id int primary key auto_increment, user_name varchar(20), address varchar(50), device_id varchar(10));
@@ -4457,13 +4472,13 @@ insert into customer_info(user_name,address,device_id) values(&#39;matt&#39;,&#3
 insert into customer_info(user_name,address,device_id) values(&#39;justin&#39;,&#39;shenzhen e1&#39;,&#39;meter02&#39;);
 insert into customer_info(user_name,address,device_id) values(&#39;haoxi&#39;,&#39;chengdu u9&#39;,&#39;meter03&#39;);
 ```
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>
 <p>在支持sftp的linux服务器上准备电表数据，以txt文件格式存放，各列数据通过分号 <strong>;</strong> 分隔，主要包括设备ID字段，数据采集日期，采集值。</p>
-<div class="codehilite"><pre><span></span>mkdir /elechistorydata
+<div class="highlight"><pre><span></span><code>mkdir /elechistorydata
 vi /elechistorydata/history.txt
 插入以下内容：
 meter01;20190101;101
@@ -4502,30 +4517,30 @@ meter03;20190330;330
 meter03;20190401;401
 meter03;20190415;415
 meter03;20190430;430
-</pre></div>
+</code></pre></div>
 
 </li>
 <li>
 <p>创建hive table用以存放电表上报数据。</p>
-<div class="codehilite"><pre><span></span>create database elect;
+<div class="highlight"><pre><span></span><code>create database elect;
 use elect;
 create table elect_table(device_id string,upload_date date, elect_value int);
-</pre></div>
+</code></pre></div>
 
 </li>
 <li>
 <p>创建当月测试数据，在FI 客户端上执行以下命令:</p>
-<div class="codehilite"><pre><span></span>beeline -e &quot;insert into elect.elect_table values(&#39;meter01&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
+<div class="highlight"><pre><span></span><code>beeline -e &quot;insert into elect.elect_table values(&#39;meter01&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
 beeline -e &quot;insert into elect.elect_table values(&#39;meter02&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
 beeline -e &quot;insert into elect.elect_table values(&#39;meter03&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
-</pre></div>
+</code></pre></div>
 
 </li>
 <li>
 <p>创建hive table用以存放客户信息</p>
-<div class="codehilite"><pre><span></span>use elect;
+<div class="highlight"><pre><span></span><code>use elect;
 create table customer_info(id int,user_name varchar(20),address varchar(20), device_id varchar(20));
-</pre></div>
+</code></pre></div>
 
 </li>
 </ul>
@@ -4537,14 +4552,14 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 </li>
 <li>
 <p>在弹出页面输入应用注册信息,点击 <strong><em>提交</em></strong> 完成注册。分别注册CRMusers数据源和Electricity.name应用。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/62066.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/62066.png" /></p>
 </li>
 </ul>
 <h4 id="livedata">创建LiveData数据源<a class="headerlink" href="#livedata" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>在ROMA左侧导航树选择“服务集成 &gt; Live Data &gt; 资源管理 &gt; 数据源管理”。单击新建，创建数据源，参考配参考配置如下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/a2e8d.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/a2e8d.png" /></p>
 <p>点击 <strong>连接测试</strong>，验证是否连通。验证成功后，点击 <strong>提交</strong>，完成数据源创建。</p>
 </li>
 </ul>
@@ -4552,16 +4567,16 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 <ul>
 <li>
 <p>在ROMA左侧导航树选择“服务集成 &gt; Live Data &gt; API设计”。单击“新建”，设置API基本信息。配置参考下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/c6b65.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/c6b65.png" /></p>
 <p>配置完成后，点击提交，选择 <strong>进入开发</strong> 模式，选择 <strong>数据开发</strong>，选择 <strong>数据API</strong> 。</p>
 <p>数据源信息参考如下配置：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/2f9c7.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/2f9c7.png" /></p>
 <p>点击提交，选择 <strong>进入测试</strong>，保持默认值，点击测试API，查看测试结果。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/63b0b.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/63b0b.png" /></p>
 <p>在ROMA左侧导航树选择“服务集成 &gt; Live Data &gt; API部署”，选择对应API,右侧点击部署图标，保持默认配置，完成部署。</p>
 <p>在ROMA左侧导航树选择“服务集成 &gt; API 网关 &gt; API授权”。选择对应API,点击授权图标，授权给用电管理系统应用，如Electricity.name</p>
 <p>在ROMA左侧导航树选择“服务集成 &gt; API 网关 &gt; API测试”。在“data_api”API的最右侧“操作”列，单击调测图标，进入“API测试”页面。“请求路径”即API的对外发布地址。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/608a7.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/608a7.png" /></p>
 </li>
 </ul>
 <h3 id="api-hive">集成API数据到 Hive表中。<a class="headerlink" href="#api-hive" title="Permanent link">&para;</a></h3>
@@ -4569,7 +4584,7 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 <ul>
 <li>
 <p>新增加API数据源，内容参考下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/388b5.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/388b5.png" /></p>
 </li>
 </ul>
 <h4 id="apihive">创建API数据同步到hive的任务<a class="headerlink" href="#apihive" title="Permanent link">&para;</a></h4>
@@ -4580,17 +4595,17 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 <li>
 <p>选择对应的API数据源和hivewriter，填入相关的参数信息：</p>
 <p>源端配置参考下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/84846.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/84846.png" /></p>
 <p>其中涉及metaData格式转换的内容，可以参考以下内容：</p>
-<div class="codehilite"><pre><span></span>[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;path&quot;:&quot;retJSON.result[i].id&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;user_name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i]..user_name&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;address&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].address&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;device_id&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].device_id&quot;,&quot;format&quot;:&quot;&quot;}]
-</pre></div>
+<div class="highlight"><pre><span></span><code>[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;path&quot;:&quot;retJSON.result[i].id&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;user_name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i]..user_name&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;address&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].address&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;device_id&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].device_id&quot;,&quot;format&quot;:&quot;&quot;}]
+</code></pre></div>
 
 <p>目标端配置信息参考下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/1546a.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/1546a.png" /></p>
 <p>映射关系如下：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/807cf.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/807cf.png" /></p>
 <p>配置成功后，点击保存，保存成功后，启动任务。查看任务详细，来自客户关系管理系统的数据已经通过API和FDI，实现数据同步到Hive表中。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/ae0a7.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/ae0a7.png" /></p>
 </li>
 </ul>
 <h3 id="fdihive">使用FDI加载历史数据到hive表中<a class="headerlink" href="#fdihive" title="Permanent link">&para;</a></h3>
@@ -4600,16 +4615,16 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 </li>
 <li>
 <p>创建FTP数据源,可参考如下配置</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/fcec1.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/fcec1.png" /></p>
 </li>
 <li>
 <p>创建迁移任务</p>
 <p>选择定时任务类型,源端配置参考如下:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/0ddb0.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/0ddb0.png" /></p>
 <p>目标端和映射配置参考下图,点击保存完成配置.</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/8a8c3.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/8a8c3.png" /></p>
 <p>任务列表中,点击手动调度,触发任务,查看任务执行结果.如下图，任务执行成功。将文本类型历史数据成功导入到 FI Hive中。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/87b6c.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/87b6c.png" /></p>
 </li>
 </ul>
 <h3 id="iotfi-hive">模拟IOT设备，将实时增量数据同步到FI HIVE表中<a class="headerlink" href="#iotfi-hive" title="Permanent link">&para;</a></h3>
@@ -4626,9 +4641,9 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 </li>
 <li>
 <p>单击“创建Topic”，进入“新增Topic”页面,创建名称T_ElectricityMeter的Topic。</p>
-<p><div class="codehilite"><pre><span></span>Topic名称：T_ElectricityMeter
+<p><div class="highlight"><pre><span></span><code>Topic名称：T_ElectricityMeter
 所属应用：Electricity.name
-</pre></div>
+</code></pre></div>
   * 单击“保存”。</p>
 </li>
 </ul>
@@ -4722,7 +4737,7 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 </li>
 <li>
 <p>配置参考下图:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/3209a.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/3209a.png" /></p>
 </li>
 </ol>
 <h5 id="_13">创建产品（普通产品）<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
@@ -4738,7 +4753,7 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 </li>
 <li>
 <p>配置参考下图:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/ecb32.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/ecb32.png" /></p>
 </li>
 <li>
 <p>填写完成后，单击“保存”，产品创建完成。</p>
@@ -4778,13 +4793,13 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 <p>在菜单栏中依次选择“File &gt; Import &gt; General &gt; Existing Projects into Workspace”，单击“Next”，导入本地Demo工程。</p>
 </li>
 </ol>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/308f1.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/308f1.png" /></p>
 <p>导入后目录格式如下:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/c8740.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/c8740.png" /></p>
 <p>在RUN Configuration中配置启动主函数,参考如下配置:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/51d70.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/51d70.png" /></p>
 <p>修改GatawayStub.java的start方法内容,主要替换内容包括DeviceInfo中的配置信息,以及设备ID.</p>
-<div class="codehilite"><pre><span></span>```
+<div class="codehilite"><pre><span></span><code>```
 DeviceInfo(null, &quot;TestId&quot;, &quot;TestType&quot;, &quot;TestModel&quot;, &quot;HUAWEI&quot;);
 childDevice.setDeviceIdentifier(&quot;meter01&quot;);
 ```
@@ -4878,20 +4893,20 @@ public void start() {
 
     }
   ```
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>
 <p>修改iotagent.properties配置参数,配置参考如下:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/a4b1e.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/a4b1e.png" /></p>
 </li>
 <li>
 <p>右键单击“GatewaySdkDemo”，选择“Run as&gt; Java Application”。</p>
 </li>
 <li>
 <p>单击“OK”，等待执行。执行成功后如下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/b99f8.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/b99f8.png" /></p>
 </li>
 <li>
 <p>在ROMA Portal查看网关设备和网关子设备是否已经上线。</p>
@@ -4907,10 +4922,10 @@ public void start() {
 </li>
 <li>
 <p>在规则引擎列表，单击“操作”列的“管理”。在弹出的“规则详情”页面的“数据源端”区域，单击“新增”，配置规则引擎的数据源端。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/ea6fc.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/ea6fc.png" /></p>
 <p>配置完成后，单击“保存”。</p>
 <p>增加目标端：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/933f0.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/933f0.png" /></p>
 <p>配置完成后，单击“保存”。规则引擎配置完成。</p>
 <p>参考以上步骤配置规则引擎meter_rule_02和meter_rule_03。</p>
 </li>
@@ -4979,16 +4994,16 @@ public void start() {
 </li>
 <li>
 <p>创建FDI任务，选择编排模式，选用实时同步模式</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/74154.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/74154.png" /></p>
 </li>
 <li>
 <p>读节点拖选MQS到编布,写节点拖选FI Hive，画布上完成连线，配置读写节点信息。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/52c85.png" /></p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/bfc5f.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/52c85.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/bfc5f.png" /></p>
 </li>
 <li>
 <p>配置转换节点信息，选择脚本模式。添加如下代码，完成了源和目标端数据字段的映射，并增加了时间字段，记录了每一条记录产生的时间。</p>
-<div class="codehilite"><pre><span></span>targetObj = {};
+<div class="highlight"><pre><span></span><code>targetObj = {};
 targetObj.id = sourceObj.id;
 targetObj.value = sourceObj.value;
 var date = new Date();
@@ -5003,7 +5018,7 @@ if(day &lt; 10){
 }
 targetObj.upload_date = year+&quot;-&quot;+mon+&quot;-&quot;+day;
 return targetObj;
-</pre></div>
+</code></pre></div>
 
 </li>
 <li>
@@ -5014,7 +5029,7 @@ return targetObj;
 </li>
 <li>
 <p>查看hive表，数据已成功插入，如下表所示，2020-01-08为新插入的3条实时采集数据。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/e57c1.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/e57c1.png" /></p>
 </li>
 <li>
 <p>至此，完成了实时IOT设备数据实时同步到FI hive的模拟。</p>
@@ -5024,7 +5039,7 @@ return targetObj;
 <ul>
 <li>
 <p>在Hive beeline模式下，创建shell脚本并执行，完成数据分析。</p>
-<div class="codehilite"><pre><span></span>touch elect_anaysis.sh
+<div class="highlight"><pre><span></span><code>touch elect_anaysis.sh
 chmod a+x elect_anaysis.sh
 脚本内容如下：
 #!/bin/bash
@@ -5037,24 +5052,24 @@ beeline -e &quot;$sql&quot;
 done
 done
 beeline -e &quot;select * from elect.analysis&quot;;
-</pre></div>
+</code></pre></div>
 
 <ul>
 <li>在mysql数据库中创建表,用来存放经过hive分析过的数据。在生产环境中，如果数据量较大，推荐将Hive分析过的数据存放到GaussDB A中。</li>
 </ul>
-<p><div class="codehilite"><pre><span></span>create table user_elects(user_name varchar(20),year int,month int,elect_value int);
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>create table user_elects(user_name varchar(20),year int,month int,elect_value int);
+</code></pre></div>
 * 创建FDI任务，定期同步hive分析表中的结果到mysql表中。配置参考下图:</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/8808a.png" /></p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/c6090.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/8808a.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/c6090.png" /></p>
 <p>保存后，手动调度任务，完成数据同步，同步完成后在mysql中查看数据。</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/80572.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/80572.png" /></p>
 <p>如图所示，可以查看到用户每月的用电情况。</p>
 <ul>
 <li>可以通过为表创建索引等，加速查询速度。</li>
 </ul>
-<div class="codehilite"><pre><span></span>create index index_uym on user_elects(user_name,year,month);
-</pre></div>
+<div class="highlight"><pre><span></span><code>create index index_uym on user_elects(user_name,year,month);
+</code></pre></div>
 
 </li>
 </ul>
@@ -5066,11 +5081,11 @@ beeline -e &quot;select * from elect.analysis&quot;;
 <ol>
 <li>
 <p>查询用户所有的用电记录，结果如下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/ce352.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/ce352.png" /></p>
 </li>
 <li>
 <p>查询用户在2020年1月的用电记录，结果如下图：</p>
-<p><img alt="" src="../assets/ROMA集成FusionInsight实践指导/1c846.png" /></p>
+<p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/1c846.png" /></p>
 </li>
 <li>
 <p>至此，示例验证完成，通过ROMA采集电表记录，并结合历史数据和实时数据，通过FI HIVE进行分析统计用户每月用电情况，并通过livedata API开放了数据查询接口。</p>
@@ -5117,7 +5132,7 @@ beeline -e &quot;select * from elect.analysis&quot;;
       
     </div>
     
-      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../assets/javascripts/application.59145f40.js"></script>
       
         
         
@@ -5126,13 +5141,17 @@ beeline -e &quot;select * from elect.analysis&quot;;
           
             
               
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
       
         <script src="../../../js/jq.js"></script>
       
