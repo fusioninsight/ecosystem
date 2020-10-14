@@ -1,6 +1,6 @@
 window.onload = function(){
-  document.getElementsByClassName('md-nav__title--site')[0].innerHTML ='<a href="https://fusioninsight.github.io/ecosystem/zh-hans" title="FusionInsight MRS 生态地图">FusionInsight MRS 生态地图</a>'
-  document.getElementsByClassName('md-header-nav__title')[0].innerHTML = '<a href="https://fusioninsight.github.io/ecosystem/zh-hans" title="FusionInsight MRS 生态地图">FusionInsight MRS 生态地图</a><a style="margin-left: 20px;font-size: .55rem;color: #000000ba;border-radius: 2px;background-color: #ffffff75;" href="https://fusioninsight.github.io/ecosystem/en">en</a>'
+  document.getElementsByClassName('md-nav__title--site')[0].innerHTML ='<a href="https://fusioninsight.github.io/ecosystem/zh-hans" title="智能数据生态地图">智能数据生态地图</a>'
+  document.getElementsByClassName('md-header-nav__title')[0].innerHTML = '<a href="https://fusioninsight.github.io/ecosystem/zh-hans" title="智能数据生态地图">智能数据生态地图</a><a style="margin-left: 20px;font-size: .55rem;color: #000000ba;border-radius: 2px;background-color: #ffffff75;" href="https://fusioninsight.github.io/ecosystem/en">en</a>'
 
   var scrolldiv = $('.details')[0].scrollTop;
 var existheader = $('.tg >thead');
