@@ -109,7 +109,7 @@
     ```
 
 
-  * 创建目录/opt/presto-server-0.210/etc/catalog,将FusionInsight HD客户端中的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.210/etc/catalog`中
+  * 创建目录/opt/presto-server-0.210/etc/catalog,将FusionInsight HD客户端中(从spark2x客户端目录下获取)的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.210/etc/catalog`中
 
     ```
     cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.210/etc/catalog/
