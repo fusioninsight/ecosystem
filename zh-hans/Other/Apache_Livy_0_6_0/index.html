@@ -3058,6 +3058,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    普通提交命令
+  </a>
+  
+</li>
+      
       
       
       
@@ -3537,6 +3544,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/ApacheDrillto17HD/" title="1.17.0 6.5" class="md-nav__link">
+      1.17.0 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/ApacheDrillto17HD/" title="1.17.0 8.0" class="md-nav__link">
+      1.17.0 <--> 8.0
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3909,6 +3940,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    普通提交命令
+  </a>
+  
+</li>
+      
       
       
       
@@ -3965,7 +4003,7 @@
 </ul>
 <p><img alt="" src="../assets/Apache_Livy_0_6_0/markdown-img-paste-20190802175641110.png" /></p>
 <ul>
-<li>使用FI HD客户端登录kadmin，创建一个新的principal用于FI HD对Livy HTTP服务的Kerberos认证,其名称为“HTTP/host-172-16-2-118”,其中host-172-16-2-118为Apache Livy部署的节点的主机名。</li>
+<li>（livy 端不配置认证可不做）使用FI HD客户端登录kadmin，创建一个新的principal用于FI HD对Livy HTTP服务的Kerberos认证,其名称为“HTTP/host-172-16-2-118”,其中host-172-16-2-118为Apache Livy部署的节点的主机名。</li>
 </ul>
 <p><img alt="" src="../assets/Apache_Livy_0_6_0/markdown-img-paste-20190806114250120.png" /></p>
 <p>执行kadmin –p kadmin/admin命令时初始密码Admin@123，修改后需严格牢记新密码。</p>
@@ -4270,6 +4308,27 @@ if __name__ == &quot;__main__&quot;:
 <li>检查MIT Kerberos生成的服务票据</li>
 </ul>
 <p><img alt="" src="../assets/Apache_Livy_0_6_0/markdown-img-paste-2019080615091446.png" /></p>
+<h2 id="_4">普通提交命令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>session:
+curl  -X POST --data &#39;{&quot;kind&quot;: &quot;pyspark&quot;}&#39; -H &quot;Content-Type: application/json&quot; http://172-16-9-107:8998/sessions
+
+curl -X POST -H &#39;Content-Type: application/json&#39; -d &#39;{&quot;code&quot;:&quot;1 + 1&quot;}&#39; http://172-16-9-107:8998/sessions/0/statements
+
+curl --negotiate -k -v -u :  http://172-16-9-107:8998/sessions/0/statements | python -m json.tool
+
+batch方式提交任务样例1:
+curl -X POST --data &#39;{&quot;file&quot;: &quot;file:/opt/spark-examples_2.11-2.3.2.jar&quot;, &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;, &quot;args&quot;: [&quot;100&quot;]}&#39; -H &quot;Content-Type: application/json&quot; http://172-16-9-107:8998/batches
+
+batch方式提交任务样例2:
+curl  -X POST --data &#39;{&quot;file&quot;: &quot;file:/opt/py2.py&quot; }&#39; -H &quot;Content-Type: application/json&quot; http://172-16-9-107:8998/batches
+
+
+batch方式提交任务样例3:
+curl -X POST --data &#39;{&quot;file&quot;: &quot;/tmp/spark-examples_2.11-2.3.2.jar&quot;, &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;, &quot;args&quot;: [&quot;100&quot;]}&#39; -H &quot;Content-Type: application/json&quot; http://172-16-9-107:8998/batches
+
+batch方式提交任务样例4:
+curl -X POST --data &#39;{&quot;file&quot;: &quot;local:/home/spark-examples_2.11-2.3.2.jar&quot;, &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;, &quot;args&quot;: [&quot;100&quot;]}&#39; -H &quot;Content-Type: application/json&quot; http://172-16-9-107:8998/batches
+</code></pre></div>
                 
                   
                 

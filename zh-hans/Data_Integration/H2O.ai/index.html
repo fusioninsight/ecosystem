@@ -3482,6 +3482,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/ApacheDrillto17HD/" title="1.17.0 6.5" class="md-nav__link">
+      1.17.0 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SQL_Analytics/ApacheDrillto17HD/" title="1.17.0 8.0" class="md-nav__link">
+      1.17.0 <--> 8.0
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3834,12 +3858,15 @@
 <li>
 <p>安装FusionInsight客户端，安装目录为/opt/hadoopclient</p>
 </li>
+<li>
+<p>h2o要放到集群其中一个节点上</p>
+</li>
 </ul>
 <h2 id="h2o">H2o使用<a class="headerlink" href="#h2o" title="Permanent link">&para;</a></h2>
 <ul>
 <li>启动H2O
   <div class="highlight"><pre><span></span><code>  cd /opt/h2o-3.24.0.2-cdh6.0
-  hadoop jar h2odriver.jar -nodes 1 -mapperXmx 2g -network 172.16.4.21/32
+  hadoop jar h2odriver.jar -Dmapreduce.map.log.level=DEBUG -JJ &quot;-Djava.security.krb5.conf=/opt/huawei/Bigdata/common/runtime/krb5.conf&quot; -nodes 1 -mapperXmx 8g -network 172.16.4.131/24
 </code></pre></div>
     &gt; -nodes 指定H2o集群中节点数量
     &gt; -mapperXmx 指定H2O集群使用内存大小
