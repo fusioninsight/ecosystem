@@ -13,11 +13,14 @@
 
   * 安装FusionInsight客户端，安装目录为/opt/hadoopclient
 
+  * h2o要放到集群其中一个节点上
+
+
 ## H2o使用
   * 启动H2O
   ```
     cd /opt/h2o-3.24.0.2-cdh6.0
-    hadoop jar h2odriver.jar -nodes 1 -mapperXmx 2g -network 172.16.4.21/32
+    hadoop jar h2odriver.jar -Dmapreduce.map.log.level=DEBUG -JJ "-Djava.security.krb5.conf=/opt/huawei/Bigdata/common/runtime/krb5.conf" -nodes 1 -mapperXmx 8g -network 172.16.4.131/24
   ```
     > -nodes 指定H2o集群中节点数量
     > -mapperXmx 指定H2O集群使用内存大小

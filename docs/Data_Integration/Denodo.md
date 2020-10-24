@@ -2,11 +2,12 @@
 
 ## 适用场景
 
-> Denodo Platform 7.0 <--> FusionInsight HD V100R002C80SPC100 (Hive/Spark2x)
+> Denodo Platform 7.0 <--> FusionInsight HD V100R002C80SPC100 (Hive)
 >
-> Denodo Platform 7.0 <--> FusionInsight HD 6.5 (Hive/Spark2x)
+> Denodo Platform 7.0 <--> FusionInsight HD 6.5 (Hive)
 
 ## 准备工作
+
 
 * 下载并安装Denodo Platform 7.0
 
@@ -22,7 +23,7 @@
 
 * FusionInsight HD相关配置（已完成FusionInsight HD的安装）
 
-  - 登录FusionInsight Manager创建一个“人机”用户，例如：developuser，具体请参见《FusionInsight HD 管理员指南》的`系统设置->权限设置->用户管理->创建用户`章节。给developuser用户授予Hive和Spark2x的所有访问权限。
+  - 登录FusionInsight Manager创建一个“人机”用户，例如：developuser，具体请参见《FusionInsight HD 管理员指南》的`系统设置->权限设置->用户管理->创建用户`章节。给developuser用户授予Hive的所有访问权限。
 
   - 登录FusionInsight Manager的`系统->用户->更多（developuser）->下载认证凭证`，下载developuser对应的认证凭证。解压后，将user.keytab放在`C:\developuser\`目录下(developuser文件夹不存在则创建)，将krb5.conf文件重命名为krb5.ini，并放在`C:\Windows\`目录下。
 
@@ -36,11 +37,7 @@
 
       将解压后的客户端`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Hive\jdbc\`目录下所有jar包拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\hive\`，如果hive文件夹不存在则创建。
 
-    - **对接Spark2x需要准备的jar包**
 
-      将解压后的客户端`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\jdbc\`目录下所有jar包拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`，如果spark2x文件夹不存在则创建。
-
-      如果是FusionInsight HD 6.5.X版本，还需要将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`。如果是FusionInsight HD V100R002C80SPC100版本，则不需要。
 
 * 准备数据
 
@@ -123,7 +120,7 @@
 
     ![](assets/Denodo/5cf89.png)
 
-## 对接Hive或者Spark2x
+## 对接Hive
 
 ### 创建JDBC连接的Data source
 
@@ -135,9 +132,9 @@
 
   Name：自命名的新建的Data Source名称。
 
-  Driver class path：Hive或者Spark2x的Jar包所在的位置。具体配置路径参考本文`准备工作->已完成FusionInsight HD的安装`章节。
+  Driver class path：Hive的Jar包所在的位置。具体配置路径参考本文`准备工作->已完成FusionInsight HD的安装`章节。
 
-  Database URI：Hive或者Spark2x连接的URL。
+  Database URI：Hive连接的URL。
 
   Authentication：选择Kerberos认证。
 
@@ -156,21 +153,6 @@
   ```
   ![](assets/Denodo/70fd9.png)
 
-  **对接Spark2x具体配置信息如下：**
-  ```
-  Name: spark2x_ds
-  Database adapter: Hive 2.0.0(HiveServer2)
-  Dirver class path: 'C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x'
-  Dirver class: org.apache.hive.jdbc.HiveDriver
-  Database URI: jdbc:hive2://172.16.4.21:24002,172.16.4.22:24002,172.16.4.23:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=sparkthriftserver2x;saslQop=auth-conf;auth=KERBEROS;principal=spark2x/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=C:/developuser/user.keytab
-  Transaction Isolation: Database default
-  Authentication: Use Kerberos
-                  Kerberos login: deverlopuser
-                  选择Use Key tab
-                  keytab file: C:/developuser/user.keytab
-  ```
-
-  ![](assets/Denodo/1c389.png)
 
 * 点击`Test connection`，返回`JDBC connection tested successfully`。如果返回失败，可在`C:\Denodo\DenodoPlatform7.0\logs\vdp\vdp.log`查看详细的失败日志。点击`Ok`关闭成功提示。
 
@@ -424,34 +406,6 @@
     **解决办法：**
 
      将developuser用户的认证凭证krb5.conf文件重命名为krb5.ini并放在`C:\Windows\`目录后，再点击`Test connection`重试。
-
-  * 对接Spar2x时，点击`Test connection`返回错误Unable to establish connection: java.lang.SecurityException: class "com.ctc.wstx.io.SystemId"'s signer information does not match signer information of other classes in the same package
-
-    ![](assets/Denodo/d1fc1.png)
-
-    **解决办法：**
-
-    检查是否已经将`woodstox-core-5.0.3.jar`包拷贝至`Drive class path`对应的目录，例如将`..\FusionInsight_Services_Client\FusionInsight_Services_ClientConfig\Spark2x\FusionInsight-Spark2x-2.3.2.tar.gz\spark\jars\woodstox-core-5.0.3.jar`拷贝至`C:\Denodo\DenodoPlatform7.0\extensions\thirdparty\lib\spark2x\`，再点击`Test connection`重试。
-
-  * 对接Spark2x时，点击`Test connection`返回错误Unable to establish connection: java.sql.SQLException: org.apache.hive.jdbc.ZooKeeperHiveClientException: Unable to read HiveServer2 uri from ZooKeeper
-
-    ![](assets/Denodo/75f98.png)
-
-    **解决办法：**
-
-     - 检查是否已经创建连接Zookeeper的jaas配置文件（如`C:\developuser\jaas.conf`），如果没有，则创建，内容格式如下：
-       ```
-       Client {
-       com.sun.security.auth.module.Krb5LoginModule required
-       useKeyTab=true
-       keyTab="c:/developuser/user.keytab"
-       principal="developuser@HADOOP.COM"
-       useTicketCache=false
-       storeKey=true
-       debug=true;
-       };
-       ```
-      - 检查是否已经配置Virtual DataPort Server的JVM Options新增`-Djava.security.auth.login.config=c:/developuser/jaas.conf`。如果没有，则先停止Virtual DataPort Server，再在Virtual DataPort Server的JVM Options中新增jaas.conf的配置。详细操作可参考本文的`启动并配置Denodo->配置并启动Virtual DataPort Server`章节。
 
   * 点击`Test connection`返回错误Unable to establish connection: javax.security.auth.login.LoginException: Clock skew too great (37) - PREAUTH_FAILED
 

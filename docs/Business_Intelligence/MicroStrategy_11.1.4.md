@@ -16,6 +16,8 @@ MicroStrategy Desktop是一款功能强大的数据发现工具。使用MicroStr
 
 * 已完成FusionInsight HD客户端安装，具体请参见FusionInsight HD产品文档的`应用开发指南->安全模式->安全认证->配置客户端文件`章节。
 
+* （重要）完成MIT KERBEROS认证，具体参见usionInsight HD产品文档的`应用开发指南->安全模式->Hive开发指南->环境准备->配置ODBC样例工程->Windows环境`章节。
+
 * 已将集群的节点主机名与IP的映射关系加入到windows的hosts文件中`C:\Windows\System32\drivers\etc\hosts`。
 
 * 客户端机器的时间与FusionInsight HD集群的时间要保持一致，时间差小于5分钟。

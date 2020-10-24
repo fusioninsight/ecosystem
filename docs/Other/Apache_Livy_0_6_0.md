@@ -30,7 +30,7 @@
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190802175641110.png)
 
-- 使用FI HD客户端登录kadmin，创建一个新的principal用于FI HD对Livy HTTP服务的Kerberos认证,其名称为“HTTP/host-172-16-2-118”,其中host-172-16-2-118为Apache Livy部署的节点的主机名。
+- （livy 端不配置认证可不做）使用FI HD客户端登录kadmin，创建一个新的principal用于FI HD对Livy HTTP服务的Kerberos认证,其名称为“HTTP/host-172-16-2-118”,其中host-172-16-2-118为Apache Livy部署的节点的主机名。
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-20190806114250120.png)
 
@@ -354,3 +354,27 @@ Windows跳板机（172.16.2.111）访问Livy web ui的认证原理同上文客�
 - 检查MIT Kerberos生成的服务票据
 
   ![](assets/Apache_Livy_0_6_0/markdown-img-paste-2019080615091446.png)
+
+## 普通提交命令
+
+```
+session:
+curl  -X POST --data '{"kind": "pyspark"}' -H "Content-Type: application/json" http://172-16-9-107:8998/sessions
+
+curl -X POST -H 'Content-Type: application/json' -d '{"code":"1 + 1"}' http://172-16-9-107:8998/sessions/0/statements
+
+curl --negotiate -k -v -u :  http://172-16-9-107:8998/sessions/0/statements | python -m json.tool
+
+batch方式提交任务样例1:
+curl -X POST --data '{"file": "file:/opt/spark-examples_2.11-2.3.2.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://172-16-9-107:8998/batches
+
+batch方式提交任务样例2:
+curl  -X POST --data '{"file": "file:/opt/py2.py" }' -H "Content-Type: application/json" http://172-16-9-107:8998/batches
+
+
+batch方式提交任务样例3:
+curl -X POST --data '{"file": "/tmp/spark-examples_2.11-2.3.2.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://172-16-9-107:8998/batches
+
+batch方式提交任务样例4:
+curl -X POST --data '{"file": "local:/home/spark-examples_2.11-2.3.2.jar", "className": "org.apache.spark.examples.SparkPi", "args": ["100"]}' -H "Content-Type: application/json" http://172-16-9-107:8998/batches
+```

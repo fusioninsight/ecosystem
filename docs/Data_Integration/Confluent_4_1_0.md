@@ -42,6 +42,7 @@
 
   ![](assets/Confluent_4_1_0/markdown-img-paste-20190809105339212.png)
 
+
 - 在路径/opt/confluent/confluent-4.1.0/bin下找到connect-distributed文件，进行如下编辑：
 
   在适当位置添加KAFKA_OPTS的启动JVM参数
@@ -55,6 +56,11 @@
   其中-Djava.security.krb5.conf=/opt/user_keytabs/101keytab/krb5.conf为对接集群认证的krb5.conf文件，可在集群 anager页面上获取
 
   另外还可以添加 -Dsun.security.krb5.debug=true 打开kerberos认证日志开关，进行错误定位、排查
+
+- 在前面位置将huawei路径引进去
+
+    ![](assets/debezium/markdown-img-paste-20200102153347263.png)
+
 
 - 修改/opt/confluent/confluent-4.1.0/etc/kafka/connect-distributed.properties配置文件
 

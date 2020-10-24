@@ -316,7 +316,7 @@ OpenTSDB用HBase存储所有的时序（无须采样）来构建一个分布式�
   ```
   From: UNIX timestamp=1574423500
   To: UNIX timestamp=1574423540
-  Metrix: mymetric_data
+  Metrix: mymetric.data
   ```
 
   ![](assets/OpenTSDB_2.4.0/d09c4e84.png)
