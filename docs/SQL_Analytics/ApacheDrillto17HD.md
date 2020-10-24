@@ -1,4 +1,4 @@
-# ApacheDril对接FusionInsight
+# ApacheDrill对接FusionInsight
 
 ## 适用场景
 

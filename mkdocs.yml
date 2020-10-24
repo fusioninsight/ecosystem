@@ -208,6 +208,8 @@ nav:
   - Apache Drill:
     - 1.15.0 <--> 6.5: SQL_Analytics/ApacheDrill_1.15.0toHD651.md
     - 1.15.0 <--> C80: SQL_Analytics/Apache_Drill_1.15.0.md
+    - 1.17.0 <--> 6.5: SQL_Analytics/ApacheDrillto17HD.md
+    - 1.17.0 <--> 8.0: SQL_Analytics/ApacheDrillto17HD.md
   - Apache Kylin:
     - 1.6.0 <--> C60: SQL_Analytics/Apache_Kylin_1.6.0.md
     - 2.1.0 <--> C70: SQL_Analytics/Apache_Kylin_2.1.0.md

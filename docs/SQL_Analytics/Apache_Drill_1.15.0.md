@@ -1,4 +1,4 @@
-# Apache Dril对接FusionInsight
+# Apache Drill对接FusionInsight
 
 ## 适用场景
 
@@ -71,9 +71,9 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   ```
 
   ![](assets/Apache_Drill/markdown-img-paste-20191010161034836.png)
-  
+
   其中172.16.6.12为集群namenode主节点
-  
+
 - 准备认证相关配置文件
 
   登陆对接集群主节点172.16.6.10:/opt路径,使用命令`find /opt -name hdfs.keytab`查找hdfs认证相关keytab文件
@@ -139,17 +139,17 @@ FI HD V100R002C80SPC200集群： 172.16.6.10-12
   ![](assets/Apache_Drill/markdown-img-paste-20191015141304194.png)
 
   完成后重新下载集群配置文件
-  
+
   注意：此步骤为更改集群HDFS配置，属于高危操作。如果不能更改集群配置则相应的规避方式如下（只改对接需要使用的配置文件hdfs-site.xml而不对集群配置做实际更改）:
-  
+
   修改配置文件hdfs-site.xml文件中的配置项dfs.client.failover.proxy.provider.hacluster的值改成org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
 
 - 在对接集群的配置文件找到hdfs-site.xml以及yarn-site.xml文件导入到drill安装路径/conf目录下：
 
   ![](assets/Apache_Drill/markdown-img-paste-20191015143059303.png)
-  
+
   其中core-site.xml配置文件在对接HDFS的时候已经导入，并且修改过fs.defaultFS配置项， hdfs-site.xml文件的dfs.client.failover.proxy.provider.hacluster 配置项做相应更改，改成org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
-  
+
 - 到drill安装路径/jars下使用命令`mkdir hd_jars`新建一个名为hd_jars的路径
 
   ![](assets/Apache_Drill/markdown-img-paste-20191015142149335.png)

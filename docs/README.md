@@ -935,15 +935,24 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Other/对接问题总结1.0"><span class="label label-HDFS ">HDFS</span></a></td>
 <td><a href="Other/对接问题总结1.0"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
-<tr><td rowspan=15 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
-<td rowspan=1 >Apache Drill</td>
+<tr><td rowspan=16 ><i class="fa fa-search fa-2x" aria-hidden="true"></i></br>SQL分析 </td>
+<td rowspan=2 >Apache Drill</td>
 <td>1.15.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="SQL_Analytics/Apache_Drill_1.15.0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td><a href="SQL_Analytics/Apache_Drill_1.15.0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-<td><a href="SQL_Analytics/ApacheDrill_1.15.0toHD651"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>1.17.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="SQL_Analytics/ApacheDrillto17HD"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="SQL_Analytics/ApacheDrillto17HD"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=5 >Apache Kylin</td>
