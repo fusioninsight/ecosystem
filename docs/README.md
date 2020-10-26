@@ -779,7 +779,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Development/Zeppelin_0.8.1"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=16 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
+<tr><td rowspan=15 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=1 >Apache Airflow</td>
 <td>1.10.6</td>
 <td></td>
@@ -813,16 +813,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td>1.0</td>
 <td></td>
 <td><a href="Other/GIS_Tools"><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan=1 >IBM WAS</td>
-<td>8.5.5.9</td>
-<td><a href="Other/IBM_WAS"><span class="label label-IBM_JDK ">IBM_JDK</span></a></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
