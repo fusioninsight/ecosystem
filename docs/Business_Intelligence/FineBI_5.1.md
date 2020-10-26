@@ -4,6 +4,8 @@
 
 > FineBI 5.1 <--> FusionInsight HD 6.5 (Hive)
 
+> FineBI 5.1 <--> FusionInsight MRS 8.0 (Hive)
+
 ## 安装FineBI
 
 - 安装FineBI, 以路径`C:\soft\fineBI\FineBI5.1`为例

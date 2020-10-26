@@ -4,6 +4,10 @@
 
 > JupyterHub 1.0.0 <--> FusionInsight HD V100R002C80SPC200 (Spark2x)
 
+> JupyterHub 1.0.0 <--> FusionInsight HD 6.5 (Spark2x)
+
+> JupyterHub 1.0.0 <--> FusionInsight MRS 8.0 (Spark2x)
+
 说明：
 1.  相较于Jupyter Notebook, JupyterHub能够支持多用户访问，可用于创建、管理、代理多个Jupyter Notebook 实例。具有扩展性和可定制性。JupyterHub默认使用python3内核，所以在安装JupyterHub之前要先安装Anaconda3
 
@@ -116,7 +120,7 @@ JuypterHub主机：172.16.2.119
   source ~/.bashrc.anaconda
   source /opt/101hdclient/hadoopclient/bigdata_env
   kinit
-  jupyterhub --config=/etc/jupyterhub/jupyterhub.py --ip=172.16.2.119 --port=8001 --no-ssl
+  jupyterhub --config=/etc/jupyterhub/jupyterhub_config.py --ip=172.16.2.119 --port=8001 --no-ssl
   ```
 
   ![](assets/JupyterHub/markdown-img-paste-20191022170402550.png)
