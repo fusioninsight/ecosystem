@@ -5,6 +5,8 @@
 > Splunk 7.2.4 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive)
 >
 > Splunk 7.2.4 <--> FusionInsight HD 6.5 (HDFS)
+>
+> Splunk 7.2.4 <--> FusionInsight MRS 8.0 (HDFS)
 
 ## 安装与启动Splunk,获取配置文件
 

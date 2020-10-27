@@ -151,7 +151,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
-<tr><td rowspan=7 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
+<tr><td rowspan=8 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
 <td>2018.2.5.48994</td>
 <td></td>
@@ -212,7 +212,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Data_Analysis/Splunk"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
-<td rowspan=1 >永洪一站式大数据分析平台</td>
+<td rowspan=2 >永洪一站式大数据分析平台</td>
 <td>7.1</td>
 <td></td>
 <td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
@@ -220,6 +220,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>8.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr><td rowspan=30 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=2 >Apache NiFi</td>
@@ -266,9 +275,9 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></a></td>
-<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></a></td>
 <td></td>
+<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Denodo"><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >H2O.ai</td>
@@ -757,8 +766,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td></td>
 <td><a href="Development/Zeppelin_0.8.1"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
 </tr>
 <tr>
 <td>0.9.0</td>
@@ -766,8 +775,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Development/Zeppelin_0.8.1"><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 <td></td>
+<td><a href="Development/Zeppelin_0.8.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
 <tr><td rowspan=15 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=1 >Apache Airflow</td>
