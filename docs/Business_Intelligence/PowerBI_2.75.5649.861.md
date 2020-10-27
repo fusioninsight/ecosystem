@@ -4,6 +4,8 @@
 
 > Power BI 2.75.5649.861 <--> FusionInsight HD 6.5 (Hive/Spark2x/FTP-Server)
 
+> Power BI 2.75.5649.861 <--> FusionInsight MRS 8.0 (Hive/FTP-Server)
+
 ## 简介
 
 ## 准备工作

@@ -9,6 +9,8 @@
 > QlikView 12 <--> FusionInsight HD V100R002C80SPC100 (Hive/SparkSQL)
 >
 > QlikView 12 <--> FusionInsight HD 6.5 (Hive/SparkSQL)
+>
+> QlikView 12 <--> FusionInsight MRS 8.0 (Hive/SparkSQL)
 
 ## 配置Windows的kerberos认证
 

@@ -4,6 +4,8 @@
 
 > MicroStrategy 11.1.4 <--> FusionInsight HD 6.5 (Hive/Spark2x)
 
+> MicroStrategy 11.1.4 <--> FusionInsight MRS 8.0 (Hive/Spark2x)
+
 ## 简介
 
 MicroStrategy Desktop是一款功能强大的数据发现工具。使用MicroStrategy Desktop来创建自定义的交互式达析报告，用于探索您的业务数据。您可从许多不同的来源导入业务数据，包括本地文件、数据库等。

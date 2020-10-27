@@ -12,6 +12,8 @@
 >
 > Oracle BIEE 12c <--> FusionInsight HD 6.5 (Hive/SparkSQL/ELK/GaussDB)
 
+> Oracle BIEE 12c <--> FusionInsight MRS 8.0 (Hive/SparkSQL)
+
 ## Linux环境安装OBIEE
 
 ### 安装OS

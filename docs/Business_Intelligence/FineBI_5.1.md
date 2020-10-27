@@ -14,6 +14,8 @@
 
 - 将对接集群（版本6.5.1）的认证文件下载到`C:\651client`文件夹下，包括user.keytab和krb5.conf
 
+  说明：如果是对接mrs 8.0版本，根据上步把对应客户端，认证文件下载到本地
+
 - 在FineBI的bin目录下找到配置文件finebi.vmoptions
 
   ![](assets/FineBI_5.1/markdown-img-paste-20191017104256220.png)
@@ -31,6 +33,13 @@
 
   ![](assets/FineBI_5.1/markdown-img-paste-20191017105301254.png)
 
+  说明： 如果是mrs 8.0版本，则需要的驱动jar包为 客户端路径\Hive\jdbc下所有jar包加上如下额外三个jar包（如果缺少的话）
+  ```
+  commons-lang-2.6.jar
+  zookeeper-jute-3.5.6-hw-ei-302002.jar
+  commons-collections-3.2.2.jar
+  ```
+
 - 找到并进入FineBI相关依赖路径，具体为`C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib`, 需要做以下三个操作
   1.  找到jar包fine-bi-engine-third-5.1.jar，右键使用winRAR打开
 
@@ -46,11 +55,13 @@
 
   3.  将上一步集群客户端Hive\Beeline\lib路径下所有的jar包拷贝到当前文件夹（`C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib`）
 
+- 找到FineBI路径`C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\resources`,将认证相关文件user.keytab, krb5.conf, krb5.ini拷贝到改目录下
+
 - 启动FineBI，找到管理系统 -> 数据连接 -> 新建数据连接 -> 更多数据连接 找到fusioninsight hd 选中点确定
 
   ![](assets/FineBI_5.1/markdown-img-paste-2019101711071559.png)
 
-- 参考下图配置连接参数
+- （hd 6.5对接）参考下图配置连接参数
 
   URL: `jdbc:hive2://172.16.4.21:24002,172.16.4.22:24002,172.16.4.23:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=C:/651client/user.keytab`
 
@@ -61,6 +72,24 @@
   点击测试连接测试
 
   ![](assets/FineBI_5.1/markdown-img-paste-20191017110831692.png)
+
+- （mrs 8.0对接）参考下图配置连接参数
+
+  ![20201027_094904_42](assets/FineBI_5.1/20201027_094904_42.png)
+
+  ```
+  1： ,172.16.10.132:24002,172.16.10.133:24002/default;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;
+
+  2： 172.16.10.131
+  3： 24002
+  4： jdbc:hive2://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/default;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;
+  ```
+
+  说明（重要）： 配置1 + 配置2 + 配置3 会生成配置4的连接url,要时刻保持着4个配置的正确性，否则对接失败
+
+  点击测试连接测试：
+
+  ![20201027_095147_35](assets/FineBI_5.1/20201027_095147_35.png)
 
 - 点击创建 -> 添加添加数据库表
 

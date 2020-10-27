@@ -13,6 +13,9 @@
 > Tableau 10.5.0 <--> FusionInsight HD V100R002C80SPC100 (Hive/SparkSQL)
 >
 > Tableau 10.5.0 <--> FusionInsight HD 6.5 (Hive/SparkSQL)
+>
+> Tableau 10.5.0 <--> FusionInsight MRS 8.0 (Hive/SparkSQL)
+
 
 ## 配置Windows的kerberos认证
 
