@@ -5,6 +5,8 @@
 > Denodo Platform 7.0 <--> FusionInsight HD V100R002C80SPC100 (Hive)
 >
 > Denodo Platform 7.0 <--> FusionInsight HD 6.5 (Hive)
+>
+> Denodo Platform 7.0 <--> FusionInsight MRS 8.0 (Hive)
 
 ## 准备工作
 

@@ -9,6 +9,8 @@
 > Oracle GoldenGate 12.3 <--> FusionInsight HD V100R002C80SPC100 (HDFS/HBase/Flume/Kafka)
 >
 > Oracle GoldenGate 12.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Flume/Kafka)
+>
+> > Oracle GoldenGate 12.2 <--> FusionInsight MRS 8.0 (HDFS/Flume/Kafka)
 
 ## 环境信息
 

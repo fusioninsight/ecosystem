@@ -3,6 +3,28 @@
 ## 适用场景
 
 >Streamsets 3.16.1 <--> FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka)
+>
+>Streamsets 3.16.1 <--> FusionInsight MRS 8.0 (HDFS/Hive/HBase/Kafka)
+
+## MRS 8.0 对接说明
+
+说明：
+
+- 1: mrs8.0的组件版本接近streamsets里面hdp3.1版本，支持hdfs,hive,hbase的对接
+
+  需要更改依赖如下：`/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-hdp_3_1-lib/lib`
+
+  ![20201027_111035_18](assets/streamsets_3.16.1/20201027_111035_18.png)
+
+  把hadoop-plugins-8.0.0-301001-SNAPSHOT.jar，zookeeper-3.5.6-hw-ei-301001-SNAPSHOT.jar，zookeeper-jute-3.5.6-hw-ei-301001-SNAPSHOT.jar导入到这个路径下，把之前的zookeeper-3.4.10.jar注释掉(具体Jar包名字可能有更改)
+
+- 2： mrs8.0的kafka版本选用streamsets里面的Apache kafka 2.0.0
+
+  需要更改依赖如下：`/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_2_0-lib/lib`
+
+  ![20201027_111331_65](assets/streamsets_3.16.1/20201027_111331_65.png)
+
+  把kafka-clients-2.4.0-hw-ei-301001-SNAPSHOT.jar，zookeeper-3.5.6-hw-ei-301001-SNAPSHOT.jar，zookeeper-jute-3.5.6-hw-ei-301001-SNAPSHOT.jar上述3个jar包拷贝过来，并且把kafka-client和zookeeper原来带的jar包注释掉（具体Jar包名字可能有更改）
 
 ## 安装streamsets
 环境：172.16.2.121
@@ -34,7 +56,7 @@
   ![20200713_155833_39](assets/streamsets_3.16.1/20200713_155833_39.png)
 
   并且将`/opt/streamsets/streamsets-datacollector-3.16.1/etc`路径下的所有配置文件拷贝到`/opt/streamsets/sdc/conf`路径下
-  
+
   `cp /opt/streamsets/streamsets-datacollector-3.16.1/etc/* /opt/streamsets/sdc/conf/`
 
   注意：需提前创建好对应的路径，再配置

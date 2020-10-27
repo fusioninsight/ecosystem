@@ -5,6 +5,12 @@
 > Confluent 4.1.0 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Kafka)
 >
 > Confluent 4.1.0 <--> FusionInsight HD 6.5 (HDFS/Kafka)
+>
+> Confluent 5.5.0 <--> FusionInsight MRS 8.0 (HDFS/Kafka)
+
+## MRS 8.0 对接说明
+
+说明： Confluent 5.5.0对接FusionInsight MRS 8.0时KSQL功能不支持
 
 ## 安装Confluent
 
@@ -184,6 +190,8 @@
 
 
 ## 使用Confluent KSQL服务查询FI HD集群Kafka的Topic
+
+说明： 对接FusionInsight MRS 8.0版本KSQL功能不支持
 
 ### 前提条件
 

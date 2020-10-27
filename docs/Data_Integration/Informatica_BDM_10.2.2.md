@@ -10,6 +10,8 @@
 >
 > Informatica 10.2.2  <--> FusionInsight HD 6.5 (HDFS/HBase/Hive)
 >
+> Informatica 10.2.2  <--> FusionInsight MRS 8.0 (HDFS/Hive)
+>
 >注：以上对接测试Informatica BDM采用的是Native Engine。Informatica 10.2.2对接FusionInsight HD 6.5 HBase组件时，需要Zookeeper组件配置enforce.auth.enabled=false，否则对接失败。
 
 ## 简介

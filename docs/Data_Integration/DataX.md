@@ -3,7 +3,8 @@
 ## 适用场景
 
 > DataX 0.1 <--> FusionInsight HD 6.5 (HDFS)
-
+>
+> DataX 0.1 <--> FusionInsight MRS 8.0 (HDFS)
 ## 环境准备
 
   * 下载解压安装DataX

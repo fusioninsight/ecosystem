@@ -7,6 +7,10 @@
 > Kettle 6.1 <--> FusionInsight HD V100R002C70U10 (HDFS/Hive)
 >
 > Kettle 6.1 <--> FusionInsight HD V100R002C80U10 (HDFS/Hive)
+>
+> Kettle 6.1 <--> FusionInsight HD 6.5 (HDFS/Hive)
+>
+> Kettle 6.1 <--> FusionInsight MRS 8.0 (HDFS/Hive)
 
 ## Kerberos支持能力说明
 

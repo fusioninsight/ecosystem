@@ -230,8 +230,8 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></a></td>
 </tr>
-<tr><td rowspan=30 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
-<td rowspan=2 >Apache NiFi</td>
+<tr><td rowspan=34 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<td rowspan=3 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
 <td></td>
@@ -246,17 +246,35 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Solr ">Solr</span></a></td>
 <td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<td>1.12.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<tr>
 </tr>
 <tr>
-<td rowspan=1 >Confluent</td>
+<td rowspan=2 >Confluent</td>
 <td>4.1.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>5.5.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
@@ -287,7 +305,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/H2O.ai"><span class="label label-HDFS ">HDFS</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
-<td><a href="Data_Integration/H2O.ai"><span class="label label-HDFS ">HDFS</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td><a href="Data_Integration/H2O.ai"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >IBM InfoSphere CDC</td>
@@ -335,7 +353,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Informatica_BDM_10.2.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >Informatica PowerCenter</td>
@@ -503,13 +521,22 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >debezium</td>
+<td rowspan=2 >debezium</td>
 <td>1.0.0</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/DEBEZIUM"><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td><a href="Data_Integration/DEBEZIUM"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>

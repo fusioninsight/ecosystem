@@ -6,6 +6,8 @@
 >
 > Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase)
 >
+> Talend 6.4.1 <--> FusionInsight MRS 8.0 (HDFS/Hive)
+>
 > 注：因为Talend 7.0.1版本bug，Hive组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
 
 ## 安装Talend

@@ -3,7 +3,30 @@
 ## 适用场景
 
 
->Apache NiFi 1.9.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka/Solr)
+>Apache NiFi 1.9.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka)
+>
+>Apache NiFi 1.12.0 <--> FusionInsight MRS 8.0 (HDFS/HBase/Hive/Spark/Kafka)
+
+## MRS 8.0 对接说明
+
+说明：对接FusionInsight MRS 8.0需替换jar包如下
+
+```
+hive：
+替换路径：/opt/nifi/nifi-1.12.0/work/nar/extensions/nifi-hive-nar-1.12.0.nar-unpacked/NAR-INF/bundled-dependencies
+需要把zookeeper-3.5.6-hw-ei-302002.jar，zookeeper-jute-3.5.6-hw-ei-302002.jar拷贝到该路径，把原来的zookeeper-3.4.6.jar注释掉
+
+hbase:
+替换路径：/opt/nifi/nifi-1.12.0/work/nar/extensions/nifi-hbase_2-client-service-nar-1.12.0.nar-unpacked/NAR-INF/bundled-dependencies
+需要把zookeeper-3.5.6-hw-ei-302002.jar，zookeeper-jute-3.5.6-hw-ei-302002.jar拷贝到该路径，把原来的zookeeper-3.4.10.jar注释掉
+配置hbase需要选用HBase_2_ClientService
+
+kafka：
+替换路径:/opt/nifi/nifi-1.12.0/work/nar/extensions/nifi-kafka-2-0-nar-1.12.0.nar-unpacked/NAR-INF/bundled-dependencies
+需要把kafka-clients-2.4.0-hw-ei-302002.jar导入到该路径下，并把原来的kafka-clients-2.0.0.jar注释掉
+需要把zookeeper-3.5.6-hw-ei-302002.jar拷贝到该路径
+
+```
 
 ## 安装Apache NiFi
 环境：172.16.2.121

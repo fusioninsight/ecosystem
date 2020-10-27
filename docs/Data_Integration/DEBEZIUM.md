@@ -4,7 +4,8 @@
 ## 适用场景
 
 > debezium 1.0.0 <--> FusionInsight HD 6.5 (Kafka)
-
+>
+> debezium 1.2.2 <--> FusionInsight MRS 8.0 (Kafka)
 
 测试环境说明：
 

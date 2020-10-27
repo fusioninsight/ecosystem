@@ -5,6 +5,9 @@
 > Knime 3.6.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/Spark)
 >
 > Knime 4.1.0 <--> FusionInsight HD 6.5 (HDFS/Hive/Spark)
+>
+> Knime 4.1.0 <--> FusionInsight MRS 8.0 (HDFS/Hive)
+
 
 ## 准备工作
 

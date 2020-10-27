@@ -3,6 +3,8 @@
 ## 适用场景
 
 > H2O.ai 3.24.0.2 <--> FusionInsight HD 6.5 (HDFS/GaussDB)
+>
+> H2O.ai 3.24.0.2 <--> FusionInsight MRS 8.0 (HDFS)
 
 ## 环境准备
 

@@ -79,16 +79,21 @@ nav:
   - Apache NiFi:
     - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md
     - 1.9.2 <--> 6.5: Data_Integration/ApacheNifi-1.9.2.md
+    - 1.12.0 <--> 8.0: Data_Integration/ApacheNifi-1.9.2.md
   - Confluent:
     - 4.1.0 <--> C80: Data_Integration/Confluent_4_1_0.md
     - 4.1.0 <--> 6.5: Data_Integration/Confluent_4_1_0.md
+    - 5.5.0 <--> 8.0: Data_Integration/Confluent_4_1_0.md
   - DataX:
     - 0.1 <--> 6.5: Data_Integration/DataX.md
+    - 0.1 <--> 8.0: Data_Integration/DataX.md
   - Denodo Platform:
     - 7.0 <--> C80: Data_Integration/Denodo.md
     - 7.0 <--> 6.5: Data_Integration/Denodo.md
+    - 7.0 <--> 8.0: Data_Integration/Denodo.md
   - H2O.ai:
     - 3.24.0.2 <--> 6.5: Data_Integration/H2O.ai.md
+    - 3.24.0.2 <--> 8.0: Data_Integration/H2O.ai.md
   - IBM InfoSphere CDC:
     - 11.3.3.1 <--> C50: Data_Integration/IBM_InfoSphere_CDC.md
   - IBM InfoSphere DataStage:
@@ -105,6 +110,7 @@ nav:
     - 10.0.0 <--> C80: Data_Integration/Informatica_BDM_10.2.2.md
     - 10.0.0 <--> C70: Data_Integration/Informatica_BDM_PushDown.md
     - 10.2.2 <--> 6.5: Data_Integration/Informatica_BDM_10.2.2.md
+    - 10.2.2 <--> 8.0: Data_Integration/Informatica_BDM_10.2.2.md
   - Kafka Manager:
     - 1.3.3.21 <--> C80: Data_Integration/Kafka_Manager.md
     - 1.3.3.21 <--> 6.5: Data_Integration/Kafka_Manager.md
@@ -112,14 +118,18 @@ nav:
     - 6.1 <--> C60: Data_Integration/Kettle_6.1.md
     - 6.1 <--> C70: Data_Integration/Kettle_6.1.md
     - 6.1 <--> C80: Data_Integration/Kettle_6.1.md
+    - 6.1 <--> 6.5: Data_Integration/Kettle_6.1.md
+    - 6.1 <--> 8.0: Data_Integration/Kettle_6.1.md
   - Knime:
     - 3.6.1 <--> C80: Data_Integration/Knime.md
     - 4.1.0 <--> 6.5: Data_Integration/Knime.md
+    - 4.1.0 <--> 8.0: Data_Integration/Knime.md
   - OceanSource:
     - 1.0 <--> C80: Data_Integration/OceanSource.md
   - Oracle GoldenGate:
     - 12.2 <--> C60: Data_Integration/Oracle_GoldenGate.md
     - 12.2 <--> 6.5: Data_Integration/Oracle_GoldenGate.md
+    - 12.2 <--> 8.0: Data_Integration/Oracle_GoldenGate.md
     - 12.3 <--> C70: Data_Integration/Oracle_GoldenGate.md
     - 12.3 <--> C80: Data_Integration/Oracle_GoldenGate.md
   - Pentaho EE:
@@ -130,8 +140,10 @@ nav:
     - 9.2.1 <--> 6.5: Data_Integration/SharePlex.md
   - Streamsets:
     - 3.16.1 <--> 6.5: Data_Integration/streamsets_3.16.1.md
+    - 3.16.1 <--> 8.0: Data_Integration/streamsets_3.16.1.md
   - Talend:
     - 6.4.1 <--> C80: Data_Integration/Talend_6.4.1.md
+    - 6.4.1 <--> 8.0: Data_Integration/Talend_6.4.1.md
     - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
     - 7.2.1 <--> 6.5: Data_Integration/Talend_7.2.1.md
   - Tibco BW:
