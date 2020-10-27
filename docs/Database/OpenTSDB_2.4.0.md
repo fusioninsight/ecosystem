@@ -3,6 +3,8 @@
 ## 适用场景
 
 > OpenTSDB 2.4.0  <--> FusionInsight HD 6.5 (HBase)
+>
+> OpenTSDB 2.4.0  <--> FusionInsight MRS 8.0 (HBase)
 
 ## 简介
 

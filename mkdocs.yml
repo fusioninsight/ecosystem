@@ -150,6 +150,7 @@ nav:
     - 5.13 <--> 6.5: Data_Integration/TIBCO_BusinessWorks.md
   - debezium:
     - 1.0.0 <--> 6.5: Data_Integration/DEBEZIUM.md
+    - 1.2.2 <--> 8.0: Data_Integration/DEBEZIUM.md
   - 杭州合众UTL:
     - 5.1 <--> C50: Data_Integration/杭州合众UTL.md
 - 数据库:
@@ -158,6 +159,7 @@ nav:
     - 0.15.1 <--> C80: Database/apache_druid_0.15.1.md
   - OpenTSDB:
     - 2.4.0 <--> 6.5: Database/OpenTSDB_2.4.0.md
+    - 2.4.0 <--> 8.0: Database/OpenTSDB_2.4.0.md
   - SAP VORA:
     - 2.0 <--> C70: Database/SAP_VORA.md
     - 2.1 <--> C70: Database/SAP_VORA.md
