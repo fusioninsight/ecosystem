@@ -266,6 +266,7 @@ nav:
     - 0.196 <--> C80: SQL_Analytics/Presto_0.184.md
     - 0.210 <--> C80: SQL_Analytics/Presto_0.210.md
     - 0.210 <--> 6.5: SQL_Analytics/Presto_0.210.md
+    - 0.210 <--> 8.0: SQL_Analytics/Presto_0.210.md
 
 extra:
   social:

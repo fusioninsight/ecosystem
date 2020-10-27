@@ -3,7 +3,7 @@
 ## 适用场景
 
 > ApacheDrill 1.17.0 <--> FusionInsight HD 6.5 (HDFS/Hive/HBase/Kafka)
-
+>
 > ApacheDrill 1.17.0 <--> FusionInsight MRS 8.0 (HDFS/Hive/HBase/Kafka)
 
 ## 说明

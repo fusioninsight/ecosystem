@@ -5,6 +5,8 @@
 > Presto 0.210 <--> FusionInsight HD V100R002C80SPC200 (HDFS/Hive/ElasticSearch)
 >
 > Presto 0.210 <--> FusionInsight HD 6.5 (HDFS/Hive)
+>
+> Presto 0.210 <--> FusionInsight HD 8.0 (HDFS/Hive)
 
 ## 说明
 
