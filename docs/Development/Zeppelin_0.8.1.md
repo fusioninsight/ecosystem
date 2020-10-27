@@ -3,7 +3,8 @@
 ## 适用场景
 
 > Zeppelin 0.8.1  <--> FusionInsight HD 6.5 (HBase/Hive/Spark2x/GaussDB)
-
+>
+> Zeppelin 0.9.0  <--> FusionInsight MRS 8.0 (HBase/Hive/Spark2x/GaussDB)
 
 ## 概述
 

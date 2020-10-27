@@ -4,6 +4,7 @@
 
 > Anaconda 2-2019.03-Linux-x86_64  <--> FusionInsight HD 6.5 (Spark2x)
 >
+> Anaconda 2-2019.03-Linux-x86_64  <--> FusionInsight HD 8.0 (Spark2x)
 
 ## 产品介绍
 

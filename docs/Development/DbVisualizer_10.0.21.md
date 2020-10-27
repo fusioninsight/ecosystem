@@ -3,6 +3,9 @@
 ## 适用场景
 
 > DbVisualizer 10.0.21 <--> FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL)
+>
+> DbVisualizer 10.0.21 <--> FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL)
+
 
 ## 简介
 

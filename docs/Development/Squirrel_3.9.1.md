@@ -3,6 +3,8 @@
 ## 适用场景
 
 > Squirrel 3.9.1 <--> FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL)
+>
+> Squirrel 3.9.1 <--> FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL)
 
 ## 简介
 

@@ -3,8 +3,11 @@
 ## 适用场景
 
 > Jupyter Notebook 2.7.16 <--> FusionInsight HD V100R002C80SPC200 (Hive/Elk/Spark2x)
-
+>
 > Jupyter Notebook 2.7.16 <--> FusionInsight HD 6.5 (HDFS/Hive/Elk/Spark2x)
+>
+> Jupyter Notebook 2.7.16 <--> FusionInsight MRS 8.0 (HDFS/Hive/Elk/Spark2x)
+
 
 说明：Jupyter Notebook版本 基于Anaconda Python内核版本
 

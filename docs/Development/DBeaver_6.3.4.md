@@ -3,6 +3,8 @@
 ## 适用场景
 
 > DBeaver 6.3.4 <--> FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL/Hetu)
+>
+> DBeaver 6.3.4 <--> FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL/Hetu)
 
 ## 文档说明
 
@@ -660,4 +662,3 @@ DBeaver通过Fiber方式对接FusionInsight HD的Hive、Spark2x、Phoenix组件.
     ```
 
     ![](assets/DBeaver_6.3.4/5d3dafa2.png)
-
