@@ -247,7 +247,7 @@ Informatica用于管理大数据工程的工具主要有Informatica Administrato
 
 ##### 配置Data_Integration_Service
 
-* 导航至`管理->服务和节点->Data_Integration_Service`。点击“执行选项”的编辑按钮，设置“Hadoop Kerberos服务主体名称”为 **developuser\@HADOOP.COM**，“Hadoop Kerberos Keytab”为 **/opt/user.keytab**，点解 **确定**，选择 **是，保存更改**。
+* 导航至`管理->服务和节点->Data_Integration_Service`。点击“执行选项”的编辑按钮，设置“Hadoop Kerberos服务主体名称”为 **developuser@HADOOP.COM**，“Hadoop Kerberos Keytab”为 **/opt/user.keytab**，点解 **确定**，选择 **是，保存更改**。
   ![](assets/Informatica_BDM_10.2.2/d6c3ba74.png)
 
 * 点击“Data_Integration_Service”的应用服务按钮![](assets/Informatica_BDM_10.2.2/52417ec2.png)，点击 **确定** 让修改生效。
@@ -274,7 +274,7 @@ Informatica用于管理大数据工程的工具主要有Informatica Administrato
 
   ![](assets/Informatica_BDM_10.2.2/e74950d5.png)
 
-* “Hadoop Kerberos服务主体名称”输入 **developuser\@HADOOP.COM**，“Hadoop Kerberos Keytab”输入 **/opt/user.keytab**，点击 **完成**。
+* “Hadoop Kerberos服务主体名称”输入 **developuser@HADOOP.COM**，“Hadoop Kerberos Keytab”输入 **/opt/user.keytab**，点击 **完成**。
 
   ![](assets/Informatica_BDM_10.2.2/507dea0c.png)
 
