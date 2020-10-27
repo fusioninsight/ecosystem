@@ -3,6 +3,8 @@
 ## 适用场景
 
 > Logstash 6.7.1 <--> FusionInsight HD 6.5 (HDFS/Kafka)
+>
+> Logstash 6.7.1 <--> FusionInsight MRS 8.0 (HDFS/Kafka)
 
 ## HDFS对接
 

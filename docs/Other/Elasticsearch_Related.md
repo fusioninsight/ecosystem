@@ -1,5 +1,9 @@
 # FusionInsight HD ES组件与周边生态对接
 
+## Kibana，Logstash,beats对接说明：
+
+MRS 8.0版本上述三个软件对接ES组件相关文档请参考产品文档进行配置
+
 ## 生态简介
 
 ![](assets/Elasticsearch_Related/markdown-img-paste-20181129095649331.png)

@@ -3,6 +3,9 @@
 ## 适用场景
 
 > Apache Livy 0.6.0 <--> FusionInsight HD 6.5 (Spark2x)
+>
+> Apache Livy 0.7.0 <--> FusionInsight MRS 8.0 (Spark2x)
+
 
 ## 部署对外验证的livy服务并使用session，batch方式提交任务
 

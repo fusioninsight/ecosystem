@@ -2,9 +2,12 @@
 
 ## 适用场景
 > Tensorflow 1.15.0 <--> FusionInsight HD 6.5 (HDFS)
-
+>
 > Tensorflow 2.1.0 <--> FusionInsight HD 6.5 (HDFS)
-
+>
+> Tensorflow 1.15.0 <--> FusionInsight MRS 8.0 (HDFS)
+>
+> Tensorflow 2.1.0 <--> FusionInsight MRS 8.0 (HDFS)
 
 
 ## 测试环境描述

@@ -3,6 +3,10 @@
 ## 适用场景
 
 > Apache Airflow 1.10.6 <--> FusionInsight HD 6.5 (HDFS/Hive/HeTu)
+>
+> Apache Airflow 1.10.6 <--> FusionInsight HD 8.0 (HDFS/Hive)
+>
+> 说明：对接hive推荐是用jdbc连接方式
 
 
 ## 测试环境描述
