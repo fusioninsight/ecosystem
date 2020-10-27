@@ -16,18 +16,22 @@ nav:
 - 数据可视化:
   - FineBI:
     - 5.1 <--> 6.5: Business_Intelligence/FineBI_5.1.md
+    - 5.1 <--> 8.0: Business_Intelligence/FineBI_5.1.md
   - IBM Cognos:
     - 10.2.2fp4 <--> C60: Business_Intelligence/IBM_Cognos.md
   - MicroStrategy:
     - 11.1.4 <--> 6.5: Business_Intelligence/MicroStrategy_11.1.4.md
+    - 11.1.4 <--> 8.0: Business_Intelligence/MicroStrategy_11.1.4.md
   - Oracle BIEE:
     - 11g <--> C60: Business_Intelligence/Oracle_BIEE.md
     - 11g <--> C70: Business_Intelligence/Oracle_BIEE.md
     - 12c <--> C60: Business_Intelligence/Oracle_BIEE.md
     - 12c <--> C70: Business_Intelligence/Oracle_BIEE.md
     - 12c <--> 6.5: Business_Intelligence/Oracle_BIEE.md
+    - 12c <--> 8.0: Business_Intelligence/Oracle_BIEE.md
   - Power BI:
     - 2.75.5649.861 <--> 6.5: Business_Intelligence/PowerBI_2.75.5649.861.md
+    - 2.75.5649.861 <--> 8.0: Business_Intelligence/PowerBI_2.75.5649.861.md
   - Qlik Sense:
     - 3.2.4 <--> C70: Business_Intelligence/QlikSense.md
     - 3.2.4 <--> 6.5: Business_Intelligence/QlikSense.md
@@ -36,6 +40,7 @@ nav:
     - 12 <--> C70: Business_Intelligence/QlikView.md
     - 12 <--> C80: Business_Intelligence/QlikView.md
     - 12 <--> 6.5: Business_Intelligence/QlikView.md
+    - 12 <--> 8.0: Business_Intelligence/QlikView.md
   - SSRS:
     - 2017 <--> 6.5: Business_Intelligence/SSRS.md
   - SmartBI:
@@ -46,6 +51,7 @@ nav:
     - 10.3.2 <--> C70: Business_Intelligence/Tableau.md
     - 10.5.0 <--> C80: Business_Intelligence/Tableau.md
     - 10.5.0 <--> 6.5: Business_Intelligence/Tableau.md
+    - 10.5.0 <--> 8.0: Business_Intelligence/Tableau.md
 - 数据分析:
   - Alteryx:
     - 2018.2.5.48994 <--> C60: Data_Analysis/Alteryx.md
