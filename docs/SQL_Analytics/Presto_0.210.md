@@ -308,6 +308,16 @@ presto 服务角色分布
   scp -r /opt/presto-server-0.210 root@172.16.2.121:/opt
   ```
 
+- 使用如下命令将coordinator/worker节点认证相关配置文件拷贝到worker节点
+
+  ```
+  scp /opt/presto.keytab root@172.16.2.120:/opt
+  scp /opt/presto.keytab root@172.16.2.121:/opt
+
+  scp /opt/145_651hdclient/user.keytab root@172.16.2.120:/opt/145_651hdclient
+  scp /opt/145_651hdclient/user.keytab root@172.16.2.121:/opt/145_651hdclient
+  ```
+
 - 修改worker节点`/opt/presto-server-0.210/etc/config.properties`配置文件
 
   新增worker节点172.16.2.120, 172.16.2.121的config.properties配置需要修改，如下:
