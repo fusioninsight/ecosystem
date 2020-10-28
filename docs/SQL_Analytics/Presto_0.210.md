@@ -289,6 +289,116 @@
 
     ![](assets/Presto_0.210/image008.png)
 
+## presto多worker节点配置
+
+presto 服务角色分布
+
+| 服务器ip地址        | 角色    |
+| --------   | -----:  |
+| 172.16.9.107        | Coordinator/Worker      |
+| 172.16.2.120        | Worker      |
+| 172.16.2.121        | Worker      |
+
+**前提条件**：根据上述部分已经完成coordinator/worker节点合部配置以及对接hive成功
+
+- 使用如下命令将coordinator/worker节点已经配置好的presto文件拷贝到worker节点
+
+  ```
+  scp -r /opt/presto-server-0.210 root@172.16.2.120:/opt
+  scp -r /opt/presto-server-0.210 root@172.16.2.121:/opt
+  ```
+
+- 修改worker节点`/opt/presto-server-0.210/etc/config.properties`配置文件
+
+  新增worker节点172.16.2.120, 172.16.2.121的config.properties配置需要修改，如下:
+  ```
+  coordinator=false
+  http-server.http.port=8080
+  query.max-memory=50GB
+  query.max-memory-per-node=1GB
+  discovery.uri=http://172-16-9-107:8080
+  ```
+
+  Coordinator，worker节点合部节点172.16.9.107的config.properties配置文件内容不变，如下：
+
+  ```
+  coordinator=true
+  node-scheduler.include-coordinator=true
+  http-server.http.port=8080
+  query.max-memory=50GB
+  query.max-memory-per-node=1GB
+  discovery-server.enabled=true
+  discovery.uri=http://172-16-9-107:8080
+  http-server.authentication.type=KERBEROS
+  http.server.authentication.krb5.service-name=developuser
+  http.server.authentication.krb5.keytab=/opt/presto.keytab
+  http.authentication.krb5.config=/opt/145_651hdclient/krb5.conf
+  http-server.https.enabled=true
+  http-server.https.port=7778
+  http-server.https.keystore.path=/opt/presto.jks
+  http-server.https.keystore.key=Huawei@123
+  ```
+
+  说明：node-scheduler.include-coordinator参数为Coordinator,worker节点合部参数，值为false代表该节点只做coordinator节点
+
+- 修改worker节点`/opt/presto-server-0.210/etc/node.properties`
+
+  172.16.2.120节点配置:
+  ```
+  node.environment=production
+  node.id=ffffffff-ffff-ffff-ffff-fffffffffffw1
+  node.data-dir=/var/presto/data
+  ```
+
+  172.16.2.121节点配置:
+  ```
+  node.environment=production
+  node.id=ffffffff-ffff-ffff-ffff-fffffffffffw2
+  node.data-dir=/var/presto/data
+  ```
+
+- 其余配置参数不用修改
+
+- 关闭172.16.9.107，172.16.2.120，172.16.2.121节点防火墙
+
+- 登陆172.16.9.107，172.16.2.120，172.16.2.121节点启动presto
+
+  ```
+  cd /opt/presto-server-0.210
+  bin/launcher start
+  ```
+
+  登陆 http://172.16.9.107:8080/ui 检查节点情况
+
+  ![20201028_113214_93](assets/Presto_0.210/20201028_113214_93.png)
+
+- 登陆172.16.9.107节点，使用如下命令启动presto cli:
+
+  ```
+  ./presto-cli \
+  --server https://172-16-9-107:7778 \
+  --krb5-config-path /opt/145_651hdclient/krb5.conf \
+  --krb5-principal developuser/172-16-9-107 \
+  --krb5-keytab-path /opt/presto.keytab \
+  --krb5-remote-service-name developuser \
+  --keystore-path /opt/presto.jks \
+  --keystore-password Huawei@123 \
+  --catalog hive \
+  --schema default \
+  --;
+  ```
+
+- 检查结果：
+
+  ![20201028_113457_82](assets/Presto_0.210/20201028_113457_82.png)
+
+
+- 按照之前叙述如果172.16.9.107节点参数node-scheduler.include-coordinator配置为false,对应结果如下:
+
+  ![20201028_113731_38](assets/Presto_0.210/20201028_113731_38.png)
+
+  ![20201028_113751_83](assets/Presto_0.210/20201028_113751_83.png)
+
 ## 配置ElasticSearch Connector
 
   presto和ES官方都没有给出适配的文档介绍，这里我们采用开源的适配包进行适配。在https://github.com/harbby/presto-connectors 下载适配包源码，上传至服务器，解压。
