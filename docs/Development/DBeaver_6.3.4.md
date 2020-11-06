@@ -162,6 +162,75 @@
 
   ![20200622_101650_19](assets/DBeaver_6.3.4/20200622_101650_19.png)
 
+## 使用自定义JDBC对接Spark2x
+
+- （重要 fi6.5.1）准备spark2x jdbc连接驱动jar包
+
+  登陆linux端spark2x客户端找到jdbc相关依赖，比如：`/opt/145_651hdclient/hadoopclient/Spark2x/spark/jars/jdbc`
+
+  ![20201029_105117_19](assets/DBeaver_6.3.4/20201029_105117_19.png)
+
+  将该路径下所有的jar包拷贝到windows本地目录，比如`E:\145config\spark2xjars`, 注意里面含有一个jdbc_pom.xml文件，需要删除
+
+  ![20201029_105314_36](assets/DBeaver_6.3.4/20201029_105314_36.png)
+
+  继续登陆linux端spark2x客户端路径`/opt/145_651hdclient/hadoopclient/Spark2x/spark/jars`,分别找到如下4个jar包，拷贝到windows本地目录，比如`E:\145config\spark2xjars`
+
+  ```
+  log4j-1.2.17.jar
+  woodstox-core-5.0.3.jar
+  stax2-api-3.1.4.jar
+  commons-configuration2-2.1.1.jar
+  ```
+
+  ![20201029_105843_27](assets/DBeaver_6.3.4/20201029_105843_27.png)
+
+* 进入DBeaver界面，菜单选择`Database->DriverManager`，在弹出的对话框中点击 **New**.
+
+  ![](assets/DBeaver_6.3.4/ca995deb.png)
+
+
+- 新建的连接名字为FI-spark2x-651-direct，连接信息如下,完成后点击OK
+
+  ![20201029_110147_83](assets/DBeaver_6.3.4/20201029_110147_83.png)
+
+  ```
+  1. org.apache.hive.jdbc.HiveDriver
+  2. jdbc:hive2://172.16.4.141:24002,172.16.4.142:24002,172.16.4.143:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=sparkthriftserver2x;saslQop=auth-conf;auth=KERBEROS;principal=spark2x/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=E:/145config/user.keytab
+  3. Hadoop
+  4. 点Add File在上述步骤配置好的spark2x连接所有jar包加进去
+  ```
+
+  注意：连接url的user.principal=developuser;user.keytab=E:/145config/user.keytab这两个参数必须加上，并且保证正确
+
+  连接url串，可在Linux客户端使用`spark-beeline`命令获取参考：
+
+  ![20201029_112107_10](assets/DBeaver_6.3.4/20201029_112107_10.png)
+
+* 菜单栏选择`File->New->Database Connection`.点击 **Next**.
+
+  ![](assets/DBeaver_6.3.4/1b474bc7.png)
+
+- 选择FI-spark2x-651-direct点击NEXT
+
+  ![20201029_110532_38](assets/DBeaver_6.3.4/20201029_110532_38.png)
+
+- 点击Finish
+
+  ![20201029_110555_84](assets/DBeaver_6.3.4/20201029_110555_84.png)
+
+- 右键选择FI-spark2x-651-direct点击Edit Connection
+
+  ![20201029_110633_90](assets/DBeaver_6.3.4/20201029_110633_90.png)
+
+- 点击Test connection
+
+  ![20201029_110748_96](assets/DBeaver_6.3.4/20201029_110748_96.png)
+
+- 查看结果数据
+
+  ![20201029_110850_96](assets/DBeaver_6.3.4/20201029_110850_96.png)
+
 
 ## 使用自定义JDBC对接Hetu
 
