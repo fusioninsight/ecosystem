@@ -146,6 +146,7 @@ nav:
     - 6.4.1 <--> 8.0: Data_Integration/Talend_6.4.1.md
     - 7.0.1 <--> C80: Data_Integration/Talend_6.4.1.md
     - 7.2.1 <--> 6.5: Data_Integration/Talend_7.2.1.md
+    - 7.2.1 <--> 8.0: Data_Integration/Talend_7.2.1_MRS802.md
   - Tibco BW:
     - 5.13 <--> 6.5: Data_Integration/TIBCO_BusinessWorks.md
   - debezium:
