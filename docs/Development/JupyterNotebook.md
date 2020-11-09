@@ -6,7 +6,7 @@
 >
 > Jupyter Notebook 2.7.16 <--> FusionInsight HD 6.5 (HDFS/Hive/Elk/Spark2x)
 >
-> Jupyter Notebook 2.7.16 <--> FusionInsight MRS 8.0 (HDFS/Hive/Elk/Spark2x)
+> Jupyter Notebook 2.7.16 <--> FusionInsight MRS 8.0 (HDFS/Hive/Elk/Hetu/Spark2x)
 
 
 说明：Jupyter Notebook版本 基于Anaconda Python内核版本
@@ -192,7 +192,66 @@
 
   ![](assets/JupyterNotebook/markdown-img-paste-2019102215265645.png)
 
+## 对接Hetu
 
+- 将对接集群认证文件user.keytab放到jupyter notebook主机/opt路径下用于连接Hive认证使用,将认证相关的krb5.conf文件放到/etc/路径下
+
+- 在jupyter notebook主机/opt路径下新建jaas.conf配置文件，内容如下：
+  ```
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="developuser@HADOOP.COM"
+  keyTab="/opt/user.keytab"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+- 使用如下命令加载JVM参数：
+  ```
+  source /opt/hadoopclient/bigdata_env
+  kinit developuser
+  export JAVA_TOOL_OPTIONS="-Djava.security.krb5.conf=/etc/krb5.conf -Djava.security.auth.login.config=/opt/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dzookeeper.request.timeout=120000"
+  ```   
+  完成后使用命令`java -version`查看是否加载成功：
+
+  ![](assets/JupyterNotebook/markdown-img-paste-20191023142106563.png)
+
+
+
+
+- 使用如下命令启动jupyter notebook
+  ```
+  source ~/.bashrc.anaconda
+  export PYSPARK_DRIVER_PYTHON="ipython"
+  export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root"
+  pyspark --master yarn --deploy-mode client &
+  ```
+
+  说明： 如果不需要同Spark2x组件交互，可直接使用命令`jupyter notebook --allow-root`直接启动jupyter notebook
+
+- 新建一个notebook，输入如下代码:
+
+  ```
+  import jaydebeapi
+  import jpype
+  import os
+
+  conn3 = jaydebeapi.connect(
+    "io.prestosql.jdbc.PrestoDriver",
+    ["jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=/opt/mrs_hetu_config/hetuserver.jks&KerberosConfigPath=/opt/mrs_hetu_config/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=/opt/mrs_hetu_config/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D" ], '/opt/mrs_hetu_config/presto-jdbc-316-hw-ei-301001-SNAPSHOT.jar'
+  )
+  import pandas as pd
+  sql = "Select * From iris"
+  df_hive = pd.read_sql(sql, conn3)
+  df_hive
+  ```
+
+  说明：连接hetu已经在url里面配置了用户名和密码，所以不需要再次在代码里面配置
+
+  ![20201109_143820_18](assets/JupyterNotebook/20201109_143820_18.png)
 
 ## 对接ELK
 
@@ -264,7 +323,6 @@
   ```
 
   ![](assets/JupyterNotebook/markdown-img-paste-20191022155949491.png)
-
 
 
 ## 对接HDFS
