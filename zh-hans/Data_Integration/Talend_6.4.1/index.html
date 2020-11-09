@@ -2469,6 +2469,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#talendhetu" class="md-nav__link">
+    Talend连接Hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -2488,6 +2495,18 @@
   <li class="md-nav__item">
     <a href="../Talend_7.2.1/" title="7.2.1 6.5" class="md-nav__link">
       7.2.1 <--> 6.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend_7.2.1_MRS802/" title="7.2.1 8.0" class="md-nav__link">
+      7.2.1 <--> 8.0
     </a>
   </li>
 
@@ -4591,6 +4610,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#talendhetu" class="md-nav__link">
+    Talend连接Hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -4615,7 +4641,7 @@
 <blockquote>
 <p>Talend 6.4.1 &harr; FusionInsight HD V100R002C80SPC200 (HDFS/HBase/Hive)</p>
 <p>Talend 7.0.1 &harr; FusionInsight HD V100R002C80SPC200 (HDFS/HBase)</p>
-<p>Talend 6.4.1 &harr; FusionInsight MRS 8.0 (HDFS/Hive)</p>
+<p>Talend 6.4.1 &harr; FusionInsight MRS 8.0 (HDFS/Hive/Hetu)</p>
 <p>注：因为Talend 7.0.1版本bug，Hive组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本</p>
 </blockquote>
 <h2 id="talend">安装Talend<a class="headerlink" href="#talend" title="Permanent link">&para;</a></h2>
@@ -4976,6 +5002,32 @@ scan &#39;hbaseInputOutputTest&#39;
 </code></pre></div></p>
 <p><img alt="" src="../assets/Talend_6.4.1/markdown-img-paste-20180910204722570.png" /></p>
 <p><img alt="" src="../assets/Talend_6.4.1/markdown-img-paste-20180910204755477.png" /></p>
+<h2 id="talendhetu">Talend连接Hetu<a class="headerlink" href="#talendhetu" title="Permanent link">&para;</a></h2>
+<p>说明： talend 6.4.1对接mrs 8.0.2 的hetu组件</p>
+<ul>
+<li>connection配置：</li>
+</ul>
+<p><img alt="20201109_142226_97" src="../assets/Talend_6.4.1/20201109_142226_97.png" /></p>
+<p>注意：username 和 password全部删掉，不能有内容，带双引号“”都不可以，因为uri的配置为：</p>
+<p><div class="highlight"><pre><span></span><code>&quot;jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&amp;KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D&quot;
+</code></pre></div>
+  已经含有连接内容了，不然的话会报<code>no value present</code>的错误，或者是<code>Connection property 'user' is both in the URL and an argument</code>错误如下：</p>
+<p>只配了User， password没有配：</p>
+<p><img alt="20201109_142548_79" src="../assets/Talend_6.4.1/20201109_142548_79.png" /></p>
+<p>报错：</p>
+<p><img alt="20201109_142613_45" src="../assets/Talend_6.4.1/20201109_142613_45.png" /></p>
+<p>user,password都配了且为空值：</p>
+<p><img alt="20201109_142705_98" src="../assets/Talend_6.4.1/20201109_142705_98.png" /></p>
+<p>报错：</p>
+<p><img alt="20201109_142803_62" src="../assets/Talend_6.4.1/20201109_142803_62.png" /></p>
+<ul>
+<li>启动jvm参数配置如下：</li>
+</ul>
+<p><img alt="20201109_150928_80" src="../assets/Talend_6.4.1/20201109_150928_80.png" /></p>
+<ul>
+<li>结果：</li>
+</ul>
+<p><img alt="20201109_142135_46" src="../assets/Talend_6.4.1/20201109_142135_46.png" /></p>
                 
                   
                 

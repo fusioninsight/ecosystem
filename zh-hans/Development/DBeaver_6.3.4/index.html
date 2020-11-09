@@ -2272,6 +2272,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Integration/Talend_7.2.1_MRS802/" title="7.2.1 8.0" class="md-nav__link">
+      7.2.1 <--> 8.0
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2814,6 +2826,13 @@
         <li class="md-nav__item">
   <a href="#jdbchive" class="md-nav__link">
     使用自定义JDBC对接Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdbcspark2x" class="md-nav__link">
+    使用自定义JDBC对接Spark2x
   </a>
   
 </li>
@@ -4415,6 +4434,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jdbcspark2x" class="md-nav__link">
+    使用自定义JDBC对接Spark2x
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jdbchetu" class="md-nav__link">
     使用自定义JDBC对接Hetu
   </a>
@@ -4709,6 +4735,63 @@ C:\java64\jdk\bin
 <li>查看结果数据</li>
 </ul>
 <p><img alt="20200622_101650_19" src="../assets/DBeaver_6.3.4/20200622_101650_19.png" /></p>
+<h2 id="jdbcspark2x">使用自定义JDBC对接Spark2x<a class="headerlink" href="#jdbcspark2x" title="Permanent link">&para;</a></h2>
+<ul>
+<li>（重要 fi6.5.1）准备spark2x jdbc连接驱动jar包</li>
+</ul>
+<p>登陆linux端spark2x客户端找到jdbc相关依赖，比如：<code>/opt/145_651hdclient/hadoopclient/Spark2x/spark/jars/jdbc</code></p>
+<p><img alt="20201029_105117_19" src="../assets/DBeaver_6.3.4/20201029_105117_19.png" /></p>
+<p>将该路径下所有的jar包拷贝到windows本地目录，比如<code>E:\145config\spark2xjars</code>, 注意里面含有一个jdbc_pom.xml文件，需要删除</p>
+<p><img alt="20201029_105314_36" src="../assets/DBeaver_6.3.4/20201029_105314_36.png" /></p>
+<p>继续登陆linux端spark2x客户端路径<code>/opt/145_651hdclient/hadoopclient/Spark2x/spark/jars</code>,分别找到如下4个jar包，拷贝到windows本地目录，比如<code>E:\145config\spark2xjars</code></p>
+<div class="highlight"><pre><span></span><code>log4j-1.2.17.jar
+woodstox-core-5.0.3.jar
+stax2-api-3.1.4.jar
+commons-configuration2-2.1.1.jar
+</code></pre></div>
+
+<p><img alt="20201029_105843_27" src="../assets/DBeaver_6.3.4/20201029_105843_27.png" /></p>
+<ul>
+<li>进入DBeaver界面，菜单选择<code>Database-&gt;DriverManager</code>，在弹出的对话框中点击 <strong>New</strong>.</li>
+</ul>
+<p><img alt="" src="../assets/DBeaver_6.3.4/ca995deb.png" /></p>
+<ul>
+<li>新建的连接名字为FI-spark2x-651-direct，连接信息如下,完成后点击OK</li>
+</ul>
+<p><img alt="20201029_110147_83" src="../assets/DBeaver_6.3.4/20201029_110147_83.png" /></p>
+<div class="highlight"><pre><span></span><code>1. org.apache.hive.jdbc.HiveDriver
+2. jdbc:hive2://172.16.4.141:24002,172.16.4.142:24002,172.16.4.143:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=sparkthriftserver2x;saslQop=auth-conf;auth=KERBEROS;principal=spark2x/hadoop.hadoop.com@HADOOP.COM;user.principal=developuser;user.keytab=E:/145config/user.keytab
+3. Hadoop
+4. 点Add File在上述步骤配置好的spark2x连接所有jar包加进去
+</code></pre></div>
+
+<p>注意：连接url的user.principal=developuser;user.keytab=E:/145config/user.keytab这两个参数必须加上，并且保证正确</p>
+<p>连接url串，可在Linux客户端使用<code>spark-beeline</code>命令获取参考：</p>
+<p><img alt="20201029_112107_10" src="../assets/DBeaver_6.3.4/20201029_112107_10.png" /></p>
+<ul>
+<li>菜单栏选择<code>File-&gt;New-&gt;Database Connection</code>.点击 <strong>Next</strong>.</li>
+</ul>
+<p><img alt="" src="../assets/DBeaver_6.3.4/1b474bc7.png" /></p>
+<ul>
+<li>选择FI-spark2x-651-direct点击NEXT</li>
+</ul>
+<p><img alt="20201029_110532_38" src="../assets/DBeaver_6.3.4/20201029_110532_38.png" /></p>
+<ul>
+<li>点击Finish</li>
+</ul>
+<p><img alt="20201029_110555_84" src="../assets/DBeaver_6.3.4/20201029_110555_84.png" /></p>
+<ul>
+<li>右键选择FI-spark2x-651-direct点击Edit Connection</li>
+</ul>
+<p><img alt="20201029_110633_90" src="../assets/DBeaver_6.3.4/20201029_110633_90.png" /></p>
+<ul>
+<li>点击Test connection</li>
+</ul>
+<p><img alt="20201029_110748_96" src="../assets/DBeaver_6.3.4/20201029_110748_96.png" /></p>
+<ul>
+<li>查看结果数据</li>
+</ul>
+<p><img alt="20201029_110850_96" src="../assets/DBeaver_6.3.4/20201029_110850_96.png" /></p>
 <h2 id="jdbchetu">使用自定义JDBC对接Hetu<a class="headerlink" href="#jdbchetu" title="Permanent link">&para;</a></h2>
 <ul>
 <li>创建hetu对接配置路径<code>C:\ecotesting\hetu-config</code>,准备一下认证文件</li>
