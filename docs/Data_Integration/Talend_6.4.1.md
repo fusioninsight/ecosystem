@@ -6,7 +6,7 @@
 >
 > Talend 7.0.1 <--> FusionInsight HD V100R002C80SPC200 (HDFS/HBase)
 >
-> Talend 6.4.1 <--> FusionInsight MRS 8.0 (HDFS/Hive)
+> Talend 6.4.1 <--> FusionInsight MRS 8.0 (HDFS/Hive/Hetu)
 >
 > 注：因为Talend 7.0.1版本bug，Hive组件无法在版本7.0.1中通过，对接hive组件使用Talend 6.4.1版本
 
@@ -402,3 +402,43 @@ Talend中配置HBase解析器，对的FI HD HBase接口
   ![](assets/Talend_6.4.1/markdown-img-paste-20180910204722570.png)
 
   ![](assets/Talend_6.4.1/markdown-img-paste-20180910204755477.png)
+
+
+## Talend连接Hetu
+
+说明： talend 6.4.1对接mrs 8.0.2 的hetu组件
+
+- connection配置：
+
+  ![20201109_142226_97](assets/Talend_6.4.1/20201109_142226_97.png)
+
+  注意：username 和 password全部删掉，不能有内容，带双引号“”都不可以，因为uri的配置为：
+
+  ```
+  "jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D"
+  ```
+  已经含有连接内容了，不然的话会报`no value present`的错误，或者是`Connection property 'user' is both in the URL and an argument`错误如下：
+
+  只配了User， password没有配：
+
+  ![20201109_142548_79](assets/Talend_6.4.1/20201109_142548_79.png)
+
+  报错：
+
+  ![20201109_142613_45](assets/Talend_6.4.1/20201109_142613_45.png)
+
+  user,password都配了且为空值：
+
+  ![20201109_142705_98](assets/Talend_6.4.1/20201109_142705_98.png)
+
+  报错：
+
+  ![20201109_142803_62](assets/Talend_6.4.1/20201109_142803_62.png)
+
+- 启动jvm参数配置如下：
+
+  ![20201109_150928_80](assets/Talend_6.4.1/20201109_150928_80.png)
+
+- 结果：
+
+  ![20201109_142135_46](assets/Talend_6.4.1/20201109_142135_46.png)

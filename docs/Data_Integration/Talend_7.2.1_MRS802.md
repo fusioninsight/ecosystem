@@ -4,6 +4,8 @@
 
 > Talend 7.2.1 <--> FusionInsight MRS 8.0 (HDFS/HBase/Hive)
 
+说明： talend 7.2.1版本不支持对接hetu
+
 ## 准备工作
 
 * 登录FusionInsight Manager创建一个“人机”用户，例如：developuser，具体请参见FusionInsight HD产品文档的`管理员指南->系统设置->权限设置->用户管理->创建用户`章节。给developuser用户授予所有访问权限，包含但不限于HDFS、HIVE、HBASE。
