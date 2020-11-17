@@ -187,17 +187,17 @@
 
   说明: 如果是mrs8.0.2版本准备的依赖为：
 
-    1.  登陆linux端spark2x客户端找到jdbc相关依赖，比如：`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars/jdbc`
+  1.  登陆linux端spark2x客户端找到jdbc相关依赖，比如：`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars/jdbc`下所有依赖
 
-    2. 继续登陆linux端spark2x客户端路径`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars`,分别找到如下5个jar包
+  2. 继续登陆linux端spark2x客户端路径`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars`,分别找到如下5个jar包
 
-    ```
-    log4j-1.2.17-atlassian-13.jar
-    commons-lang-2.6.jar
-    woodstox-core-5.0.3.jar
-    stax2-api-3.1.4.jar
-    commons-configuration2-2.1.jar
-    ```
+  ```
+  log4j-1.2.17-atlassian-13.jar
+  commons-lang-2.6.jar
+  woodstox-core-5.0.3.jar
+  stax2-api-3.1.4.jar
+  commons-configuration2-2.1.jar
+  ```
 
 * 进入DBeaver界面，菜单选择`Database->DriverManager`，在弹出的对话框中点击 **New**.
 
