@@ -576,7 +576,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Database/OpenTSDB_2.4.0"><span class="label label-HBase ">HBase</span></a></td>
-<td></td>
+<td><a href="Database/OpenTSDB_2.4.0"><span class="label label-HBase ">HBase</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >SAP VORA</td>
@@ -652,7 +652,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Development/DBeaver_6.3.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Hetu ">Hetu</span></a></td>
-<td><a href="Development/DBeaver_6.3.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Hetu ">Hetu</span></a></td>
+<td><a href="Development/DBeaver_6.3.4"><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-SparkSQL ">Hetu</span></a></td>
 </tr>
 <tr>
 <td rowspan=3 >DbVisualizer</td>
