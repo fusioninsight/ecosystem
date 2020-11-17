@@ -185,6 +185,20 @@
 
   ![20201029_105843_27](assets/DBeaver_6.3.4/20201029_105843_27.png)
 
+  说明: 如果是mrs8.0.2版本准备的依赖为：
+
+    1.  登陆linux端spark2x客户端找到jdbc相关依赖，比如：`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars/jdbc`
+
+    2. 继续登陆linux端spark2x客户端路径`/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars`,分别找到如下5个jar包
+
+    ```
+    log4j-1.2.17-atlassian-13.jar
+    commons-lang-2.6.jar
+    woodstox-core-5.0.3.jar
+    stax2-api-3.1.4.jar
+    commons-configuration2-2.1.jar
+    ```
+
 * 进入DBeaver界面，菜单选择`Database->DriverManager`，在弹出的对话框中点击 **New**.
 
   ![](assets/DBeaver_6.3.4/ca995deb.png)
@@ -227,10 +241,17 @@
 
   ![20201029_110748_96](assets/DBeaver_6.3.4/20201029_110748_96.png)
 
+  mrs 8.0.2的测试结果如下：
+
+  ![20201117_161346_53](assets/DBeaver_6.3.4/20201117_161346_53.png)
+
 - 查看结果数据
 
   ![20201029_110850_96](assets/DBeaver_6.3.4/20201029_110850_96.png)
 
+  mrs 8.0.2的测试结果如下：
+
+  ![20201117_161243_50](assets/DBeaver_6.3.4/20201117_161243_50.png)
 
 ## 使用自定义JDBC对接Hetu
 
