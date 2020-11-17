@@ -4751,6 +4751,22 @@ commons-configuration2-2.1.1.jar
 </code></pre></div>
 
 <p><img alt="20201029_105843_27" src="../assets/DBeaver_6.3.4/20201029_105843_27.png" /></p>
+<p>说明: 如果是mrs8.0.2版本准备的依赖为：</p>
+<ol>
+<li>
+<p>登陆linux端spark2x客户端找到jdbc相关依赖，比如：<code>/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars/jdbc</code>下所有依赖</p>
+</li>
+<li>
+<p>继续登陆linux端spark2x客户端路径<code>/opt/80_135_hadoopclient2/hadoopclient/Spark2x/spark/jars</code>,分别找到如下5个jar包</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>log4j-1.2.17-atlassian-13.jar
+commons-lang-2.6.jar
+woodstox-core-5.0.3.jar
+stax2-api-3.1.4.jar
+commons-configuration2-2.1.jar
+</code></pre></div>
+
 <ul>
 <li>进入DBeaver界面，菜单选择<code>Database-&gt;DriverManager</code>，在弹出的对话框中点击 <strong>New</strong>.</li>
 </ul>
@@ -4788,10 +4804,14 @@ commons-configuration2-2.1.1.jar
 <li>点击Test connection</li>
 </ul>
 <p><img alt="20201029_110748_96" src="../assets/DBeaver_6.3.4/20201029_110748_96.png" /></p>
+<p>mrs 8.0.2的测试结果如下：</p>
+<p><img alt="20201117_161346_53" src="../assets/DBeaver_6.3.4/20201117_161346_53.png" /></p>
 <ul>
 <li>查看结果数据</li>
 </ul>
 <p><img alt="20201029_110850_96" src="../assets/DBeaver_6.3.4/20201029_110850_96.png" /></p>
+<p>mrs 8.0.2的测试结果如下：</p>
+<p><img alt="20201117_161243_50" src="../assets/DBeaver_6.3.4/20201117_161243_50.png" /></p>
 <h2 id="jdbchetu">使用自定义JDBC对接Hetu<a class="headerlink" href="#jdbchetu" title="Permanent link">&para;</a></h2>
 <ul>
 <li>创建hetu对接配置路径<code>C:\ecotesting\hetu-config</code>,准备一下认证文件</li>
