@@ -325,6 +325,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jdbchetu" class="md-nav__link">
+    配置JDBC接口对接Hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -4275,6 +4282,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jdbchetu" class="md-nav__link">
+    配置JDBC接口对接Hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -4298,7 +4312,7 @@
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>FineBI 5.1 &harr; FusionInsight HD 6.5 (Hive)</p>
-<p>FineBI 5.1 &harr; FusionInsight MRS 8.0 (Hive)</p>
+<p>FineBI 5.1 &harr; FusionInsight MRS 8.0 (Hive/hetu)</p>
 </blockquote>
 <h2 id="finebi">安装FineBI<a class="headerlink" href="#finebi" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4379,6 +4393,44 @@ commons-collections-3.2.2.jar
 <p><img alt="" src="../assets/FineBI_5.1/markdown-img-paste-20191017110903474.png" /></p>
 <p>在数据准备-&gt;对应的数据列表路径中找到之前配置好的表test</p>
 <p><img alt="" src="../assets/FineBI_5.1/markdown-img-paste-20191017110918221.png" /></p>
+<h2 id="jdbchetu">配置JDBC接口对接Hetu<a class="headerlink" href="#jdbchetu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>参考上述hive配置步骤完成基础配置</p>
+</li>
+<li>
+<p>准备hetu对接配置文件，比如</p>
+</li>
+</ul>
+<p><img alt="20201117_171938_94" src="../assets/FineBI_5.1/20201117_171938_94.png" /></p>
+<ul>
+<li>在FineBI的bin目录下找到配置文件finebi.vmoptions</li>
+</ul>
+<p><img alt="20201117_171605_13" src="../assets/FineBI_5.1/20201117_171605_13.png" /></p>
+<ul>
+<li>找到并进入FineBI相关依赖路径，具体为<code>C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib</code>，将hetu驱动Jar包 presto-jdbc-316-hw-ei-302002.jar 导入到该路径下</li>
+</ul>
+<p><img alt="20201117_172117_65" src="../assets/FineBI_5.1/20201117_172117_65.png" /></p>
+<ul>
+<li>启动FineBI,选择other jdbc做如下配置</li>
+</ul>
+<p><img alt="20201117_172327_84" src="../assets/FineBI_5.1/20201117_172327_84.png" /></p>
+<div class="highlight"><pre><span></span><code>1: io.prestosql.jdbc.PrestoDriver
+2: ,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&amp;KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+3: 172.16.10.131
+4: 24002
+5: jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&amp;KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+</code></pre></div>
+
+<p>说明（重要）： 配置2 + 配置3 + 配置4 会生成配置5的连接url,要时刻保持着4个配置的正确性，否则对接失败</p>
+<ul>
+<li>测试连接：</li>
+</ul>
+<p><img alt="20201117_172641_43" src="../assets/FineBI_5.1/20201117_172641_43.png" /></p>
+<ul>
+<li>查询结果：</li>
+</ul>
+<p><img alt="20201117_172718_35" src="../assets/FineBI_5.1/20201117_172718_35.png" /></p>
                 
                   
                 

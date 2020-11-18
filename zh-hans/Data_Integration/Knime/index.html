@@ -2084,6 +2084,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#knimehetu" class="md-nav__link">
+    Knime连接Hetu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#knimespark2x" class="md-nav__link">
     Knime连接Spark2x
   </a>
@@ -4575,6 +4582,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#knimehetu" class="md-nav__link">
+    Knime连接Hetu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#knimespark2x" class="md-nav__link">
     Knime连接Spark2x
   </a>
@@ -4693,7 +4707,7 @@
 <blockquote>
 <p>Knime 3.6.1 &harr; FusionInsight HD V100R002C80SPC200 (HDFS/Hive/Spark)</p>
 <p>Knime 4.1.0 &harr; FusionInsight HD 6.5 (HDFS/Hive/Spark)</p>
-<p>Knime 4.1.0 &harr; FusionInsight MRS 8.0 (HDFS/Hive)</p>
+<p>Knime 4.1.0 &harr; FusionInsight MRS 8.0 (HDFS/Hive/Hetu)</p>
 </blockquote>
 <h2 id="_2">准备工作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4975,6 +4989,56 @@ Authentication: Kerberos
 <p><img alt="" src="../assets/Knime/image026.png" /></p>
 </li>
 </ul>
+<h2 id="knimehetu">Knime连接Hetu<a class="headerlink" href="#knimehetu" title="Permanent link">&para;</a></h2>
+<p>相关配置：</p>
+<ul>
+<li>首先配置KNIME安装路径下的文件knime.ini</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410105449629.png" /></p>
+<div class="highlight"><pre><span></span><code>-Djava.security.krb5.conf=C:/172-16-4-165-651client/krb5.conf
+-Djava.security.auth.login.config=C:/172-16-4-165-651client/jaas.conf
+-Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com
+-Dsun.security.krb5.debug=false
+-Dzookeeper.sasl.clientconfig=Client
+-Dzookeeper.auth.type=kerberos
+</code></pre></div>
+
+<ul>
+<li>配置本地hosts文件</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410105639275.png" /></p>
+<ul>
+<li>启动KNIME，在File -&gt; Preferences -&gt; KNIME -&gt; Databases -&gt; Add</li>
+</ul>
+<p>连接ID，Name就写hetu, Database type 选default</p>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410110510696.png" /></p>
+<div class="highlight"><pre><span></span><code>1. jdbc:presto://172.16.4.161:24002,172.16.4.162:24002,172.16.4.163:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=C:/172-16-4-165-651client/hetuserver.jks&amp;KerberosConfigPath=C:/172-16-4-165-651client/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=C:/172-16-4-165-651client/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+2. 点Add file从本地添加准备好的驱动jar包presto-jdbc-316.jar
+3. 点击Find driver classes自动配置
+</code></pre></div>
+
+<ul>
+<li>整个工作流为</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410110906802.png" /></p>
+<ul>
+<li>DB Connector配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410111307601.png" /></p>
+<p>注意要在advanced里面把transaction勾选掉</p>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410111345329.png" /></p>
+<ul>
+<li>DB Query Reader配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410111534747.png" /></p>
+<ul>
+<li>CSV Writer配置</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410111644290.png" /></p>
+<ul>
+<li>启动工作流后去本地文件检查</li>
+</ul>
+<p><img alt="" src="../assets/Knime/markdown-img-paste-20200410111956496.png" /></p>
 <h2 id="knimespark2x">Knime连接Spark2x<a class="headerlink" href="#knimespark2x" title="Permanent link">&para;</a></h2>
 <h3 id="_5">前提条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>

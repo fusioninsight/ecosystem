@@ -1659,6 +1659,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nifihetu" class="md-nav__link">
+    NiFi连接Hetu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
@@ -4981,6 +4988,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nifihetu" class="md-nav__link">
+    NiFi连接Hetu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
@@ -5009,8 +5023,8 @@
                 <h1 id="apache-nififusioninsight">Apache NiFi对接FusionInsight<a class="headerlink" href="#apache-nififusioninsight" title="Permanent link">&para;</a></h1>
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Apache NiFi 1.9.2 &harr; FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka)</p>
-<p>Apache NiFi 1.12.0 &harr; FusionInsight MRS 8.0 (HDFS/HBase/Hive/Spark/Kafka)</p>
+<p>Apache NiFi 1.9.2 &harr; FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka/Hetu)</p>
+<p>Apache NiFi 1.12.0 &harr; FusionInsight MRS 8.0 (HDFS/HBase/Hive/Spark/Kafka/Hetu)</p>
 </blockquote>
 <h2 id="mrs-80">MRS 8.0 对接说明<a class="headerlink" href="#mrs-80" title="Permanent link">&para;</a></h2>
 <p>说明：对接FusionInsight MRS 8.0需替换jar包如下</p>
@@ -6030,6 +6044,70 @@ debug=true;
 <li>登陆druid主机检查结果</li>
 </ul>
 <p><img alt="20200714_155801_46" src="../assets/Nifi_1.9.2/20200714_155801_46.png" /></p>
+<h2 id="nifihetu">NiFi连接Hetu<a class="headerlink" href="#nifihetu" title="Permanent link">&para;</a></h2>
+<p>相关配置参考配置文档，下面介绍hetu相关配置</p>
+<ul>
+<li>配置<code>bootstrap.conf</code>文件</li>
+</ul>
+<p>增加如下内容</p>
+<div class="highlight"><pre><span></span><code>java.arg.20=-Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com
+java.arg.21=-Dzookeeper.sasl.clientconfig=Client
+java.arg.22=-Dzookeeper.auth.type=kerberos
+java.arg.23=-Djava.util.logging.config.file=/opt/hetuserver-client-logging.properties
+</code></pre></div>
+
+<p>其中<code>hetuserver-client-logging.properties</code>配置文件内容,该文件可从hetu客户端获取：</p>
+<div class="highlight"><pre><span></span><code>.level = INFO
+java.util.logging.ConsoleHandler.level = SEVERE
+java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+handlers = java.util.logging.ConsoleHandler
+</code></pre></div>
+
+<ul>
+<li>找到路径<code>/opt/nifi/nifi-1.9.2/work/nar/extensions/nifi-dbcp-service-nar-1.9.2.nar-unpacked/NAR-INF/bundled-dependencies</code>,将hetu的驱动jar包<code>presto-jdbc-316.jar</code>放置到该路径下</li>
+</ul>
+<p>注意： mrs8.0.2对应的hetu驱动jar包为：presto-jdbc-316-hw-ei-302002.jar</p>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-20200408113856668.png" /></p>
+<ul>
+<li>
+<p>重启nifi</p>
+</li>
+<li>
+<p>首先配置<code>DBCPConnectionPool</code></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-20200408113952929.png" /></p>
+<div class="highlight"><pre><span></span><code>1. jdbc:presto://172.16.4.161:24002,172.16.4.162:24002,172.16.4.163:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=/opt/hetuserver.jks&amp;KerberosConfigPath=/opt/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=/opt/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+2. io.prestosql.jdbc.PrestoDriver
+</code></pre></div>
+
+<p>完成后enable：</p>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-2020040811410295.png" /></p>
+<ul>
+<li>工作流如图：</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-2020040811413043.png" /></p>
+<ul>
+<li>ExecuteSQLRecord配置：</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-2020040811425969.png" /></p>
+<div class="highlight"><pre><span></span><code>1. DBCPConnectionPool
+2. select * from default.test
+3. CSVRecordSetWriter (默认配置，不用做任何改动)
+</code></pre></div>
+
+<ul>
+<li>PutFile配置：</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-20200408114423356.png" /></p>
+<ul>
+<li>启动工作流：</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-20200408114643674.png" /></p>
+<ul>
+<li>去后台检查结果：</li>
+</ul>
+<p><img alt="" src="../assets/Nifi_1.9.2/markdown-img-paste-2020040811462272.png" /></p>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <p>问题：
 连hive的时候遇到问题：</p>

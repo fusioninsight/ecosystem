@@ -2016,6 +2016,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hetu" class="md-nav__link">
+    对接hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -4465,6 +4472,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hetu" class="md-nav__link">
+    对接hetu
+  </a>
+  
+</li>
+      
       
       
       
@@ -4879,6 +4893,75 @@ Clusters</strong> 右键选择 <strong>New Cluster</strong></li>
 <li>查看导出的excel文件</li>
 </ul>
 <p><img alt="" src="../assets/Kettle_6.1/image49.png" /></p>
+<h2 id="hetu">对接hetu<a class="headerlink" href="#hetu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>将对接的Jdbc jar包<code>presto-jdbc-316-hw-ei-302002.jar</code>放到<code>C:\SOFT\kettle\data-integration\lib</code> kettle的安装目录下</p>
+</li>
+<li>
+<p>找到<code>C:\SOFT\kettle\data-integration\Spoon.bat</code>文件进行编辑：</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-2020041316122925.png" /></p>
+<p>依次添加Jvm参数：</p>
+<p><code>"-Djava.security.krb5.conf=C:/hetu330/krb5.conf" "-Djava.security.auth.login.config=C:/hetu330/jaas.conf" "-Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com" "-Dzookeeper.sasl.clientconfig=Client" "-Dzookeeper.auth.type=kerberos"</code></p>
+<p>其中jaas.conf文件内容为：
+  <div class="highlight"><pre><span></span><code>Client {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+principal=&quot;test&quot;
+keyTab=&quot;C:/hetu330/user.keytab&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+KafkaClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName=kafka
+principal=&quot;test&quot;
+keyTab=&quot;C:/hetu330/user.keytab&quot;
+useTicketCache=false
+storeKey=true
+debug=true;
+};
+</code></pre></div></p>
+<ul>
+<li>
+<p>双击<code>C:\SOFT\kettle\data-integration\SpoonDebug.bat</code>启动kettle调试模式，相关的日志会输出到<code>C:\SOFT\kettle\data-integration\SpoonDebug.txt</code>进行调试</p>
+</li>
+<li>
+<p>进入kettle后点击文件-&gt;新建-&gt;数据库连接</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413161746192.png" /></p>
+<p>配置参数为：</p>
+<div class="highlight"><pre><span></span><code>1. jdbc:presto://172.16.4.121:24002,172.16.4.122:24002,172.16.4.123:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;SSL=true&amp;SSLTrustStorePath=C:/hetu330/hetuserver.jks&amp;user=test&amp;KerberosConfigPath=C:/hetu330/krb5.conf&amp;KerberosPrincipal=test&amp;KerberosKeytabPath=C:/hetu330/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+2. io.prestosql.jdbc.PrestoDriver
+</code></pre></div>
+
+<ul>
+<li>创建工作流：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413163226407.png" /></p>
+<ul>
+<li>表输入的配置：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413163331132.png" /></p>
+<ul>
+<li>文本文件输出的配置：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-2020041316345113.png" /></p>
+<p>点击字段配置：</p>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413163551925.png" /></p>
+<ul>
+<li>启动工作流：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413163641989.png" /></p>
+<ul>
+<li>检查输出文件：</li>
+</ul>
+<p><img alt="" src="../assets/Kettle_6.1/markdown-img-paste-20200413163733416.png" /></p>
                 
                   
                 
