@@ -104,7 +104,7 @@
   ![](assets/FineBI_5.1/markdown-img-paste-20191017110918221.png)
 
 
-## 配置JDBC接口对接Hive
+## 配置JDBC接口对接Hetu
 
 - 参考上述hive配置步骤完成基础配置
 
