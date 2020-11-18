@@ -400,3 +400,78 @@ Clusters** 右键选择 **New Cluster**
 * 查看导出的excel文件
 
   ![](assets/Kettle_6.1/image49.png)
+
+
+## 对接hetu
+
+- 将对接的Jdbc jar包`presto-jdbc-316-hw-ei-302002.jar`放到`C:\SOFT\kettle\data-integration\lib` kettle的安装目录下
+
+- 找到`C:\SOFT\kettle\data-integration\Spoon.bat`文件进行编辑：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-2020041316122925.png)
+
+  依次添加Jvm参数：
+
+  `"-Djava.security.krb5.conf=C:/hetu330/krb5.conf" "-Djava.security.auth.login.config=C:/hetu330/jaas.conf" "-Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com" "-Dzookeeper.sasl.clientconfig=Client" "-Dzookeeper.auth.type=kerberos"`
+
+
+  其中jaas.conf文件内容为：
+  ```
+  Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  principal="test"
+  keyTab="C:/hetu330/user.keytab"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  KafkaClient {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  serviceName=kafka
+  principal="test"
+  keyTab="C:/hetu330/user.keytab"
+  useTicketCache=false
+  storeKey=true
+  debug=true;
+  };
+  ```
+
+
+- 双击`C:\SOFT\kettle\data-integration\SpoonDebug.bat`启动kettle调试模式，相关的日志会输出到`C:\SOFT\kettle\data-integration\SpoonDebug.txt`进行调试
+
+- 进入kettle后点击文件->新建->数据库连接
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413161746192.png)
+
+  配置参数为：
+
+  ```
+  1. jdbc:presto://172.16.4.121:24002,172.16.4.122:24002,172.16.4.123:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&SSL=true&SSLTrustStorePath=C:/hetu330/hetuserver.jks&user=test&KerberosConfigPath=C:/hetu330/krb5.conf&KerberosPrincipal=test&KerberosKeytabPath=C:/hetu330/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+  2. io.prestosql.jdbc.PrestoDriver
+  ```
+
+- 创建工作流：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413163226407.png)
+
+- 表输入的配置：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413163331132.png)
+
+- 文本文件输出的配置：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-2020041316345113.png)
+
+  点击字段配置：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413163551925.png)
+
+- 启动工作流：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413163641989.png)
+
+- 检查输出文件：
+
+  ![](assets/Kettle_6.1/markdown-img-paste-20200413163733416.png)

@@ -6,7 +6,7 @@
 >
 > Knime 4.1.0 <--> FusionInsight HD 6.5 (HDFS/Hive/Spark)
 >
-> Knime 4.1.0 <--> FusionInsight MRS 8.0 (HDFS/Hive)
+> Knime 4.1.0 <--> FusionInsight MRS 8.0 (HDFS/Hive/Hetu)
 
 
 ## 准备工作
@@ -259,6 +259,66 @@
     ![](assets/Knime/image025.png)
 
     ![](assets/Knime/image026.png)
+
+
+## Knime连接Hetu
+
+相关配置：
+
+- 首先配置KNIME安装路径下的文件knime.ini
+
+  ![](assets/Knime/markdown-img-paste-20200410105449629.png)
+
+  ```
+  -Djava.security.krb5.conf=C:/172-16-4-165-651client/krb5.conf
+  -Djava.security.auth.login.config=C:/172-16-4-165-651client/jaas.conf
+  -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com
+  -Dsun.security.krb5.debug=false
+  -Dzookeeper.sasl.clientconfig=Client
+  -Dzookeeper.auth.type=kerberos
+  ```
+
+- 配置本地hosts文件
+
+  ![](assets/Knime/markdown-img-paste-20200410105639275.png)
+
+- 启动KNIME，在File -> Preferences -> KNIME -> Databases -> Add
+
+  连接ID，Name就写hetu, Database type 选default
+
+  ![](assets/Knime/markdown-img-paste-20200410110510696.png)
+
+  ```
+  1. jdbc:presto://172.16.4.161:24002,172.16.4.162:24002,172.16.4.163:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=C:/172-16-4-165-651client/hetuserver.jks&KerberosConfigPath=C:/172-16-4-165-651client/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=C:/172-16-4-165-651client/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+  2. 点Add file从本地添加准备好的驱动jar包presto-jdbc-316.jar
+  3. 点击Find driver classes自动配置
+  ```
+
+- 整个工作流为
+
+  ![](assets/Knime/markdown-img-paste-20200410110906802.png)
+
+- DB Connector配置
+
+  ![](assets/Knime/markdown-img-paste-20200410111307601.png)
+
+  注意要在advanced里面把transaction勾选掉
+
+  ![](assets/Knime/markdown-img-paste-20200410111345329.png)
+
+- DB Query Reader配置
+
+  ![](assets/Knime/markdown-img-paste-20200410111534747.png)
+
+- CSV Writer配置
+
+  ![](assets/Knime/markdown-img-paste-20200410111644290.png)
+
+- 启动工作流后去本地文件检查
+
+  ![](assets/Knime/markdown-img-paste-20200410111956496.png)
+
+
 
 ## Knime连接Spark2x
 

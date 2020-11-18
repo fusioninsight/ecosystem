@@ -4,7 +4,7 @@
 
 > FineBI 5.1 <--> FusionInsight HD 6.5 (Hive)
 
-> FineBI 5.1 <--> FusionInsight MRS 8.0 (Hive)
+> FineBI 5.1 <--> FusionInsight MRS 8.0 (Hive/hetu)
 
 ## 安装FineBI
 
@@ -102,3 +102,42 @@
   在数据准备->对应的数据列表路径中找到之前配置好的表test
 
   ![](assets/FineBI_5.1/markdown-img-paste-20191017110918221.png)
+
+
+## 配置JDBC接口对接Hive
+
+- 参考上述hive配置步骤完成基础配置
+
+- 准备hetu对接配置文件，比如
+
+  ![20201117_171938_94](assets/FineBI_5.1/20201117_171938_94.png)
+
+- 在FineBI的bin目录下找到配置文件finebi.vmoptions
+
+  ![20201117_171605_13](assets/FineBI_5.1/20201117_171605_13.png)
+
+- 找到并进入FineBI相关依赖路径，具体为`C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib`，将hetu驱动Jar包 presto-jdbc-316-hw-ei-302002.jar 导入到该路径下
+
+  ![20201117_172117_65](assets/FineBI_5.1/20201117_172117_65.png)
+
+- 启动FineBI,选择other jdbc做如下配置
+
+  ![20201117_172327_84](assets/FineBI_5.1/20201117_172327_84.png)
+
+  ```
+  1: io.prestosql.jdbc.PrestoDriver
+  2: ,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+  3: 172.16.10.131
+  4: 24002
+  5: jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+  ```
+
+  说明（重要）： 配置2 + 配置3 + 配置4 会生成配置5的连接url,要时刻保持着4个配置的正确性，否则对接失败
+
+- 测试连接：
+
+  ![20201117_172641_43](assets/FineBI_5.1/20201117_172641_43.png)
+
+- 查询结果：
+
+  ![20201117_172718_35](assets/FineBI_5.1/20201117_172718_35.png)

@@ -3,9 +3,9 @@
 ## 适用场景
 
 
->Apache NiFi 1.9.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka)
+>Apache NiFi 1.9.2 <--> FusionInsight HD 6.5 (HDFS/HBase/Hive/Spark/Kafka/Hetu)
 >
->Apache NiFi 1.12.0 <--> FusionInsight MRS 8.0 (HDFS/HBase/Hive/Spark/Kafka)
+>Apache NiFi 1.12.0 <--> FusionInsight MRS 8.0 (HDFS/HBase/Hive/Spark/Kafka/Hetu)
 
 ## MRS 8.0 对接说明
 
@@ -1155,6 +1155,79 @@ NiFi中配置kafka解析器，对的FI HD kafka 21007端口
 - 登陆druid主机检查结果
 
   ![20200714_155801_46](assets/Nifi_1.9.2/20200714_155801_46.png)
+
+
+## NiFi连接Hetu
+
+相关配置参考配置文档，下面介绍hetu相关配置
+
+- 配置`bootstrap.conf`文件
+
+  增加如下内容
+
+  ```
+  java.arg.20=-Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com
+  java.arg.21=-Dzookeeper.sasl.clientconfig=Client
+  java.arg.22=-Dzookeeper.auth.type=kerberos
+  java.arg.23=-Djava.util.logging.config.file=/opt/hetuserver-client-logging.properties
+  ```
+
+  其中`hetuserver-client-logging.properties`配置文件内容,该文件可从hetu客户端获取：
+
+  ```
+  .level = INFO
+  java.util.logging.ConsoleHandler.level = SEVERE
+  java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+  handlers = java.util.logging.ConsoleHandler
+  ```
+
+- 找到路径`/opt/nifi/nifi-1.9.2/work/nar/extensions/nifi-dbcp-service-nar-1.9.2.nar-unpacked/NAR-INF/bundled-dependencies`,将hetu的驱动jar包`presto-jdbc-316.jar`放置到该路径下
+
+  注意： mrs8.0.2对应的hetu驱动jar包为：presto-jdbc-316-hw-ei-302002.jar
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-20200408113856668.png)
+
+
+- 重启nifi
+
+- 首先配置`DBCPConnectionPool`
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-20200408113952929.png)
+
+  ```
+  1. jdbc:presto://172.16.4.161:24002,172.16.4.162:24002,172.16.4.163:24002/hive/default?serviceDiscoveryMode=zooKeeper&zooKeeperNamespace=hsbroker&deploymentMode=on_yarn&user=developuser&SSL=true&SSLTrustStorePath=/opt/hetuserver.jks&KerberosConfigPath=/opt/krb5.conf&KerberosPrincipal=developuser&KerberosKeytabPath=/opt/user.keytab&KerberosRemoteServiceName=HTTP&KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
+  2. io.prestosql.jdbc.PrestoDriver
+  ```
+
+  完成后enable：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-2020040811410295.png)
+
+- 工作流如图：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-2020040811413043.png)
+
+- ExecuteSQLRecord配置：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-2020040811425969.png)
+
+  ```
+  1. DBCPConnectionPool
+  2. select * from default.test
+  3. CSVRecordSetWriter (默认配置，不用做任何改动)
+  ```
+
+- PutFile配置：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-20200408114423356.png)
+
+- 启动工作流：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-20200408114643674.png)
+
+- 去后台检查结果：
+
+  ![](assets/Nifi_1.9.2//markdown-img-paste-2020040811462272.png)
 
 
 ## FAQ
