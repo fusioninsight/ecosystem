@@ -33,7 +33,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Business_Intelligence/FineBI_5.1"><span class="label label-Hive ">Hive</span></a></td>
-<td><a href="Business_Intelligence/FineBI_5.1"><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Business_Intelligence/FineBI_5.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >IBM Cognos</td>
@@ -228,7 +228,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
 <tr><td rowspan=34 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=3 >Apache NiFi</td>
@@ -246,7 +246,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 <td></td>
 </tr>
 <td>1.12.0</td>
@@ -255,7 +255,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/ApacheNifi-1.9.2"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 <tr>
 </tr>
 <tr>
@@ -393,7 +393,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 <td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 <td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
-<td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Kettle_6.1"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >Knime</td>
@@ -412,7 +412,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></a></td>
-<td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Knime"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >OceanSource</td>
