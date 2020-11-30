@@ -313,7 +313,6 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
   export HIVE_CONF=/opt/115_hadoopclient/hadoopclient/Hive/config
   export HCAT_HOME=/opt/115_hadoopclient/hadoopclient/Hive/HCatalog
   export KAFKA_HOME=/opt/115_hadoopclient/hadoopclient/Kafka/kafka
-  export SPARK_HOME=/opt/115_hadoopclient/hadoopclient/Spark2x/spark
   ````
 
 - 修改配置文件`/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/conf/kylin.properties`
