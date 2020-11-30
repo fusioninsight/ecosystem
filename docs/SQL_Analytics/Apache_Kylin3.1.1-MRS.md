@@ -309,6 +309,8 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
 
 参考Kylin官方文档：http://kylin.apache.org/docs30/tutorial/cube_spark.html
 
+- (重要)将Kylin主机名 172-16-9-109增加到对接集群的/etc/hosts配置文件下
+
 - 停止之前运行的Kylin任务，使用如下命令引入已安装的各组件客户端位置
 
   ```
