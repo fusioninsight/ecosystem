@@ -60,6 +60,8 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
 
   ![20201130_110222_00](assets/Apache_Kylin_3.1.1/20201130_110222_00.png)
 
+  对应的开源代码（分支为:master-hadoop3）：https://github.com/apache/kylin/tree/master-hadoop3
+
 * 上传apache-kylin-3.1.1-bin-hadoop3.tar.gz到Apache kylin节点的`/opt/kylin`目录
 
 * 解压上一步骤的安装包
