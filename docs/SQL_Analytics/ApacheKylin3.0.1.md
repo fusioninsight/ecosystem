@@ -332,11 +332,6 @@ Fusioninsight配套的HBase是1.3.1，Apache Kylin可直接下载apache-kylin-3.
 
 
 
-
-
-
-
-
 ### FAQ
 
 问题1： 在做bin/sample.sh之后再build cube的时候，第一步遇到报错：

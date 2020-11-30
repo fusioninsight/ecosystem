@@ -13,6 +13,7 @@
   * [2.3.1 <--> C80](Apache_Kylin_2.3.1.md)
   * [2.6.1 <--> 6.5](Apache_Kylin_2.6.1.md)
   * [3.0.1 <--> 6.5](ApacheKylin3.0.1.md)
+  * [3.1.1 <--> 8.0](Apache_Kylin3.1.1-MRS.md)
 * Kyligence Analytics Platform
   * [2.2 <--> C60](Kyligence.md)
   * [2.3 <--> C60](Kyligence.md)

@@ -255,6 +255,7 @@ nav:
     - 2.3.1 <--> C80: SQL_Analytics/Apache_Kylin_2.3.1.md
     - 2.6.1 <--> 6.5: SQL_Analytics/Apache_Kylin_2.6.1.md
     - 3.0.1 <--> 6.5: SQL_Analytics/ApacheKylin3.0.1.md
+    - 3.1.1 <--> 8.0: SQL_Analytics/Apache_Kylin3.1.1-MRS.md
   - Kyligence Analytics Platform:
     - 2.2 <--> C60: SQL_Analytics/Kyligence.md
     - 2.3 <--> C60: SQL_Analytics/Kyligence.md
