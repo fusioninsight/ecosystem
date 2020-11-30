@@ -16,6 +16,8 @@ Apache Kylin主要与FusionInsight的Hive和HBase进行对接
 
 ## 环境准备
 
+说明：Kylin3.1.1主机： 172.16.9.109  MRS8.0集群： 172.16.4.111-113
+
 * 修改/etc/hosts
 
   添加本机主机名解析
