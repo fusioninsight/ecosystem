@@ -14,7 +14,7 @@ Apache Kylin™是一个开源的分布式分析引擎，提供Hadoop之上的SQ
 
 Apache Kylin主要与FusionInsight的Hive和HBase进行对接
 
-![](assets/Apache_Kylin_3.1.1/0a886.png)
+![20201130_165201_76](assets/Apache_Kylin_3.1.1/20201130_165201_76.png)
 
 ## 环境准备
 
