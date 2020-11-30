@@ -96,13 +96,19 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
 
   ![20201128_155617_15](assets/Apache_Kylin_3.1.1/20201128_155617_15.png)
 
+  `hive_exec_path=/opt/115_hadoopclient/hadoopclient/Hive/Beeline/lib`
+
 * 修改`/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/bin/find-hbase-dependency.sh`
 
   ![20201128_155806_85](assets/Apache_Kylin_3.1.1/20201128_155806_85.png)
 
+  `hbase_common_path=/opt/115_hadoopclient/hadoopclient/HBase/hbase/lib/`
+
 * 修改`/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/bin/find-spark-dependency.sh`
 
   ![20201128_160139_51](assets/Apache_Kylin_3.1.1/20201128_160139_51.png)
+
+  `! -name '*jackson*' !`
 
 * 如果已经启动，要提前删除`rm cached-*`
 
@@ -160,7 +166,7 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
   ```
   kylin.source.hive.client=beeline
   kylin.source.hive.beeline-shell=beeline
-  kylin.source.hive.beeline-params=-n root -u 'jdbc:hive2://172.16.4.191:24002,172.16.4.192:24002,172.16.4.193:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM'
+  kylin.source.hive.beeline-params=-n root -u 'jdbc:hive2://172.16.4.111:24002,172.16.4.112:24002,172.16.4.113:24002/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM'
   ```
   JDBC字符串使用上一步骤获取的字符串
 
@@ -310,12 +316,24 @@ Fusioninsight MRS 8.0 配套的HBase是2.2.3，Apache Kylin可直接下载apache
   export SPARK_HOME=/opt/115_hadoopclient/hadoopclient/Spark2x/spark
   ````
 
+- 修改配置文件`/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/conf/kylin.properties`
+
+  增加两个配置
+
+  ```
+  kylin.engine.spark-conf.spark.master=yarn
+  kylin.engine.spark-conf.spark.submit.deployMode=cluster
+  ```
+
 - 新建路径`/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/spark/jars`，使用如下命令将已安装的Spark2x客户端的jar包拷贝到该路径下，并且删除hadoop开头的jar包
 
   ```
   cp /opt/115_hadoopclient/hadoopclient/Spark2x/spark/jars/*.jar /opt/kylin/apache-kylin-3.1.1-bin-hadoop3/spark/jars/
   rm -rf hadoop-*
   ```
+- 删除/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/bin下的cached配置文件，重启kylin
+
+  ![20201130_104408_05](assets/Apache_Kylin_3.1.1/20201130_104408_05.png)
 
 - 启动Kylin，登陆web UI
 
