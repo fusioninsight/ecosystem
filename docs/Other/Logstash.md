@@ -132,6 +132,8 @@ logstash主机：172.16.2.124
 
 FI HD集群：172.16.10.131-133
 
+说明（重要）：默认FusionInsight的域名为HADOOP.COM，如果存在集群更改域名的情况，需要向logstash传入更改后的域名参数，该功能logstash不支持，需要logstash适配。
+
 ### kafka安全模式对接认证相关配置
 
 - 登陆集群manager下载认证用户的配置文件，user.keytab和krb5.conf并将这两个文件放到logstash安装主机的`/opt`路径下
