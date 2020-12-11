@@ -149,7 +149,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
 <tr><td rowspan=8 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
