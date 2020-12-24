@@ -138,6 +138,10 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
 
   ![](assets/Tableau/image41.png)
 
+  说明(重要)：上述配置介绍的是对接Spark 1.x的配置，如果对接的是Spark 2.x，则端口需要更改，具体配置可参考下图的dsn
+
+    ![20201224_162507_51](assets/Tableau/20201224_162507_51.png)
+
   * 点击“登录”，进入tableau页面，选择架构和表，结果如下。
 
     ![](assets/Tableau/image42.png)
