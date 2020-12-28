@@ -83,7 +83,7 @@ nav:
   - Confluent:
     - 4.1.0 <--> C80: Data_Integration/Confluent_4_1_0.md
     - 4.1.0 <--> 6.5: Data_Integration/Confluent_4_1_0.md
-    - 5.5.0 <--> 8.0: Data_Integration/Confluent_4_1_0.md
+    - 5.5.0 <--> 8.0: Data_Integration/Confluent_5_5_0.md
   - DataX:
     - 0.1 <--> 6.5: Data_Integration/DataX.md
     - 0.1 <--> 8.0: Data_Integration/DataX.md
