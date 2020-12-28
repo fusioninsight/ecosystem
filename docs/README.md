@@ -265,7 +265,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-<td><a href="Data_Integration/Confluent_5_5_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Confluent_4_1_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/Confluent_5_5_0"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >DataX</td>
