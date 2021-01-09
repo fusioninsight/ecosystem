@@ -1,0 +1,2568 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>11.5.0.2 C60 - FusionData Ecosystem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ibm-infosphere-datastage-connects-to-fusioninsight" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="FusionData Ecosystem" aria-label="FusionData Ecosystem" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              FusionData Ecosystem
+            </span>
+            <span class="md-header-nav__topic">
+              
+                11.5.0.2 <--> C60
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="FusionData Ecosystem" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FusionData Ecosystem
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/fusioninsight/ecosystem/tree/en/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    fusioninsight/ecosystem
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Business Intelligence
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Business Intelligence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      QlikView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        QlikView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C60" class="md-nav__link">
+      12 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C70" class="md-nav__link">
+      12 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/QlikView/" title="12 C80" class="md-nav__link">
+      12 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      SSRS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        SSRS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/SSRS/" title="2017 6.5" class="md-nav__link">
+      2017 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Tableau
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        Tableau
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.0.0 C50" class="md-nav__link">
+      10.0.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.1.4 C60" class="md-nav__link">
+      10.1.4 <--> C60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.3.2 C70" class="md-nav__link">
+      10.3.2 <--> C70
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Business_Intelligence/Tableau/" title="10.5.0 C80" class="md-nav__link">
+      10.5.0 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Rapidminer Studio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Rapidminer Studio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Analysis/RapidMiner/" title="8.2.001 C80" class="md-nav__link">
+      8.2.001 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Data Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Apache NiFi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Apache NiFi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apache_NiFi/" title="1.7.1 C80" class="md-nav__link">
+      1.7.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      IBM InfoSphere DataStage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        IBM InfoSphere DataStage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="11.3.1.0 C50" class="md-nav__link">
+      11.3.1.0 <--> C50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        11.5.0.2 <--> C60
+      </label>
+    
+    <a href="./" title="11.5.0.2 C60" class="md-nav__link md-nav__link--active">
+      11.5.0.2 <--> C60
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applicable-scene" class="md-nav__link">
+    Applicable scene
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-work" class="md-nav__link">
+    Ready to work
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-domain-name-resolution" class="md-nav__link">
+    Configure domain name resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-kerberos-authentication" class="md-nav__link">
+    Configure Kerberos authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-fusioninsight-client" class="md-nav__link">
+    Install FusionInsight Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-hdfs" class="md-nav__link">
+    Docking HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-the-ssl-certificate-of-the-fi-cluster" class="md-nav__link">
+    Import the SSL certificate of the FI cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hdfs-file" class="md-nav__link">
+    Read HDFS file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-hdfs-file" class="md-nav__link">
+    Write HDFS file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-hive" class="md-nav__link">
+    Docking Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-connector" class="md-nav__link">
+    Use Hive Connector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-jdbc-driver-configuration-file" class="md-nav__link">
+    Set JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-data" class="md-nav__link">
+    Read Hive data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-hive-table" class="md-nav__link">
+    Write data to Hive table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-jdbc-connector" class="md-nav__link">
+    Use JDBC Connector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-data_1" class="md-nav__link">
+    Read Hive data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-hive-table_1" class="md-nav__link">
+    Write data to Hive table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-data-into-hdfs-file-of-hive-table" class="md-nav__link">
+    Import data into HDFS file of Hive table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-data-is-regularly-and-automatically-imported-into-hdfs-files-of-hive-tables" class="md-nav__link">
+    Incremental data is regularly and automatically imported into HDFS files of Hive tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-sparksql" class="md-nav__link">
+    Docking SparkSQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable_1" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-table-data" class="md-nav__link">
+    Read Hive table data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-phoenix" class="md-nav__link">
+    Docking Phoenix
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable_2" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-jaas-configuration-file" class="md-nav__link">
+    Create jaas configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-phoenix-table-data" class="md-nav__link">
+    Read Phoenix table data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-phoenix-table-data" class="md-nav__link">
+    Write Phoenix table data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-fiber" class="md-nav__link">
+    Docking Fiber
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-jdbc-driver-configuration-file" class="md-nav__link">
+    Modify JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-fiber-configuration-file" class="md-nav__link">
+    Modify Fiber Configuration File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-driver-to-read-data" class="md-nav__link">
+    Use Hive Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-driver-to-write-data" class="md-nav__link">
+    Use Hive Driver to write data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-spark-driver-to-read-data" class="md-nav__link">
+    Use Spark Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-phoenix-driver-to-read-data" class="md-nav__link">
+    Use Phoenix Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-phoenix-driver-to-write-data" class="md-nav__link">
+    Use Phoenix Driver to write data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-with-kafka" class="md-nav__link">
+    Docking with Kafka
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-kafka-client" class="md-nav__link">
+    Install kafka client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message-to-kafka" class="md-nav__link">
+    Send message to kafka
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-kafka-messages" class="md-nav__link">
+    Read Kafka messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-mppdb" class="md-nav__link">
+    Docking MPPDB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtain-mppdb-jdbc-driver" class="md-nav__link">
+    Obtain MPPDB JDBC Driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-jdbc-driver-configuration-file_1" class="md-nav__link">
+    Modify JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-mppdb-table-data" class="md-nav__link">
+    Read MPPDB table data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-mppdb-table" class="md-nav__link">
+    Write data to MPPDB table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      IBM InfoSphere CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        IBM InfoSphere CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-nav__link">
+      11.3.3.1 <--> C50
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Informatica PowerCenter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Informatica PowerCenter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PowerCenter/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Informatica PowerexChange CDC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Informatica PowerexChange CDC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Informatica_PWX_CDC/" title="10.2.0 6.5" class="md-nav__link">
+      10.2.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Talend
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Talend
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="6.4.1 C80" class="md-nav__link">
+      6.4.1 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Talend/" title="7.0.1 C80" class="md-nav__link">
+      7.0.1 <--> C80
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Jupyter Notebook
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Jupyter Notebook
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/EN_JupyterNotebook_update/" title="5.7.8 C80" class="md-nav__link">
+      5.7.8 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Development/EN_JupyterNotebook_update/" title="5.7.8 6.5" class="md-nav__link">
+      5.7.8 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Apache Livy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Apache Livy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update/" title="0.5.0 C80" class="md-nav__link">
+      0.5.0 <--> C80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update/" title="0.6.0 6.5" class="md-nav__link">
+      0.6.0 <--> 6.5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applicable-scene" class="md-nav__link">
+    Applicable scene
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-work" class="md-nav__link">
+    Ready to work
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-domain-name-resolution" class="md-nav__link">
+    Configure domain name resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-kerberos-authentication" class="md-nav__link">
+    Configure Kerberos authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-fusioninsight-client" class="md-nav__link">
+    Install FusionInsight Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-hdfs" class="md-nav__link">
+    Docking HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-the-ssl-certificate-of-the-fi-cluster" class="md-nav__link">
+    Import the SSL certificate of the FI cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hdfs-file" class="md-nav__link">
+    Read HDFS file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-hdfs-file" class="md-nav__link">
+    Write HDFS file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-hive" class="md-nav__link">
+    Docking Hive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-connector" class="md-nav__link">
+    Use Hive Connector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-jdbc-driver-configuration-file" class="md-nav__link">
+    Set JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-data" class="md-nav__link">
+    Read Hive data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-hive-table" class="md-nav__link">
+    Write data to Hive table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-jdbc-connector" class="md-nav__link">
+    Use JDBC Connector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-data_1" class="md-nav__link">
+    Read Hive data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-hive-table_1" class="md-nav__link">
+    Write data to Hive table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-data-into-hdfs-file-of-hive-table" class="md-nav__link">
+    Import data into HDFS file of Hive table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-data-is-regularly-and-automatically-imported-into-hdfs-files-of-hive-tables" class="md-nav__link">
+    Incremental data is regularly and automatically imported into HDFS files of Hive tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-sparksql" class="md-nav__link">
+    Docking SparkSQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable_1" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hive-table-data" class="md-nav__link">
+    Read Hive table data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-phoenix" class="md-nav__link">
+    Docking Phoenix
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-classpath-environment-variable_2" class="md-nav__link">
+    Set the CLASSPATH environment variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-jaas-configuration-file" class="md-nav__link">
+    Create jaas configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-phoenix-table-data" class="md-nav__link">
+    Read Phoenix table data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-phoenix-table-data" class="md-nav__link">
+    Write Phoenix table data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-fiber" class="md-nav__link">
+    Docking Fiber
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-jdbc-driver-configuration-file" class="md-nav__link">
+    Modify JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-fiber-configuration-file" class="md-nav__link">
+    Modify Fiber Configuration File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-driver-to-read-data" class="md-nav__link">
+    Use Hive Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-hive-driver-to-write-data" class="md-nav__link">
+    Use Hive Driver to write data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-spark-driver-to-read-data" class="md-nav__link">
+    Use Spark Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-phoenix-driver-to-read-data" class="md-nav__link">
+    Use Phoenix Driver to read data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-phoenix-driver-to-write-data" class="md-nav__link">
+    Use Phoenix Driver to write data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-with-kafka" class="md-nav__link">
+    Docking with Kafka
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-kafka-client" class="md-nav__link">
+    Install kafka client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message-to-kafka" class="md-nav__link">
+    Send message to kafka
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-kafka-messages" class="md-nav__link">
+    Read Kafka messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-mppdb" class="md-nav__link">
+    Docking MPPDB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtain-mppdb-jdbc-driver" class="md-nav__link">
+    Obtain MPPDB JDBC Driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-jdbc-driver-configuration-file_1" class="md-nav__link">
+    Modify JDBC Driver configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-mppdb-table-data" class="md-nav__link">
+    Read MPPDB table data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data-to-mppdb-table" class="md-nav__link">
+    Write data to MPPDB table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fusioninsight/ecosystem/tree/en/edit/master/docs/Data_Integration/IBM_InfoSphere_DataStage.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="ibm-infosphere-datastage-connects-to-fusioninsight">IBM InfoSphere DataStage connects to FusionInsight<a class="headerlink" href="#ibm-infosphere-datastage-connects-to-fusioninsight" title="Permanent link">&para;</a></h1>
+<h2 id="applicable-scene">Applicable scene<a class="headerlink" href="#applicable-scene" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>IBM InfoSphere DataStage 11.3.1.0 &harr; FusionInsight HD V100R002C50 (HDFS/Hive/SparkSQL)</p>
+<p>IBM InfoSphere DataStage 11.5.0.2 &harr; FusionInsight HD V100R002C60U20 (HDFS/Hive/Phoenix/SparkSQL/Kafka/GaussDB)</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>The installation and deployment of IBM InfoSphere DataStage 11.5.0.2 has been completed (this article is deployed on Centos7.2)</p>
+</li>
+<li>
+<p>The deployment of FusionInsight cluster has been completed, version FusionInsight HD V100R002C60U20</p>
+</li>
+</ul>
+<h2 id="ready-to-work">Ready to work<a class="headerlink" href="#ready-to-work" title="Permanent link">&para;</a></h2>
+<h3 id="configure-domain-name-resolution">Configure domain name resolution<a class="headerlink" href="#configure-domain-name-resolution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use the <code>vi /etc/hosts</code> command to modify the hosts files of DataStage Server and Client, and add FI cluster node information, such as:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>162.1.61.42 FusionInsight2
+162.1.61.41 FusionInsight1
+162.1.61.43 FusionInsight3
+</code></pre></div>
+
+<h3 id="configure-kerberos-authentication">Configure Kerberos authentication<a class="headerlink" href="#configure-kerberos-authentication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create a DataStage docking user in the FI management interface, grant the user the required permissions, and download the authentication credentials</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image1.png" /></p>
+<ul>
+<li>
+<p>Decompress the downloaded tar file to get the Kerberos configuration file krb5.conf and the user's keytab file.</p>
+</li>
+<li>
+<p>Log in to the DataStage Server node as root, and copy the krb5.conf file of the FI cluster to the <code>/etc</code> directory.</p>
+</li>
+<li>
+<p>Upload the user's user.keytab file to any directory of the DataStage Server node, such as <code>/home/dsadm</code>.</p>
+</li>
+</ul>
+<h3 id="install-fusioninsight-client">Install FusionInsight Client<a class="headerlink" href="#install-fusioninsight-client" title="Permanent link">&para;</a></h3>
+<p>Refer to FI product documentation, download the complete client on the FI service management interface, upload it to DataStageServer, and install it to a custom directory, such as <code>/opt/ficlient</code>.</p>
+<h2 id="docking-hdfs">Docking HDFS<a class="headerlink" href="#docking-hdfs" title="Permanent link">&para;</a></h2>
+<h3 id="import-the-ssl-certificate-of-the-fi-cluster">Import the SSL certificate of the FI cluster<a class="headerlink" href="#import-the-ssl-certificate-of-the-fi-cluster" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The browser exports the root certificate of the FI cluster</li>
+</ul>
+<p>The browser opens the FI management interface, view the certificate, click the "Certificate Path" tab, select the root path, view the root certificate, under the "Details" tab, click "Copy to File" to export to cer format</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image2.png" /></p>
+<ul>
+<li>Import the certificate into the keystore file of DataStage</li>
+</ul>
+<p>Upload the exported FI root certificate fi-root-ca.cer to the DataStage server, for example, under the path <code>/home/dsadm</code>, import the certificate into the keystore file, command reference:
+  <div class="highlight"><pre><span></span><code>/opt/IBM/InformationServer/jdk/bin/keytool -importcert -file /home/dsadm/fi-root-ca.cer -keystore /home/dsadm/iis-ds-truststore_ssl.jks -alias fi-root-ca. cer -storepass Huawei@123 -trustcacerts -noprompt
+chown dsadm:dstage /home/dsadm/iis-ds-truststore_ssl.jks
+</code></pre></div></p>
+<ul>
+<li>Generate and save the encrypted keystore password</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image3.png" /></p>
+<p>Use the <code>vi /home/dsadm/authenticate.properties</code> command to create a new configuration file and save the cipher text generated in the previous step:</p>
+<div class="highlight"><pre><span></span><code>password={iisenc}SvtJ2f/uNTrvbuh26XDzag==
+</code></pre></div>
+
+<p>Execute <code>chown dsadm:dstage /home/dsadm/ authenticate.properties</code> to modify the owner of the configuration file</p>
+<ul>
+<li>Export truststore environment variables</li>
+</ul>
+<p>Use <code>vi /opt/IBM/InformationServer/Server/DSEngine/dsenv</code> to edit the environment variables of DSEngine and add at the end</p>
+<div class="highlight"><pre><span></span><code>export DS_TRUSTSTORE_LOCATION=/home/dsadm/iis-ds-truststore_ssl.jks
+export DS_TRUSTSTORE_PROPERTIES=/home/dsadm/authenticate.properties
+</code></pre></div>
+
+<ul>
+<li>Restart DSEngine, refer to the command</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-dsadm
+cd $DSHOME
+bin/uv -admin -stop
+bin/uv -admin -start
+</code></pre></div>
+
+<h3 id="read-hdfs-file">Read HDFS file<a class="headerlink" href="#read-hdfs-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p>Create a new parallel job and save it as hdfs2sf</p>
+<p>Add File_Connector component and Sequential File component, and File_Connector to Sequential File link</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image4.png" /></p>
+<ul>
+<li>Refer to the figure below to modify the configuration</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image5.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image6.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image7.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p>After saving the configuration, compile and run</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image8.png" /></p>
+<p>Open the Director client in the menu <strong>Tools</strong> -&gt; <strong>Run Director</strong> to view the job log</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image9.png" /></p>
+<ul>
+<li>View the read data</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image10.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image11.png" /></p>
+<h3 id="write-hdfs-file">Write HDFS file<a class="headerlink" href="#write-hdfs-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p>Create a new parallel job and save it as hdfswrite</p>
+<p>Add Row Generator component and File Connector component, and Row Generator to File Connector link</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image12.png" /></p>
+<ul>
+<li>Refer to the figure below to modify the configuration</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image13.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image14.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image15.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image16.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><strong>Save</strong> — <strong>Compile</strong> — <strong>Run</strong>, view the job log:</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image17.png" /></p>
+<ul>
+<li>View written data</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image18.png" /></p>
+<h2 id="docking-hive">Docking Hive<a class="headerlink" href="#docking-hive" title="Permanent link">&para;</a></h2>
+<h3 id="use-hive-connector">Use Hive Connector<a class="headerlink" href="#use-hive-connector" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Note: The Hive JDBC Driver officially certified by Hive Connector is only DataDirect Hive Driver (IShive.jar). When using the IShive.jar included in DataStage 11.5.0.2 to connect to FusionInsight's hive, there will be a thrift protocol error. You need to consult IBM technology. Support the latest IShive.jar provided</p>
+</blockquote>
+<h4 id="set-jdbc-driver-configuration-file">Set JDBC Driver configuration file<a class="headerlink" href="#set-jdbc-driver-configuration-file" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create the isjdbc.config file under the $DSHOME path, add the path of DataDirect Hive Driver (IShive.jar) to the CLASSPATH variable, and add com.ibm.isf.jdbc.hive.HiveDriver to the CLASS_NAMES variable, refer to the command:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-dsadm
+cd $DSHOME
+vi isjdbc.config
+</code></pre></div>
+
+<p>Add the following information in isjdbc.config:
+  <div class="highlight"><pre><span></span><code>CLASSPATH=/opt/IBM/InformationServer/ASBNode/lib/java/IShive.jar
+CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver
+</code></pre></div></p>
+<ul>
+<li>Configure Kerberos authentication information:</li>
+</ul>
+<p>Create JDBCDriverLogin.conf in the directory where IShive.jar is located</p>
+<div class="highlight"><pre><span></span><code>cd /opt/IBM/InformationServer/ASBNode/lib/java/
+vi JDBCDriverLogin.conf
+</code></pre></div>
+
+<p>The contents of the file are as follows:
+  <div class="highlight"><pre><span></span><code>JDBC_DRIVER_test_cache{
+      com.ibm.security.auth.module.Krb5LoginModule required
+      credsType=initiator
+      principal=&quot;test@HADOOP.COM&quot;
+      useCcache=&quot;FILE:/tmp/krb5cc_1004&quot;;
+};
+JDBC_DRIVER_test_keytab{
+      com.ibm.security.auth.module.Krb5LoginModule required
+      credsType=both
+      principal=&quot;test@HADOOP.COM&quot;
+      useKeytab=&quot;/home/dsadm/user.keytab&quot;;
+};
+</code></pre></div></p>
+<h4 id="read-hive-data">Read Hive data<a class="headerlink" href="#read-hive-data" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image19.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p>URL reference is configured as follows:
+  <div class="highlight"><pre><span></span><code>jdbc:ibm:hive://162.1.61.41:21066;DataBaseName=default;AuthenticationMethod=kerberos;ServicePrincipalName=hive/hadoop.hadoop.com@HADOOP.COM;loginConfigName=JDBC_DRIVER_test_keytab;
+</code></pre></div></p>
+<p>Where JDBC_DRIVER_test_keytab is the authentication information specified in the previous step</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image20.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image21.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image22.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><strong>Save</strong> — <strong>Compile</strong> — <strong>Run</strong>, view the job log:</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image23.png" /></p>
+<ul>
+<li>View the read data</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image24.png" /></p>
+<h4 id="write-data-to-hive-table">Write data to Hive table<a class="headerlink" href="#write-data-to-hive-table" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image25.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image26.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image27.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image28.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><strong>Save</strong> — <strong>Compile</strong> — <strong>Run</strong>, view the job log, write 10 pieces of data, 2’11”</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image29.png" /></p>
+<ul>
+<li>View Hive table data:</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image30.png" /></p>
+<blockquote>
+<p>Hive Connector uses the Insert statement to write data to the Hive table. Every time a piece of data is inserted, an MR task will be started. The efficiency is particularly low. This method is not recommended. You can write data directly to HDFS files.</p>
+</blockquote>
+<h3 id="use-jdbc-connector">Use JDBC Connector<a class="headerlink" href="#use-jdbc-connector" title="Permanent link">&para;</a></h3>
+<p>If you want to use FusionInsight's Hive JDBC driver, add the jdbc driver and dependent packages in the CLASSPATH of the isjdbc.config file. The following error will be reported when you run the job. At this time, you need to load it by exporting the CLASSPATH environment variable.</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image31.png" /></p>
+<p>And you can only use JDBC Connector, not Hive Connector, otherwise the following error will be reported</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image32.png" /></p>
+<h4 id="set-the-classpath-environment-variable">Set the CLASSPATH environment variable<a class="headerlink" href="#set-the-classpath-environment-variable" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The Hive jdbc driver package and dependent packages are located in the lib directory of the Hive client <code>/opt/ficlient/Hive/Beeline/lib</code>. If the client is not installed, these jar packages can be uploaded to any directory separately.</p>
+</li>
+<li>
+<p>Set the CLASSPATH environment variable, add the full path of the above jar package, refer to the command:
+  <div class="highlight"><pre><span></span><code>su-dsadm
+vi $DSHOME/dsenv
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the relevant jar package at the end of the file (the specific path is adjusted according to the actual environment)</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>export CLASSPATH=/opt/ficlient/Hive/Beeline/lib/commons-cli-1.2.jar:/opt/ficlient/Hive/Beeline/lib/commons-collections-3.2.1.jar:/opt/ficlient/Hive/ Beeline/lib/commons-configuration-1.6.jar:/opt/ficlient/Hive/Beeline/lib/commons-lang-2.6.jar:/opt/ficlient/Hive/Beeline/lib/commons-logging-1.1.3. jar:/opt/ficlient/Hive/Beeline/lib/curator-client-2.7.1.jar:/opt/ficlient/Hive/Beeline/lib/curator-framework-2.7.1.jar:/opt/ficlient/Hive /Beeline/lib/curator-recipes-2.7.1.jar:/opt/ficlient/Hive/Beeline/lib/guava-14.0.1.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-auth-2.7 .2.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-common-2.7.2.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-mapreduce-client-core-2.7.2.jar :/opt/ficlient/Hive/Beeline/lib/hive-beeline-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-cli-1.3.0.jar:/opt/ficlient/Hive/ Beeline/lib/hive-common-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-exec-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-jdbc- 1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-metastor e-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-serde-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-service-1.3.0.jar: /opt/ficlient/Hive/Beeline/lib/hive-shims-0.23-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-shims-common-1.3.0.jar:/opt/ficlient /Hive/Beeline/lib/httpclient-4.5.2.jar:/opt/ficlient/Hive/Beeline/lib/httpcore-4.4.jar:/opt/ficlient/Hive/Beeline/lib/jline-2.12.jar:/ opt/ficlient/Hive/Beeline/lib/libfb303-0.9.3.jar:/opt/ficlient/Hive/Beeline/lib/libthrift-0.9.3.jar:/opt/ficlient/Hive/Beeline/lib/log4j- 1.2.17.jar:/opt/ficlient/Hive/Beeline/lib/slf4j-api-1.7.5.jar:/opt/ficlient/Hive/Beeline/lib/slf4j-log4j12-1.7.5.jar:/opt /ficlient/Hive/Beeline/lib/super-csv-2.2.0.jar:/opt/ficlient/Hive/Beeline/lib/xercesImpl-2.9.1.jar:/opt/ficlient/Hive/Beeline/lib/zookeeper -3.5.1.jar
+</code></pre></div>
+
+<ul>
+<li>
+<p>Import environment variables
+  <div class="highlight"><pre><span></span><code>source $DSHOME/dsenv
+</code></pre></div></p>
+</li>
+<li>
+<p>Restart DSEngine</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cd $DSHOME
+bin/uv -admin -stop
+bin/uv -admin -start
+</code></pre></div>
+
+<h4 id="read-hive-data_1">Read Hive data<a class="headerlink" href="#read-hive-data_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image33.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image34.png" /></p>
+<p>The URL is:
+  <div class="highlight"><pre><span></span><code>jdbc:hive2://162.1.61.41:21066/default;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;user.principal=test@HADOOP.COM; user.keytab=/home/dsadm/user.keytab;
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image35.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image36.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image37.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image38.png" /></p>
+<h4 id="write-data-to-hive-table_1">Write data to Hive table<a class="headerlink" href="#write-data-to-hive-table_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image39.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image40.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image41.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image42.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p>Write 5 pieces of data, 1’49"</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image43.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image44.png" /></p>
+<h3 id="import-data-into-hdfs-file-of-hive-table">Import data into HDFS file of Hive table<a class="headerlink" href="#import-data-into-hdfs-file-of-hive-table" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image45.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image46.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image47.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image48.png" /></p>
+<ul>
+<li>View written data</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image49.png" /></p>
+<p>Hive table data increment 100</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image50.png" /></p>
+<h3 id="incremental-data-is-regularly-and-automatically-imported-into-hdfs-files-of-hive-tables">Incremental data is regularly and automatically imported into HDFS files of Hive tables<a class="headerlink" href="#incremental-data-is-regularly-and-automatically-imported-into-hdfs-files-of-hive-tables" title="Permanent link">&para;</a></h3>
+<p>Incremental data can be imported into hive by adding HDFS files. If it is to be automatically executed on a regular basis, the imported file name needs to include variable parameters for setting and distinguishing, and then run the job in command or script mode to assign values ​​to the parameters.</p>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image51.png" /></p>
+<ul>
+<li>Set job parameters</li>
+</ul>
+<p>Click the "job properties" button and set the parameters as follows</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image52.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image53.png" /></p>
+<p>File Connector configures the name of the export file, and refers to the set parameters with "#"</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image54.png" /></p>
+<ul>
+<li>dsjob command to run the job</li>
+</ul>
+<p>Save the compilation job and execute the dsjob -run command on the DataStage Server in the format:</p>
+<blockquote>
+<p>dsjob -run [-mode <NORMAL | RESET | VALIDATE>] -param <name>=<value> -jobstatus PROJECT_NAME JOB_NAME</p>
+</blockquote>
+<p>Command reference:
+  <div class="highlight"><pre><span></span><code>su-dsadm
+cd $DSHOME/bin
+./dsjob -run -param jobruntime=`date +&#39;%Y-%m-%d-%H-%M-%S&#39;` -jobstatus dstage1 hive_append
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image55.png" /></p>
+<ul>
+<li>View HDFS files:</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image56.png" /></p>
+<ul>
+<li>View Hive data increment is 200</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image57.png" /></p>
+<h2 id="docking-sparksql">Docking SparkSQL<a class="headerlink" href="#docking-sparksql" title="Permanent link">&para;</a></h2>
+<p>Similar to using the FI Hive JDBC driver, you can use the SparkSQL JDBC driver to connect to Hive. You also need to export the CLASSPATH environment variable to load the driver package and dependent packages.</p>
+<blockquote>
+<p>SparkSQL jdbc does not support the insert into statement, it can only be used to read hive data, but cannot insert data into hive tables.</p>
+</blockquote>
+<h3 id="set-the-classpath-environment-variable_1">Set the CLASSPATH environment variable<a class="headerlink" href="#set-the-classpath-environment-variable_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The SparkSQL jdbc driver package and dependent packages are located in the Spark client lib directory <code>/opt/ficlient/Spark/spark/lib/</code>. If the client is not installed, you can also upload the required jar package separately to any directory.</p>
+</li>
+<li>
+<p>Set the CLASSPATH environment variable, add the full path of the above jar package, and the spark client configuration file path (SparkSQL jdbc needs to read the configuration in hive-site.xml when connecting to hive):</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-dsadm
+vi $DSHOME/dsenv
+</code></pre></div>
+
+<p>Configure the following:
+  <div class="highlight"><pre><span></span><code>export CLASSPATH= /opt/ficlient/Spark/spark/lib/commons-collections-3.2.2.jar:/opt/ficlient/Spark/spark/lib/commons-configuration-1.6.jar:/opt/ficlient/Spark/ spark/lib/commons-lang-2.6.jar:/opt/ficlient/Spark/spark/lib/commons-logging-1.1.3.jar:/opt/ficlient/Spark/spark/lib/curator-client-2.7. 1.jar:/opt/ficlient/Spark/spark/lib/curator-framework-2.7.1.jar:/opt/ficlient/Spark/spark/lib/guava-12.0.1.jar:/opt/ficlient/Spark /spark/lib/hadoop-auth-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hadoop-common-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hadoop-mapreduce -client-core-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hive-common-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-exec-1.2 .1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-jdbc-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-metastore-1.2.1.spark .jar:/opt/ficlient/Spark/spark/lib/hive-service-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/htrace-core-3.1.0-incubating.jar:/ opt/ficlient/Spark/spark/lib/httpclient-4.5.2.jar:/opt/ficlient/Sp ark/spark/lib/httpcore-4.4.4.jar:/opt/ficlient/Spark/spark/lib/libthrift-0.9.3.jar:/opt/ficlient/Spark/spark/lib/log4j-1.2.17. jar:/opt/ficlient/Spark/spark/lib/slf4j-api-1.7.10.jar:/opt/ficlient/Spark/spark/lib/slf4j-log4j12-1.7.10.jar:/opt/ficlient/Spark /spark/lib/xercesImpl-2.9.1.jar:/opt/ficlient/Spark/spark/lib/zookeeper-3.5.1.jar:/opt/ficlient/Spark/spark/conf
+</code></pre></div></p>
+<ul>
+<li>
+<p>Import environment variables
+  <div class="highlight"><pre><span></span><code>source $DSHOME/dsenv
+</code></pre></div></p>
+</li>
+<li>
+<p>Restart DSEngine</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cd $DSHOME
+bin/uv -admin -stop
+bin/uv -admin -start
+</code></pre></div>
+
+<h3 id="read-hive-table-data">Read Hive table data<a class="headerlink" href="#read-hive-table-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image58.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image59.png" /></p>
+<p>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:hive2://ha-cluster/default;user.principal=spark/hadoop.hadoop.com@HADOOP.COM;saslQop=auth-conf;auth=KERBEROS;principal=spark/hadoop.hadoop.com@HADOOP. COM;user.principal=test@HADOOP.COM;user.keytab=/home/dsadm/user.keytab;
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image60.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image61.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image62.png" /></p>
+<h2 id="docking-phoenix">Docking Phoenix<a class="headerlink" href="#docking-phoenix" title="Permanent link">&para;</a></h2>
+<p>To use Phoenix to access HBase tables in JDBC mode, you also need to export the CLASSPATH environment variable to load the driver package and dependent packages.</p>
+<h3 id="set-the-classpath-environment-variable_2">Set the CLASSPATH environment variable<a class="headerlink" href="#set-the-classpath-environment-variable_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Phoenix-related jar packages are located in the lib directory of the HBase client <code>/opt/ficlient/HBase/hbase/lib</code>. If the client is not installed, you can also upload the required jar packages separately to any directory.</p>
+</li>
+<li>
+<p>Set the CLASSPATH environment variable, add the full path of the above jar package, and the HBase client configuration file path (phoenix needs to read the configuration in hbase-site.xml when connecting):</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-dsadm
+vi $DSHOME/dsenv
+</code></pre></div>
+
+<p>Configure the following:</p>
+<div class="highlight"><pre><span></span><code>export CLASSPATH=
+/opt/ficlient/HBase/hbase/lib/commons-cli-1.2.jar:/opt/ficlient/HBase/hbase/lib/commons-codec-1.9.jar:/opt/ficlient/HBase/hbase/lib/commons -collections-3.2.2.jar:/opt/ficlient/HBase/hbase/lib/commons-configuration-1.6.jar:/opt/ficlient/HBase/hbase/lib/commons-io-2.4.jar:/opt/ ficlient/HBase/hbase/lib/commons-lang-2.6.jar:/opt/ficlient/HBase/hbase/lib/commons-logging-1.2.jar:/opt/ficlient/HBase/hbase/lib/dynalogger-V100R002C30. jar:/opt/ficlient/HBase/hbase/lib/gson-2.2.4.jar:/opt/ficlient/HBase/hbase/lib/guava-12.0.1.jar:/opt/ficlient/HBase/hbase/lib /hadoop-auth-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hadoop-common-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hadoop-hdfs-2.7.2 .jar:/opt/ficlient/HBase/hbase/lib/hadoop-hdfs-client-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-client-1.0.2.jar:/opt/ ficlient/HBase/hbase/lib/hbase-common-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbaseFileStream-1.0.jar:/opt/ficlient/HBase/hbase/lib/hbase-protocol- 1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-seconda ryindex-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-server-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/htrace-core-3.1.0-incubating. jar:/opt/ficlient/HBase/hbase/lib/httpclient-4.5.2.jar:/opt/ficlient/HBase/hbase/lib/httpcore-4.4.4.jar:/opt/ficlient/HBase/hbase/lib /httpmime-4.3.6.jar:/opt/ficlient/HBase/hbase/lib/jackson-core-asl-1.9.13.jar:/opt/ficlient/HBase/hbase/lib/jackson-mapper-asl-1.9 .13.jar:/opt/ficlient/HBase/hbase/lib/log4j-1.2.17.jar:/opt/ficlient/HBase/hbase/lib/luna-0.1.jar:/opt/ficlient/HBase/hbase/ lib/netty-3.2.4.Final.jar:/opt/ficlient/HBase/hbase/lib/netty-all-4.0.23.Final.jar:/opt/ficlient/HBase/hbase/lib/noggit-0.6. jar:/opt/ficlient/HBase/hbase/lib/phoenix-core-4.4.0-HBase-1.0.jar:/opt/ficlient/HBase/hbase/lib/protobuf-java-2.5.0.jar:/opt /ficlient/HBase/hbase/lib/slf4j-api-1.7.7.jar:/opt/ficlient/HBase/hbase/lib/slf4j-log4j12-1.7.7.jar:/opt/ficlient/HBase/hbase/lib /solr-solrj-5.3.1.jar:/opt/ficlient/HBase/hbase/lib/zookeeper-3.5.1.jar:/opt/ficlient/HBase/hbase/conf
+</code></pre></div>
+
+<ul>
+<li>
+<p>Import environment variables
+    <div class="highlight"><pre><span></span><code>source $DSHOME/dsenv
+</code></pre></div></p>
+</li>
+<li>
+<p>Restart DSEngine</p>
+<div class="highlight"><pre><span></span><code>cd $DSHOME
+bin/uv -admin -stop
+bin/uv -admin -start
+</code></pre></div>
+
+</li>
+</ul>
+<h3 id="create-jaas-configuration-file">Create jaas configuration file<a class="headerlink" href="#create-jaas-configuration-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Phoenix connection needs to query zookeeper, and the Kerberos authentication of zookeeper needs to specify the jaas configuration file</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-admin
+vi /home/dsadm/jaas.conf
+</code></pre></div>
+
+<p>The contents of the file are as follows:
+  <div class="highlight"><pre><span></span><code>Client {
+    com.ibm.security.auth.module.Krb5LoginModule required
+    credsType=both
+    principal=&quot;test@HADOOP.COM&quot;
+    useKeytab=&quot;/home/dsadm/user.keytab&quot;;
+};
+</code></pre></div></p>
+<h3 id="read-phoenix-table-data">Read Phoenix table data<a class="headerlink" href="#read-phoenix-table-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image63.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image64.png" /></p>
+<ul>
+<li>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:phoenix:fusioninsight3,fusioninsight2,fusioninsight1:24002:/hbase:test@HADOOP.COM:/home/dsadm/user.keytab
+</code></pre></div></li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image65.png" /></p>
+<ul>
+<li>Configure JVM options as <code>-Djava.security.auth.login.config=/home/dsadm/jaas.conf</code></li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image66.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image67.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image68.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image69.png" /></p>
+<h3 id="write-phoenix-table-data">Write Phoenix table data<a class="headerlink" href="#write-phoenix-table-data" title="Permanent link">&para;</a></h3>
+<p>The Phoenix insert statement is upsert into and does not support the Insert into statement, so you cannot use the JDBC Connector to automatically generate SQL statements at runtime. You need to fill in it yourself, otherwise an error will be reported:</p>
+<div class="highlight"><pre><span></span><code>main_program: Fatal Error: The connector failed to prepare the statement: INSERT INTO us_population (STATE, CITY, POPULATION) VALUES (?, ?, ?). The reported error is: org.apache.phoenix.exception.PhoenixParserException: ERROR 601 ( 42P00): Syntax error. Encountered &quot;INSERT&quot; at line 1, column 1..
+</code></pre></div>
+
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image70.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image71.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image72.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image73.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image74.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image75.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image76.png" /></p>
+<h2 id="docking-fiber">Docking Fiber<a class="headerlink" href="#docking-fiber" title="Permanent link">&para;</a></h2>
+<p>To connect to Fiber, you need to install the FI client first</p>
+<h3 id="modify-jdbc-driver-configuration-file">Modify JDBC Driver configuration file<a class="headerlink" href="#modify-jdbc-driver-configuration-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Modify the isjdbc.config file in the $DSHOME path, add the path of the Fiber jdbc driver and dependent packages to the CLASSPATH variable, add com.huawei.fiber.FiberDriver; org.apache.hive.jdbc.HiveDriver; org.apache. phoenix.jdbc.PhoenixDriver</li>
+</ul>
+<p>Reference command:
+  <div class="highlight"><pre><span></span><code>su-dsadm
+cd $DSHOME
+vi isjdbc.config
+</code></pre></div></p>
+<p>The configuration is as follows:</p>
+<div class="highlight"><pre><span></span><code>CLASSPATH=/opt/IBM/InformationServer/ASBNode/lib/java/IShive.jar;/opt/mppdb/jdbc/gsjdbc4.jar;/opt/Progress/DataDirect/JDBC\_60/lib/mongodb.jar;/opt/ ficlient/Fiber/lib/commons-cli-1.2.jar;/opt/ficlient/Fiber/lib/commons-logging-1.1.3.jar;/opt/ficlient/Fiber/lib/fiber-jdbc-1.0.jar; /opt/ficlient/Fiber/lib/hadoop-common-2.7.2.jar;/opt/ficlient/Fiber/lib/hive-beeline-1.2.1.spark.jar;/opt/ficlient/Fiber/lib/hive -common-1.2.1.spark.jar;/opt/ficlient/Fiber/lib/hive-jdbc-1.2.1.spark.jar;/opt/ficlient/Fiber/lib/jline-2.12.jar;/opt/ ficlient/Fiber/lib/log4j-1.2.17.jar;/opt/ficlient/Fiber/lib/slf4j-api-1.7.10.jar;/opt/ficlient/Fiber/lib/slf4j-log4j12-1.7.10. jar;/opt/ficlient/Fiber/lib/super-csv-2.2.0.jar;
+
+CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver;org.postgresql.Driver;com.ddtek.jdbc.mongodb.MongoDBDriver;com.huawei.fiber.FiberDriver;org.apache.hive.jdbc.HiveDriver;org. apache.phoenix.jdbc.PhoenixDriver
+</code></pre></div>
+
+<h3 id="modify-fiber-configuration-file">Modify Fiber Configuration File<a class="headerlink" href="#modify-fiber-configuration-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DataStage uses IBM jdk, you need to create a new Fiber configuration file for DataStage to use</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cd /opt/ficlient/Fiber/conf
+cp fiber.xml fiber_ibm.xml
+</code></pre></div>
+
+<ul>
+<li>Modify the following two parameters of the phoenix, hive, and spark drivers in fiber_ibm.xml:</li>
+</ul>
+<p>-java.security.auth.login.config is modified to /home/dsadm/jaas.conf</p>
+<p>-zookeeper.kinit is modified to /opt/IBM/InformationServer/jdk/jre/bin/kinit</p>
+<ul>
+<li>The content of the file /home/dsadm/jaas.conf is as follows:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Client {
+    com.ibm.security.auth.module.Krb5LoginModule required
+    credsType=both
+    principal=&quot;test@HADOOP.COM&quot;
+    useKeytab=&quot;/home/dsadm/user.keytab&quot;;
+};
+</code></pre></div>
+
+<ul>
+<li>For other configuration items, please refer to FI product document Fiber Client Configuration Guide to modify.</li>
+</ul>
+<h3 id="use-hive-driver-to-read-data">Use Hive Driver to read data<a class="headerlink" href="#use-hive-driver-to-read-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image77.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image78.png" /></p>
+<p>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:fiber://fiberconfig=/opt/ficlient/Fiber/conf/fiber_ibm.xml;defaultDriver=hive
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image79.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image80.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image81.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image82.png" /></p>
+<h3 id="use-hive-driver-to-write-data">Use Hive Driver to write data<a class="headerlink" href="#use-hive-driver-to-write-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image83.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image84.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image85.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image86.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image87.png" /></p>
+<h3 id="use-spark-driver-to-read-data">Use Spark Driver to read data<a class="headerlink" href="#use-spark-driver-to-read-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image88.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image89.png" /></p>
+<p>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:fiber://fiberconfig=/opt/ficlient/Fiber/conf/fiber_ibm.xml;defaultDriver=spark
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image90.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image91.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image92.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image93.png" /></p>
+<h3 id="use-phoenix-driver-to-read-data">Use Phoenix Driver to read data<a class="headerlink" href="#use-phoenix-driver-to-read-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image94.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image95.png" /></p>
+<p>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:fiber://fiberconfig=/opt/ficlient/Fiber/conf/fiber_ibm.xml;defaultDriver=phoenix
+</code></pre></div></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image96.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image97.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p>Currently unable to read the data," The connector could not determine the value for the
+  fetch size.", the problem is being confirmed</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image98.png" /></p>
+<h3 id="use-phoenix-driver-to-write-data">Use Phoenix Driver to write data<a class="headerlink" href="#use-phoenix-driver-to-write-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image99.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image100.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image101.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image102.png" /></p>
+<p>URL reference:
+  <div class="highlight"><pre><span></span><code>jdbc:fiber://fiberconfig=/opt/ficlient/Fiber/conf/fiber_ibm.xml;defaultDriver=phoenix
+</code></pre></div></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p>Write 0 rows of data, the problem is being confirmed</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image103.png" /></p>
+<h2 id="docking-with-kafka">Docking with Kafka<a class="headerlink" href="#docking-with-kafka" title="Permanent link">&para;</a></h2>
+<p>Note: Kafka Connector does not support sending or consuming numeric fields such as integer, float, double, numeric, decimal, etc., and needs to be converted to char, varchar, longvarchar, etc., otherwise the following error will be reported:</p>
+<div class="highlight"><pre><span></span><code>main_program: APT_PMsectionLeader(2, node2), player 2-Unexpected termination by Unix signal 9(SIGKILL).
+</code></pre></div>
+
+<h3 id="install-kafka-client">Install kafka client<a class="headerlink" href="#install-kafka-client" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Kafka Connector needs to configure Kafka client Classpath. You can install the kafka client on the DataStage node to get the kafka-client jar package. For installation steps, refer to FusionInsight product documentation.</p>
+</li>
+<li>
+<p>Kafka Client Classpath needs to provide the paths of three jar packages of kafka-client, log4j, and slf4j-api, such as:
+  <div class="highlight"><pre><span></span><code>/opt/ficlient/Kafka/kafka/libs/kafka-clients-0.10.0.0.jar;/opt/ficlient/Kafka/kafka/libs/log4j-1.2.17.jar;/opt/ficlient/Kafka/kafka/libs /slf4j-api-1.7.21.jar
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="send-message-to-kafka">Send message to kafka<a class="headerlink" href="#send-message-to-kafka" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image104.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p>RowGenerator generates data</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image105.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image106.png" /></p>
+<p>Transformer data type conversion:</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image107.png" /></p>
+<p>Kafka configuration:</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image108.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image109.png" /></p>
+<h3 id="read-kafka-messages">Read Kafka messages<a class="headerlink" href="#read-kafka-messages" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image110.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image111.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image112.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image113.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p>View the read data</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image114.png" /></p>
+<h2 id="docking-mppdb">Docking MPPDB<a class="headerlink" href="#docking-mppdb" title="Permanent link">&para;</a></h2>
+<h3 id="obtain-mppdb-jdbc-driver">Obtain MPPDB JDBC Driver<a class="headerlink" href="#obtain-mppdb-jdbc-driver" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Obtained from the MPPDB release package, the package name is Gauss200-OLAP-VxxxRxxxCxx-xxxx-64bit-Jdbc.tar.gz</p>
+</li>
+<li>
+<p>After decompression, get gsjdbc4.jar, upload it to DataStage Server</p>
+</li>
+</ul>
+<h3 id="modify-jdbc-driver-configuration-file_1">Modify JDBC Driver configuration file<a class="headerlink" href="#modify-jdbc-driver-configuration-file_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Modify the isjdbc.config file of the $DSHOME path, add the path of MPPDB Driver in the CLASSPATH variable, and add org.postgresql.Driver in the CLASS_NAMES variable</li>
+</ul>
+<div class="highlight"><pre><span></span><code>su-dsadm
+cd $DSHOME
+vi isjdbc.config
+</code></pre></div>
+
+<p>Configuration:
+  <div class="highlight"><pre><span></span><code>CLASSPATH=/opt/IBM/InformationServer/ASBNode/lib/java/IShive.jar;/opt/mppdb/jdbc/gsjdbc4.jar;
+CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver;org.postgresql.Driver;
+</code></pre></div></p>
+<h3 id="read-mppdb-table-data">Read MPPDB table data<a class="headerlink" href="#read-mppdb-table-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image115.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image116.png" /></p>
+<p>The URL format is: jdbc:postgresql://host:port/database</p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image117.png" /></p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image118.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image119.png" /></p>
+<h3 id="write-data-to-mppdb-table">Write data to MPPDB table<a class="headerlink" href="#write-data-to-mppdb-table" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create assignment</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image120.png" /></p>
+<ul>
+<li>Change setting</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image121.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image122.png" /></p>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image123.png" /></p>
+<p>The URL format is: jdbc:postgresql://host:port/database</p>
+<ul>
+<li>Compile and run</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image124.png" /></p>
+<ul>
+<li>View MPPDB table data:</li>
+</ul>
+<p><img alt="" src="../assets/IBM_InfoSphere_DataStage/image125.png" /></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="./" title="11.3.1.0 C50" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                11.3.1.0 <--> C50
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../IBM_InfoSphere_CDC/" title="11.3.3.1 C50" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                11.3.3.1 <--> C50
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fusioninsight" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      
+        <script src="../../js/jq.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+    
+  </body>
+</html>
