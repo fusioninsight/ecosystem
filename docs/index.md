@@ -84,13 +84,39 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td><a href="Data_Analysis/RapidMiner"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></br><span class="label label-Spark ">Spark</span></a></td>
 <td></td>
 </tr>
-<tr><td rowspan=5 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>Data Integration </td>
+<tr><td rowspan=8 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>Data Integration </td>
 <td rowspan=1 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
 <td></td>
 <td></td>
 <td><a href="Data_Integration/Apache_NiFi"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >IBM InfoSphere DataStage</td>
+<td>11.3.1.0</td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11.5.0.2</td>
+<td></td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >IBM InfoSphere CDC</td>
+<td>11.3.3.1</td>
+<td><a href="Data_Integration/IBM_InfoSphere_CDC"><span class="label label-HDFS ">HDFS</span></a></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>

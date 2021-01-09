@@ -28,9 +28,9 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td rowspan=1 >QlikView</td>
 <td>12</td>
 <td></td>
-<td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
-<td><a href="Business_Intelligence/QlikView.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/QlikView"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -40,12 +40,12 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Business_Intelligence/SSRS.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/SSRS"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 </tr>
 <tr>
 <td rowspan=4 >Tableau</td>
 <td>10.0.0</td>
-<td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -54,7 +54,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <tr>
 <td>10.1.4</td>
 <td></td>
-<td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -63,7 +63,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td>10.3.2</td>
 <td></td>
 <td></td>
-<td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 <td></td>
 </tr>
@@ -72,7 +72,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Business_Intelligence/Tableau.md"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td></td>
 </tr>
 <tr><td rowspan=1 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>Data Analysis </td>
@@ -81,7 +81,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Analysis/RapidMiner.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></br><span class="label label-Spark ">Spark</span></a></td>
+<td><a href="Data_Analysis/RapidMiner"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-MapReduce ">MapReduce</span></br><span class="label label-Spark ">Spark</span></a></td>
 <td></td>
 </tr>
 <tr><td rowspan=5 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>Data Integration </td>
@@ -90,7 +90,36 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Apache_NiFi.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/Apache_NiFi"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></br><span class="label label-Kafka ">Kafka</span></a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=2 >IBM InfoSphere DataStage</td>
+<td>11.3.1.0</td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11.5.0.2</td>
+<td></td>
+<td><a href="Data_Integration/IBM_InfoSphere_DataStage"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Phoenix ">Phoenix</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Kafka ">Kafka</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan=1 >IBM InfoSphere CDC</td>
+<td>11.3.3.1</td>
+<td><a href="Data_Integration/IBM_InfoSphere_CDC"><span class="label label-HDFS ">HDFS</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -100,7 +129,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Informatica_PowerCenter.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Informatica_PowerCenter"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >Informatica PowerexChange CDC</td>
@@ -109,7 +138,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Informatica_PWX_CDC.md"><span class="label label-Kafka ">Kafka</span></a></td>
+<td><a href="Data_Integration/Informatica_PWX_CDC"><span class="label label-Kafka ">Kafka</span></a></td>
 </tr>
 <tr>
 <td rowspan=2 >Talend</td>
@@ -117,7 +146,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Talend.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
+<td><a href="Data_Integration/Talend"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -125,7 +154,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Data_Integration/Talend.md"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></a></td>
+<td><a href="Data_Integration/Talend"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></a></td>
 <td></td>
 </tr>
 <tr><td rowspan=1 ><i class="fa fa-code fa-2x" aria-hidden="true"></i></br>Development </td>
@@ -134,8 +163,8 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Development/EN_JupyterNotebook_update.md"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
-<td><a href="Development/EN_JupyterNotebook_update.md"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/EN_JupyterNotebook_update"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Development/EN_JupyterNotebook_update"><span class="label label-Hive ">Hive</span></br><span class="label label-ELK ">ELK</span></br><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr><td rowspan=2 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>Other </td>
 <td rowspan=2 >Apache Livy</td>
@@ -143,7 +172,7 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md"><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update"><span class="label label-Spark2x ">Spark2x</span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -152,6 +181,6 @@ FusionInsight support opensource Hadoop interface, it can integrate with the fol
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update.md"><span class="label label-Spark2x ">Spark2x</span></a></td>
+<td><a href="Other/EN_Using_Livy0.6.0_with_FusionInsight_HD_6_5_1_update"><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 </table>

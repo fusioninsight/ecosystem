@@ -31,6 +31,11 @@ nav:
 - Data Integration:
   - Apache NiFi:
     - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md
+  - IBM InfoSphere DataStage:
+    - 11.3.1.0 <--> C50: Data_Integration/IBM_InfoSphere_DataStage.md
+    - 11.5.0.2 <--> C60: Data_Integration/IBM_InfoSphere_DataStage.md
+  - IBM InfoSphere CDC:
+    - 11.3.3.1 <--> C50: Data_Integration/IBM_InfoSphere_CDC.md
   - Informatica PowerCenter:
     - 10.2.0 <--> 6.5: Data_Integration/Informatica_PowerCenter.md
   - Informatica PowerexChange CDC:
