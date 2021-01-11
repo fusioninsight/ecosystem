@@ -1,7 +1,7 @@
 
 <!-- ex_nonav -->
 
-# FusionData Ecosystem
+# FusionInsight MRS Ecosystem
 
 FusionInsight support opensource Hadoop interface, it can integrate with the following thridparty tools
 
