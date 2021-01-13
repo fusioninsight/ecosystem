@@ -114,8 +114,8 @@
   * 创建目录/opt/presto-server-0.210/etc/catalog,将FusionInsight HD客户端中(从spark2x客户端目录下获取)的core-site.xml和hdfs-site.xml复制到`/opt/presto-server-0.210/etc/catalog`中
 
     ```
-    cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.210/etc/catalog/
-    cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml /opt/presto-server-0.210/etc/catalog/
+    cp /opt/hadoopclient/Spark2x/spark/conf/core-site.xml /opt/presto-server-0.210/etc/catalog/
+    cp /opt/hadoopclient/Spark2x/spark/conf/hdfs-site.xml /opt/presto-server-0.210/etc/catalog/
     ```
 
   * 将hdfs-site.xml文件中的dfs.client.failover.proxy.provider.hacluster属性修改为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
