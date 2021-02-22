@@ -111,9 +111,6 @@ nav:
     - 10.0.0 <--> C70: Data_Integration/Informatica_BDM_PushDown.md
     - 10.2.2 <--> 6.5: Data_Integration/Informatica_BDM_10.2.2.md
     - 10.2.2 <--> 8.0: Data_Integration/Informatica_BDM_10.2.2.md
-  - Kafka Manager:
-    - 1.3.3.21 <--> C80: Data_Integration/Kafka_Manager.md
-    - 1.3.3.21 <--> 6.5: Data_Integration/Kafka_Manager.md
   - Kettle:
     - 6.1 <--> C60: Data_Integration/Kettle_6.1.md
     - 6.1 <--> C70: Data_Integration/Kettle_6.1.md
