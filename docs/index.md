@@ -230,7 +230,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
-<tr><td rowspan=34 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
+<tr><td rowspan=33 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=3 >Apache NiFi</td>
 <td>1.7.1</td>
 <td></td>
@@ -373,16 +373,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Data_Integration/Informatica_PWX_CDC"><span class="label label-Kafka ">Kafka</span></a></td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan=1 >Kafka Manager</td>
-<td>1.3.3.21</td>
-<td></td>
-<td></td>
-<td></td>
-<td><a href="Data_Integration/Kafka_Manager"><span class="label label-Kafka ">Kafka</span></a></td>
-<td><a href="Data_Integration/Kafka_Manager"><span class="label label-Kafka ">Kafka</span></a></td>
 <td></td>
 </tr>
 <tr>
