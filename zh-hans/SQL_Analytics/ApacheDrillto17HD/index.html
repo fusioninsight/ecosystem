@@ -4368,7 +4368,6 @@
 <div class="highlight"><pre><span></span><code>chmod +x jdk-8u231-linux-x64.rpm
 rpm -ivh jdk-8u231-linux-x64.rpm
 </code></pre></div>
-
 <ul>
 <li>参考下面配置，在<code>~/.bash_profile</code>配置文件最后增加：</li>
 </ul>
@@ -4382,7 +4381,6 @@ export LD_LIBRARY_PATH=/usr/java/jdk1.8.0_231-amd64/jre/lib/amd64/server/libjvm.
 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 </code></pre></div>
-
 <ul>
 <li>使用命令加载安装的jdk：<code>source ~/.bash_profile</code></li>
 </ul>
@@ -4408,7 +4406,6 @@ bin/drill-embedded
 <div class="highlight"><pre><span></span><code>cd root
 chmod -R 777 drill/
 </code></pre></div>
-
 <h2 id="hdfs">对接HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4429,7 +4426,6 @@ chmod -R 777 drill/
 <div class="highlight"><pre><span></span><code>CP=&quot;$CP:/opt/65hadoopclient/HDFS/hadoop/share/hadoop/common/*&quot;
 CP=&quot;$CP:/opt/65hadoopclient/HDFS/hadoop/share/hadoop/common/lib/*&quot;
 </code></pre></div>
-
 <p>说明：
     1.  在如图位置添加Class Path变量,路径为华为FI HD HDFS客户端相关依赖的路径
     2.  添加依赖参数的位置要按照截图所示，在 <code>CP="$CP:$DRILL_HOME/jars/3rdparty/*"</code>之后`</p>
@@ -4520,14 +4516,12 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
 &lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <p><img alt="" src="../assets/ApacheDrilltoHD651/markdown-img-paste-20191031110419834.png" /></p>
 <ul>
 <li>登陆对接FI HD集群172.16.4.131， 使用如下命令找到对接hive相关认证keytab文件hive.keytab并把此文件传至drill主机/opt路径下：</li>
 </ul>
 <div class="highlight"><pre><span></span><code>find /opt -name hive.keytab
 </code></pre></div>
-
 <p><img alt="20200829_101053_23" src="../assets/ApacheDrill117toHD/20200829_101053_23.png" /></p>
 <p>将hive.keytab文件scp拷贝到apachedrill主机/opt路径下</p>
 <ul>
@@ -4562,7 +4556,6 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <p><img alt="20200829_101556_84" src="../assets/ApacheDrill117toHD/20200829_101556_84.png" /></p>
 <p>其中hive.metastore.uris可在集群hive-site.xml文件中查到</p>
 <ul>
@@ -4575,7 +4568,6 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
 <div class="highlight"><pre><span></span><code>use huaweihive.`default`;
 show tables;
 </code></pre></div>
-
 <p><img alt="20200829_101825_64" src="../assets/ApacheDrill117toHD/20200829_101825_64.png" /></p>
 <p>使用命令<code>show tables;</code>查看hive表：</p>
 <p><img alt="" src="../assets/ApacheDrilltoHD651/markdown-img-paste-20191031111937114.png" /></p>
@@ -4617,7 +4609,6 @@ show tables;
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <ul>
 <li>后台命令行输入<code>show databases;</code>检查数据库</li>
 </ul>
@@ -4662,7 +4653,6 @@ debug=true;
 </ul>
 <div class="highlight"><pre><span></span><code>export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com -Dsun.security.krb5.debug=false&quot;
 </code></pre></div>
-
 <p>完成之后使用命令<code>java -version</code>检查是否加载成功</p>
 <ul>
 <li>
@@ -4682,7 +4672,6 @@ debug=true;
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <p><img alt="20200829_102633_39" src="../assets/ApacheDrill117toHD/20200829_102633_39.png" /></p>
 <ul>
 <li>登陆drill后台，使用命令<code>use huaweihbase;</code>使用数据库：</li>
@@ -4698,7 +4687,6 @@ debug=true;
 <div class="highlight"><pre><span></span><code>Caused by: javax.security.sasl.SaslException: No common protection layer between client and server
         at com.sun.security.sasl.gsskerb.GssKrb5Client.doFinalHandshake(GssKrb5Client.java:251)
 </code></pre></div>
-
 <p>问题原因：hadoop.rpc.protection的配置存在客户端与服务端不一致的情况</p>
 <p>发现在对接Hdfs的时候没有像hive那样导入客户端配置文件，所以我就把hdfs的core-site hdfs-site配置文件导入到drill的conf目录下， 检查hadoop.rpc.protection配置和集群的匹配，重启drill就可以解决这个问题</p>
 <p>问题:

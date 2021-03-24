@@ -4579,7 +4579,6 @@ INSERT INTO student VALUES (2,&#39;Sandy&#39;,2);
 INSERT INTO student VALUES (3,&#39;Benny&#39;,3);
 INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
 </code></pre></div>
-
 <h2 id="_4">安全认证相关配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>参考产品文档MIT配置相关部分(第1步到第4步)</p>
 <p><img alt="20200723_144535_58" src="../assets/DBeaver_6.3.4/20200723_144535_58.png" /></p>
@@ -4632,7 +4631,6 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
   debug=true;
 };
 </code></pre></div>
-
 <p>注意： 其中keyTab参数以及principal参数为对应的认证用户名以及认证文件路径</p>
 </li>
 </ul>
@@ -4674,7 +4672,6 @@ C:\java64\jdk\bin
 3. Hadoop
 4. 点Add File在下载好的hive客户端lib中把所有jar包加进去
 </code></pre></div>
-
 <ul>
 <li>菜单栏选择<code>File-&gt;New-&gt;Database Connection</code>.点击 <strong>Next</strong>.</li>
 </ul>
@@ -4713,7 +4710,6 @@ woodstox-core-5.0.3.jar
 stax2-api-3.1.4.jar
 commons-configuration2-2.1.1.jar
 </code></pre></div>
-
 <p><img alt="20201029_105843_27" src="../assets/DBeaver_6.3.4/20201029_105843_27.png" /></p>
 <p>说明: 如果是mrs8.0.2版本准备的依赖为：</p>
 <ol>
@@ -4730,7 +4726,6 @@ woodstox-core-5.0.3.jar
 stax2-api-3.1.4.jar
 commons-configuration2-2.1.jar
 </code></pre></div>
-
 <ul>
 <li>进入DBeaver界面，菜单选择<code>Database-&gt;DriverManager</code>，在弹出的对话框中点击 <strong>New</strong>.</li>
 </ul>
@@ -4744,7 +4739,6 @@ commons-configuration2-2.1.jar
 3. Hadoop
 4. 点Add File在上述步骤配置好的spark2x连接所有jar包加进去
 </code></pre></div>
-
 <p>注意：连接url的user.principal=developuser;user.keytab=E:/145config/user.keytab这两个参数必须加上，并且保证正确</p>
 <p>连接url串，可在Linux客户端使用<code>spark-beeline</code>命令获取参考：</p>
 <p><img alt="20201029_112107_10" src="../assets/DBeaver_6.3.4/20201029_112107_10.png" /></p>
@@ -4798,7 +4792,6 @@ commons-configuration2-2.1.jar
 3. Hadoop
 4. 点Add File在下载好的hive客户端lib中把所有jar包加进去
 </code></pre></div>
-
 <p>注意： jdbc连接串中含有用户名信息以及相关配置文件的路径，请根据实际情况配置</p>
 <ul>
 <li>菜单栏选择<code>File-&gt;New-&gt;Database Connection</code>.点击 <strong>Next</strong>.</li>
@@ -4959,7 +4952,6 @@ commons-configuration2-2.1.jar
   &lt;value&gt;developuser&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <ul>
 <li>
 <p>在<code>C:\ecotesting\Fiber\conf</code>目录下新建 <strong>jaas.conf</strong> 文件，示例如下（如果已配置可以略过此步）：
@@ -5085,7 +5077,6 @@ fiberconfig = C:\\ecotesting\\Fiber\\conf\\fiber.xml
 <div class="highlight"><pre><span></span><code>1,Abbey
 2,Andy
 </code></pre></div>
-
 <p><img alt="" src="../assets/DBeaver_6.3.4/b8c28892.png" /></p>
 </li>
 <li>
@@ -5142,7 +5133,6 @@ fiberconfig = C:\\ecotesting\\Fiber\\conf\\fiber.xml
 <div class="highlight"><pre><span></span><code>3,Benny
 4,Miki
 </code></pre></div>
-
 <p><img alt="" src="../assets/DBeaver_6.3.4/163e2682.png" /></p>
 </li>
 <li>
@@ -5187,7 +5177,6 @@ UPSERT INTO MY_NS.TEST VALUES(2,&#39;Tom&#39;);
 UPSERT INTO MY_NS.TEST VALUES(3,&#39;Manson&#39;);
 UPSERT INTO MY_NS.TEST VALUES(4,&#39;Aurora&#39;);
 </code></pre></div>
-
 <p><img alt="" src="../assets/DBeaver_6.3.4/1235cd88.png" /></p>
 <ul>
 <li>右键<code>Database Navigator-&gt;Hadoop - Fiber</code>选择 <strong>Refresh</strong> 则可看到新建的命名空间 <strong>MY_NS</strong>.</li>
@@ -5224,7 +5213,6 @@ UPSERT INTO MY_NS.TEST VALUES(4,&#39;Aurora&#39;);
     at com.huawei.fiber.FiberConnection.getConnection(FiberConnection.java:881)
     at com.huawei.fiber.FiberConnection.getConnection(FiberConnection.java:650)
 </code></pre></div>
-
 <p><strong>【解决方法】</strong></p>
 <p>确认是否已指定DBeaver的JDK虚拟机.在DBeaver安装目录下，打开dbeaver.ini设置 <strong>-vm</strong> 参数的值，参数和值之间需要换行.</p>
 <p><strong>示例如下：</strong>

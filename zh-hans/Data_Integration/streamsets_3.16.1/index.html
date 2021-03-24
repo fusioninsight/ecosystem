@@ -4830,7 +4830,6 @@
 <div class="highlight"><pre><span></span><code>ulimit -n 32768
 bin/streamsets dc
 </code></pre></div>
-
 <ul>
 <li>登陆streamsets的web ui进行登陆，比如<code>http://172.16.2.121:18630/</code></li>
 </ul>
@@ -4891,7 +4890,6 @@ bin/streamsets dc
 <div class="highlight"><pre><span></span><code>mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-hdp_3_1-lib/lib/zookeeper-3.4.10.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-hdp_3_1-lib/lib/zookeeper-3.4.10.jar.org
 cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-hdp_3_1-lib/lib/
 </code></pre></div>
-
 <p>完成后检查：</p>
 <p><img alt="20200713_100818_26" src="../assets/streamsets_3.16.1/20200713_100818_26.png" /></p>
 <ul>
@@ -4922,14 +4920,12 @@ storeKey=true
 debug=true;
 };
 </code></pre></div>
-
 <ul>
 <li>使用如下命令在FI HD客户端中获取<code>kafka-clients-1.1.0.jar</code>并拷贝到路径<code>/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib</code>路径下，并且把原来的<code>kafka-clients-1.1.0.jar</code>注释掉</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/kafka-clients-1.1.0.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/kafka-clients-1.1.0.jar.org
 cp /opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/
 </code></pre></div>
-
 <p><img alt="20200713_104125_61" src="../assets/streamsets_3.16.1/20200713_104125_61.png" /></p>
 <ul>
 <li>使用如下命令在FI HD客户端中获取<code>zookeeper-3.5.1.jar</code>拷贝到<code>/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib</code>路径下，并且把原来的<code>zookeeper-3.4.6.jar</code>注释掉</li>
@@ -4937,7 +4933,6 @@ cp /opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /o
 <div class="highlight"><pre><span></span><code>mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/zookeeper-3.4.6.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/zookeeper-3.4.6.jar.org
 cp /opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/zookeeper-3.5.1.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-apache-kafka_1_1-lib/lib/
 </code></pre></div>
-
 <p><img alt="20200713_104827_82" src="../assets/streamsets_3.16.1/20200713_104827_82.png" /></p>
 <ul>
 <li>使用如下命令在FI HD客户端中获取<code>zookeeper-3.5.1.jar</code>拷贝到<code>/opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib</code>路径下，并且把原来的<code>zookeeper-3.4.5-cdh5.14.0.jar</code>注释掉</li>
@@ -4945,7 +4940,6 @@ cp /opt/125_651hdclient/hadoopclient/Kafka/kafka/libs/zookeeper-3.5.1.jar /opt/s
 <div class="highlight"><pre><span></span><code>mv /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib/zookeeper-3.4.5-cdh5.14.0.jar.org
 cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /opt/streamsets/streamsets-datacollector-3.16.1/streamsets-libs/streamsets-datacollector-cdh_5_14-lib/lib
 </code></pre></div>
-
 <ul>
 <li>
 <p>创建路径<code>/opt/streamsets/hdfsconf</code>，在FI HD客户端中获取<code>core-site.xml, hdfs-site.xml, hive-site.xml, hbase-site.xml</code>拷贝到该路径下，并且做如下修改</p>
@@ -4963,7 +4957,6 @@ cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /
 &lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.AdaptiveFailoverProxyProvider&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 </li>
 </ul>
 <p>完成后重启streamsets</p>
@@ -5135,7 +5128,6 @@ cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /
     &quot;lastname&quot;: &quot;lmn&quot;
 }
 </code></pre></div>
-
 </li>
 <li>
 <p>Event Data页签,未做配置</p>
@@ -5158,7 +5150,6 @@ cp /opt/125_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar /
 <div class="highlight"><pre><span></span><code>database = default
 table_name = sdc_drift_example
 </code></pre></div>
-
 </li>
 <li>
 <p><strong>Hive Metadata</strong> 配置</p>
@@ -5174,7 +5165,6 @@ table_name = sdc_drift_example
 2. org.apache.hive.jdbc.HiveDriver
 3. /opt/streamsets/hdfsconf
 </code></pre></div>
-
 </li>
 <li>
 <p>Table页签配置</p>
@@ -5182,7 +5172,6 @@ table_name = sdc_drift_example
 <div class="highlight"><pre><span></span><code>1. ${record:attribute(&#39;database&#39;)}
 2. ${record:attribute(&#39;table_name&#39;)}
 </code></pre></div>
-
 </li>
 <li>
 <p>Advanced页签按默认配置，未做修改</p>
@@ -5229,7 +5218,6 @@ table_name = sdc_drift_example
 2. org.apache.hive.jdbc.HiveDriver
 3. /opt/streamsets/hdfsconf
 </code></pre></div>
-
 </li>
 <li>
 <p>Advanced页签配置</p>
@@ -5266,7 +5254,6 @@ table_name = sdc_drift_example
 </ul>
 <div class="highlight"><pre><span></span><code>cp /opt/125_651hdclient/hadoopclient/HBase/hbase/lib/*.jar /opt/streamsets/sdc/sdc-extras/streamsets-datacollector-cdh_5_14-lib/lib
 </code></pre></div>
-
 <ul>
 <li>修改配置文件<code>$SDC_CONF/sdc-security.policy</code>，比如<code>/opt/streamsets/sdc/conf/sdc-security.policy</code>,增加如下内容：</li>
 </ul>
@@ -5275,7 +5262,6 @@ grant codebase &quot;file:///opt/streamsets/sdc/sdc-extras/-&quot; {
   permission java.security.AllPermission;
 };
 </code></pre></div>
-
 <p><img alt="20200715_182632_49" src="../assets/streamsets_3.16.1/20200715_182632_49.png" /></p>
 <ul>
 <li>(重要)关闭正在运行的streamsets, 先申明之前配置的环境变量<code>STREAMSETS_LIBRARIES_EXTRA_DIR</code>,再启动streamsets. 比如：</li>
@@ -5283,7 +5269,6 @@ grant codebase &quot;file:///opt/streamsets/sdc/sdc-extras/-&quot; {
 <div class="highlight"><pre><span></span><code>export STREAMSETS_LIBRARIES_EXTRA_DIR=&quot;/opt/streamsets/sdc/sdc-extras&quot;
 bin/streamsets dc
 </code></pre></div>
-
 <ul>
 <li>登陆streamsets的web界面，在**Package Manager**处的**External Libraries**检查相关依赖是否导入成功</li>
 </ul>
@@ -5340,7 +5325,6 @@ bin/streamsets dc
    /lastname - data:lastname - Text
 8. /opt/streamsets/hdfsconf
 </code></pre></div>
-
 </li>
 <li>
 <p>测试前登陆hbase客户端，创建表streamsets1</p>
@@ -5349,7 +5333,6 @@ bin/streamsets dc
 <div class="highlight"><pre><span></span><code>hbase shell
 create &#39;streamsets1&#39;,&#39;data&#39;
 </code></pre></div>
-
 <ul>
 <li>启动数据流</li>
 </ul>
@@ -5408,7 +5391,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 3. security.protocol = SASL_PLAINTEXT
 4. sasl.kerberos.service.name = kafka
 </code></pre></div>
-
 </li>
 <li>
 <p>Data Format页签</p>
@@ -5521,7 +5503,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 3. security.protocol = SASL_PLAINTEXT
 4. sasl.kerberos.service.name = kafka
 </code></pre></div>
-
 <ul>
 <li>Data Format页签配置</li>
 </ul>
@@ -5538,7 +5519,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 <div class="highlight"><pre><span></span><code>1. database = default
 2. table_name = sdc_drift_example03
 </code></pre></div>
-
 <p><strong>Hive Metadata</strong> 配置
 - General页签配置：</p>
 <p><img alt="20200713_110949_75" src="../assets/streamsets_3.16.1/20200713_110949_75.png" /></p>
@@ -5550,7 +5530,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 2. org.apache.hive.jdbc.HiveDriver
 3. /opt/streamsets/hdfsconf
 </code></pre></div>
-
 <ul>
 <li>Table页签配置</li>
 </ul>
@@ -5558,7 +5537,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 <div class="highlight"><pre><span></span><code>1. ${record:attribute(&#39;database&#39;)}
 2. ${record:attribute(&#39;table_name&#39;)}
 </code></pre></div>
-
 <ul>
 <li>Advanced页签按默认配置，未做修改</li>
 </ul>
@@ -5601,7 +5579,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 2. org.apache.hive.jdbc.HiveDriver
 3. /opt/streamsets/hdfsconf
 </code></pre></div>
-
 <ul>
 <li>Advanced页签配置</li>
 </ul>
@@ -5647,7 +5624,6 @@ create &#39;streamsets1&#39;,&#39;data&#39;
 <p><img alt="20200713_115252_77" src="../assets/streamsets_3.16.1/20200713_115252_77.png" /></p>
 <div class="highlight"><pre><span></span><code>Reason:Error while compiling statement: FAILED: HiveAccessControlException Permission denied: Principal [name=developuser, type=USER] does not have following privileges for operation CREATETABLE [[OBJECT OWNERSHIP] on Object [type=DFS_URI, name=hdfs://hacluster/user/hive/warehouse/sdc_drift_example03]]
 </code></pre></div>
-
 <p>问题原因：streamsets会使用developuser创建表sdc_drift_example03，期间要在hdfs下创建对应路径，当前用户拥有的角色不具备操作HDFS权限。</p>
 <p>解决办法：在OM管理界面System下Role Management中给对应的角色赋予相应的HDFS操作权限。</p>
 <p><img alt="20200713_115537_34" src="../assets/streamsets_3.16.1/20200713_115537_34.png" /></p>

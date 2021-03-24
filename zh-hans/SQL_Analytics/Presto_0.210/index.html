@@ -4456,7 +4456,6 @@ node.data-dir=/var/presto/data
 <div class="highlight"><pre><span></span><code>cp /opt/hadoopclient/Spark2x/spark/conf/core-site.xml /opt/presto-server-0.210/etc/catalog/
 cp /opt/hadoopclient/Spark2x/spark/conf/hdfs-site.xml /opt/presto-server-0.210/etc/catalog/
 </code></pre></div>
-
 </li>
 <li>
 <p>将hdfs-site.xml文件中的dfs.client.failover.proxy.provider.hacluster属性修改为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
@@ -4663,7 +4662,6 @@ tailf /var/presto/data/var/log/server.log
 <div class="highlight"><pre><span></span><code>scp -r /opt/presto-server-0.210 root@172.16.2.120:/opt
 scp -r /opt/presto-server-0.210 root@172.16.2.121:/opt
 </code></pre></div>
-
 <ul>
 <li>使用如下命令将coordinator/worker节点认证相关配置文件拷贝到worker节点</li>
 </ul>
@@ -4673,7 +4671,6 @@ scp /opt/presto.keytab root@172.16.2.121:/opt
 scp /opt/145_651hdclient/user.keytab root@172.16.2.120:/opt/145_651hdclient
 scp /opt/145_651hdclient/user.keytab root@172.16.2.121:/opt/145_651hdclient
 </code></pre></div>
-
 <ul>
 <li>修改worker节点<code>/opt/presto-server-0.210/etc/config.properties</code>配置文件</li>
 </ul>
@@ -4701,7 +4698,6 @@ http-server.https.port=7778
 http-server.https.keystore.path=/opt/presto.jks
 http-server.https.keystore.key=Huawei@123
 </code></pre></div>
-
 <p>说明：node-scheduler.include-coordinator参数为Coordinator,worker节点合部参数，值为false代表该节点只做coordinator节点</p>
 <ul>
 <li>修改worker节点<code>/opt/presto-server-0.210/etc/node.properties</code></li>
@@ -4730,7 +4726,6 @@ node.data-dir=/var/presto/data
 <div class="highlight"><pre><span></span><code>cd /opt/presto-server-0.210
 bin/launcher start
 </code></pre></div>
-
 <p>登陆 <a href="http://172.16.9.107:8080/ui">http://172.16.9.107:8080/ui</a> 检查节点情况</p>
 <p><img alt="20201028_113214_93" src="../assets/Presto_0.210/20201028_113214_93.png" /></p>
 <ul>
@@ -4748,7 +4743,6 @@ bin/launcher start
 --schema default \
 --;
 </code></pre></div>
-
 <ul>
 <li>检查结果：</li>
 </ul>

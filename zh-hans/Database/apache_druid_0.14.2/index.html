@@ -4465,7 +4465,6 @@ event_scheduler=ON
 default-character-set = utf8
 socket =/opt/mysql/lib/mysql.sock
 </code></pre></div>
-
 </li>
 <li>
 <p>执行如下命令，修改my.cnf文件的属主。
@@ -4666,7 +4665,6 @@ mv zookeeper-3.4.11 zk
 <div class="highlight"><pre><span></span><code>druid.zk.service.host=localhost
 druid.zk.paths.base=/druid
 </code></pre></div>
-
 <p><img alt="" src="../assets/apache_druid_0.14.2/markdown-img-paste-2019090315272643.png" /></p>
 </li>
 <li>
@@ -4687,7 +4685,6 @@ druid.indexer.logs.directory=hdfs://172.16.6.12:25000/druid121/indexing-logs
 druid.hadoop.security.kerberos.principal=developuser@HADOOP.COM
 druid.hadoop.security.kerberos.keytab=/opt/101hdclient/user.keytab
 </code></pre></div>
-
 <p><img alt="" src="../assets/apache_druid_0.14.2/markdown-img-paste-20190903153428708.png" /></p>
 <p>其中developuser为集群创建的用户，user.keytab为下载的developuser认证文件</p>
 </li>
@@ -4709,7 +4706,6 @@ druid.hadoop.security.kerberos.keytab=/opt/101hdclient/user.keytab
 <div class="highlight"><pre><span></span><code>cd /opt/druid/apache-druid-0.14.2-incubating/extensions
 mv druid-hdfs-storage/ druid-hdfs-storage-backup/
 </code></pre></div>
-
 <ul>
 <li>另行创建druid-hdfs-storage文件夹，从FI HD下载客户端， druid-hdfs-storage自带的jar包中收集并导入如下依赖jar包：</li>
 </ul>
@@ -4791,14 +4787,12 @@ xercesImpl-2.9.1.jar
 xml-apis-1.3.04.jar
 xmlenc-0.52.jar
 </code></pre></div>
-
 <ul>
 <li>登录<code>/opt/druid/apache-druid-0.14.2-incubating/hadoop-dependencies/hadoop-client</code>路径下，创建路径<code>2.7.2</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code>cd /opt/druid/apache-druid-0.14.2-incubating/hadoop-dependencies/hadoop-client
 mkdir 2.7.2
 </code></pre></div>
-
 <p><img alt="" src="../assets/apache_druid_0.14.2/markdown-img-paste-20190903165336534.png" /></p>
 <p>按照如下列表准备2.7.2路径下的依赖Jar包</p>
 <div class="highlight"><pre><span></span><code>asm-3.2.jar
@@ -4845,7 +4839,6 @@ log4j-1.2.17.jar
 netty-3.6.2.Final.jar
 netty-all-4.0.23.Final.jar
 </code></pre></div>
-
 <ul>
 <li>创建druid需要的spec文件并放到druid目录下：wikipedia-index-hadoop.json</li>
 </ul>
@@ -4960,7 +4953,6 @@ WHERE &quot;__time&quot; BETWEEN TIMESTAMP &#39;2015-09-12 00:00:00&#39; AND TIM
 GROUP BY page ORDER BY Edits DESC
 LIMIT 10
 </code></pre></div>
-
 <p><img alt="" src="../assets/apache_druid_0.14.2/markdown-img-paste-2019090317350905.png" /></p>
 <h3 id="druidfi-hdkafka">配置druid对接FI HD集群Kafka普通模式<a class="headerlink" href="#druidfi-hdkafka" title="Permanent link">&para;</a></h3>
 <p>说明：参考Druid官方文档,使用druid的kafka index服务从kafka topic中导入流数据到druid中</p>
@@ -5132,7 +5124,6 @@ LIMIT 10
 -Dsun.security.krb5.debug=true
 -Dkerberos.domain.name=hadoop.hadoop.com
 </code></pre></div>
-
 <p><img alt="" src="../assets/apache_druid_0.14.2/2019-09-24_145714.png" /></p>
 <ul>
 <li>登陆druid的配置路径<code>/opt/druid/apache-druid-0.14.2-incubating/quickstart/tutorial/conf/druid</code>, 重复上述步骤分别在broker,coordinator,historical,middleManager,overlord,router服务路径中的jvm.config文件中加入三条配置项</li>
@@ -5141,7 +5132,6 @@ LIMIT 10
 -Dsun.security.krb5.debug=true
 -Dkerberos.domain.name=hadoop.hadoop.com
 </code></pre></div>
-
 <ul>
 <li>
 <p>停止之前运行中的druid</p>

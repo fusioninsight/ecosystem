@@ -4476,7 +4476,6 @@ yum install cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-md5 cyrus-sasl-plain
 </ul>
 <div class="highlight"><pre><span></span><code>pip install apache-airflow[kerberos,hive,gcp]
 </code></pre></div>
-
 <p>具体介绍请参见airflow文档：<a href="https://airflow.apache.org/docs/stable/installation.html">https://airflow.apache.org/docs/stable/installation.html</a></p>
 <ul>
 <li>
@@ -4530,7 +4529,6 @@ reinit_frequency = 3600
 kinit_path = /opt/165_651hdclient/hadoopclient/KrbClient/kerberos/bin/kinit
 keytab = /opt/airflow.keytab
 </code></pre></div>
-
 <p>其中<code>/opt/165_651hdclient/hadoopclient/KrbClient/kerberos/bin/kinit</code>为对接集群客户端对应的kinit文件</p>
 </li>
 <li>
@@ -4560,7 +4558,6 @@ keytab = /opt/airflow.keytab
 --conn_port 21088 \
 --conn_extra &#39;{&quot;authMechanism&quot;:&quot;GSSAPI&quot;, &quot;kerberos_service_name&quot;:&quot;hive&quot;}&#39;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Airflow/markdown-img-paste-20191217164803574.png" /></p>
 <p>注意：metastore_cluster1为airflow的conn_id，后续配置dag时需用到，不能与已有的conn_id重名</p>
 <ul>
@@ -4603,7 +4600,6 @@ t.tableName
 --conn_port 21066 \
 --conn_extra &#39;{&quot;authMechanism&quot;:&quot;KERBEROS&quot;, &quot;kerberos_service_name&quot;:&quot;hive&quot;}&#39;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Airflow/markdown-img-paste-20191217171639344.png" /></p>
 <p>注意：hiveserver2_test为airflow的conn_id，后续配置dag时需用到，不能与已有的conn_id重名</p>
 <ul>
@@ -4624,7 +4620,6 @@ sql = &quot;SELECT * FROM default.iris&quot;
 len(hh.get_records(sql))
 hh.get_records(sql)
 </code></pre></div>
-
 <p><img alt="" src="../assets/Airflow/markdown-img-paste-20191217172147950.png" /></p>
 <h3 id="airflowjdbc-connectionhive">airflow中jdbc connection对接hive配置<a class="headerlink" href="#airflowjdbc-connectionhive" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4655,7 +4650,6 @@ kinit airflow
 --conn_id hive_jdbc \
 --conn_type &#39;jdbc&#39;
 </code></pre></div>
-
 <ul>
 <li>登陆airflow的webUI配置hive_jdbc，参考图配置好参数点save保存</li>
 </ul>
@@ -4666,7 +4660,6 @@ kinit airflow
 4. /opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-jdbc-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/ant-1.10.3.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/cglib-3.2.10.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/common-0.0.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-collections-3.2.2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-collections4-4.2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-configuration-1.6.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-configuration2-2.1.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-io-2.4.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-lang-2.6.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-lang3-3.3.2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-logging-1.1.3.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/commons-net-3.6.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/crypter-0.0.6.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/curator-client-2.12.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/curator-framework-2.12.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/cxf-core-3.1.16.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/cxf-rt-frontend-jaxrs-3.1.16.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/cxf-rt-transports-http-3.1.16.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/FMS-v1r2c60-20160429.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/guava-19.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hadoop-auth-3.1.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hadoop-common-3.1.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hadoop-mapreduce-client-core-3.1.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/HA-v1r2c60-20160429.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-common-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-metastore-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-serde-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-service-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-service-rpc-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-shims-0.23-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-shims-common-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/hive-standalone-metastore-3.1.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/httpclient-4.5.2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/httpcore-4.4.4.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-annotations-2.9.8.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-core-2.9.8.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-core-asl-1.9.13.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-databind-2.9.8.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-jaxrs-1.9.13.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jackson-mapper-asl-1.9.13.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/javax.annotation-api-1.2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/javax.ws.rs-api-2.0.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jdbc_pom.xml,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jettison-1.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/jsch-0.1.54.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/libthrift-0.9.3.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/log4j-1.2.17.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/mockito-all-1.10.19.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/netty-all-4.1.17.Final.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/om-controller-api-0.0.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/om-monitor-plugin-0.0.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/pms-v1r2c60-20160429.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/protobuf-java-2.5.0.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/slf4j-api-1.7.10.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/slf4j-log4j12-1.7.5.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/spring-aop-4.3.20.RELEASE.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/spring-beans-4.3.20.RELEASE.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/spring-context-4.3.20.RELEASE.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/spring-core-4.3.20.RELEASE.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/spring-expression-4.3.20.RELEASE.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/stax2-api-3.1.4.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/stax-api-1.0-2.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/woodstox-core-5.0.3.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/woodstox-core-asl-4.4.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/xercesImpl-2.9.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/xmlpull-1.1.3.1.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/xmlschema-core-2.2.3.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/xpp3_min-1.1.4c.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/xstream-1.4.10.jar,/opt/165_651hdclient/hadoopclient/Hive/Beeline/lib/jdbc/zookeeper-3.5.1.jar
 5. org.apache.hive.jdbc.HiveDriver
 </code></pre></div>
-
 <ul>
 <li>在终端输入<code>python</code>进行验证</li>
 </ul>
@@ -4678,7 +4671,6 @@ jh = jdbc_hook.JdbcHook(jdbc_conn_id=&#39;hive_jdbc&#39;)
 jh.get_conn()
 jh.get_records(&quot;select * from test&quot;)
 </code></pre></div>
-
 <h2 id="airflowhetuconnection">airflow中hetu相关connection配置<a class="headerlink" href="#airflowhetuconnection" title="Permanent link">&para;</a></h2>
 <h3 id="airflowjdbc-connectionhetu">airflow中jdbc connection对接hetu配置<a class="headerlink" href="#airflowjdbc-connectionhetu" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4709,7 +4701,6 @@ kinit airflow
 --conn_id hetu \
 --conn_type &#39;jdbc&#39;
 </code></pre></div>
-
 <ul>
 <li>登陆airflow的webUI配置hetu，参考图配置好参数点save保存</li>
 </ul>
@@ -4720,7 +4711,6 @@ kinit airflow
 4. /opt/presto-jdbc-316.jar
 5. io.prestosql.jdbc.PrestoDriver
 </code></pre></div>
-
 <ul>
 <li>在终端输入<code>python</code>进行验证</li>
 </ul>
@@ -4732,7 +4722,6 @@ jh = jdbc_hook.JdbcHook(jdbc_conn_id=&#39;hetu&#39;)
 jh.get_conn()
 jh.get_records(&quot;select * from test&quot;)
 </code></pre></div>
-
 <h2 id="airflowhdfsconnection">airflow中hdfs相关connection配置<a class="headerlink" href="#airflowhdfsconnection" title="Permanent link">&para;</a></h2>
 <h3 id="airflowwebhdfs-connection">配置airflow中webhdfs connection配置<a class="headerlink" href="#airflowwebhdfs-connection" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4752,14 +4741,12 @@ jh.get_records(&quot;select * from test&quot;)
 --conn_id webhdfs_fusioninsight1 \
 --conn_type &#39;hdfs&#39;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Airflow/markdown-img-paste-20200402170804141.png" /></p>
 <p>输入代码：</p>
 <div class="highlight"><pre><span></span><code>from airflow.hooks import webhdfs_hook
 whdfs = webhdfs_hook.WebHDFSHook(webhdfs_conn_id=&#39;webhdfs_fusioninsight1&#39;)
 whdfs.get_conn()
 </code></pre></div>
-
 <ul>
 <li>登陆airflow的webUI配置webhdfs_fusioninsight1，参考图配置好参数点save保存</li>
 </ul>
@@ -4779,7 +4766,6 @@ whdfs.get_conn()
 9,4.4,2.9,1.4,0.2,setosa
 10,4.9,3.1,1.5,0.1,setosa
 </code></pre></div>
-
 <ul>
 <li>在终端输入<code>python</code>进行验证</li>
 </ul>
@@ -4789,7 +4775,6 @@ whdfs.get_conn()
 whdfs = webhdfs_hook.WebHDFSHook(webhdfs_conn_id=&#39;webhdfs_fusioninsight1&#39;)
 whdfs.get_conn()
 </code></pre></div>
-
 <p>下面测试一下数据导入的样例，接着上面的命令继续输入</p>
 <p><code>whdfs.load_file('/opt/loadfile/','/tmp/')</code></p>
 <p><img alt="" src="../assets/Airflow/markdown-img-paste-20200403111233341.png" /></p>
@@ -4839,7 +4824,6 @@ t2 = BranchPythonOperator(
 
 t2.set_upstream(t1)
 </code></pre></div>
-
 <p>注意:该任务流有两个动作，第一个是t1，在命令行中输入data命令打印出当前时间，第二个动作是t2，打印出<code>select * from iris</code>查询语句，两个动作有对应的task_id</p>
 <ul>
 <li>参考airflow官方文档：<a href="https://airflow.apache.org/docs/stable/tutorial.html">https://airflow.apache.org/docs/stable/tutorial.html</a></li>

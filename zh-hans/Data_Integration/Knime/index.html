@@ -4823,7 +4823,6 @@
 Port: 25000
 Authentication: Kerberos
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/image007.png" /></p>
 </li>
 <li>
@@ -4914,7 +4913,6 @@ Port: 21066
 Parameter: principal=hive/hadoop.hadoop.com@HADOOP.COM;saslQop=auth-conf;auth=KERBEROS;
 Authentication: Use Kerberos
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/image020.png" /></p>
 </li>
 <li>
@@ -4933,7 +4931,6 @@ Authentication: Use Kerberos
 Port: 25000
 Authentication: Kerberos
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/image022.png" /></p>
 </li>
 <li>
@@ -4966,7 +4963,6 @@ Authentication: Kerberos
 -Dzookeeper.sasl.clientconfig=Client
 -Dzookeeper.auth.type=kerberos
 </code></pre></div>
-
 <ul>
 <li>配置本地hosts文件</li>
 </ul>
@@ -4980,7 +4976,6 @@ Authentication: Kerberos
 2. 点Add file从本地添加准备好的驱动jar包presto-jdbc-316.jar
 3. 点击Find driver classes自动配置
 </code></pre></div>
-
 <ul>
 <li>整个工作流为</li>
 </ul>
@@ -5034,7 +5029,6 @@ useradd -d /opt/${LINKNAME}/ -M -r -s /bin/false spark-job-server
 su -l -c &quot;hdfs dfs -mkdir -p /user/spark-job-server ; hdfs dfs -chown -R spark-job-server /user/spark-job-server&quot; spark-job-server
 chown -R spark-job-server:spark-job-server /opt/${LINKNAME} /opt/spark-job-server-0.7.0.3-KNIME_spark-2.3_cdh
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/b1bc297f.png" /></p>
 <p><img alt="" src="../assets/Knime/49e2f390.png" /></p>
 </li>
@@ -5076,7 +5070,6 @@ chown -R spark-job-server:spark-job-server /opt/${LINKNAME} /opt/spark-job-serve
 <div class="highlight"><pre><span></span><code>export JOBSERVER_KEYTAB=/opt/spark2-job-server/user.keytab
 export JOBSERVER_PRINCIPAL=developuser@HADOOP.COM
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/38519f68.png" /></p>
 </li>
 <li>
@@ -5087,7 +5080,6 @@ export JOBSERVER_PRINCIPAL=developuser@HADOOP.COM
 <div class="highlight"><pre><span></span><code>hadoop.proxyuser.spark-job-server.hosts = *
 hadoop.proxyuser.spark-job-server.groups = *
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/3d3940dd.png" /></p>
 <ul>
 <li>保存配置，并重启HDFS以及依赖的服务。</li>
@@ -5102,14 +5094,12 @@ hadoop.proxyuser.spark-job-server.groups = *
 systemctl daemon-reload
 systemctl enable spark2-job-server
 </code></pre></div>
-
 </li>
 <li>
 <p>启动Spark Job Server。</p>
 <div class="highlight"><pre><span></span><code>systemctl start spark2-job-server
 ps -ef |grep spark2
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/324dac26.png" /></p>
 <blockquote>
 <p>说明：</p>
@@ -5128,7 +5118,6 @@ ps -ef |grep spark2
 <p>停止Spark Job Server。</p>
 <div class="highlight"><pre><span></span><code>systemctl stop spark2-job-server
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="spark">建立Spark连接<a class="headerlink" href="#spark" title="Permanent link">&para;</a></h3>
@@ -5198,7 +5187,6 @@ ps -ef |grep spark2
 Port: 25000
 Authentication: Kerberos
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/34defe8f.png" /></p>
 </li>
 <li>
@@ -5212,7 +5200,6 @@ Port: 21066
 Parameter: principal=hive/hadoop.hadoop.com@HADOOP.COM;saslQop=auth-conf;auth=KERBEROS;
 Authentication: Use Kerberos
 </code></pre></div>
-
 <p><img alt="" src="../assets/Knime/034c5b6a.png" /></p>
 </li>
 <li>

@@ -4295,7 +4295,6 @@
 kinit -k -t /opt/user.keytab testuser
 hadoop fs -put -f /opt/gis-tools-for-hadoop-master /gis-tools-for-hadoop-master
 </code></pre></div>
-
 <ul>
 <li>修改执行hive示例的sql文件，修改后的文件如下</li>
 </ul>
@@ -4348,7 +4347,6 @@ hadoop fs -put -f /opt/gis-tools-for-hadoop-master /gis-tools-for-hadoop-master
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">counties</span><span class="p">.</span><span class="n">name</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">cnt</span> <span class="k">desc</span><span class="p">;</span>
 </code></pre></div>
-
 <ul>
 <li>使用FusionInsight HD客户端执行修改后的sql文件，命令参考</li>
 </ul>
@@ -4357,7 +4355,6 @@ kinit -k -t /opt/user.keytab testuser
 <span class="nb">cd</span> /opt
 beeline -f gis-tools-for-hadoop-master/samples/point-in-polygon-aggregation-hive/run-sample.sql
 </code></pre></div>
-
 <ul>
 <li>执行结果如下，与GIS开源网站描述一致</li>
 </ul>
@@ -4395,7 +4392,6 @@ beeline -f gis-tools-for-hadoop-master/samples/point-in-polygon-aggregation-hive
 <span class="nv">DATA_DIR</span><span class="o">=</span><span class="nv">$SAMPLE_DIR</span>/data
 <span class="nv">OUTPUT_DIR</span><span class="o">=</span><span class="nv">$SAMPLE_DIR</span>/output
 </code></pre></div>
-
 <ul>
 <li>修改<code>/opt/gis-tools-for-hadoop-master/samples/point-in-polygon-aggregation-mr/cmd/run-sample.sh</code>的执行权限，并执行</li>
 </ul>
@@ -4405,7 +4401,6 @@ kinit -k -t /opt/user.keytab testuser
 chmod u+x run-sample.sh
 sh run-sample.sh
 </code></pre></div>
-
 <ul>
 <li>执行完毕得到如下结果文件result.txt</li>
 </ul>

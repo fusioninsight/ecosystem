@@ -5004,7 +5004,6 @@
 162.1.61.41 FusionInsight1
 162.1.61.43 FusionInsight3
 </code></pre></div>
-
 <h3 id="kerberos">配置Kerberos认证<a class="headerlink" href="#kerberos" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在FI管理界面创建DataStage对接用户，并赋予该用户所需权限，下载认证凭据</li>
@@ -5044,7 +5043,6 @@ chown dsadm:dstage /home/dsadm/iis-ds-truststore_ssl.jks
 <p>使用<code>vi /home/dsadm/authenticate.properties</code>命令新建配置文件，保存上一步骤生成的密文：</p>
 <div class="highlight"><pre><span></span><code>password={iisenc}SvtJ2f/uNTrvbuh26XDzag==
 </code></pre></div>
-
 <p>执行<code>chown dsadm:dstage /home/dsadm/ authenticate.properties</code>修改配置文件的属主</p>
 <ul>
 <li>导出truststore环境变量</li>
@@ -5053,7 +5051,6 @@ chown dsadm:dstage /home/dsadm/iis-ds-truststore_ssl.jks
 <div class="highlight"><pre><span></span><code>export DS_TRUSTSTORE_LOCATION=/home/dsadm/iis-ds-truststore_ssl.jks
 export DS_TRUSTSTORE_PROPERTIES=/home/dsadm/authenticate.properties
 </code></pre></div>
-
 <ul>
 <li>重启DSEngine，参考命令</li>
 </ul>
@@ -5062,7 +5059,6 @@ cd $DSHOME
 bin/uv -admin -stop
 bin/uv -admin -start
 </code></pre></div>
-
 <h3 id="hdfs_1">读取HDFS文件<a class="headerlink" href="#hdfs_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>创建作业</li>
@@ -5124,7 +5120,6 @@ bin/uv -admin -start
 cd $DSHOME
 vi isjdbc.config
 </code></pre></div>
-
 <p>在isjdbc.config中添加如下信息:
   <div class="highlight"><pre><span></span><code>CLASSPATH=/opt/IBM/InformationServer/ASBNode/lib/java/IShive.jar
 CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver
@@ -5136,7 +5131,6 @@ CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver
 <div class="highlight"><pre><span></span><code>cd /opt/IBM/InformationServer/ASBNode/lib/java/
 vi JDBCDriverLogin.conf
 </code></pre></div>
-
 <p>文件内容如下：
   <div class="highlight"><pre><span></span><code>JDBC_DRIVER_test_cache{
       com.ibm.security.auth.module.Krb5LoginModule required
@@ -5220,7 +5214,6 @@ vi $DSHOME/dsenv
 </ul>
 <div class="highlight"><pre><span></span><code>export CLASSPATH=/opt/ficlient/Hive/Beeline/lib/commons-cli-1.2.jar:/opt/ficlient/Hive/Beeline/lib/commons-collections-3.2.1.jar:/opt/ficlient/Hive/Beeline/lib/commons-configuration-1.6.jar:/opt/ficlient/Hive/Beeline/lib/commons-lang-2.6.jar:/opt/ficlient/Hive/Beeline/lib/commons-logging-1.1.3.jar:/opt/ficlient/Hive/Beeline/lib/curator-client-2.7.1.jar:/opt/ficlient/Hive/Beeline/lib/curator-framework-2.7.1.jar:/opt/ficlient/Hive/Beeline/lib/curator-recipes-2.7.1.jar:/opt/ficlient/Hive/Beeline/lib/guava-14.0.1.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-auth-2.7.2.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-common-2.7.2.jar:/opt/ficlient/Hive/Beeline/lib/hadoop-mapreduce-client-core-2.7.2.jar:/opt/ficlient/Hive/Beeline/lib/hive-beeline-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-cli-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-common-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-exec-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-jdbc-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-metastore-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-serde-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-service-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-shims-0.23-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/hive-shims-common-1.3.0.jar:/opt/ficlient/Hive/Beeline/lib/httpclient-4.5.2.jar:/opt/ficlient/Hive/Beeline/lib/httpcore-4.4.jar:/opt/ficlient/Hive/Beeline/lib/jline-2.12.jar:/opt/ficlient/Hive/Beeline/lib/libfb303-0.9.3.jar:/opt/ficlient/Hive/Beeline/lib/libthrift-0.9.3.jar:/opt/ficlient/Hive/Beeline/lib/log4j-1.2.17.jar:/opt/ficlient/Hive/Beeline/lib/slf4j-api-1.7.5.jar:/opt/ficlient/Hive/Beeline/lib/slf4j-log4j12-1.7.5.jar:/opt/ficlient/Hive/Beeline/lib/super-csv-2.2.0.jar:/opt/ficlient/Hive/Beeline/lib/xercesImpl-2.9.1.jar:/opt/ficlient/Hive/Beeline/lib/zookeeper-3.5.1.jar
 </code></pre></div>
-
 <ul>
 <li>
 <p>导入环境变量
@@ -5235,7 +5228,6 @@ vi $DSHOME/dsenv
 bin/uv -admin -stop
 bin/uv -admin -start
 </code></pre></div>
-
 <h4 id="hive_3">读取Hive数据<a class="headerlink" href="#hive_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li>创建作业</li>
@@ -5347,7 +5339,6 @@ cd $DSHOME/bin
 <div class="highlight"><pre><span></span><code>su - dsadm
 vi $DSHOME/dsenv
 </code></pre></div>
-
 <p>配置如下内容：
   <div class="highlight"><pre><span></span><code>export CLASSPATH= /opt/ficlient/Spark/spark/lib/commons-collections-3.2.2.jar:/opt/ficlient/Spark/spark/lib/commons-configuration-1.6.jar:/opt/ficlient/Spark/spark/lib/commons-lang-2.6.jar:/opt/ficlient/Spark/spark/lib/commons-logging-1.1.3.jar:/opt/ficlient/Spark/spark/lib/curator-client-2.7.1.jar:/opt/ficlient/Spark/spark/lib/curator-framework-2.7.1.jar:/opt/ficlient/Spark/spark/lib/guava-12.0.1.jar:/opt/ficlient/Spark/spark/lib/hadoop-auth-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hadoop-common-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hadoop-mapreduce-client-core-2.7.2.jar:/opt/ficlient/Spark/spark/lib/hive-common-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-exec-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-jdbc-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-metastore-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/hive-service-1.2.1.spark.jar:/opt/ficlient/Spark/spark/lib/htrace-core-3.1.0-incubating.jar:/opt/ficlient/Spark/spark/lib/httpclient-4.5.2.jar:/opt/ficlient/Spark/spark/lib/httpcore-4.4.4.jar:/opt/ficlient/Spark/spark/lib/libthrift-0.9.3.jar:/opt/ficlient/Spark/spark/lib/log4j-1.2.17.jar:/opt/ficlient/Spark/spark/lib/slf4j-api-1.7.10.jar:/opt/ficlient/Spark/spark/lib/slf4j-log4j12-1.7.10.jar:/opt/ficlient/Spark/spark/lib/xercesImpl-2.9.1.jar:/opt/ficlient/Spark/spark/lib/zookeeper-3.5.1.jar:/opt/ficlient/Spark/spark/conf
 </code></pre></div></p>
@@ -5365,7 +5356,6 @@ vi $DSHOME/dsenv
 bin/uv -admin -stop
 bin/uv -admin -start
 </code></pre></div>
-
 <h3 id="hive_5">读取Hive表数据<a class="headerlink" href="#hive_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>创建作业</li>
@@ -5398,12 +5388,10 @@ bin/uv -admin -start
 <div class="highlight"><pre><span></span><code>su - dsadm
 vi $DSHOME/dsenv
 </code></pre></div>
-
 <p>配置如下内容：</p>
 <div class="highlight"><pre><span></span><code>export CLASSPATH=
 /opt/ficlient/HBase/hbase/lib/commons-cli-1.2.jar:/opt/ficlient/HBase/hbase/lib/commons-codec-1.9.jar:/opt/ficlient/HBase/hbase/lib/commons-collections-3.2.2.jar:/opt/ficlient/HBase/hbase/lib/commons-configuration-1.6.jar:/opt/ficlient/HBase/hbase/lib/commons-io-2.4.jar:/opt/ficlient/HBase/hbase/lib/commons-lang-2.6.jar:/opt/ficlient/HBase/hbase/lib/commons-logging-1.2.jar:/opt/ficlient/HBase/hbase/lib/dynalogger-V100R002C30.jar:/opt/ficlient/HBase/hbase/lib/gson-2.2.4.jar:/opt/ficlient/HBase/hbase/lib/guava-12.0.1.jar:/opt/ficlient/HBase/hbase/lib/hadoop-auth-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hadoop-common-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hadoop-hdfs-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hadoop-hdfs-client-2.7.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-client-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-common-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbaseFileStream-1.0.jar:/opt/ficlient/HBase/hbase/lib/hbase-protocol-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-secondaryindex-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/hbase-server-1.0.2.jar:/opt/ficlient/HBase/hbase/lib/htrace-core-3.1.0-incubating.jar:/opt/ficlient/HBase/hbase/lib/httpclient-4.5.2.jar:/opt/ficlient/HBase/hbase/lib/httpcore-4.4.4.jar:/opt/ficlient/HBase/hbase/lib/httpmime-4.3.6.jar:/opt/ficlient/HBase/hbase/lib/jackson-core-asl-1.9.13.jar:/opt/ficlient/HBase/hbase/lib/jackson-mapper-asl-1.9.13.jar:/opt/ficlient/HBase/hbase/lib/log4j-1.2.17.jar:/opt/ficlient/HBase/hbase/lib/luna-0.1.jar:/opt/ficlient/HBase/hbase/lib/netty-3.2.4.Final.jar:/opt/ficlient/HBase/hbase/lib/netty-all-4.0.23.Final.jar:/opt/ficlient/HBase/hbase/lib/noggit-0.6.jar:/opt/ficlient/HBase/hbase/lib/phoenix-core-4.4.0-HBase-1.0.jar:/opt/ficlient/HBase/hbase/lib/protobuf-java-2.5.0.jar:/opt/ficlient/HBase/hbase/lib/slf4j-api-1.7.7.jar:/opt/ficlient/HBase/hbase/lib/slf4j-log4j12-1.7.7.jar:/opt/ficlient/HBase/hbase/lib/solr-solrj-5.3.1.jar:/opt/ficlient/HBase/hbase/lib/zookeeper-3.5.1.jar:/opt/ficlient/HBase/hbase/conf
 </code></pre></div>
-
 <ul>
 <li>
 <p>导入环境变量
@@ -5416,7 +5404,6 @@ vi $DSHOME/dsenv
 bin/uv -admin -stop
 bin/uv -admin -start
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="jaas">创建jaas配置文件<a class="headerlink" href="#jaas" title="Permanent link">&para;</a></h3>
@@ -5426,7 +5413,6 @@ bin/uv -admin -start
 <div class="highlight"><pre><span></span><code>su - admin
 vi /home/dsadm/jaas.conf
 </code></pre></div>
-
 <p>文件内容如下：
   <div class="highlight"><pre><span></span><code>Client {
     com.ibm.security.auth.module.Krb5LoginModule required
@@ -5464,7 +5450,6 @@ vi /home/dsadm/jaas.conf
 <p>Phoenix插入语句是upsert into，不支持Insert into 语句，所以不能用JDBC Connector在运行时自动生成SQL语句，需要自己填写，否则会报错：</p>
 <div class="highlight"><pre><span></span><code>main_program: Fatal Error: The connector failed to prepare the statement: INSERT INTO us_population (STATE, CITY, POPULATION) VALUES (?, ?, ?). The reported error is: org.apache.phoenix.exception.PhoenixParserException: ERROR 601 (42P00): Syntax error. Encountered &quot;INSERT&quot; at line 1, column 1..
 </code></pre></div>
-
 <ul>
 <li>创建作业</li>
 </ul>
@@ -5497,7 +5482,6 @@ vi isjdbc.config
 
 CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver;org.postgresql.Driver;com.ddtek.jdbc.mongodb.MongoDBDriver;com.huawei.fiber.FiberDriver;org.apache.hive.jdbc.HiveDriver;org.apache.phoenix.jdbc.PhoenixDriver
 </code></pre></div>
-
 <h3 id="fiber_1">修改Fiber配置文件<a class="headerlink" href="#fiber_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>DataStage使用IBM jdk，需要新建Fiber配置文件给DataStage使用</li>
@@ -5505,7 +5489,6 @@ CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver;org.postgresql.Driver;com.ddtek.jdb
 <div class="highlight"><pre><span></span><code>cd /opt/ficlient/Fiber/conf
 cp fiber.xml fiber_ibm.xml
 </code></pre></div>
-
 <ul>
 <li>
 <p>修改fiber_ibm.xml中phoenix,hive,spark各driver的以下两个参数：</p>
@@ -5527,7 +5510,6 @@ cp fiber.xml fiber_ibm.xml
     useKeytab=&quot;/home/dsadm/user.keytab&quot;;
 };
 </code></pre></div>
-
 <ul>
 <li>其它配置项参考FI产品文档Fiber客户端配置指导修改。</li>
 </ul>
@@ -5627,7 +5609,6 @@ cp fiber.xml fiber_ibm.xml
 <p>说明：kafka Connector不支持发送或者消费integer, float, double, numeric, decimal等数值类型的字段，需要转换成char, varchar, longvarchar等类型，否则会有如下报错：</p>
 <div class="highlight"><pre><span></span><code>main_program: APT_PMsectionLeader(2, node2), player 2 - Unexpected termination by Unix signal 9(SIGKILL).
 </code></pre></div>
-
 <h3 id="kafka_1">安装kafka客户端<a class="headerlink" href="#kafka_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -5692,7 +5673,6 @@ cp fiber.xml fiber_ibm.xml
 cd $DSHOME
 vi isjdbc.config
 </code></pre></div>
-
 <p>配置：
   <div class="highlight"><pre><span></span><code>CLASSPATH=/opt/IBM/InformationServer/ASBNode/lib/java/IShive.jar;/opt/mppdb/jdbc/gsjdbc4.jar;
 CLASS_NAMES=com.ibm.isf.jdbc.hive.HiveDriver;org.postgresql.Driver;

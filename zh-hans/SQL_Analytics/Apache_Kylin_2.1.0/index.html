@@ -4486,14 +4486,12 @@ tar -xzvf apache-maven-3.3.9-bin.tar.gz -C /opt/
 </ul>
 <div class="highlight"><pre><span></span><code>yum install -y git
 </code></pre></div>
-
 <ul>
 <li>安装nodejs：</li>
 </ul>
 <div class="highlight"><pre><span></span><code>wget https://nodejs.org/dist/v6.10.0/node-v6.10.0-linux-x64.tar.xz --no-check-certificate
 tar -xvf node-v6.10.0-linux-x64.tar.xz -C /opt/
 </code></pre></div>
-
 <p>修改profile文件<code>vi /etc/profile</code>,增加以下配置
   <div class="highlight"><pre><span></span><code>export PATH=$PATH:/opt/apache-maven-3.3.9/bin:/opt/node-v6.10.0-linux-x64/bin
 </code></pre></div></p>
@@ -4508,12 +4506,10 @@ tar -xvf node-v6.10.0-linux-x64.tar.xz -C /opt/
 <p>修改HiveMRInput.java</p>
 <div class="highlight"><pre><span></span><code>vi /opt/kylin-2.1.x/source-hive/src/main/java/org/apache/kylin/source/hive/HiveMRInput.java
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_2.1.0/image4.png" /></p>
 <p>修改pom.xml</p>
 <div class="highlight"><pre><span></span><code>vi /opt/kylin-2.1.x/pom.xml
 </code></pre></div>
-
 <p>将HBase、Hive、Hadoop版本改成与FusionInsight HD对应的版本</p>
 <p><img alt="" src="../assets/Apache_Kylin_2.1.0/image5.png" /></p>
 <ul>
@@ -4581,7 +4577,6 @@ kylin.source.hive.beeline-params=-n root -u &#39;jdbc:hive2://172.21.42.30:24002
 <p>配置获取任务状态时使用kerberos 鉴权：</p>
 <div class="highlight"><pre><span></span><code>kylin.job.status.with.kerberos=true
 </code></pre></div>
-
 <ul>
 <li>去掉不允许修改的配置</li>
 </ul>

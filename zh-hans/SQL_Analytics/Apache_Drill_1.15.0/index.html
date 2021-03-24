@@ -4494,7 +4494,6 @@ scp /opt/huawei/Bigdata/components/FusionInsight_HD_V100R002C80SPC200/Hive/hive.
   }
 }
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191015143940614.png" /></p>
 <p>其中hive.metastore.uris可在集群hive-site.xml文件中查到</p>
 <ul>
@@ -4542,7 +4541,6 @@ scp /opt/huawei/Bigdata/components/FusionInsight_HD_V100R002C80SPC200/Hive/hive.
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <ul>
 <li>后台命令行输入<code>show databases;</code>检查数据库</li>
 </ul>
@@ -4587,7 +4585,6 @@ debug=true;
 <div class="highlight"><pre><span></span><code>source /opt/hadoopclient/bigdata_env
 export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com&quot;
 </code></pre></div>
-
 <p>完成之后使用命令<code>java -version</code>检查是否加载成功：</p>
 <p><img alt="" src="../assets/Apache_Drill/markdown-img-paste-20191010201557946.png" /></p>
 <ul>

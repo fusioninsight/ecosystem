@@ -4600,7 +4600,6 @@ export HCAT_HOME=/opt/135_651armhdclient/hadoopclient/Hive/HCatalog
 </ul>
 <div class="highlight"><pre><span></span><code>|mapreduce\.job\..*|dfs\..*|mapred\..*
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_3.0.1/markdown-img-paste-20200319102923469.png" /></p>
 <h3 id="kylin_3">修改Kylin配置<a class="headerlink" href="#kylin_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4611,7 +4610,6 @@ export HCAT_HOME=/opt/135_651armhdclient/hadoopclient/Hive/HCatalog
 kinit developuser
 beeline
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_3.0.1/markdown-img-paste-20200319103247312.png" /></p>
 <ul>
 <li>修改kylin.properties： <code>vi /opt/kylin/apache-kylin-3.0.1-bin-hbase1x/conf/kylin.properties</code></li>
@@ -4748,7 +4746,6 @@ kylin.source.hive.beeline-params=-n root -u &#39;jdbc:hive2://172.16.10.131:2400
 <div class="highlight"><pre><span></span><code>cp /opt/135_651armhdclient/hadoopclient/Spark2x/spark/jars/*.jar /opt/kylin/apache-kylin-3.0.1-bin-hbase1x/spark/jars/
 rm -rf hadoop-*
 </code></pre></div>
-
 <ul>
 <li>
 <p>启动Kylin，登陆web UI</p>

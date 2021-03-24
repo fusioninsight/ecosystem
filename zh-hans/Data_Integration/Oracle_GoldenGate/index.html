@@ -4756,7 +4756,6 @@
 <div class="highlight"><pre><span></span><code>su - oracle
 vi .bash_profile
 </code></pre></div>
-
 <ul>
 <li>文件.bash_profile内容如下：
   ```shell
@@ -4883,27 +4882,21 @@ vi .bash_profile
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param eora
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image19.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param mgr
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image20.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param phdfs
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image21.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param phbase
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image22.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param pkafka
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image23.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param pflume
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image24.png" /></p>
 <ul>
 <li>
@@ -4916,10 +4909,8 @@ vi .bash_profile
 <div class="highlight"><pre><span></span><code>cd /home/oracle/OGG/
 mkdir diroby
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi diroby/eora.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image25.png" /></p>
 <blockquote>
 <p><strong>注意进程名eora和数据文件dirdat/eo的对应关系</strong></p>
@@ -4929,7 +4920,6 @@ mkdir diroby
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; obey diroby/eora.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image26.png" /></p>
 <ul>
 <li>把捕获进程eora注册到pdborcl数据库中：</li>
@@ -4937,21 +4927,18 @@ mkdir diroby
 <div class="highlight"><pre><span></span><code>GGSCI&gt; dblogin useridalias ogg_src
 GGSCI&gt; register extract eora database container(pdborcl)
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image27.png" /></p>
 <ul>
 <li>为pdborcl.test下的所有表添加表级附加日志：</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; add schematrandata pdborcl.test allcols
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image28.png" /></p>
 <ul>
 <li>启动GoldenGate捕获进程eora:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; start eora
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image29.png" /></p>
 <h3 id="goldengatephdfs">配置GoldenGate传输进程phdfs<a class="headerlink" href="#goldengatephdfs" title="Permanent link">&para;</a></h3>
 <p>配置GoldenGate传输进程phdfs，将OGG生成的数据文件传递给目标端GoldenGate
@@ -4965,7 +4952,6 @@ HDFS处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi diroby/phdfs.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image30.png" /></p>
 <blockquote>
 <p><strong>注意进程名**phdfs**和数据文件dirdat/rs的对应关系</strong></p>
@@ -4975,14 +4961,12 @@ HDFS处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; obey diroby/phdfs.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image31.png" /></p>
 <ul>
 <li>启动GoldenGate捕获进程phdfs:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; start phdfs
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image32.png" /></p>
 <h3 id="goldengatephbase">配置GoldenGate传输进程phbase<a class="headerlink" href="#goldengatephbase" title="Permanent link">&para;</a></h3>
 <p>配置GoldenGate传输进程phbase，将OGG生成的数据文件传递给目标端GoldenGate
@@ -4994,7 +4978,6 @@ HBASE处理。</p>
 <p>编辑<code>diroby/phbase.oby</code>文件，在GGSCI命令行下运行<code>shell vi diroby/phbase.oby</code>命令：(shell之后接操作系统命令)</p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi diroby/phbase.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image33.png" /></p>
 <blockquote>
 <p><strong>注意进程名**phbase**和数据文件dirdat/se的对应关系</strong></p>
@@ -5004,14 +4987,12 @@ HBASE处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; obey diroby/phbase.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image34.png" /></p>
 <ul>
 <li>启动GoldenGate捕获进程phbase:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; start phbase
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image35.png" /></p>
 <h3 id="goldengatepflume">配置GoldenGate传输进程pflume<a class="headerlink" href="#goldengatepflume" title="Permanent link">&para;</a></h3>
 <p>配置GoldenGate传输进程pflume，将OGG生成的数据文件传递给目标端GoldenGate
@@ -5025,7 +5006,6 @@ FLUME处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi diroby/pflume.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image36.png" /></p>
 <blockquote>
 <p><strong>注意进程名**pflume**和数据文件dirdat/rf的对应关系</strong></p>
@@ -5035,14 +5015,12 @@ FLUME处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; obey diroby/pflume.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image37.png" /></p>
 <ul>
 <li>启动GoldenGate捕获进程pflume:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; start pflume
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image38.png" /></p>
 <h3 id="goldengatepkafka">配置GoldenGate传输进程pkafka<a class="headerlink" href="#goldengatepkafka" title="Permanent link">&para;</a></h3>
 <p>配置GoldenGate传输进程pkafka，将OGG生成的数据文件传递给目标端GoldenGate
@@ -5056,7 +5034,6 @@ Kafka处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi diroby/pkafka.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image39.png" /></p>
 <blockquote>
 <p><strong>注意进程名**pkafka**和数据文件dirdat/rk的对应关系</strong></p>
@@ -5066,14 +5043,12 @@ Kafka处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; obey diroby/ pkafka.oby
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image40.png" /></p>
 <ul>
 <li>启动GoldenGate捕获进程pkafka:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; start pkafka
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image41.png" /></p>
 <h3 id="goldengate_2">查看GoldenGate进程运行状态<a class="headerlink" href="#goldengate_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5081,7 +5056,6 @@ Kafka处理。</p>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image42.png" /></p>
 <ul>
 <li>查看某个进程的详细信息：
@@ -5122,7 +5096,6 @@ Kafka处理。</p>
 <p>将122011_ggs_Adapters_Linux_x64.zip上传至客户端/opt目录下：</p>
 <div class="highlight"><pre><span></span><code>unzip 122011_ggs_Adapters_Linux_x64.zip
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image47.png" /></p>
 <p>将解压后的ggs_Adapters_Linux_x64.tar解压到/opt/OGG_HADOOP目录下：</p>
 <p><img alt="" src="../assets/Oracle_GoldenGate/image48.png" /></p>
@@ -5175,14 +5148,12 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param rhdfs
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image56.png" /></p>
 <ul>
 <li>编辑hdfs.props, 在GGSCI命令行下运行<code>shell vi dirprm/hdfs.props</code>命令：(shell之后接操作系统命令)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/hdfs.props
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image57.png" /></p>
 <ul>
 <li>
@@ -5198,16 +5169,13 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; add replicat rhdfs, exttrail dirdat/rs
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image59.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image55.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;start rhdfs
 GGSCI&gt;info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image60.png" /></p>
 <h3 id="goldengate-hbase">配置GoldenGate HBase 复制进程<a class="headerlink" href="#goldengate-hbase" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5215,14 +5183,12 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param rhbase
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image61.png" /></p>
 <ul>
 <li>编辑hbase.props, 在GGSCI命令行下运行<code>shell vi dirprm/hbase.props</code>命令：(shell之后接操作系统命令)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/hbase.props
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image62.png" /></p>
 <ul>
 <li>拷贝hbase.keytab和jaas.conf到<code>/opt/OGG_HADOOP/dirprm/</code>下：</li>
@@ -5237,15 +5203,12 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; add replicat rhbase, exttrail dirdat/se
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image65.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;start rhbase
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image66.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image67.png" /></p>
 <h3 id="goldengate-kafka">配置GoldenGate Kafka 复制进程<a class="headerlink" href="#goldengate-kafka" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5269,21 +5232,18 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param rkafka
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image72.png" /></p>
 <ul>
 <li>编辑kafka.props, 在GGSCI命令行下运行<code>shell vi dirprm/kafka.props</code>命令：(shell之后接操作系统命令)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/kafka.props
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image73.png" /></p>
 <ul>
 <li>其中 <strong>gg.handler.kafkahandler.BlockingSend</strong> 属性控制同步和异步，默认false，异步。</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/custom_kafka_producer.properties
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image74.png" /></p>
 <ul>
 <li>修改Kafka里的配置，将如下选项修改为True</li>
@@ -5295,15 +5255,12 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; add replicat rkafka, exttrail dirdat/rk
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image77.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;start rkafka
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image78.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image79.png" /></p>
 <h3 id="goldengate-flume">配置GoldenGate Flume 复制进程<a class="headerlink" href="#goldengate-flume" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5334,20 +5291,17 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; edit param rflume
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image86.png" /></p>
 <ul>
 <li>编辑flume.props, 在GGSCI命令行下运行<code>shell vi dirprm/flume.props</code>命令：(shell之后接操作系统命令)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/flume.props
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image87.png" /></p>
 <p>gg.handler.flumehandler.PropagateSchema=false 控制DDL</p>
 <p>gg.handler.flumehandler.format.WrapMessageInGenericAvroMessage=false  相同SCHAME打包</p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; shell vi dirprm/custom-flume-rpc.properties
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image88.png" /></p>
 <ul>
 <li>拷贝flume.keytab文件到<code>/opt/OGG_HADOOP/dirprm/</code>目录下</li>
@@ -5358,15 +5312,12 @@ GGSCI&gt;info all
 </ul>
 <div class="highlight"><pre><span></span><code>GGSCI&gt; add replicat rflume, exttrail dirdat/rf
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image90.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;start rflume
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image91.png" /></p>
 <div class="highlight"><pre><span></span><code>GGSCI&gt;info all
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image92.png" /></p>
 <h2 id="_10">测试结果<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <h3 id="oracle">Oracle端启动所有的传输进程<a class="headerlink" href="#oracle" title="Permanent link">&para;</a></h3>
@@ -5379,7 +5330,6 @@ GGSCI&gt;info all
 <span class="nb">source</span> .bash_profile
 sqlplus test/welcome1@pdborcl
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image94.png" /></p>
 <p><img alt="" src="../assets/Oracle_GoldenGate/image95.png" /></p>
 <ul>
@@ -5391,7 +5341,6 @@ sqlplus test/welcome1@pdborcl
 </ul>
 <div class="highlight"><pre><span></span><code>hbase shell
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image97.png" /></p>
 <ul>
 <li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
@@ -5399,7 +5348,6 @@ sqlplus test/welcome1@pdborcl
 <p>执行以下命令：</p>
 <div class="highlight"><pre><span></span><code>./kafka-console-consumer.sh --zookeeper <span class="m">162</span>.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic <span class="nb">test</span> --from-beginning
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image98.png" /></p>
 <ul>
 <li>在HDFS中查看flume运行结果：查看/ogg/flume/下数据文件：</li>
@@ -5424,7 +5372,6 @@ sqlplus test/welcome1@pdborcl
 </ul>
 <div class="highlight"><pre><span></span><code>hbase shell
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image103.png" /></p>
 <ul>
 <li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>
@@ -5432,7 +5379,6 @@ sqlplus test/welcome1@pdborcl
 <p>执行以下命令：</p>
 <div class="highlight"><pre><span></span><code>./kafka-console-consumer.sh --zookeeper <span class="m">162</span>.1.93.101:24002,162.1.93.102:24002,162.1.93.103:24002/kafka --topic <span class="nb">test</span> --from-beginning
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image104.png" /></p>
 <ul>
 <li>在HDFS中查看flume运行结果：查看/ogg/flume/下数据文件：</li>
@@ -5456,7 +5402,6 @@ sqlplus test/welcome1@pdborcl
 </ul>
 <div class="highlight"><pre><span></span><code>hbase shell
 </code></pre></div>
-
 <p><img alt="" src="../assets/Oracle_GoldenGate/image108.png" /></p>
 <ul>
 <li>查看kafka结果，进入kafka客户端<code>/opt/hadoopclient/Kafka/kafka/bin</code></li>

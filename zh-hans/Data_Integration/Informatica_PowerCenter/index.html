@@ -4531,7 +4531,6 @@ create user mdl_user identified by mdl_user default tablespace rep_data temporar
 create user domain_user identified by domain_user default tablespace rep_data temporary tablespace temp;
 grant dba to  domain_user,pwc_user,mdl_user;
 </code></pre></div>
-
 </li>
 <li>
 <p>获取Informatica Server安装包并上传至节点,解压安装包之后，执行<code>./install.sh</code>，根据提示进行安装,这里安装目录为<code>/home/infa/Informatica/10.2.0</code>。</p>
@@ -4542,7 +4541,6 @@ grant dba to  domain_user,pwc_user,mdl_user;
 /home/infa/Informatica/10.2.0/tomcat/bin/infaservice.sh startup
 /home/infa/Informatica/10.2.0/tomcat/bin/infaservice.sh shutdown
 </code></pre></div>
-
 <blockquote>
 <p>说明：如果使用非infa用户启动或者停止Informatica Server之后，会导致<code>/home/infa/Informatica/10.2.0</code>目录下一些文件的所有者发生变化，导致下一次启动或者停止失败。可执行 <strong>chown -R infa:oinstall /home/infa/Informatica/10.2.0</strong> 修复。</p>
 </blockquote>
@@ -4610,7 +4608,6 @@ cp /opt/hadoopclient/Yarn/config/mapred-site.xml /opt/pwx-hadoop/conf
 chmod -R 775 /opt/pwx-hadoop/conf
 chown infa:oinstall /opt/pwx-hadoop/conf/*
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_PowerCenter/22248.png" /></p>
 <ul>
 <li>执行以下命令进行Kerberos认证，并指定cache文件，infa用户需要对指定的路径有读写权限</li>
@@ -4619,7 +4616,6 @@ chown infa:oinstall /opt/pwx-hadoop/conf/*
 kinit -c /home/infa/krb5cc_developuser developuser
 chown infa:oinstall /home/infa/krb5cc_developuser
 </code></pre></div>
-
 <ul>
 <li>修改<code>/opt/pwx-hadoop/conf</code>目录中的<code>core-site.xml</code>文件，添加如下配置</li>
 </ul>
@@ -4629,7 +4625,6 @@ chown infa:oinstall /home/infa/krb5cc_developuser
 &lt;description&gt;Path to the Kerberos ticket cache. &lt;/description&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <ul>
 <li>在Administrator 管理界面，为集成服务创建环境变量 <strong>CLASSPATH=/opt/pwx-hadoop/conf</strong>，并重启集成服务</li>
 </ul>
@@ -4646,7 +4641,6 @@ chown infa:oinstall /home/infa/krb5cc_developuser
   cp /opt/hadoopclient/Hive/Beeline/lib/hive* /home/infa/Informatica/10.2.0/services/shared/hadoop/hortonworks_2.5/lib
   chown infa:oinstall /home/infa/Informatica/10.2.0/services/shared/hadoop/hortonworks_2.5/lib/hive*
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="powercenter-client-from-oracle-to-hdfshive">PowerCenter Client ~ From Oracle to HDFS/Hive<a class="headerlink" href="#powercenter-client-from-oracle-to-hdfshive" title="Permanent link">&para;</a></h3>
@@ -4761,7 +4755,6 @@ Hive User Name: developuser
 ln -s /usr/lib64/libssl.so.1.0.2k /usr/lib64/libssl.so.1.0.0
 ln -s /usr/lib64/libcrypto.so.1.0.2k /usr/lib64/libcrypto.so.1.0.0
 </code></pre></div>
-
 </li>
 <li>
 <p><code>/etc/odbc.ini</code>配置示例如下：</p>
@@ -4777,7 +4770,6 @@ NAMESPACE=hiveserver2
 KRB5PATH=/opt/krb5.conf
 JAASPATH=/opt/jaas.conf
 </code></pre></div>
-
 </li>
 <li>
 <p>以下三个环境变量在<code>/etc/profile</code>中设置以便所有用户都能共享。</p>
@@ -4785,7 +4777,6 @@ JAASPATH=/opt/jaas.conf
 export ODBCINI=/etc/odbc.ini
 export ODBCCLASSPATH=/usr/local/hiveodbc/jars/zookeeper-3.5.1.jar:/usr/local/hiveodbc/jars/slf4j-api-1.7.10.jar:/usr/local/hiveodbc/jars/log4j-1.2.17.jar:/usr/local/hiveodbc/jars/slf4j-log4j12-1.7.5.jar:/usr/local/hiveodbc/jars/zk-helper.jar:/usr/local/hiveodbc/jars/commons-logging-1.2.jar
 </code></pre></div>
-
 </li>
 <li>
 <p>使用Informatica提供的调试工具ssgodbc验证连接。</p>
@@ -4796,7 +4787,6 @@ kinit developuser
 export LD_PRELOAD=/usr/lib64/libodbchive.so
 /home/infa/Informatica/10.2.0/tools/debugtools/ssgodbc/linux64/ssgodbc.linux64 -d hivefi -u developuesr -p &#39;Huawei@123&#39; -v
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_PowerCenter/ea105a63.png" /></p>
 <h4 id="kinit">kinit认证方式配置<a class="headerlink" href="#kinit" title="Permanent link">&para;</a></h4>
 <ul>
@@ -4836,7 +4826,6 @@ INSERT INTO class VALUES (1,&#39;Class1&#39;);
 INSERT INTO class VALUES (2,&#39;Class2&#39;);    
 INSERT INTO class VALUES (3,&#39;Class3&#39;);
 </code></pre></div>
-
 <ul>
 <li>以管理员身份运行PowerCenter Designer，右键刚才创建的文件夹**Hive_to_Local**，点击open，打开配置界面。点击菜单栏<code>源-&gt;从数据库导入</code>，在ODBC数据源中选择 <strong>Sample Cloudera Hive DSN</strong>，点击右边的按钮。</li>
 </ul>
@@ -4894,7 +4883,6 @@ INSERT INTO class VALUES (3,&#39;Class3&#39;);
 连接字符串：hivefi，需要和/etc/odbc.ini中设置的名称保持一致
 代码页：UTF-8 encoding of Unicode
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_PowerCenter/c6282066.png" /></p>
 <ul>
 <li>在“Task Developer”中双击会话“session_hive_to_local”，点击 <strong>映射</strong>，设置源SQ_class的连接值为 <strong>hivefi</strong>，目标class1的属性“Output file directory”为 <strong>/home/infa</strong>，“Output filename”为 <strong>class.out</strong>。</li>

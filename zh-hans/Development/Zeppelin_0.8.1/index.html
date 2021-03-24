@@ -4777,10 +4777,8 @@ source /opt/hadoopclient/bigdata_env
 echo $JAVA_HOME
 echo &quot;export JAVA_HOME=/opt/hadoopclient/JDK/jdk-8u201&quot;&gt;&gt;zeppelin-env.sh
 </code></pre></div>
-
 <div class="codehilite"><pre><span></span><code> ![](assets/Zeppelin_0.8.1/2019-08-29-22-22-26.png)
 </code></pre></div>
-
 
 <ul>
 <li>编辑zeppelin-site.xml文件，位置<code>/usr/zeppelin/conf</code>,将zeppelin.server.port 8080替换成18081（可自定义，也可以不改）；将zeppelin.anonymous.allowed参数的true修改为false
@@ -4795,7 +4793,6 @@ vi zeppelin-site.xml
 &lt;description&gt;Server port.&lt;/description&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <div class="codehilite"><pre><span></span><code>```
 &lt;property&gt;
 &lt;name&gt;zeppelin.anonymous.allowed&lt;/name&gt;
@@ -4804,7 +4801,6 @@ vi zeppelin-site.xml
 &lt;/property&gt;
 ```
 </code></pre></div>
-
 
 <ul>
 <li>编辑shiro.ini文件，位置/usr/zeppelin/conf/shiro.ini,增加用户developuser
@@ -4815,10 +4811,8 @@ vi shiro.ini
 <p>[users]下增加用户developuser，密码Huawei@123，权限admin</p>
 <div class="highlight"><pre><span></span><code>developuser = Huawei@123, admin
 </code></pre></div>
-
 <div class="codehilite"><pre><span></span><code>![](assets/Zeppelin_0.8.1/2019-08-29-22-42-45.png)
 </code></pre></div>
-
 
 <ul>
 <li>升级zeppelin的libthrift-0.9.2至libthrift-0.9.3（或以上）版本。<blockquote>
@@ -5005,7 +4999,6 @@ export ZEPPELIN_INTP_JAVA_OPTS=&quot;-Djava.security.krb5.conf=/opt/developuser/
 <div class="highlight"><pre><span></span><code>cd /opt/hadoopclient/Hive/Beeline/lib/jdbc
 \cp -f hive-jdbc-3.1.0.jar hive-service-rpc-3.1.0.jar hive-service-3.1.0.jar curator-client-2.12.0.jar curator-framework-2.12.0.jar zookeeper-3.5.1.jar guava-19.0.jar hive-common-3.1.0.jar hive-shims-common-3.1.0.jar hive-standalone-metastore-3.1.0.jar hadoop-common-3.1.1.jar woodstox-core-asl-4.4.1.jar woodstox-core-5.0.3.jar stax2-api-3.1.4.jar commons-collections-3.2.2.jar commons-configuration2-2.1.1.jar hadoop-auth-3.1.1.jar hive-serde-3.1.0.jar /usr/zeppelin/interpreter/jdbc/
 </code></pre></div>
-
 <ul>
 <li>
 <p>查询CLIENT HIVE URI
@@ -5039,7 +5032,6 @@ echo $CLIENT_HIVE_URI
             },</p>
 <div class="codehilite"><pre><span></span><code>```
 </code></pre></div>
-
 
 <p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-03-21-52.png" /></p>
 <ul>
@@ -5100,7 +5092,6 @@ spark-beeline
 </ul>
 <div class="highlight"><pre><span></span><code>cp /opt/hadoopclient/Spark2x/spark/jars/*.jar /usr/zeppelin/interpreter/spark/
 </code></pre></div>
-
 <ul>
 <li>编辑zeppelin-env.sh文件，位置<code>/usr/zeppelin/conf</code>，加入以下内容</li>
 </ul>
@@ -5109,7 +5100,6 @@ export MASTER=yarn-client
 export SPARK_HOME=/opt/hadoopclient/Spark2x/spark
 export HADOOP_CONF_DIR=/opt/hadoopclient/HDFS/hadoop/etc/hadoop
 </code></pre></div>
-
 <ul>
 <li>
 <p>关闭防火墙(提交spark任务时，能方便访问Spark Driver所在节点的端口)
@@ -5156,11 +5146,9 @@ zeppelin-daemon.sh restart
 <div class="highlight"><pre><span></span><code>wget https://repo.anaconda.com/archive/Anaconda2-2019.07-Linux-x86_64.sh
 sh Anaconda2-2019.07-Linux-x86_64.sh
 </code></pre></div>
-
 <p>安装matplotlib</p>
 <div class="highlight"><pre><span></span><code>conda install matplotlib
 </code></pre></div>
-
 <p>在zeppelin的界面中，选择右上角的 Interpreter</p>
 <p>选择Spark，点击 <strong>edit</strong> 编辑，将 zeppelin.pyspark.python 参数改为Anaconda安装目录中的python，点击 <strong>save</strong> 保存</p>
 <p><img alt="" src="../assets/Zeppelin_0.8.1/5924a.png" /></p>
@@ -5181,7 +5169,6 @@ sh Anaconda2-2019.07-Linux-x86_64.sh
 </ul>
 <div class="highlight"><pre><span></span><code>yum install R R-devel libcurl-devel openssl-devel libxml2-devel
 </code></pre></div>
-
 <blockquote>
 <p>由于Executor需要执行R，采用yarn-client模式，所以在Zeppelin的节点上安装R。HD集群节点不需要R,因为有SparkR</p>
 </blockquote>
@@ -5210,7 +5197,6 @@ sh Anaconda2-2019.07-Linux-x86_64.sh
 <div class="codehilite"><pre><span></span><code>```
 </code></pre></div>
 
-
 <ul>
 <li>FusionInsight客户端下测试是否可以使用sparkR
   <code>source /opt/hadoopclient/bigdata_env
@@ -5234,7 +5220,6 @@ sh Anaconda2-2019.07-Linux-x86_64.sh
 <p>使用yarn-client模式，还需要将客户端的主机名与IP的映射关系添加到Yarn ResourceManager节点(本文即HD的3台主机节点）的hosts文件中</p>
 <div class="highlight"><pre><span></span><code>echo &quot;172.16.5.102 172-16-5-102&quot;&gt;&gt;/etc/hosts
 </code></pre></div>
-
 </li>
 <li>
 <p>重启zeppelin。
@@ -5302,7 +5287,6 @@ head(results)
 <div class="highlight"><pre><span></span><code>\q
 gsql -d db_tpcds -p 25308 -U developuser -W Bigdata@123
 </code></pre></div>
-
 <p><img alt="" src="../assets/Zeppelin_0.8.1/2019-08-31-22-27-04.png" /></p>
 </li>
 <li>
@@ -5355,7 +5339,6 @@ sha256表示连接时jack用户的密码使用sha256算法加密。</p>
 3: default.url = jdbc:postgresql://172.21.3.101:25108/db_tpcds
 4: default.user = developuser
 </code></pre></div>
-
 <p><div class="highlight"><pre><span></span><code>&quot;jdbc&quot;: {
   &quot;id&quot;: &quot;jdbc&quot;,
   &quot;name&quot;: &quot;jdbc&quot;,
@@ -5423,7 +5406,7 @@ zeppelin-daemon.sh restart
 mkdir /tmp/flights
 
 <span class="c1"># Download flight data by year</span>
-<span class="k">for</span> i in <span class="o">{</span><span class="m">2006</span>..2008<span class="o">}</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">2006</span>..2008<span class="o">}</span>
   <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> </span><span class="nv">$i</span><span class="s2"> Download&quot;</span>
     <span class="nv">fnam</span><span class="o">=</span><span class="nv">$i</span>.csv.bz2
@@ -5448,7 +5431,6 @@ hdfs dfs -put flights/* /user/developuser/flights/
 hdfs dfs -put airlines.csv /user/developuser/
 hdfs dfs -put airports.csv /user/developuser/
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights</span>
 <span class="p">(</span>
   <span class="k">year</span> <span class="nb">int</span><span class="p">,</span>
@@ -5487,12 +5469,10 @@ hdfs dfs -put airports.csv /user/developuser/
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
 <span class="n">TBLPROPERTIES</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2006.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 <span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2007.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 <span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/flights/2008.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airlines</span>
 <span class="p">(</span>
 <span class="n">Code</span> <span class="n">string</span><span class="p">,</span>
@@ -5507,10 +5487,8 @@ hdfs dfs -put airports.csv /user/developuser/
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
 <span class="n">tblproperties</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/airlines.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airlines</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airports</span>
 <span class="p">(</span>
 <span class="n">id</span> <span class="n">string</span><span class="p">,</span>
@@ -5534,7 +5512,6 @@ hdfs dfs -put airports.csv /user/developuser/
 <span class="p">)</span>
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/developuser/airports.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airports</span><span class="p">;</span>
 </code></pre></div>
                 

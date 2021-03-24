@@ -4573,7 +4573,6 @@ sed -i &#39;s/$releasever/7/g&#39; /etc/yum.repos.d/Centos-7.repo
 yum clean
 yum makecache
 </code></pre></div>
-
 <h3 id="163">配置163的源<a class="headerlink" href="#163" title="Permanent link">&para;</a></h3>
 <ul>
 <li>配置好Redhat6.6的yum源</li>
@@ -4595,7 +4594,6 @@ sed -i &#39;s/$releasever/6/g&#39; /etc/yum.repos.d/CentOS6-Base-163.repo
 yum clean all
 yum makecache
 </code></pre></div>
-
 <h3 id="epel">配置EPEL的源<a class="headerlink" href="#epel" title="Permanent link">&para;</a></h3>
 <ul>
 <li>安装EPEL源</li>
@@ -4860,7 +4858,6 @@ library(dygraphs)
 library(rbokeh)
 knitr::opts_chunk$set(message = FALSE, warning = FALSE)
 </code></pre></div>
-
 <p><strong>Connect to Spark</strong></p>
 <div class="highlight"><pre><span></span><code>options(bitmapType = &#39;cairo&#39;)
 Sys.setenv(JAVA_HOME=&quot;/home/test/hadoopclient/JDK/jdk&quot;)
@@ -4868,7 +4865,6 @@ Sys.setenv(SPARK_HOME=&quot;/home/test/hadoopclient/Spark/spark&quot;)
 Sys.setenv(SPARK_HOME_VERSION=&quot;1.6.1&quot;)
 sc &lt;- spark_connect(master =  &quot;yarn-client&quot;, version = &quot;1.6.1&quot;, spark_home = &quot;/home/test/hadoopclient/Spark/spark&quot;)
 </code></pre></div>
-
 <p><strong>Total US births</strong></p>
 <p>Plot total US births recorded from the Social Security Administration.</p>
 <div class="highlight"><pre><span></span><code>babynames_tbl &lt;- copy_to(sc, babynames, &quot;babynames&quot;)
@@ -4886,7 +4882,6 @@ birthsYearly %&gt;%
   dyOptions(stackedGraph = TRUE) %&gt;%
   dyRangeSelector(height = 20)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/87303.png" /></p>
 <p><strong>Aggregate data by name</strong></p>
 <p>Use Spark SQL to create a look up table. Register and cache the look up table in Spark for future queries.</p>
@@ -4904,11 +4899,9 @@ yearlyNames_tbl &lt;- filteredNames_tbl %&gt;%
   summarize(count = as.numeric(sum(n)))
 sdf_register(yearlyNames_tbl, &quot;yearlyNames&quot;)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/99159.png" /></p>
 <div class="highlight"><pre><span></span><code>tbl_cache(sc, &quot;yearlyNames&quot;)
 </code></pre></div>
-
 <p><strong>Most popular names (1986)</strong></p>
 <p>Identify the top 5 male and female names from 1986. Visualize the popularity trend over time.</p>
 <div class="highlight"><pre><span></span><code>topNames1986_tbl &lt;- yearlyNames_tbl %&gt;%
@@ -4930,7 +4923,6 @@ ggplot(topNames1986Yearly, aes(year, count, color=name)) +
   geom_line() +
   ggtitle(&quot;Most Popular Names of 1986&quot;)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/b9e9f.png" /></p>
 <p><strong>Most popular names (2014)</strong></p>
 <p>Identify the top 5 male and female names from 2014. Visualize the popularity trend over time.</p>
@@ -4953,7 +4945,6 @@ ggplot(topNames2014Yearly, aes(year, count, color=name)) +
   geom_line() +
   ggtitle(&quot;Most Popular Names of 2014&quot;)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/e53af.png" /></p>
 <p><strong>Shared names</strong></p>
 <p>Visualize the most popular names that are shared by both males and females.</p>
@@ -4974,7 +4965,6 @@ figure(width = NULL, height = NULL,
             color = AvgYear, size = scale(sqrt(count)),
             hover = list(name, Male, Female, AvgYear), legend = FALSE)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/26fc0.png" /></p>
 <h3 id="sparklyrsparkspark2x">使用sparklyr结合spark进行数据分析航空公司飞行数据(必须配套Spark2x)<a class="headerlink" href="#sparklyrsparkspark2x" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -5025,7 +5015,6 @@ summarize(description = min(description), gain=mean(gain),
 select(description, gain, distance, depdelay) %&gt;%
 arrange(gain)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/271b4.png" /></p>
 <p><strong>Train a linear model</strong></p>
 <p>Predict time gained or lost in flight as a function of distance, departure delay, and airline carrier.</p>
@@ -5040,7 +5029,6 @@ ml_linear_regression(gain ~ distance + depdelay + uniquecarrier)
 # Summarize the linear model
 summary(ml1)
 </code></pre></div>
-
 <p><img alt="" src="../assets/RStudio/29474.png" /></p>
 <p>**  Assess model performance**</p>
 <p>Compare the model performance using the validation data.
@@ -5117,7 +5105,7 @@ ggplot(carrier, aes(gain, prediction)) +
 mkdir /tmp/flights
 
 <span class="c1"># Download flight data by year</span>
-<span class="k">for</span> i in <span class="o">{</span><span class="m">2006</span>..2008<span class="o">}</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">2006</span>..2008<span class="o">}</span>
   <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> </span><span class="nv">$i</span><span class="s2"> Download&quot;</span>
     <span class="nv">fnam</span><span class="o">=</span><span class="nv">$i</span>.csv.bz2
@@ -5142,7 +5130,6 @@ hdfs dfs -put flights/* /user/sparkuser/flights/
 hdfs dfs -put airlines.csv /user/sparkuser/
 hdfs dfs -put airports.csv /user/sparkuser/
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights</span>
 <span class="p">(</span>
   <span class="k">year</span> <span class="nb">int</span><span class="p">,</span>
@@ -5181,12 +5168,10 @@ hdfs dfs -put airports.csv /user/sparkuser/
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
 <span class="n">TBLPROPERTIES</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/sparkuser/flights/2006.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 <span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/sparkuser/flights/2007.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 <span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/sparkuser/flights/2008.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">flights</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airlines</span>
 <span class="p">(</span>
 <span class="n">Code</span> <span class="n">string</span><span class="p">,</span>
@@ -5201,10 +5186,8 @@ hdfs dfs -put airports.csv /user/sparkuser/
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
 <span class="n">tblproperties</span><span class="p">(</span><span class="ss">&quot;skip.header.line.count&quot;</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/sparkuser/airlines.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airlines</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airports</span>
 <span class="p">(</span>
 <span class="n">id</span> <span class="n">string</span><span class="p">,</span>
@@ -5228,7 +5211,6 @@ hdfs dfs -put airports.csv /user/sparkuser/
 <span class="p">)</span>
 <span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="k">LOAD</span> <span class="k">DATA</span> <span class="n">INPATH</span> <span class="s1">&#39;/user/sparkuser/airports.csv&#39;</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">airports</span><span class="p">;</span>
 </code></pre></div>
                 

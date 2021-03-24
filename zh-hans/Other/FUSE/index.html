@@ -4233,13 +4233,11 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> /etc/profile
 </code></pre></div>
-
 <ul>
 <li>安装rpm包</li>
 </ul>
 <div class="highlight"><pre><span></span><code>yum install fuse fuse-devel fuse-libs
 </code></pre></div>
-
 <ul>
 <li>
 <p>安装FusionInsight客户端，具体请参见产品文档的 <strong>安装客户端</strong> 章节，例如客户端安装目录为<code>/opt/hadoopclient/</code></p>
@@ -4265,17 +4263,17 @@
 <span class="c1"># If dev build set paths accordingly</span>
 <span class="k">if</span> <span class="o">[</span> -d <span class="nv">$HADOOP_PREFIX</span>/share <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   <span class="nb">export</span> <span class="nv">HADOOP_PREFIX</span><span class="o">=</span><span class="nv">$HADOOP_PREFIX</span>
-  <span class="k">for</span> f in <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/hdfs/*.jar <span class="p">;</span> <span class="k">do</span>
+  <span class="k">for</span> f <span class="k">in</span> <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/hdfs/*.jar <span class="p">;</span> <span class="k">do</span>
     <span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$f</span>
   <span class="k">done</span>
-  <span class="k">for</span> f in <span class="nv">$HADOOP_PREFIX</span>/share/hadoop/hdfs/lib/*.jar<span class="p">;</span> <span class="k">do</span>
+  <span class="k">for</span> f <span class="k">in</span> <span class="nv">$HADOOP_PREFIX</span>/share/hadoop/hdfs/lib/*.jar<span class="p">;</span> <span class="k">do</span>
     <span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$f</span>
   <span class="k">done</span>
-  <span class="k">for</span> f in <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/common/lib/*.jar<span class="p">;</span> <span class="k">do</span>
+  <span class="k">for</span> f <span class="k">in</span> <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/common/lib/*.jar<span class="p">;</span> <span class="k">do</span>
   <span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$f</span>
   <span class="k">done</span>  
 
-  <span class="k">for</span> f in <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/common/*.jar<span class="p">;</span> <span class="k">do</span>
+  <span class="k">for</span> f <span class="k">in</span> <span class="si">${</span><span class="nv">HADOOP_PREFIX</span><span class="si">}</span>/share/hadoop/common/*.jar<span class="p">;</span> <span class="k">do</span>
   <span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$f</span>
   <span class="k">done</span>
 
@@ -4293,25 +4291,21 @@ fuse_dfs <span class="nv">$@</span>
 <div class="highlight"><pre><span></span><code>chmod 755 fuse_dfs
 chmod 755 fuse_dfs_wrapper.sh
 </code></pre></div>
-
 <ul>
 <li>Source环境变量</li>
 </ul>
 <div class="highlight"><pre><span></span><code>source /opt/hadoopclient/bigdata_env
 </code></pre></div>
-
 <ul>
 <li>本地创建mount目录</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mkdir –p /mnt/hdfs
 </code></pre></div>
-
 <ul>
 <li>执行挂载脚本，其中162-1-95-196是HDFS的NameNode(hacluster,主)的主机名</li>
 </ul>
 <div class="highlight"><pre><span></span><code>./fuse_dfs_wrapper.sh dfs://162-1-95-196:25000 /mnt/hdfs/
 </code></pre></div>
-
 <p><img alt="" src="../assets/FUSE/image6.png" /></p>
 <ul>
 <li>查看/mnt/hdfs目录</li>
@@ -4326,7 +4320,6 @@ chmod 755 fuse_dfs_wrapper.sh
 </ul>
 <div class="highlight"><pre><span></span><code>dd if=/dev/zero bs=4096 count=1024 | hadoop fs -put - /tmp/fuse/hdfsclient-01.dat
 </code></pre></div>
-
 <p><img alt="" src="../assets/FUSE/image8.png" /></p>
 <p><img alt="" src="../assets/FUSE/image9.png" /></p>
 <ul>
@@ -4334,14 +4327,12 @@ chmod 755 fuse_dfs_wrapper.sh
 </ul>
 <div class="highlight"><pre><span></span><code>hadoop fs -get /tmp/fuse/hdfsclient-01.dat - &gt; /dev/null
 </code></pre></div>
-
 <p><img alt="" src="../assets/FUSE/image10.png" /></p>
 <ul>
 <li>fuse写</li>
 </ul>
 <div class="highlight"><pre><span></span><code>dd if=/dev/zero bs=4096 count=1024  of=/mnt/hdfs/tmp/fuse/fuse-01.dat
 </code></pre></div>
-
 <p><img alt="" src="../assets/FUSE/image11.png" /></p>
 <p><img alt="" src="../assets/FUSE/image12.png" /></p>
 <ul>
@@ -4349,7 +4340,6 @@ chmod 755 fuse_dfs_wrapper.sh
 </ul>
 <div class="highlight"><pre><span></span><code>dd if=/mnt/hdfs/tmp/fuse/fuse-01.dat  bs=4096  of=/dev/null
 </code></pre></div>
-
 <p><img alt="" src="../assets/FUSE/image13.png" /></p>
                 
                   

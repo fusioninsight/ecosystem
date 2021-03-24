@@ -4643,7 +4643,6 @@
   Realm：留空
   Thrift Transport: SASL
 </code></pre></div>
-
 <p>参考配置：</p>
 <p><img alt="" src="../assets/SSAS/d2468.png" /></p>
 <p>在 <strong>SSL OPTIONS</strong> 中取消勾选SSL校验，设置如下图：</p>
@@ -4709,7 +4708,6 @@ insert into orders values(&#39;3&#39;,&#39;store3&#39;,&#39;2011&#39;,&#39;bd&#3
 insert into orders values(&#39;2&#39;,&#39;store2&#39;,&#39;2010&#39;,&#39;mk&#39;,6,30,180);
 insert into orders values(&#39;1&#39;,&#39;store1&#39;,&#39;2011&#39;,&#39;bd&#39;,10,20,200);
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="project">创建Project<a class="headerlink" href="#project" title="Permanent link">&para;</a></h3>
@@ -4816,7 +4814,6 @@ insert into orders values(&#39;3&#39;,&#39;store3&#39;,&#39;2011&#39;,&#39;bd&#3
 insert into orders values(&#39;2&#39;,&#39;store2&#39;,&#39;2010&#39;,&#39;mk&#39;,6,30,180);
 insert into orders values(&#39;1&#39;,&#39;store1&#39;,&#39;2011&#39;,&#39;bd&#39;,10,20,200);
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="linked-server">创建 linked server<a class="headerlink" href="#linked-server" title="Permanent link">&para;</a></h3>
@@ -4836,7 +4833,6 @@ Provider: Microsoft OLEDB Provider for ODBC Driver
 Data Source: Sample Microsoft Hive DSN  #如果是Spark,则此处替换为Spark的DSN,如Sample Microsoft Spark DSN
 其它可留空
 </code></pre></div>
-
 <p>配置参考如下图：</p>
 <p><img alt="" src="../assets/SSAS/89163.png" /></p>
 </li>
@@ -4867,7 +4863,6 @@ SELECT * FROM OPENQUERY(HIVELINK,&#39;SELECT * FROM ssas.store;&#39;)
 create view vw_ssas_store AS
 SELECT * FROM OPENQUERY(HIVELINK,&#39;SELECT * FROM ssas.store;&#39;)
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="project_1">创建Project<a class="headerlink" href="#project_1" title="Permanent link">&para;</a></h3>

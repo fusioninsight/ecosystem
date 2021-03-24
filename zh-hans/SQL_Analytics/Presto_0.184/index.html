@@ -4408,7 +4408,6 @@ hive.config.resources=/opt/presto-server-0.184/etc/catalog/core-site.xml,/opt/pr
 <div class="highlight"><pre><span></span><code>cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /opt/presto-server-0.184/etc/catalog/
 cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/hdfs-site.xml /opt/presto-server-0.184/etc/catalog/
 </code></pre></div>
-
 <ul>
 <li>按照下图修改hdfs-site.xml文件中的dfs.client.failover.proxy.provider.hacluster属性为org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
   <div class="highlight"><pre><span></span><code>vi /opt/presto-server-0.184/etc/catalog/hdfs-site.xml

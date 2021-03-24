@@ -4453,7 +4453,6 @@ export PATH=$LIVY_HOME/bin:$PATH
 cp livy.conf.template livy.conf
 vi livy.conf
 </code></pre></div>
-
 <p>加入如下内容：
   <div class="highlight"><pre><span></span><code>livy.spark.master = yarn
 livy.spark.deploy-mode = client
@@ -4470,7 +4469,6 @@ livy.server.launch.kerberos.principal=livy@HADOOP.COM
 cp livy-client.conf.template livy-client.conf
 vi livy-client.conf
 </code></pre></div>
-
 <p>加入如本机ip地址：
   <div class="highlight"><pre><span></span><code>livy.rsc.rpc.server.address =172.16.52.190
 </code></pre></div>
@@ -4504,7 +4502,6 @@ spark.submit.deployMode
 </ul>
 <div class="highlight"><pre><span></span><code>bin/livy-server start
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Livy_0_5_0/22154.png" /></p>
 <p>启动成功后可以在http://172.16.52.190:8998访问到Livy服务器：</p>
 <p><img alt="" src="../assets/Apache_Livy_0_5_0/d70fd.png" /></p>

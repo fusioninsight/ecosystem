@@ -4556,7 +4556,6 @@ export HCAT_HOME=/opt/hadoopclient/Hive/HCatalog
 </ul>
 <div class="highlight"><pre><span></span><code>|mapreduce\.job\..*|dfs\..*
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_2.6.1/f67f2e3a.png" /></p>
 <h3 id="kylin_3">修改Kylin配置<a class="headerlink" href="#kylin_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4567,7 +4566,6 @@ export HCAT_HOME=/opt/hadoopclient/Hive/HCatalog
 kinit test
 beeline
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_2.6.1/7c3ac.png" /></p>
 <ul>
 <li>修改kylin.properties，配置Hive client使用beeline：</li>
@@ -4667,7 +4665,6 @@ Caused by: java.lang.ClassNotFoundException: org.apache.directory.api.util.Strin
         at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1771)
         ... 89 more
 </code></pre></div>
-
 <p><strong>【解决方法】</strong></p>
 <p>问题原因：缺少包含org.apache.directory.api.util.Strings的jar包。</p>
 <div class="codehilite"><pre><span></span><code>* 从&lt;http://www.java2s.com/Code/JarDownload/api-util/api-util-1.0.0-m18.jar.zip&gt;下载包含org.apache.directory.api.util.Strings的jar包，并放到/opt/apache-kylin-2.6.3-bin-hbase1x/lib目录下。

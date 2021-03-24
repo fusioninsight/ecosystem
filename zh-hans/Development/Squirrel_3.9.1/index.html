@@ -4530,7 +4530,6 @@ INSERT INTO student VALUES (2,&#39;Sandy&#39;,2);
 INSERT INTO student VALUES (3,&#39;Benny&#39;,3);
 INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
 </code></pre></div>
-
 <h2 id="fiber">Fiber认证方式配置<a class="headerlink" href="#fiber" title="Permanent link">&para;</a></h2>
 <h3 id="_4">操作场景<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Fiber的安全认证有kinit和keytab两种方式。具体参数配置说明可参考FusionInsight HD产品文档的<code>业务操作指南-&gt;统一SQL(Fiber)-&gt;客户端配置</code>章节。</p>
@@ -4729,7 +4728,6 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
   &lt;/properties&gt;
 &lt;/jdbc&gt;
 </code></pre></div>
-
 <p><strong>Spark2x的JDBC配置示例：</strong>
   <div class="highlight"><pre><span></span><code>&lt;jdbc&gt;
   &lt;identify&gt;Spark2x&lt;/identify&gt;
@@ -4798,7 +4796,6 @@ INSERT INTO student VALUES (4,&#39;Tina&#39;,1);
   &lt;value&gt;developuser&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <h2 id="squirrelfiber">SQuirreL对接Fiber<a class="headerlink" href="#squirrelfiber" title="Permanent link">&para;</a></h2>
 <h3 id="_7">操作场景<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>SQuirreL SQL Client通过Fiber方式对接FusionInsight HD的Hive、Spark2x、Phoenix组件。</p>
@@ -4822,7 +4819,6 @@ Example URL：jdbc:fiber://fiberconfig=C:\\ecotesting\\Fiber\\conf\\fiber.xml;de
 Extra Class Path: 点击Add按钮将C:\ecotesting\Fiber\lib目录下所有的jar包加入
 Class Name：com.huawei.fiber.FiberDriver（添加jar包后，点击List Drivers按钮然后从下拉框中选择）
 </code></pre></div>
-
 <p><img alt="" src="../assets/Squirrel_3.9.1/2d8d217a.png" /></p>
 <ul>
 <li>添加完成的Driver Fiber。</li>
@@ -4836,7 +4832,6 @@ Driver：选择Fiber
 User Name: developuser（可不填写）
 Password：密码（可不填写）
 </code></pre></div>
-
 <p><img alt="" src="../assets/Squirrel_3.9.1/946bb50b.png" /></p>
 <ul>
 <li>依次点击 <strong>Test</strong> ， <strong>Connect</strong>，返回“Connection successful”后，点击 <strong>确定</strong> 。</li>
@@ -4878,7 +4873,6 @@ Password：密码（可不填写）
 <div class="highlight"><pre><span></span><code>1,Abbey
 2,Andy
 </code></pre></div>
-
 <p><img alt="" src="../assets/Squirrel_3.9.1/51214cfd.png" /></p>
 </li>
 <li>
@@ -4936,7 +4930,6 @@ Password：密码（可不填写）
 <div class="highlight"><pre><span></span><code>3,Benny
 4,Miki
 </code></pre></div>
-
 <p><img alt="" src="../assets/Squirrel_3.9.1/163e2682.png" /></p>
 </li>
 <li>
@@ -4988,7 +4981,6 @@ UPSERT INTO MY_NS.SQL_TEST VALUES(2,&#39;Tom&#39;);
 UPSERT INTO MY_NS.SQL_TEST VALUES(3,&#39;Manson&#39;);
 UPSERT INTO MY_NS.SQL_TEST VALUES(4,&#39;Aurora&#39;);
 </code></pre></div>
-
 <p><img alt="" src="../assets/Squirrel_3.9.1/ca43fd9e.png" /></p>
 <ul>
 <li>SQL查询表数据。编辑SQL如下，点击 <strong>执行</strong> 按钮。</li>

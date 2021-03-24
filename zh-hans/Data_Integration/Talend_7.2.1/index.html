@@ -4858,7 +4858,6 @@ Namenode Principal的取值为hdfs-site.xml的dfs.namenode.kerberos.principal的
 资源管理器主体的取值为yarn-site.xml的yarn.resourcemanager.principal的value值；
 作业历史记录主体的取值为mapred-site.xml的mapreduce.jobhistory.principal的value值。
 </code></pre></div>
-
 </li>
 <li>
 <p>勾选<code>Authentication-&gt;Use a keytab to authenticate</code>，输入信息如下：</p>
@@ -4868,7 +4867,6 @@ Keytab = C:/developuser/user.keytab
 备注：
 Principal为FusionInsight Manager的用户名，Keytab为用户developuser的认证凭据。
 </code></pre></div>
-
 <p><img alt="" src="../assets/Talend_7.2.1/70dfb872.png" /></p>
 </li>
 <li>
@@ -4896,7 +4894,6 @@ dfs.ha.namenodes.hacluster = 141,142
 dfs.nameservices = hacluster
 dfs.client.failover.proxy.provider.hacluster = org.apache.hadoop.hdfs.server.namenode.ha.AdaptiveFailoverProxyProvider
 </code></pre></div>
-
 <p><img alt="" src="../assets/Talend_7.2.1/b76c6035.png" /></p>
 <ul>
 <li>确认默认勾选<code>使用自定义Hadoop属性</code>，点击<code>检查服务</code>。</li>
@@ -5032,7 +5029,6 @@ DataBase = default
 <p>说明：<code>C:/talend/testFile/putToHdfs.csv</code>为本地已存在文件，内容随意。</p>
 <div class="codehilite"><pre><span></span><code>![](assets/Talend_7.2.1/61c635ee.png)
 </code></pre></div>
-
 
 <ul>
 <li>
@@ -5296,7 +5292,6 @@ LoginUtil.login(&quot;developuser&quot;, &quot;C:/developuser/user.keytab&quot;,
 
 globalMap.put(&quot;conn_tHbaseConnection_1&quot;, conf);
 </code></pre></div>
-
 </li>
 <li>
 <p>在“tJava_1”的“高级设置”的“导入”输入<code>import com.huawei.hadoop.security.LoginUtil;</code>，</p>
@@ -5323,7 +5318,6 @@ globalMap.put(&quot;conn_tHbaseConnection_1&quot;, conf);
 4;R9fex9
 5;EU2mVq
 </code></pre></div>
-
 <ul>
 <li>创建作业“hbaseInputOutput”，加入tLibraryLoad、tHBaseConnection、tJava、tHBaseClose、tFileInputDelimited、tHBaseOutput、tHBaseInput、tLogRow组件，上一个组件的子作业正常时执行下一个组件。</li>
 </ul>
@@ -5385,7 +5379,6 @@ scan &#39;hbaseInputOutputTest&#39;
 
   ![](assets/Talend_7.2.1/9e6ea1d7.png)
 </code></pre></div>
-
 
 <ul>
 <li><strong>对接FusionInsight Hive接口创建表的时候返回Cannot modify dfs.client.use.datanode.hostname at runtime。</strong></li>

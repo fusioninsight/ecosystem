@@ -4418,10 +4418,8 @@ groupBy(flightsDF, flightsDF$date) %&gt;%
 summarize(avg(flightsDF$dep_delay), avg(flightsDF$arr_delay)) -&gt; dailyDelayDF
 head(dailyDelayDF)
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>wget http://files.grouplens.org/datasets/movielens/ml-100k/u.user
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>%pylab inline
 user_data = sc.textFile(&quot;ml-100k/u.user&quot;)
 user_fields = user_data.map(lambda line: line.split(&quot;|&quot;))
@@ -4436,7 +4434,6 @@ hist(ages, bins=20, color=&#39;lightblue&#39;, normed=True)
 fig = matplotlib.pyplot.gcf()
 fig.set_size_inches(16, 10)
 </code></pre></div>
-
 <h2 id="jupyter-notebookr">Jupyter notebook中使用R语言进行分析<a class="headerlink" href="#jupyter-notebookr" title="Permanent link">&para;</a></h2>
 <p>TBD</p>
                 

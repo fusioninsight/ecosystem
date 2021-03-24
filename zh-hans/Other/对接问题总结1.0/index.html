@@ -4619,7 +4619,6 @@ org.apache.hadoop.ipc.RemoteException(javax.security.sasl.SaslException): GSS in
   at org.apache.hadoop.security.SaslRpcClient.saslConnect(SaslRpcClient.java:375)
   at org.apache.hadoop.ipc.Client$Connection.setupSaslConnection(Client.java:558)
 </code></pre></div>
-
 <ul>
 <li>
 <p>该报错关键词只是表明认证失败的结果，并看不出来任何连接失败的原因，需要在报错日志附近找到<code>Caused by</code>等关键词定位到具体连接失败的原因，或者打开JVM报错日志开关<code>-Dsun.security.krb5.debug=false</code>，结合集群kdc服务日志<code>/var/log/Bigdata/kerberos/krb5kdc.log</code>分析原因</p>
@@ -4634,7 +4633,6 @@ org.apache.hadoop.ipc.RemoteException(javax.security.sasl.SaslException): GSS in
 GSS initiate failed [Caused by GSSException:
 No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)]
 </code></pre></div>
-
 <ul>
 <li>
 <p>报错原因： 简言之认证失败</p>
@@ -4657,7 +4655,6 @@ No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
 <p>报错片段</p>
 <div class="highlight"><pre><span></span><code>WARN  [2020-08-05 06:54:19,089] org.apache.zookeeper.ClientCnxn: SASL configuration failed: javax.security.auth.login.LoginException: No JAAS configuration section named &#39;Client&#39; was found in specified JAAS configuration file: &#39;/opt/jaas.conf&#39;. Will continue connection to Zookeeper server without SASL authentication, if Zookeeper server allows it.
 </code></pre></div>
-
 <ul>
 <li>
 <p>报错原因： jaas.conf配置文件内容缺少Client片段</p>
@@ -4688,7 +4685,6 @@ Caused by: org.apache.zookeeper.KeeperException$AuthFailedException: KeeperError
         at org.apache.hadoop.hbase.client.HBaseAdmin.executeCallable(HBaseAdmin.java:4212)
         at org.apache.hadoop.hbase.client.HBaseAdmin.listTableNames(HBaseAdmin.java:515)
 </code></pre></div>
-
 <p>报错片段3(hetu).
 <div class="highlight"><pre><span></span><code>Caused by: java.sql.SQLException: KeeperErrorCode = ConnectionLoss for /hetuserver/hsbroker/registry
   at g5.qry.sql.impl.SQLConnBuilder.build0(SQLConnBuilder.java:69) ~
@@ -4733,7 +4729,6 @@ org.apache.kafka.connect.errors.ConnectException: Failed to connect to and descr
         at org.apache.kafka.connect.util.ConnectUtils.lookupKafkaClusterId(ConnectUtils.java:45)
         at org.apache.kafka.connect.cli.ConnectDistributed.main(ConnectDistributed.java:77)
 </code></pre></div>
-
 <ul>
 <li>
 <p>报错原因：FusionInsight的KDC服务器没有对应的服务端票据，该错误最常发生在连接kafka安全模式（21007端口），以及一些HTTP请求中（SPENGO），以及有的时候连接zookeeper的时候</p>
@@ -4772,7 +4767,6 @@ not allow the ZooKeeper server to authenticate itself properly: javax.security.a
   at org.apache.zookeeper.server.ServerCnxnFactory.configureSaslLogin(ServerCnxnFactory.java:207)
   at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:87)
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因：</p>
@@ -4800,7 +4794,6 @@ Caused by: javax.security.auth.login.LoginException: Unable to obtain password f
   at com.sun.security.auth.module.Krb5LoginModule.promptForPass(Krb5LoginModule.java:856)
   at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Krb5LoginModule.java:719)
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因：跟上一个问题类似</p>
@@ -4831,7 +4824,6 @@ Caused by: javax.security.auth.login.LoginException: Unable to obtain password f
         at org.apache.hadoop.io.compress.CompressionCodecFactory.&lt;init&gt;(CompressionCodecFactory.java:180)
         at org.apache.nifi.processors.hadoop.GetHDFS.processBatchOfFiles(GetHDFS.java:353)
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因： 三方软件对应组件依赖的jar包确实</p>
@@ -4849,7 +4841,6 @@ Caused by: javax.security.auth.login.LoginException: Unable to obtain password f
         at org.apache.kafka.connect.mirror.MirrorSourceConnector.&lt;clinit&gt;(MirrorSourceConnector.java:67)
         at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因： 三方软件相关组件的依赖库同华为FusionInsight对应组件的依赖库不匹配</p>
@@ -4868,7 +4859,6 @@ Caused by: javax.security.auth.login.LoginException: Unable to obtain password f
         at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:132)
         at org.apache.hadoop.hdfs.DFSClient.&lt;init&gt;(DFSClient.java:355)
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因: 三方软件不支持HDFS高可用性，或者高可用性没有配置正确</p>
@@ -4903,7 +4893,6 @@ Caused by: javax.security.auth.login.LoginException: Unable to obtain password f
 <p>报错片段</p>
 <div class="highlight"><pre><span></span><code>HiveAccessControlException Permission denied: Principal [name=developuser, type=USER] does not have following privileges for operation CREATETABLE [[OBJECT OWNERSHIP] on Object [type=DFS_URI, name=hdfs://hacluster/user/hive/warehouse/sdc_drift_example03]]
 </code></pre></div>
-
 <ul>
 <li>
 <p>问题原因： 认证用户在FusionInsight上没有对应的权限</p>

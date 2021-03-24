@@ -4641,7 +4641,6 @@
     }
   }
 </code></pre></div>
-
 <ul>
 <li>到路径<code>/opt/logstash/logstash-6.4.2</code>下，执行命令<code>bin/logstash -f config/logstash-Simple.conf</code>根据之前的<code>logstash-Simple.conf</code>配置文件的内容来启动logstash, 然后在终端手动输入数字1到6：</li>
 </ul>
@@ -4681,7 +4680,6 @@ server.host: &quot;172.16.52.190&quot;
 server.name: &quot;LinuxTest&quot;
 elasticsearch.url: &quot;http://172.21.3.101:24100&quot;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116110230773.png" /></p>
 <ul>
 <li>使用<code>bin/kibana</code>启动kibana</li>
@@ -4717,7 +4715,6 @@ elasticsearch.url: &quot;http://172.21.3.101:24100&quot;
 <div class="highlight"><pre><span></span><code>http.cors.enabled = true
 http.cors.allow-origin = &quot;*&quot;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116113332837.png" /></p>
 <ul>
 <li>使用如下命令下载并且安装**elasticsearch-head**到主机上,并且启动**elasticsearch-head**服务</li>
@@ -4727,7 +4724,6 @@ cd elasticsearch-head
 npm install
 npm run start
 </code></pre></div>
-
 <p><img alt="" src="../assets/Elasticsearch_Related/markdown-img-paste-20181116113541295.png" /></p>
 <ul>
 <li>访问elasticsearch-head界面，访问地址为http://elasticsearch-head服务IP地址:9100, 输入连接信息为<code>http://172.21.3.101:24100/</code>,点击连接:</li>
@@ -4826,7 +4822,6 @@ setup.template.settings:
 output.logstash:
   hosts: [&quot;172.16.52.190:5045&quot;]
 </code></pre></div>
-
 <p>配置文件<code>filebeat_new_host3.yml</code>内容如下：</p>
 <div class="highlight"><pre><span></span><code>filebeat.prospectors:
 - type: log
@@ -4849,7 +4844,6 @@ setup.template.settings:
 output.logstash:
   hosts: [&quot;172.16.52.190:5047&quot;]
 </code></pre></div>
-
 <ul>
 <li>登陆安装logstash的主机，配置一个新的启动文件<code>logstash-beats-ipmitool.conf</code>内容如下：</li>
 </ul>
@@ -4881,7 +4875,6 @@ output{
   }
 }
 </code></pre></div>
-
 <ul>
 <li>启动kibana</li>
 </ul>

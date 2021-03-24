@@ -4436,7 +4436,6 @@ wordcounts = words.map(lambda x: (x, 1)) \
 print &#39;Top 100 words:&#39;
 print wordcounts.take(100)
 </code></pre></div>
-
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-2019110411122286.png" /></p>
 <p>并且在对接集群的yarn上查看任务：</p>
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-20191022142357588.png" /></p>
@@ -4459,7 +4458,6 @@ print wordcounts.take(100)
 <div class="highlight"><pre><span></span><code>./pip freeze | grep JPype1
 ./pip freeze | grep JayDeBeApi
 </code></pre></div>
-
 <ul>
 <li>
 <p>将对接集群认证文件user.keytab放到jupyter notebook主机/opt路径下用于连接Hive认证使用,将认证相关的krb5.conf文件放到/etc/路径下</p>
@@ -4513,7 +4511,6 @@ df_hive = pd.read_sql(sql, conn)
 df_hive
 conn.close()
 </code></pre></div>
-
 <p>说明：jaydebeapi.connect()为jdbc连接方法，jaydebeapi.connect("Driver Main Class", ["Connecting URL", "User", "Password"], "Path to JDBC driver")，对接hive需要将客户端hive jdbc样例中所有的jar包都导进去</p>
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-2019102215265645.png" /></p>
 <h2 id="hetu">对接Hetu<a class="headerlink" href="#hetu" title="Permanent link">&para;</a></h2>
@@ -4569,7 +4566,6 @@ sql = &quot;Select * From iris&quot;
 df_hive = pd.read_sql(sql, conn3)
 df_hive
 </code></pre></div>
-
 <p>说明：连接hetu已经在url里面配置了用户名和密码，所以不需要再次在代码里面配置</p>
 <p><img alt="20201109_143820_18" src="../assets/JupyterNotebook/20201109_143820_18.png" /></p>
 <h2 id="elk">对接ELK<a class="headerlink" href="#elk" title="Permanent link">&para;</a></h2>
@@ -4608,7 +4604,6 @@ df_hive
 <div class="highlight"><pre><span></span><code>./pip freeze | grep JPype1
 ./pip freeze | grep JayDeBeApi
 </code></pre></div>
-
 <ul>
 <li>使用如下命令启动jupyter notebook
   <div class="highlight"><pre><span></span><code>source /opt/hadoopclient/bigdata_env
@@ -4674,14 +4669,12 @@ autoload.modules = hdfs.ext.kerberos
 client = KerberosClient
 url = http://172.16.4.122:25002
 </code></pre></div>
-
 <ul>
 <li>使用如下命令登陆集群客户端，并做kerberos认证</li>
 </ul>
 <div class="highlight"><pre><span></span><code>source /opt/125_651hdclient/hadoopclient/bigdata_env
 kinit developuser
 </code></pre></div>
-
 <p>使用命令<code>hdfscli</code>登陆命令行终端</p>
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-20200312155347383.png" /></p>
 <p>输入命令<code>CLIENT.list('/')</code>检查是否对接成功：</p>
@@ -4712,7 +4705,6 @@ print(client.list(&#39;/&#39;))
 </ul>
 <div class="highlight"><pre><span></span><code>client.write(&#39;hello2.md&#39;, &#39;Hello, world!&#39;)
 </code></pre></div>
-
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-20200312160505916.png" /></p>
 <p>去hdfs对应路径检查文件是否写入成功：</p>
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-20200312160557749.png" /></p>
@@ -4723,7 +4715,6 @@ print(client.list(&#39;/&#39;))
   for row in reader:
       print(row)
 </code></pre></div>
-
 <p><img alt="" src="../assets/JupyterNotebook/markdown-img-paste-2020031216071518.png" /></p>
 <h2 id="fq">F&amp;Q<a class="headerlink" href="#fq" title="Permanent link">&para;</a></h2>
 <ol>

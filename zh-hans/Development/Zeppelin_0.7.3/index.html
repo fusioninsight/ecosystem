@@ -4623,14 +4623,12 @@ tar -xzvf apache-maven-3.3.9-bin.tar.gz -C /opt/
 </ul>
 <div class="highlight"><pre><span></span><code>yum install -y git
 </code></pre></div>
-
 <ul>
 <li>安装nodejs：</li>
 </ul>
 <div class="highlight"><pre><span></span><code>wget https://nodejs.org/dist/v6.10.0/node-v6.10.0-linux-x64.tar.xz --no-check-certificate
 tar -xvf node-v6.10.0-linux-x64.tar.xz -C /opt/
 </code></pre></div>
-
 <p>修改profile文件<code>vi /etc/profile</code>,增加以下配置
   <div class="highlight"><pre><span></span><code>export PATH=$PATH:/opt/apache-maven-3.3.9/bin:/opt/node-v6.10.0-linux-x64/bin
 </code></pre></div></p>
@@ -5051,7 +5049,6 @@ sed -i &#39;s/$releasever/6/g&#39; /etc/yum.repos.d/CentOS6-Base-163.repo
 yum clean all
 yum makecache
 </code></pre></div>
-
 <ul>
 <li>配置EPEL的源</li>
 </ul>

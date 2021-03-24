@@ -4428,7 +4428,6 @@
 _RK(sasl.realm), &quot;The realm of kafka cluster.&quot;,
 .sdef = &quot;hadoop.com&quot;},
 </code></pre></div>
-
 <p>修改目的：增加realm的默认值。</p>
 <p>修改示例：如图</p>
 <p><img alt="" src="../assets/librdkafka/markdown-img-paste-20200402100442840.png" /></p>
@@ -4442,7 +4441,6 @@ _RK(sasl.realm), &quot;The realm of kafka cluster.&quot;,
 rd_snprintf(tmp, sizeof(tmp), &quot;hadoop.%s&quot;, rk-&gt;rk_conf.sasl.realm);
 rd_strdupa(&amp;hostname, tmp);
 </code></pre></div>
-
 <p>修改目的：修改hostname的赋值为域名。</p>
 <p>修改示例：如图</p>
 <p><img alt="" src="../assets/librdkafka/markdown-img-paste-20200402100700972.png" /></p>

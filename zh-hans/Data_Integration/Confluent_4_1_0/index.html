@@ -4582,7 +4582,6 @@
      keyTab=&quot;/opt/user_keytabs/101keytab/user.keytab&quot; \
      principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Confluent_4_1_0/markdown-img-paste-20190809112303246.png" /></p>
 </li>
 <li>
@@ -4629,7 +4628,6 @@ consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required 
    keyTab=&quot;/opt/user_keytabs/101keytab/user.keytab&quot; \
    principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Confluent_4_1_0/markdown-img-paste-20190809112623309.png" /></p>
 </li>
 <li>
@@ -4655,7 +4653,6 @@ sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required \
   keyTab=&quot;/opt/user_keytabs/101keytab/user.keytab&quot; \
   principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Confluent_4_1_0/markdown-img-paste-20190809112957364.png" /></p>
 <ul>
 <li>使用命令confluent start启动</li>
@@ -4677,7 +4674,6 @@ sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required \
 <div class="highlight"><pre><span></span><code>CREATE STREAM TEST_01 (id BIGINT) \
 WITH (KAFKA_TOPIC=&#39;testtopic_01&#39;, VALUE_FORMAT=&#39;DELIMITED&#39;, KEY = &#39;id&#39;);
 </code></pre></div>
-
 <p><img alt="" src="../assets/Confluent_4_1_0/markdown-img-paste-20190809122604381.png" /></p>
 <ul>
 <li>配置KAFKA样例代码中的producer代码,使用21007端口的安全模式：</li>
@@ -4716,7 +4712,6 @@ WITH (KAFKA_TOPIC=&#39;testtopic_01&#39;, VALUE_FORMAT=&#39;DELIMITED&#39;, KEY 
 confluent load file-sink
 confluent status connectors
 </code></pre></div>
-
 <p><img alt="" src="../assets/Confluent_4_1_0/markdown-img-paste-20190809142745826.png" /></p>
 <ul>
 <li>在test.txt空文件中输入信息，保存，在生成的test.sink.txt文件中查看信息同步情况</li>

@@ -5025,7 +5025,6 @@ SQL&gt; create user mdl_user identified by mdl_user default tablespace rep_data 
 SQL&gt; grant dba to domain_user,mdl_user;
 SQL&gt; exit
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/be87fb8f.png" /></p>
 <ul>
 <li>创建安装用户 <strong>infa</strong> 并归属于群组 <strong>oinstall</strong>。</li>
@@ -5034,7 +5033,6 @@ SQL&gt; exit
 useradd -g oinstall -d /home/infa infa
 echo &quot;Huawei@123&quot; | passwd --stdin infa
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/0c30e31d.png" /></p>
 <ul>
 <li>使用 <strong>root</strong> 用户解压informatica_1022_server_linux-x64.tar至<code>/opt/informatica</code>，设置拥有者为infa用户并赋予755的操作权限。</li>
@@ -5045,7 +5043,6 @@ tar -xvf /opt/informatica_1022_server_linux-x64.tar -C /opt/informatica
 chown -R infa:oinstall /opt/informatica
 chmod -R 755 /opt/informatica
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/5e8b8c57.png" /></p>
 <ul>
 <li>修改 <strong>infa</strong> 用户的环境变量。</li>
@@ -5054,7 +5051,6 @@ chmod -R 755 /opt/informatica
 vi ~/.bash_profile
 source ~/.bash_profile
 </code></pre></div>
-
 <p><strong>添加环境变量如下所示：</strong></p>
 <div class="highlight"><pre><span></span><code>PATH=$PATH:/u01/app/oracle/product/12.2.1/db_1/bin
 export PATH
@@ -5068,7 +5064,6 @@ export INFA_CODEPAGENAME=&quot;UTF-8&quot;
 export PATH=/opt/informatica/10.2.2/server/bin:$PATH
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/opt/informatica/10.2.2/server/bin
 </code></pre></div>
-
 <blockquote>
 <p>说明：12.2.1为oracle版本号，10.2.2为Informatica的版本号。</p>
 </blockquote>
@@ -5084,7 +5079,6 @@ export display=:0.0
 cd /opt/informatica
 ./install.sh
 </code></pre></div>
-
 <blockquote>
 <p>说明：执行 <strong>xhost +</strong> 命令时，确认返回“access control disabled, clients can connect from any host”，才能继续执行后面的命令。</p>
 </blockquote>
@@ -5187,7 +5181,6 @@ cd /opt/informatica
 cp /opt/krb5.conf /opt/informatica/10.2.2/services/shared/security/
 cp /opt/krb5.conf /opt/informatica/10.2.2/java/jre/lib/security/
 </code></pre></div>
-
 <h5 id="data_integration_service">配置Data_Integration_Service<a class="headerlink" href="#data_integration_service" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
@@ -5255,7 +5248,6 @@ cp /opt/krb5.conf /opt/informatica/10.2.2/java/jre/lib/security/
 HDFS上的Hive暂存目录：/user/hive/warehouse
 Hive暂存数据库名称：default
 </code></pre></div>
-
 <blockquote>
 <p>说明：如果需要向Hive写入数据，必须配置“HDFS上的Hive暂存目录”和“Hive暂存数据库名称”。</p>
 </blockquote>
@@ -5296,7 +5288,6 @@ cd /opt/informatica/10.2.2/tomcat/bin
 ps -ef | grep informatica
 ./infaservice.sh startup
 </code></pre></div>
-
 <blockquote>
 <p>说明:如果新建ORACLE连接后未重启过Informatica Server，在客户端Big Data Developer运行ORACLE关系型数据对象时，返回类似以下的错误：</p>
 <p>[LDTMCMN_0029] 由于以下错误，LDTM 无法完成请求: com.informatica.sdk.dtm.ExecutionException: [EdtmExec_00007] CMN_1022 Database driver error...</p>
@@ -5373,7 +5364,6 @@ ps -ef | grep informatica
 cd /tmp
 vi user_local_to_hdfs.csv
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/af50b1df.png" /></p>
 <p><strong>user_local_to_hdfs.csv文件内容如下所示：</strong></p>
 <div class="highlight"><pre><span></span><code>id,name
@@ -5381,7 +5371,6 @@ vi user_local_to_hdfs.csv
 11,Benny-in-local
 12,Tom-in-local
 </code></pre></div>
-
 </li>
 <li>
 <p><strong>HDFS文件系统</strong></p>
@@ -5391,21 +5380,18 @@ vi user_hdfs_to_oracle.csv
 vi user_hdfs_to_hive.csv
 hdfs dfs -put user_hdfs_to_* /tmp
 </code></pre></div>
-
 <p><strong>user_hdfs_to_oracle.csv文件内容如下所示：</strong></p>
 <div class="highlight"><pre><span></span><code>id,name
 20,Andy-in-hdfs
 21,Benny-in-hdfs
 22,Tom-in-hdfs
 </code></pre></div>
-
 <p><strong>user_hdfs_to_hive.csv文件内容如下所示：</strong></p>
 <div class="highlight"><pre><span></span><code>id,name
 30,Andy-in-hdfs
 31,Benny-in-hdfs
 32,Tom-in-hdfs
 </code></pre></div>
-
 </li>
 <li>
 <p><strong>Hive数据库</strong></p>
@@ -5413,14 +5399,12 @@ hdfs dfs -put user_hdfs_to_* /tmp
 <p><strong>创建user_hive_in表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>CREATE TABLE IF NOT EXISTS user_hive_in(id INT, name STRING);
 </code></pre></div>
-
 <p><strong>创建user_hive_out表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>CREATE TABLE IF NOT EXISTS user_hive_out(id INT, name STRING);
 INSERT INTO user_hive_out VALUES (40,&#39;Andy-in-hive&#39;);
 INSERT INTO user_hive_out VALUES (41,&#39;Benny-in-hive&#39;);
 INSERT INTO user_hive_out VALUES (42,&#39;Tom-in-hive&#39;);
 </code></pre></div>
-
 </li>
 <li>
 <p><strong>Oracle数据库</strong></p>
@@ -5428,18 +5412,15 @@ INSERT INTO user_hive_out VALUES (42,&#39;Tom-in-hive&#39;);
 <div class="highlight"><pre><span></span><code>su - oracle
 sqlplus mdl_user/mdl_user
 </code></pre></div>
-
 <p><strong>创建user_oracle_in表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>CREATE TABLE user_oracle_in(ID INTEGER PRIMARY KEY,NAME VARCHAR2(30));
 </code></pre></div>
-
 <p><strong>创建user_oracle_out表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>CREATE TABLE user_oracle_out(ID INTEGER PRIMARY KEY,NAME VARCHAR2(30));
 INSERT INTO user_oracle_out VALUES (50,&#39;Andy-in-oracle&#39;);
 INSERT INTO user_oracle_out VALUES (51,&#39;Benny-in-oracle&#39;);
 INSERT INTO user_oracle_out VALUES (52,&#39;Tom-in-oracle&#39;);
 </code></pre></div>
-
 </li>
 <li>
 <p><strong>HBase</strong></p>
@@ -5451,7 +5432,6 @@ create_namespace &#39;INFA&#39;
 <p><strong>创建USER_HBASE_IN表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>create &#39;INFA.USER_HBASE_IN&#39;,{NAME=&gt;&#39;cf1&#39;},{NAME=&gt;&#39;cf2&#39;}
 </code></pre></div>
-
 <p><strong>创建USER_HBASE_OUT表示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>create &#39;INFA.USER_HBASE_OUT&#39;,{NAME=&gt;&#39;cf1&#39;},{NAME=&gt;&#39;cf2&#39;}
 put &#39;INFA.USER_HBASE_OUT&#39;, &#39;001&#39;,&#39;cf1:id&#39;,&#39;60&#39;
@@ -5461,7 +5441,6 @@ put &#39;INFA.USER_HBASE_OUT&#39;, &#39;002&#39;,&#39;cf1:name&#39;,&#39;Benny-i
 put &#39;INFA.USER_HBASE_OUT&#39;, &#39;003&#39;,&#39;cf1:id&#39;,&#39;62&#39;
 put &#39;INFA.USER_HBASE_OUT&#39;, &#39;003&#39;,&#39;cf1:name&#39;,&#39;Tom-in-HBase&#39;
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="_15">操作步骤<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
@@ -5681,7 +5660,6 @@ put &#39;INFA.USER_HBASE_OUT&#39;, &#39;003&#39;,&#39;cf1:name&#39;,&#39;Tom-in-
 sqlplus mdl_user/mdl_user
 select * from USER_ORACLE_IN;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/bedb307e.png" /></p>
 <h5 id="hdfs-to-hive">HDFS to Hive<a class="headerlink" href="#hdfs-to-hive" title="Permanent link">&para;</a></h5>
 <p>将FusionInsight HD的HDFS系统文件user_hdfs_to_hive.csv数据上传至Hive数据库表user_hive_in。</p>
@@ -5716,7 +5694,6 @@ select * from USER_ORACLE_IN;
 <div class="highlight"><pre><span></span><code>beeline
 select * from user_hive_in;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/2c4dff4f.png" /></p>
 <h4 id="informatica-bdmfusioninsight-hive">Informatica BDM对接FusionInsight Hive<a class="headerlink" href="#informatica-bdmfusioninsight-hive" title="Permanent link">&para;</a></h4>
 <h5 id="hive-to-local">Hive to Local<a class="headerlink" href="#hive-to-local" title="Permanent link">&para;</a></h5>
@@ -5751,7 +5728,6 @@ select * from user_hive_in;
 </ul>
 <div class="highlight"><pre><span></span><code>cat /tmp/user_local_from_hive.csv
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/9c25de2c.png" /></p>
 <h5 id="hive-to-oracle">Hive to Oracle<a class="headerlink" href="#hive-to-oracle" title="Permanent link">&para;</a></h5>
 <p>将FusionInsight HD的Hive数据库表user_hive_out数据上传至Oracle数据库表USER_ORACLE_IN。</p>
@@ -5782,7 +5758,6 @@ select * from user_hive_in;
 sqlplus mdl_user/mdl_user
 select * from USER_ORACLE_IN;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/09177cd7.png" /></p>
 <h5 id="hive-from-oracle">Hive from Oracle<a class="headerlink" href="#hive-from-oracle" title="Permanent link">&para;</a></h5>
 <p>获取Oracle数据库表USER_ORACLE_OUT的数据上传至FusionInsight HD的Hive数据库表user_hive_in。</p>
@@ -5812,7 +5787,6 @@ select * from USER_ORACLE_IN;
 <div class="highlight"><pre><span></span><code>beeline
 select * from user_hive_in;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/a744467b.png" /></p>
 <h5 id="hive-to-hdfs">Hive to HDFS<a class="headerlink" href="#hive-to-hdfs" title="Permanent link">&para;</a></h5>
 <p>将FusionInsight HD的Hive数据库表user_hive_out数据下载至HDFS文件系统的<code>/tmp/user_hdfs_from_hive.csv</code>。</p>
@@ -5846,7 +5820,6 @@ select * from user_hive_in;
 </ul>
 <div class="highlight"><pre><span></span><code>cat /tmp/user_hdfs_from_hive.csv
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/1fd52ab2.png" /></p>
 <h4 id="informatica-bdmfusioninsight-hbase">Informatica BDM对接FusionInsight HBase<a class="headerlink" href="#informatica-bdmfusioninsight-hbase" title="Permanent link">&para;</a></h4>
 <h5 id="hbase-to-local">HBase to Local<a class="headerlink" href="#hbase-to-local" title="Permanent link">&para;</a></h5>
@@ -5886,7 +5859,6 @@ select * from user_hive_in;
 </ul>
 <div class="highlight"><pre><span></span><code>cat /tmp/user_local_from_hbase.csv
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/f84207f6.png" /></p>
 <h5 id="hbase-from-oracle">HBase from Oracle<a class="headerlink" href="#hbase-from-oracle" title="Permanent link">&para;</a></h5>
 <p>获取Oracle数据库表USER_ORACLE_OUT的数据上传至FusionInsight HD的HBase表USER_HBASE_IN。</p>
@@ -5921,7 +5893,6 @@ select * from user_hive_in;
 <div class="highlight"><pre><span></span><code>hbase shell
 scan &#39;INFA.USER_HBASE_IN&#39;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Informatica_BDM_10.2.2/b05b5527.png" /></p>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <ul>

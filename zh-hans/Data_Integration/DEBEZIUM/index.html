@@ -4461,7 +4461,6 @@ consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required 
    keyTab=&quot;/opt/user.keytab&quot; \
    principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="" src="../assets/debezium/markdown-img-paste-2020010215532498.png" /></p>
 <ul>
 <li>
@@ -4525,7 +4524,6 @@ consumer.confluent.monitoring.interceptor.jaas.config=org.apache.kafka.common.se
    keyTab=&quot;/opt/user.keytab&quot; \
    principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="" src="../assets/debezium/markdown-img-paste-2020010215510732.png" /></p>
 <ul>
 <li>参考confluent官方文档：<a href="https://docs.confluent.io/current/quickstart/ce-quickstart.html#ce-quickstart">https://docs.confluent.io/current/quickstart/ce-quickstart.html#ce-quickstart</a></li>
@@ -4554,7 +4552,6 @@ binlog_format     = row
 binlog_row_image  = full
 expire_logs_days  = 10
 </code></pre></div>
-
 <p>然后，重启一下Mysql以使得binlog生效。</p>
 <p><code>systemctl start mysqld.service</code></p>
 <ul>
@@ -4575,7 +4572,6 @@ expire_logs_days  = 10
 
  );
 </code></pre></div>
-
 <h3 id="debezium-mysql-connector">配置debezium mysql connector<a class="headerlink" href="#debezium-mysql-connector" title="Permanent link">&para;</a></h3>
 <p>同样参考confluent官方文档：<a href="https://docs.confluent.io/current/connect/debezium-connect-mysql/index.html">https://docs.confluent.io/current/connect/debezium-connect-mysql/index.html</a></p>
 <ul>

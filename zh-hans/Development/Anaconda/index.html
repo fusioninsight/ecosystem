@@ -4452,7 +4452,6 @@
 <div class="highlight"><pre><span></span><code>cp ~/.bashrc ~/.bashrc.bak
 bash Anaconda2-2019.03-Linux-x86_64.sh
 </code></pre></div>
-
 <ol>
 <li>
 <p>安装程序将提示“In order to continue the installation process, please review the license agreement.”单击Enter以查看许可条款。</p>
@@ -4477,14 +4476,12 @@ bash Anaconda2-2019.03-Linux-x86_64.sh
 cp ~/.bashrc.bak ~/.bashrc
 source ~/.bashrc.anaconda
 </code></pre></div>
-
 </li>
 </ol>
 <p><strong>3.创建R交互环境并且安装、运行RStudio</strong></p>
 <p>参考：<a href="http://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/">http://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/</a></p>
 <div class="highlight"><pre><span></span><code>vi ~/.condarc
 </code></pre></div>
-
 <p>可以将如下内容添加到 ~/.condarc 文件中来增加conda相关包的下载速度</p>
 <div class="highlight"><pre><span></span><code>channels:
   - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
@@ -4493,11 +4490,9 @@ source ~/.bashrc.anaconda
   - defaults
 show_channel_urls: true
 </code></pre></div>
-
 <p>启动 anaconda navigator</p>
 <div class="highlight"><pre><span></span><code>anaconda-navigator &amp;
 </code></pre></div>
-
 <p>创建一个新的编译环境，比如起名为renv2</p>
 <p>Python :2.7</p>
 <p>R:r</p>
@@ -4522,7 +4517,6 @@ tar xvf FusionInsight_Services_ClientConfig.tar
 cd FusionInsight_Services_ClientConfig/
 ./install.sh /opt/client172.16.4.35/
 </code></pre></div>
-
 <p>将客户端节点ip，主机名加入对接集群所有节点的/etc/hosts文件下，这一步的目的是起spark任务的时候，worker节点（集群节点）能够识别到driver主机（客户端节点）：</p>
 <p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719100343580.png" /></p>
 <p>启动 RStudio</p>
@@ -4536,7 +4530,6 @@ source ~/.bashrc.anaconda
 conda activate renv2
 rstudio &amp;
 </code></pre></div>
-
 <p><img alt="" src="../assets/Anaconda/abc16.png" /></p>
 <h2 id="1sparklyrrstudiorhd-spark">方案1：使用sparklyr在RStudio中以交互方式将R代码提交到HD Spark集群<a class="headerlink" href="#1sparklyrrstudiorhd-spark" title="Permanent link">&para;</a></h2>
 <p>说明：通过使用sparklyr来对航空公司航班进行数据分析，可查看在线demo <a href="http://rpubs.com/jinbnie/513252">http://rpubs.com/jinbnie/513252</a></p>
@@ -4552,7 +4545,6 @@ install.packages(&quot;babynames&quot;)
 install.packages(&quot;dygraphs&quot;)
 install.packages(&quot;rbokeh&quot;)
 </code></pre></div>
-
 <p><strong>Step 2 连接spark</strong></p>
 <div class="highlight"><pre><span></span><code>library(sparklyr)
 library(dplyr)
@@ -4564,7 +4556,6 @@ spark_version_from_home(Sys.getenv(&quot;SPARK_HOME&quot;))
 Sys.setenv(SPARK_HOME_VERSION=&quot;2.3.2&quot;)
 sc &lt;- spark_connect(master =  &quot;yarn-client&quot;, version = &quot;2.3.2&quot;, spark_home = &quot;/opt/client172.16.4.35/Spark2x/spark&quot;)
 </code></pre></div>
-
 <p><strong>Step 3 将提前建好的hive表存入缓存</strong></p>
 <p>说明：具体数据准备的方法请参考生态地图-&gt;Rstudio-&gt;如何获取本文中使用sparklyr分析的源数据</p>
 <p><img alt="" src="../assets/Anaconda/markdown-img-paste-20191024161621584.png" /></p>
@@ -4582,7 +4573,6 @@ airlines_tbl &lt;- tbl(sc, &#39;airlines&#39;)
 tbl_cache(sc, &#39;airports&#39;)
 airports_tbl &lt;- tbl(sc, &#39;airports&#39;)
 </code></pre></div>
-
 <p><strong>Step 4 建模</strong>
 <div class="highlight"><pre><span></span><code>#Filter the data to contain only the records to be used in the fitted model. Join carrier descriptions for reference. Create a new variable called gain which represents the amount of time gained (or lost) in flight.
 
@@ -4696,7 +4686,6 @@ sparkR.session(master = &quot;yarn&quot;, sparkConfig = list(spark.driver.memory
 results &lt;- sql(&quot;FROM airports SELECT id, name &quot;)
 head(results)
 </code></pre></div>
-
 <p><img alt="" src="../assets/Anaconda/abc22.png" /></p>
 <h2 id="3sparklyrjupyter-notebookrhd-spark">方案3：使用sparklyr在jupyter notebook中以交互方式将R代码提交到HD Spark集群<a class="headerlink" href="#3sparklyrjupyter-notebookrhd-spark" title="Permanent link">&para;</a></h2>
 <p><strong>step 1:启动 Jupyter Notebook</strong></p>
@@ -4709,7 +4698,6 @@ conda activate renv2
 sudo chmod -R 777 /opt/client172.16.4.35
 jupyter-notebook &amp;
 </code></pre></div>
-
 <p><strong>step 2:创建一个新的 R Notebook</strong></p>
 <p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719103529971.png" /></p>
 <p><strong>step 3:在Jupyter Notebook提交同方案1中相同的R代码，查看结果</strong></p>
@@ -4726,7 +4714,6 @@ export PYSPARK_DRIVER_PYTHON=&quot;ipython&quot;
 export PYSPARK_DRIVER_PYTHON_OPTS=&quot;notebook&quot;
 pyspark --master yarn --deploy-mode client &amp;
 </code></pre></div>
-
 <p><strong>step 2:创建一个新的Python Notebook</strong></p>
 <p><img alt="" src="../assets/Anaconda/markdown-img-paste-20190719132404857.png" /></p>
 <p><strong>step3:在Jupyter Notebook中提交如下的python代码</strong></p>

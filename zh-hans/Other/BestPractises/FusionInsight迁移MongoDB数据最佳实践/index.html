@@ -4286,7 +4286,6 @@
 <div class="highlight"><pre><span></span><code>export HADOOP_CREDSTORE_PASSWORD=huawei #可自定义
 hadoop credential create mongodb20201   -provider jceks://hdfs/mongo2020/secret20201.jceks #hdfs存放keystore的路径，可自定义
 </code></pre></div>
-
 </li>
 <li>
 <p>下载jar包并上传到hadoop client端，如/root路径下</p>
@@ -4311,7 +4310,6 @@ hiveTable=mongotable #需要写入的hive数据表的名称
 partColumn=  #hive表分区列名称，如果为空，表示无分区列
 partValue=2020  #分区列值
 </code></pre></div>
-
 </li>
 <li>
 <p>获取kerberos认证文件，用于spark2x的kerberos认证</p>
@@ -4326,7 +4324,6 @@ log4j.rootLogger=INFO, theConsoleAppender
 log4j.appender.theConsoleAppender=org.apache.log4j.ConsoleAppender
 log4j.appender.theConsoleAppender.layout=org.apache.log4j.PatternLayout
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="jar">编译jar工具包<a class="headerlink" href="#jar" title="Permanent link">&para;</a></h3>
@@ -4362,7 +4359,6 @@ source /opt/hadoopclient/bigdata_env
 kinit developuser
 spark-submit --class MongoToHadoop --master yarn --deploy-mode client --jars /root/mongo-spark-connector_2.11-2.3.2.jar,/root/mongo-java-driver-3.8.2.jar   --driver-java-options &quot;-Dlog4j.configuration=file:/root/log4j.properties&quot; --num-executors 8 /root/mongoToHive.jar /root/conf.properties append
 </code></pre></div>
-
 <p>部分参数说明：
 * --num-executors <em>指定spark并发数</em>
 * /root/mongoToHive.jar  <em>表示打包的jar包路径</em>

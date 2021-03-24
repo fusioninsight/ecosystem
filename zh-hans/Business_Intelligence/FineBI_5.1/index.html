@@ -4345,7 +4345,6 @@ commons-collections-3.2.2.jar
 3： 24002
 4： jdbc:hive2://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/default;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;
 </code></pre></div>
-
 <p>说明（重要）： 配置1 + 配置2 + 配置3 会生成配置4的连接url,要时刻保持着4个配置的正确性，否则对接失败</p>
 <p>点击测试连接测试：</p>
 <p><img alt="20201027_095147_35" src="../assets/FineBI_5.1/20201027_095147_35.png" /></p>
@@ -4385,7 +4384,6 @@ commons-collections-3.2.2.jar
 4: 24002
 5: jdbc:presto://172.16.10.131:24002,172.16.10.132:24002,172.16.10.133:24002/hive/default?serviceDiscoveryMode=zooKeeper&amp;zooKeeperNamespace=hsbroker&amp;deploymentMode=on_yarn&amp;user=developuser&amp;SSL=true&amp;SSLTrustStorePath=E:/mrs_hetu_config/hetuserver.jks&amp;KerberosConfigPath=E:/mrs_hetu_config/krb5.conf&amp;KerberosPrincipal=developuser&amp;KerberosKeytabPath=E:/mrs_hetu_config/user.keytab&amp;KerberosRemoteServiceName=HTTP&amp;KerberosServicePrincipalPattern=%24%7BSERVICE%7D%40%24%7BHOST%7D
 </code></pre></div>
-
 <p>说明（重要）： 配置2 + 配置3 + 配置4 会生成配置5的连接url,要时刻保持着4个配置的正确性，否则对接失败</p>
 <ul>
 <li>测试连接：</li>

@@ -4631,7 +4631,6 @@ export HCAT_HOME=/opt/115_hadoopclient/hadoopclient/Hive/HCatalog
 </ul>
 <div class="highlight"><pre><span></span><code>|mapreduce\.job\..*|dfs\..*|mapred\..*
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_3.1.1/markdown-img-paste-20200319102923469.png" /></p>
 <h3 id="kylin_3">修改Kylin配置<a class="headerlink" href="#kylin_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4642,7 +4641,6 @@ export HCAT_HOME=/opt/115_hadoopclient/hadoopclient/Hive/HCatalog
 kinit developuser
 beeline
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Kylin_3.1.1/markdown-img-paste-20200319103247312.png" /></p>
 <ul>
 <li>修改kylin.properties： <code>vi /opt/kylin/apache-kylin-3.1.1-bin-hadoop3/conf/kylin.properties</code></li>
@@ -4781,7 +4779,6 @@ kylin.source.hive.beeline-params=-n root -u &#39;jdbc:hive2://172.16.4.111:24002
 <div class="highlight"><pre><span></span><code>kylin.engine.spark-conf.spark.master=yarn
 kylin.engine.spark-conf.spark.submit.deployMode=cluster
 </code></pre></div>
-
 <ul>
 <li>新建路径<code>/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/spark/jars</code>，使用如下命令将已安装的Spark2x客户端的jar包拷贝到该路径下，并且删除hadoop开头的jar包</li>
 </ul>
@@ -4876,14 +4873,12 @@ rm -rf hadoop-*
 <div class="highlight"><pre><span></span><code>Caused by: java.lang.RuntimeException: org.apache.hadoop.hbase.DoNotRetryIOException: org.apache.hadoop.hbase.DoNotRetryIOException: Coprocessor passed deadline! Maybe server is overloaded
         at org.apache.kylin.storage.hbase.cube.v2.coprocessor.endpoint.CubeVisitService.checkDeadline(CubeVisitService.java:228)
 </code></pre></div>
-
 <p>解决办法：修改对接集群的hbase-site.xml文件配置项</p>
 <div class="highlight"><pre><span></span><code>&lt;property&gt;
 &lt;name&gt;hbase.rpc.timeout&lt;/name&gt;
 &lt;value&gt;360000&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <p>删除/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/bin下的cached配置文件，重启kylin</p>
 <p><img alt="20201130_104408_05" src="../assets/Apache_Kylin_3.1.1/20201130_104408_05.png" /></p>
 <p>问题6. 启动kylin报错：</p>
@@ -4896,7 +4891,6 @@ rm -rf hadoop-*
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter&#39;: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.ClassCastException: com.fasterxml.jackson.datatype.jsr310.JavaTimeModule cannot be cast to com.fasterxml.jackson.databind.Module
         at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1160)
 </code></pre></div>
-
 <p>解决办法：参考文档修改find-spark-dependency.sh</p>
 <p>添加:<code>! -name '*jackson*' !</code></p>
 <p>删除/opt/kylin/apache-kylin-3.1.1-bin-hadoop3/bin下的cached配置文件，重启kylin</p>

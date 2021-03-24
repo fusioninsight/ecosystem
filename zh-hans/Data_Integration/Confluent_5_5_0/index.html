@@ -4526,7 +4526,6 @@ consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required 
    keyTab=&quot;/opt/115_hadoopclient/user.keytab&quot; \
    principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="20201226_171319_70" src="../assets/Confluent_5_5_0/20201226_171319_70.png" /></p>
 </li>
 <li>
@@ -4572,7 +4571,6 @@ consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required 
    keyTab=&quot;/opt/115_hadoopclient/user.keytab&quot; \
    principal=&quot;developuser@HADOOP.COM&quot;;
 </code></pre></div>
-
 <p><img alt="20201226_171304_96" src="../assets/Confluent_5_5_0/20201226_171304_96.png" /></p>
 </li>
 <li>
@@ -4608,7 +4606,6 @@ consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required 
 confluent local load file-sink
 confluent local status connectors
 </code></pre></div>
-
 <p><img alt="20201226_160040_26" src="../assets/Confluent_5_5_0/20201226_160040_26.png" /></p>
 <ul>
 <li>在test.txt空文件中输入信息，保存，在生成的test.sink.txt文件中查看信息同步情况</li>
@@ -4648,7 +4645,6 @@ confluent local status connectors
 cd /opt/confluent/confluent-5.5.0/etc/kafka-connect-hdfs/
 vi quickstart-hdfs.properties
 </code></pre></div>
-
 <p>配置文件内容</p>
 <div class="highlight"><pre><span></span><code>name=hdfs-sink
 connector.class=io.confluent.connect.hdfs3.Hdfs3SinkConnector
@@ -4666,7 +4662,6 @@ hdfs.namenode.principal=hdfs/hadoop.hadoop.com@HADOOP.COM
 format.class=io.confluent.connect.hdfs3.string.StringFormat
 hadoop.conf.dir=/opt/115_hadoopclient/hadoopclient/HDFS/hadoop/etc/hadoop
 </code></pre></div>
-
 <p>其中172.16.4.113为集群主namenode</p>
 <ul>
 <li>修改/opt/confluent/confluent-5.5.0/etc/kafka/connect-file-source.properties文件同步的topic为connect-hdfs-test，文件为/opt/hdfstest.txt:</li>
@@ -4696,7 +4691,6 @@ hadoop.conf.dir=/opt/115_hadoopclient/hadoopclient/HDFS/hadoop/etc/hadoop
 bb2
 cc3
 </code></pre></div>
-
 <ul>
 <li>到对接集群kafka端消费用于传输的topic test_hdfs</li>
 </ul>

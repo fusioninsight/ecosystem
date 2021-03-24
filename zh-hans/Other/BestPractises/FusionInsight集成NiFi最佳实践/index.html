@@ -4305,7 +4305,6 @@
 <p>上传已下载jdk文件到3个节点，执行以下命令完成jdk安装：</p>
 <div class="highlight"><pre><span></span><code>rpm -ivh jdk-8u231-linux-x64.rpm
 </code></pre></div>
-
 </li>
 </ul>
 <h2 id="zookeeper">zookeeper安装<a class="headerlink" href="#zookeeper" title="Permanent link">&para;</a></h2>
@@ -4414,7 +4413,6 @@
   其中一个节点的角色为leader,另外两个节点的角色为follower。
 </code></pre></div>
 
-
 <h2 id="nifi_3">NiFi安装<a class="headerlink" href="#nifi_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4422,7 +4420,6 @@
 <div class="highlight"><pre><span></span><code>cd /opt
 tar -zxvf nifi-1.10.0-bin.tar.gz
 </code></pre></div>
-
 </li>
 <li>
 <p>在三个节点上分别修改/opt/nifi-1.10.0/conf/nifi.properties配置文件，包括以下内容,其中IP地址为对应结点的IP。</p>
@@ -4431,23 +4428,19 @@ nifi.web.war.directory=./lib
 nifi.web.http.host=172.16.13.120
 nifi.web.http.port=18001
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code># cluster node properties (only configure for cluster nodes) #
 nifi.cluster.is.node=true
 nifi.cluster.node.address=172.16.13.120
 nifi.cluster.node.protocol.port=28001
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>nifi.cluster.load.balance.port=16342
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code># zookeeper properties, used for cluster management #
 nifi.zookeeper.connect.string=172.16.13.120:2181,172.16.13.122:2181,172.16.13.123:2181
 nifi.zookeeper.connect.timeout=3 secs
 nifi.zookeeper.session.timeout=3 secs
 nifi.zookeeper.root.node=/nifi
 </code></pre></div>
-
 </li>
 <li>
 <p>修改/opt/nifi-1.10.0/conf/state-management.xml配置文件，包括以下内容：</p>
@@ -4462,7 +4455,6 @@ nifi.zookeeper.root.node=/nifi
     &lt;property name=&quot;Access Control&quot;&gt;Open&lt;/property&gt;
   &lt;/cluster-provider&gt;
 </code></pre></div>
-
 <ul>
 <li>
 <p>修改完成后，在三个节点执行以下命令，启动NiFi.</p>
@@ -4509,7 +4501,6 @@ nifi.zookeeper.root.node=/nifi
 <div class="highlight"><pre><span></span><code>tar -zxvf minifi-0.5.0-bin.tar.gz
 tar -zxvf minifi-toolkit-0.5.0-bin.tar.gz
 </code></pre></div>
-
 <h4 id="tomcat">tomcat安装<a class="headerlink" href="#tomcat" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -4544,7 +4535,6 @@ nifi.remote.input.http.enabled=true
 nifi.remote.input.http.transaction.ttl=30 sec
 nifi.remote.contents.cache.expiration=30 secs
 </code></pre></div>
-
 </li>
 <li>
 <p>重启NiFi服务。</p>
@@ -4579,14 +4569,12 @@ nifi.remote.contents.cache.expiration=30 secs
 <div class="highlight"><pre><span></span><code>sh /opt/minifi-toolkit-0.5.0/bin/config.sh transform nifitemplate.xml config.yml
 cp config.yml /opt/minifi-0.5.0/conf/
 </code></pre></div>
-
 </li>
 <li>
 <p>启动MiNiFi</p>
 <p>执行以下命令启动MiNiFi</p>
 <div class="highlight"><pre><span></span><code>sh /opt/minifi-0.5.0/minifi.sh start
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="_5">数据验证<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -4603,7 +4591,6 @@ cp config.yml /opt/minifi-0.5.0/conf/
 <p>通过以下命令，查看kafka topic接收的数据。</p>
 <div class="highlight"><pre><span></span><code>kafka-console-consumer.sh --topic testtopic -bootstrap-server 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007 --consumer.config /opt/hadoopclient/Kafka/kafka/config/consumer.properties
 </code></pre></div>
-
 <p>结果如下图，说明Nifi已将相关日志实时发送到Kafka Topic中。</p>
 <p><img alt="" src="../assets/NIFI-03de8.png" /></p>
 </li>
@@ -4628,7 +4615,6 @@ cp config.yml /opt/minifi-0.5.0/conf/
 <div class="highlight"><pre><span></span><code>kafka-topics.sh --create --zookeeper 172.16.11.21:24002/kafka --partitions 6 --replication-factor 2 --topic h7topic1;
 kafka-topics.sh --create --zookeeper 172.16.11.21:24002/kafka --partitions 6 --replication-factor 2 --topic h7topic2
 </code></pre></div>
-
 </li>
 <li>
 <p>NiFi数据流配置：</p>
@@ -4641,13 +4627,11 @@ Kerberos Service Name: kafka
 Topic Name: h7topic1 #之前创建的kafka topic名称
 Group ID: Demo #可自定义
 </code></pre></div>
-
 <p><strong><em>ReplcaeText</em></strong> 配置参考下图：</p>
 <p><img alt="" src="../assets/NIFI-6eba1.png" /></p>
 <div class="highlight"><pre><span></span><code>Search Value: &lt;cr&gt;
 Replacement Value: ${literal(&#39;\r\n&#39;)}
 </code></pre></div>
-
 <p><strong><em>ExtractHL7Attributes</em></strong> 配置参考下图：</p>
 <p><img alt="" src="../assets/NIFI-62592.png" /></p>
 <p><strong><em>AttributeToJson</em></strong> 配置参考下图：</p>
@@ -4711,14 +4695,12 @@ Replacement Value: ${literal(&#39;\r\n&#39;)}
     &quot;OBR_1.OrderingProvider.MiddleInitialOrName&quot;: &quot;OBR_1.OrderingProvider.MiddleInitialOrName&quot;
 }
 </code></pre></div>
-
 <p><strong><em>PutHDFS</em></strong> 参考配置如下图：</p>
 <p><img alt="" src="../assets/NIFI-92011.png" /></p>
 <div class="highlight"><pre><span></span><code>hadooop Configuration Resource: /opt/nifi-1.10.0/hdfs-site.xml,/opt/nifi-1.10.0/conf/core-site.xml
 Kerberos Credentials Service: KeytabCredentialsService
 Directory: /nifihl7 #s可自定义
 </code></pre></div>
-
 <p><strong><em>PublishKafka</em></strong> 参考配置如下图：</p>
 <p><img alt="" src="../assets/NIFI-ae901.png" /></p>
 <div class="highlight"><pre><span></span><code>Kafka Brokers: 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007
@@ -4727,7 +4709,6 @@ Kerberos Credentials Service: KeytabCredentialsService
 Kerberos Service Name: kafka
 Topic Name: h7topic2 #之前创建的kafka topic名称
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="_8">数据测试<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
@@ -4736,15 +4717,12 @@ Topic Name: h7topic2 #之前创建的kafka topic名称
 <p>开启两个hadoop client命令行窗口，在窗口一中执行以下命令：</p>
 <div class="highlight"><pre><span></span><code>bin/kafka-console-producer.sh --broker-list 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007 --topic h7topic1 --producer.config config/producer.properties
 </code></pre></div>
-
 <p>在窗口二中执行以下命令：</p>
 <div class="highlight"><pre><span></span><code> kafka-console-consumer.sh --topic h7topic2 -bootstrap-server 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007 --consumer.config /opt/hadoopclient/Kafka/kafka/config/consumer.properties
 </code></pre></div>
-
 <p>在窗口一中粘贴以下数据,该数据为模拟的HL7数据格式。</p>
 <div class="highlight"><pre><span></span><code>MSH|^~\&amp;|XXXXXX||HealthOrg01||||ORU^R01|Q1111111111111111111|P|2.3|&lt;cr&gt;PID|||000000001||SMITH^JOHN||19700101|M||||||||||999999999999|123456789|&lt;cr&gt;PD1||||1234567890^LAST^FIRST^M^^^^^NPI|&lt;cr&gt;OBR|1|341856649^HNAM_ORDERID|000000000000000000|648088^Basic Metabolic Panel|||20150101000100|||||||||1620^Johnson^John^R||||||20150101000100|||M|||||||||||20150101000100|&lt;cr&gt;OBX|1|NM|GLU^Glucose Lvl|159|mg/dL|65-99^65^99|H|||F|||20150101000100|
 </code></pre></div>
-
 <p>如下图：</p>
 <p><img alt="" src="../assets/NIFI-b629c.png" /></p>
 <p>在窗口二中查看结果，发现已经读取到转换成json格式的数据，数据加载到kafka中成功，可以用于后续的流式数据处理，如flink等。</p>
@@ -4780,14 +4758,12 @@ pip install paho-mqtt
 useradd huawei
 mosquitto_passwd -c /etc/mosquitto/passwd huawei
 </code></pre></div>
-
 </li>
 <li>
 <p>修改配置文件/etc/mosquitto/mosquitto.conf，禁用MQTT匿名登录。</p>
 <div class="highlight"><pre><span></span><code>allow_anonymous false
 password_file /etc/mosuitto/passwd
 </code></pre></div>
-
 </li>
 <li>
 <p>执行以下命令重启mosquitto服务</p>
@@ -4799,7 +4775,6 @@ systemctl restart mosquitto
 <p>在hadoop client上执行以下命令，创建kafka topic</p>
 <div class="highlight"><pre><span></span><code>kafka-topics.sh --create --zookeeper 172.16.11.21:24002/kafka --partitions 6 --replication-factor 2 --topic mqtttopic
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="_11">数据流准备<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
@@ -4815,7 +4790,6 @@ systemctl restart mosquitto
 Kerberos Credentials Service: KeytabCredentialsService
 Directory: /nifimqtt
 </code></pre></div>
-
 <p><strong><em>PublishKafka</em></strong> Processor参考配置如下：</p>
 <p><img alt="" src="../assets/NIFI-42cb6.png" /></p>
 <div class="highlight"><pre><span></span><code>Kafka Brokers: 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007
@@ -4824,7 +4798,6 @@ Kerberos Credentials Service: KeytabCredentialsService
 Kerberos Service Name: kafka
 Topic Name: mqtttopic #之前创建的kafka topic名称
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="_12">数据验证<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -4833,7 +4806,6 @@ Topic Name: mqtttopic #之前创建的kafka topic名称
 <p>在hadoop client中执行以下命令，监听kafka topic的输出。</p>
 <div class="highlight"><pre><span></span><code> kafka-console-consumer.sh --topic testtopic -bootstrap-server 172.16.11.21:21007,172.16.11.22:21007,172.16.11.23:21007 --consumer.config /opt/hadoopclient/Kafka/kafka/config/consumer.properties
 </code></pre></div>
-
 </li>
 <li>
 <p>在mqqtt客户端，创建mqttpublish.py文件，内容如下：</p>
@@ -4849,13 +4821,11 @@ for i in range(10):
         publish.single(&#39;test&#39;, payload=&#39;Test message %d&#39; % i, auth=auth, hostname=&#39;172.16.13.112&#39;,port=1883)
         time.sleep(1)
 </code></pre></div>
-
 </li>
 <li>
 <p>执行以下命令，发送消息到MQtt Brokers</p>
 <div class="highlight"><pre><span></span><code>python mqttpublish.py
 </code></pre></div>
-
 </li>
 <li>
 <p>查看kafka consumer显示的输出结果，如下图：</p>

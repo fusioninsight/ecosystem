@@ -4352,7 +4352,6 @@
 <div class="highlight"><pre><span></span><code>chmod +x jdk-8u231-linux-x64.rpm
 rpm -ivh jdk-8u231-linux-x64.rpm
 </code></pre></div>
-
 <ul>
 <li>参考下面配置，在<code>~/.bash_profile</code>配置文件最后增加：</li>
 </ul>
@@ -4366,7 +4365,6 @@ export LD_LIBRARY_PATH=/usr/java/jdk1.8.0_231-amd64/jre/lib/amd64/server/libjvm.
 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 </code></pre></div>
-
 <ul>
 <li>使用命令加载安装的jdk：<code>source ~/.bash_profile</code></li>
 </ul>
@@ -4405,7 +4403,6 @@ bin/drill-embedded
 <div class="highlight"><pre><span></span><code>CP=&quot;$CP:/opt/65hadoopclient/HDFS/hadoop/share/hadoop/common/*&quot;
 CP=&quot;$CP:/opt/65hadoopclient/HDFS/hadoop/share/hadoop/common/lib/*&quot;
 </code></pre></div>
-
 <p>说明：
     1.  在如图位置添加Class Path变量,路径为华为FI HD HDFS客户端相关依赖的路径
     2.  添加依赖参数的位置要按照截图所示，在 <code>CP="$CP:$DRILL_HOME/jars/3rdparty/*"</code>之后`</p>
@@ -4498,7 +4495,6 @@ security.auth.keytab: &quot;/opt/hdfs.keytab&quot;
 &lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <p><img alt="" src="../assets/ApacheDrilltoHD651/markdown-img-paste-20191031110419834.png" /></p>
 <ul>
 <li>登陆对接FI HD集群172.16.4.21， 使用如下命令找到对接hive相关认证keytab文件hive.keytab并把此文件传至drill主机/opt路径下：</li>
@@ -4539,7 +4535,6 @@ scp /opt/huawei/Bigdata/components/FusionInsight_HD_6.5.1/Hive/hive.keytab root@
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <p><img alt="" src="../assets/ApacheDrilltoHD651/markdown-img-paste-20191031111809948.png" /></p>
 <p>其中hive.metastore.uris可在集群hive-site.xml文件中查到</p>
 <ul>
@@ -4587,7 +4582,6 @@ scp /opt/huawei/Bigdata/components/FusionInsight_HD_6.5.1/Hive/hive.keytab root@
   &quot;enabled&quot;: true
 }
 </code></pre></div>
-
 <ul>
 <li>后台命令行输入<code>show databases;</code>检查数据库</li>
 </ul>
@@ -4632,7 +4626,6 @@ debug=true;
 <div class="highlight"><pre><span></span><code>source /opt/hadoopclient/bigdata_env
 export JAVA_TOOL_OPTIONS=&quot;-Xmx512m -Xms64m -Djava.security.auth.login.config=/opt/jaas.conf -Dkerberos.domain.name=hadoop.hadoop.com -Djava.security.krb5.conf=/etc/krb5.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com&quot;
 </code></pre></div>
-
 <p>完成之后使用命令<code>java -version</code>检查是否加载成功</p>
 <ul>
 <li>

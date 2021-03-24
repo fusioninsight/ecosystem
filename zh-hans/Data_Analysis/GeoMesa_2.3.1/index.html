@@ -4528,7 +4528,6 @@
 wget &quot;https://github.com/locationtech/geomesa/releases/download/geomesa_2.11-2.3.1/geomesa-hbase_2.11-2.3.1-bin.tar.gz&quot;
 tar -xvf geomesa-hbase_2.11-2.3.1-bin.tar.gz
 </code></pre></div>
-
 <blockquote>
 <p>说明：</p>
 <ul>
@@ -4553,7 +4552,6 @@ tar -xvf geomesa-hbase_2.11-2.3.1-bin.tar.gz
  scp /opt/geomesa-hbase_2.11-2.3.1/dist/hbase/geomesa-hbase-distributed-runtime_2.11-2.3.1.jar root@172.16.4.22:/opt/huawei/Bigdata/third_lib/HBase/
  scp /opt/geomesa-hbase_2.11-2.3.1/dist/hbase/geomesa-hbase-distributed-runtime_2.11-2.3.1.jar root@172.16.4.23:/opt/huawei/Bigdata/third_lib/HBase/
 </code></pre></div>
-
 <blockquote>
 <p>说明：FusionInsight的HBase组件的RegionServer节点的IP分别为172.16.4.21、172.16.4.22、172.16.4.23。</p>
 </blockquote>
@@ -4564,7 +4562,6 @@ tar -xvf geomesa-hbase_2.11-2.3.1-bin.tar.gz
 <p><strong>其中一个集群节点修改示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>chown omm:wheel /opt/huawei/Bigdata/third_lib/HBase/geomesa-hbase-distributed-runtime_2.11-2.3.1.jar
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/d9aa39c2.png" /></p>
 </li>
 <li>
@@ -4582,7 +4579,6 @@ tar -xvf geomesa-hbase_2.11-2.3.1-bin.tar.gz
 export PATH=${PATH}:${GEOMESA_HBASE_HOME}/bin
 export JAVA_TOOL_OPTIONS=&quot;-Djava.security.krb5.conf=/opt/krb5.conf -Djava.security.auth.login.config=/opt/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com&quot;
 </code></pre></div>
-
 <p>执行 <strong>source</strong> 命令使GeoMesa、Hadoop和HBase的环境变量生效。
   <div class="highlight"><pre><span></span><code>source ~/.bash_profile
 source /opt/hadoopclient/bigdata_env
@@ -4610,7 +4606,6 @@ git clone https://github.com/geomesa/geomesa-tutorials.git
 cd geomesa-tutorials
 git checkout tags/geomesa-tutorials-2.3.1 -b geomesa-tutorials-2.3.1
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/6c80aa0c.png" /></p>
 <blockquote>
 <p>说明：如果git未安装，可以执行“yum install git”进行安装。</p>
@@ -4627,7 +4622,6 @@ cp /opt/hadoopclient/HBase/hbase/conf/hdfs-site.xml /opt/geomesa-tutorials/geome
 cp /opt/hadoopclient/HBase/hbase/conf/hbase-site.xml /opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart/src/main/resources
 vi /opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart/src/main/resources/hbase-site.xml
 </code></pre></div>
-
 <ul>
 <li>在<code>/opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart/src/main/resources/hbase-site.xml</code>新增属性 <strong>hbase.geomesa.principal</strong> 和 <strong>hbase.geomesa.keytab</strong>。</li>
 </ul>
@@ -4640,7 +4634,6 @@ vi /opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quicks
     &lt;value&gt;/opt/user.keytab&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/f8953012.png" /></p>
 <ul>
 <li>运行以下命令构建“geomesa-tutorials-hbase”工程。</li>
@@ -4648,7 +4641,6 @@ vi /opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quicks
 <div class="highlight"><pre><span></span><code>cd /opt/geomesa-tutorials
 mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart -am
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/15e12302.png" /></p>
 <blockquote>
 <p>说明：必须在<code>/opt/geomesa-tutorials</code>目录执行“mvn clean install”命令，否则会返回“[ERROR] Could not find the selected project in the reactor: geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart”</p>
@@ -4662,7 +4654,6 @@ mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart
 cp /opt/hadoopclient/HBase/hbase/lib/zookeeper-3.5.1.jar /root/.m2/repository/org/apache/zookeeper/zookeeper/3.5.1
 mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart -am
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/05293c5f.png" /></p>
 <blockquote>
 <p>说明：如果构建过程中没有返回错误，也需要操作此步骤。</p>
@@ -4676,7 +4667,6 @@ mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart
 </ul>
 <div class="highlight"><pre><span></span><code>java -cp /opt/geomesa-tutorials/geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart/target/geomesa-tutorials-hbase-quickstart-2.3.1.jar org.geomesa.example.hbase.HBaseQuickStart --namespace GEOMESA --hbase.catalog GEOMESA.GEOMESA_HBASE
 </code></pre></div>
-
 <p>返回结果如下则表示成功：</p>
 <p><img alt="" src="../assets/GeoMesa_2.3.1/6bd519b5.png" /></p>
 <ul>
@@ -4685,7 +4675,6 @@ mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart
 <div class="highlight"><pre><span></span><code>hbase shell
 list
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/8acf4f25.png" /></p>
 <h2 id="geomesa_1">GeoMesa数据可视化<a class="headerlink" href="#geomesa_1" title="Permanent link">&para;</a></h2>
 <h3 id="_10">操作场景<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
@@ -4701,7 +4690,6 @@ list
 <div class="highlight"><pre><span></span><code>cd /opt
 geomesa-hbase export --output-format leaflet --feature-name gdelt-quickstart --catalog GEOMESA.GEOMESA_HBASE
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/c205d73c.png" /></p>
 <ul>
 <li>下载 <strong>geomesa-hbase export</strong> 命令产生的<code>/opt/index.html</code>文件，并用浏览器打开。</li>
@@ -4722,19 +4710,16 @@ geomesa-hbase export --output-format leaflet --feature-name gdelt-quickstart --c
 wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
 tar -xvf apache-maven-3.6.0-bin.tar.gz
 </code></pre></div>
-
 <p><img alt="" src="../assets/GeoMesa_2.3.1/7679063b.png" /></p>
 <ul>
 <li>配置Maven的环境变量。</li>
 </ul>
 <div class="highlight"><pre><span></span><code>vi ~/.bash_profile
 </code></pre></div>
-
 <p><strong>增加的环境变量示例如下：</strong></p>
 <div class="highlight"><pre><span></span><code>export MAVEN_HOME=/usr/local/apache-maven-3.6.0
 export PATH=${PATH}:${GEOMESA_HBASE_HOME}/bin:$MAVEN_HOME/bin
 </code></pre></div>
-
 <p>执行 <strong>source</strong> 命令使环境变量生效。
   <div class="highlight"><pre><span></span><code>source ~/.bash_profile
 </code></pre></div></p>
@@ -4753,7 +4738,6 @@ cp /opt/hadoopclient/HBase/hbase/lib/zookeeper-3.5.1.jar /root/.m2/repository/or
 cd /opt/geomesa-tutorials
 mvn clean install -pl geomesa-tutorials-hbase/geomesa-tutorials-hbase-quickstart -am
 </code></pre></div>
-
 <ul>
 <li><strong>运行<code>geomesa-hbase export</code>命令时返回Can't process features serialized with an older version</strong></li>
 </ul>

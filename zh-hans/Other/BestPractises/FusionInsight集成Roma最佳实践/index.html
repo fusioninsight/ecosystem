@@ -4733,7 +4733,6 @@
 <div class="highlight"><pre><span></span><code>chown romafdi:users guava-26.0-jre.jar
 chmod 755 guava-26.0-jre.jar
 </code></pre></div>
-
 <ul>
 <li>重启fi reader/writer服务使jar包替换生效，以下为替换hivewriter guava版本后重启服务的命令，重启hdfs/hive/kafa的reader和writer的命令类似，替换 <em>tomcat-fihivewriter</em> 为对应路径即可。</li>
 </ul>
@@ -4741,7 +4740,6 @@ chmod 755 guava-26.0-jre.jar
 cd /data01/fdi/tomcat-fihivewriter/bin
 sh catalina.sh stop;sh catalina.sh star
 </code></pre></div>
-
 </li>
 </ul>
 <h2 id="romafusioninsight">ROMA对接FusionInsight配置指导<a class="headerlink" href="#romafusioninsight" title="Permanent link">&para;</a></h2>
@@ -4927,7 +4925,6 @@ insert into customer_info(user_name,address,device_id) values(&#39;haoxi&#39;,&#
 ```
 </code></pre></div>
 
-
 <ul>
 <li>
 <p>在支持sftp的linux服务器上准备电表数据，以txt文件格式存放，各列数据通过分号 <strong>;</strong> 分隔，主要包括设备ID字段，数据采集日期，采集值。</p>
@@ -4971,7 +4968,6 @@ meter03;20190401;401
 meter03;20190415;415
 meter03;20190430;430
 </code></pre></div>
-
 </li>
 <li>
 <p>创建hive table用以存放电表上报数据。</p>
@@ -4979,7 +4975,6 @@ meter03;20190430;430
 use elect;
 create table elect_table(device_id string,upload_date date, elect_value int);
 </code></pre></div>
-
 </li>
 <li>
 <p>创建当月测试数据，在FI 客户端上执行以下命令:</p>
@@ -4987,14 +4982,12 @@ create table elect_table(device_id string,upload_date date, elect_value int);
 beeline -e &quot;insert into elect.elect_table values(&#39;meter02&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
 beeline -e &quot;insert into elect.elect_table values(&#39;meter03&#39;,date_sub(current_date,dayofmonth(current_date)-1),500)&quot;;
 </code></pre></div>
-
 </li>
 <li>
 <p>创建hive table用以存放客户信息</p>
 <div class="highlight"><pre><span></span><code>use elect;
 create table customer_info(id int,user_name varchar(20),address varchar(20), device_id varchar(20));
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="api">发布客户关系管理系统中的数据为数据API服务<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
@@ -5052,7 +5045,6 @@ create table customer_info(id int,user_name varchar(20),address varchar(20), dev
 <p>其中涉及metaData格式转换的内容，可以参考以下内容：</p>
 <div class="highlight"><pre><span></span><code>[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;path&quot;:&quot;retJSON.result[i].id&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;user_name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i]..user_name&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;address&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].address&quot;,&quot;format&quot;:&quot;&quot;},{&quot;name&quot;:&quot;device_id&quot;,&quot;type&quot;:&quot;string&quot;,&quot;path&quot;:&quot;retJSON.result[i].device_id&quot;,&quot;format&quot;:&quot;&quot;}]
 </code></pre></div>
-
 <p>目标端配置信息参考下图：</p>
 <p><img alt="" src="../assets/ROMA%E9%9B%86%E6%88%90FusionInsight%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%AF%BC/1546a.png" /></p>
 <p>映射关系如下：</p>
@@ -5348,7 +5340,6 @@ public void start() {
   ```
 </code></pre></div>
 
-
 <ul>
 <li>
 <p>修改iotagent.properties配置参数,配置参考如下:</p>
@@ -5472,7 +5463,6 @@ if(day &lt; 10){
 targetObj.upload_date = year+&quot;-&quot;+mon+&quot;-&quot;+day;
 return targetObj;
 </code></pre></div>
-
 </li>
 <li>
 <p>点击保存，完成任务配置。</p>
@@ -5506,7 +5496,6 @@ done
 done
 beeline -e &quot;select * from elect.analysis&quot;;
 </code></pre></div>
-
 <ul>
 <li>在mysql数据库中创建表,用来存放经过hive分析过的数据。在生产环境中，如果数据量较大，推荐将Hive分析过的数据存放到GaussDB A中。</li>
 </ul>
@@ -5523,7 +5512,6 @@ beeline -e &quot;select * from elect.analysis&quot;;
 </ul>
 <div class="highlight"><pre><span></span><code>create index index_uym on user_elects(user_name,year,month);
 </code></pre></div>
-
 </li>
 </ul>
 <h3 id="livedata-api">通过LiveData API，开放数据服务。<a class="headerlink" href="#livedata-api" title="Permanent link">&para;</a></h3>

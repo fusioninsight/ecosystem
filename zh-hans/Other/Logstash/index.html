@@ -4442,7 +4442,6 @@ output {
 <div class="highlight"><pre><span></span><code>source /opt/125_hadoopclient/hadoopclient/bigdata_env
 kinit developuser
 </code></pre></div>
-
 <ul>
 <li>使用命令<code>bin/logstash -f config/logstash-webhdfs.conf</code> 启动logstash webhdfs output</li>
 </ul>
@@ -4472,7 +4471,6 @@ kinit developuser
 <p><img alt="20200729_145341_80" src="../assets/Logstash/20200729_145341_80.png" /></p>
 <div class="highlight"><pre><span></span><code>[ERROR][logstash.outputs.webhdfs ] Webhdfs check request failed. (namenode: 172.16.4.123:25002, Exception: undefined method `read_uint32&#39; for #&lt;FFI::MemoryPointer address=0x7f8eb0059fa0 size=4&gt;)
 </code></pre></div>
-
 <p>问题原因：启动时未使用<code>kinit developuser</code>获得缓存的认证票据</p>
 <p>解决办法：参考对接文档相关章节加载对接环境变量以及kinit做认证获得缓存的票据在启动logstash</p>
 <h2 id="kafka">kafka安全模式对接<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h2>
@@ -4536,7 +4534,6 @@ debug=true;
 
 cp /opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /opt/logstash/logstash-6.7.1/vendor/bundle/jruby/2.5.0/gems/logstash-output-kafka-7.3.2/vendor/jar-dependencies/org/apache/kafka/kafka-clients/2.1.0/
 </code></pre></div>
-
 <p>参考下图命令，将input,output路径下原来的jar包注释掉，并将拷贝过来的<code>kafka-clients-1.1.0.jar</code>名字修改为<code>kafka-clients-2.1.0.jar</code>,否则在启动logstash的时候会报错</p>
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-20200316164006321.png" /></p>
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-20200316164227601.png" /></p>
@@ -4568,7 +4565,6 @@ cp /opt/hadoopclient/Kafka/kafka/libs/kafka-clients-1.1.0.jar /opt/logstash/logs
 
   }
 </code></pre></div>
-
 <ul>
 <li>
 <p>登陆集群kafka客户端，创建topic，名字为：<code>logstashtest21007input</code></p>
@@ -4607,7 +4603,6 @@ output {
 
 }
 </code></pre></div>
-
 <ul>
 <li>
 <p>登陆集群kafka客户端，创建topic，名字为：<code>logstashtest21007</code></p>
@@ -4633,7 +4628,6 @@ output {
 <p><img alt="" src="../assets/Logstash/markdown-img-paste-2020031716485585.png" /></p>
 <div class="highlight"><pre><span></span><code>[ERROR][org.logstash.Logstash    ] java.lang.IllegalStateException: Logstash stopped processing because of an error: (LoadError) load error: ffi/ffi -- java.lang.NullPointerException: null
 </code></pre></div>
-
 <p>参考社区：
 1. <a href="https://github.com/elastic/logstash/issues/10888">https://github.com/elastic/logstash/issues/10888</a>
 2. <a href="https://github.com/elastic/logstash/issues/10755">https://github.com/elastic/logstash/issues/10755</a>

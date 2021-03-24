@@ -4446,7 +4446,6 @@
 <div class="highlight"><pre><span></span><code>cd /opt
 tar -zxvf opentsdb-2.4.0.tar.gz
 </code></pre></div>
-
 <ul>
 <li>编译源代码。</li>
 </ul>
@@ -4456,7 +4455,6 @@ mkdir build
 cp -r third_party/ ./build
 ./build.sh
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/796699cf.png" /></p>
 <ul>
 <li>安装OpenTSDB</li>
@@ -4464,7 +4462,6 @@ cp -r third_party/ ./build
 <div class="highlight"><pre><span></span><code>cd /opt/opentsdb-2.4.0/build
 make install
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/a9c79d14.png" /></p>
 <blockquote>
 <p>说明：默认安装目录为/usr/local/share/opentsdb/。</p>
@@ -4477,14 +4474,12 @@ make install
 <p>创建配置文件夹<code>/etc/opentsdb</code>。</p>
 <div class="highlight"><pre><span></span><code> ln -s /usr/local/share/opentsdb/etc/opentsdb /etc/opentsdb
 </code></pre></div>
-
 </li>
 <li>
 <p>复制用户凭证到配置文件夹。</p>
 <div class="highlight"><pre><span></span><code>cp /opt/user.keytab /etc/opentsdb/
 cp /opt/krb5.conf /etc/opentsdb/
 </code></pre></div>
-
 </li>
 <li>
 <p>在<code>/etc/opentsdb</code>目录下新建 <strong>jaas.conf</strong> 文件，示例如下：
@@ -4503,7 +4498,6 @@ cp /opt/krb5.conf /etc/opentsdb/
 <p>修改opentsdb的配置文件。</p>
 <div class="highlight"><pre><span></span><code>vi /etc/opentsdb/opentsdb.conf
 </code></pre></div>
-
 <p><strong>opentsdb.conf配置如下：</strong>
 <div class="highlight"><pre><span></span><code># --------- NETWORK ----------
 tsd.network.port = 4242
@@ -4555,7 +4549,6 @@ hbase.sasl.clientconfig=Client
 <p>修改opentsdb的tsdb脚本增加认证配置。</p>
 <div class="highlight"><pre><span></span><code>vi /usr/local/share/opentsdb/bin/tsdb
 </code></pre></div>
-
 <p>将脚本倒数第二行"$CLASSPATH"后面，net.opentsdb.tools之前增加如下安全相关的环境变量：</p>
 <p><code>-Djava.security.krb5.conf=/etc/opentsdb/krb5.conf -Djava.security.auth.login.config=/etc/opentsdb/jaas.conf -Dzookeeper.server.principal=zookeeper/hadoop.hadoop.com</code></p>
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/73fb2ae6.png" /></p>
@@ -4564,14 +4557,12 @@ hbase.sasl.clientconfig=Client
 <p>创建缺失的目录</p>
 <div class="highlight"><pre><span></span><code>mkdir /usr/local/share/opentsdb/plugins
 </code></pre></div>
-
 </li>
 <li>
 <p>更新为使用FusionInsight HD的Zookeeper jar包。</p>
 <div class="highlight"><pre><span></span><code>cp /opt/hadoopclient/HBase/hbase/lib/zookeeper-3.5.1.jar /usr/local/share/opentsdb/lib/
 rm -rf /usr/local/share/opentsdb/lib/zookeeper-3.4.6.jar
 </code></pre></div>
-
 </li>
 <li>
 <p>拷贝集群配置文件 <strong>hdfs-site.xml</strong> 、<strong>core-site.xml</strong> 、<strong>hbase-site.xml</strong> 到<code>/etc/opentsdb</code>目录。</p>
@@ -4579,7 +4570,6 @@ rm -rf /usr/local/share/opentsdb/lib/zookeeper-3.4.6.jar
 cp /opt/hadoopclient/HDFS/hadoop/etc/hadoop/core-site.xml /etc/opentsdb/
 cp /opt/hadoopclient/HBase/hbase/conf/hbase-site.xml /etc/opentsdb/
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/9a9a3413.png" /></p>
 </li>
 <li>
@@ -4590,14 +4580,12 @@ cp /opt/hadoopclient/HBase/hbase/conf/hbase-site.xml /etc/opentsdb/
 <div class="highlight"><pre><span></span><code>cp /opt/opentsdb-2.4.0/src/create_table.sh /usr/local/share/opentsdb/bin/
 vi /usr/local/share/opentsdb/bin/create_table.sh
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/a223d308.png" /></p>
 </li>
 <li>
 <p>增加 <strong>create_table.sh</strong> 脚本的执行权限。</p>
 <div class="highlight"><pre><span></span><code>chmod +x /usr/local/share/opentsdb/bin/create_table.sh
 </code></pre></div>
-
 </li>
 <li>
 <p>运行创建Hbase表脚本。</p>
@@ -4606,7 +4594,6 @@ kdestroy
 kinit -kt /etc/opentsdb/user.keytab developuser
 env COMPRESSION=snappy /usr/local/share/opentsdb/bin/create_table.sh
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/a12ac347.png" /></p>
 </li>
 <li>
@@ -4614,7 +4601,6 @@ env COMPRESSION=snappy /usr/local/share/opentsdb/bin/create_table.sh
 <div class="highlight"><pre><span></span><code>hbase shell
 list
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/ed9c78db.png" /></p>
 <blockquote>
 <p>说明：Opentsdb表一共有4张表</p>
@@ -4630,14 +4616,12 @@ list
 </ul>
 <div class="highlight"><pre><span></span><code>yum install gnuplot
 </code></pre></div>
-
 <ul>
 <li>启动OpenTSDB</li>
 </ul>
 <div class="highlight"><pre><span></span><code>source /opt/hadoopclient/bigdata_env
 /usr/local/share/opentsdb/bin/tsdb tsd
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/f38f44ec.png" /></p>
 <p>使用浏览器打开<a href="http://172.16.5.105:4242/">http://172.16.5.105:4242/</a>。</p>
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/28e3cb8f.png" /></p>
@@ -4670,7 +4654,6 @@ list
 <p>准备导入数据</p>
 <div class="highlight"><pre><span></span><code>vi /opt/opentsdb_mymetric.txt
 </code></pre></div>
-
 <p><strong>opentsdb_mymetrix.txt内容如下：</strong></p>
 <div class="highlight"><pre><span></span><code>mymetric.data 1574423500 0.841470984808 host=172-16-5-105
 mymetric.data 1574423510 0.909297426826 host=172-16-5-105
@@ -4678,13 +4661,11 @@ mymetric.data 1574423520 0.14112000806 host=172-16-5-105
 mymetric.data 1574423530 0.756802495308 host=172-16-5-105
 mymetric.data 1574423540 0.958924274663 host=172-16-5-105
 </code></pre></div>
-
 </li>
 <li>
 <p>向metric导入数据</p>
 <div class="highlight"><pre><span></span><code>/usr/local/share/opentsdb/bin/tsdb import /opt/opentsdb_mymetric.txt
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/b9708a0f.png" /></p>
 </li>
 <li>
@@ -4693,7 +4674,6 @@ mymetric.data 1574423540 0.958924274663 host=172-16-5-105
 </ul>
 <div class="highlight"><pre><span></span><code>/usr/local/share/opentsdb/bin/tsdb tsd
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/f38f44ec.png" /></p>
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/28e3cb8f.png" /></p>
 <ul>
@@ -4703,7 +4683,6 @@ mymetric.data 1574423540 0.958924274663 host=172-16-5-105
 To: UNIX timestamp=1574423540
 Metrix: mymetric.data
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/d09c4e84.png" /></p>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4721,14 +4700,12 @@ at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:114
 at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
 at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
 </code></pre></div>
-
 <p><img alt="" src="../assets/OpenTSDB_2.4.0/bc4d04d4.png" /></p>
 <p><strong>【解决方法】</strong></p>
 <p>检查是否已安装插件。如果未安装，执行以下命令安装后再重新启动OpenTSDB。</p>
 <div class="highlight"><pre><span></span><code>yum install gnuplot
 /usr/local/share/opentsdb/bin/tsdb tsd
 </code></pre></div>
-
 </li>
 </ul>
                 

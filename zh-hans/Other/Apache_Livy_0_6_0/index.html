@@ -4463,7 +4463,6 @@
 <div class="highlight"><pre><span></span><code>hadoop.proxyuser.livy.hosts = *
 hadoop.proxyuser.livy.groups = *
 </code></pre></div>
-
 <ul>
 <li>参照上面的同样方法对hdfs服务， hive服务的 core-site.xml 文件增加相同的配置：</li>
 </ul>
@@ -4525,7 +4524,6 @@ hadoop.proxyuser.livy.groups = *
 </ul>
 <div class="highlight"><pre><span></span><code>log4j.logger.org.eclipse.jetty=DEBUG
 </code></pre></div>
-
 <h3 id="livy-session">使用Livy session方式提交任务<a class="headerlink" href="#livy-session" title="Permanent link">&para;</a></h3>
 <p>livy session方式对应spark console交互方式，通过提交具体的代码的方式来提交，运行spark任务</p>
 <ul>
@@ -4631,7 +4629,6 @@ if __name__ == &quot;__main__&quot;:
 
     spark.stop()
 </code></pre></div>
-
 <p><img alt="" src="../assets/Apache_Livy_0_6_0/markdown-img-paste-20190805122730950.png" /></p>
 <ul>
 <li>在客户端(172.16.2.119)使用如下命令提交spark任务</li>

@@ -4914,7 +4914,6 @@ sqlplus / as sysdba
 </ul>
 <div class="highlight"><pre><span></span><code>mv /etc/krb5.conf /etc/krb5.conf.bak
 </code></pre></div>
-
 <p>将FusionInsight集群的krb5.conf上传到/etc目录下</p>
 <p>kerberos认证
   <div class="highlight"><pre><span></span><code>su oracle
@@ -4926,7 +4925,6 @@ kinit test_cn
 </ul>
 <div class="highlight"><pre><span></span><code>yum install -y unixODBC
 </code></pre></div>
-
 <p>下载Hive ODBC Driver（Linux版本）<a href="https://www.cloudera.com/downloads/connectors/hive/odbc/2-5-5.html">下载地址</a></p>
 <p>安装Hive ODBC Driver
   <div class="highlight"><pre><span></span><code>rpm -Uvh ClouderaHiveODBC-2.5.5.1006-1.el6.x86_64.rpm
@@ -4945,7 +4943,6 @@ vi /etc/odbc.ini
 <div class="highlight"><pre><span></span><code>mv /etc/odbcinst.ini /etc/odbcinst.ini.bak
 cp /opt/cloudera/hiveodbc/Setup/odbcinst.ini /etc/
 </code></pre></div>
-
 <p>配置环境变量<code>vi /etc/profile</code>
   <div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/lib64:/opt/cloudera/hiveodbc/lib/64
 export ODBCINI=/etc/odbc.ini
