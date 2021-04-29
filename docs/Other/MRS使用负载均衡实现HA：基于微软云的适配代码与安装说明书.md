@@ -468,3 +468,5 @@ LLD完成规划后，在LLD生成的OMS安装配置文件\*.ini中（主备两�
 ## 4.2 部署组件
 
 部署之前，需要装好组件依赖的负载均衡器和客户端适配程序，使用负载均衡器的实例只能安装在均衡器对应的后端池主机上，其他不变，参考产品文档。
+
+[点击获取相关操作脚本](https://github.com/fusioninsight/ecosystem/tree/zh-hans/docs/Other/assets/figures1/loadBalanceAdapt)
