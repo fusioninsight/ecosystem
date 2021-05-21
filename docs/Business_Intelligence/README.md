@@ -32,7 +32,7 @@
 * SSRS
   * [2017 <--> 6.5](SSRS.md)
 * SmartBI
-  * [7.2.32464.17374 <--> C70](SmartBI.md)
+  * [9.5.64075.21175 <--> 8.0](SmartBI.md)
 * Tableau
   * [10.0.0 <--> C50](Tableau.md)
   * [10.1.4 <--> C60](Tableau.md)

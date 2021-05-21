@@ -44,7 +44,7 @@ nav:
   - SSRS:
     - 2017 <--> 6.5: Business_Intelligence/SSRS.md
   - SmartBI:
-    - 7.2.32464.17374 <--> C70: Business_Intelligence/SmartBI.md
+    - 9.5.64075.21175 <--> 8.0: Business_Intelligence/SmartBI.md
   - Tableau:
     - 10.0.0 <--> C50: Business_Intelligence/Tableau.md
     - 10.1.4 <--> C60: Business_Intelligence/Tableau.md
