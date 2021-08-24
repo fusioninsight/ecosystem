@@ -75,6 +75,7 @@ nav:
   - 永洪一站式大数据分析平台:
     - 7.1 <--> C60: Data_Analysis/永洪一站式大数据分析平台.md
     - 8.7 <--> 8.0: Data_Analysis/永洪一站式大数据分析平台.md
+    - 9.2.1 <--> 8.0: Data_Analysis/永洪一站式大数据分析平台_v921.md
 - 数据集成:
   - Apache NiFi:
     - 1.7.1 <--> C80: Data_Integration/Apache_NiFi.md

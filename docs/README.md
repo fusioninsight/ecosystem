@@ -161,7 +161,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
 <td><a href="Business_Intelligence/Tableau"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
 </tr>
-<tr><td rowspan=8 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
+<tr><td rowspan=9 ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></br>数据分析 </td>
 <td rowspan=1 >Alteryx</td>
 <td>2018.2.5.48994</td>
 <td></td>
@@ -222,7 +222,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Data_Analysis/Splunk"><span class="label label-HDFS ">HDFS</span></a></td>
 </tr>
 <tr>
-<td rowspan=2 >永洪一站式大数据分析平台</td>
+<td rowspan=3 >永洪一站式大数据分析平台</td>
 <td>7.1</td>
 <td></td>
 <td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-SparkSQL ">SparkSQL</span></a></td>
@@ -239,6 +239,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Data_Analysis/永洪一站式大数据分析平台"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></a></td>
+</tr>
+<tr>
+<td>9.2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Business_Intelligence/SmartBI"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></br><span class="label label-HBase ">Clickhouse</span></a></td>
 </tr>
 <tr><td rowspan=33 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=3 >Apache NiFi</td>
