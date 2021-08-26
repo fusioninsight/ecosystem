@@ -247,7 +247,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td></td>
-<td><a href="Business_Intelligence/SmartBI"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></br><span class="label label-HBase ">Clickhouse</span></a></td>
+<td><a href="Data_Analysis/永洪一站式大数据分析平台_v921"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Hetu</span></br><span class="label label-HBase ">ClickHouse</span></a></td>
 </tr>
 <tr><td rowspan=33 ><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></br>数据集成 </td>
 <td rowspan=3 >Apache NiFi</td>
