@@ -326,8 +326,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jdbchetuzk" class="md-nav__link">
+    配置JDBC接口对接Hetu（zk方式连接）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jdbchetu" class="md-nav__link">
-    配置JDBC接口对接Hetu
+    配置JDBC接口对接Hetu（直连方式连接）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdbcclickhouse" class="md-nav__link">
+    配置JDBC接口对接ClickHouse
   </a>
   
 </li>
@@ -4331,8 +4345,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jdbchetuzk" class="md-nav__link">
+    配置JDBC接口对接Hetu（zk方式连接）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jdbchetu" class="md-nav__link">
-    配置JDBC接口对接Hetu
+    配置JDBC接口对接Hetu（直连方式连接）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdbcclickhouse" class="md-nav__link">
+    配置JDBC接口对接ClickHouse
   </a>
   
 </li>
@@ -4360,7 +4388,7 @@
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>FineBI 5.1 &harr; FusionInsight HD 6.5 (Hive)</p>
-<p>FineBI 5.1 &harr; FusionInsight MRS 8.0 (Hive/hetu)</p>
+<p>FineBI 5.1 &harr; FusionInsight MRS 8.0 (Hive/hetu/clickhouse)</p>
 </blockquote>
 <h2 id="finebi">安装FineBI<a class="headerlink" href="#finebi" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4440,7 +4468,7 @@ commons-collections-3.2.2.jar
 <p><img alt="" src="../assets/FineBI_5.1/markdown-img-paste-20191017110903474.png" /></p>
 <p>在数据准备-&gt;对应的数据列表路径中找到之前配置好的表test</p>
 <p><img alt="" src="../assets/FineBI_5.1/markdown-img-paste-20191017110918221.png" /></p>
-<h2 id="jdbchetu">配置JDBC接口对接Hetu<a class="headerlink" href="#jdbchetu" title="Permanent link">&para;</a></h2>
+<h2 id="jdbchetuzk">配置JDBC接口对接Hetu（zk方式连接）<a class="headerlink" href="#jdbchetuzk" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>参考上述hive配置步骤完成基础配置</p>
@@ -4477,6 +4505,100 @@ commons-collections-3.2.2.jar
 <li>查询结果：</li>
 </ul>
 <p><img alt="20201117_172718_35" src="../assets/FineBI_5.1/20201117_172718_35.png" /></p>
+<h2 id="jdbchetu">配置JDBC接口对接Hetu（直连方式连接）<a class="headerlink" href="#jdbchetu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>找到并进入FineBI相关依赖路径，具体为C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib，将hetu驱动Jar包 presto-jdbc-316-hw-ei-310010.jar 导入到该路径下</p>
+</li>
+<li>
+<p>启动FineBI,选择Presto做如下配置</p>
+</li>
+</ul>
+<p><img alt="20210828_113141_75" src="../assets/FineBI_5.1/20210828_113141_75.png" /></p>
+<div class="highlight"><pre><span></span><code>1: Presto
+2: io.prestosql.jdbc.PrestoDriver
+3: ,192.100.0.53:29860/hive/default?serviceDiscoveryMode=hsbroker
+4: 192.100.0.10
+5. 29860
+6: developuser
+7: 密码
+</code></pre></div>
+<p>说明（重要）： 配置3 + 配置4 + 配置5 会生成最终的连接url,要时刻保持着4个配置的正确性，否则对接失败</p>
+<ul>
+<li>测试连接：</li>
+</ul>
+<p><img alt="20210828_113503_49" src="../assets/FineBI_5.1/20210828_113503_49.png" /></p>
+<ul>
+<li>查询结果：</li>
+</ul>
+<p><img alt="20210828_113609_55" src="../assets/FineBI_5.1/20210828_113609_55.png" /></p>
+<h2 id="jdbcclickhouse">配置JDBC接口对接ClickHouse<a class="headerlink" href="#jdbcclickhouse" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>准备clickhouse测试数据</p>
+</li>
+<li>
+<p>首先查看clickhouseserver实例ip</p>
+<p><img alt="20210518_113933_28" src="../assets/FineBI_5.1/20210518_113933_28.png" /></p>
+</li>
+<li>
+<p>检查测试用户是否有clickhouse的权限</p>
+<p><img alt="20210518_114025_64" src="../assets/FineBI_5.1/20210518_114025_64.png" /></p>
+</li>
+<li>
+<p>登录客户端，登录所有的clickhouseserver，创建表</p>
+<div class="highlight"><pre><span></span><code>Kinit developuser
+
+登录第一个clickhouseserver: clickhouse client --host 172.16.5.53 --port 21423
+
+建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+
+登录另一个clickhouseserver: clickhouse client --host 172.16.5.52 --port 21423
+
+建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+</code></pre></div>
+</li>
+<li>
+<p>使用命令传数据</p>
+<div class="highlight"><pre><span></span><code>clickhouse client -m --host 172.16.5.53 --port 21423 --database=&quot;default&quot; --query=&quot;insert into default.ceshi_TinyLog FORMAT CSV&quot; &lt; /opt/clickhousenew.csv
+
+clickhouse client -m --host 172.16.5.52 --port 21423 --database=&quot;default&quot; --query=&quot;insert into default.ceshi_TinyLog FORMAT CSV&quot; &lt; /opt/clickhousenew.csv
+</code></pre></div>
+<p>样例数据clickhousenew.csv</p>
+<div class="highlight"><pre><span></span><code>27,花信风,22,图片,6,0,568.1720730083482,2020-03-16,10:07:01
+38,侯振宇,3,官网,4,8,539.9461401800766,2020-03-23,18:11:31
+31,韩浩月,9,儿童,5,3,473.69330165688615,2020-04-14,00:43:02
+61,恭小兵,10,阅读网,5,9,694.1459730283839,2020-04-03,23:17:17
+0,李公明,13,全集观看,18,10,837.9050944474849,2020-04-22,08:35:21
+74,傅光明,3,官网,20,0,526.4335879041444,2020-03-02,02:38:17
+63,高远,17,房屋租赁,17,8,487.0733326823028,2020-03-17,03:37:22
+8,李轶男,11,查询网,8,3,275.12075933899723,2020-04-03,06:38:30
+81,杜仲华,6,查询电话,12,5,90.02009064670109,2020-03-18,11:55:54
+65,郭妮,0,网站大全,18,9,840.7250869772428,2020-03-01,21:32:25
+15,洁尘,26,六年,11,8,529.7926355483769,2020-04-01,12:05:25
+</code></pre></div>
+</li>
+<li>
+<p>clickhouse客户端检查数据：  </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Kinit developuser
+
+clickhouse client --host 172.16.5.53 --port 21423
+</code></pre></div>
+<p><img alt="20210518_114754_21" src="../assets/FineBI_5.1/20210518_114754_21.png" /></p>
+<ul>
+<li>启动FineBI,选择ClickHouse做如下配置</li>
+</ul>
+<p><img alt="20210828_115358_38" src="../assets/FineBI_5.1/20210828_115358_38.png" /></p>
+<ul>
+<li>测试链接</li>
+</ul>
+<p><img alt="20210828_115443_30" src="../assets/FineBI_5.1/20210828_115443_30.png" /></p>
+<ul>
+<li>查看结果</li>
+</ul>
+<p><img alt="20210828_115510_62" src="../assets/FineBI_5.1/20210828_115510_62.png" /></p>
                 
                   
                 
