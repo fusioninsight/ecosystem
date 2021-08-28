@@ -4,7 +4,7 @@
 
 > FineBI 5.1 <--> FusionInsight HD 6.5 (Hive)
 
-> FineBI 5.1 <--> FusionInsight MRS 8.0 (Hive/hetu)
+> FineBI 5.1 <--> FusionInsight MRS 8.0 (Hive/hetu/clickhouse)
 
 ## 安装FineBI
 
@@ -104,7 +104,7 @@
   ![](assets/FineBI_5.1/markdown-img-paste-20191017110918221.png)
 
 
-## 配置JDBC接口对接Hetu
+## 配置JDBC接口对接Hetu（zk方式连接）
 
 - 参考上述hive配置步骤完成基础配置
 
@@ -141,3 +141,104 @@
 - 查询结果：
 
   ![20201117_172718_35](assets/FineBI_5.1/20201117_172718_35.png)
+
+## 配置JDBC接口对接Hetu（直连方式连接）
+
+- 找到并进入FineBI相关依赖路径，具体为C:\soft\fineBI\FineBI5.1\webapps\webroot\WEB-INF\lib，将hetu驱动Jar包 presto-jdbc-316-hw-ei-310010.jar 导入到该路径下
+
+- 启动FineBI,选择Presto做如下配置
+
+  ![20210828_113141_75](assets/FineBI_5.1/20210828_113141_75.png)
+
+  ```
+  1: Presto
+  2: io.prestosql.jdbc.PrestoDriver
+  3: ,192.100.0.53:29860/hive/default?serviceDiscoveryMode=hsbroker
+  4: 192.100.0.10
+  5. 29860
+  6: developuser
+  7: 密码
+  ```
+
+  说明（重要）： 配置3 + 配置4 + 配置5 会生成最终的连接url,要时刻保持着4个配置的正确性，否则对接失败
+
+- 测试连接：
+
+  ![20210828_113503_49](assets/FineBI_5.1/20210828_113503_49.png)
+
+- 查询结果：
+
+  ![20210828_113609_55](assets/FineBI_5.1/20210828_113609_55.png)
+
+
+## 配置JDBC接口对接ClickHouse
+
+- 准备clickhouse测试数据
+
+  - 首先查看clickhouseserver实例ip
+
+    ![20210518_113933_28](assets/FineBI_5.1/20210518_113933_28.png)
+
+  - 检查测试用户是否有clickhouse的权限
+
+    ![20210518_114025_64](assets/FineBI_5.1/20210518_114025_64.png)
+
+  - 登录客户端，登录所有的clickhouseserver，创建表
+
+    ```
+    Kinit developuser
+
+    登录第一个clickhouseserver: clickhouse client --host 172.16.5.53 --port 21423
+
+    建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+
+    登录另一个clickhouseserver: clickhouse client --host 172.16.5.52 --port 21423
+
+    建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+    ```
+
+  - 使用命令传数据
+
+    ```
+    clickhouse client -m --host 172.16.5.53 --port 21423 --database="default" --query="insert into default.ceshi_TinyLog FORMAT CSV" < /opt/clickhousenew.csv
+
+    clickhouse client -m --host 172.16.5.52 --port 21423 --database="default" --query="insert into default.ceshi_TinyLog FORMAT CSV" < /opt/clickhousenew.csv
+    ```
+
+    样例数据clickhousenew.csv
+
+    ```
+    27,花信风,22,图片,6,0,568.1720730083482,2020-03-16,10:07:01
+    38,侯振宇,3,官网,4,8,539.9461401800766,2020-03-23,18:11:31
+    31,韩浩月,9,儿童,5,3,473.69330165688615,2020-04-14,00:43:02
+    61,恭小兵,10,阅读网,5,9,694.1459730283839,2020-04-03,23:17:17
+    0,李公明,13,全集观看,18,10,837.9050944474849,2020-04-22,08:35:21
+    74,傅光明,3,官网,20,0,526.4335879041444,2020-03-02,02:38:17
+    63,高远,17,房屋租赁,17,8,487.0733326823028,2020-03-17,03:37:22
+    8,李轶男,11,查询网,8,3,275.12075933899723,2020-04-03,06:38:30
+    81,杜仲华,6,查询电话,12,5,90.02009064670109,2020-03-18,11:55:54
+    65,郭妮,0,网站大全,18,9,840.7250869772428,2020-03-01,21:32:25
+    15,洁尘,26,六年,11,8,529.7926355483769,2020-04-01,12:05:25
+    ```
+
+- clickhouse客户端检查数据：  
+
+  ```
+  Kinit developuser
+
+  clickhouse client --host 172.16.5.53 --port 21423
+  ```
+
+  ![20210518_114754_21](assets/FineBI_5.1/20210518_114754_21.png)
+
+- 启动FineBI,选择ClickHouse做如下配置
+
+  ![20210828_115358_38](assets/FineBI_5.1/20210828_115358_38.png)
+
+- 测试链接
+
+  ![20210828_115443_30](assets/FineBI_5.1/20210828_115443_30.png)
+
+- 查看结果
+
+  ![20210828_115510_62](assets/FineBI_5.1/20210828_115510_62.png)
