@@ -14,7 +14,7 @@
 >
 > Tableau 10.5.0 <--> FusionInsight HD 6.5 (Hive/SparkSQL)
 >
-> Tableau 10.5.0 <--> FusionInsight MRS 8.0 (Hive/SparkSQL/Hetu)
+> Tableau 10.5.0 <--> FusionInsight MRS 8.0 (Hive/SparkSQL/Hetu/ClickHouse)
 
 
 ## 配置Windows的kerberos认证
@@ -172,7 +172,7 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
 
 ## Hetu对接配置
 
-## odbc配置
+### odbc配置
 
 - 安装hetu-odbc-win64.msi
 
@@ -375,7 +375,7 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
 
   ![20201211_152847_73](assets/Tableau/20201211_152847_73.png)
 
-## 配置tableau hetu odbc
+### 配置tableau hetu odbc
 
   - 打开tableau选择其他数据库(ODBC)
 
@@ -388,6 +388,87 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
   - 查看结果
 
     ![20201211_160511_71](assets/Tableau/20201211_160511_71.png)
+
+
+## ClickHouse对接配置
+
+### 准备clickhouse测试数据
+
+- 可参考下面部分了解如何创建clickhouse测试数据，如果已有数据可跳过此部分
+
+  - 首先查看clickhouseserver实例ip
+
+    ![20210518_113933_28](assets/FineBI_5.1/20210518_113933_28.png)
+
+  - 检查测试用户是否有clickhouse的权限
+
+    ![20210518_114025_64](assets/FineBI_5.1/20210518_114025_64.png)
+
+  - 登录客户端，登录所有的clickhouseserver，创建表
+
+    ```
+    Kinit developuser
+
+    登录第一个clickhouseserver: clickhouse client --host 172.16.5.53 --port 21423
+
+    建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+
+    登录另一个clickhouseserver: clickhouse client --host 172.16.5.52 --port 21423
+
+    建表：CREATE TABLE ceshi_TinyLog(uid Int64,uname String,wid Int64,word String,pv Int64,click Int64,cost float,date Date,time String) ENGINE=TinyLog;
+    ```
+
+  - 使用命令传数据
+
+    ```
+    clickhouse client -m --host 172.16.5.53 --port 21423 --database="default" --query="insert into default.ceshi_TinyLog FORMAT CSV" < /opt/clickhousenew.csv
+
+    clickhouse client -m --host 172.16.5.52 --port 21423 --database="default" --query="insert into default.ceshi_TinyLog FORMAT CSV" < /opt/clickhousenew.csv
+    ```
+
+    样例数据clickhousenew.csv
+
+    ```
+    27,花信风,22,图片,6,0,568.1720730083482,2020-03-16,10:07:01
+    38,侯振宇,3,官网,4,8,539.9461401800766,2020-03-23,18:11:31
+    31,韩浩月,9,儿童,5,3,473.69330165688615,2020-04-14,00:43:02
+    61,恭小兵,10,阅读网,5,9,694.1459730283839,2020-04-03,23:17:17
+    0,李公明,13,全集观看,18,10,837.9050944474849,2020-04-22,08:35:21
+    74,傅光明,3,官网,20,0,526.4335879041444,2020-03-02,02:38:17
+    63,高远,17,房屋租赁,17,8,487.0733326823028,2020-03-17,03:37:22
+    8,李轶男,11,查询网,8,3,275.12075933899723,2020-04-03,06:38:30
+    81,杜仲华,6,查询电话,12,5,90.02009064670109,2020-03-18,11:55:54
+    65,郭妮,0,网站大全,18,9,840.7250869772428,2020-03-01,21:32:25
+    15,洁尘,26,六年,11,8,529.7926355483769,2020-04-01,12:05:25
+    ```
+
+- clickhouse客户端检查数据：  
+
+  ```
+  Kinit developuser
+
+  clickhouse client --host 172.16.5.53 --port 21423
+  ```
+
+  ![20210518_114754_21](assets/FineBI_5.1/20210518_114754_21.png)
+
+### 获取clickhouse ODBC驱动
+
+- 登录：https://github.com/ClickHouse/clickhouse-odbc/releases
+
+  本文选择1.1.9驱动
+
+- 使用安装好的clickhouse驱动添加一个系统DSN，名字为mrs311
+
+  ![20210831_150637_45](assets/Tableau/20210831_150637_45.png)
+
+- 打开tableau选择其他数据库ODBC,选择已经配置好的mrs311,点连接关闭窗口后再在连接属性中填入相关信息，点击登录
+
+  ![20210831_150725_20](assets/Tableau/20210831_150725_20.png)
+
+- 查看测试数据
+
+  ![20210831_150858_73](assets/Tableau/20210831_150858_73.png)
 
 
 ## FAQ

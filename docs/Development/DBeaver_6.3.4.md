@@ -4,7 +4,7 @@
 
 > DBeaver 6.3.4 <--> FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL/Hetu)
 >
-> DBeaver 6.3.4 <--> FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL/Hetu)
+> DBeaver 6.3.4 <--> FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL/Hetu/Clickhouse)
 
 ## 文档说明
 
@@ -308,6 +308,86 @@
 - 查看结果数据
 
   ![20200723_152844_77](assets/DBeaver_6.3.4/20200723_152844_77.png)
+
+## 使用自定义JDBC对接Clickhouse
+
+本节介绍如何使用huawei提供的clickhouse驱动对接
+
+- 获取clickhouse jdbc驱动： https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/ru/yandex/clickhouse/clickhouse-jdbc/
+
+- 除了上述步骤的jar包外，还需要从客户端获取如下jar包作为驱动
+
+  ```
+  commons-codec-1.14.jar
+  commons-logging-1.1.jar
+  httpclient-4.4.1.jar
+  httpcore-4.4.1.jar
+  lz4-java-1.7.1.jar
+  slf4j-api-1.7.28.jar
+  ```
+* 进入DBeaver界面，菜单选择`Database->DriverManager`，在弹出的对话框中点击 **New**.
+
+  ![](assets/DBeaver_6.3.4/ca995deb.png)
+
+- 新建的连接名字为mrs_clickhouse_02，连接信息如下,完成后点击OK
+
+  ![20210831_153008_59](assets/DBeaver_6.3.4/20210831_153008_59.png)
+
+  ```
+  1. ru.yandex.clickhouse.ClickHouseDriver
+  2. jdbc:clickhouse://172.16.9.117:21422/test001?ssl=true&sslmode=none
+  ```
+
+  注意： 连接的jdbc url也可以使用`jdbc:clickhouse://172.16.9.117:2141`
+
+* 菜单栏选择`File->New->Database Connection`.点击 **Next**.
+
+  ![](assets/DBeaver_6.3.4/1b474bc7.png)
+
+- 选择mrs_clickhouse_02点击NEXT
+
+- 右键选择mrs_clickhouse_02点击Edit Connection
+
+  ![20210831_153417_59](assets/DBeaver_6.3.4/20210831_153417_59.png)
+
+- 填写clickhouse用户名密码，点击Test connection
+
+  ![20210831_153502_90](assets/DBeaver_6.3.4/20210831_153502_90.png)
+
+- 查看结果数据
+
+  ![20210831_153559_57](assets/DBeaver_6.3.4/20210831_153559_57.png)
+
+## 使用dbeaver clickhouse连接方式对接Clickhouse
+
+本节介绍如何使用dbeaver自己提供的clickhouse驱动对接
+
+- 点击新建连接选择 clickhouse
+
+  ![20210831_153827_56](assets/DBeaver_6.3.4/20210831_153827_56.png)
+
+- 右键点击创建好的clickhouse连接进行配置
+
+  ![20210831_153925_48](assets/DBeaver_6.3.4/20210831_153925_48.png)
+
+-  配置好主机、数据库、用户名、密码后点击编辑驱动设置
+
+  ![20210831_154007_53](assets/DBeaver_6.3.4/20210831_154007_53.png)
+
+  ![20210831_154056_81](assets/DBeaver_6.3.4/20210831_154056_81.png)
+
+  驱动版本选择0.2.4版本，dbeaver会根据版本自动下载驱动，如下图
+
+  ![20210831_154348_73](assets/DBeaver_6.3.4/20210831_154348_73.png)
+
+- 测试连接
+
+  ![20210831_154423_12](assets/DBeaver_6.3.4/20210831_154423_12.png)
+
+- 查看结果数据
+
+  ![20210831_154505_15](assets/DBeaver_6.3.4/20210831_154505_15.png)
+
 
 ## Fiber 简介
 
