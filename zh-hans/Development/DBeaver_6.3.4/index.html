@@ -2809,6 +2809,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jdbcclickhouse" class="md-nav__link">
+    使用自定义JDBC对接Clickhouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbeaver-clickhouseclickhouse" class="md-nav__link">
+    使用dbeaver clickhouse连接方式对接Clickhouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fiber" class="md-nav__link">
     Fiber 简介
   </a>
@@ -4496,6 +4510,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jdbcclickhouse" class="md-nav__link">
+    使用自定义JDBC对接Clickhouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbeaver-clickhouseclickhouse" class="md-nav__link">
+    使用dbeaver clickhouse连接方式对接Clickhouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fiber" class="md-nav__link">
     Fiber 简介
   </a>
@@ -4620,7 +4648,7 @@
 <h2 id="_1">适用场景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>DBeaver 6.3.4 &harr; FusionInsight HD 6.5 (Hive/Phoenix/SparkSQL/Hetu)</p>
-<p>DBeaver 6.3.4 &harr; FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL/Hetu)</p>
+<p>DBeaver 6.3.4 &harr; FusionInsight MRS 8.0 (Hive/Phoenix/SparkSQL/Hetu/Clickhouse)</p>
 </blockquote>
 <h2 id="_2">文档说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本文介绍了两种方式对接dbeaver和fusioninsight.</p>
@@ -4901,6 +4929,79 @@ commons-configuration2-2.1.jar
 <li>查看结果数据</li>
 </ul>
 <p><img alt="20200723_152844_77" src="../assets/DBeaver_6.3.4/20200723_152844_77.png" /></p>
+<h2 id="jdbcclickhouse">使用自定义JDBC对接Clickhouse<a class="headerlink" href="#jdbcclickhouse" title="Permanent link">&para;</a></h2>
+<p>本节介绍如何使用huawei提供的clickhouse驱动对接</p>
+<ul>
+<li>
+<p>获取clickhouse jdbc驱动： <a href="https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/ru/yandex/clickhouse/clickhouse-jdbc/">https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/ru/yandex/clickhouse/clickhouse-jdbc/</a></p>
+</li>
+<li>
+<p>除了上述步骤的jar包外，还需要从客户端获取如下jar包作为驱动</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>commons-codec-1.14.jar
+commons-logging-1.1.jar
+httpclient-4.4.1.jar
+httpcore-4.4.1.jar
+lz4-java-1.7.1.jar
+slf4j-api-1.7.28.jar
+</code></pre></div>
+* 进入DBeaver界面，菜单选择<code>Database-&gt;DriverManager</code>，在弹出的对话框中点击 <strong>New</strong>.</p>
+<p><img alt="" src="../assets/DBeaver_6.3.4/ca995deb.png" /></p>
+<ul>
+<li>新建的连接名字为mrs_clickhouse_02，连接信息如下,完成后点击OK</li>
+</ul>
+<p><img alt="20210831_153008_59" src="../assets/DBeaver_6.3.4/20210831_153008_59.png" /></p>
+<div class="highlight"><pre><span></span><code>1. ru.yandex.clickhouse.ClickHouseDriver
+2. jdbc:clickhouse://172.16.9.117:21422/test001?ssl=true&amp;sslmode=none
+</code></pre></div>
+<p>注意： 连接的jdbc url也可以使用<code>jdbc:clickhouse://172.16.9.117:2141</code></p>
+<ul>
+<li>菜单栏选择<code>File-&gt;New-&gt;Database Connection</code>.点击 <strong>Next</strong>.</li>
+</ul>
+<p><img alt="" src="../assets/DBeaver_6.3.4/1b474bc7.png" /></p>
+<ul>
+<li>
+<p>选择mrs_clickhouse_02点击NEXT</p>
+</li>
+<li>
+<p>右键选择mrs_clickhouse_02点击Edit Connection</p>
+</li>
+</ul>
+<p><img alt="20210831_153417_59" src="../assets/DBeaver_6.3.4/20210831_153417_59.png" /></p>
+<ul>
+<li>填写clickhouse用户名密码，点击Test connection</li>
+</ul>
+<p><img alt="20210831_153502_90" src="../assets/DBeaver_6.3.4/20210831_153502_90.png" /></p>
+<ul>
+<li>查看结果数据</li>
+</ul>
+<p><img alt="20210831_153559_57" src="../assets/DBeaver_6.3.4/20210831_153559_57.png" /></p>
+<h2 id="dbeaver-clickhouseclickhouse">使用dbeaver clickhouse连接方式对接Clickhouse<a class="headerlink" href="#dbeaver-clickhouseclickhouse" title="Permanent link">&para;</a></h2>
+<p>本节介绍如何使用dbeaver自己提供的clickhouse驱动对接</p>
+<ul>
+<li>点击新建连接选择 clickhouse</li>
+</ul>
+<p><img alt="20210831_153827_56" src="../assets/DBeaver_6.3.4/20210831_153827_56.png" /></p>
+<ul>
+<li>右键点击创建好的clickhouse连接进行配置</li>
+</ul>
+<p><img alt="20210831_153925_48" src="../assets/DBeaver_6.3.4/20210831_153925_48.png" /></p>
+<ul>
+<li>配置好主机、数据库、用户名、密码后点击编辑驱动设置</li>
+</ul>
+<p><img alt="20210831_154007_53" src="../assets/DBeaver_6.3.4/20210831_154007_53.png" /></p>
+<p><img alt="20210831_154056_81" src="../assets/DBeaver_6.3.4/20210831_154056_81.png" /></p>
+<p>驱动版本选择0.2.4版本，dbeaver会根据版本自动下载驱动，如下图</p>
+<p><img alt="20210831_154348_73" src="../assets/DBeaver_6.3.4/20210831_154348_73.png" /></p>
+<ul>
+<li>测试连接</li>
+</ul>
+<p><img alt="20210831_154423_12" src="../assets/DBeaver_6.3.4/20210831_154423_12.png" /></p>
+<ul>
+<li>查看结果数据</li>
+</ul>
+<p><img alt="20210831_154505_15" src="../assets/DBeaver_6.3.4/20210831_154505_15.png" /></p>
 <h2 id="fiber">Fiber 简介<a class="headerlink" href="#fiber" title="Permanent link">&para;</a></h2>
 <p>SQL开发工具，如DbVisualizer、DBeaver、Squirrel是数据库开发的常用选择，虽然这些工具大多不提供原生Hive、SparkSQL、Phoenix的支持，但是通过它们支持的自定义JDBC的能力，我们可以与FusionInsignt提供的Fiber组件的JDBC接口进行对接，实现这Hive、SparkSQL、Phoenix组件的统一SQL查询.</p>
 <ul>
