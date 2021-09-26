@@ -3,7 +3,7 @@
 
 # FusionInsight MRS 生态地图
 
-FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具进行对接
+FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具进行对接。生态地图提供简单的连通性对接指导，仅供参考。
 
 <table class="tg">
  <thead>
