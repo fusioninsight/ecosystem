@@ -57,6 +57,11 @@ Tableau中配置Hive数据源，对接Hive的ODBC接口。
 
   根据操作系统类型选择对应的ODBC版本，下载并安装。
 
+  注意：实际过程中会因为odbc版本不同造成报错。建议使用2.5.15版进行对接
+
+  ![20220225_143407_26](assets/Tableau/20220225_143407_26.png)
+
+
 * 配置ODBC驱动
 
   * 创建DSN(Data Source Name)：选择 **开始** -> **Simba Spark ODBC Driver** -> **ODBC Administrator**。
