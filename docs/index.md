@@ -692,15 +692,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 </tr>
 <tr>
-<td rowspan=1 >HUE</td>
-<td>4.0.1</td>
-<td></td>
-<td></td>
-<td><a href="Development/HUE"><span class="label label-HDFS ">HDFS</span></br><span class="label label-HBase ">HBase</span></br><span class="label label-Hive ">Hive</span></br><span class="label label-Spark ">Spark</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr>
 <td rowspan=2 >Jupyter Notebook</td>
 <td>2.4.4.0</td>
@@ -814,7 +805,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Development/Zeppelin_0.8.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
-<tr><td rowspan=18 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
+<tr><td rowspan=16 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=1 >Apache Airflow</td>
 <td>1.10.6</td>
 <td></td>
@@ -890,25 +881,6 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Other/Logstash"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
 <td><a href="Other/Logstash"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Kafka ">Kafka</span></a></td>
-</tr>
-<tr>
-<td rowspan=2 >NeoKylin</td>
-<td>6.9</td>
-<td></td>
-<td></td>
-<td><a href="Other/NeoKylin"><span class="label label-OS ">OS</span></a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>7.2</td>
-<td></td>
-<td></td>
-<td><a href="Other/NeoKylin"><span class="label label-OS ">OS</span></a></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td rowspan=2 >Tensorflow</td>

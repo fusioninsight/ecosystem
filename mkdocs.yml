@@ -179,8 +179,6 @@ nav:
     - 10.0.21 <--> 6.5: Development/DbVisualizer_10.0.21.md
     - 10.0.21 <--> 8.0: Development/DbVisualizer_10.0.21.md
     - 9.5.7 <--> C60: Development/DbVisualizer_10.0.1.md
-  - HUE:
-    - 4.0.1 <--> C70: Development/HUE.md
   - Jupyter Notebook:
     - 2.4.4.0 <--> C70: Development/Jupyter_Notebook.md
     - 2.7.16 <--> C80: Development/JupyterNotebook.md
