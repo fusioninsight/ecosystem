@@ -20,7 +20,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
   <td >C70</td>
   <td >C80</td>
   <td >6.5</td>
-  <td >8.0</td>
+  <td >8.x</td>
  </tr>
 </thead>
 
@@ -805,7 +805,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td><a href="Development/Zeppelin_0.8.1"><span class="label label-Hive ">Hive</span></br><span class="label label-Spark2x ">Spark2x</span></br><span class="label label-GaussDB ">GaussDB</span></a></td>
 </tr>
-<tr><td rowspan=16 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
+<tr><td rowspan=17 ><i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i></br>其他 </td>
 <td rowspan=1 >Apache Airflow</td>
 <td>1.10.6</td>
 <td></td>
@@ -816,7 +816,7 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td><a href="Other/Airflow"><span class="label label-HDFS ">HDFS</span></br><span class="label label-Hive ">Hive</span></a></td>
 </tr>
 <tr>
-<td rowspan=3 >Apache Livy</td>
+<td rowspan=4 >Apache Livy</td>
 <td>0.5.0</td>
 <td></td>
 <td></td>
@@ -842,6 +842,15 @@ FusionInsight支持开源标准的Hadoop接口，可以与以下第三方工具�
 <td></td>
 <td></td>
 <td><a href="Other/Apache_Livy_0_6_0"><span class="label label-Spark2x ">Spark2x</span></a></td>
+</tr>
+<tr>
+<td>0.7.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="Other/livy7_1"><span class="label label-Spark2x ">Spark2x</span></a></td>
 </tr>
 <tr>
 <td rowspan=1 >GIS Tools for Hadoop</td>
